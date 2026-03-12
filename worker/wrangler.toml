@@ -1,0 +1,12 @@
+name = "silence-edge-injector"
+main = "worker.js"
+compatibility_date = "2024-09-02"
+
+# Bind the KV namespace containing the orchestrator's daily trends
+[[kv_namespaces]]
+binding = "PIXEL_TRENDS"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# Route configuration
+# Set this in the Cloudflare dashboard or via:
+# routes = [{ pattern = "*silenceisthetrauma.com/*", zone_name = "silenceisthetrauma.com" }]

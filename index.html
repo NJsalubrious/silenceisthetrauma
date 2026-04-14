@@ -149,6 +149,31 @@
             color: #000;
             box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
         }
+
+        .skip-nav {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+
+        .skip-nav a {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .skip-nav a:hover {
+            color: #ef4444;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -170,6 +195,11 @@
         <div id="text-display"></div><span class="cursor" id="cursor"></span>
         <div id="btn-container" class="button-group"></div>
     </div>
+
+    <nav class="skip-nav">
+        <a href="stories.html">Stories</a>
+        <a href="https://pixelstortion.com" target="_blank" rel="noopener">Pixelstortion</a>
+    </nav>
 
     <script>
         // Extract the trend hook dynamically injected by the Cloudflare Worker.
@@ -263,8 +293,14 @@
         function showFinalButton() {
             showButtons([
                 {
-                    label: "[ ENTER THE SILENCE ]",
+                    label: "[ READ THE STORIES ]",
                     isFinal: true,
+                    onClick: () => {
+                        window.location.href = 'stories.html';
+                    }
+                },
+                {
+                    label: "[ ENTER PIXELSTORTION ]",
                     onClick: () => {
                         const trendHook = getTrendHook();
                         const targetUrl = `https://www.pixelstortion.com/zones/silence/?utm_source=staircase_trap&trend_hook=${encodeURIComponent(trendHook)}`;

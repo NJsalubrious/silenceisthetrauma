@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Handshake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f5f0e4;
+            --text-color: #2a2520;
+            --ray-color: #6b4226;
+            --tom-color: #3a506b;
+            --accent-color: #8b6914;
+            --grain-opacity: 0.03;
+            --vignette-color: rgba(0, 0, 0, 0);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Crimson Pro', serif;
+            transition: background-color 2.5s ease, color 2.5s ease;
+            overflow-x: hidden;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- THEMATIC STATES --- */
+
+        body.theme-tension {
+            --bg-color: #e0d9c8;
+            --text-color: #1f1c18;
+            --grain-opacity: 0.05;
+            --vignette-color: rgba(0, 0, 0, 0.15);
+        }
+
+        body.theme-dark {
+            --bg-color: #1a1610;
+            --text-color: #d4cfc5;
+            --ray-color: #a07850;
+            --tom-color: #7a9ab5;
+            --accent-color: #c49520;
+            --grain-opacity: 0.07;
+            --vignette-color: rgba(0, 0, 0, 0.6);
+        }
+
+        body.theme-void {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --ray-color: #ffffff;
+            --tom-color: #ffffff;
+            --accent-color: #ffffff;
+            --grain-opacity: 0.12;
+            --vignette-color: rgba(0, 0, 0, 0.98);
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 10vh 24px 30vh 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- CINEMATIC REVEAL --- */
+        .beat {
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(4px);
+            transition: opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 2s ease;
+            margin-bottom: 2rem;
+            will-change: opacity, transform, filter;
+        }
+
+        .beat.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* --- PACING / SCROLL GAPS --- */
+        .pause-small { margin-bottom: 15vh; }
+        .pause-medium { margin-bottom: 30vh; }
+        .pause-large { margin-bottom: 50vh; }
+        .pause-stark { margin-bottom: 120vh; }
+
+        /* --- TYPOGRAPHY / VOICES --- */
+
+        .voice-land {
+            font-weight: 300;
+            font-size: 1.3rem;
+        }
+
+        .voice-routine {
+            font-weight: 300;
+        }
+
+        .voice-verandah {
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .voice-ray {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--ray-color);
+            margin-left: 2rem;
+            border-left: 1px solid var(--ray-color);
+            padding-left: 1rem;
+            transition: color 2s ease, border-color 2s ease;
+        }
+
+        .voice-tom {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--tom-color);
+            margin-left: 2rem;
+            border-left: 1px solid var(--tom-color);
+            padding-left: 1rem;
+            transition: color 2s ease, border-color 2s ease;
+        }
+
+        .voice-dave {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            color: #777;
+            margin-left: 2rem;
+            border-left: 1px solid #999;
+            padding-left: 1rem;
+        }
+
+        .voice-wire {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 300;
+            color: inherit;
+            opacity: 0.85;
+        }
+
+        .voice-paper {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #666;
+            letter-spacing: 0.03em;
+        }
+
+        body.theme-dark .voice-paper,
+        body.theme-void .voice-paper {
+            color: #888;
+        }
+
+        .voice-stone {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .part-header {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            opacity: 0.4;
+            text-align: center;
+        }
+
+        /* --- ATMOSPHERIC EFFECTS --- */
+
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: var(--grain-opacity);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity 2.5s ease;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 30%, var(--vignette-color) 120%);
+            transition: background 3s ease;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            background-color: var(--accent-color);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s, background-color 2s ease;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div id="progress-bar"></div>
+
+    <div class="container" id="story-container">
+    </div>
+
+    <script type="text/markdown" id="raw-story">
+
+## Part One: The Man
+
+[land] Fifty-three hectares of brown grass and wire fencing on the western side of the Great Dividing Range. Not the green side. The brown side, where the sky is wider than anything underneath it and the soil holds water the way a sieve holds water. Briefly. With visible reluctance.
+[pause]
+[routine] Ray is fifty-eight. He has been here thirty years. He gets up at five because the dog gets up at five and the dog does not care about weekends. He checks the troughs. He checks the fences. He drives the ute along the northern boundary and looks for anything that should not be there. A fallen tree. A hole in the wire. A fox. He comes back and makes instant coffee in a mug that says World's Best Dad. His daughter gave it to him when she was nine. She is thirty-one now. The mug is the only thing in this house that has not changed.
+[pause]
+[routine] His wife died four years ago. Cancer. The specific kind that announces itself three months before it finishes. During those three months he drove her to Dubbo seven times for treatment that everyone knew would not work but that you do anyway because the alternative is sitting in the kitchen looking at each other across a table that suddenly has too much space.
+[pause]
+[routine] She is buried in the cemetery in town. He goes on the first Sunday of every month. He does not bring flowers because she did not like flowers being cut. He stands for approximately four minutes. He does not talk to the headstone. He does not believe she can hear him and he is not going to start performing for an audience that is not there.
+[pause]
+[routine] His daughter calls on Sundays. Sometimes. She lives in Sydney and works in marketing and uses words like 'wellness' and 'curate' in ways that make him hold the phone slightly further from his ear. She asks how he is. He says fine. She asks about the property. He says fine. She asks if he needs anything. He says no. The conversations last between four and seven minutes.
+[pause]
+[land] The bore is the centre of everything. Sunk forty years ago by the previous owner, a man named Geoff Hadley who understood groundwater the way some people understand music. The bore pulls from a sandstone aquifer that sits beneath this particular ridgeline and almost nothing else. The geological survey describes the catchment as 'highly localised.' In practical terms this means the bore is the only reliable water source for roughly fifteen kilometres in any direction. In drought it is the difference between a property and a paddock of dead grass.
+[routine] Ray knows this. He has known this since Geoff Hadley stood on this verandah in 1994, pointed at the bore cap, and said one thing.
+[ray] 'That's the only thing on this place worth a damn. Don't let anyone touch it.'
+[pause]
+[routine] He didn't.
+[pause-medium]
+
+## Part Two: The Neighbour
+
+[land] Tom Kirby buys the neighbouring property to the east in March. Two hundred hectares of cleared grazing land with a seasonal creek that runs for about five weeks a year and spends the other forty-seven as a ditch full of dead grass and the skeletons of cane toads.
+[routine] Ray watches the moving trucks from his kitchen window. Two trucks. A horse float with no horse in it. A white SUV that has never been on a dirt road and is about to learn.
+[pause]
+[routine] Tom is thirty-seven. He is from Melbourne. He has a beard that looks maintained and hands that do not. He introduces himself on the second day, walking across the boundary line with a six-pack of beer that costs more per bottle than Ray's costs per carton. He says he has been in finance. He says he wanted a change. He says he has always loved the land.
+[ray] 'What are you running?'
+[tom] 'Twelve head. Herefords. Bought them from a bloke in Mudgee.'
+[pause]
+[routine] Ray drinks the expensive beer and asks nothing further. Twelve head on two hundred hectares in late autumn with a seasonal creek. The man has bought the right animal for the wrong property in the wrong season. The cattle will be fine until approximately January, at which point they will become a problem that only water can solve, and the creek will not have any.
+[pause]
+[routine] On the fourth day Tom's pump fails. He comes to the fence line. He does not know what is wrong. Ray walks over, identifies a seized impeller, drives to town, buys the part, replaces it. Forty minutes.
+[tom] 'What do I owe you?'
+[ray] 'Nothing. A dead pump next door is dead land next door and dead land next door is my problem. Keep it running.'
+[pause]
+[routine] This is how it begins. Not with charity. Not with kindness. With the blunt mechanical logic of a man who understands that neglect travels across fence lines the same way fire does.
+[pause]
+[routine] But it becomes something. Over six months Ray shows Tom how the land works. How to read the tree line for subsurface moisture. Which paddock drains first after rain. Where the kangaroos push through the fence and how to reinforce the wire without blocking the wallaby run. When to burn and when to slash. How to check a beast's feet.
+[verandah] They drink beer on Ray's verandah on Friday evenings. Two men in camp chairs looking at a paddock going brown. They do not talk about wives. They do not talk about feelings. They talk about the fence line and the price of hay and whether the BOM is lying about October.
+[pause]
+[verandah] Tom is a quick learner. Quicker than Ray expected. He asks precise questions and does not ask the same one twice. He takes notes in a leather-bound notebook that looks ridiculous on a fencing run but that Ray quietly respects, because a man who writes things down is a man who intends to remember.
+[pause]
+[routine] By the end of the first year Tom can run his own place. He can fix his own pump. He can drench his own cattle. He can read the sky. Ray notices this the way you notice a child who has stopped asking you to tie their shoes. Without comment. With something that is not pride but sits in the same part of the chest.
+[pause-medium]
+
+## Part Three: The Water
+
+[verandah] It is a Friday in late November and the temperature hit forty-one today. The verandah faces west. By six the heat has moved through the house and settled into the furniture.
+[tom] 'How deep is your bore?'
+[ray] 'Sixty-two metres. Sandstone aquifer.'
+[tom] 'And the yield?'
+[ray] 'Twelve litres a second in a good year. Eight in a bad one. Never gone below six.'
+[pause]
+[tom] 'That's remarkable for out here.'
+[ray] 'It's the only one. The geological survey says the aquifer sits under this ridge and stops. Geoff Hadley found it by accident in eighty-three. Drilled two test bores on his place and hit nothing. Drilled a third on this side of the ridge and hit the aquifer at sixty metres.'
+[pause]
+[verandah] Tom writes in the notebook.
+[pause]
+[tom] 'And the water allocation? Is it capped?'
+[ray] 'Bore licence. Domestic and stock use. No limit on stock water if you're running cattle on the property it services. But the licence sits with the land. You can't separate them.'
+[tom] 'What about easements?'
+[pause]
+[ray] 'What about them?'
+[tom] 'If someone needed to run a pipe across. If a neighbour needed water. How does that work?'
+[pause]
+[routine] Ray puts his beer down. It is a reasonable question. It is the kind of question a man with a seasonal creek and no bore should be asking.
+[ray] 'You can run a pipe by agreement. Verbal or written, doesn't matter legally. But if you formalise an easement and register it, it attaches to the title. Runs with the land, not the person. And if you've had continuous use without objection for a sustained period, the court can grant a prescriptive easement even without registration.'
+[pause]
+[tom] 'How long is a sustained period?'
+[ray] 'Varies. But nobody does that. Out here you shake hands and you share water when someone's creek runs dry and you know they'd do the same. That's how it works.'
+[pause]
+[verandah] They sit. The sun drops behind the ridge. Four degrees in twenty minutes. The air has no moisture to hold the heat.
+[verandah] Tom asks about Geoff Hadley.
+[ray] 'Good man. Died in ninety-six. No kids. His wife had gone the year before. He sold me this place under market because I was the only buyer who asked about the bore before asking about the house.'
+[pause]
+[verandah] Ray picks at the label on his bottle.
+[ray] 'Last few weeks, Jan couldn't get past the kitchen. But she could hear the pump cycling through the wall from the bedroom. She said it was the only sound that made her feel like everything was still going.'
+[pause]
+[verandah] Tom does not say anything. He does not offer condolence or filler. He sits in the quiet and lets it be what it is. And for the first time in four years the silence around Ray does not feel empty.
+[pause]
+[verandah] It feels held.
+[pause-medium]
+
+## Part Four: The Dry
+
+[land] The rain stops in February and does not come back.
+[wire] March is hot. April is worse. May should be cooler but is not. The creek on Tom's property runs for three weeks and then it is a ditch again and the mud at the bottom cracks into shapes that look like a map of a country that does not exist.
+[pause]
+[wire] By August Ray's troughs are the only water on either side of the ridge. His bore is pulling at eight litres a second. Still adequate. But eight is not twelve and the cattle know the difference the way they know a closed gate from an open one.
+[wire] Tom calls. His cattle are distressed. His remaining dam is a shallow bowl of grey sludge that the cattle stand in but will not drink from. The seasonal creek is a geological rumour. He has no bore.
+[pause]
+[ray] 'Run a pipe. Take it from the junction at trough eight. I'll leave the valve open. Take what you need.'
+[tom] 'I'll pay for the pipe.'
+[ray] 'It's poly pipe. Eighty bucks for a hundred metres. Just run it.'
+[pause]
+[routine] Tom runs the pipe that afternoon. Black poly, nineteen millimetre, across the fence line and into a portable trough in his eastern paddock. His cattle find it within the hour. They drink the way cattle drink when they have learned that water is not guaranteed. Long, deep, unhurried.
+[pause]
+[routine] There is no contract. There is no written agreement. There is a valve, a pipe, and the understanding that when a man's cattle are dying you open the tap because that is what the land requires.
+[pause]
+[wire] The drought continues. September. October. November. The BOM issues an El Nino advisory that surprises nobody. Ray's bore drops to seven litres a second. He adjusts. He reduces his herd.
+[wire] Tom does not reduce his herd. He increases it. He buys another twenty head in October when the prices collapse because everyone else is destocking. It is a smart financial move if you have water.
+[wire] He has Ray's water.
+[pause]
+[routine] Ray notices. He does not say anything. Because saying something would imply a condition on the water, and there is no condition. He opened the valve. The valve is open.
+[pause]
+[wire] In December Tom pours a concrete trough on his side of the fence. Permanent. Plumbed directly to the poly pipe from Ray's bore. He does not ask. He does not ask because he does not think he needs to, or because he knows he does not need to, and Ray cannot tell which because both look the same from this side of the fence.
+[pause]
+[routine] Ray stands at the junction and looks at the pipe running east. It has been there for four months.
+[routine] He goes inside and makes instant coffee. He drinks it at the kitchen table, looking at the pipe through the window.
+[routine] He goes out and checks the troughs.
+[pause-medium]
+
+## Part Five: The Application
+
+[wire] Tom's development plans arrive at the council in January.
+[wire] Ray learns about them the way you learn about most things that will change your life. From someone else, sideways, over the counter at the hardware store. Dave Phelps, who works at the council, mentions it while ringing up a box of fencing staples.
+[dave] 'Your neighbour's put in a DA. Eco-tourism. Cabins, walking tracks, the lot. Pretty slick application. Professional.'
+[pause]
+[routine] Ray pays for the staples. He drives home. He sits on the verandah.
+[pause]
+[wire] He reads the DA that evening on the council website. Forty-seven pages. Each one makes the air in the room heavier.
+[wire] Tom has applied for six eco-cabins, a communal kitchen, walking trails, and a workshop space for regenerative agriculture retreats. The design is thorough. The environmental impact assessment was done by a firm in Sydney. The water management plan, on page thirty-one, identifies the primary water source as groundwater accessed via pipeline from an adjacent property under a long-standing informal water-sharing arrangement.
+[pause]
+[wire] Long-standing.
+[wire] Informal.
+[pause]
+[wire] It has been eleven months.
+[pause]
+[wire] The plan provides flow calculations. Demand projections. A seasonal usage model. The numbers are detailed and correct. They are the numbers Ray told Tom on the verandah.
+[pause]
+[routine] He turns off the computer. He sits in the dark kitchen and listens to the bore pump cycling on the other side of the wall.
+[routine] It sounds like everything is still going.
+[pause-medium]
+
+## Part Six: The Letter
+
+[paper] The letter arrives on a Wednesday. White envelope. Typed address. The solicitor's name is embossed on the back flap in a font designed to communicate that the contents are not a suggestion.
+[paper] The letter informs Ray that his neighbour, Thomas Kirby, is seeking to formalise a water easement across the shared boundary, consistent with the existing informal arrangement. The letter notes that Mr Kirby's approved development application relies upon guaranteed water access. Formalisation would provide certainty for both parties. A registered boundary survey is attached for reference.
+[paper] The letter invites Ray to respond within twenty-one days.
+[paper] The letter does not say what happens if he does not respond. It does not need to. The absence of the threat is the threat, the way the absence of rain is the drought.
+[pause]
+[stone] Ray puts the letter on the kitchen table. He puts the mug on top of it. The brown ring it leaves on the white paper looks like a watermark.
+[pause]
+[stone] He walks to the boundary fence. The poly pipe runs under the bottom wire, black against the brown grass, and continues east toward Tom's concrete trough. The cattle are drinking. They do not care whose water it is. They do not care about easements or development applications or solicitors. They care about the water and the water is there and so they drink.
+[pause]
+[stone] Tom is in his paddock. He sees Ray at the fence. He walks over. He is wearing the boots Ray told him to buy. Rossi Enduras, because they do not fall apart in red soil the way the leather ones from Melbourne did. His hands are different now. Thicker. Darker. The hands of a man who has learned to do things by doing them.
+[pause]
+[tom] 'I figured you'd get that today.'
+[pause]
+[routine] Ray looks at him.
+[pause]
+[tom] 'It's not personal. The DA requires a guaranteed water source. Verbal agreements won't satisfy the conditions. The solicitor said it needs to be formalised.'
+[pause]
+[stone] Ray taught him how to read the weather. How to fix a pump. How to manage a drought. How the bore licence works. How the water allocation sits with the land. How the easement laws function.
+[stone] He taught him all of it. On the verandah, beer in hand, Friday evenings, looking at the paddock going brown.
+[pause]
+[stone] Tom listened.
+[pause]
+[stone] Tom took notes.
+[pause]
+[stone] Ray walks back to the house. He does not say anything to Tom. There is nothing to say that the fence between them has not already said.
+[pause]
+[stone] He sits at the kitchen table. The letter is under the mug. He pulls out the second page. The survey.
+[pause]
+[stone] A registered boundary survey. Conducted three months before Tom bought the property. GPS coordinates. Cadastral reference points. The legal boundary between the two properties marked in black.
+[pause]
+[stone] The fence is fourteen metres west of the legal boundary.
+[pause]
+[stone] The bore is on the eastern side of the line.
+[pause]
+[stone] Tom's side.
+[pause]
+[stone] The bore that Geoff Hadley sunk in 1983. The bore that Ray has maintained for thirty years. The bore whose pump was the last sound that made Jan feel like everything was still going. It sits fourteen metres east of the wire, on land that belongs to Thomas Kirby.
+[pause]
+[stone] Tom did not buy two hundred hectares of cleared grazing land with a seasonal creek and no bore. He bought two hundred hectares and fourteen metres of ridgeline containing the only reliable aquifer for fifteen kilometres.
+[pause]
+[stone] He knew before he crossed the boundary with the six-pack. He knew before he asked about the yield. He knew before he opened the notebook.
+[pause]
+[stone] The solicitor's letter is not a request. It is an offer. Tom is offering Ray continued access to Tom's bore, in exchange for the formalisation that satisfies the DA.
+[pause]
+[stone] The handshake that meant everything to one of them and nothing to the other.
+[pause]
+[stone] Geoff Hadley stood on this verandah thirty years ago, pointed at the bore cap, and said: 'Don't let anyone touch it.'
+[pause]
+[stone] It was never Geoff's to protect.
+[stone] It was never Ray's to give.
+[pause-medium]
+[stone] His daughter will call on Sunday, if she remembers, and he will say fine.
+[pause]
+[stone] He will not mention the survey.
+[pause]
+[stone] The bore pump hums through the wall.
+[pause]
+[stone] It sounds like everything is still going.
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawText = document.getElementById('raw-story').textContent;
+            const container = document.getElementById('story-container');
+            const lines = rawText.split('\n').filter(line => line.trim() !== '');
+
+            let htmlContent = '';
+
+            const themeMap = {
+                "Part One: The Man": "theme-light",
+                "Part Four: The Dry": "theme-tension",
+                "Part Five: The Application": "theme-dark",
+                "Part Six: The Letter": "theme-void"
+            };
+
+            lines.forEach((line) => {
+                if (line.startsWith('## ')) {
+                    const partTitle = line.replace('## ', '');
+                    htmlContent += `<div class="part-header beat" data-trigger-theme="${partTitle}">${partTitle}</div>`;
+                    return;
+                }
+
+                if (line.includes('[pause-medium]')) { htmlContent += `<div class="pause-medium"></div>`; return; }
+                if (line.includes('[pause-large]')) { htmlContent += `<div class="pause-large"></div>`; return; }
+                if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
+                if (line.includes('[pause]')) { htmlContent += `<div class="pause-small"></div>`; return; }
+
+                const match = line.match(/^\[(.*?)\] (.*)$/);
+                if (match) {
+                    const tag = match[1];
+                    const text = match[2];
+
+                    let cssClass = "voice-routine";
+                    if (tag === "land") cssClass = "voice-land";
+                    if (tag === "routine") cssClass = "voice-routine";
+                    if (tag === "verandah") cssClass = "voice-verandah";
+                    if (tag === "ray") cssClass = "voice-ray";
+                    if (tag === "tom") cssClass = "voice-tom";
+                    if (tag === "dave") cssClass = "voice-dave";
+                    if (tag === "wire") cssClass = "voice-wire";
+                    if (tag === "paper") cssClass = "voice-paper";
+                    if (tag === "stone") cssClass = "voice-stone";
+
+                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+                }
+            });
+
+            container.innerHTML = htmlContent;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
+
+            document.querySelectorAll('.beat').forEach(beat => observer.observe(beat));
+
+            const themeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const partTitle = entry.target.getAttribute('data-trigger-theme');
+                        if (partTitle && themeMap[partTitle]) {
+                            const newTheme = themeMap[partTitle];
+                            document.body.classList.remove('theme-tension', 'theme-dark', 'theme-void');
+                            if (newTheme !== 'theme-light') {
+                                document.body.classList.add(newTheme);
+                            }
+                        }
+                    }
+                });
+            }, { root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+
+            document.querySelectorAll('.part-header').forEach(header => themeObserver.observe(header));
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                document.getElementById("progress-bar").style.width = ((winScroll / height) * 100) + "%";
+            });
+
+            setTimeout(() => { window.dispatchEvent(new Event('scroll')); }, 100);
+        });
+    </script>
+</body>
+
+</html>

@@ -25,203 +25,56 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: 'Space Grotesk', sans-serif;
-            transition: background-color 2.5s ease, color 2.5s ease;
-            overflow-x: hidden;
-            font-size: 1.2rem;
-            line-height: 1.85;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            transition: background-color 1.2s ease, color 1.2s ease;
         }
 
+        /* 
+         * ATMOSPHERIC THEMES
+         * Transitioned via IntersectionObserver as the narrative descends.
+         */
         body.theme-dust {
             --bg-color: #2b2621;
             --text-color: #d1cbc3;
-            --ground-color: #d1cbc3;
-            --void-color: #a3b8cc;
-            --heavy-color: #ffffff;
-            --grain-opacity: 0.08;
-            --vignette-color: rgba(20, 15, 10, 0.6);
-            transition: background-color 3s ease, color 3s ease;
+            --vignette-color: rgba(0, 0, 0, 0.5);
         }
 
         body.theme-arrival {
-            --bg-color: #d9d6d0;
-            --text-color: #1a1a1a;
-            --ground-color: #1a1a1a;
-            --void-color: #2f4f4f;
-            --heavy-color: #000000;
-            --grain-opacity: 0.02;
-            --vignette-color: rgba(0, 0, 0, 0.05);
-            transition: background-color 4s ease, color 4s ease;
+            --bg-color: #1a1b1e;
+            --text-color: #c9d1d9;
+            --vignette-color: rgba(0, 0, 0, 0.7);
         }
 
         body.theme-snare {
-            --bg-color: #0c0f12;
-            --text-color: #b0b0b0;
-            --ground-color: #b0b0b0;
-            --void-color: #7d9cb3;
-            --heavy-color: #ffffff;
-            --grain-opacity: 0.05;
-            --vignette-color: rgba(0, 0, 0, 0.9);
-            transition: background-color 2s ease, color 2s ease;
-        }
-
-        body.theme-buffer {
-            --bg-color: #3b2818;
-            --text-color: #e6dac3;
-            --ground-color: #e6dac3;
-            --void-color: #8c9fae;
-            --heavy-color: #ffffff;
-            --grain-opacity: 0.1;
-            --vignette-color: rgba(10, 5, 0, 0.8);
-            transition: background-color 5s ease, color 5s ease;
-        }
-
-        body.theme-contract {
-            --bg-color: #0a0a0a;
-            --text-color: #999999;
-            --ground-color: #999999;
-            --void-color: #556677;
-            --heavy-color: #cccccc;
-            --grain-opacity: 0.12;
-            --vignette-color: rgba(0, 0, 0, 0.95);
-            transition: background-color 1.5s ease, color 1.5s ease;
+            --bg-color: #111111;
+            --text-color: #a8a8a8;
+            --vignette-color: rgba(10, 10, 10, 0.8);
         }
 
         body.theme-skyline {
-            --bg-color: #141820;
-            --text-color: #8899aa;
-            --ground-color: #8899aa;
-            --void-color: #5577aa;
-            --heavy-color: #bbccdd;
-            --grain-opacity: 0.06;
-            --vignette-color: rgba(5, 10, 20, 0.9);
-            transition: background-color 3s ease, color 3s ease;
+            --bg-color: #0d1117;
+            --text-color: #8b949e;
+            --heavy-color: #c9d1d9;
+            --vignette-color: rgba(0, 0, 0, 0.85);
         }
 
         body.theme-number {
-            --bg-color: #1a1510;
-            --text-color: #a09080;
-            --ground-color: #a09080;
-            --void-color: #cc8844;
-            --heavy-color: #ddccaa;
-            --grain-opacity: 0.09;
-            --vignette-color: rgba(15, 10, 5, 0.85);
-            transition: background-color 2.5s ease, color 2.5s ease;
+            --bg-color: #050505;
+            --text-color: #6e7681;
+            --vignette-color: rgba(0, 0, 0, 0.9);
         }
 
-        .container {
-            max-width: 620px;
-            margin: 0 auto;
-            padding: 12vh 24px 35vh 24px;
-            position: relative;
-            z-index: 10;
+        body.theme-buffer {
+            --bg-color: #261b17;
+            --text-color: #b5a397;
+            --heavy-color: #e6d3c8;
+            --vignette-color: rgba(15, 5, 0, 0.8);
         }
 
-        .beat {
-            opacity: 0;
-            transform: translateY(22px);
-            filter: blur(3px);
-            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                filter 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 2s ease;
-            margin-bottom: 2rem;
-            will-change: opacity, transform, filter;
-        }
-
-        .beat.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-        }
-
-        .pause-small {
-            margin-bottom: 15vh;
-        }
-
-        .pause-medium {
-            margin-bottom: 30vh;
-        }
-
-        .pause-large {
-            margin-bottom: 50vh;
-        }
-
-        .pause-void {
-            margin-bottom: 80vh;
-        }
-
-        .pause-snap {
-            margin-bottom: 100vh;
-        }
-
-        .pause-stark {
-            margin-bottom: 120vh;
-        }
-
-        .voice-ground {
-            font-weight: 400;
-            letter-spacing: -0.01em;
-            color: var(--ground-color);
-        }
-
-        .voice-read {
-            font-weight: 300;
-            opacity: 0.8;
-            letter-spacing: 0.01em;
-        }
-
-        .voice-heavy {
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--heavy-color);
-            transition: color 2s ease;
-        }
-
-        .voice-void {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 400;
-            font-size: 1.05rem;
-            color: var(--void-color);
-            margin-left: 2rem;
-            border-left: 2px solid var(--void-color);
-            padding-left: 1rem;
-            transition: color 2s ease, border-color 2s ease;
-        }
-
-        .voice-shift {
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: -0.02em;
-            font-weight: 300;
-            color: inherit;
-            opacity: 0.6;
-        }
-
-        .final-realization {
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 400;
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-            line-height: 1.7;
-            color: var(--text-color);
-            transition: color 2s ease;
-        }
-
-        .part-header {
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 400;
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-top: 30vh;
-            margin-bottom: 10vh;
-            opacity: 0.35;
-            text-align: center;
-        }
-
-        .grain {
+        .noise-overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -230,8 +83,8 @@
             pointer-events: none;
             z-index: 50;
             opacity: var(--grain-opacity);
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            transition: opacity 3s ease;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity 1.2s ease;
         }
 
         .vignette {
@@ -241,376 +94,205 @@
             width: 100vw;
             height: 100vh;
             pointer-events: none;
-            z-index: 5;
-            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
-            transition: background 3.5s ease;
+            z-index: 40;
+            background: radial-gradient(circle at center, transparent 30%, var(--vignette-color) 100%);
+            transition: background 1.2s ease;
         }
 
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 2px;
-            background-color: var(--heavy-color);
-            width: 0%;
-            z-index: 100;
-            transition: width 0.1s, background-color 2s ease;
-            opacity: 0.3;
+        main {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 8rem 2rem 12rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 4rem;
+            color: var(--heavy-color);
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+            color: var(--void-color);
+            display: flex;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--void-color);
+            margin-right: 15px;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+        }
+
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 3.5rem;
+            line-height: 0.8;
+            margin-right: 0.15em;
+            margin-bottom: -0.1em;
+            font-weight: 300;
+            color: var(--heavy-color);
+        }
+
+        .staccato {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            display: block;
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--void-color);
+            color: var(--void-color);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--text-color), transparent);
+            opacity: 0.2;
+            margin: 4rem 0;
+        }
+
+        .part-trigger {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .part-trigger.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 
-<body>
-    <div class="grain"></div>
+<body class="theme-dust">
+
+    <div class="noise-overlay"></div>
     <div class="vignette"></div>
-    <div id="progress-bar"></div>
 
-    <div class="container" id="story-container">
-    </div>
+    <main>
+        <h1>The Buffer</h1>
 
-    <script type="text/markdown" id="raw-story">
-# The Buffer
+        <div class="part-trigger" data-theme="theme-dust">
+            <h2>Part I. The Frame</h2>
+            <p class="drop-cap">The heat off the bitumen distorted the air above the road, bending the light into a watery mirage. Fifteen-year-old Dominic stood on the front step. No sweat beaded on his forehead. The collar of his school shirt sat crisp against his neck, the tie knotted with aggressive symmetry.</p>
+            <p>Elizabeth dropped the garden hose. Water pooled by her boots, turning the dry dust to a thick, dark red mud. The hose hissed, a continuous spray soaking the dead grass.</p>
+            <p>Pop wiped engine grease from his knuckles with a rag. Fifteen years pacing the juvenile wards taught a man to read the set of a jaw, the frequency of a blink, the tension coiled in the shoulders. Dominic’s eyes tracked Elizabeth’s approach. He did not step forward to meet his mother. He waited for the space to close. He required her movement. He demanded the gravity shift to his center.</p>
+            <span class="staccato">A boy returns home. A zero-sum transaction.</span>
+            <p>Elizabeth wrapped her arms around his shoulders. Her fingers dug into the fabric of his shirt. Dominic patted her back. Two light taps. The rhythm of a metronome. A simulation of comfort executed flawlessly by a machine lacking the biological hardware for the emotion.</p>
+        </div>
 
-## Part One: The Paddock
+        <div class="part-trigger" data-theme="theme-arrival">
+            <h2>Part II. The Resonance</h2>
+            <p>Elizabeth secured custody. The foster parents offered no resistance, their absence a silent testimony to a battle they had long ago abandoned. Dominic moved into the spare room. The house absorbed him without a ripple.</p>
+            <p>He scored top marks. Mock trial captain. Perfect posture at the dinner table. On paper, he represented the apex of adolescent achievement.</p>
+            <p>Pop watched the hands. At the dinner table, Dominic held his fork with precise rhythm. A steak knife sheared through gristle. No frustration when the meat resisted. Just applied, continuous force until the obstruction yielded.</p>
+            <p>When baby Ethel cried in the night, a jagged scream piercing the thin walls, Dominic’s door remained shut. A normal teenager complained about the noise. A brother offered to help, or shouted to keep the baby quiet. Dominic simply ceased to exist in the adjacent room. The crying possessed no utility for him. It generated no data he required. He tuned the frequency out entirely.</p>
+        </div>
 
-[ground] My parents ran four hundred acres of cattle country outside Armidale. Hard frost in July. Forty degrees by Christmas. The kind of land that cracked open in the dry and tried to swallow your boots in the wet.
-[pause]
-[read] You learned to read livestock before you could read a sentence. Which beast was going to kick. Which one was sick and hiding it. You learned it from the way they carried themselves, the set of the shoulders, the angle of the skull, the difference between an animal resting and an animal deciding.
-[pause]
-[shift] Farm hands came through. Shearers. Drifters looking for cash work. My father hired anyone willing to dig post holes. Some were good men down on their luck. Some had court dates in towns they'd already left.
-[pause]
-[ground] You didn't need a resume. You watched a man walk from his car to the gate. You watched how he held the wire when he ducked through the fence. You watched whether he looked at the dogs or the dogs looked away from him.
-[pause]
-[read] By fourteen I could pick the ones who'd steal from the fuel drum. Not because they looked like thieves. Because something in the way they stood told you they'd already done the maths on it.
-[pause-medium]
-[shift] I took a psychology degree because my mother pushed it. She was right to. But the degree didn't teach me what the paddock already had. It gave me language for things I'd been watching since I was a kid standing on the rail yard fence while strangers rolled through the gate.
-[pause]
-[read] I spent fifteen years in juvenile detention facilities after that. Concrete and fluorescent strip lighting and boys who'd done things that would turn your guts. My colleagues liked their diagnostic categories. They'd sit in case conferences arguing about personality clusters and conduct profiles and attachment disorders. They had books for everything.
-[pause]
-[ground] I didn't need the books. I just sat in the room with whoever they put in front of me. If the kid wanted to talk, I'd listen. If he didn't, I'd stay anyway. Most of them were just bent from the pressure of where they'd grown up. You sit with them long enough and the spine straightens a bit. Not all the way. But enough.
-[pause]
-[shift] Some of them, though. Some of them sat across from you and something was just absent. Not damaged. Not hurting. Just not installed.
-[pause]
-[ground] You don't call it anything. You don't write it in a report. You just note it in your body, a tightening across the back of the neck, and you stay alert.
-[pause-large]
+        <div class="part-trigger" data-theme="theme-snare">
+            <h2>Part III. The Friction Coefficient</h2>
+            <p>The boy at the school died on a Tuesday. A fall from the upper balcony outside the science block. The principal called it a tragic misstep. The police asked few questions. An accident.</p>
+            <p>Dominic sat on the back step that afternoon, eating a green apple. The crunch snapped through the humid, oppressive air. The juice coated his lips.</p>
+            <p>Pop stood by the screen door, the mesh separating them.</p>
+            <p>"A bad business at the school," Pop said. The words hung in the heat.</p>
+            <p>Dominic chewed, swallowed. He looked at the apple core. "The railing was substandard rust. The coefficient of friction on the wet concrete was low. The center of mass shifted over the fulcrum. A predictable outcome."</p>
+            <span class="staccato">Physics. Mass and velocity. The boy was a variable.</span>
+            <p>Not a single word about the boy's fear. No mention of the screaming. Just the physics of the fall. The apple cracked again between his teeth.</p>
+        </div>
 
-## Part Two: The Still Point
+        <div class="part-trigger" data-theme="theme-skyline">
+            <h2>Part IV. The Eradication</h2>
+            <p>The girl arrived in the middle of a torrential downpour. Sixteen years old. Rain plastered her dark hair to her cheeks. She screamed at the front door, her fingernails clawing at the wood, leaving deep scratches in the varnish.</p>
+            <p>Elizabeth pulled her inside. The girl’s stomach swelled heavy and hard against the wet fabric of her school uniform. Ethel’s mother. The breathing came in jagged, hyperventilating gasps.</p>
+            <p>Dominic was gone.</p>
+            <p>Pop kicked open the bedroom door. The wardrobe hung bare. The textbooks vanished from the desk. He left no note. He left a pregnant teenager sobbing on the linoleum, her fingernails bleeding.</p>
+            <p>He possessed money now. Bundles of fifty-dollar notes had appeared in his drawer weeks prior, secured with thick rubber bands. He required no support. He erased his own footprint, severing the connection the moment the liability outweighed the asset.</p>
+        </div>
 
-[ground] I met Elizabeth after the worst of it.
-[pause]
-[read] She'd had a son, Dominic. The biological father was someone she'd met young and followed overseas. I never met the man. What I knew came from Elizabeth and you had to read between what she said. He had stories. Family money, apparently. Places he'd been. A way of talking that made you feel like he knew something you didn't. She never said much more than that and I never pushed.
-[pause]
-[shift] But I knew Elizabeth. For all that logic, for all that speed, she had an idealist buried in there somewhere. Not the performative kind. More like a blind spot shaped like possibility. She saw a man with a story and a direction and she followed it. Nepal. London. Wherever he pointed. She thought the horizon was the destination. Turned out the man was just moving because he didn't know how to stop. He left her pregnant. No note. No explanation. Just gone.
-[pause]
-[ground] She came back pregnant. Raised the boy alone. Then the state took custody when she couldn't hold the edges together anymore.
-[pause]
-[read] That's when I found her. Or she found me. I had money from the sale of my parents' land, split with my two sisters. Janet in Perth, Carol in Tasmania. We stayed close even across the distance. The farm was gone but the proceeds were solid and I wasn't a man who spent much.
-[pause]
-[shift] Elizabeth wasn't broken. She was stalled. All that speed, all that processing power, and nowhere to point it. She'd start a sentence and abandon it halfway because her brain had already moved three steps past the thought. She'd forget her tea on the rail. She'd look at you like you were slow for not keeping up. Other people found her too much. Too fast. Too many directions at once.
-[pause]
-[ground] I didn't try to slow her down. I didn't see a fault. We evolved in groups. You need people who move that fast. You just need someone standing still beside them so they have something to push off from.
-[pause]
-[read] I was the still point. My money bought the time. She went back to university. Did the chemistry. Then the physics because she was bored waiting for the chemistry results. Then the patents started coming and the money followed. All of it in Sydney. She was building something and I was the floor she built it on.
-[pause]
-[shift] She never stopped trying to get Dominic back. Letters. Court applications. Phone calls that went nowhere. The system moved at its own speed and Elizabeth moved at hers and neither met in the middle.
-[pause]
-[ground] I loved her because she burned. Not romantic burning. Operational burning. She ran at the world like it owed her a fight and she intended to collect.
-[pause-medium]
+        <div class="part-trigger" data-theme="theme-number">
+            <h2>Part V. The Atmospheric Pressure</h2>
+            <p>Years bled out into the soil. Dominic enrolled in a law degree, then vanished from the university rosters. Yet, his name materialized in property development applications, council rezoning approvals, offshore trust registrations.</p>
+            <p>Ethel grew. She possessed Elizabeth’s velocity, running through the yard, dismantling radios, asking questions at a blistering pace.</p>
+            <p>Then the letters began.</p>
+            <p>Not handwritten letters from a brother. Thick, cream-colored envelopes from high-end family law firms in the city center.</p>
+            <span class="staccato">Best interests of the minor. Primary care.</span>
+            <p>The legal phrasing sought custody of Ethel. Dominic required an asset he did not currently possess. An imbalance in his ledger required correction. He did not ask. He initiated a structural acquisition.</p>
+        </div>
 
-## Part Three: The Arrival
+        <div class="part-trigger" data-theme="theme-snare">
+            <h2>Part VI. The Alteration</h2>
+            <p>The siege lacked physical violence. It was a creeping environmental rot, an infection of the mundane.</p>
+            <p>The mail ceased arriving on Tuesdays. A man in a grey suit parked a Holden three houses down, recording license plates with a clipboard resting on the steering wheel.</p>
+            <p>Ethel’s red bicycle disappeared from the locked shed. The padlock remained unbroken. Three days later, the bicycle materialized on the front lawn. The tires lay slashed, the rubber ribbons splayed on the grass. The metal frame, however, gleamed. Someone had polished it to a mirror shine.</p>
+            <p>A stranger approached Elizabeth’s solicitor at a crowded charity dinner. The stranger whispered a specific, unlisted bank account number directly into the solicitor's ear, followed by the address of his daughter's primary school. The solicitor withdrew his representation the next morning via a couriered letter.</p>
+            <p>The house, once a sanctuary, mutated into a glass jar. The air inside grew stale, recycled, observed.</p>
+        </div>
 
-[pause-snap]
-[heavy] He arrived on a Tuesday. Three in the afternoon.
-[pause]
-[ground] Fifteen years old. Standing on the front porch of our place in Sydney. School shirt tucked in. Bag over one shoulder. He didn't knock. He just stood there until Elizabeth opened the door.
-[pause]
-[read] She made a sound I'd never heard from her. A gasp that pulled fifteen years of held breath out of her chest in a single second. She grabbed him. She pulled him into the hallway. She was shaking.
-[pause]
-[shift] I was at the kitchen sink. I dried my hands on my shirt and walked to the hall.
-[pause]
-[ground] I saw his face over her shoulder.
-[pause]
-[void] He was looking past her. His eyes tracked the hallway. Measured the ceiling height. Noted the deadbolt on the front door. Registered me standing six metres back by the kitchen bench. All of it in under two seconds.
-[pause]
-[read] Then his arms came up and wrapped around her and he buried his face in her neck and his shoulders started to shake.
-[pause]
-[shift] Perfect timing. Perfect pressure. The embrace of a boy reuniting with the mother he'd lost.
-[pause]
-[heavy] My neck locked.
-[pause]
-[ground] I had seen that sequence before. In D-block. In the family visit rooms. The young ones who'd worked out that if you match your breathing rate to the person holding you, they can't tell the difference between grief and performance. The body reads it as real. The lungs sync. The heart follows.
-[pause]
-[read] I stood at the kitchen bench and I watched this fifteen-year-old boy calibrate himself against his mother's nervous system in real time.
-[pause]
-[shift] And I said nothing. Because you don't step between a mother and her child with a theory. You stand by the door. You watch the room.
-[pause-large]
+        <div class="part-trigger" data-theme="theme-skyline">
+            <h2>Part VII. The Strike</h2>
+            <p>They required friction. Financial blocks were insufficient against a man who minted his own currency. Dominic bypassed civil law entirely.</p>
+            <p>Elizabeth possessed a contact. AFP. A quiet name residing in a secure federal registry.</p>
+            <p>Pop did not pack bags. He sat at the kitchen table, the landline phone pressed hard against his ear. He fed the contact specific anomalies in the council zoning reports Dominic favored. Small discrepancies. Tax routing errors crossing state lines. Federal jurisdiction.</p>
+            <span class="staccato">A pebble in the gears. A grinding halt.</span>
+            <p>The strike was purely administrative. It placed Dominic’s name in a federal database he could not locally bribe, intimidate, or overwrite. It forced his eye away from the house. It demanded a massive recalculation of his resources to seal the breach.</p>
+        </div>
 
-## Part Four: The Deficit
+        <div class="part-trigger" data-theme="theme-buffer">
+            <h2>Part VIII. The Geography of Time</h2>
+            <p>The window opened. A temporary gap in the crushing atmospheric pressure.</p>
+            <p>The Holden packed tight, the suspension groaning. Tires crunched over gravel, leaving the concrete maze of the western suburbs in the rearview mirror.</p>
+            <p>They drove north. Queensland. Red dirt and suffocating cane fields. The Buffer property.</p>
+            <p>It was not a hiding place. A ghost operating a billion-dollar infrastructure could locate anyone on the continent. It was a tactical expanse of land. Distance translated to time. Time translated to survival.</p>
+            <p>Pop stared through the windshield, his hands gripping the leather wheel. The road stretched out, shimmering in the brutal heat. The threat remained, a low hum in the atmosphere, waiting for the federal friction to clear.</p>
+            <p>They bought the dirt. They bought the silence. They waited for the storm to pivot.</p>
+        </div>
 
-[read] The foster family had dissolved. Not dramatically. They just stopped functioning around him. He'd lied with such consistent, unbroken conviction that they'd lost their grip on what was actually happening inside their own house. He could sit across from a woman and describe an afternoon that never occurred, and his pulse wouldn't shift. His voice wouldn't climb. His pupils wouldn't dilate.
-[pause]
-[shift] They didn't hit him. They didn't starve him. They just surrendered. They rang the department and said they couldn't do it anymore and nobody asked them what "it" was.
-[pause]
-[ground] His school record was immaculate. Mock-trial captain. Class prefect. His legal studies teacher called him the best debater she'd seen in twenty years. His grades sat in the top five percent.
-[pause]
-[void] On paper, he was everything.
-[pause]
-[read] Elizabeth regained custody. She had her patent money coming in. She had the PhD. She had the lab taking shape up north and a life that looked, from the outside, like stability.
-[pause]
-[ground] Dominic moved in. He was polite. He asked about my day. He dried the dishes without being asked. He sat with Elizabeth in her office and listened to her talk about reagent concentrations and nodded in all the right places.
-[pause]
-[shift] I watched him the way I used to watch the drifters walk from their cars to the gate.
-[pause]
-[heavy] He never once looked at the dogs.
-[pause]
-[ground] The dogs looked at him. Both of them. They'd track him from the moment he came into the yard. Not barking. Not growling. Just locked on, their heads low, their bodies pressed against the far fence.
-[pause]
-[read] I grew up with working dogs. Kelpies, heelers. A dog doesn't decide to fear something. The decision happens below thought. Somewhere in the animal brain where the old calculations still run, the ones that kept things alive before language arrived and cluttered everything up.
-[pause]
-[shift] The dogs knew.
-[pause-medium]
-
-## Part Five: The Accumulation
-
-[ground] Two years. That's how long it took for the surface to crack.
-[pause]
-[read] He started disappearing. Three days at a stretch. No phone call. No explanation. He'd come back wearing new boots, new watch, carrying himself like a man twice his age who'd just closed a deal.
-[pause]
-[shift] Elizabeth asked where he'd been. He told her a friend's place. Studying. He said it looking directly at her, his voice soft, his hand on her arm. She believed him because his delivery was surgical.
-[pause]
-[ground] I didn't ask. I just tracked the patterns. The disappearances increased in length. The possessions increased in value. He was seventeen and he was carrying cash in rolls held with rubber bands.
-[pause]
-[read] Then a boy at his school died. A fall from a construction site after hours. The coroner called it misadventure. The police report said the boy had been drinking. There were three other students present and none of them would say a word about the circumstances.
-[pause]
-[shift] At the memorial service, Dominic stood at the front row. He placed a hand on the dead boy's mother's shoulder. I watched his chest from across the room.
-[pause]
-[void] He was matching her respiratory rate. Breath for breath. His jaw held the exact angle of suppressed grief, a micro-tremor in the lower lip, a blink rate just above baseline. The mechanical reproduction of a human being in pain.
-[pause]
-[ground] Not one trace of moisture in his eyes.
-[pause]
-[heavy] A month later, a girl arrived at the house. Sixteen. Throwing up in the garden bed.
-[pause]
-[read] She was pregnant. She was screaming. She was looking for Dominic.
-[pause]
-[shift] Dominic packed a single bag. He walked out the front door while the girl was still sobbing into Elizabeth's chest. He didn't look back. He didn't say goodbye.
-[pause]
-[ground] Elizabeth held the girl. She held the situation. She held it the way she held everything, with both hands and her teeth.
-[pause]
-[read] I stood on the porch and watched his car pull out of the drive. The brake lights didn't flicker. The indicator clicked once, precise as a metronome.
-[pause]
-[shift] He was done with this address.
-[pause-large]
-
-## Part Six: The Infrastructure
-
-[ground] He didn't come back to the house.
-[pause]
-[read] He didn't need to. Over the next eighteen months, his name started appearing in places I wasn't looking for it. A development application in the Herald. A tender for a council project in the west. An article about a young property investor who was reshaping the skyline.
-[pause]
-[shift] He was twenty. He had a company. He had offices. He had a photograph in a business magazine where he stood on a building site with his hands in his pockets and that same practised smile and the caption called him "Sydney's youngest self-made developer."
-[pause]
-[ground] Self-made. I put the magazine down and stared at the wall for a long time.
-[pause]
-[read] People started going quiet around his name. A bloke I knew from the old days, a probation officer named Gareth, rang me one night. He'd been asking around about a contract dispute involving one of Dominic's companies. Two days later he rang again to say he wasn't asking anymore. He didn't say why. He didn't need to.
-[pause]
-[void] That's how it works. Not threats. Not violence. Just a shift in the air pressure around a name. People stop looking. People stop asking. The ones who don't stop find that their questions have consequences they can't trace back to a source.
-[pause]
-[shift] I started hearing things through contacts I hadn't spoken to in years. Men who worked security. Men who'd done time. They mentioned his name the way you mention weather. A fact of the landscape. Unavoidable.
-[pause]
-[ground] He wasn't just building properties. He was building something underneath them. Something that used the properties as a surface and operated below it in a way that made the surface look legitimate. By twenty-two he had more money than the patents had ever generated. By twenty-five his name was on plaques in hospital lobbies and donor rolls at universities.
-[pause]
-[read] The boy who pinned a cicada and watched it spin was now spinning entire postcodes.
-[pause]
-[heavy] And then the letter arrived.
-[pause-large]
-
-## Part Seven: The Claim
-
-[pause-snap]
-[ground] A family law solicitor. Headed paper. Addressed to Elizabeth.
-[pause]
-[read] Dominic was seeking contact with the child. His child. Ethel. The letter used phrases like "the father's right to meaningful relationship" and "the best interests of the minor." It referenced his income, his stability, his standing in the community.
-[pause]
-[shift] Elizabeth read it standing at the kitchen bench. She read it twice. Then she put it down and picked up Ethel and held her against her chest and didn't speak for twenty minutes.
-[pause]
-[ground] We fought it. Elizabeth retained a solicitor. We filed responses. We produced documentation. The court process moved slowly and Dominic's lawyers moved fast. Every filing was precise. Every affidavit read like it had been edited by someone who understood how courts think.
-[pause]
-[void] On paper, he was a successful young businessman seeking a relationship with his daughter. On paper, there was no reason to refuse.
-[pause]
-[read] The court granted supervised visits. We challenged. He appealed. His barrister was one of the most expensive in Sydney and the man spoke as if Dominic's desire to see his child was the most natural thing on earth.
-[pause]
-[shift] It went on for months. Elizabeth spent every dollar the patents made on legal fees. I spent what was left of the farm. We were not going bankrupt. We were watching a machine disassemble our defences one filing at a time.
-[pause]
-[ground] Then the letters changed tone. A different solicitor. A different firm. The language shifted from "contact" to "custody." From "relationship" to "primary care."
-[pause]
-[heavy] He wanted Ethel.
-[pause]
-[void] Not because he loved her. Not because he needed her. Because she was something we had that he didn't and that fact registered in his operating system as an imbalance that required correction.
-[pause]
-[read] Then the court process stalled. Our solicitor rang on a Friday and said she'd been approached by someone at a function. A man she didn't know. He mentioned the case by name. He mentioned Ethel by name. He mentioned our home address. He said it was a shame about the parking situation on our street.
-[pause]
-[shift] She said it very calmly. She said she was withdrawing from the case. She said she recommended we find someone outside Sydney.
-[pause]
-[ground] That's when it stopped being legal.
-[pause]
-[heavy] I sat on the verandah that night and looked at the street and I knew exactly what was happening. I'd seen it in the system for fifteen years. The boy who calibrated his breathing against his mother's nervous system was now calibrating entire institutions. Courts. Solicitors. Addresses. He was mapping us the way he mapped a development site. Working out which structures could be purchased and which ones had to be removed.
-[pause]
-[read] We were structures.
-[pause-large]
-
-## Part Eight: The Friction
-
-[heavy] Elizabeth made the call the next morning.
-[pause]
-[ground] She sat at the kitchen table with a piece of paper she'd been carrying in her wallet for weeks. She dialled a number and spoke for eleven minutes. I sat across from her and watched Ethel crawl across the kitchen floor toward the cat.
-[pause]
-[read] When she hung up she wrote two words on the back of the paper.
-[pause]
-[void] Information only.
-[pause]
-[shift] She looked at me across the table. "I've made a contact," she said. "Federal. I gave them enough to start a file. Not enough to build a case. Just enough to make his name appear in a system he doesn't control."
-[pause]
-[ground] I understood immediately. Dominic operated in the gaps between systems. He built in the margins where oversight couldn't reach. If his name turned up on a federal watchlist, even as a notation, even as a query, the margins would tighten. Tenders would attract additional scrutiny. Contracts would require extra signatures. Council approvals would slow.
-[pause]
-[read] It wouldn't stop him. Nothing stops him. But it would occupy him. It would give him something to manage that wasn't us.
-[pause]
-[heavy] And it did.
-[pause]
-[shift] Within a month, the custody filings went quiet. The solicitor letters stopped arriving. A federal auditor visited one of his development sites in Parramatta. Then another in Liverpool. Small things. Procedural things. The kind of friction that a man with nothing to hide would barely notice but a man with everything to hide would have to spend time and resources making disappear.
-[pause]
-[ground] Elizabeth put the piece of paper in a safety deposit box the next morning. She told me the bank and the box number and she said if anything happened to both of us, Ethel would need to find it.
-[pause]
-[void] We were planning for a world where we weren't in it.
-[pause]
-[read] I looked at the baby on the kitchen floor. Red hair coming through. Pulling herself up on the leg of a chair. She looked at me with Elizabeth's eyes and something behind them that was entirely her own.
-[pause]
-[heavy] The window wouldn't last. Dominic doesn't step back. He regroups. Whatever we'd done had bought us time but not safety. He was dealing with the friction now. In six months he'd have dealt with it. In a year he'd have found the source. In two years he'd have built a structure around the AFP contact that made the contact disappear.
-[pause-large]
-
-## Part Nine: The Dirt
-
-[ground] "We go now," Elizabeth said. Not a question. Not a discussion. She was standing in the kitchen holding Ethel on her hip and looking at me with the expression of a woman who has run every calculation and arrived at the only answer that keeps the variables alive.
-[pause]
-[read] You can't hide from him. Hiding assumes he'd need to look. He doesn't look. He delegates. He pays someone else to look.
-[pause]
-[shift] But you can buy time. You can put distance and red dirt between the machinery and the people it's trying to reach. Not a wall. A buffer. Enough friction to slow the gears. Enough road to see the dust cloud before it arrives.
-[pause-medium]
-[final] I packed the car. I packed the patents. I packed the baby.
-[pause]
-[final] Elizabeth stood in the driveway looking south toward the city. She was vibrating. Not with fear. With the particular fury of a woman who has just understood that the boy she carried and lost and fought to recover had been, from the beginning, someone she could never have reached. Not because she failed. Because there was no signal to receive.
-[pause-stark]
-[final] We drove north. Eight hundred kilometres of highway turning to gravel turning to red clay.
-[pause]
-[final] I watched the rear-view mirror for three hundred of them.
-[pause-void]
-[final] The buffer was not a hiding place. It was borrowed time. And we both knew, sitting in that car with Ethel asleep in the back seat, that one day the distance would close and the account would come due.
-[pause]
-[final] But today the road was long and the dirt was deep and Ethel was breathing in her sleep. And that was enough. For now, that was enough.
-[pause-stark]
-
-    </script>
+    </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const rawText = document.getElementById('raw-story').textContent;
-            const container = document.getElementById('story-container');
-            const lines = rawText.split('\n').filter(line => line.trim() !== '');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.6
+        };
 
-            let htmlContent = '';
-
-            const themeMap = {
-                "Part One: The Paddock": "theme-dust",
-                "Part Two: The Still Point": "theme-dust",
-                "Part Three: The Arrival": "theme-arrival",
-                "Part Four: The Deficit": "theme-arrival",
-                "Part Five: The Accumulation": "theme-snare",
-                "Part Six: The Infrastructure": "theme-skyline",
-                "Part Seven: The Claim": "theme-skyline",
-                "Part Eight: The Friction": "theme-number",
-                "Part Nine: The Dirt": "theme-buffer"
-            };
-
-            lines.forEach((line) => {
-                if (line.startsWith('## ')) {
-                    const partTitle = line.replace('## ', '');
-                    htmlContent += `<div class="part-header beat" data-trigger-theme="${partTitle}">${partTitle}</div>`;
-                    return;
-                }
-
-                if (line.startsWith('# ')) return;
-
-                if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
-                if (line.includes('[pause-snap]')) { htmlContent += `<div class="pause-snap"></div>`; return; }
-                if (line.includes('[pause-void]')) { htmlContent += `<div class="pause-void"></div>`; return; }
-                if (line.includes('[pause-large]')) { htmlContent += `<div class="pause-large"></div>`; return; }
-                if (line.includes('[pause-medium]')) { htmlContent += `<div class="pause-medium"></div>`; return; }
-                if (line.includes('[pause]')) { htmlContent += `<div class="pause-small"></div>`; return; }
-
-                const match = line.match(/^\[(.*?)\] (.*)$/);
-                if (match) {
-                    const tag = match[1];
-                    const text = match[2];
-
-                    let cssClass = "voice-ground";
-                    if (tag === "read") cssClass = "voice-read";
-                    if (tag === "void") cssClass = "voice-void";
-                    if (tag === "shift") cssClass = "voice-shift";
-                    if (tag === "heavy") cssClass = "voice-heavy";
-                    if (tag === "final") cssClass = "final-realization";
-
-                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    const theme = entry.target.getAttribute('data-theme');
+                    if (theme) {
+                        document.body.className = theme;
+                    }
                 }
             });
+        }, observerOptions);
 
-            container.innerHTML = htmlContent;
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, {
-                root: null,
-                rootMargin: '0px 0px -12% 0px',
-                threshold: 0.1
-            });
-
-            document.querySelectorAll('.beat').forEach(beat => {
-                observer.observe(beat);
-            });
-
-            const themeObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const partTitle = entry.target.getAttribute('data-trigger-theme');
-                        if (partTitle && themeMap[partTitle]) {
-                            const newTheme = themeMap[partTitle];
-                            document.body.classList.remove('theme-dust', 'theme-arrival', 'theme-snare', 'theme-contract', 'theme-buffer', 'theme-skyline', 'theme-number');
-                            document.body.classList.add(newTheme);
-                        }
-                    }
-                });
-            }, {
-                root: null,
-                rootMargin: '-50% 0px -50% 0px',
-                threshold: 0
-            });
-
-            document.querySelectorAll('.part-header').forEach(header => {
-                themeObserver.observe(header);
-            });
-
-            window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                document.getElementById("progress-bar").style.width = scrolled + "%";
-            });
-
-            setTimeout(() => {
-                window.dispatchEvent(new Event('scroll'));
-            }, 100);
+        document.querySelectorAll('.part-trigger').forEach(trigger => {
+            observer.observe(trigger);
         });
     </script>
 </body>

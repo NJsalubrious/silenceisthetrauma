@@ -6,11 +6,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>PIXELSTORTION - Silence Is The Trauma -</title>
     <meta name="description"
-        content="Short stories about survival from an adjacent world" />
+        content="Short Stories. Each a snapshot of the whole. Together they build the whole unsettling story." />
 
     <!-- Open Graph -->
     <meta property="og:title" content="PIXELSTORTION - Silence Is The Trauma -" />
-    <meta property="og:description" content="Short stories about survival from an adjacent world" />
+    <meta property="og:description"
+        content="Short Stories. Each a snapshot of the whole. Together they build the whole unsettling story." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://silenceisthetrauma.com/stories.html" />
     <meta property="og:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
@@ -21,7 +22,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PIXELSTORTION - Silence Is The Trauma -" />
-    <meta name="twitter:description" content="Short stories about survival from an adjacent world" />
+    <meta name="twitter:description"
+        content="Short Stories. Each a snapshot of the whole. Together they build the whole unsettling story." />
     <meta name="twitter:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
@@ -358,7 +360,7 @@
             color: #fff;
             letter-spacing: -0.04em;
             line-height: 1;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
         }
 
         .hero-subtitle {
@@ -438,12 +440,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(100%);
+            filter: brightness(0.93);
             transition: all 0.7s ease;
         }
 
         .story-card:hover .story-card-cover img {
-            filter: grayscale(0%);
+            filter: brightness(1);
             transform: scale(1.05);
         }
 
@@ -638,7 +640,7 @@
                     <h1 class="brand-title glitch-text" data-text="PIXELSTORTION">PIXELSTORTION</h1>
                 </a>
             </div>
-            <div class="brand-subtitle">THE ARCHIVE</div>
+            <div class="brand-subtitle">THE STORY ARCHIVE</div>
         </div>
     </nav>
 
@@ -648,8 +650,7 @@
         <p class="hero-subtitle">
             <span
                 style="display: block; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted);">
-                Warning: Contains mature themes, violence, and trauma.<br>
-                Reader discretion is advised.
+                Warning: Contains mature themes, violence, and trauma.
             </span>
         </p>
     </section>
@@ -658,6 +659,7 @@
     <div class="stories-container">
         <div class="section-header">
             <h3 class="section-title">SHORT STORIES</h3>
+            <p class="section-label">Each a snapshot of the whole</p>
         </div>
         <div class="story-grid" id="story-grid"></div>
     </div>

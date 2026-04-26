@@ -294,7 +294,7 @@
 
         /* ====== HERO ====== */
         .hero {
-            padding: 140px 24px 60px;
+            padding: 100px 24px 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -579,7 +579,7 @@
         /* ====== MOBILE ====== */
         @media (max-width: 640px) {
             .hero {
-                padding: 110px 16px 40px;
+                padding: 90px 16px 30px;
             }
 
             .stories-container {
@@ -644,20 +644,20 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-badge">
-            <div class="hero-badge-dot"></div>
-            <span class="hero-badge-text">Classified Files</span>
-        </div>
         <h2 class="hero-title">SILENCE IS<br>THE TRAUMA</h2>
-        <p class="hero-subtitle"><strong>Short fiction</strong><br>Reader discretion is advised.
+        <p class="hero-subtitle">
+            <span
+                style="display: block; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted);">
+                Warning: Contains mature themes, violence, and trauma.<br>
+                Reader discretion is advised.
+            </span>
         </p>
     </section>
 
     <!-- Stories Grid -->
     <div class="stories-container">
         <div class="section-header">
-            <h3 class="section-title">THE ARCHIVE</h3>
-            <p class="section-label">Classified Short Fiction</p>
+            <h3 class="section-title">SHORT STORIES</h3>
         </div>
         <div class="story-grid" id="story-grid"></div>
     </div>
@@ -700,6 +700,13 @@
                 track: 'STORY 02 // ISLA\'S BLAST RADIUS',
                 cover: 'short_stories/Islas_Blast_Radius.jpg',
                 href: 'short_stories/Islas_Blast_Radius.html'
+            },
+            {
+                id: 'same-breath',
+                title: 'Same Breath',
+                track: 'STORY 03 // SAME BREATH',
+                cover: 'short_stories/Same_Breath.jpg',
+                href: 'short_stories/Same_Breath.html'
             }
         ];
 
@@ -720,7 +727,7 @@
             }
 
             container.innerHTML = stories.map((story, index) => `
-                <a href="${story.href}" class="story-card"
+                <a href="${story.href}" target="_blank" rel="noopener noreferrer" class="story-card"
                    style="animation: fadeInUp 0.6s ease forwards ${index * 0.12}s; opacity: 0;">
                     <div class="story-card-cover">
                         <img src="${story.cover}"

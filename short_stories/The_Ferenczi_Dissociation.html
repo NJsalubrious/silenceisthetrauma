@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ferenczi Dissociation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f5f0eb;
+            --text-color: #1a1a1a;
+            --calc-color: #4a6741;
+            --dominic-color: #1e3a8a;
+            --click-color: #b45309;
+            --heavy-color: #374151;
+            --grain-opacity: 0.03;
+            --vignette-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            transition: background-color 2.5s ease, color 2.5s ease;
+            overflow-x: hidden;
+            font-size: 1.2rem;
+            line-height: 1.85;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- THEMATIC STATES --- */
+        body.theme-cadence {
+            --bg-color: #1c1917;
+            --text-color: #d6d3d1;
+            --click-color: #f59e0b;
+            --calc-color: #a3a3a3;
+            --heavy-color: #e7e5e4;
+            --grain-opacity: 0.07;
+            --vignette-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        body.theme-breach {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --calc-color: #059669;
+            --dominic-color: #1e3a8a;
+            --heavy-color: #475569;
+            --grain-opacity: 0.02;
+            --vignette-color: rgba(0, 0, 0, 0.05);
+            transition: background-color 3s ease, color 3s ease;
+        }
+
+        body.theme-rupture {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --calc-color: #34d399;
+            --dominic-color: #60a5fa;
+            --heavy-color: #e5e7eb;
+            --grain-opacity: 0.0;
+            --vignette-color: rgba(0, 0, 0, 0.0);
+            transition: background-color 0.08s ease, color 0.08s ease;
+        }
+
+        body.theme-ferenczi {
+            --bg-color: #020617;
+            --text-color: #94a3b8;
+            --calc-color: #64748b;
+            --dominic-color: #94a3b8;
+            --heavy-color: #cbd5e1;
+            --grain-opacity: 0.04;
+            --vignette-color: rgba(0, 0, 0, 0.7);
+            transition: background-color 4s ease, color 4s ease;
+        }
+
+        body.theme-remains {
+            --bg-color: #0a0a0a;
+            --text-color: #57534e;
+            --calc-color: #44403c;
+            --heavy-color: #78716c;
+            --grain-opacity: 0.06;
+            --vignette-color: rgba(0, 0, 0, 0.85);
+            transition: background-color 5s ease, color 5s ease;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 12vh 24px 35vh 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- CINEMATIC REVEAL --- */
+        .beat {
+            opacity: 0;
+            transform: translateY(22px);
+            filter: blur(3px);
+            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 2s ease;
+            margin-bottom: 2rem;
+            will-change: opacity, transform, filter;
+        }
+
+        .beat.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* --- PACING --- */
+        .pause-small {
+            margin-bottom: 15vh;
+        }
+
+        .pause-medium {
+            margin-bottom: 30vh;
+        }
+
+        .pause-large {
+            margin-bottom: 50vh;
+        }
+
+        .pause-void {
+            margin-bottom: 80vh;
+        }
+
+        .pause-snap {
+            margin-bottom: 100vh;
+        }
+
+        .pause-stark {
+            margin-bottom: 120vh;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .voice-steady {
+            font-weight: 300;
+        }
+
+        .voice-cold {
+            font-weight: 300;
+            opacity: 0.75;
+            letter-spacing: 0.01em;
+        }
+
+        .voice-calc {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.92rem;
+            color: var(--calc-color);
+            letter-spacing: 0.04em;
+            line-height: 1.6;
+            transition: color 2s ease;
+        }
+
+        .voice-dominic {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            color: var(--dominic-color);
+            margin-left: 2rem;
+            border-left: 2px solid var(--dominic-color);
+            padding-left: 1rem;
+            transition: color 2s ease, border-color 2s ease;
+        }
+
+        .voice-click {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--click-color);
+            letter-spacing: 0.06em;
+            transition: color 0.3s ease;
+        }
+
+        .voice-flat {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 300;
+            color: inherit;
+            opacity: 0.8;
+        }
+
+        .voice-heavy {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--heavy-color);
+        }
+
+        .final-realization {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+            color: var(--text-color);
+        }
+
+        .part-header {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            opacity: 0.35;
+            text-align: center;
+        }
+
+        /* --- ATMOSPHERIC EFFECTS --- */
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: var(--grain-opacity);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity 3s ease;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
+            transition: background 3.5s ease;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background-color: var(--calc-color);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s, background-color 2s ease;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div id="progress-bar"></div>
+
+    <div class="container" id="story-container">
+    </div>
+
+    <script type="text/markdown" id="raw-story">
+# The Ferenczi Dissociation
+
+## Part One: The Click Cadence
+
+[steady] Somewhere in Surry Hills, on the fourth floor of a building that smelled of carpet adhesive and old takeaway, a young woman knocked on a door she had knocked on before.
+[pause]
+[steady] The dealer opened it the way he always did. One hand on the frame. Half a grin. Eyes scanning her arms, her jaw, the slight tremble he mistook for withdrawal.
+[pause]
+[flat] He thought he understood her.
+[pause-medium]
+[click] Click.
+[pause]
+[steady] She walked past him, straight to the bathroom. Hand over her mouth. Shoulders hunched. He barely looked up. Cost of doing business. Junkies threw up. Junkies shook. Junkies needed bathrooms. He went back to his phone.
+[pause]
+[click] Click.
+[pause]
+[steady] Inside the bathroom she pulled a flat-head driver from the lining of her jacket. The handle screws on the lock assembly came out in four turns each. She reversed the entire mechanism. Barrel, latch plate, thumb turn, so the lock now sat on the outside of the door.
+[pause]
+[click] Click.
+[pause]
+[steady] She reassembled it. Wiped the screws. Flushed the toilet for the sound of it. Came back out pale and apologetic.
+[pause]
+[flat] He offered her water. She asked for something stronger.
+[pause]
+[click] Click.
+[pause]
+[steady] He poured her one and another for himself. Then two more... and more. She laughed at his stories. Leaned close enough that he thought the evening had shifted in his favour. She let him believe that. She kept his glass full. She watched his bladder do the work.
+[pause]
+[click] Click.
+[pause]
+[steady] The bathroom door closed behind him. She turned the lock from the outside and the latch caught with a sound like a full stop. He was making noise but the toilet door was strong, the reason now inverted.
+[pause]
+[flat] His phone was in the side drawer where she had watched him drop it twenty minutes earlier. She opened his recent calls.
+[pause]
+[click] Click.
+[pause]
+[steady] The last number answered on the second ring. A male voice. Thick consonants. An accent she had heard in the hallways of a glass house in Mosman. One of her stepfather's men.
+[pause]
+[flat] She hung up. Her hands had stopped shaking.
+[pause-medium]
+[steady] From her own phone she pulled up the archive, a collection of compressed folders she had built during sleepless nights when the house was quiet and the security cameras pointed outward. Her stepfather's emails. His accounts. The shell companies. The names of the cartels and syndicates he played off one another like opposing chess pieces, skimming from each, selling intelligence to their rivals, maintaining a twenty-billion-dollar empire built on the confidence that none of them would ever compare notes.
+[pause] 
+[click] Click.
+[pause]
+[steady] She attached the files. She addressed them to every associate whose trust her stepfather had monetised.
+[pause]
+[click] Click.
+[pause]
+[heavy] She pressed send.
+[pause-large]
+[flat] In the bathroom, the dealer was still hammering on the door. She could hear him yelling. She picked up her jacket.
+[pause]
+[steady] She did not know, as she walked down four flights of stairs and into the amber streetlight of a Sydney evening, that the retaliation would arrive in hours, not days. That it would not come for her. That it would walk calmly through a front gate in Mosman and find a different daughter in a glass house, hearing footsteps that should not have been there.
+[pause]
+[flat] She did not know any of that yet.
+[pause]
+[click] Click.
+[pause-snap]
+
+## Part Two: The Breach
+
+[steady] The glass house in Mosman sat above the harbour like a display case. Five men in dark jackets occupied the perimeter. She had catalogued their positions the way she catalogued everything, not from fear, but from the part of her brain that measure the streght of each wall and the height of each floor. The distances. The angles. The fault tolerances. They were her father's men. Russian. Ex-military. Each one vetted, salaried, and positioned according to a rotation schedule she had memorised within the first week of living here.
+[pause]
+[calc] Laminated security glass. Five panels. Bullet-resistant to 7.62 millimetre. Tensile rating consistent with AS1288 structural glazing.
+[pause]
+[flat] The gate was biometric. The locks were proprietary. The house was a compound dressed as architecture.
+[pause]
+[cold] It was a quiet Tuesday evening in Mosman.
+[pause-medium]
+[steady] She was in the lounge when she heard it. Footsteps on the kitchen tile. Unhurried. The sound of leather soles, evenly spaced, the gait of someone who had been let in.
+[pause]
+[flat] No alarm. No broken glass. No raised voices from the perimeter.
+[pause]
+[steady] She came through the doorway and he was already there. Behind the kitchen counter. A man in a black polo shirt stretched across heavy shoulders. A white plastic takeaway bag sat on the marble beside him, knotted at the top. Thai. The lemongrass and chilli were already in the air.
+[pause]
+[flat] He was mid-sentence when she appeared. Already talking. As though they had been in conversation for minutes and she had simply stepped out to get something.
+[pause]
+[heavy] "You must be Dominic's daughter," he said. He smiled. Broad, tanned, grey at the temples. He looked like someone who coached a rugby team on weekends. His posture was open, his hands resting on the marble, his voice pitched to the exact register of casual familiarity.
+[pause]
+[calc] Five armed personnel. Biometric entry. Laminated perimeter glass. These variables do not produce a stranger behind the kitchen counter with a bag that landed wrong. She had heard it from the lounge, the dense, low contact of something heavy shifting inside plastic. Metal against stone.
+[pause-medium]
+[steady] She stood in the doorway. Her brain ran the scene against every template it owned. Guest. Colleague. Contractor. Friend of her father's she had not yet met. Each template almost fit. None of them locked. The politeness was correct. The shoes were expensive. The syntax was that of a man who belonged in this postcode.
+[pause]
+[calc] But his hands moved with a smoothness that had nothing to do with ease. It was economy. The economy of a body trained to eliminate wasted motion.
+[pause]
+[steady] He kept talking. Something about the Thai place on Military Road being better than people gave it credit for. Something about dinner. About how he hadn't seen Dominic in a while. The words filled the kitchen the way the lemongrass filled it. Warm. Familiar. Completely wrong.
+[pause]
+[flat] His fingers rested on the white plastic. Lightly. The way a pianist rests on keys before playing.
+[pause]
+[steady] She tried to override the freeze. She could feel her own mind reaching for the analytical scaffolding that had held her upright since she was seventeen, the geometry, the probabilities, the structural logic her grandmother had built into her the way other families built in manners.
+[pause]
+[calc] Distance to subject: four point three metres. Kitchen exit: behind her, seven metres. His heart rate, estimated from the visible pulse at the base of his throat: below sixty.
+[pause]
+[cold] Below sixty. Resting. While standing in a kitchen that was not his, speaking to a woman he had come to kill.
+[pause]
+[steady] Her own heart rate had already crossed one hundred and forty. She could hear it in the roof of her mouth.
+[pause]
+[heavy] He reached into the bag.
+[pause]
+[flat] He was still talking. His mouth was still moving and the words were still shaped like conversation and the Thai food was still warm and the lemongrass was still in the air. And his hand came out of the plastic holding something that was not food.
+[pause]
+[steady] Black polymer. Short barrel. Suppressed. Her brain registered the shape but would not name it because he was still smiling and still talking and his voice had not changed pitch or cadence and none of it, none of it, would resolve into a single coherent frame.
+[pause]
+[calc] The bore aligned with the centre of her sternum. Her mind tried to classify the object three times and rejected it three times because the man holding it was still saying something about dinner.
+[pause-large]
+
+## Part Three: The Rupture
+
+[pause-snap]
+[heavy] His head came apart.
+[pause-void]
+[flat] The bag was still on the counter.
+[pause]
+[steady] That was the first thing. The white plastic takeaway bag sitting exactly where he had placed it. Still knotted at the top. Still smelling of lemongrass. Now flecked with red.
+[pause]
+[flat] He was not there anymore.
+[pause]
+[steady] She had seen it. Some part of her had seen it. The compression wave that hit her eardrums. The air that was suddenly full of material. Matter. Wet particulate that hung in the space above the counter where his head had been, suspended for a half-second like rain that had not yet decided to fall.
+[pause]
+[flat] Bone. Blood. Fragments of things she would not name because her brain had locked the filing cabinet and swallowed the key.
+[pause]
+[steady] His body folded. Knees first. Then the torso. Then the sound of dead weight meeting polished tile. A thick, wet sound. But she heard it the way you hear something through a wall. Distant. Belonging to another room. Another evening.
+[pause]
+[flat] The bag sat on the marble. The lemongrass drifted. She did not scream. Her lungs had locked.
+[pause-medium]
+[steady] The front door stood open. Men filled the hallway. Weapons drawn. Boots on tile. They moved through the kitchen with the coordinated urgency of a unit clearing a space that had already been cleared.
+[pause]
+[flat] Her father walked in behind them.
+[pause]
+[steady] He was not holding a weapon. His hands were at his sides. His white shirt was immaculate. He moved through the room the way he moved through every room as though it had been built to accommodate him and was performing exactly as designed.
+[pause]
+[cold] He looked at the body on the floor and his expression did not change. He looked at the blood on the glass and his expression did not change. He looked at Ethel.
+[pause]
+[flat] He held her gaze for five seconds. She counted.
+[pause]
+[steady] It was not concern. It was inventory. She could feel him cataloguing her physical state the way she catalogued load tolerances. Checking for damage. Assessing the asset.
+[pause-medium]
+[steady] He turned to his five men. They were pressed against the far wall of the kitchen. They were shaking. Whatever had happened in the minutes before this moment, whatever her father had done or ordered or outbid, these men already knew the cost of what they had permitted.
+[pause]
+[dominic] "If someone pays you to walk away from this house," he said, "come to me. I will always pay more."
+[pause]
+[flat] His voice carried no heat. No volume. It was the voice of a man reading terms and conditions.
+[pause]
+[dominic] "But if I find out what you told me just now is not exactly true..."
+[pause]
+[steady] He let the sentence hang. The men did not breathe. One of them had a smear of something wet across his jacket that had nothing to do with the body on the kitchen floor.
+[pause]
+[steady] He wasn't speaking to his men. They already knew.
+[pause]
+[steady] His words were for Ethel.  
+[pause-large]
+
+## Part Four: The Ferenczi Split
+
+[steady] The ringing started in her left ear and spread across her skull like a frequency being tuned.
+[pause]
+[calc] Heart rate: one hundred and eighty-two. Peripheral vision contracting. Auditory input reduced to a high-pitched continuous tone.
+[pause]
+[steady] The men were dragging the body toward the hallway. She could see their mouths moving. She could not hear what they said. The kitchen had become a space behind glass, everything visible, nothing reaching her.
+[pause]
+[flat] She was standing in the doorway. Her feet had not moved. Her hands hung at her sides. The takeaway bag still sat on the marble, flecked and darkening.
+[pause-medium]
+[steady] Something shifted.
+[pause]
+[cold] Not in the room. In her.
+[pause]
+[steady] The geometry of her grandmother's world, the red earth, the clear rules, the physics that behaved the same way regardless of who was watching... None of it could hold this room. It could not contain a man walking through a biometric gate to kill a girl over dinner, or a father who stared at his daughter the way an engineer might stare at a pressure gauge. 
+[pause]
+[flat] That framework buckled. And in the space it left, something else locked into place.
+[pause-medium]
+[steady] She looked at the blood on the glass. She looked at the men still trembling against the wall. She looked at her father's back as he walked toward the hallway, already reaching for his phone.
+[pause]
+[cold] And she saw all of it through his eyes.
+[pause]
+[steady] Not a choice. Not a philosophy. A reflex. The way a body twists mid-fall to protect the spine. Her mind reached for the only perspective in the room that was not afraid, and it wore it like armour.
+[pause]
+[calc] The hitman: a failed variable. The security detail: compromised assets requiring recalibration. The blood on the glass: a maintenance issue. The girl at the counter: functional. Undamaged. Still useful.
+[pause]
+[flat] She watched herself from outside her own skin.
+[pause]
+[steady] She could feel the weight of her father's logic pressing against the inside of her skull. It was cold and it was total and it reorganised every object in the room into a ledger of costs and utilities. The horror did not vanish. It was reclassified. Filed under acceptable operational parameters.
+[pause]
+[cold] She knew it was false. She knew she was not him. She knew this borrowed perspective was a survival mechanism firing in a body that could not afford to shatter.
+[pause]
+[flat] But it held her upright. And that was enough.
+[pause-stark]
+
+## Part Five: The Remains
+
+[steady] The men were gone. The body was gone. A dark stain on the tile marked where the head had been. Someone had wiped the marble but not the grout.
+[pause]
+[flat] Her father was in another room. She could hear the low frequency of his voice through the wall. A phone call. Instructions being issued in the same tone he used to order wine at a restaurant.
+[pause-medium]
+[steady] The adrenaline left her body in stages. First the shaking started in her hands. Then her jaw. Then a deep tremor in her quadriceps that made standing difficult. She gripped the edge of the island and leaned into it and felt the cold stone press against her forearms and she stayed like that until the shaking was just shaking and not something worse.
+[pause]
+[flat] She looked down.
+[pause]
+[steady] The bag. The marble. A bowl on the far counter that had been knocked by one of the men rushing through, now in three pieces on the stone. One large curved shard of white porcelain had separated from the rest and was rocking gently on the surface.
+[pause]
+[calc] Concave surface against flat plane. Oscillation frequency decaying as friction absorbs kinetic energy.
+[pause]
+[steady] It rocked. And rocked. And rocked.
+[pause-medium]
+[flat] She watched it.
+[pause]
+[steady] She watched it the way a person watches the last ripple cross a body of water after something heavy has gone under. Not because the ripple matters. Because looking away means looking at everything else.
+[pause-large]
+[steady] The porcelain settled. The kitchen was still. Somewhere outside, a harbour ferry sounded its horn and the low note crossed the water and pressed against the glass and faded.
+[pause]
+[flat] She walked to the counter. She looked into the bag. She took out the containers.
+[pause]
+[cold] The Thai food was still warm.
+[pause-stark]
+[final] Eighteen hours later she would be in a safe house on the other side of the city. Forty-eight hours later the young woman who had pressed send in a dealer's bathroom would walk back into this glass house and steal everything her stepfather had ever built. Months later, a courtroom would hear what the porcelain heard. Years later, Ethel would sit in a quiet room and try to remember the exact moment she stopped being the person standing in the doorway and became the person who opened the takeaway bag.
+[pause-void]
+[final] She would not find it.
+[pause-stark]
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawText = document.getElementById('raw-story').textContent;
+            const container = document.getElementById('story-container');
+            const lines = rawText.split('\n').filter(line => line.trim() !== '');
+
+            let htmlContent = '';
+
+            const themeMap = {
+                "Part One: The Click Cadence": "theme-cadence",
+                "Part Two: The Breach": "theme-breach",
+                "Part Three: The Rupture": "theme-rupture",
+                "Part Four: The Ferenczi Split": "theme-ferenczi",
+                "Part Five: The Remains": "theme-remains"
+            };
+
+            lines.forEach((line) => {
+                if (line.startsWith('## ')) {
+                    const partTitle = line.replace('## ', '');
+                    htmlContent += `<div class="part-header beat" data-trigger-theme="${partTitle}">${partTitle}</div>`;
+                    return;
+                }
+
+                if (line.startsWith('# ')) return;
+
+                if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
+                if (line.includes('[pause-snap]')) { htmlContent += `<div class="pause-snap"></div>`; return; }
+                if (line.includes('[pause-void]')) { htmlContent += `<div class="pause-void"></div>`; return; }
+                if (line.includes('[pause-large]')) { htmlContent += `<div class="pause-large"></div>`; return; }
+                if (line.includes('[pause-medium]')) { htmlContent += `<div class="pause-medium"></div>`; return; }
+                if (line.includes('[pause]')) { htmlContent += `<div class="pause-small"></div>`; return; }
+
+                const match = line.match(/^\[(.*?)\] (.*)$/);
+                if (match) {
+                    const tag = match[1];
+                    const text = match[2];
+
+                    let cssClass = "voice-steady";
+                    if (tag === "cold") cssClass = "voice-cold";
+                    if (tag === "calc") cssClass = "voice-calc";
+                    if (tag === "dominic") cssClass = "voice-dominic";
+                    if (tag === "click") cssClass = "voice-click";
+                    if (tag === "flat") cssClass = "voice-flat";
+                    if (tag === "heavy") cssClass = "voice-heavy";
+                    if (tag === "final") cssClass = "final-realization";
+
+                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+                }
+            });
+
+            container.innerHTML = htmlContent;
+
+            // Scroll Observer for Text Fade
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -12% 0px',
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.beat').forEach(beat => {
+                observer.observe(beat);
+            });
+
+            // Theme Changes
+            const themeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const partTitle = entry.target.getAttribute('data-trigger-theme');
+                        if (partTitle && themeMap[partTitle]) {
+                            const newTheme = themeMap[partTitle];
+                            document.body.classList.remove('theme-cadence', 'theme-breach', 'theme-rupture', 'theme-ferenczi', 'theme-remains');
+                            document.body.classList.add(newTheme);
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            });
+
+            document.querySelectorAll('.part-header').forEach(header => {
+                themeObserver.observe(header);
+            });
+
+            // Progress bar
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById("progress-bar").style.width = scrolled + "%";
+            });
+
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Knew His Pins</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0c1a2e;
+            --text-color: #c8d0db;
+            --father-color: #4a6fa5;
+            --accent-color: #3ecfcf;
+            --cipher-color: #3ecfcf;
+            --grain-opacity: 0.04;
+            --vignette-color: rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            transition: background-color 3s ease, color 3s ease;
+            overflow-x: hidden;
+            font-size: 1.2rem;
+            line-height: 1.85;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body.theme-study {
+            --bg-color: #091322;
+            --text-color: #b0bcc9;
+            --father-color: #3b5a8a;
+            --grain-opacity: 0.06;
+            --vignette-color: rgba(0, 0, 0, 0.35);
+        }
+
+        body.theme-lock {
+            --bg-color: #060e1a;
+            --text-color: #a0adb8;
+            --father-color: #2e4a70;
+            --accent-color: #2ab8b8;
+            --grain-opacity: 0.08;
+            --vignette-color: rgba(0, 0, 0, 0.55);
+        }
+
+        body.theme-pins {
+            --bg-color: #030812;
+            --text-color: #8a99a8;
+            --father-color: #1e3455;
+            --accent-color: #1fa3a3;
+            --grain-opacity: 0.10;
+            --vignette-color: rgba(0, 0, 0, 0.75);
+        }
+
+        body.theme-click {
+            --bg-color: #000000;
+            --text-color: #e8eff5;
+            --father-color: #ffffff;
+            --accent-color: #4df0f0;
+            --cipher-color: #4df0f0;
+            --grain-opacity: 0.12;
+            --vignette-color: rgba(0, 0, 0, 0.92);
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 12vh 24px 35vh 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .beat {
+            opacity: 0;
+            transform: translateY(25px);
+            filter: blur(3px);
+            transition: opacity 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 2.5s ease;
+            margin-bottom: 2rem;
+            will-change: opacity, transform, filter;
+        }
+
+        .beat.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .pause-small {
+            margin-bottom: 15vh;
+        }
+
+        .pause-medium {
+            margin-bottom: 30vh;
+        }
+
+        .pause-large {
+            margin-bottom: 50vh;
+        }
+
+        .pause-void {
+            margin-bottom: 80vh;
+        }
+
+        .pause-stark {
+            margin-bottom: 120vh;
+        }
+
+        .voice-narrator {
+            font-weight: 300;
+        }
+
+        .voice-cold {
+            font-weight: 300;
+            opacity: 0.75;
+            letter-spacing: 0.01em;
+        }
+
+        .voice-cipher {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--cipher-color);
+            letter-spacing: 0.04em;
+            line-height: 1.6;
+            transition: color 2.5s ease;
+        }
+
+        .voice-father {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            color: var(--father-color);
+            margin-left: 2rem;
+            border-left: 1px solid var(--father-color);
+            padding-left: 1rem;
+            transition: color 2.5s ease, border-color 2.5s ease;
+        }
+
+        .text-flat {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 300;
+            color: inherit;
+            opacity: 0.8;
+        }
+
+        .text-heavy {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .text-click {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-align: center;
+            color: var(--accent-color);
+            letter-spacing: 0.08em;
+            transition: color 2.5s ease;
+        }
+
+        .text-clinical {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #556;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        body.theme-lock .text-clinical,
+        body.theme-pins .text-clinical {
+            color: #667;
+        }
+
+        body.theme-click .text-clinical {
+            color: #445;
+        }
+
+        .part-header {
+            font-family: 'Space Mono', monospace;
+            font-weight: 400;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            opacity: 0.35;
+            text-align: center;
+        }
+
+        .final-realization {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+            color: var(--text-color);
+        }
+
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: var(--grain-opacity);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity 3s ease;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
+            transition: background 3.5s ease;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s, background-color 2.5s ease;
+            opacity: 0.35;
+        }
+
+        .audio-toggle {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.5s ease; /* Longer transition to match theme changes */
+        }
+
+        .audio-toggle:hover {
+            box-shadow: 0 0 15px var(--accent-color);
+            transform: scale(1.05);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .audio-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: fill 2.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div id="progress-bar"></div>
+
+    <audio id="story-audio" src="../spokenWordStory/pixelstortion_ISLA_4-7-2.mp3" preload="metadata"></audio>
+    <button id="audio-toggle" class="audio-toggle" aria-label="Toggle Audio">
+        <svg id="icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+    </button>
+
+    <div class="container" id="story-container">
+    </div>
+
+    <script type="text/markdown" id="raw-story">
+# She Knew His Pins
+
+## His Routines
+
+[cold] He ate the same breakfast at the same seat. Toast cut diagonal. Black coffee in the cup with the chip he kept because replacing it would mean admitting something broke.
+[pause]
+[steady] Tuesdays and Thursdays he left at six fifty. Other days at seven fifteen. She worked this out at nine years old by counting how many times the kettle boiled before the front door closed.
+[pause]
+[cold] His briefcase lock was 4-7-2. His birthday backwards minus ten. She watched his thumb move across the dials one morning from the landing. He didn't look up. Nobody in that house looked up.
+[pause-medium]
+[steady] Her mother made the beds after he left. Hospital corners. Sheets pulled until the cotton whined. Then she sat at the kitchen bench and drank something clear from a water glass and stared at the backyard for eleven minutes. Always eleven. Then the car keys.
+[pause]
+[flat] Tennis at nine. Home by twelve thirty. The interval was hers.
+[pause]
+[cold] She had been noting it since she could write.
+
+## His Fingers
+
+[pause-medium]
+[steady] He typed with two fingers. Index and middle, right hand. The left just anchored the edge of the keyboard. She noticed this at twelve, sitting at the dining table with her homework while he answered emails on his laptop in the next room.
+[pause]
+[cipher] Two finger typists hit keys harder than touch typists. The keystrokes carry weight because each one requires a conscious decision. The sound is arrhythmic but patterned. A burst. A pause. Two more. A longer pause. Then backspace, twice, which means he misspelled something he types often enough to do automatically.
+[pause]
+[steady] She listened to him type the way a dog listens to a car engine. Not for meaning. For distance. For whether it was getting closer.
+[pause]
+[cold] He used the same four digit sequence for everything that wasn't his chambers login. She knew this because the phone PIN, the garage keypad, and the alarm code all produced the same rhythm on hard surfaces. Four taps. Same spacing. Same hesitation on the third digit, which was always the one he pressed with his middle finger because his index wouldn't reach it from where his hand naturally sat.
+[pause]
+[flat] 1-9-6-2.
+[pause]
+[steady] He'd been born in 1962. Men like him turned themselves into passwords and called it security.
+[pause-medium]
+[cipher] He changed the study lock combination every three months. She could tell the rotation date because his mood worsened in the days before, not from fear of exposure, but from the particular irritation of a man who resented having to maintain his own defences. He wanted the world locked and didn't want to think about the mechanism.
+[pause]
+[cold] On rotation days he came home twenty minutes early. Went straight upstairs. The study door shut. She heard the lock face click four times. Then he came down and poured a Lark Whisky and stood by the kitchen window with his back to the room.
+[pause]
+[steady] He always drank after changing it. A single glass. Standing. She watched his jaw move slightly as he rehearsed the new number in his head.
+[pause]
+[flat] He mouthed when he memorised. Lips barely parted. The Whisky disguised it. But from the right angle, from the wrong angle, from the angle of a child sitting at the kitchen table pretending to do long division, the shapes were readable.
+[pause-medium]
+[heavy] She read them.
+
+## His Blind Spots
+
+[pause-medium]
+[cold] He had twelve passwords across his professional and personal life. She knew this because he kept a leather bound diary in his bedside table drawer, the one without a lock, in which he recorded nothing of importance except a list of numbers and shorthand notations updated in the same blue ink every quarter.
+[pause]
+[steady] He left this drawer unlocked because it contained only the diary and a Bible and a watch that didn't run. He assumed no one would look there because there was nothing to find. He was wrong about that in the way that people who build walls are always wrong about what the walls advertise.
+[pause]
+[cipher] Twelve passwords. Eight were variations of the same root,  his year of birth and his chambers number arranged in different permutations. Two were names. One she recognised as his mother's maiden name. The other she did not recognise and would not understand until years later. Two more were purely numerical and appeared random until she tested them against case file numbers from his published judgments. They matched.
+[pause]
+[cold] A man who hides what he hides cannot also afford to forget where he hid it. So the hiding system has to be something he'll remember under pressure, half asleep, three Whisky's in, after a dinner where he's performed competence and righteousness for four hours straight.
+[pause]
+[steady] Which means the system has to be him.
+[pause]
+[flat] His vanity was the key to every lock he owned.
+[pause-medium]
+[steady] The study door used a combination she cracked in two attempts. Not because she was lucky. Because she'd already eliminated ten of the twelve possibilities by watching him, and of the remaining two, only one used all four fingers in the sequence his muscle memory defaulted to when he was tired.
+[pause]
+[cold] He was always tired after dinner. That was when the Whisky and the performance caught up. When the mask needed its own rest.
+[pause]
+[cipher] She tested it on a Wednesday while he was in Melbourne for three days hearing oral arguments. Her mother was asleep by nine thirty, the Valium pulling her under like water around a stone. The house made sounds a fourteen year old should not have been fluent in the refrigerator pitch that meant the compressor had been running for thirty minutes, the central heating tick that meant the thermostat had dropped below nineteen degrees. She knew this house the way prey knows a landscape. By sound and temperature and the particular silence that meant nothing was moving toward her.
+[pause]
+[heavy] The lock opened on the first try.
+
+## What She Carried
+
+[pause-medium]
+[steady] She went in twice over the following month. Never longer than forty minutes. Never on the same day of the week.
+[pause]
+[cold] She did not take anything. Taking would have been noticed. He indexed. He stacked. He aligned the edges of his folders with the edge of the desk and she could see the faint marks on the leather where the corners always sat.
+[pause]
+[steady] She photographed with a phone she'd bought with cash from a pawnshop on Parramatta Road. Pre-paid SIM. No account. She kept it in a pencil case in her school bag, inside a ziplock bag, inside a sock. Not because she'd learned this from anywhere. Because redundancy came naturally to a mind that had been calculating escape routes since it could calculate.
+[pause]
+[flat] The study contained what the study contained.
+[pause-medium]
+[cold] She didn't need someone to tell her what the photographs on the drives meant. She didn't need a lawyer. She didn't need a therapist to hold her hand and guide her through a naming ceremony for what had been done to her body.
+[pause]
+[steady] Her body had been telling her since before she had the words.
+[pause]
+[heavy] The photographs told her she had been right to listen.
+[pause-medium]
+[steady] She sat on the bathroom floor that night. Not in the study. The bathroom. Her door. Her lock. She sat with her back against the tub and her knees drawn up and her phone in her hands with the screen turned off and she pressed her thumbs into her thighs hard enough to leave white ovals that filled slowly with pink.
+[pause]
+[cold] She did not cry. The heat for that had burned off years ago. What she felt was more like a bone setting. A grinding, structural shift where something that had been floating finally found the slot it was meant to sit in.
+[pause]
+[flat] Confirmation.
+[pause]
+[steady] The worst part had never been the thing itself. The worst part had been the possibility that she was wrong about the thing. That her skin was lying.  That the showers were a phase. That the counting and the careful mental noting and the sleepless memorisation of his every habit was the behaviour of a child who wanted attention.
+[pause-medium]
+[heavy] She was not wrong.
+[pause]
+[cold] The evidence was in a room that smelled like his cologne and old paper and she had opened it with a number made of his own arrogance.
+
+## The Note
+
+[pause-medium]
+[steady] She turned fifteen on a Thursday.
+[pause]
+[cold] There was a cake. Her mother made it. Vanilla sponge, bought icing, fourteen candles because they'd run out of the thin ones and used the thick birthday number candles instead. One and four. Her mother didn't notice.
+[pause]
+[flat] He gave her a card with fifty dollars in it. Signed with his full name, the way he signed court orders.
+[pause-medium]
+[steady] She waited three weeks.
+[pause]
+[steady] In those weeks she backed up every photograph to a cloud drive registered under an email address built from a string of characters that had no connection to her name, his name, their address, or any word in the English language.
+[pause]
+[cipher] Fourteen characters. Randomly generated by rolling a pencil across a keyboard and recording the sequence, then appending three digits she picked from the serial number of a bus she caught once and would never catch again.
+[pause]
+[cold] She memorised the string the way he memorised his rotations. She rehearsed it in her mouth. Lips barely parted. Just like him.
+[pause]
+[steady] That was the part that tasted worst. The inheritance of his habits in her muscles. The way her jaw moved when she committed a secret to memory. She'd learned it from watching him and she could not unlearn it and so she used it.
+[pause-medium]
+[flat] The note was seven words.
+[pause]
+[heavy] She left it on his pillow, under the turned down sheet, where only he would find it and only when he pulled the covers back. Where her mother's nightly Valium guaranteed she'd already be under.
+[pause]
+[cold] Seven words and a link.
+[pause-medium]
+[steady] She took his Amex from the wallet he left on the hallway table every night. Not hidden. Not guarded. Because in his mathematics, no one in his house would dare.
+[pause]
+[flat] She packed a bag that fit under a seat.
+[pause]
+[cold] He would not cancel the card.
+[pause]
+[steady] He would read the note and he would not cancel the card and he would not call the police and he would go to chambers in the morning and sit behind his bench and deliver his judgments with the full weight of the institution behind him and nobody would know that his hands were sweating.
+[pause-medium]
+[heavy] He would understand, reading those seven words, that the lock on his study was not the thing that had failed him.
+[pause]
+[cold] He had failed himself. Every shortcut. Every reused number. Every mouthed rehearsal. Every Whisky glazed evening standing with his back to the room while a child with his own habits read the shapes his lips made.
+[pause-stark]
+[steady] She had met a boy. Older. Wrong crowd. Together they left with shared reasons. 
+[pause]
+[flat] They checked in with the card. Self service.
+[pause]
+[cold] He had some things in his coat that he forgot about until the dog circled.
+[pause-medium]
+[steady] She watched him swallow and she thought he'd be fine. People were fine. She'd seen worse and survived worse and her assessment of risk had been skewed so many times by the age of fifteen that the normal range no longer applied to her.
+[pause-medium]
+[cold] The gate closed behind them.
+[pause-stark]
+[heavy] What happened next is a different story. A story she would sing years later to arenas full of people who didn't know her real name but knew every word.
+[pause]
+[steady] She would sing it at a volume that damaged hearing.
+[pause]
+[cold] She would sing it until the room hurt the way she hurt.
+[pause-stark]
+[final] But the note stayed where she left it.
+[pause-stark]
+[final] And the card was never cancelled.
+[pause-stark]
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawText = document.getElementById('raw-story').textContent;
+            const container = document.getElementById('story-container');
+            const lines = rawText.split('\n').filter(line => line.trim() !== '');
+
+            let htmlContent = '';
+
+            const themeMap = {
+                "His Routines": "theme-light",
+                "His Fingers": "theme-study",
+                "His Blind Spots": "theme-lock",
+                "What She Carried": "theme-pins",
+                "The Note": "theme-click"
+            };
+
+            lines.forEach((line) => {
+                if (line.startsWith('## ')) {
+                    const partTitle = line.replace('## ', '');
+                    htmlContent += `<div class="part-header beat" data-trigger-theme="${partTitle}">${partTitle}</div>`;
+                    return;
+                }
+
+                if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
+                if (line.includes('[pause-void]')) { htmlContent += `<div class="pause-void"></div>`; return; }
+                if (line.includes('[pause-large]')) { htmlContent += `<div class="pause-large"></div>`; return; }
+                if (line.includes('[pause-medium]')) { htmlContent += `<div class="pause-medium"></div>`; return; }
+                if (line.includes('[pause]')) { htmlContent += `<div class="pause-small"></div>`; return; }
+
+                const match = line.match(/^\[(.*?)\] (.*)$/);
+                if (match) {
+                    const tag = match[1];
+                    const text = match[2];
+
+                    let cssClass = "voice-narrator";
+                    if (tag === "cold") cssClass = "voice-cold";
+                    if (tag === "cipher") cssClass = "voice-cipher";
+                    if (tag === "father") cssClass = "voice-father";
+                    if (tag === "flat") cssClass = "text-flat";
+                    if (tag === "heavy") cssClass = "text-heavy";
+                    if (tag === "click") cssClass = "text-click";
+                    if (tag === "clinical") cssClass = "text-clinical";
+                    if (tag === "final") cssClass = "final-realization";
+
+                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+                }
+            });
+
+            container.innerHTML = htmlContent;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -12% 0px',
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.beat').forEach(beat => {
+                observer.observe(beat);
+            });
+
+            const themeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const partTitle = entry.target.getAttribute('data-trigger-theme');
+                        if (partTitle && themeMap[partTitle]) {
+                            const newTheme = themeMap[partTitle];
+                            document.body.classList.remove('theme-study', 'theme-lock', 'theme-pins', 'theme-click');
+                            if (newTheme !== 'theme-light') {
+                                document.body.classList.add(newTheme);
+                            }
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            });
+
+            document.querySelectorAll('.part-header').forEach(header => {
+                themeObserver.observe(header);
+            });
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById("progress-bar").style.width = scrolled + "%";
+            });
+
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+
+            // Audio Player Logic
+            const audioEl = document.getElementById('story-audio');
+            const audioToggle = document.getElementById('audio-toggle');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+
+            if (audioEl && audioToggle) {
+                audioToggle.addEventListener('click', () => {
+                    if (audioEl.paused) {
+                        audioEl.play();
+                        iconPlay.style.display = 'none';
+                        iconPause.style.display = 'block';
+                    } else {
+                        audioEl.pause();
+                        iconPlay.style.display = 'block';
+                        iconPause.style.display = 'none';
+                    }
+                });
+
+                audioEl.addEventListener('ended', () => {
+                    iconPlay.style.display = 'block';
+                    iconPause.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

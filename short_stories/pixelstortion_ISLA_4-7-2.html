@@ -243,6 +243,39 @@
             transition: width 0.1s, background-color 2.5s ease;
             opacity: 0.35;
         }
+
+        .audio-toggle {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.5s ease; /* Longer transition to match theme changes */
+        }
+
+        .audio-toggle:hover {
+            box-shadow: 0 0 15px var(--accent-color);
+            transform: scale(1.05);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .audio-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: fill 2.5s ease;
+        }
     </style>
 </head>
 
@@ -250,6 +283,16 @@
     <div class="grain"></div>
     <div class="vignette"></div>
     <div id="progress-bar"></div>
+
+    <audio id="story-audio" src="../spokenWordStory/pixelstortion_ISLA_4-7-2.mp3" preload="metadata"></audio>
+    <button id="audio-toggle" class="audio-toggle" aria-label="Toggle Audio">
+        <svg id="icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+    </button>
 
     <div class="container" id="story-container">
     </div>
@@ -506,6 +549,31 @@
             setTimeout(() => {
                 window.dispatchEvent(new Event('scroll'));
             }, 100);
+
+            // Audio Player Logic
+            const audioEl = document.getElementById('story-audio');
+            const audioToggle = document.getElementById('audio-toggle');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+
+            if (audioEl && audioToggle) {
+                audioToggle.addEventListener('click', () => {
+                    if (audioEl.paused) {
+                        audioEl.play();
+                        iconPlay.style.display = 'none';
+                        iconPause.style.display = 'block';
+                    } else {
+                        audioEl.pause();
+                        iconPlay.style.display = 'block';
+                        iconPause.style.display = 'none';
+                    }
+                });
+
+                audioEl.addEventListener('ended', () => {
+                    iconPlay.style.display = 'block';
+                    iconPause.style.display = 'none';
+                });
+            }
         });
     </script>
 </body>

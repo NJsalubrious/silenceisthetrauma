@@ -240,10 +240,10 @@
             100% { transform: translate(0, 0); }
         }
 
-        /* ====== SKIP HINT ====== */
+        /* ====== READ THE STORIES LINK ====== */
         .skip-hint {
             position: fixed;
-            bottom: 60px;
+            bottom: 48px;
             left: 0;
             right: 0;
             text-align: center;
@@ -256,43 +256,18 @@
             opacity: 1;
         }
 
-        .skip-hint span {
+        .skip-hint a {
             font-family: 'Courier Prime', monospace;
-            font-size: 10px;
+            font-size: 13px;
+            font-weight: 700;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #333;
+            color: #555;
+            text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        body:hover .skip-hint span {
-            color: #555;
-        }
-
-        /* ====== BOTTOM NAV ====== */
-        .skip-nav {
-            position: fixed;
-            bottom: 24px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            z-index: 60;
-        }
-
-        .skip-nav a {
-            font-family: 'Courier Prime', monospace;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-            pointer-events: auto;
-        }
-
-        .skip-nav a:hover {
+        .skip-hint a:hover {
             color: var(--accent);
         }
 
@@ -320,13 +295,9 @@
                 padding: 1.5rem;
             }
 
-            .skip-nav {
-                gap: 1rem;
-            }
-
-            .skip-nav a {
-                font-size: 9px;
-                letter-spacing: 1px;
+            .skip-hint a {
+                font-size: 11px;
+                letter-spacing: 2px;
             }
         }
     </style>
@@ -373,19 +344,10 @@
         </div>
     </div>
 
-    <!-- Skip Hint -->
+    <!-- Story Link -->
     <div class="skip-hint" id="skip-hint">
-        <span>click anywhere to read the stories</span>
+        <a href="stories.html" id="stories-anchor">READ THE STORIES</a>
     </div>
-
-    <!-- Bottom Nav -->
-    <nav class="skip-nav">
-        <a href="stories.html">Stories</a>
-        <a href="https://pixelstortion.com" target="_blank" rel="noopener">Pixelstortion</a>
-        <a href="https://ethelryker.com" target="_blank" rel="noopener">Ethel Ryker</a>
-        <a href="https://islaband.com" target="_blank" rel="noopener">Isla</a>
-        <a href="https://dominicryker.com" target="_blank" rel="noopener">Dominic Ryker</a>
-    </nav>
 
     <script>
         // Preserve Cloudflare Worker trend hook extraction
@@ -402,17 +364,18 @@
         const skipHint = document.getElementById('skip-hint');
         let hasNavigated = false;
 
-        function goToStories() {
+        const silenceZoneUrl = 'https://pixelstortion.com/zones/silence/';
+
+        function goToSilenceZone() {
             if (hasNavigated) return;
             hasNavigated = true;
-            window.location.href = 'stories.html';
+            window.location.href = silenceZoneUrl;
         }
 
-        // Click anywhere to go immediately
+        // Click anywhere to go to silence zone (except the stories link or brand)
         document.getElementById('click-zone').addEventListener('click', function (e) {
-            // Don't intercept nav links
-            if (e.target.closest('.skip-nav') || e.target.closest('.brand')) return;
-            goToStories();
+            if (e.target.closest('.brand') || e.target.closest('#stories-anchor')) return;
+            goToSilenceZone();
         });
 
         // === THE THREE BEATS ===
@@ -423,7 +386,7 @@
             beatText.classList.add('visible');
         }, 500);
 
-        // Show skip hint after 1.5s
+        // Show READ THE STORIES after 1.5s
         setTimeout(() => {
             skipHint.classList.add('visible');
         }, 1500);
@@ -434,6 +397,7 @@
         setTimeout(() => {
             // Kill the calm
             beatText.classList.remove('visible');
+            skipHint.classList.remove('visible');
 
             setTimeout(() => {
                 // Screen flash
@@ -450,12 +414,11 @@
                 // Each letter holds for 2 ticks (~110ms) — subliminal but catchable
                 const noise = '#%$*@!^&~?><{}|±§¶';
                 const reveal = ['F', 'U', 'C', 'K'];
-                // Tick ranges where each letter appears (2 ticks each for readability)
                 const revealTicks = {
-                    3: 0, 4: 0,     // F holds ticks 3-4
-                    8: 1, 9: 1,     // U holds ticks 8-9
-                    13: 2, 14: 2,   // C holds ticks 13-14
-                    18: 3, 19: 3    // K holds ticks 18-19
+                    3: 0, 4: 0,
+                    8: 1, 9: 1,
+                    13: 2, 14: 2,
+                    18: 3, 19: 3
                 };
                 let tick = 0;
                 const totalTicks = 22;
@@ -466,7 +429,6 @@
                 const glitchInterval = setInterval(() => {
                     let chars = [randChar(), randChar(), randChar(), randChar()];
 
-                    // If this tick is a reveal tick, flash that letter in its position
                     if (revealTicks.hasOwnProperty(tick)) {
                         const pos = revealTicks[tick];
                         chars[pos] = reveal[pos];
@@ -477,8 +439,8 @@
 
                     if (tick >= totalTicks) {
                         clearInterval(glitchInterval);
-                        // No settle. Snap straight out.
-                        goToStories();
+                        // No settle. Snap to silence zone.
+                        goToSilenceZone();
                     }
                 }, tickSpeed);
             }, 300);

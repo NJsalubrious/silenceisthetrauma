@@ -4,14 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>PIXELSTORTION:  SHORT STORIES</title>
-    <meta name="description"
-        content="Each a fragment of the whole" />
+    <title>PIXELSTORTION: SHORT STORIES</title>
+    <meta name="description" content="Each a fragment of the whole" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="PIXELSTORTION:  SHORT STORIES" />
-    <meta property="og:description"
-        content="Each a fragment of the whole" />
+    <meta property="og:description" content="Each a fragment of the whole" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://silenceisthetrauma.com/stories.html" />
     <meta property="og:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
@@ -22,8 +20,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PIXELSTORTION:  SHORT STORIES" />
-    <meta name="twitter:description"
-        content="Each a fragment of the whole" />
+    <meta name="twitter:description" content="Each a fragment of the whole" />
     <meta name="twitter:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
@@ -41,6 +38,7 @@
         gtag('config', 'G-34H8LS884F');
     </script>
 
+    <script src="https://pixelstortion.com/site-manifest.js"></script>
     <link rel="canonical" href="https://silenceisthetrauma.com/stories.html" />
 
     <style>
@@ -522,13 +520,45 @@
             text-overflow: ellipsis;
         }
 
-        .story-card-track {
+        .story-card-track-container {
+            display: grid;
+            margin-bottom: 4px;
+            align-items: start;
+        }
+
+        .story-card-track, .story-card-desc {
+            grid-area: 1 / 1;
             font-family: 'Courier Prime', monospace;
             font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .story-card-track {
             letter-spacing: 2px;
             color: var(--text-muted);
-            text-transform: uppercase;
-            margin-bottom: 4px;
+            transition: opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .story-card-desc {
+            letter-spacing: 1px;
+            color: var(--text-dim);
+            pointer-events: none;
+            line-height: 1.4;
+        }
+
+        .story-card-desc span {
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+
+        .story-card:hover .story-card-track {
+            opacity: 0;
+            transition: opacity 0.1s ease;
+        }
+
+        .story-card:hover .story-card-desc span {
+            opacity: 1;
         }
 
         .story-card-cta {
@@ -650,7 +680,7 @@
         <p class="hero-subtitle">
             <span
                 style="display: block; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted);">
-                Warning: Contains mature themes, violence, and trauma.
+                Warning: Contains mature themes, violence & psychological trauma.
             </span>
         </p>
     </section>
@@ -684,33 +714,19 @@
         }
 
         // ============================================================
-        // STORY DATA — The growing library
-        // Each entry is a "Track" in the archive.
-        // Add new stories here as they are created.
+        // STORY DATA — Reads from PIXEL_MANIFEST (single source of truth)
+        // To add a story: update site-manifest.js → both pages auto-populate
         // ============================================================
-        const stories = [
-            {
-                id: 'isla-4-7-2',
-                title: 'ISLA 4-7-2',
-                track: 'STORY 01 // ISLA DARK ORIGIN STORY',
-                cover: 'short_stories/pixelstortion_ISLA_4-7-2.jpg',
-                href: 'short_stories/pixelstortion_ISLA_4-7-2.html'
-            },
-            {
-                id: 'islas-blast-radius',
-                title: 'Isla\'s Blast Radius',
-                track: 'STORY 02 // ISLA\'S BLAST RADIUS',
-                cover: 'short_stories/Islas_Blast_Radius.jpg',
-                href: 'short_stories/Islas_Blast_Radius.html'
-            },
-            {
-                id: 'same-breath',
-                title: 'Same Breath',
-                track: 'STORY 03 // SAME BREATH',
-                cover: 'short_stories/Same_Breath.jpg',
-                href: 'short_stories/Same_Breath.html'
-            }
-        ];
+        const stories = (typeof PIXEL_MANIFEST !== 'undefined' && PIXEL_MANIFEST.STORIES)
+            ? Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
+                id: key.toLowerCase().replace(/_/g, '-'),
+                title: s.title,
+                track: s.track,
+                description: s.description,
+                cover: s.cover,
+                href: s.href
+            }))
+            : [];
 
         // ============================================================
         // RENDER GRID
@@ -728,7 +744,13 @@
                 return;
             }
 
-            container.innerHTML = stories.map((story, index) => `
+            container.innerHTML = stories.map((story, index) => {
+                const descSpans = story.description ? story.description.split('').map((char, i) => {
+                    if (char === ' ') return ' ';
+                    return `<span style="transition-delay: ${i * 15}ms">${char}</span>`;
+                }).join('') : '';
+
+                return `
                 <a href="${story.href}" target="_blank" rel="noopener noreferrer" class="story-card"
                    style="animation: fadeInUp 0.6s ease forwards ${index * 0.12}s; opacity: 0;">
                     <div class="story-card-cover">
@@ -745,11 +767,14 @@
                     </div>
                     <div class="story-card-info">
                         <h3 class="story-card-name" title="${story.title}">${story.title}</h3>
-                        <p class="story-card-track">${story.track}</p>
+                        <div class="story-card-track-container">
+                            <p class="story-card-track">${story.track}</p>
+                            <p class="story-card-desc">${descSpans}</p>
+                        </div>
                         <p class="story-card-cta">READ NOW</p>
                     </div>
                 </a>
-            `).join('');
+            `}).join('');
         }
 
         // ============================================================

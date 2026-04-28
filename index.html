@@ -478,30 +478,43 @@
 
                 // Glitch slot-machine: 4 symbol positions cycle rapidly
                 // F, U, C, K each flash once, alone, at separate ticks — never together
-                // Each letter holds for 2 ticks (~110ms) — subliminal but catchable
+                // Each letter pops WHITE against the red noise — subliminal but catchable
+                // The brightness difference is what makes your brain register the letter
                 const noise = '#%$*@!^&~?><{}|±§¶';
                 const reveal = ['F', 'U', 'C', 'K'];
                 const revealTicks = {
-                    3: 0, 4: 0,
-                    8: 1, 9: 1,
-                    13: 2, 14: 2,
-                    18: 3, 19: 3
+                    4: 0, 5: 0, 6: 0,
+                    11: 1, 12: 1, 13: 1,
+                    19: 2, 20: 2, 21: 2,
+                    27: 3, 28: 3, 29: 3
                 };
                 let tick = 0;
-                const totalTicks = 22;
-                const tickSpeed = 50;
+                const totalTicks = 33;
+                const tickSpeed = 55;
 
                 function randChar() { return noise[Math.floor(Math.random() * noise.length)]; }
 
                 const glitchInterval = setInterval(() => {
                     let chars = [randChar(), randChar(), randChar(), randChar()];
+                    let hasReveal = false;
+                    let revealPos = -1;
 
                     if (revealTicks.hasOwnProperty(tick)) {
-                        const pos = revealTicks[tick];
-                        chars[pos] = reveal[pos];
+                        revealPos = revealTicks[tick];
+                        hasReveal = true;
                     }
 
-                    beatText.textContent = chars.join('') + ' Silence.';
+                    // Build the display — revealed letter pops bright white, noise stays red
+                    let html = '';
+                    for (let i = 0; i < 4; i++) {
+                        if (hasReveal && i === revealPos) {
+                            html += '<span style="color:#fff;text-shadow:0 0 6px rgba(255,255,255,0.4)">' + reveal[i] + '</span>';
+                        } else {
+                            html += '<span style="opacity:0.5">' + chars[i] + '</span>';
+                        }
+                    }
+                    html += ' Silence.';
+                    beatText.innerHTML = html;
                     tick++;
 
                     if (tick >= totalTicks) {

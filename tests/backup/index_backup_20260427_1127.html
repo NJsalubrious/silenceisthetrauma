@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILENCE IS THE TRAUMA | Psychological Evaluation</title>
+    <meta name="description"
+        content="The most dangerous sentence in the world is: 'Sure, I can help.' Take the Staircase Test.">
+
+    <!-- Open Graph (Facebook, Discord, LinkedIn, Reddit) -->
+    <meta property="og:title" content="SILENCE IS THE TRAUMA | Psychological Evaluation">
+    <meta property="og:description"
+        content="The most dangerous sentence in the world is: 'Sure, I can help.' Take the Staircase Test.">
+    <meta property="og:image" content="https://silenceisthetrauma.com/PIXELSTORTION.jpg">
+    <meta property="og:url" content="https://silenceisthetrauma.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SILENCE IS THE TRAUMA | Psychological Evaluation">
+    <meta name="twitter:description"
+        content="The most dangerous sentence in the world is: 'Sure, I can help.' Take the Staircase Test.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/PIXELSTORTION.jpg">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H8LS884F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-34H8LS884F');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --glitch-color-1: #00ff41;
+            --glitch-color-2: #ff0055;
+            --bg-dark: #050505;
+            --accent: #ef4444;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #d1d5db;
+            font-family: 'Courier Prime', monospace;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            cursor: pointer;
+        }
+
+        /* ====== GRAIN ====== */
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* ====== VIGNETTE ====== */
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 25%, rgba(0, 0, 0, 0.55) 110%);
+        }
+
+        /* ====== SCANLINES ====== */
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.08));
+            background-size: 100% 4px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 51;
+            animation: scanline-move 8s linear infinite;
+        }
+
+        @keyframes scanline-move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        /* ====== SCREEN FLASH ====== */
+        .flash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0;
+        }
+
+        .flash-overlay.fire {
+            animation: screenFlash 0.15s ease-out forwards;
+        }
+
+        @keyframes screenFlash {
+            0% { opacity: 0.7; }
+            100% { opacity: 0; }
+        }
+
+        /* ====== BRAND (Top Left) ====== */
+        .brand {
+            position: fixed;
+            top: 24px;
+            left: 28px;
+            z-index: 60;
+        }
+
+        .brand a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-family: 'Courier Prime', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .brand a::before,
+        .brand a::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+        .brand a::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--glitch-color-2);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim 3s infinite;
+        }
+
+        .brand a::after {
+            left: -2px;
+            text-shadow: 2px 0 var(--glitch-color-1);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim2 3s infinite 0.5s;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(0, 0, 0, 0); }
+            2% { clip: rect(15px, 9999px, 18px, 0); transform: skew(0.2deg); }
+            4% { clip: rect(0, 0, 0, 0); }
+            94% { clip: rect(0, 0, 0, 0); }
+            96% { clip: rect(8px, 9999px, 12px, 0); transform: skew(-0.15deg); }
+            98% { clip: rect(0, 0, 0, 0); }
+            100% { clip: rect(0, 0, 0, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(0, 0, 0, 0); }
+            2% { clip: rect(20px, 9999px, 24px, 0); transform: skew(-0.2deg); }
+            4% { clip: rect(0, 0, 0, 0); }
+            94% { clip: rect(0, 0, 0, 0); }
+            96% { clip: rect(12px, 9999px, 16px, 0); transform: skew(0.15deg); }
+            98% { clip: rect(0, 0, 0, 0); }
+            100% { clip: rect(0, 0, 0, 0); }
+        }
+
+        /* ====== CENTER CONTENT ====== */
+        .center-stage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .message-container {
+            max-width: 560px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #beat-text {
+            font-size: 18px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            min-height: 60px;
+        }
+
+        #beat-text.visible {
+            opacity: 1;
+        }
+
+        #beat-text.eruption {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 3px;
+            animation: textGlitch 0.1s ease 3;
+        }
+
+        @keyframes textGlitch {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, 1px); }
+            50% { transform: translate(2px, -1px); }
+            75% { transform: translate(-1px, -1px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* ====== SKIP HINT ====== */
+        .skip-hint {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 60;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+
+        .skip-hint.visible {
+            opacity: 1;
+        }
+
+        .skip-hint span {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        body:hover .skip-hint span {
+            color: #555;
+        }
+
+        /* ====== BOTTOM NAV ====== */
+        .skip-nav {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 60;
+        }
+
+        .skip-nav a {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            pointer-events: auto;
+        }
+
+        .skip-nav a:hover {
+            color: var(--accent);
+        }
+
+        /* ====== MOBILE ====== */
+        @media (max-width: 640px) {
+            .brand {
+                top: 16px;
+                left: 16px;
+            }
+
+            .brand a {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            #beat-text {
+                font-size: 15px;
+            }
+
+            #beat-text.eruption {
+                font-size: 18px;
+            }
+
+            .message-container {
+                padding: 1.5rem;
+            }
+
+            .skip-nav {
+                gap: 1rem;
+            }
+
+            .skip-nav a {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Silence is the Trauma - The Staircase Test",
+      "genre": "Psychological Thriller",
+      "description": "An interactive psychological evaluation demonstrating the social contract of silence, systemic complicity, and structural psychopathy.",
+      "url": "https://silenceisthetrauma.com/",
+      "isPartOf": { "@type": "WebSite", "name": "PIXELSTORTION", "url": "https://pixelstortion.com/" },
+      "character": [
+        { "@type": "Person", "name": "Ethel Ryker", "url": "https://ethelryker.com/" },
+        { "@type": "Person", "name": "Isla", "url": "https://islaband.com/" },
+        { "@type": "Person", "name": "Dominic Ryker", "url": "https://dominicryker.com/" }
+      ],
+      "relatedLink": [
+        "https://pixelstortion.com/zones/silence/"
+      ]
+    }
+    </script>
+    <link rel="canonical" href="https://silenceisthetrauma.com/" />
+</head>
+
+<body id="page-body">
+
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+    <div class="flash-overlay" id="flash"></div>
+
+    <!-- Brand: Top Left, Always -->
+    <div class="brand">
+        <a href="https://pixelstortion.com" target="_blank" rel="noopener"
+           data-text="PIXELSTORTION">PIXELSTORTION</a>
+    </div>
+
+    <!-- Center Stage -->
+    <div class="center-stage" id="click-zone">
+        <div class="message-container">
+            <div id="beat-text"></div>
+        </div>
+    </div>
+
+    <!-- Skip Hint -->
+    <div class="skip-hint" id="skip-hint">
+        <span>click anywhere to read the stories</span>
+    </div>
+
+    <!-- Bottom Nav -->
+    <nav class="skip-nav">
+        <a href="stories.html">Stories</a>
+        <a href="https://pixelstortion.com" target="_blank" rel="noopener">Pixelstortion</a>
+        <a href="https://ethelryker.com" target="_blank" rel="noopener">Ethel Ryker</a>
+        <a href="https://islaband.com" target="_blank" rel="noopener">Isla</a>
+        <a href="https://dominicryker.com" target="_blank" rel="noopener">Dominic Ryker</a>
+    </nav>
+
+    <script>
+        // Preserve Cloudflare Worker trend hook extraction
+        function getTrendHook() {
+            const title = document.title;
+            if (title.includes('|')) {
+                return title.split('|')[1].trim();
+            }
+            return 'organic_discovery';
+        }
+
+        const beatText = document.getElementById('beat-text');
+        const flash = document.getElementById('flash');
+        const skipHint = document.getElementById('skip-hint');
+        let hasNavigated = false;
+
+        function goToStories() {
+            if (hasNavigated) return;
+            hasNavigated = true;
+            window.location.href = 'stories.html';
+        }
+
+        // Click anywhere to go immediately
+        document.getElementById('click-zone').addEventListener('click', function (e) {
+            // Don't intercept nav links
+            if (e.target.closest('.skip-nav') || e.target.closest('.brand')) return;
+            goToStories();
+        });
+
+        // === THE THREE BEATS ===
+
+        // Beat 1: The thesis (fade in after 500ms)
+        setTimeout(() => {
+            beatText.textContent = 'Silence protects the wrong people.';
+            beatText.classList.add('visible');
+        }, 500);
+
+        // Show skip hint after 1.5s
+        setTimeout(() => {
+            skipHint.classList.add('visible');
+        }, 1500);
+
+        // Beat 2: The pause — text holds for ~3.5 seconds (silence performed)
+
+        // Beat 3: The eruption (at 4.5s)
+        setTimeout(() => {
+            // Kill the calm
+            beatText.classList.remove('visible');
+
+            setTimeout(() => {
+                // Screen flash
+                flash.classList.add('fire');
+
+                // The corrupted eruption
+                beatText.textContent = '#%^$$^Silence.';
+                beatText.classList.add('eruption');
+                beatText.classList.add('visible');
+
+                // Hide skip hint during eruption
+                skipHint.classList.remove('visible');
+
+                // Beat 4: The snap — redirect after 2s
+                setTimeout(goToStories, 2000);
+            }, 300);
+        }, 4500);
+    </script>
+</body>
+
+</html>

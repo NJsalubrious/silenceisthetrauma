@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Breath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #e8e0d0;
+            --text-color: #1a1a1a;
+            --witness-color: #1a1a1a;
+            --dominic-color: #3d405b;
+            --heavy-color: #2b2b2b;
+            --grain-opacity: 0.04;
+            --vignette-color: rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 2.5s ease, color 2.5s ease;
+            overflow-x: hidden;
+            font-size: 1.2rem;
+            line-height: 1.85;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- THEMATIC STATES --- */
+        body.theme-convoy {
+            --bg-color: #e8e0d0;
+            --text-color: #1a1a1a;
+            --witness-color: #1a1a1a;
+            --dominic-color: #3d405b;
+            --heavy-color: #2b2b2b;
+            --grain-opacity: 0.04;
+            --vignette-color: rgba(0, 0, 0, 0.12);
+            transition: background-color 3s ease, color 3s ease;
+        }
+
+        body.theme-rupture {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --witness-color: #e5e5e5;
+            --dominic-color: #94a3b8;
+            --heavy-color: #ffffff;
+            --grain-opacity: 0.0;
+            --vignette-color: rgba(0, 0, 0, 0.0);
+            transition: background-color 0.06s ease, color 0.06s ease;
+        }
+
+        body.theme-quiet {
+            --bg-color: #e5e5e5;
+            --text-color: #1a1a1a;
+            --witness-color: #1a1a1a;
+            --dominic-color: #1e3a5f;
+            --heavy-color: #374151;
+            --grain-opacity: 0.02;
+            --vignette-color: rgba(0, 0, 0, 0.05);
+            transition: background-color 4s ease, color 4s ease;
+        }
+
+        body.theme-void {
+            --bg-color: #050505;
+            --text-color: #4a4a4a;
+            --witness-color: #4a4a4a;
+            --dominic-color: #4a4a4a;
+            --heavy-color: #5a5a5a;
+            --grain-opacity: 0.09;
+            --vignette-color: rgba(0, 0, 0, 0.85);
+            transition: background-color 3s ease, color 3s ease;
+        }
+
+        body.theme-remains {
+            --bg-color: #000000;
+            --text-color: #3a3a3a;
+            --witness-color: #3a3a3a;
+            --dominic-color: #2a2a2a;
+            --heavy-color: #4a4a4a;
+            --grain-opacity: 0.14;
+            --vignette-color: rgba(0, 0, 0, 0.95);
+            transition: background-color 5s ease, color 5s ease;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 12vh 24px 35vh 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- CINEMATIC REVEAL --- */
+        .beat {
+            opacity: 0;
+            transform: translateY(22px);
+            filter: blur(3px);
+            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 2s ease;
+            margin-bottom: 2rem;
+            will-change: opacity, transform, filter;
+        }
+
+        .beat.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* --- PACING --- */
+        .pause-small {
+            margin-bottom: 15vh;
+        }
+
+        .pause-medium {
+            margin-bottom: 30vh;
+        }
+
+        .pause-large {
+            margin-bottom: 50vh;
+        }
+
+        .pause-void {
+            margin-bottom: 80vh;
+        }
+
+        .pause-snap {
+            margin-bottom: 100vh;
+        }
+
+        .pause-stark {
+            margin-bottom: 120vh;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .voice-witness {
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .voice-cold {
+            font-weight: 300;
+            opacity: 0.7;
+            letter-spacing: 0.01em;
+        }
+
+        .voice-heavy {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--heavy-color);
+            transition: color 2s ease;
+        }
+
+        .voice-dominic {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 1.05rem;
+            color: var(--dominic-color);
+            margin-left: 2rem;
+            border-left: 2px solid var(--dominic-color);
+            padding-left: 1rem;
+            transition: color 2s ease, border-color 2s ease;
+        }
+
+        .voice-flat {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 300;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+        .final-realization {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            line-height: 1.7;
+            color: var(--text-color);
+            transition: color 2s ease;
+        }
+
+        .part-header {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 30vh;
+            margin-bottom: 10vh;
+            opacity: 0.35;
+            text-align: center;
+        }
+
+        /* --- ATMOSPHERIC EFFECTS --- */
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: var(--grain-opacity);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity 3s ease;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
+            transition: background 3.5s ease;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background-color: var(--heavy-color);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s, background-color 2s ease;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div id="progress-bar"></div>
+
+    <div class="container" id="story-container">
+    </div>
+
+    <script type="text/markdown" id="raw-story">
+# Same Breath
+
+## Part One: The Northern Road
+
+[witness] The road north was crushed rock. Dry and white. The dust kicked up by the front truck dried the saliva in my mouth.
+[pause]
+[flat] Three trucks. Moving fast. The heat pushed down on the metal roofs.
+[pause]
+[witness] I was in the second truck. Zastava rifle between my boots. I like the Zastava. It is heavy and ugly and it does not jam when the sand gets into the breach. Pretty things break. Ugly things just keep working.
+[pause]
+[flat] Goran drove the lead truck. Dominic sat in the passenger seat.
+[pause]
+[witness] Four hours on this road. Nothing but low stone walls and dead grass. Goran was talking. I could see his jaw moving through the rear window of the lead truck. Dominic was not talking. He was just watching the road.
+[pause-medium]
+
+## Part Two: The Ambush
+
+[pause-snap]
+[heavy] Goran's skull opened.
+[pause]
+[witness] The windshield of the lead truck went red. The sound came late. The echo rolled in slow, bouncing off the stone walls.
+[pause]
+[cold] The truck started to swerve. Dominic reached over and slid Goran down into the footwell.
+[pause]
+[witness] He put his hands on the wheel. There was no pause. He just drove. He kept the lead truck moving, steering it tight against the stone to shield the engine block before hitting the brakes. He never stopped until we were covered.
+[pause]
+[flat] Then the rest of the convoy was hit.
+[pause]
+[witness] The third truck was ripped apart. Steel torn out by heavy ordnance. A flash of orange heat pushed the air out of my lungs. The two men inside were erased in seconds.
+[pause]
+[flat] I was out of the door and on the ground. Automatic fire was striking the stone wall above us. My teeth were grinding. No one else moved.
+[pause]
+[witness] Thirty meters away, a man was crawling near the trees. The ground was naked dirt. No cover at all.
+[pause]
+[cold] Dominic was already out of the truck.
+[pause]
+[heavy] He ran out into the open.
+[pause]
+[witness] He ran a perfectly straight line. He did not vary his stride. Anyone in those trees could have shot him. He grabbed the crawling man by the back of his belt.
+[pause]
+[flat] He dragged him backward. The man's boots scraped against the crushed rock.
+[pause]
+[witness] He dropped the man behind the stone wall. The man was breathing shallow and shaking. Dominic crouched. He placed one hand flat on the man's chest. I'm not sure why.
+[pause]
+[flat] Then he stood up. He slipped across the crushed rock and into the tree line.
+[pause]
+[witness] He was completely silent. He disappeared into the brush. We stayed pinned behind the stone. The minutes stretched out, feeling like years. 
+[pause]
+[heavy] Then the ground tore open.
+[pause]
+[witness] Two massive detonations deep in the trees. I saw an enemy truck lift above the canopy. Another flipped entirely, burning on its side. 
+[pause]
+[cold] Dominic walked back down the slope.
+[pause]
+[witness] He walked step by step. He held a 9mm in each hand. He stopped and checked each burning wreck. One shot and then two in succession. Cleared them all. He walked out of the trees and back to the road. It defied the basic physics of survival.
+[pause]
+[flat] He dropped the empty handguns in the dirt. He brushed ash from his sleeve. His breathing was entirely even.
+[pause-large]
+
+## Part Three: The Wait
+
+[witness] We sat on the ground for four hours. The smell of the burnt truck and something else. Something metallic and warm mixed with the dust. It coated the back of the throat.
+[pause]
+[flat] The local police came. They looked at the bodies. Dominic spoke to them. Envelopes changed hands. The police left.
+[pause]
+[witness] The crawling man was sitting against the wall. I learned he was from Niš. He did not stop talking. He talked about his wife's cooking. He talked about a stray dog he used to feed. He talked fast and high. He thought making noise meant he was safe. 
+[pause]
+[cold] He thought surviving the fire meant he got to keep his life. 
+[pause]
+[witness] Dominic sat on a crate nearby. He was listening. Or he seemed to be. His face was entirely smooth. No irritation. No pity. He looked like a man waiting for transport.
+[pause]
+[flat] The sun started to drop. The shadows from the brush stretched across the road. The temperature finally dropped.
+[pause]
+[witness] The man from Niš laughed at something he said about the dog. He looked at Dominic. He smiled. He thought Dominic dragging him out of the kill zone meant they were connected. That is the kind of stupid hope men have when they are losing blood.
+[pause-medium]
+
+## Part Four: Same Breath
+
+[flat] Dominic stood up.
+[pause]
+[witness] He walked over to the man from Niš. 
+[pause]
+[flat] Dominic started speaking. His voice was low. The tone was completely ordinary.
+[pause]
+[witness] The man from Niš nodded. He continued to smile. He agreed with whatever Dominic was saying.
+[pause]
+[heavy] Then the man fell over sideways.
+[pause]
+[witness] He struck the ground. His mouth remained open.
+[pause]
+[cold] Dominic was holding a suppressed pistol.
+[pause]
+[witness] Dominic was still talking. He finished the sentence. He had pulled the trigger right in the middle of a word, and the word did not break. The suppressed shot was a flat, blunt sound. It did not interrupt his speech.
+[pause]
+[flat] There was no dramatic pause. No anger. Just a sudden lack of a pulse.
+[pause]
+[witness] Dominic slid the pistol back inside his jacket. He turned and walked toward the surviving truck. He did not look at the dead man. His shoes crunched on the gravel in a steady, even rhythm.
+[pause-void]
+
+## Part Five: Still Warm
+
+[witness] I had a piece of dry bread in my hand. I had been chewing it since the police left.
+[pause]
+[flat] I looked at the body. The man from Niš was dead. His eyes were wide. His mouth was still open from the smile. It looked like he thought the conversation was still happening.
+[pause]
+[witness] I looked at Dominic. He was wiping dust off his shoe.
+[pause]
+[cold] The muscles under my ribs contracted.
+[pause]
+[witness] He dragged that man from the open ground. He sat him against the wall. He listened to him talk about his dog for four hours. And then he shot him. While talking to him.
+[pause]
+[flat] I know killers. I am a killer. Killers get angry. Or they get scared. They do it for revenge or they do it for money.
+[pause]
+[witness] This was nothing. You pull a man from the firing line because he has value. You kill a man because he is a liability. You cannot do both with the same face. The nervous system rejects the contradiction.
+[pause]
+[heavy] I tried to drag air into my lungs. They would not expand. My jaw was locked open.
+[pause]
+[witness] The chewed bread fell out of my mouth into the dirt. My hands started to shake. A fine, rapid tremor that I could not control.
+[pause]
+[flat] Dominic was on his phone. His voice drifted over the crushed rock.
+[pause]
+[witness] It was the same voice. The same calm. The exact same tone he used to speak to the man from Niš. He was telling someone in Milan to send new transport. 
+[pause]
+[final] The man from Niš was bleeding onto the dirt. Dominic was arranging a pickup. 
+[pause-stark]
+[final] I sat against the wall and stared at the bread in the dirt. I felt sick. Sick from the total lack of heat in the air.
+[pause]
+[final] I listened to him finish his sentence.
+[pause-void]
+[final] The same breath.
+[pause-stark]
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawText = document.getElementById('raw-story').textContent;
+            const container = document.getElementById('story-container');
+            const lines = rawText.split('\n').filter(line => line.trim() !== '');
+
+            let htmlContent = '';
+
+            const themeMap = {
+                "Part One: The Northern Road": "theme-convoy",
+                "Part Two: The Ambush": "theme-rupture",
+                "Part Three: The Wait": "theme-quiet",
+                "Part Four: Same Breath": "theme-void",
+                "Part Five: Still Warm": "theme-remains"
+            };
+
+            lines.forEach((line) => {
+                if (line.startsWith('## ')) {
+                    const partTitle = line.replace('## ', '');
+                    htmlContent += `<div class="part-header beat" data-trigger-theme="${partTitle}">${partTitle}</div>`;
+                    return;
+                }
+
+                if (line.startsWith('# ')) return;
+
+                if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
+                if (line.includes('[pause-snap]')) { htmlContent += `<div class="pause-snap"></div>`; return; }
+                if (line.includes('[pause-void]')) { htmlContent += `<div class="pause-void"></div>`; return; }
+                if (line.includes('[pause-large]')) { htmlContent += `<div class="pause-large"></div>`; return; }
+                if (line.includes('[pause-medium]')) { htmlContent += `<div class="pause-medium"></div>`; return; }
+                if (line.includes('[pause]')) { htmlContent += `<div class="pause-small"></div>`; return; }
+
+                const match = line.match(/^\[(.*?)\] (.*)$/);
+                if (match) {
+                    const tag = match[1];
+                    const text = match[2];
+
+                    let cssClass = "voice-witness";
+                    if (tag === "cold") cssClass = "voice-cold";
+                    if (tag === "dominic") cssClass = "voice-dominic";
+                    if (tag === "flat") cssClass = "voice-flat";
+                    if (tag === "heavy") cssClass = "voice-heavy";
+                    if (tag === "final") cssClass = "final-realization";
+
+                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+                }
+            });
+
+            container.innerHTML = htmlContent;
+
+            // Scroll Observer for Text Fade
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -12% 0px',
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.beat').forEach(beat => {
+                observer.observe(beat);
+            });
+
+            // Theme Changes
+            const themeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const partTitle = entry.target.getAttribute('data-trigger-theme');
+                        if (partTitle && themeMap[partTitle]) {
+                            const newTheme = themeMap[partTitle];
+                            document.body.classList.remove('theme-convoy', 'theme-rupture', 'theme-quiet', 'theme-void', 'theme-remains');
+                            document.body.classList.add(newTheme);
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            });
+
+            document.querySelectorAll('.part-header').forEach(header => {
+                themeObserver.observe(header);
+            });
+
+            // Progress bar
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById("progress-bar").style.width = scrolled + "%";
+            });
+
+            setTimeout(() => {
+                window.dispatchEvent(new Event('scroll'));
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

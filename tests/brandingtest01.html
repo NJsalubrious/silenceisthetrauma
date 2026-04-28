@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PIXELSTORTION: SHORT STORIES</title>
+    <meta name="description" content="Each a fragment of the whole" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PIXELSTORTION:  SHORT STORIES" />
+    <meta property="og:description" content="Each a fragment of the whole" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://silenceisthetrauma.com/stories.html" />
+    <meta property="og:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="PIXELSTORTION" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PIXELSTORTION:  SHORT STORIES" />
+    <meta name="twitter:description" content="Each a fragment of the whole" />
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/short_stories/shortStoriesPagePreviewPage.jpg" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H8LS884F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-34H8LS884F');
+    </script>
+
+    <script src="https://pixelstortion.com/site-manifest.js"></script>
+    <link rel="canonical" href="https://silenceisthetrauma.com/stories.html" />
+
+    <style>
+        :root {
+            --glitch-color-1: #00ff41;
+            --glitch-color-2: #ff0055;
+            --bg-dark: #050505;
+            --bg-card: #0a0a0a;
+            --border-dim: #1a1a1a;
+            --border-hover: rgba(0, 255, 65, 0.4);
+            --text-muted: #666;
+            --text-dim: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .font-mono-custom {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* ====== GLITCH TEXT ====== */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--glitch-color-2);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim 3s infinite;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: 2px 0 var(--glitch-color-1);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim2 3s infinite 0.5s;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            2% {
+                clip: rect(15px, 9999px, 18px, 0);
+                transform: skew(0.2deg);
+            }
+
+            4% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            94% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            96% {
+                clip: rect(8px, 9999px, 12px, 0);
+                transform: skew(-0.15deg);
+            }
+
+            98% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            100% {
+                clip: rect(0, 0, 0, 0);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            2% {
+                clip: rect(20px, 9999px, 24px, 0);
+                transform: skew(-0.2deg);
+            }
+
+            4% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            94% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            96% {
+                clip: rect(12px, 9999px, 16px, 0);
+                transform: skew(0.15deg);
+            }
+
+            98% {
+                clip: rect(0, 0, 0, 0);
+            }
+
+            100% {
+                clip: rect(0, 0, 0, 0);
+            }
+        }
+
+        /* ====== SCANLINES ====== */
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+            background-size: 100% 4px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 9998;
+            animation: scanline-move 8s linear infinite;
+        }
+
+        @keyframes scanline-move {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(4px);
+            }
+        }
+
+        /* ====== CURSOR ====== */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--glitch-color-1);
+            border-radius: 50%;
+            position: fixed;
+            top: -4px;
+            left: -4px;
+            pointer-events: none;
+            z-index: 10000;
+            mix-blend-mode: screen;
+            transition: transform 0.05s ease;
+        }
+
+        .cursor-glow {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.15) 0%, rgba(0, 255, 65, 0) 70%);
+            border-radius: 50%;
+            position: fixed;
+            top: -60px;
+            left: -60px;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen;
+            transition: transform 0.2s ease;
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+
+            .cursor-dot,
+            .cursor-glow {
+                display: none;
+            }
+
+            html,
+            body,
+            * {
+                cursor: default !important;
+            }
+        }
+
+        /* ====== SCROLLBAR ====== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+
+        /* ====== NAVBAR ====== */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .top-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            color: #fff;
+        }
+
+        .brand-subtitle {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: var(--glitch-color-1);
+            text-transform: uppercase;
+        }
+
+        /* ====== HERO ====== */
+        .hero {
+            padding: 100px 24px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0, 255, 65, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--glitch-color-1);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+        }
+
+        .hero-badge-text {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--glitch-color-1);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: #888;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero-subtitle strong {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* ====== STORY GRID ====== */
+        .stories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 160px;
+        }
+
+        .section-header {
+            border-bottom: 1px solid var(--border-dim);
+            padding-bottom: 20px;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .section-label {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* ====== STORY CARD ====== */
+        .story-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dim);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .story-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 255, 65, 0.08);
+        }
+
+        .story-card-cover {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+        }
+
+        .story-card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.93);
+            transition: all 0.7s ease;
+        }
+
+        .story-card:hover .story-card-cover img {
+            filter: brightness(1);
+            transform: scale(1.05);
+        }
+
+        .story-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            transition: background 0.5s ease;
+        }
+
+        .story-card:hover .story-card-overlay {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .story-card-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        }
+
+        .story-card-read {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .story-card:hover .story-card-read {
+            opacity: 1;
+        }
+
+        .read-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(0, 255, 65, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 24px rgba(0, 255, 65, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover .read-circle {
+            transform: scale(1.1);
+        }
+
+        .read-circle .material-symbols-outlined {
+            font-size: 28px;
+            color: #000;
+        }
+
+        .story-card-info {
+            padding: 16px;
+            border-top: 1px solid var(--border-dim);
+            background: rgba(20, 20, 20, 0.6);
+            transition: border-color 0.4s ease;
+        }
+
+        .story-card:hover .story-card-info {
+            border-top-color: rgba(0, 255, 65, 0.3);
+        }
+
+        .story-card-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .story-card-track-container {
+            display: grid;
+            margin-bottom: 4px;
+            align-items: start;
+        }
+
+        .story-card-track,
+        .story-card-desc {
+            grid-area: 1 / 1;
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .story-card-track {
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            transition: opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .story-card-desc {
+            letter-spacing: 1px;
+            color: var(--text-dim);
+            pointer-events: none;
+            line-height: 1.4;
+        }
+
+        .story-card-desc span {
+            opacity: 0;
+            transition: opacity 0.15s ease;
+        }
+
+        .story-card:hover .story-card-track {
+            opacity: 0;
+            transition: opacity 0.1s ease;
+        }
+
+        .story-card:hover .story-card-desc span {
+            opacity: 1;
+        }
+
+        .story-card-cta {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--glitch-color-1);
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .story-card:hover .story-card-cta {
+            color: #33ff66;
+        }
+
+        /* ====== FOOTER ====== */
+        .page-footer {
+            text-align: center;
+            padding: 40px 24px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: #333;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .page-footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .page-footer a:hover {
+            color: var(--glitch-color-1);
+        }
+
+        /* ====== ANIMATIONS ====== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ====== MOBILE ====== */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 90px 16px 30px;
+            }
+
+            .stories-container {
+                padding: 0 16px 100px;
+            }
+
+            .story-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .story-card-info {
+                padding: 12px;
+            }
+
+            .story-card-name {
+                font-size: 12px;
+            }
+
+            .story-card-cta,
+            .story-card-track {
+                font-size: 9px;
+            }
+
+            .brand-title {
+                font-size: 1.25rem;
+            }
+
+            .top-bar-inner {
+                padding: 0 16px;
+                height: 56px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cursor Effects -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="scanlines"></div>
+
+    <!-- Top Bar -->
+    <nav class="top-bar">
+        <div class="top-bar-inner">
+            <div>
+                <a href="https://pixelstortion.com" target="_blank" rel="noopener" style="text-decoration: none;">
+                    <h1 class="brand-title glitch-text" data-text="PIXELSTORTION">PIXELSTORTION</h1>
+                </a>
+            </div>
+            <div class="brand-subtitle">THE STORY ARCHIVE</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="hero-title">SILENCE IS<br>THE TRAUMA</h2>
+        <p class="hero-subtitle">
+            <span
+                style="display: block; font-family: 'Courier Prime', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted);">
+                Warning: Contains mature themes, violence & psychological trauma.
+            </span>
+        </p>
+    </section>
+
+    <!-- Stories Grid -->
+    <div class="stories-container">
+        <div class="section-header">
+            <h3 class="section-title">SHORT STORIES</h3>
+            <p class="section-label">Each a snapshot of the whole</p>
+        </div>
+        <div class="story-grid" id="story-grid"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="page-footer">
+        <a href="https://pixelstortion.com">← RETURN TO PIXELSTORTION</a>
+    </div>
+
+    <script>
+        // ============================================================
+        // CURSOR EFFECTS
+        // ============================================================
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorGlow = document.getElementById('cursor-glow');
+
+        if (window.matchMedia('(hover: hover)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            });
+        }
+
+        // ============================================================
+        // STORY DATA — Reads from PIXEL_MANIFEST (single source of truth)
+        // To add a story: update site-manifest.js → both pages auto-populate
+        // ============================================================
+        const stories = (typeof PIXEL_MANIFEST !== 'undefined' && PIXEL_MANIFEST.STORIES)
+            ? Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
+                id: key.toLowerCase().replace(/_/g, '-'),
+                title: s.title,
+                track: s.track,
+                description: s.description,
+                cover: s.cover,
+                href: s.href
+            }))
+            : [];
+
+        // ============================================================
+        // RENDER GRID
+        // ============================================================
+        function renderStories() {
+            const container = document.getElementById('story-grid');
+            if (!container) return;
+
+            if (stories.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 80px 20px; color: var(--text-muted);">
+                        <span class="material-symbols-outlined" style="font-size: 48px; color: #333; display: block; margin-bottom: 16px;">menu_book</span>
+                        <p>No stories available yet.</p>
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = stories.map((story, index) => {
+                const descSpans = story.description ? story.description.split('').map((char, i) => {
+                    if (char === ' ') return ' ';
+                    return `<span style="transition-delay: ${i * 15}ms">${char}</span>`;
+                }).join('') : '';
+
+                return `
+                <a href="${story.href}" target="_blank" rel="noopener noreferrer" class="story-card"
+                   style="animation: fadeInUp 0.6s ease forwards ${index * 0.12}s; opacity: 0;">
+                    <div class="story-card-cover">
+                        <img src="${story.cover}"
+                             alt="${story.title}"
+                             loading="lazy">
+                        <div class="story-card-overlay"></div>
+                        <div class="story-card-gradient"></div>
+                        <div class="story-card-read">
+                            <div class="read-circle">
+                                <span class="material-symbols-outlined">menu_book</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card-info">
+                        <h3 class="story-card-name" title="${story.title}">${story.title}</h3>
+                        <div class="story-card-track-container">
+                            <p class="story-card-track">${story.track}</p>
+                            <p class="story-card-desc">${descSpans}</p>
+                        </div>
+                        <p class="story-card-cta">READ NOW</p>
+                    </div>
+                </a>
+            `}).join('');
+        }
+
+        // ============================================================
+        // BRANDING GLITCH EFFECT
+        // ============================================================
+        class BrandingGlitch {
+            constructor(el) {
+                this.el = el;
+                this.chars = '!<>-_\\\\/[]{}—=+*^?#_01';
+                this.update = this.update.bind(this);
+            }
+            setText(newText) {
+                const oldText = this.el.innerText;
+                const length = Math.max(oldText.length, newText.length);
+                const promise = new Promise((resolve) => this.resolve = resolve);
+                this.queue = [];
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || '';
+                    const to = newText[i] || '';
+                    const start = Math.floor(Math.random() * 15);
+                    const end = start + Math.floor(Math.random() * 15);
+                    this.queue.push({ from, to, start, end });
+                }
+                cancelAnimationFrame(this.frameRequest);
+                this.frame = 0;
+                this.update();
+                return promise;
+            }
+            update() {
+                let output = '';
+                let complete = 0;
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i];
+                    if (this.frame >= end) {
+                        complete++;
+                        output += to;
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar();
+                            this.queue[i].char = char;
+                        }
+                        output += char;
+                    } else {
+                        output += from;
+                    }
+                }
+                this.el.innerText = output;
+                this.el.setAttribute('data-text', output); // Update CSS glitch pseudo-element
+                if (complete === this.queue.length) {
+                    this.resolve();
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update);
+                    this.frame++;
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)];
+            }
+        }
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            renderStories();
+
+            // Init Branding Scramble
+            const brandEl = document.querySelector('.brand-title');
+            if (brandEl) {
+                const brandFx = new BrandingGlitch(brandEl);
+                const brandWords = ['PIXELSTORTION', 'PROJECTS', 'BIO', 'PIXELSTORTION'];
+                let wordIndex = 0;
+
+                function nextBrandWord() {
+                    wordIndex = (wordIndex + 1) % brandWords.length;
+                    brandFx.setText(brandWords[wordIndex]).then(() => {
+                        let delay = 1500; // Hold on secondary words
+                        if (brandWords[wordIndex] === 'PIXELSTORTION') {
+                            delay = 6000; // Hold longer on the main brand
+                        }
+                        setTimeout(nextBrandWord, delay);
+                    });
+                }
+                
+                setTimeout(nextBrandWord, 6000); // Start cycle after 6 seconds
+            }
+        });
+    </script>
+</body>
+
+</html>

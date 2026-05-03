@@ -240,7 +240,14 @@
 
       if (post.content) html += '<div class="post-content">' + escapeHtml(post.content) + '</div>';
       if (post.image) html += '<img class="post-image" src="' + post.image + '" alt="' + (post.image_alt || '') + '" loading="lazy" onerror="this.style.display=\'none\'">';
-      if (post.link) html += '<a class="post-link" href="' + post.link + '" target="_blank">' + post.link + '</a>';
+      if (post.link) {
+        try {
+          const domain = new URL(post.link).hostname.replace('www.','');
+          html += '<a class="post-link" href="' + post.link + '" target="_blank">⟶ ' + domain + '</a>';
+        } catch(e) {
+          html += '<a class="post-link" href="' + post.link + '" target="_blank">⟶ Source</a>';
+        }
+      }
 
       html += '<div class="post-actions">';
       html += '<button class="post-action">◇</button>';

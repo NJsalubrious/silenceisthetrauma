@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>veX — Social Network</title>
+  <title>veX ï¿½ Social Network</title>
   <meta name="description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation.">
+
+  <!-- Open Graph â€” Social Sharing -->
+  <meta property="og:title" content="veX - Social Network" />
+  <meta property="og:description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
+  <meta property="og:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://silenceisthetrauma.com/veX_social_network/" />
+  <meta property="og:site_name" content="veX Network" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="veX - Social Network" />
+  <meta name="twitter:description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
+  <meta name="twitter:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="logo/logo_veX.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +38,7 @@
     </div>
   </div>
 
-  <!-- PIXELSTORTION BRANDING — top left, always visible -->
+  <!-- PIXELSTORTION BRANDING ï¿½ top left, always visible -->
   <div class="ps-brand-dropdown">
     <button class="ps-brand" onclick="togglePixelstortion()" id="psBtn" style="background:none; border:none; cursor:pointer; padding:0;">
       PIXELSTORTION <span class="arrow" style="font-size:0.4rem; vertical-align:middle; margin-left:4px;">?</span>
@@ -139,7 +155,7 @@
       <div class="modal-body">
         <div class="modal-name-row">
           <span id="modalName" class="modal-name"></span>
-          <span id="modalVerified" class="post-verified" style="display:none;">¦</span>
+          <span id="modalVerified" class="post-verified" style="display:none;">ï¿½</span>
         </div>
         <div id="modalHandle" class="modal-handle"></div>
         <div id="modalBio" class="modal-bio"></div>
@@ -223,9 +239,9 @@
 
       html += '<div class="post-header">';
       html += '<span class="post-name">' + (post.display_name || profile.display_name || '') + '</span>';
-      if (isVerified) html += '<span class="post-verified">¦</span>';
+      if (isVerified) html += '<span class="post-verified">ï¿½</span>';
       html += '<span class="post-handle" onclick="filterByHandle(\'' + post.handle + '\')">' + post.handle + '</span>';
-      html += '<span class="post-dot">·</span>';
+      html += '<span class="post-dot">ï¿½</span>';
       html += '<span class="post-time">' + relativeTime(post.timestamp) + '</span>';
       html += '</div>';
 
@@ -337,7 +353,7 @@
         html += '<img class="profile-avatar" src="' + profile.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'">';
         html += '<div style="flex:1;min-width:0">';
         html += '<div class="profile-name">' + profile.display_name;
-        if (profile.verified) html += ' <span class="post-verified">¦</span>';
+        if (profile.verified) html += ' <span class="post-verified">ï¿½</span>';
         html += '</div>';
         html += '<div class="profile-handle">' + profile.handle + '</div>';
         if (profile.bio) html += '<div class="profile-bio">' + escapeHtml(profile.silent ? 'Does not post.' : profile.bio) + '</div>';
@@ -360,7 +376,7 @@
         'Every post, every interaction, every profile is part of a performance art installation ' +
         'that reflects systemic realities through fictional voices. No real persons are depicted.</p>' +
         '<p style="color:var(--text-secondary); margin-bottom:24px; line-height:1.8; font-weight:200;">' +
-        'The characters are drawn from the Ryker Consensus — a network of individuals ' +
+        'The characters are drawn from the Ryker Consensus ï¿½ a network of individuals ' +
         'whose lives intersect around power, silence, and structural harm.</p>' +
         '<div style="border-top:1px solid var(--border-dim); padding-top:24px;">' +
         '<h3 style="font-family:var(--font-serif); color:var(--text-primary); font-size:0.9rem; margin-bottom:12px; letter-spacing:1px;">Related Sites</h3>' +
@@ -379,7 +395,7 @@
       featured.forEach(p => {
         html += '<div class="sidebar-profile" onclick="filterByHandle(\'' + p.handle + '\'); switchTab(\'feed\');">';
         html += '<img class="sidebar-profile-avatar" src="' + p.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'">';
-        html += '<div><div class="sidebar-profile-name">' + p.display_name + (p.verified ? ' <span class="post-verified">¦</span>' : '') + '</div>';
+        html += '<div><div class="sidebar-profile-name">' + p.display_name + (p.verified ? ' <span class="post-verified">ï¿½</span>' : '') + '</div>';
         html += '<div class="sidebar-profile-handle">' + p.handle + '</div></div></div>';
       });
       container.innerHTML = html;
@@ -424,4 +440,5 @@
 
 </body>
 </html>
+
 

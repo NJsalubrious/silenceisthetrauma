@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veX Character Injection Test Harness</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .controls {
+            margin-bottom: 20px;
+            background: #222;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        button {
+            background: #444;
+            color: white;
+            border: 1px solid #666;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: monospace;
+        }
+        button:hover {
+            background: #666;
+        }
+        .post-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .post {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .post.dominic_ryker { border-left: 4px solid #8b0000; }
+        .post.ethelryker { border-left: 4px solid #4682b4; }
+        .post.isla_band { border-left: 4px solid #ff8c00; }
+        
+        .handle {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .dominic_ryker .handle { color: #8b0000; }
+        .ethelryker .handle { color: #4682b4; }
+        .isla_band .handle { color: #ff8c00; }
+        
+        .timestamp {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 1.2em;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+        .meta {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #555;
+        }
+        .reply-badge {
+            background: #333;
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.7em;
+            margin-left: 10px;
+        }
+        .link-badge {
+            display: inline-block;
+            margin-top: 10px;
+            background: #222;
+            padding: 4px 8px;
+            border: 1px solid #444;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+        .link-badge:hover {
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>veX Engine - Local Injection Test</h1>
+    
+    <div class="controls">
+        <button onclick="loadPosts()">Refresh JSON Data</button>
+        <span id="status" style="margin-left: 15px; color: #888;"></span>
+    </div>
+
+    <div id="posts" class="post-container">
+        <!-- Posts will be injected here -->
+    </div>
+
+    <script>
+        const POSTS_URL = 'posts.json'; // Assumes this is served locally from the same dir
+
+        async function loadPosts() {
+            const statusEl = document.getElementById('status');
+            const container = document.getElementById('posts');
+            
+            statusEl.textContent = "Loading...";
+            
+            try {
+                // Add timestamp to prevent caching
+                const response = await fetch(`${POSTS_URL}?t=${new Date().getTime()}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const posts = await response.json();
+                
+                container.innerHTML = ''; // Clear current
+                
+                if (posts.length === 0) {
+                    container.innerHTML = '<div style="color:#888;">No posts found in posts.json.</div>';
+                    statusEl.textContent = "Empty JSON.";
+                    return;
+                }
+
+                posts.forEach(post => {
+                    const el = document.createElement('div');
+                    const handleClass = post.handle ? post.handle.toLowerCase().replace('@', '') : 'unknown';
+                    el.className = `post ${handleClass}`;
+                    
+                    let replyHtml = '';
+                    if (post.reply_to) {
+                        replyHtml = `<span class="reply-badge">Replying to: ${post.reply_to}</span>`;
+                    }
+
+                    let linkHtml = '';
+                    if (post.link && post.link !== "") {
+                        linkHtml = `<br><a href="${post.link}" class="link-badge" target="_blank">🔗 Attached Link</a>`;
+                    }
+
+                    const dateObj = new Date(post.timestamp);
+                    const formattedDate = isNaN(dateObj) ? post.timestamp : dateObj.toLocaleString();
+
+                    el.innerHTML = `
+                        <div class="handle">@${post.handle} ${replyHtml}</div>
+                        <div class="timestamp">${formattedDate} | ID: ${post.id || 'N/A'}</div>
+                        <div class="content">${post.content}</div>
+                        ${linkHtml}
+                    `;
+                    container.appendChild(el);
+                });
+                
+                statusEl.textContent = `Loaded ${posts.length} posts successfully.`;
+                statusEl.style.color = "#4CAF50";
+
+            } catch (error) {
+                console.error("Error loading posts:", error);
+                container.innerHTML = `<div style="color:red;">Error loading posts.json: ${error.message}</div>`;
+                statusEl.textContent = "Fetch failed.";
+                statusEl.style.color = "red";
+            }
+        }
+
+        // Initial load
+        loadPosts();
+    </script>
+</body>
+</html>

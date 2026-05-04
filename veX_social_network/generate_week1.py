@@ -11,6 +11,7 @@ BASE = datetime(2026, 5, 5, 0, 0, 0)  # Start date
 RAW = [
 # DAY 1
 (0,6,14,"@marcus_vane","Marcus Vane","","Quarterly compliance review complete. Eighteen jurisdictions. All green. The machine doesn't need a driver. It needs maintenance.",None,None,None,"post"),
+(0,6,45,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Found this in the archives. The first band. Back when the Conservatorium of Music Sydney kicked her out but she kept the band going anyway. The Stanmore years began here.","characters/Isla_first_band_from_conservatoriumOfMusicSydney_kiickedOutOfConservatoriumButKeptBandUndtillSheLetf_SeeStanmoreye.jpg","Early band photo after being kicked out of Conservatorium",None,"post"),
 (0,7,2,"@the_barista","Penelope","","New regular. Third Tuesday in a row. Long black, no sugar, pays cash. Sits facing the door. Tips exactly 10%. I shouldn't notice these things but I do.",None,None,None,"post"),
 (0,7,45,"@truckie_dave","Truckie Dave","","Three hours at the boom gate. Gazza reckons the scanner's updating. Always updating. Never updated. Had to eat me sandwich cold. Unacceptable.",None,None,None,"post"),
 (0,9,10,"@iron_irene","'Iron' Irene","","Bail application denied. Defence argued community ties. His passport has more stamps than a post office. Try again, sweetheart.",None,None,None,"post"),
@@ -26,6 +27,7 @@ RAW = [
 (0,20,30,"@pieter_block","Pieter 'The Block'","","Container 4471-B listed as agricultural equipment. Weight discrepancy of 340kg. Holding for secondary inspection. The captain can call whoever he wants. Gate 7 stays closed.",None,None,None,"post"),
 # DAY 2
 (1,6,45,"@elena_corves","Elena Corves","","Coffee with Martin from Deutsche. He looks thinner. Stress does that. I asked about his daughter's recital. He changed the subject. Interesting.",None,None,None,"post"),
+(1,7,0,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Throwback to the Factory Theatre acoustic sessions during the Stanmore era. Stripped back, raw, and bleeding on the fretboard.","characters/isla_factor_theatre_stanmore_years_acousticSession_1.jpg","Isla acoustic session at Factory Theatre Stanmore",None,"post"),
 (1,7,15,"@truckie_dave","Truckie Dave","","Early start. 4 AM. Roads are empty. This is when I love the job. No traffic, no questions, just the road and the radio. Dropped the load by six. Beautiful.","post_images/truckie_dave_dashcam.jpg","Dashcam view approaching Gate 4 at dawn",None,"post"),
 (1,8,0,"@the_barista","Penelope","","Tuesday guy is back. Same order. Same table. But he got a phone call and stepped outside. I could see his reflection in the window. He wasn't happy.",None,None,None,"post"),
 (1,9,30,"@ross_kinley","Ross Kinley","","Productive meeting with the Roads Minister this morning. Infrastructure isn't glamorous, but it's the backbone of every community. More announcements soon.",None,None,None,"post"),
@@ -39,8 +41,11 @@ RAW = [
 (1,18,0,"@dr_alfayed","Dr. Al-Fayed","","A colleague asked why I keep Harrington's file on my desk. I said it reminds me that patience is a medical instrument.",None,None,None,"post"),
 (1,19,30,"@kaylee","Kaylee","","Made snickerdoodles for the night shift. Kevin left his badge on the counter AGAIN. I put it in the lost and found. I'm too nice.",None,None,None,"post"),
 (1,20,0,"@uni_vc","University VC","","Concerning reports that the proposed fee cap may impact our research output. Education is an investment. Capping investment is capping aspiration.",None,None,None,"post"),
+(1,21,15,"@isla_band","Isla","characters/Isla_veX.jpg","Someone snuck smoke bombs into the arena. We had to stop the show. Crazy Americans.","characters/isla_dynamic_pose_singingintoMic_arena_pyro_in_background_1.jpg","Smoke filling a concert arena",None,"post"),
+(1,22,30,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] The rhythm section is the foundation. Dominic holding it down on bass like a concrete pillar.","characters/Isla_band_BassistDominic_Ryker_veX.jpg","Dominic Ryker playing bass on stage",None,"post"),
 # DAY 3
 (2,6,30,"@the_barista","Penelope","","Okay so Tuesday guy didn't come in today. He comes every Tuesday and Thursday. It's Thursday. He's not here. His table is empty. I shouldn't care. I care.",None,None,None,"post"),
+(2,6,45,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] The Black Courtroom stage design coming together. Wait until you see what we do with the gavel in the second act.","characters/Isla_concert_stage_photo_the_black_courtroom_stage_2.jpg","The Black Courtroom stage design",None,"post"),
 (2,7,0,"@elena_corves","Elena Corves","","Flew to DC for a lunch meeting. The restaurant was empty except for us. She chose it. She always chooses empty restaurants. We discussed personnel realignment. She agreed to everything. Smart woman.",None,None,None,"post"),
 (2,8,0,"@truckie_dave","Truckie Dave","","New bloke at Gate 4. Asking questions. What's in the container? Mate, it says textiles. Read the manifest. I don't write the manifest. I drive the truck. Get the barrier up.",None,None,None,"post"),
 (2,9,15,"@iron_irene","'Iron' Irene","","Witness box. Day two. He contradicted himself three times before morning tea. His lawyer requested a recess. I requested a sandwich. Both granted.","post_images/iron_irene_courtroom.jpg","Empty courtroom witness box",None,"post"),
@@ -56,6 +61,7 @@ RAW = [
 (2,20,0,"@silas_kovic","Silas Kovic","","Minor supply chain disruption in the North Sea corridor. Container 4471-B held at Gate 7 for re-inspection. These delays cost time and money. Patience.",None,None,None,"post"),
 # DAY 4
 (3,7,0,"@elena_corves","Elena Corves","","Back in New York. Quiet evening. Reviewed the DC files. Everyone has a gap year. Martin's was 2014. Six months. No credit cards. Why does nobody use their credit cards in Bangkok?",None,None,None,"post"),
+(3,7,15,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] On set for the new music video. Fireballs in the background, guitar in hand. The heat in that room was unbearable. She didn't flinch.","characters/isla_dynamic_pose_studiophoto_musicVideo_withFire_1.jpg","Isla on music video set with fireballs",None,"post"),
 (3,8,0,"@the_barista","Penelope","","He came back. Different day though. Not Tuesday or Thursday. Saturday. Nobody changes their pattern without a reason. His hands were shaking when he picked up the cup. Barely noticeable. I noticed.",None,None,None,"post"),
 (3,8,45,"@truckie_dave","Truckie Dave","","Weekend run. Quiet roads. Dropped the load early. Gazza's back on Gate 4. Waved me through like always. Good bloke, Gaz. Salt of the earth.",None,None,None,"post"),
 (3,10,0,"@iron_irene","'Iron' Irene","","Weekend prep. Reading the financials for Monday's cross-examination. His accountant used the word restructure fourteen times. I've highlighted each one. Monday is going to be fun.",None,None,None,"post"),
@@ -69,8 +75,11 @@ RAW = [
 (3,18,0,"@kaylee","Kaylee","","Saturday shift. Server room was warm again. The intake vent needs cleaning. I told maintenance. They said Monday. I said okay. Brought iced tea for the guys instead.",None,None,None,"post"),
 (3,19,0,"@the_liability","The Liability","","Created a Workplace Health and Safety folder on the shared drive. Put all our documents in it. Boss said why is that on the SHARED drive. I said for transparency. He went very quiet.",None,None,None,"post"),
 (3,20,15,"@arthur_penn","Arthur Penn","","Property inspection complete. Three permit violations documented. One minor. Two significant. The fire exit is not a fire exit if it opens into a wall. Remediation timeline: 14 days.",None,None,None,"post"),
+(3,21,30,"@isla_band","Isla","characters/Isla_veX.jpg","The witness box stage. Every night. They sit in the chair and I scream the verdict at them.","characters/Isla_concert_stage_photo_the_witness_box_stage_1.jpg","The witness box stage design at an Isla concert",None,"post"),
+(3,22,15,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Promo art drop. High heels on fire, fireball in the background. The aesthetic is complete destruction.","characters/isla_dynamic_pose_art_promo_photo_withFireballInBackgroundAnd IslaWithGutar_artyHighHeelsOnFireAndHuitarInhand_leg.jpg","Promo art of Isla with high heels on fire and fireball background",None,"post"),
 # DAY 5
 (4,6,30,"@the_barista","Penelope","","Spent last night on the ASIC register. Couldn't sleep anyway. The company on his loyalty card doesn't match any registered entity in New South Wales. The ABN is valid but dormant since 2021. Brain itch. Big one.",None,None,None,"post"),
+(4,6,45,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Close up. That snarl isn't an act. That's ten years of venom finally finding a microphone.","characters/isla_dynamic_pose_screaming_snarl_mic_closeup_1.jpg","Isla screaming into the mic closeup",None,"post"),
 (4,7,15,"@elena_corves","Elena Corves","","Monday morning briefing. The Zurich team is nervous about the compliance freeze. I told them to breathe. Paperwork is resolved with paperwork. Panic is resolved with discipline.",None,None,None,"post"),
 (4,9,0,"@iron_irene","'Iron' Irene","","Cross-examination. Day three. Used the word restructure fourteen times. He flinched on the twelfth. We'll come back to that one tomorrow.",None,None,None,"post"),
 (4,10,0,"@truckie_dave","Truckie Dave","","Deadset joke at the port today. New security protocol. Had to fill out a form for the form. The form asked for the nature of goods. I wrote heavy. They weren't impressed.",None,None,None,"post"),
@@ -86,6 +95,7 @@ RAW = [
 (4,20,0,"@sarah_lin","Sarah Lin","","The tech company responded to my letter. They've offered to discuss licensing terms. I appreciate their willingness to engage. I expect it will be productive.",None,None,None,"post"),
 # DAY 6
 (5,6,30,"@the_barista","Penelope","","I found the dormant ABN. It was registered to an address in Mosman. The address is a house. The house is currently listed as FOR SALE. I should stop looking. I'm not going to stop looking.","post_images/mosman_glass_house_forsale.jpg","Mosman waterfront house with FOR SALE sign at dusk",None,"post"),
+(5,6,45,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] More exclusive promo art. The skeleton spine design. Bare bones structure. Stripped of all the meat and lies.","characters/isla_dynamic_pose_art_promo_photo_islaSkeletonDesignSpine_arty_design_1.jpg","Promo art of Isla with skeleton spine design",None,"post"),
 (5,7,30,"@elena_corves","Elena Corves","","Drinks with a former colleague. He mentioned retirement. I said that sounded lovely. He said he was thinking about writing a memoir. I said that sounded less lovely. He understood.",None,None,None,"post"),
 (5,8,15,"@truckie_dave","Truckie Dave","","Boring run today. Nothing to report. Textiles in, textiles out. The scanner worked. Gazza was professional. Nobody asked questions. Perfect day at the office.",None,None,None,"post"),
 (5,9,30,"@iron_irene","'Iron' Irene","","Day four. He cried. His lawyer asked for compassionate consideration. I asked for the financial records from 2019. Compassion and compliance are not mutually exclusive.",None,None,None,"post"),
@@ -99,8 +109,11 @@ RAW = [
 (5,18,0,"@sarah_k","Sarah K","","The Sydney partner's wife called back. She apologised for being short. She said he's been travelling a lot. Zurich, then London. She sounded tired. The tired that comes from not knowing.",None,None,None,"post"),
 (5,19,0,"@stevo","Stevo","","Sandra acknowledged receipt of the pre-tenancy photos. No disputes yet. I am cautiously optimistic. The soil report was thorough. pH levels conclusive. We are in the clear.",None,None,None,"post"),
 (5,20,0,"@bigmarge","Big Marge","","Quiet night. Just the regulars. Old Tony played the pokies for three hours and won twelve dollars. He bought a schooner with it. That's the economy working as intended.",None,None,None,"post"),
+(5,21,45,"@isla_band","Isla","characters/Isla_veX.jpg","Same guy. Every show. Up in the rafters. I see you mate.","characters/Isla_brutal_screamOon_stage_concert_photo_1.jpg","Isla pointing up to the rafters during a concert",None,"post"),
+(5,22,15,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Leather and black lipstick. She rarely wears it, but when she does, you know exactly what kind of set it's going to be.","characters/Isla_singing_on_stage_leatherAndBlackLipstickWhichSheRarelyWears_1.jpg","Isla singing on stage in leather and black lipstick",None,"post"),
 # DAY 7
 (6,6,30,"@the_barista","Penelope","","Ryker Holdings. I Googled it. Dominic Ryker. Property developer. Escaped prison. Amber alert. This is the guy whose company name was on Tuesday Guy's loyalty card. I need to think about this.",None,None,None,"post"),
+(6,6,45,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Walking across the stage. Serious look. Pyro going off behind her. Just another Tuesday on the road.","characters/isla_dynamic_pose_wallkingAcrossStage_seriousLook_arena_pyro_in_background_1.jpg","Isla walking across stage with pyro in background",None,"post"),
 (6,7,30,"@elena_corves","Elena Corves","","Quiet Sunday. Reviewed personnel files from home. Made notes. Filed them in the safe. Some notes are more valuable kept than shared. That's the whole business, really.",None,None,None,"post"),
 (6,8,30,"@truckie_dave","Truckie Dave","","Day off. Took the missus to Cronulla. She asked why I'm always on the phone. I said work. She said it's Sunday. I said logistics never sleep. She didn't buy it. Smart woman.",None,None,None,"post"),
 (6,10,0,"@iron_irene","'Iron' Irene","","Weekend. Reading the transcript from last week. He contradicted himself nine times across four days. His lawyer is going to request a mistrial. He won't get one. See you Monday, sunshine.",None,None,None,"post"),
@@ -114,6 +127,7 @@ RAW = [
 (6,18,0,"@uni_vc","University VC","","Finalising the Semester 2 enrolment numbers. We project a record intake. The Global Pathways program is exceeding all targets. I've recommended expanding to three additional markets.",None,None,None,"post"),
 (6,19,0,"@the_barista","Penelope","","Dominic Ryker. I've heard that name. Property developer. Escaped prison. The company on Tuesday Guy's loyalty card is connected to Ryker Holdings. I need to not think about this. I'm thinking about this.",None,None,None,"post"),
 (6,20,0,"@marcus_vane","Marcus Vane","","Compliance matter resolved. The counter-party signature has been verified. Business continues. Disruptions are temporary. The architecture endures.",None,None,None,"post"),
+(6,21,0,"@isla_band","Isla","characters/Isla_veX.jpg","[CREW] Don't miss out on the next tour. Tickets on sale Friday.","characters/isla_dynamic_pose_sining_mic_closeup_1.jpg","Isla singing into mic closeup",None,"post"),
 ]
 
 def build_posts():

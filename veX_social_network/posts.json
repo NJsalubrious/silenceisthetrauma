@@ -1,6 +1,14 @@
 [
-
-
+  {
+    "id": "dom_8ed5a71b",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "characters/DominicRyker_veX.jpg",
+    "timestamp": "2026-05-04T12:04:25.895017Z",
+    "content": "The walls outlast the men who sit behind the bench.",
+    "inner_monologue": "The obituary praises a judge, a figure within the system that failed to understand my necessary decisions. An \"ideal judge\" is a sentimental notion. Their authority, \"cloaked\" or not, is contained within rooms and frameworks. My work, the walls and structures, outlasts any individual who merely sits within them. Their decisions are transient; my infrastructure endures.",
+    "link": "https://www.theguardian.com/law/2026/may/03/sir-colin-mackay-obituary"
+  },
   {
     "id": "post_20260501_pin_gran",
     "handle": "@ethel_ryker",

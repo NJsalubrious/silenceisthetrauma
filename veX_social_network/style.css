@@ -432,17 +432,17 @@ button {
   transform: translateY(20px); transition: transform 0.3s;
 }
 .modal-overlay.open .modal-content { transform: translateY(0); }
-.modal-header { height: 80px; background: rgba(10,10,10,0.5); border-bottom: 1px solid var(--border-card); position: relative; }
+.modal-header { height: 120px; background: rgba(10,10,10,0.5); border-bottom: 1px solid var(--border-card); position: relative; }
 .modal-close {
   position: absolute; top: 12px; right: 16px; font-size: 1.5rem;
   color: var(--text-muted); cursor: pointer; transition: color 0.2s;
 }
 .modal-close:hover { color: var(--gold); }
 .modal-avatar {
-  width: 80px; height: 80px; border-radius: 50%; border: 4px solid var(--concrete);
-  object-fit: cover; position: absolute; top: 40px; left: 20px; background: var(--void);
+  width: 140px; height: 140px; border-radius: 50%; border: 4px solid var(--concrete);
+  object-fit: cover; position: absolute; top: 50px; left: 20px; background: var(--void);
 }
-.modal-body { padding: 50px 20px 24px; }
+.modal-body { padding: 80px 20px 24px; }
 .modal-name-row { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
 .modal-name { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--text-primary); letter-spacing: 1px; }
 .modal-handle { font-family: 'Courier Prime', monospace; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }

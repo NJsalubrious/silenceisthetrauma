@@ -76,9 +76,7 @@
         }
 
         /* ====== BRAND DROPDOWN ====== */
-        .brand-dropdown-container {
-            position: relative;
-        }
+        .brand-dropdown-container { position: relative; min-width: 160px; }
 
         .ps-brand {
             font-family: 'Space Grotesk', sans-serif;
@@ -813,35 +811,13 @@
                     <h1 class="brand-title ps-brand glitch-text" data-text="PIXELSTORTION" style="position:relative; top:0; left:0; display:inline-block;">PIXELSTORTION</h1>
                 </button>
                 <div id="brandDropdown" class="brand-dropdown-menu" style="margin-top:20px;">
-                    
-                    <div class="menu-category-wrapper">
-                        <div class="menu-category">THE NETWORK <span style="opacity:0.5">▸</span></div>
-                        <div class="submenu">
-                            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item">veX Social Network</a>
-                            <a href="https://ethelryker.com" class="brand-dropdown-item">Ethel Ryker</a>
-                            <a href="https://dominicryker.com" class="brand-dropdown-item">Dominic Ryker</a>
-                            <a href="https://islaband.com" class="brand-dropdown-item">Isla</a>
-                        </div>
-                    </div>
-                    
-                    <div class="menu-category-wrapper">
-                        <div class="menu-category">CORE HUBS <span style="opacity:0.5">▸</span></div>
-                        <div class="submenu">
-                            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item item-silence">The Silence Zone</a>
-                            <a href="https://silenceisthetrauma.com" class="brand-dropdown-item">Silence is the Trauma</a>
-                            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item item-nalani">Mataala</a>
-                        </div>
-                    </div>
-                    
-                    <div class="menu-category-wrapper">
-                        <div class="menu-category">ART & BIO <span style="opacity:0.5">▸</span></div>
-                        <div class="submenu">
-                            <a href="https://pixelstortion.com/zones/ethel_gallery/" class="brand-dropdown-item">Story In Songs</a>
-                            <a href="https://islaband.com/ISLA_ALBUM" class="brand-dropdown-item">Acoustic Degloving</a>
-                            <a href="https://pixelstortion.com/zones/silentcinema/" class="brand-dropdown-item item-cinema">Silent Cinema</a>
-                            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item item-bio">Bio</a>
-                        </div>
-                    </div>
+                        <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">veX: Social Network</a>
+                        <span class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">Silence is the trauma</span>
+                        <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+                        <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+                        <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+                        <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+                        <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
 
                 </div>
             </div>
@@ -871,7 +847,7 @@
 
     <!-- Footer -->
     <div class="page-footer">
-        <a href="https://pixelstortion.com">← RETURN TO PIXELSTORTION</a>
+        <a href="https://pixelstortion.com">? RETURN TO PIXELSTORTION</a>
     </div>
 
     <script>
@@ -889,8 +865,8 @@
         }
 
         // ============================================================
-        // STORY DATA — Reads from PIXEL_MANIFEST (single source of truth)
-        // To add a story: update site-manifest.js → both pages auto-populate
+        // STORY DATA � Reads from PIXEL_MANIFEST (single source of truth)
+        // To add a story: update site-manifest.js ? both pages auto-populate
         // ============================================================
         const stories = (typeof PIXEL_MANIFEST !== 'undefined' && PIXEL_MANIFEST.STORIES)
             ? Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
@@ -1084,3 +1060,4 @@
 </body>
 
 </html>
+

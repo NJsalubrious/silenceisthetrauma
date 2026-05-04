@@ -96,6 +96,23 @@
             background: #333;
             color: #fff;
         }
+        .monologue-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #0a0a0a;
+            border-left: 2px dashed #555;
+            font-size: 0.9em;
+            color: #aaa;
+            font-style: italic;
+        }
+        .monologue-label {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -154,10 +171,21 @@
                     const dateObj = new Date(post.timestamp);
                     const formattedDate = isNaN(dateObj) ? post.timestamp : dateObj.toLocaleString();
 
+                    let monoHtml = '';
+                    if (post.inner_monologue && post.inner_monologue !== "No monologue captured.") {
+                        monoHtml = `
+                            <div class="monologue-box">
+                                <div class="monologue-label">Inner Monologue Manager</div>
+                                ${post.inner_monologue.replace(/\n/g, '<br>')}
+                            </div>
+                        `;
+                    }
+
                     el.innerHTML = `
                         <div class="handle">@${post.handle} ${replyHtml}</div>
                         <div class="timestamp">${formattedDate} | ID: ${post.id || 'N/A'}</div>
                         <div class="content">${post.content}</div>
+                        ${monoHtml}
                         ${linkHtml}
                     `;
                     container.appendChild(el);

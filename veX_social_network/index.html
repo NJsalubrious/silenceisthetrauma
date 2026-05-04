@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -350,7 +350,7 @@
         if (profile.silent) classes += ' silent';
 
         html += '<div class="' + classes + '" onclick="filterByHandle(\'' + profile.handle + '\'); switchTab(\'feed\');">';
-        html += '<img class="profile-avatar" src="' + profile.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'">';
+        html += '<img class="profile-avatar" src="' + profile.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'" onclick="openProfileModal(\'' + profile.handle + '\', event)">';
         html += '<div style="flex:1;min-width:0">';
         html += '<div class="profile-name">' + profile.display_name;
         if (profile.verified) html += ' <span class="post-verified">�</span>';
@@ -394,7 +394,7 @@
       let html = '<h3>Who to follow</h3>';
       featured.forEach(p => {
         html += '<div class="sidebar-profile" onclick="filterByHandle(\'' + p.handle + '\'); switchTab(\'feed\');">';
-        html += '<img class="sidebar-profile-avatar" src="' + p.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'">';
+        html += '<img class="sidebar-profile-avatar" src="' + p.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'" onclick="openProfileModal(\'' + p.handle + '\', event)">';
         html += '<div><div class="sidebar-profile-name">' + p.display_name + (p.verified ? ' <span class="post-verified">�</span>' : '') + '</div>';
         html += '<div class="sidebar-profile-handle">' + p.handle + '</div></div></div>';
       });

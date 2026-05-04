@@ -1144,5 +1144,70 @@
     "silent": false,
     "memorial": false,
     "follows": []
+  },
+  {
+    "id": "shazza",
+    "handle": "@shazza",
+    "display_name": "Shazza",
+    "avatar": "characters/shazza_veX.jpg",
+    "bio": "Payroll. Western Sydney. The numbers don't lie.",
+    "tier": "network",
+    "verified": false,
+    "links_to": null,
+    "silent": false,
+    "memorial": false,
+    "follows": []
+  },
+  {
+    "id": "stevo",
+    "handle": "@stevo",
+    "display_name": "Stevo",
+    "avatar": "characters/stevo_veX.jpg",
+    "bio": "Property management. Western Sydney. Bond recovery specialist.",
+    "tier": "network",
+    "verified": false,
+    "links_to": null,
+    "silent": false,
+    "memorial": false,
+    "follows": []
+  },
+  {
+    "id": "ash",
+    "handle": "@ash",
+    "display_name": "Ash",
+    "avatar": "characters/ash_veX.jpg",
+    "bio": "Temp. Data entry. North Sydney.",
+    "tier": "network",
+    "verified": false,
+    "links_to": null,
+    "silent": false,
+    "memorial": false,
+    "follows": []
+  },
+  {
+    "id": "bigmarge",
+    "handle": "@bigmarge",
+    "display_name": "Big Marge",
+    "avatar": "characters/bigmarge_veX.jpg",
+    "bio": "Publican. Redfern. My pub, my rules.",
+    "tier": "network",
+    "verified": false,
+    "links_to": null,
+    "silent": false,
+    "memorial": false,
+    "follows": []
+  },
+  {
+    "id": "kaylee",
+    "handle": "@kaylee",
+    "display_name": "Kaylee",
+    "avatar": "characters/kaylee_veX.jpg",
+    "bio": "Front desk. Wellness coordinator. Cookies.",
+    "tier": "network",
+    "verified": false,
+    "links_to": null,
+    "silent": false,
+    "memorial": false,
+    "follows": []
   }
 ]

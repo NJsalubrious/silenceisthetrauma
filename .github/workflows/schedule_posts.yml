@@ -1,0 +1,39 @@
+name: veX Scheduled Post Injector
+
+on:
+  schedule:
+    # Run every 6 hours: midnight, 6am, noon, 6pm UTC
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  inject_posts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout silenceisthetrauma
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Inject scheduled posts
+      run: |
+        cd veX_social_network
+        python inject_scheduled_posts.py
+
+    - name: Commit and push
+      run: |
+        git config user.name "veX Scheduler [Bot]"
+        git config user.email "vex-bot@silenceisthetrauma.local"
+
+        if git diff --quiet veX_social_network/posts.json; then
+          echo "No new posts to inject."
+        else
+          git add veX_social_network/posts.json
+          git commit -m "Scheduled veX posts injected"
+          git pull --rebase origin main
+          git push
+        fi

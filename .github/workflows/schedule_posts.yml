@@ -2,8 +2,8 @@ name: veX Scheduled Post Injector
 
 on:
   schedule:
-    # Run every 6 hours: midnight, 6am, noon, 6pm UTC
-    - cron: '0 0,6,12,18 * * *'
+    # Run every 2 hours to keep the feed fresh
+    - cron: '0 */2 * * *'
   workflow_dispatch: # Allow manual triggering
 
 jobs:

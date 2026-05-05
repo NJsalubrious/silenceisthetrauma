@@ -310,9 +310,88 @@ button {
 }
 .post-action:hover { color: var(--gold); opacity: 1; }
 
-/* Reply thread */
-.post-card.is-reply { border-left: 2px solid var(--gold-dim); }
-.reply-indicator { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 6px; }
+/* ═══ TWITTER-STYLE THREAD GROUPS ═══ */
+.thread-group {
+  position: relative;
+}
+
+/* Thread connector line — runs from parent avatar down to replies */
+.thread-group.has-replies > .post-card:first-child .post-avatar {
+  position: relative;
+}
+.thread-group.has-replies > .post-card:first-child::after {
+  content: '';
+  position: absolute;
+  left: 37px; /* center of 42px parent avatar + 16px padding */
+  top: 58px;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold-dim);
+  opacity: 0.4;
+}
+
+/* Reply cards — indented, smaller */
+.post-card.is-reply {
+  margin-left: 32px;
+  padding: 10px 16px 10px 12px;
+  border-left: none;
+  border-bottom: 1px solid var(--border-dim);
+  position: relative;
+}
+
+/* Horizontal connector from thread line to reply avatar */
+.post-card.is-reply::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 26px;
+  width: 14px;
+  height: 2px;
+  background: var(--gold-dim);
+  opacity: 0.4;
+}
+
+/* Vertical continuation line for middle replies */
+.thread-group .post-card.is-reply:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold-dim);
+  opacity: 0.4;
+}
+
+/* Vertical line ending at the last reply */
+.thread-group .post-card.is-reply:last-child::after {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 0;
+  height: 28px;
+  width: 2px;
+  background: var(--gold-dim);
+  opacity: 0.4;
+}
+
+/* Smaller avatar for replies */
+.post-card.is-reply .post-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+/* Reduced text sizing for replies */
+.post-card.is-reply .post-name { font-size: 0.8rem; }
+.post-card.is-reply .post-handle { font-size: 0.72rem; }
+.post-card.is-reply .post-time { font-size: 0.68rem; }
+.post-card.is-reply .post-content { font-size: 0.82rem; line-height: 1.5; }
+.post-card.is-reply .post-image { max-height: 280px; }
+.post-card.is-reply .post-actions { display: none; }
+.post-card.is-reply .post-link { font-size: 0.72rem; }
+
+/* Reply indicator */
+.reply-indicator { font-size: 0.65rem; color: var(--text-muted); margin-bottom: 4px; letter-spacing: 0.5px; }
 .reply-indicator span { color: var(--gold); }
 
 /* Pinned post */

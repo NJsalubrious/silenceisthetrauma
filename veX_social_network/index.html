@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -313,15 +313,23 @@
       const renderedIds = new Set();
 
       parents.forEach(post => {
+        const threadReplies = replies.filter(r => r.reply_to === post.id);
+        const hasReplies = threadReplies.length > 0;
+        if (hasReplies) {
+          html += '<div class="thread-group has-replies">';
+        } else {
+          html += '<div class="thread-group">';
+        }
         html += renderPostCard(post);
         renderedIds.add(post.id);
-        replies.filter(r => r.reply_to === post.id).forEach(reply => {
+        threadReplies.forEach(reply => {
           html += renderPostCard(reply);
           renderedIds.add(reply.id);
         });
+        html += '</div>';
       });
 
-      replies.filter(r => !renderedIds.has(r.id)).forEach(r => { html += renderPostCard(r); });
+      replies.filter(r => !renderedIds.has(r.id)).forEach(r => { html += '<div class="thread-group">' + renderPostCard(r) + '</div>'; });
       container.innerHTML = html;
     }
 

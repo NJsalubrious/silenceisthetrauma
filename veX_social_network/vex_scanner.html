@@ -1508,22 +1508,28 @@
 
         // --- STARTUP ---
 
+        // Initialize visuals immediately so dots show on entry
+        resize();
+        initNodes();
+        initFocusDial();
+        draw();
+
         document.getElementById('start-overlay').addEventListener('click', () => {
             const overlay = document.getElementById('start-overlay');
-            overlay.style.opacity = 0;
-            setTimeout(() => overlay.remove(), 1000);
-
-            // Init
-            resize();
-            initNodes();
-            initFocusDial();
-            draw();
+            if (overlay) {
+                overlay.style.opacity = 0;
+                setTimeout(() => overlay.remove(), 1000);
+            }
 
             // Play a startup sound or unlock audio context
             // Just playing a silent buffer or getting context ready
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContext();
-            audioCtx.resume();
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+                audioCtx.resume();
+            } else if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
         });
 
     </script>

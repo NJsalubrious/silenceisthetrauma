@@ -639,24 +639,8 @@
 
         // Initialize dial buttons
         function initFocusDial() {
-            document.querySelectorAll('.axis-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    switchAxis(btn.dataset.axis);
-                });
-            });
-
-            // Keyboard shortcuts: 0=ALL, 1=MISREAD, 2=SIGNAL, 3=POWER, 4=RESPONSE
-            document.addEventListener('keydown', (e) => {
-                if (e.key === '0') switchAxis(AXIS.ALL);
-                if (e.key === '1') switchAxis(AXIS.MISREAD);
-                if (e.key === '2') switchAxis(AXIS.SIGNAL);
-                if (e.key === '3') switchAxis(AXIS.POWER);
-                if (e.key === '4') switchAxis(AXIS.RESPONSE);
-            });
-
-            // Start in ALL mode by default
-            switchAxis(AXIS.ALL);
+            // UI hidden per user request, force ALL mode permanently
+            activeAxis = AXIS.ALL;
         }
 
         // --- SYSTEM VARIABLES ---

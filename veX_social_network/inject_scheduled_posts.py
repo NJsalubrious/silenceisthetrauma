@@ -93,7 +93,7 @@ def inject_due_posts(posts_file, scheduled_dir):
 
         existing_posts.sort(key=sort_key, reverse=True)
         save_posts(posts_file, existing_posts)
-        print(f"\n✓ Injected {injected_count} new post(s) into {posts_file}")
+        print(f"\n[OK] Injected {injected_count} new post(s) into {posts_file}")
     else:
         print("No new posts to inject.")
 

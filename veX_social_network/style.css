@@ -8,9 +8,9 @@
   position: fixed; top: 1rem; left: 1.5rem; z-index: 9999;
 }
 .ps-brand {
-  font-family: 'Manrope', sans-serif; font-size: 0.5rem;
+  font-family: 'Manrope', sans-serif; font-size: 0.65rem; font-weight: 600;
   letter-spacing: 0.25em; text-transform: uppercase;
-  color: #3f3f46; text-decoration: none;
+  color: #888; text-decoration: none;
   transition: color 0.3s, text-shadow 0.3s;
 }
 .ps-brand:hover { color: #C5A059; text-shadow: 0 0 8px rgba(197,160,89,0.4); }
@@ -94,7 +94,7 @@ button {
 }
 
 .nav-logo { padding: 16px 0 28px; display: flex; align-items: center; gap: 12px; }
-.nav-logo img { width: 32px; height: 32px; border-radius: 2px; opacity: 0.9; }
+.nav-logo img { width: 44px; height: 44px; border-radius: 2px; opacity: 0.9; margin-left: -22px; }
 .nav-logo-text {
   font-family: var(--font-serif); font-size: 1.6rem; font-weight: 900;
   color: var(--gold); letter-spacing: 4px; text-transform: uppercase;
@@ -449,10 +449,11 @@ button {
 .mobile-header {
   display: none; position: sticky; top: 0; z-index: 60;
   background: rgba(5,5,5,0.92); backdrop-filter: blur(12px);
-  padding: 12px 16px; border-bottom: 1px solid var(--border-dim);
+  padding: 40px 16px 12px; border-bottom: 1px solid var(--border-dim);
   align-items: center; justify-content: space-between;
 }
-.mobile-header .nav-logo { padding: 0; }
+.mobile-header .nav-logo { padding: 0; flex-grow: 1; display: flex; justify-content: center; }
+.mobile-header .nav-logo img { width: 44px; height: 44px; margin-left: 0; }
 .mobile-pixelstortion {
   font-size: 0.5rem; letter-spacing: 3px; text-transform: uppercase;
   color: var(--text-muted); cursor: pointer; transition: color 0.3s;

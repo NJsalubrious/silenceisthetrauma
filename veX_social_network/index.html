@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>veX ï¿½ Social Network</title>
+  <title>veX — Social Network</title>
   <meta name="description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation.">
 
   <!-- Open Graph â€” Social Sharing -->
@@ -31,7 +31,7 @@
 
 
 
-  <!-- PIXELSTORTION BRANDING ï¿½ top left, always visible -->
+  <!-- PIXELSTORTION BRANDING — top left, always visible -->
   <div class="ps-brand-dropdown">
     <button class="ps-brand" onclick="togglePixelstortion()" id="psBtn" style="background:none; border:none; cursor:pointer; padding:0;">
       PIXELSTORTION <span class="arrow" style="font-size:0.4rem; vertical-align:middle; margin-left:4px;">?</span>
@@ -154,7 +154,7 @@
       <div class="modal-body">
         <div class="modal-name-row">
           <span id="modalName" class="modal-name"></span>
-          <span id="modalVerified" class="post-verified" style="display:none;">ï¿½</span>
+          <span id="modalVerified" class="post-verified" style="display:none;">&#10003;</span>
         </div>
         <div id="modalHandle" class="modal-handle"></div>
         <div id="modalBio" class="modal-bio"></div>
@@ -238,9 +238,9 @@
 
       html += '<div class="post-header">';
       html += '<span class="post-name">' + (post.display_name || profile.display_name || '') + '</span>';
-      if (isVerified) html += '<span class="post-verified">ï¿½</span>';
+      if (isVerified) html += '<span class="post-verified">&#10003;</span>';
       html += '<span class="post-handle" onclick="filterByHandle(\'' + post.handle + '\')">' + post.handle + '</span>';
-      html += '<span class="post-dot">ï¿½</span>';
+      html += '<span class="post-dot">·</span>';
       html += '<span class="post-time">' + relativeTime(post.timestamp) + '</span>';
       html += '</div>';
 
@@ -360,7 +360,7 @@
         html += '<img class="profile-avatar" src="' + profile.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'" onclick="openProfileModal(\'' + profile.handle + '\', event)">';
         html += '<div style="flex:1;min-width:0">';
         html += '<div class="profile-name">' + profile.display_name;
-        if (profile.verified) html += ' <span class="post-verified">ï¿½</span>';
+        if (profile.verified) html += ' <span class="post-verified">&#10003;</span>';
         html += '</div>';
         html += '<div class="profile-handle">' + profile.handle + '</div>';
         if (profile.bio) html += '<div class="profile-bio">' + escapeHtml(profile.silent ? 'Does not post.' : profile.bio) + '</div>';
@@ -383,7 +383,7 @@
         'Every post, every interaction, every profile is part of a performance art installation ' +
         'that reflects systemic realities through fictional voices. No real persons are depicted.</p>' +
         '<p style="color:var(--text-secondary); margin-bottom:24px; line-height:1.8; font-weight:200;">' +
-        'The characters are drawn from the Ryker Consensus ï¿½ a network of individuals ' +
+        'The characters are drawn from the Ryker Consensus — a network of individuals ' +
         'whose lives intersect around power, silence, and structural harm.</p>' +
         '<div style="border-top:1px solid var(--border-dim); padding-top:24px;">' +
         '<h3 style="font-family:var(--font-serif); color:var(--text-primary); font-size:0.9rem; margin-bottom:12px; letter-spacing:1px;">Related Sites</h3>' +
@@ -402,7 +402,7 @@
       featured.forEach(p => {
         html += '<div class="sidebar-profile" onclick="filterByHandle(\'' + p.handle + '\'); switchTab(\'feed\');">';
         html += '<img class="sidebar-profile-avatar" src="' + p.avatar + '" alt="" loading="lazy" onerror="this.style.background=\'var(--concrete)\'" onclick="openProfileModal(\'' + p.handle + '\', event)">';
-        html += '<div><div class="sidebar-profile-name">' + p.display_name + (p.verified ? ' <span class="post-verified">ï¿½</span>' : '') + '</div>';
+        html += '<div><div class="sidebar-profile-name">' + p.display_name + (p.verified ? ' <span class="post-verified">&#10003;</span>' : '') + '</div>';
         html += '<div class="sidebar-profile-handle">' + p.handle + '</div></div></div>';
       });
       container.innerHTML = html;

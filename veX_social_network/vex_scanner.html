@@ -243,11 +243,26 @@
         .scanlines, .crt-flicker, #scanner-reticle, .node-label, .fixed {
             display: none !important;
         }
+        
+        @keyframes blink-text {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
         #start-overlay {
             background: transparent !important;
+            color: rgba(0, 255, 65, 0.5) !important;
+            font-family: monospace;
+            font-size: 11px;
+            letter-spacing: 0.2em;
         }
         #start-overlay * {
             display: none !important;
+        }
+        #start-overlay::after {
+            content: "[ CLICK ANYWHERE TO INITIALIZE AUDIO FEED ]";
+            display: block;
+            animation: blink-text 2s infinite;
         }
     </style>
 </head>
@@ -1622,6 +1637,16 @@
             } else if (audioCtx.state === 'suspended') {
                 audioCtx.resume();
             }
+
+            // Unlock all HTML5 Audio elements on first click for strict browsers (Safari/Mobile)
+            nodes.forEach(node => {
+                if (node.audioObj && node.audioObj.paused) {
+                    node.audioObj.play().then(() => {
+                        node.audioObj.pause();
+                        node.audioObj.currentTime = 0;
+                    }).catch(e => console.log("Unlock play failed for a node, continuing..."));
+                }
+            });
         });
 
     </script>

@@ -1133,19 +1133,6 @@
     "follows": []
   },
   {
-    "id": "the_marker",
-    "handle": "@the_marker",
-    "display_name": "The Marker",
-    "avatar": "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/dominicGlobaleNetworkProfilePics/The%20Victim.%20Role%20-%20Principal.%20Location%20-%20South%20Sydney%20Focus%20-%20The%20Union%20-%20Shield.jpg",
-    "bio": "Principal. South Sydney.",
-    "tier": "network",
-    "verified": false,
-    "links_to": null,
-    "silent": false,
-    "memorial": false,
-    "follows": []
-  },
-  {
     "id": "shazza",
     "handle": "@shazza",
     "display_name": "Shazza",

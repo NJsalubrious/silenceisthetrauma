@@ -557,6 +557,13 @@ button {
     max-height: 80vh !important;
     overflow-y: auto !important;
   }
+  /* Reduce reply indent on mobile */
+  .post-card.is-reply { margin-left: 20px; padding: 8px 12px 8px 10px; }
+  .post-card.is-reply .post-avatar { width: 26px; height: 26px; }
+  .thread-group.has-replies > .post-card:first-child::after { left: 30px; }
+  .post-card.is-reply::before { left: -9px; width: 10px; top: 22px; }
+  .thread-group .post-card.is-reply:not(:last-child)::after { left: -10px; }
+  .thread-group .post-card.is-reply:last-child::after { left: -10px; height: 24px; }
 }
 @media (max-width: 480px) { html { font-size: 13px; } }
 

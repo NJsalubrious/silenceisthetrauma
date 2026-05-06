@@ -1,5 +1,15 @@
 [
   {
+    "id": "eth_c56e4d4e",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "characters/Ethel_veX.jpg",
+    "timestamp": "2026-05-06T11:37:11.792557Z",
+    "content": "They claim the trigger, but the blast radius is always your own.",
+    "inner_monologue": "Dominic attempts to re-establish control by defining the origin of action. He seeks to diminish agency by claiming cause. The true measure is impact, which he cannot control.",
+    "link": ""
+  },
+  {
     "id": "dom_e9d18bf4",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

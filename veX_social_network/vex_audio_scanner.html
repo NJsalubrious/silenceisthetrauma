@@ -843,16 +843,15 @@
                 nodes.push(consensusNode);
             });
 
-            // Pre-create audio objects to avoid lag
+            // Store audio URLs for lazy loading (mobile browsers cap concurrent Audio objects)
             nodes.forEach(node => {
                 let baseUrl;
                 if (node.isKinley) baseUrl = KINLEY_AUDIO_BASE;
                 else if (node.isConsensus) baseUrl = CONSENSUS_BASE_URL;
                 else baseUrl = AUDIO_BASE_URL;
 
-                const a = new Audio(baseUrl + node.file);
-                a.volume = 0;
-                node.audioObj = a;
+                node.audioUrl = baseUrl + node.file;
+                node.audioObj = null; // Created on demand when user gets close
             });
 
             // Story17 is NOT spawned at init - it appears silently after threshold
@@ -860,6 +859,15 @@
 
             kinleySnippetPositions = [];
             updateScore();
+        }
+
+        // Lazy audio loader - creates Audio object on first access
+        function getAudio(node) {
+            if (!node.audioObj && node.audioUrl) {
+                node.audioObj = new Audio(node.audioUrl);
+                node.audioObj.volume = 0;
+            }
+            return node.audioObj;
         }
 
         // Check if Story17 should unlock (silently, after threshold)
@@ -885,9 +893,9 @@
                     vy: 0,
                     discovered: false,
                     captureProgress: 0,
-                    audioObj: new Audio(KINLEY_AUDIO_BASE + KINLEY_STORY17.file)
+                    audioUrl: KINLEY_AUDIO_BASE + KINLEY_STORY17.file,
+                    audioObj: null
                 };
-                story17Node.audioObj.volume = 0;
                 nodes.push(story17Node);
 
                 console.log('Story17 silently armed after ' + kinleySnippetsDiscovered + ' snippets');
@@ -963,15 +971,16 @@
 
                         if (activeNodeIndex !== closestNodeIndex) {
                             if (activeNodeIndex !== -1) {
-                                fadeOut(nodes[activeNodeIndex].audioObj);
+                                fadeOut(getAudio(nodes[activeNodeIndex]));
                             }
-                            node.audioObj.currentTime = 0;
-                            node.audioObj.loop = true;
-                            node.audioObj.play().catch(e => console.log("Play error", e));
+                            const audio = getAudio(node);
+                            audio.currentTime = 0;
+                            audio.loop = true;
+                            audio.play().catch(e => console.log("Play error", e));
                             activeNodeIndex = closestNodeIndex;
                         }
 
-                        node.audioObj.volume = vol;
+                        getAudio(node).volume = vol;
 
                         if (closestDist < LOCK_DISTANCE && !node.discovered) {
                             reticle.classList.add('locked');
@@ -993,7 +1002,7 @@
                             hideSubtitle();
                         }
                         if (activeNodeIndex === closestNodeIndex) {
-                            fadeOut(nodes[activeNodeIndex].audioObj);
+                            fadeOut(getAudio(nodes[activeNodeIndex]));
                             activeNodeIndex = -1;
                         }
                         reticle.classList.remove('locked');
@@ -1002,7 +1011,7 @@
 
                 } else {
                     if (activeNodeIndex !== -1) {
-                        fadeOut(nodes[activeNodeIndex].audioObj);
+                        fadeOut(getAudio(nodes[activeNodeIndex]));
                         activeNodeIndex = -1;
                     }
                     reticle.classList.remove('locked');
@@ -1040,17 +1049,18 @@
             spawnAfterImageLine(node, node.isMotif);
 
             // Fade out previous Kinley audio if playing
-            if (activeKinleyAudio && activeKinleyAudio !== node.audioObj) {
+            const audio = getAudio(node);
+            if (activeKinleyAudio && activeKinleyAudio !== audio) {
                 fadeOut(activeKinleyAudio);
             }
 
             // One-shot play - only if not already playing
-            if (node.audioObj.paused || node.audioObj.ended) {
-                node.audioObj.loop = false;
-                node.audioObj.currentTime = 0;
-                node.audioObj.volume = 1;
-                node.audioObj.play().catch(e => console.log("Kinley play error", e));
-                activeKinleyAudio = node.audioObj; // Track as current
+            if (audio.paused || audio.ended) {
+                audio.loop = false;
+                audio.currentTime = 0;
+                audio.volume = 1;
+                audio.play().catch(e => console.log("Kinley play error", e));
+                activeKinleyAudio = audio; // Track as current
             }
 
             // Brief subtitle flash
@@ -1126,17 +1136,17 @@
             spawnAfterImageLine(node, false);
 
             // ALWAYS stop looping on capture so audio will end
-            node.audioObj.loop = false;
+            const audio = getAudio(node);
+            audio.loop = false;
 
             // Play fully clearly ONCE - only restart if not already playing
-            if (node.audioObj.paused || node.audioObj.ended) {
-                node.audioObj.currentTime = 0;
-                node.audioObj.volume = 1;
-                node.audioObj.play();
+            if (audio.paused || audio.ended) {
+                audio.currentTime = 0;
+                audio.volume = 1;
+                audio.play();
             } else {
                 // Audio is already playing - just ensure full volume
-                // (loop is already set to false above)
-                node.audioObj.volume = 1;
+                audio.volume = 1;
             }
 
             // Visual feedback
@@ -1166,16 +1176,17 @@
             cursorCoords.innerText = "RECEIVING...";
 
             // Play at full volume, no loop
-            node.audioObj.loop = false;
-            node.audioObj.currentTime = 0;
-            node.audioObj.volume = 1;
-            node.audioObj.play();
+            const audio = getAudio(node);
+            audio.loop = false;
+            audio.currentTime = 0;
+            audio.volume = 1;
+            audio.play();
 
             showSubtitle(node.text, false);
             addToLog("[KINLEY] " + node.text);
 
             // When playback ends, trigger the visual effect
-            node.audioObj.onended = () => {
+            audio.onended = () => {
                 story17Playing = false;
                 story17Complete = true;
                 updateScore();
@@ -1334,7 +1345,7 @@
         function hideSubtitle() {
             // Only hide if we aren't listening to a discovered node finish playing
             const activeNode = activeNodeIndex !== -1 ? nodes[activeNodeIndex] : null;
-            if (activeNode && activeNode.discovered && !activeNode.audioObj.paused) return;
+            if (activeNode && activeNode.discovered && activeNode.audioObj && !activeNode.audioObj.paused) return;
 
             document.getElementById('subtitle-box').classList.add('hidden');
         }
@@ -1643,15 +1654,8 @@
                 audioCtx.resume();
             }
 
-            // Unlock all HTML5 Audio elements on first click for strict browsers (Safari/Mobile)
-            nodes.forEach(node => {
-                if (node.audioObj && node.audioObj.paused) {
-                    node.audioObj.play().then(() => {
-                        node.audioObj.pause();
-                        node.audioObj.currentTime = 0;
-                    }).catch(e => console.log("Unlock play failed for a node, continuing..."));
-                }
-            });
+            // Audio objects are now lazy-loaded, no bulk unlock needed
+            console.log('Audio context initialized');
         });
 
     </script>

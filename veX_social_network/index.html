@@ -64,7 +64,7 @@
   <!-- MOBILE TOP HEADER -->
   <header class="mobile-header" id="mobileHeader">
     <div class="nav-logo">
-      <img src="logo/logo_veX.jpg" alt="veX">
+      <img src="logo/logo_veX_sm.jpg" alt="veX" class="vex-logo-img" style="cursor:pointer; transition:opacity 0.3s" onmouseenter="this.src='logo/logo_scanner_veX_sm.jpg'" onmouseleave="if(!scannerOpen)this.src='logo/logo_veX_sm.jpg'" onclick="openScanner()">
     </div>
     <span class="mobile-pixelstortion" onclick="togglePixelstortion()">=</span>
   </header>
@@ -74,7 +74,7 @@
     <!-- --- LEFT NAV --- -->
     <nav class="nav-column" id="navColumn">
       <div class="nav-logo">
-        <img src="logo/logo_veX.jpg" alt="veX">
+        <img src="logo/logo_veX_sm.jpg" alt="veX" class="vex-logo-img" style="cursor:pointer; transition:opacity 0.3s" onmouseenter="this.src='logo/logo_scanner_veX_sm.jpg'" onmouseleave="if(!scannerOpen)this.src='logo/logo_veX_sm.jpg'" onclick="openScanner()">
       </div>
 
       <ul class="nav-items">
@@ -462,6 +462,37 @@
     });
 
     init();
+  </script>
+
+  <!-- SCANNER OVERLAY -->
+  <div id="scannerOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999;">
+    <button onclick="closeScanner()" style="position:absolute; top:8px; right:12px; z-index:10000; background:rgba(0,0,0,0.6); border:1px solid #444; color:#ccc; font-size:1.4rem; cursor:pointer; font-family:'Courier Prime',monospace; width:36px; height:36px; border-radius:4px; display:flex; align-items:center; justify-content:center;">&times;</button>
+    <iframe id="scannerFrame" src="" style="position:absolute; top:0; left:0; width:100vw; height:100vh; border:none;"></iframe>
+  </div>
+
+  <script>
+    let scannerOpen = false;
+    function openScanner() {
+      const overlay = document.getElementById('scannerOverlay');
+      const frame = document.getElementById('scannerFrame');
+      frame.src = 'vex_audio_scanner.html';
+      overlay.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      scannerOpen = true;
+      document.querySelectorAll('.vex-logo-img').forEach(img => img.src = 'logo/logo_scanner_veX_sm.jpg');
+    }
+    function closeScanner() {
+      const overlay = document.getElementById('scannerOverlay');
+      const frame = document.getElementById('scannerFrame');
+      overlay.style.display = 'none';
+      frame.src = '';
+      document.body.style.overflow = '';
+      scannerOpen = false;
+      document.querySelectorAll('.vex-logo-img').forEach(img => img.src = 'logo/logo_veX_sm.jpg');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeScanner();
+    });
   </script>
 
 </body>

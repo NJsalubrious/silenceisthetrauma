@@ -1357,7 +1357,6 @@
             entry.innerText = `>> ${text.substring(0, 25)}...`;
             container.prepend(entry); // Newest top
         }
-
         function updateScore() {
             const count = nodes.filter(n => n.discovered).length;
             const el = document.getElementById('score-display');

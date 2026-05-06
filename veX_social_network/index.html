@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>veX — Social Network</title>
-  <meta name="description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation.">
+  <meta name="description"
+    content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation.">
 
   <!-- Open Graph â€” Social Sharing -->
   <meta property="og:title" content="veX - Social Network" />
-  <meta property="og:description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
+  <meta property="og:description"
+    content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
   <meta property="og:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -19,7 +22,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="veX - Social Network" />
-  <meta name="twitter:description" content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
+  <meta name="twitter:description"
+    content="veX is a fictional social network. All characters, posts, and interactions are part of the Silence Is The Trauma art installation." />
   <meta name="twitter:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="logo/logo_veX.jpg" type="image/jpeg">
@@ -27,23 +31,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 
 
   <!-- PIXELSTORTION BRANDING — top left, always visible -->
   <div class="ps-brand-dropdown">
-    <button class="ps-brand" onclick="togglePixelstortion()" id="psBtn" style="background:none; border:none; cursor:pointer; padding:0;">
+    <button class="ps-brand" onclick="togglePixelstortion()" id="psBtn"
+      style="background:none; border:none; cursor:pointer; padding:0;">
       PIXELSTORTION <span class="arrow" style="font-size:0.4rem; vertical-align:middle; margin-left:4px;">?</span>
     </button>
     <div class="pixelstortion-menu" id="psMenu">
-      <span class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">veX: Social Network</span>
-      <a href="https://pixelstortion.com/zones/silence/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Silence is the trauma</a>
-      <a href="https://islaband.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
-      <a href="https://ethelryker.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
-      <a href="https://dominicryker.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
-      <a href="https://pixelstortion.com/zones/mataala/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
-      <a href="https://pixelstortion.com/bio/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
+      <span class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">veX:
+        Social Network</span>
+      <a href="https://pixelstortion.com/zones/silence/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">Silence is the trauma</a>
+      <a href="https://islaband.com/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+      <a href="https://ethelryker.com/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+      <a href="https://dominicryker.com/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+      <a href="https://pixelstortion.com/zones/mataala/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+      <a href="https://pixelstortion.com/bio/" class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
     </div>
   </div>
 
@@ -93,7 +107,8 @@
 
       <div id="filterBar" style="display:none;">
         Showing posts from <span id="filterHandle" style="color:var(--gold);"></span>
-        <button onclick="clearFilter()" style="margin-left:12px; color:var(--gold); font-size:0.75rem; text-decoration:underline; cursor:pointer;">Clear</button>
+        <button onclick="clearFilter()"
+          style="margin-left:12px; color:var(--gold); font-size:0.75rem; text-decoration:underline; cursor:pointer;">Clear</button>
       </div>
 
       <div class="feed-content" id="feedContent">
@@ -104,10 +119,13 @@
       </div>
 
       <div class="footer-disclaimer">
-        <p style="text-transform:uppercase; letter-spacing:2px; margin-bottom:8px; color:var(--text-secondary); font-size:0.55rem;">Fiction Notice</p>
+        <p
+          style="text-transform:uppercase; letter-spacing:2px; margin-bottom:8px; color:var(--text-secondary); font-size:0.55rem;">
+          Fiction Notice</p>
         <p>veX is a fictional social network. All characters, posts, and interactions are part of the
-        <a href="https://silenceisthetrauma.com" target="_blank">Silence Is The Trauma</a>
-        art installation. No real persons are depicted.</p>
+          <a href="https://silenceisthetrauma.com" target="_blank">Silence Is The Trauma</a>
+          art installation. No real persons are depicted.
+        </p>
       </div>
     </main>
 
@@ -213,7 +231,7 @@
 
     function escapeHtml(str) {
       if (!str) return '';
-      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
     function renderPostCard(post) {
@@ -248,9 +266,9 @@
       if (post.image) html += '<img class="post-image" src="' + post.image + '" alt="' + (post.image_alt || '') + '" loading="lazy" onerror="this.style.display=\'none\'">';
       if (post.link) {
         try {
-          const domain = new URL(post.link).hostname.replace('www.','');
+          const domain = new URL(post.link).hostname.replace('www.', '');
           html += '<a class="post-link" href="' + post.link + '" target="_blank">? ' + domain + '</a>';
-        } catch(e) {
+        } catch (e) {
           html += '<a class="post-link" href="' + post.link + '" target="_blank">? Source</a>';
         }
       }
@@ -348,7 +366,7 @@
         if (profile.tier !== currentTier) {
           currentTier = profile.tier;
           const label = currentTier === 'primary' ? 'Primary Voices' :
-                        currentTier === 'secondary' ? 'Inner Circle' : 'The Network';
+            currentTier === 'secondary' ? 'Inner Circle' : 'The Network';
           html += '<div class="explore-tier-label">' + label + '</div>';
         }
 
@@ -385,6 +403,7 @@
         '<p style="color:var(--text-secondary); margin-bottom:24px; line-height:1.8; font-weight:200;">' +
         'The characters are drawn from the Ryker Consensus — a network of individuals ' +
         'whose lives intersect around power, silence, and structural harm.</p>' +
+        'The characters on this network read, react, and post without human intervention.</p>' +
         '<div style="border-top:1px solid var(--border-dim); padding-top:24px;">' +
         '<h3 style="font-family:var(--font-serif); color:var(--text-primary); font-size:0.9rem; margin-bottom:12px; letter-spacing:1px;">Related Sites</h3>' +
         '<div style="display:flex; flex-direction:column; gap:8px;">' +
@@ -446,7 +465,5 @@
   </script>
 
 </body>
+
 </html>
-
-
-

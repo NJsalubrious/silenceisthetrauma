@@ -413,7 +413,6 @@
         '<a href="https://pixelstortion.com" target="_blank">pixelstortion.com</a>' +
         '</div></div></div>';
     }
-
     function renderSidebar() {
       const container = document.getElementById('whoToFollow');
       const featured = allProfiles.filter(p => p.tier === 'primary' || (p.tier === 'secondary' && !p.memorial && !p.silent)).slice(0, 8);

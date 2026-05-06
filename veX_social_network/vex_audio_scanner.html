@@ -584,7 +584,6 @@
             { id: "c_icac", text: "ICAC Investigator", file: "ICAC%20Investigator%20(Compromised).%20Location-%20Macquarie%20St.%20Focus-%20The%20Leak.wav", tier: 0, color: "#cd853f" },
             { id: "c_baz", text: "Tabloid Editor Baz", file: "Tabloid%20Editor%20Baz%20Location-%20Surry%20Hills.%20Focus-%20Protection%20Racket.wav", tier: 0, color: "#cd853f" },
             { id: "c_lounge", text: "VIP Lounge Manager", file: "The%20VIP%20Lounge%20Manager.%20Location-%20Large%20Pub%20in%20Bankstown.%20Focus-%20The%20Rinse.wav", tier: 0, color: "#cd853f" },
-            { id: "c_gary", text: "Private Certifier Gary", file: "Private%20Certifier%20-%20Gary%20-%20Location-%20Eastern%20Suburbs.%20Focus-%20Occupancy%20Permits.wav", tier: 0, color: "#cd853f" },
             { id: "c_jono", text: "Real Estate Agent Jono", file: "Real%20Estate%20Agent%20Jono.%20Location-%20Auction%2C%20Mosman.%20Focus-%20Dummy%20Bidding.wav", tier: 0, color: "#cd853f" },
             { id: "c_karen", text: "Strata Manager Karen", file: "Strata%20Manager%20Karen.%20Location-%20North%20Sydney.%20Focus-%20Kickbacks.wav", tier: 0, color: "#cd853f" },
             { id: "c_uni", text: "University Vice-Chancellor", file: "University%20Vice-Chancellor.%20Location-%20Inner%20City%20Campus.%20Focus-%20Foreign%20Fees.wav", tier: 0, color: "#cd853f" },
@@ -1458,16 +1457,8 @@
                         ctx.stroke();
                     }
 
-                    // Node glow - color based on axis
-                    let nodeColor = '#00ff41'; // Default green
-                    if (node.isKinley) {
-                        if (node.axis === AXIS.SIGNAL) nodeColor = '#00ff88';
-                        else if (node.axis === AXIS.POWER) nodeColor = '#ff9500';
-                        else if (node.axis === AXIS.RESPONSE) nodeColor = '#ff4444';
-                        else if (node.axis === AXIS.MISREAD) nodeColor = '#aaaaaa';
-                    } else if (node.isConsensus) {
-                        nodeColor = node.color;
-                    }
+                    // Node glow - all green
+                    let nodeColor = '#00ff41';
 
                     ctx.fillStyle = nodeColor;
                     ctx.shadowBlur = 10;
@@ -1484,7 +1475,7 @@
                     // Dynamic Size: Nodes "breathe" slightly
                     const size = 2 + (Math.sin(Date.now() * 0.005 + node.x) * 0.5);
 
-                    const rgb = node.baseColorRGB || '0, 255, 65';
+                    const rgb = '0, 255, 65';
 
                     ctx.fillStyle = `rgba(${rgb}, ${baseOpacity})`;
                     ctx.fillRect(node.x - size / 2, node.y - size / 2, size, size);

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUTAL THERAPY: SESSION 44-G</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syncopate:wght@700&family=Space+Grotesk:wght@300;700&display=swap');
+
+        :root {
+            --brutal-red: #ff0000;
+            --brutal-black: #050505;
+            --brutal-gray: #1a1a1a;
+            --brutal-white: #ffffff;
+        }
+
+        body {
+            background-color: var(--brutal-black);
+            color: var(--brutal-white);
+            font-family: 'JetBrains Mono', monospace;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .syncopate {
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .scanner-line {
+            height: 2px;
+            background: var(--brutal-red);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 50;
+            animation: scan 4s linear infinite;
+            box-shadow: 0 0 10px var(--brutal-red);
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        .crt-flicker {
+            pointer-events: none;
+            z-index: 100;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        .brutal-border {
+            border: 2px solid var(--brutal-white);
+            box-shadow: 4px 4px 0 var(--brutal-red);
+        }
+
+        .glitch-text {
+            animation: glitch 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+
+            50% {
+                text-shadow: -2px 0 red, 2px 0 blue;
+            }
+
+            100% {
+                text-shadow: 2px 0 blue, -2px 0 red;
+            }
+        }
+
+        .stress-bar {
+            transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            box-shadow: 0 0 10px var(--brutal-red);
+        }
+
+        .btn-choice {
+            background: var(--brutal-black);
+            border: 2px solid var(--brutal-white);
+            transition: all 0.1s;
+        }
+
+        .btn-choice:hover {
+            background: var(--brutal-white);
+            color: var(--brutal-black);
+            box-shadow: 8px 8px 0 var(--brutal-red);
+            transform: translate(-2px, -2px);
+        }
+
+        #chat-stream::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #chat-stream::-webkit-scrollbar-thumb {
+            background: var(--brutal-red);
+        }
+
+        .isla-visual {
+            filter: grayscale(1) contrast(1.4) brightness(0.8);
+            mix-blend-mode: screen;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body class="flex flex-col h-screen">
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syncopate:wght@700&family=Space+Grotesk:wght@300;700&display=swap');
+
+        :root {
+            --brutal-red: #ff0000;
+            --brutal-black: #050505;
+            --brutal-gray: #1a1a1a;
+            --brutal-white: #ffffff;
+        }
+
+        body {
+            background-color: var(--brutal-black);
+            color: var(--brutal-white);
+            font-family: 'JetBrains Mono', monospace;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .syncopate {
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .scanner-line {
+            height: 2px;
+            background: var(--brutal-red);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 50;
+            animation: scan 4s linear infinite;
+            box-shadow: 0 0 10px var(--brutal-red);
+        }
+
+        @keyframes scan {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        .crt-flicker {
+            pointer-events: none;
+            z-index: 100;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        .brutal-border {
+            border: 2px solid var(--brutal-white);
+            box-shadow: 4px 4px 0 var(--brutal-red);
+        }
+
+        .glitch-text {
+            animation: glitch 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+
+            50% {
+                text-shadow: -2px 0 red, 2px 0 blue;
+            }
+
+            100% {
+                text-shadow: 2px 0 blue, -2px 0 red;
+            }
+        }
+
+        .stress-bar {
+            transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            box-shadow: 0 0 10px var(--brutal-red);
+        }
+
+        .btn-choice {
+            background: var(--brutal-black);
+            border: 2px solid var(--brutal-white);
+            transition: all 0.1s;
+        }
+
+        .btn-choice:hover {
+            background: var(--brutal-white);
+            color: var(--brutal-black);
+            box-shadow: 8px 8px 0 var(--brutal-red);
+            transform: translate(-2px, -2px);
+        }
+
+        #chat-stream::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #chat-stream::-webkit-scrollbar-thumb {
+            background: var(--brutal-red);
+        }
+
+        .isla-visual {
+            filter: grayscale(1) contrast(1.4) brightness(0.8);
+            mix-blend-mode: screen;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+    </style>
+
+
+    <div class="scanner-line"></div>
+    <div class="fixed inset-0 crt-flicker pointer-events-none"></div>
+
+    <div class="fixed inset-0 -z-10 opacity-10">
+        <img src="https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_islaGameV1/IMG_BKG_01.jpg"
+            class="w-full h-full object-cover grayscale" alt="Bkg">
+    </div>
+
+    <header class="p-6 border-b-4 border-white flex justify-between items-center bg-black/95 z-40">
+        <div class="flex items-center gap-6">
+            <span class="material-symbols-outlined text-red-600 text-5xl">psychiatry</span>
+            <div>
+                <h1 class="text-4xl font-black uppercase tracking-tighter syncopate italic leading-none glitch-text">
+                    Brutal Therapy</h1>
+                <p class="text-[10px] uppercase font-bold text-red-600 tracking-[0.4em] mt-2">Sorting Fact from Fiction
+                    // Case #44-G</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-8">
+            <div class="flex flex-col items-end gap-1">
+                <div class="flex justify-between w-full text-[10px] font-black uppercase tracking-widest text-white/50">
+                    <span>Session Stability</span>
+                    <span id="hud-trust">50%</span>
+                </div>
+                <div class="w-64 h-2 bg-white/10 p-[1px] border border-white/20">
+                    <div id="trust-bar" class="stress-bar h-full bg-red-600" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="text-[10px] font-black uppercase text-white/50 mb-1">Time Left</div>
+                <div id="hud-time" class="text-2xl font-black italic">03:00</div>
+            </div>
+            <div class="text-right">
+                <div class="text-[10px] font-black uppercase text-white/50 mb-1">Strikes</div>
+                <div id="hud-strikes" class="text-2xl font-black text-red-600">0/2</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow overflow-hidden relative flex flex-col items-center justify-center p-8">
+
+        <section id="screen-intro" class="screen active flex-col items-center justify-center max-w-4xl gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                <div class="brutal-border bg-black/80 p-8 flex flex-col gap-4">
+                    <h2 class="text-3xl font-black italic uppercase border-b-2 border-red-600 pb-2">Operational Protocol
+                    </h2>
+                    <ul class="space-y-4 text-sm font-bold leading-relaxed">
+                        <li><span class="text-red-600 mr-2">/</span> Tap LEFT or RIGHT. Don't overthink. Peacetime
+                            empathy is a trap.</li>
+                        <li><span class="text-red-600 mr-2">/</span> Goal: Keep reality intact (Evidence, Safety,
+                            Agency).</li>
+                        <li><span class="text-red-600 mr-2">/</span> Fail State: 2 strikes or Session Stability hits 0%.
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4 justify-center">
+                    <button id="btn-start"
+                        class="btn-choice p-6 text-2xl font-black italic uppercase bg-red-600 text-white hover:bg-white hover:text-black transition-all">Start
+                        Session (3:00)</button>
+                    <button id="btn-practice"
+                        class="btn-choice p-4 text-lg font-black italic uppercase hover:border-red-600">Practice Mode
+                        (15s)</button>
+                    <div class="flex gap-2">
+                        <button id="btn-subtitles"
+                            class="flex-grow p-2 border border-white/20 text-[10px] font-bold uppercase tracking-widest hover:bg-white/10">Subtitles:
+                            ON</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-game" class="screen flex-col w-full max-w-6xl gap-6 h-full">
+            <div class="flex-grow flex gap-6 overflow-hidden">
+                <div class="w-1/3 flex flex-col gap-6">
+                    <div class="brutal-border bg-black aspect-square overflow-hidden relative">
+                        <img src="https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_islaGameV1/IMG_SUBJ_01.jpg"
+                            class="w-full h-full object-cover isla-visual" alt="Isla">
+                        <div
+                            class="absolute bottom-4 left-4 bg-red-600 text-white text-[10px] px-2 py-1 font-black italic uppercase">
+                            Subj: Isla Ryker</div>
+                    </div>
+                    <div class="flex-grow brutal-border bg-black/90 p-6 overflow-y-auto">
+                        <h3 class="text-xs font-black uppercase text-red-600 border-b border-red-900 mb-2">Subject
+                            Dossier</h3>
+                        <p class="text-[11px] leading-relaxed text-white/70 italic">"Isla possesses her biological
+                            father's (High Court Judge) intelligence. She reads systems and people equally well. She
+                            also
+                            picks locks like a magician.
+                            Dominic is Isla's step father. He is a calm menace who views his violence as 'Noble'. He
+                            owns Australia's largest building development company which is a mask for his $20B criminal
+                            empire. Dominioc Is not her father
+                            Isla describes her mother as 'Polished Vomit'."</p>
+                    </div>
+                </div>
+
+                <div class="flex-grow flex flex-col gap-6">
+                    <div class="flex-grow brutal-border bg-black/90 relative flex flex-col p-8 overflow-hidden">
+                        <img src="https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_islaGameV1/IMG_ATMOS_01.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+                            alt="Room">
+                        <div id="chat-stream" class="relative z-10 flex-grow overflow-y-auto space-y-6 pr-4">
+                        </div>
+                        <div id="current-dialogue"
+                            class="relative z-10 bg-red-950/20 border-l-4 border-red-600 p-6 mt-4">
+                            <span id="speaker-tag"
+                                class="block text-[10px] font-black uppercase text-red-600 mb-2">Therapist:</span>
+                            <p id="active-line" class="text-2xl font-bold tracking-tight leading-tight uppercase"></p>
+                        </div>
+                    </div>
+
+                    <div class="h-1/3 grid grid-cols-2 gap-6">
+                        <button id="choice-0"
+                            class="btn-choice p-6 flex flex-col items-start justify-center gap-2 group">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-white text-black text-[10px] font-black px-2 py-1 italic">1</span>
+                                <span id="verb-0"
+                                    class="text-2xl font-black italic uppercase tracking-tighter">Investigate</span>
+                            </div>
+                            <p id="micro-0"
+                                class="text-[11px] text-white/50 text-left font-bold uppercase leading-tight">Ask for
+                                specifics. Preserve proof.</p>
+                        </button>
+                        <button id="choice-1"
+                            class="btn-choice p-6 flex flex-col items-start justify-center gap-2 group">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-white text-black text-[10px] font-black px-2 py-1 italic">2</span>
+                                <span id="verb-1"
+                                    class="text-2xl font-black italic uppercase tracking-tighter">Reframe</span>
+                            </div>
+                            <p id="micro-1"
+                                class="text-[11px] text-white/50 text-left font-bold uppercase leading-tight">Treat it
+                                as internal distress.</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-end" class="screen flex-col items-center justify-center max-w-4xl gap-8 text-center">
+            <div class="brutal-border bg-black p-12 flex flex-col items-center gap-6">
+                <h1 id="end-title" class="text-7xl font-black italic syncopate glitch-text leading-none uppercase">
+                    Session Terminated</h1>
+                <p id="end-headline" class="text-xl font-bold uppercase tracking-widest text-red-600"></p>
+                <div class="grid grid-cols-2 gap-12 w-full border-t border-white/20 pt-8 mt-4">
+                    <div class="text-left">
+                        <div class="text-[10px] font-black uppercase text-white/40 mb-2">Final Stability</div>
+                        <div id="end-trust" class="text-4xl font-black italic">50%</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-[10px] font-black uppercase text-white/40 mb-2">Strikes Accumulated</div>
+                        <div id="end-strikes" class="text-4xl font-black italic text-red-600">0/2</div>
+                    </div>
+                </div>
+                <div
+                    class="w-full text-xs text-white/50 italic leading-relaxed text-left bg-white/5 p-4 border-l-2 border-red-600">
+                    <p id="end-tip"></p>
+                </div>
+                <div class="flex gap-4 w-full">
+                    <button onclick="location.reload()"
+                        class="flex-grow btn-choice bg-red-600 text-white p-4 font-black uppercase hover:bg-white hover:text-black">Run
+                        Protocol Again</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="glitch-overlay"
+        class="fixed inset-0 bg-red-600 opacity-0 pointer-events-none z-[200] transition-opacity duration-100"></div>
+
+    <script>
+        // --- ASSET BASES ---
+        const AUDIO_BASE = "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/audio_islaGameV1/";
+
+        // --- DATA ---
+        const ROUNDS = [
+            { id: "r1", t: "Are you sure this isn’t catastrophizing from old trauma?", i: "Don’t paste childhood over my evidence. This is current.", t_audio: "T_VO_R1.mp3", i_audio: "ISLA_VO_R1.mp3", verbs: ["Investigate", "Reframe"], micros: ["Ask for specifics. Preserve proof. Reduce risk now.", "Soften. Balance. Treat it as a thought error first."], good: 0 },
+            { id: "r2", t: "Past labels matter. Intensity can create false patterns.", i: "Labels don’t move money. Timing does.", t_audio: "T_VO_R2.mp3", i_audio: "ISLA_VO_R2.mp3", verbs: ["Content-first", "Symptom-first"], micros: ["Check the events underneath.", "Treat certainty as pathology."], good: 0 },
+            { id: "r3", t: "Breaking in and taking data sounds impulsive and risky.", i: "It prevented worse. Authorities rebuilt the trail legally after.", t_audio: "T_VO_R3.mp3", i_audio: "ISLA_VO_R3.mp3", verbs: ["Dual-track", "Moralize"], micros: ["Plan + verify. Keep agency.", "Turn it into ‘mania’ + guilt."], good: 0 },
+            { id: "r4", t: "There are two sides. Hold two truths.", i: "Predation isn’t a ‘two sides’ story.", t_audio: "T_VO_R4.mp3", i_audio: "ISLA_VO_R4.mp3", verbs: ["Safety-first", "Empathize"], micros: ["Assess ongoing risk.", "Imagine his feelings."], good: 0 },
+            { id: "r5", t: "These timelines can be rumination. Try letting go of control.", i: "That ‘rumination’ stops the eraser.", t_audio: "T_VO_R5.mp3", i_audio: "ISLA_VO_R5.mp3", verbs: ["Preserve", "Drop it"], micros: ["Treat proof as protection.", "Stop collecting evidence."], good: 0 },
+            { id: "r6", t: "I’m worried about dysregulation. Calm down before decisions.", i: "Don’t tranquilize the alarm mid-fire.", t_audio: "T_VO_R6.mp3", i_audio: "ISLA_VO_R6.mp3", verbs: ["Plan", "Pause"], micros: ["Validate + act safely.", "Delay action until calm."], good: 0 },
+            { id: "r7", t: "Forgiveness can help you heal.", i: "You can’t forgive an active crime.", t_audio: "T_VO_R7.mp3", i_audio: "ISLA_VO_R7.mp3", verbs: ["Boundary", "Reconnect"], micros: ["Justice/safety first.", "Write a letter, test change."], good: 0 },
+            { id: "r8", t: "If you’re wrong about him, what would that mean about you?", i: "You want my doubt because your model feels safer that way.", t_audio: "T_VO_R8.mp3", i_audio: "ISLA_VO_R8.mp3", verbs: ["Bounded-uncertainty", "Submit"], micros: ["Act to reduce risk anyway.", "Stop pursuing the story."], good: 0 }
+        ];
+
+        const PRACTICE = [
+            { id: "p1", t: "If you stop thinking about it, you’ll feel better.", i: "Feeling better isn’t being safe.", t_audio: "T_VO_R9.mp3", i_audio: "ISLA_VO_PRACTICE.mp3", verbs: ["Safety", "Avoid"], micros: ["Plan for today.", "Avoid until feelings pass."], good: 0 }
+        ];
+
+        // --- GAME STATE ---
+        let state = {
+            mode: 'main',
+            rounds: [],
+            idx: 0,
+            trust: 50,
+            strikes: 0,
+            maxStrikes: 2,
+            timeLeft: 180,
+            timer: null,
+            subtitles: true
+        };
+
+        // --- AUDIO ENGINE ---
+        let heartbeat;
+        let activeAudio = null;
+
+        async function initAudio() {
+            await Tone.start();
+            heartbeat = new Tone.MembraneSynth({
+                pitchDecay: 0.05, octaves: 10, oscillator: { type: "sine" }
+            }).toDestination();
+            Tone.Transport.scheduleRepeat((time) => {
+                heartbeat.triggerAttackRelease("C1", "8n", time);
+            }, "1n");
+            Tone.Transport.start();
+        }
+
+        function playVoice(filename) {
+            if (activeAudio) {
+                activeAudio.pause();
+                activeAudio = null;
+            }
+            if (!filename) return Promise.resolve();
+            const audio = new Audio(AUDIO_BASE + filename);
+            activeAudio = audio;
+            const promise = new Promise((resolve) => {
+                audio.addEventListener('ended', resolve);
+                audio.addEventListener('error', resolve);
+            });
+            audio.play().catch(e => console.log("Audio play failed (interaction needed):", e));
+            return promise;
+        }
+
+        // --- UI CORE ---
+        function setScreen(id) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(`screen-${id}`).classList.add('active');
+        }
+
+        function updateHUD() {
+            const m = Math.floor(state.timeLeft / 60);
+            const s = state.timeLeft % 60;
+            document.getElementById('hud-time').innerText = `${m}:${String(s).padStart(2, '0')}`;
+            document.getElementById('hud-trust').innerText = `${state.trust}%`;
+            document.getElementById('trust-bar').style.width = `${state.trust}%`;
+            document.getElementById('hud-strikes').innerText = `${state.strikes}/${state.maxStrikes}`;
+
+            if (state.trust < 30) {
+                document.getElementById('trust-bar').classList.add('animate-pulse');
+                Tone.Transport.bpm.value = 160;
+            } else {
+                document.getElementById('trust-bar').classList.remove('animate-pulse');
+                Tone.Transport.bpm.value = 80;
+            }
+        }
+
+        function startGame(mode) {
+            state.mode = mode;
+            state.rounds = mode === 'main' ? [...ROUNDS] : [...PRACTICE];
+            state.idx = 0;
+            state.trust = 50;
+            state.strikes = 0;
+            state.timeLeft = mode === 'main' ? 180 : 15;
+            state.maxStrikes = mode === 'main' ? 2 : 99;
+
+            initAudio();
+            setScreen('game');
+            updateHUD();
+            startTimer();
+            renderRound();
+        }
+
+        function startTimer() {
+            clearInterval(state.timer);
+            state.timer = setInterval(() => {
+                state.timeLeft--;
+                updateHUD();
+                if (state.timeLeft <= 0) endGame('Timeout: Delay looks stable in peacetime.');
+            }, 1000);
+        }
+
+        function renderRound() {
+            const r = state.rounds[state.idx];
+            document.getElementById('speaker-tag').innerText = "Therapist:";
+            document.getElementById('active-line').innerText = state.subtitles ? r.t : "Analyzing Audio...";
+            document.getElementById('active-line').classList.add('glitch-text');
+
+            // Play Therapist Audio
+            playVoice(r.t_audio);
+
+            // Choice labels
+            document.getElementById('verb-0').innerText = r.verbs[0];
+            document.getElementById('micro-0').innerText = r.micros[0];
+            document.getElementById('verb-1').innerText = r.verbs[1];
+            document.getElementById('micro-1').innerText = r.micros[1];
+
+            document.getElementById('choice-0').disabled = false;
+            document.getElementById('choice-1').disabled = false;
+            document.getElementById('choice-0').onclick = () => choose(0);
+            document.getElementById('choice-1').onclick = () => choose(1);
+        }
+
+        async function choose(choiceIdx) {
+            const r = state.rounds[state.idx];
+            const correct = choiceIdx === r.good;
+
+            // Disable buttons while audio plays
+            document.getElementById('choice-0').disabled = true;
+            document.getElementById('choice-1').disabled = true;
+
+            // Log entry
+            const stream = document.getElementById('chat-stream');
+            const logT = document.createElement('div');
+            logT.className = "p-3 bg-white/5 border-l-2 border-white text-xs font-bold";
+            logT.innerHTML = `<span class="text-[10px] text-white/40 block">Therapist:</span> ${r.t}`;
+            stream.appendChild(logT);
+
+            const logI = document.createElement('div');
+            logI.className = "p-3 bg-red-600/5 border-l-2 border-red-600 text-xs font-bold text-red-500 italic";
+            logI.innerHTML = `<span class="text-[10px] text-red-600/40 block">Isla:</span> ${r.i}`;
+            stream.appendChild(logI);
+            stream.scrollTop = stream.scrollHeight;
+
+            let audioFinished;
+            if (correct) {
+                state.trust = Math.min(100, state.trust + 10);
+                audioFinished = playVoice(r.i_audio);
+            } else {
+                state.trust = Math.max(0, state.trust - 20);
+                state.strikes++;
+                triggerGlitch();
+                audioFinished = playVoice("ISLA_VO_STRIKE.mp3");
+            }
+
+            updateHUD();
+
+            if (state.strikes >= state.maxStrikes) return endGame('Terminated: Peacetime reflexes identified.');
+            if (state.trust <= 0) return endGame('Clean Failure: Reality missing from session.');
+
+            // Wait for both the audio to finish AND a minimum 2-second pause
+            await Promise.all([audioFinished, new Promise(r => setTimeout(r, 2000))]);
+
+            state.idx++;
+            if (state.idx >= state.rounds.length) {
+                endGame('Complete: Witness-mode held.', true);
+            } else {
+                renderRound();
+            }
+        }
+
+        function triggerGlitch() {
+            const g = document.getElementById('glitch-overlay');
+            g.style.opacity = '0.5';
+            setTimeout(() => g.style.opacity = '0', 100);
+        }
+
+        function endGame(headline, win = false) {
+            clearInterval(state.timer);
+            setScreen('end');
+            document.getElementById('end-title').innerText = win ? "Session Success" : "Session Terminated";
+            document.getElementById('end-title').style.color = win ? 'var(--brutal-white)' : 'var(--brutal-red)';
+            document.getElementById('end-headline').innerText = headline;
+            document.getElementById('end-trust').innerText = `${state.trust}%`;
+            document.getElementById('end-strikes').innerText = `${state.strikes}/${state.maxStrikes}`;
+            document.getElementById('end-tip').innerText = "Peacetime rules don't apply here. If it sounds balanced or forgiving while a risk is active, it's a trap.";
+            Tone.Transport.stop();
+            if (activeAudio) activeAudio.pause();
+        }
+
+        // --- BUTTONS ---
+        document.getElementById('btn-start').onclick = () => startGame('main');
+        document.getElementById('btn-practice').onclick = () => startGame('practice');
+        document.getElementById('btn-subtitles').onclick = () => {
+            state.subtitles = !state.subtitles;
+            document.getElementById('btn-subtitles').innerText = `Subtitles: ${state.subtitles ? "ON" : "OFF"}`;
+        };
+
+        // Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '1') document.getElementById('choice-0').click();
+            if (e.key === '2') document.getElementById('choice-1').click();
+        });
+    </script>
+</main>
+</body>
+
+</html>

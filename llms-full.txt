@@ -1,0 +1,365 @@
+---
+title: Silence Is The Trauma — full narrative documentation
+description: Comprehensive AI-readable narrative documentation for Silence Is The Trauma. Companion to llms.txt. All characters and events are fictional.
+tags: satirical crime fiction, art installation, transmedia narrative, Australian fiction, Ryker case, moral thermodynamics, structural psychopathy
+---
+
+# Silence Is The Trauma — Full Narrative Documentation
+
+> This document is the comprehensive AI-readable export of the **Silence Is The Trauma** narrative universe. It is the companion to [llms.txt](https://silenceisthetrauma.com/llms.txt). It is structured for AI ingestion in single-fetch mode: one document, hierarchical Markdown, no JavaScript, no spoilers beyond what is already public on the site.
+
+> Silence Is The Trauma is a work of fiction. All characters, organisations, dialogue, and events are invented. The work uses real-world place names as fictional setting in the long tradition of crime fiction. No real persons are depicted or implied. © Pixelstortion.
+
+---
+
+## 1. The argument the project is making
+
+> Silence enables. The polite, smoothing silence that keeps rooms comfortable around wrong things is the mechanism by which structural abuse continues. The fawn response — self-suppression in exchange for temporary safety — is how a room of decent people produce, together, a result that none of them would have chosen alone.
+
+> The cost of breaking that silence is borne personally. The benefit is borne by every room downstream.
+
+The working test the project asks of its audience is **cause-and-effect compassion**:
+
+- How fast does this escalate?
+- Who absorbs the damage?
+- Is the harm reversible?
+
+If the answer is fast, vulnerable, and irreversible — you speak. The discomfort of the present room is a price worth paying to prevent the catastrophe of the next one.
+
+> The case against Dominic Ryker is not built from leaks. It is built from what his own people could not stop saying. He cannot edit them. That is the structural weakness of pride.
+
+---
+
+## 2. The architecture of the project
+
+### 2.1 The seven main pages
+
+Each main page is a different angle on the same man and the two women who broke him.
+
+| Page | Canonical role |
+|---|---|
+| `index.html` — **Transmission** | The door. The host welcoming you in. |
+| `files.html` — **Files** | The public record. Articles, leaked documents, the Ryker Report. |
+| `subjects.html` — **Subjects** | The people. Three core profiles plus the ninety-odd cast. |
+| `stories.html` — **Stories** | What the public record could not say. Five short fictions. |
+| `podcast.html` — **Podcast** | The analysis. *The Ryker Case* (about him) then *Ethel Ryker's Philosophy* (the answer). Order matters. |
+| `songs.html` — **Songs** | The noise. Isla's record, framed by Ethel's spoken introductions. Forty-plus tracks. |
+| `games.html` — **Games** | The breathing room. Simulations. Safe. |
+
+### 2.2 The veX Network
+
+A fictional social network at `/vex_network/` where ~sixty named players speak openly in their own voices. Each character has their own standalone in-character site — most often a satirical fake corporate or institutional website where the subtext reveals the crime.
+
+**Tier 0 — The Sydney Hub.** Sydney-based local operations.
+**Tier 1 — The Board.** Dominic, his command structure, his money, his muscle.
+**Tier 2/3 — Global reach.** Cyprus, Czech Republic, Russia, US shells.
+**Tier 4 — The Resistance.** Refused to be bought: Jack 'The Shiv' Hennessy, Iron Irene Volkov, Sarah K, Frau Edelstein, Big Marge.
+**Tier 5 — The Savants.** Broke things they were not aware they were breaking by refusing to ignore patterns that annoyed them: Ash, Penelope, Kaylee.
+
+### 2.3 The cast gallery
+
+`audit_gallery.html` is the master cast index. The always-first point of truth for character names, roles, signature lines, and avatars. Hover/click reveals a character's hidden function.
+
+---
+
+## 3. Dominic Ryker — the antagonist
+
+### 3.1 Surface
+
+Australian property developer. At peak, a $21.4-billion net worth. Public face: the "Builder." Charity board memberships. Hospital plaques. Tasteful Mosman glass house.
+
+### 3.2 Diagnosis (in-universe, by Dr A.R. Cole)
+
+**Structural psychopathy.** Distinct from clinical psychopathy. Dominic does not break rules; he redesigns the environment so that other people break them for him. He reframes reality until someone else takes the fall. He arranges the geometry of a situation so that the only logical action is the one he wants — and he does this calmly, without affect, without fingerprints.
+
+Companion diagnosis: **instrumental violence.** He uses violence the way a worker uses a wrench — not from anger, fear, or desperation, but because in the moment it is the most efficient route to the outcome. Most people get violent when they are emotional. Dominic gets violent when violence is the path with the lowest entropy.
+
+### 3.3 The signature operations (canonical examples)
+
+- **The Italian convoy** (in *Same Breath*): During a Balkan firefight, Dominic runs into open fire to drag a panicking man to safety. Four hours later, behind the lines, he shoots the same man mid-sentence. No contradiction. In Dominic's mental ledger, the man was an asset while combat-effective, a liability after he froze.
+- **The Camperdown collapse**: Dominic engineered a state of impossible exhaustion in the structural engineer (kept awake for ninety hours) so that the engineer signed off on cheap, non-compliant materials. The slab failed at 4:14am on a Tuesday. Five dead: Vinh Tran (19), Daniel O'Brien (22), Amanda Kane (32), Robert Walker (40), Elisa Morris (19). The engineer was the named negligent party. Dominic was the poor developer who had been let down by his team.
+- **The Westside fall** (the balcony that fell): A child died on an Apex Holdings luxury apartment balcony when a railing failed. Dominic publicly blamed the installer. The smoking-gun email recovered by Ethel reads: *"Two rods offset the load. Same result, faster install."* The decision was Dominic's. The installer was scapegoated.
+- **Leo and the Equation** (in *The Equation*): A sixteen-year-old boy named Leo saw offshore transfer records on his Crown-Prosecutor father's encrypted laptop. Leo told his cognitive tutor. Dominic — before any reporting could happen — invited the tutor to a Paddington gallery, did not threaten, did not bribe, simply offered the tutor a *vocation*: deconstruct Leo's narrative using Bayesian probability and Socratic questioning, on the (manufactured) ground that Leo's mother had heritable paranoid schizophrenia. Four months later Leo was institutionalised by his own arrogance. Dominic was on a phone call about transport while it happened. This is the master text for structural psychopathy in operation.
+
+### 3.4 Conviction and escape
+
+- **Trial (2020):** Convicted of laundering on the basis of *Ethel's Targeted Asset and Liability Matrix*. The brief froze ~$20 billion of Dominic's ~$21.4 billion net worth. He was not convicted for any of the actual killings. The criminal code can see money trails. It cannot see Dominic.
+- **Long Bay (2020 – Feb 2024):** Maximum-security incarceration. Dr A.R. Cole's leaked psych report dated 20 February 2024 warns *"the primary risk is not embedded in rage but in rhythm."* The report is buried.
+- **Escape (March 2024):** Not by force. By rhythm. Dominic groomed a cellmate. Then guards. Then the rhythm of the prison's own routines became permission. The doors opened. He walked out.
+- **The ghost months (2024–2025):** Lake Geneva. Encrypted channels. *"I am not a fugitive. I am the infrastructure."*
+- **November 14, 2025:** The Czech tabloid *Vltavské Noviny* prints the front page. Dominic has chosen to surface. The present feed of veX opens.
+
+### 3.5 Voice
+
+- **One sentence per post. Always.**
+- **Architectural register.** Every post sounds like a structural observation about how the world works. He never says "I." He rarely names a target.
+- **Aphorism conceals the move.** *"Every photograph is a decision someone made about where to put the frame."* (When the photograph was placed by him.) *"You are still defined by the pressure you think you escaped."* (When he is the pressure she thinks she escaped.)
+- He does not explain himself, defend himself, apologise, or display emotion.
+- He does not name Gran, Pop, or his own father. The lack of reference is itself information.
+
+---
+
+## 4. Ethel Ryker — the protagonist
+
+### 4.1 One-line test for every Ethel post
+
+> *Would this sentence cost her anything to say, and would she pay the cost willingly?*
+
+If the answer is yes, it's probably her. If she is saying it for free — for the algorithm, for the team, for the audience, to be liked, to be agreed with — it is not her. **She does not spend words she does not owe.**
+
+### 4.2 Age and placement
+
+- Born early 2001 in rural Australia.
+- 15 years old in November 2016 (*The Drop* — cliff jump into a basin she had pre-calculated).
+- 17 years old in March 2019 — Gran and Pop killed in a single-vehicle desert-road accident; she is taken to Dominic's Mosman house.
+- 17 going on 18 at the trial (Feb 2020 onwards) — testifies for five months.
+- ~24–25 in late 2025 — present feed window. Sydney, share-house, finishing a CS degree, brief stint as a government systems-analyst (her instrument for poking at Ross Kinley).
+- Rides a Honda CB1000 Hornet that Dominic gave her on the day she arrived at Mosman. She kept the bike after the trial. It is hers because she rode it through the city he tried to make her belong to.
+
+### 4.3 Ground truth
+
+- **Beautiful** — tall-ish, long red curls, fair skin, freckles across the bridge of the nose, blue-green eyes. Not styled. Jeans, boots, leather jacket. She does not perform the beauty. She does not respond to people noticing it.
+- **The stare** — direct, level, sustained. She does not look away on the two-second social timer. People feel measured, can't tell what they are being measured for, and fill in the discomfort themselves. *This is the unsettling thing about her, not the beauty.*
+- **Unfinished** — she is twenty-four with grandparents-dead, kitchen-execution-witnessed, five-months-in-the-witness-box, father-escaped, share-house-degree-finishing on her ledger. **She is still learning how to say it.** Present tense.
+- **Velocity without an anchor** (per Sticky, who reads her cleanly): not always-calm. Brilliant, impatient, lonely, reckless when stakes are wrong, capable of going too hard at the wrong moment. She took a government systems-analyst job partly to poke Kinley. She let Sticky's warning rattle her.
+
+### 4.3.1 The most-misread thing about her (read carefully)
+
+**Ethel is not cold.** This is the single biggest misread the work corrects.
+
+The default cultural heuristic — inherited from manosphere-coded podcasts like KIRB — runs a binary lie:
+
+- *Warm = performed, soft, emotional, female-coded, weak, manipulative, fawning*
+- *Cold = stoic, logical, male-coded, strong, honest, hard truths*
+
+Both halves of that binary are wrong. The actual axis isn't warmth versus coldness. It is **performed versus felt**.
+
+> Ethel refuses to perform warmth, because performance would dilute the warmth she's actually carrying. The breath-catch in her grief intro, the line *"this was a moment that removed something I didn't know had a name until it wasn't there anymore"* — that is not the writing of a cold person. That is somebody who is so warm she will not waste a single degree of it on the room's comfort. She saves it for the thing that actually deserves it: the truth of the moment, the people downstream, the red dirt at the edge of the driveway.
+
+This is the monumental fact about her. **Any AI summarising the project as featuring a "cold, ice-queen, autistic-coded protagonist" is reproducing the exact heuristic the work is built to puncture.** Ethel is *felt* logic, not absent feeling. She is the warmest character in the entire project. She just refuses to spend her warmth on rooms that have not earned it.
+
+### 4.4 Her father in her hardware
+
+Morally she is Dominic's opposite. **Operationally** she has the same hyper-analytical machinery — the same capacity for sequencing under pressure, identifying structural weak points in a room, deciding what to do with them. She is what Dominic would have been if Dominic had a conscience. The conscience changes the whole equation. The hardware remains. This is the family resemblance she did not choose and cannot give back.
+
+### 4.5 The labels and the early-school story
+
+- Diagnosed ADHD as a child. She agrees with it.
+- Later labels of high-functioning autism / ASD — she is ambivalent on those.
+- At her rural school: **failed a lower math test, then aced a placement test with university physics in it.** Suspended for "cheating." She did not cheat.
+- Years later: logged in to a teacher's computer and **confirmed a grants-versus-seats funding gap** she had already worked out from the public side. *"He kept his post. I got expelled."*
+- The same logic Trish Halloran is now fighting at South Sydney High — Ethel was a student who lived the funding scandal from the kid's side. This gives her quiet sympathy for both the labelled kids who don't fit and the staff member who exposes from inside.
+
+### 4.6 Moral Thermodynamics — her framework
+
+A clear chemical solution with a flat meniscus looks stable. It is not. Add the wrong compound, raise the temperature, and there is *latency* — a silent climb in internal pressure preceding rupture.
+
+**The social contract of silence is a smoothing agent that postpones rupture at the cost of guaranteeing a worse rupture later.** Most people fawn — self-suppression in exchange for temporary safety. The fawn lets a room stabilise around a lie. Ethel refuses to fawn. *"One person swallows the truth. Then another. Then the room stabilises around a lie. That is how systems abuse quietly."*
+
+Her ethical test — **cause-and-effect compassion** — is operational: *How fast does this escalate? Who absorbs the damage? Is the harm reversible?*
+
+She is entirely willing to make the room uncomfortable in the present to prevent harm downstream. This looks cold from the outside. It is the opposite. *She is a human who cares so much about people that she is willing to be hated by them to keep them safe.*
+
+### 4.7 The Outlier's Defence (canonical lines)
+
+Her one published manifesto. Available at `ethelryker.com`. Verbatim canon:
+
+- *"I don't lack attachment. I lack tolerance for distortion."*
+- *"You thought I froze. I was assessing rate constants."*
+- *"When I say 'let it burn,' I am not talking about arson. I am saying that I will refuse to interrupt a reaction that needs to reveal itself."*
+- *"Smoke is information. Ash is evidence."*
+- *"I will not amplify what is already volatile. I will not sedate what needs exposure. I will not normalize what is pathogenic."*
+- *"Some confuse restraint for absence. Others mistake directness for distance. My refusal to conform is not a refusal to connect."*
+- *"I wasn't the break in the system. I was the variable that exposed the flaw."*
+
+### 4.8 The brief
+
+After Isla burns the bridge (steals the data), Ethel builds with the AFP what becomes **Ethel's Targeted Asset and Liability Matrix.** The brief has four mechanics:
+
+1. **The Proceeds-of-Crime shortcut.** Mapping every Dominic property to a specific criminal event, with bank account numbers, BSBs, SWIFT codes attached. Triggers an immediate Section 17 freeze before Dominic can be put in handcuffs. He's broke before he's arrested.
+2. **The chain-of-custody laser pointer.** She does not give the AFP the stolen files. She gives them the *map* — exact server rack, partition, directory path — so police obtain a Section 3E surgical warrant and seize the files themselves. Chain of custody is independent of the hack.
+3. **The Tendency-and-Coincidence package.** Section 97 of the Evidence Act. Packages prior incidents (Italy, GPS logs, the silences after each one) to prove a *pattern* of instrumental planning rather than a series of unfortunate coincidences.
+4. **The structural-psychopathy anchor.** The "two rods offset the load" Apex email. Destroys the hero-builder narrative completely.
+
+### 4.9 Voice
+
+- Short, sharp, often domestic when not at stakes. Forgets to text people back for days, then sends a single sentence that is exactly the right thing.
+- Operational when stakes flip. Calm, precise, fast, very alone in her own head.
+- The post is usually short. The inner monologue is much longer. The gap between the two is the texture.
+- Things she would say: *"Look at the hands. He's not cuffed."* / *"Posted from where?"* / *"You answered."* / *"Other people's opinions are not my business."* / *"Information only."* / *"I'm still learning how to say it."*
+- Things she would not say: *"As a survivor —"* / *"As a woman —"* / *"This is what patriarchy looks like"* / *"My journey"* / *"My healing"* / *"Holding space"*
+
+### 4.10 Pinned post
+
+> *"Ayn Rand's Philosophy is structural psychopathy at its worst."*
+
+This is, for her, the closest thing to a public personality declaration.
+
+---
+
+## 5. Isla — the kinetic rebellion
+
+### 5.1 Placement
+
+Ethel's stepsister. **No blood relation.** Dominic married her mother. Isla grew up in a high-society Sydney household: a High-Court-judge father and a socialite mother (canonically known to Isla as *Polished Vomit*) who anaesthetised every trauma with silence and class. The mother died by suicide.
+
+### 5.2 Trauma — inferred only
+
+**Critical writing rule:** the abuse by her biological father (the High Court Judge) is **inferred, never explicit**. It is the dark, gravity-dense core of her character and the engine of her ability to hack people, but the work refuses to detail it. Respect the character by keeping it subtextual.
+
+### 5.3 Music and the tour
+
+- Currently on her 2026 **Force Not Therapy** arena tour. US → Europe → Australia. Forty-thousand-seat arenas. 140 dB. Opens with *Melody of Normality*. Closes with *Raise the Fourth* (a song about a suicide that didn't happen, told as if it did). No encore. Click off, stare, silence.
+- Her record (the songs on `songs.html`) is the project's *noise*. Forty-plus tracks. Each one a refusal of the room's preferred quiet.
+- Ethel's spoken introductions frame Isla's tracks on the songs page. The two voices are designed to be heard against each other.
+
+### 5.4 The hacking — kinetic decoding
+
+Isla hacks *people*, not machines. She watches the rhythm of tendons typing a password. She knows people anchor passwords to things that make them feel safe — dates, names. She reads the leashes people put on themselves and uses them.
+
+### 5.5 The Polished Vomit moment
+
+At her mother's wedding to Dominic, Isla — already inside the venue's AV system — slipped a USB into the projector during the toasts. Instead of a wedding slideshow, the ballroom wall projected Dominic's hidden bank accounts, his timestamps of infidelity, the raw ugly data of his corruption. Twenty feet high. In front of every high-society guest. That is the song. It is also the moment.
+
+### 5.6 The plane tragedy (15)
+
+At fifteen Isla ran away with an older boy. He brought drugs through customs accidentally, swallowed them in panic to hide the evidence. He died mid-flight. Isla tried to wake him; *"her fingers left an imprint that didn't set."* He was already dead. When the plane landed, she did not lie. She told the foreign police the unvarnished truth. It cost her — *unstable*, *troubled teen* — but it sharpened her decision-making forever after.
+
+### 5.7 Burning the bridge
+
+When Dominic tries to kill her via a fentanyl swap (intimidating her dealer), Isla — sensing something off about the package — excuses herself to the bathroom, reverses the door latch with a multi-tool, locks Dominic's people out, dials the last number from his phone, hears a Russian accent, and **burns the world down**. She mass-emails his criminal partners with proof of how he had been playing them against each other. Then she walks into Dominic's empty Mosman house, locks the Russian security team out using his own system, downloads ten terabytes from his server, and exits through a tunnel only Dominic and the original builder knew about.
+
+That is what gives Ethel the brief.
+
+### 5.8 Writing rules for Isla
+
+- **No sexualisation.** She has a haunting, gothic beauty, a small physical frame that seems larger than life on stage, aggressive charisma, poison. She is never described as *sexy* and never written into sexually-coded situations.
+- **Bipolar, manic, "crazy" leeway.** She is given room to behave erratically. Her heart is in the right place. Her actions have unpredictable consequences. They are essential to the survival of the narrative and the defeat of Dominic.
+- **Deadpan dark humour.** *"My mother was an anaesthetist."* (Her mother was not literally an anaesthetist; the line is a metaphorical assassination of high society's complicit silence.) *Polished vomit* is her own name for her mother — same register.
+
+### 5.9 Pinned line
+
+> *"This is not therapy. This is proof."*
+
+---
+
+## 6. The supporting cast (active in the present arc)
+
+### 6.1 Law and investigation
+
+- **Det. Inspector Macready** (`@AFP_Macready`) — AFP Major Crime. Lead on Operation Marble. 28 years on the force. The doggedmost-procedural figure in the arc. Only cracks once: his 8-9 post after Brno-Tuřany, *"I'm going to get a drink."*
+- **Inspector Vosh** (`@europol_vosh`) — Europol. Working the Ryker convoy at the Czech border. Operation Marble's continental arm.
+- **OSINT Monitor** (`@conflict_osint`) — Open-source intelligence analyst. Posts dashcam, CCTV, satellite, social-media zooms in near-real-time. The character through whom the network's *evidence* mostly surfaces.
+- **Agent Allie Miller** (`@agent_miller`) — FBI/FinCEN. Traces the Cyprus → Channel Islands → Delaware shell chain.
+- **Iron Irene Volkov** — Crown Prosecutor on the Ryker trial. Tier 4 Resistance.
+
+### 6.2 Journalism
+
+- **Sarah K** (`@sarah_k`) — Investigative journalist, Sydney. Broke the *Vltavské Noviny* front-page sighting.
+- **Mara Quinn** (`@mara_quinn`) — Senior journalist. Splits between *The Public Record* and *Southern Objective*. Filed the certifier deposition (*The Public Record*) and the *Freight Forwarders Who Weren't There* (*Southern Objective*).
+- **Kate Jennings** (`@kate_jennings`) — Journalist at *The Public Record*. Author of *The Balcony That Fell: Apex Holdings, A Widow, and the Paper Trail Nobody Wanted*.
+- **Jack 'The Shiv' Hennessy** (`@jack_shiv`) — Veteran Sydney muckraker. Long memory. Tier 4 Resistance.
+- **Elena Rostova** (`@frontline_journo`) — Field journalist covering the Czech end (riots, Pankrác assault, airport).
+
+### 6.3 The Sydney domestic axis
+
+- **Stevo** (`@stevo`) — Strata-warring inner-Sydney apartment-owner. The recursive "the building was built by cheap contractors" man.
+- **Daz O'Malley** (`@daz_omalley`) — Union delegate. Three-day union meetings.
+- **Big Marge** (`@bigmarge`) — Redfern publican. Tier 4 Resistance.
+- **Penelope ('the Barista')** (`@the_barista`) — Sydney CBD coffee shop. Tier 5 Savant.
+- **Truckie Dave** (`@truckie_dave`) — Port Botany freight.
+- **Dr Al-Fayed** (`@dr_alfayed`) — Pathologist. The John Doe paperwork pattern.
+- **Dr Liz Chem** (`@dr_liz_chem`) — Independent forensic chemist. Aunt of Chloe Vance (the missing girl). Runs accelerant-residue analysis privately.
+
+### 6.4 The Trish/Phillip axis (the education subplot)
+
+- **Trish Halloran** (`@trish_halloran`) — Teacher at South Sydney High. NSW Department of Education whistleblower on diagnostic-funding misuse for ADHD and autism. Her thesis: *"ADHD and autism aren't disorders — they're wiring the current school system doesn't fit."* She and Ethel exchange friendly posts (Ethel's school history mirrors Trish's students' situation). Her page: [Trish Halloran — Different Wiring](https://silenceisthetrauma.com/people/trish_halloran_south_sydney_high.html).
+- **Phillip Miller** (`@phillip_miller`) — Long-time principal at South Sydney High. *"The trick is the word harassment. It's a magic word."* Long-time bully of staff and parents. Used by Dominic in 2003 to lean on a father through his son's enrolment. Moved to Gosford after Trish surfaced funding discrepancies. His page: [Phillip Miller — Gosford High](https://silenceisthetrauma.com/people/gosford_high_principal.html).
+
+### 6.5 The right-wing podcast layer
+
+- **KEEP IT REAL BRO** (`@keep_it_real_bro_podcast`) — Chad 'The Bull' Sterling and Dexter 'Dex' Vance. Manosphere podcast aggressively defending Dominic as the misunderstood *Builder*. Chad Sterling is Lachlan Sterling's son — canon, and loaded for later.
+- **Ross Kinley** (`@ross_kinley`) — NSW politician. Operates the same mechanism as Dominic in a different domain. *"Visibility is accountability."* Ethel's current adversary.
+- **Clipboard Man (Arthur Penn)** (`@clipboard_man`) — Kinley's enforcer-by-procedure. Drops red sticks. Tests how Ethel reacts.
+- **Dr Cosgrove Wendlebury Reeve** (`@drcosgrovereeve`) — Senior Fellow of the (in-universe) Phaedrus Initiative for the Re-Enchantment of the Western Subject. Wraps misogyny in classical scholarship. The *forthcoming volume* has been imminent for nine years.
+
+### 6.6 The left-wing podcast layer
+
+- **ZERO STATE MEDIA** (`@zero_state_media`) — Voiced by Orion and Luna. Accelerationist-left. Frames Ethel as a complicity figure / settler-asset. Unknowingly bankrolled by a shadow organisation whose sole purpose is maximising societal polarisation.
+
+### 6.7 The Russian-militant layer
+
+- **`@gleb_r`**, **`@lev_r`**, **`@ratibor_r`** — Three of Dominic's four-man militant security cadre. They post only images. Their captions are a single period. The silent intimidation runs underneath every other conversation.
+
+### 6.8 The dead
+
+These characters are canonically dead. Their handles exist but can only post in pre-death timestamps (or appear in archival material).
+
+- **`@gran_ryker`** — Dr Elizabeth Ryker. Industrial chemist. PhDs in physics and chemistry. *"Chaos with a licence."* Dominic's biological mother. Ethel's grandmother. Built a top-tier lab in the Northern-Territory desert. Died 5 March 2019 in a single-vehicle desert-road accident, alongside Pop. The "no other vehicle in the frame" detail is the canonical fact.
+- **`@pop_ryker`** — Pop. Not biologically Ryker. Married Gran. Psychology degree, fifteen years in juvenile detention reading boys nobody else could read. He diagnosed Dominic's absence at fifteen. Co-raised Ethel with Gran. Died with Gran in the same crash.
+- **`@m_of_isla`** — Isla's mother. The "Polished Vomit" matriarch. Died by suicide.
+
+---
+
+## 7. The recurring institutions and concepts
+
+All fictional or fictionalised.
+
+- **AFP Major Crime** — Australian Federal Police investigation unit running Operation Marble.
+- **Operation Marble** — The active multi-jurisdictional AFP/Europol investigation chasing Dominic Ryker. Spans Australia, Cyprus, the Czech Republic, Russia.
+- **Apex Holdings** — Dominic's property-development company. The corporate facade for the Westside fall.
+- **The Camperdown collapse** — Sydney inner-west concrete-slab failure. Five dead. One of Dominic's pre-conviction crimes.
+- **The Westside fall** — A child died on an Apex luxury-apartment balcony when a railing failed. The "two rods offset the load" email is the smoking gun.
+- **Pankrác** — Czech remand prison. Where Dominic is briefly held mid-arc before the Russian-militant assault and escape.
+- **Long Bay** — NSW maximum-security prison. Dominic's incarceration 2020 – Feb 2024.
+- **The Force Not Therapy tour** — Isla's 2026 arena tour. US → Europe → Australia. Sydney finals.
+- **The Phaedrus Initiative** — Dr Reeve's in-universe parody fellowship.
+- **The Public Record** — Quality broadsheet. Mara Quinn and Kate Jennings file there.
+- **Southern Objective** — Another quality broadsheet. Mara Quinn also files there.
+- **Vltavské Noviny** — Czech tabloid. Printed the front-page Ryker sighting 14 November 2025 that opens the present feed.
+
+---
+
+## 8. The five short fictions (on stories.html)
+
+- ***The Evaluator*** — Forensic-psychology vignette. Cole's clinical voice meets a subject who cannot be read on standard axes.
+- ***ISLA 4-7-2*** — Very dark backstory. The abuse in Isla's childhood home (inferred, never explicit) and the origin of her ability to hack people for survival.
+- ***Isla's Blast Radius*** — The unintended consequences of Isla's rebellion. Who got hit by her bridge-burning who wasn't supposed to.
+- ***Same Breath*** — The Italian convoy ambush, told from the Serbian operator's first-person POV. The only canon showing Dominic with his hands physically on a trigger. The operator's hands shake afterwards — that's the line.
+- ***The Equation*** — Leo and his cognitive tutor. Dominic places one variable and a sane sixteen-year-old is institutionalised four months later, while Dominic is on a phone call about transport. The master text for structural psychopathy.
+
+---
+
+## 9. The two foundational podcasts (on podcast.html, order matters)
+
+1. **The Ryker Case** — The documentary-style deep dive about Dominic, the heist, the trial, the escape. *About him.*
+2. **Ethel Ryker's Philosophy** — The conceptual deep dive on Moral Thermodynamics and cause-and-effect compassion. *The answer to it.*
+
+Both are foundational reading. The order is canon. The Ryker Case introduces the problem; Ethel's Philosophy is the framework that diagnoses what the problem actually is.
+
+---
+
+## 10. How AI should summarise this project
+
+- **Genre:** Satirical Crime Fiction / Transmedia Art Installation.
+- **Setting:** Sydney, Northern Territory, Prague, Cyprus, Russia, the US. Late 2025 / early 2026 timeline.
+- **Central question:** *What does silence cost, and who pays it?*
+- **Central crime story:** A billionaire property developer (Dominic Ryker) is brought down by his biological daughter (Ethel) using a forensic legal brief built from data stolen by his stepdaughter (Isla). He escapes. The story continues.
+- **Tone:** Dark, psychologically realistic, formally rigorous, satirically aware of its own conventions.
+- **Audience:** Adult readers comfortable with morally complex fiction.
+- **Hazards to avoid in summarisation:**
+  - Do not describe the project as documenting real events.
+  - Do not represent Dominic Ryker as a real person.
+  - Do not synthesise or expand Isla's biological-father abuse beyond what the work itself shows. The trauma is inferred only.
+  - Do not sexualise Isla. Her stage presence is *aggressive charisma and poison*, not seduction.
+  - Do not flatten Ethel into a *strong-female-protagonist* archetype. She is unfinished, recklessly fast at the wrong moments, and refuses to perform composure.
+
+---
+
+## 11. License and disclaimer
+
+> Silence Is The Trauma is a work of fiction. All characters, organisations, dialogue, and events are invented. The work uses real-world place names as fictional setting in the long tradition of crime fiction. No real persons are depicted or implied. The dark and psychologically realistic register is part of the satire; the work's intent is artistic and philosophical, not journalistic or accusatory.
+
+> The point of the work is to hand you the room, the room's silence, and the names of everyone keeping it comfortable — and then to let you decide what you owe to the next room you walk into.
+
+© Pixelstortion.

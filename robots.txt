@@ -1,0 +1,14 @@
+# Silence Is The Trauma — silenceisthetrauma.com
+# Crawler policy: open by default. The story should be findable.
+
+User-agent: *
+Allow: /
+
+# Internal data files have no public-facing value and shouldn't be
+# crawled. Excluding them frees crawl budget for narrative pages.
+Disallow: /dict/
+Disallow: /assets/images/characters/avatars/
+Disallow: /MISC_files/
+
+Sitemap: https://silenceisthetrauma.com/sitemap.xml
+Sitemap: https://silenceisthetrauma.com/sitemap-images.xml

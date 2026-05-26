@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://silenceisthetrauma.com/people/russian_faction_void.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="description" content=". — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta name="keywords" content="gleb, gleb r, @gleb_r, cold, blood, runs, slower, secondary character, silence is the trauma, ryker case, satirical crime fiction, art installation, pixelstortion">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="...">
+    <meta property="og:description" content=". — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/gleb_r.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="...">
+    <meta name="twitter:description" content=". — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/gleb_r.jpg">
+
+    <link rel="canonical" href="https://silenceisthetrauma.com/people/russian_faction_void.html">
+<title>...</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+
+        /* The Initial White Dot Trigger */
+        #trigger-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 100;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #trigger-dot:hover {
+            transform: translate(-50%, -50%) scale(2);
+            box-shadow: 0 0 10px #fff;
+        }
+
+        /* The Static / Glitch Overlay during audio */
+        #glitch-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.05) 2px,
+                rgba(255, 255, 255, 0.05) 4px
+            );
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* CSS Strobe Effect applied to body during audio */
+        .strobing {
+            animation: strobe 0.1s infinite;
+        }
+
+        @keyframes strobe {
+            0% { background-color: #000; }
+            50% { background-color: #111; }
+            70% { background-color: #2a0000; } /* Slight bloody red tear */
+            100% { background-color: #000; }
+        }
+
+        /* The White Flash at the end */
+        #flashbang {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 200;
+        }
+
+        /* The Final State: Butterfly GIF */
+        #final-container {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            /* Background static for final state */
+            background: #000 url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.1"/%3E%3C/svg%3E');
+        }
+
+        #butterfly {
+            max-width: 80%;
+            max-height: 80vh;
+            filter: grayscale(100%) contrast(1.5);
+            /* Optional CSS pulse/glitch on the butterfly itself could go here */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Trigger -->
+    <div id="trigger-dot"></div>
+
+    <!-- Effects -->
+    <div id="glitch-overlay"></div>
+    <div id="flashbang"></div>
+
+    <!-- Final State -->
+    <div id="final-container">
+        <img id="butterfly" src="../assets/video/butterfly_explodes.gif" alt="Fragmented Reality">
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="screams-audio" src="../assets/audio/static_screams.mp3"></audio>
+
+    <script>
+        const dot = document.getElementById('trigger-dot');
+        const audio = document.getElementById('screams-audio');
+        const glitchOverlay = document.getElementById('glitch-overlay');
+        const flashbang = document.getElementById('flashbang');
+        const finalContainer = document.getElementById('final-container');
+
+        dot.addEventListener('click', () => {
+            // 1. Hide the dot
+            dot.style.display = 'none';
+            
+            // 2. Play the terrifying audio
+            audio.volume = 1.0;
+            audio.play().catch(e => console.error("Audio play failed:", e));
+            
+            // 3. Start the CSS nightmare strobe
+            document.body.classList.add('strobing');
+            glitchOverlay.style.display = 'block';
+            
+            // 4. Randomize background image glitches via JS for extra horror
+            const glitchInterval = setInterval(() => {
+                const shiftX = Math.random() * 10 - 5;
+                const shiftY = Math.random() * 10 - 5;
+                glitchOverlay.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+            }, 50);
+
+            // 5. Listen for the audio ending
+            audio.addEventListener('ended', () => {
+                clearInterval(glitchInterval);
+                
+                // Trigger flashbang
+                document.body.classList.remove('strobing');
+                glitchOverlay.style.display = 'none';
+                flashbang.style.display = 'block';
+                
+                // Flash lasts 150ms, then fades to black static and shows the butterfly
+                setTimeout(() => {
+                    flashbang.style.transition = 'opacity 1.5s ease-out';
+                    flashbang.style.opacity = '0';
+                    
+                    finalContainer.style.display = 'flex';
+                    
+                    // Remove flashbang from DOM after fade
+                    setTimeout(() => {
+                        flashbang.style.display = 'none';
+                    }, 1500);
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

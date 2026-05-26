@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PIXELSTORTION // NARRATIVE ARCHIVE</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H8LS884F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-34H8LS884F');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --neon-green-dim: rgba(0, 255, 65, 0.2);
+            --neon-pink: #ff0055;
+            --neon-pink-dim: rgba(255, 0, 85, 0.2);
+            --bg-dark: #050505;
+            --glass: rgba(10, 10, 10, 0.95);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(0, 20, 0, 0.4), transparent 80%),
+                linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+            min-height: 100vh;
+        }
+
+        /* ====== BRAND DROPDOWN ====== */
+        .brand-dropdown-container { position: relative; min-width: 160px; }
+
+        .ps-brand {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.25rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s, text-shadow 0.2s;
+            position: relative;
+        }
+
+        .ps-brand:hover {
+            color: #00ff41;
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+        }
+
+        .ps-brand::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #00ff41;
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .ps-brand:hover::after {
+            opacity: 0.6;
+            transform: scaleX(1);
+        }
+
+        .brand-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid #333;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .menu-category-wrapper {
+            position: relative;
+        }
+
+        .menu-category {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 10px 12px;
+            border-bottom: 1px solid #222;
+            background: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .menu-category:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #bbb;
+        }
+
+        .submenu {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 2px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid #333;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-5px);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            z-index: 10001;
+            padding: 4px 0;
+        }
+
+        .menu-category-wrapper:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .brand-dropdown-item {
+            display: block;
+            padding: 8px 16px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .brand-dropdown-item:hover {
+            color: #aaa;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 2px solid #555;
+            padding-left: 20px;
+        }
+
+        /* --- FX --- */
+        .scanlines {
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0) 50%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    rgba(0, 0, 0, 0.2));
+            background-size: 100% 4px;
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .crt-flicker {
+            animation: flicker 0.15s infinite;
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 255, 65, 0.01);
+            z-index: 49;
+            opacity: 0.2;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            50% {
+                opacity: 0.12;
+            }
+
+            100% {
+                opacity: 0.1;
+            }
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .font-tech {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .glitch-text:hover {
+            animation: glitch-anim 0.3s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        /* --- CARDS --- */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .cover-card {
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            filter: grayscale(100%) brightness(0.95) contrast(1.1);
+            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, black, transparent);
+            opacity: 0.4;
+        }
+
+        .cover-card:hover {
+            filter: grayscale(0%) brightness(1.1) contrast(1);
+            transform: translateY(-5px) scale(1.02);
+            z-index: 10;
+        }
+
+        /* Ethel Style */
+        .ethel-mode .cover-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .ethel-mode .active-tab {
+            border-bottom: 2px solid var(--neon-green);
+            color: var(--neon-green);
+        }
+
+        /* Isla Style */
+        .isla-mode .cover-card:hover {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-pink-dim);
+        }
+
+        .isla-mode .active-tab {
+            border-bottom: 2px solid var(--neon-pink);
+            color: var(--neon-pink);
+        }
+
+        /* --- MODAL --- */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.3s ease-out;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #111;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* --- LYRICS DATA STREAM STYLING --- */
+        .lyrics-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        /* Technical markers */
+        .lyrics-header,
+        .lyrics-footer {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            opacity: 0.3;
+            margin-bottom: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .lyrics-footer {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        /* Strophe dividers */
+        .strophe-divider {
+            width: 5%;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+            margin: 1rem auto;
+        }
+
+        /* Individual lyric lines */
+        .lyric-line {
+            margin-bottom: 0.25rem;
+            opacity: 0.55;
+            transition: all 0.2s ease;
+            padding: 0.15rem 0;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .lyric-line:hover {
+            opacity: 1;
+        }
+
+        /* Ethel mode lyrics (mint green tint) */
+        .ethel-mode .lyric-line {
+            color: rgba(200, 255, 220, 0.7);
+        }
+
+        .ethel-mode .lyric-line:hover {
+            color: #a0ffc0;
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.4), 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        /* Isla mode lyrics (pale rose tint) */
+        .isla-mode .lyric-line {
+            color: rgba(255, 200, 220, 0.7);
+        }
+
+        .isla-mode .lyric-line:hover {
+            color: #ffc0d0;
+            text-shadow: 0 0 8px rgba(255, 0, 85, 0.4), 0 0 20px rgba(255, 0, 85, 0.2);
+        }
+
+        /* Empty lines (verse breaks) */
+        .lyric-line.empty-line {
+            height: 0.8rem;
+            opacity: 0;
+        }
+
+        /* Scanline effect for lyrics */
+        .lyrics-scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            animation: scanline-move 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline-move {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Entrance animation for lyrics */
+        .lyric-line.animate-in {
+            animation: lyric-fade-in 0.3s ease forwards;
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        @keyframes lyric-fade-in {
+            to {
+                opacity: 0.55;
+                transform: translateY(0);
+            }
+        }
+
+        /* Typewriter Cursor */
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Mobile: Hide cover art section to maximize video/lyrics space */
+        @media (max-width: 767px) {
+            #cover-art-section {
+                display: none !important;
+            }
+
+            /* Shrink left panel to just fit video */
+            .left-visual-panel {
+                height: auto !important;
+                flex-shrink: 0;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .submenu {
+                position: static !important;
+                margin-left: 0 !important;
+                transform: none !important;
+                border: none !important;
+                border-left: 2px solid #333 !important;
+                background: rgba(0,0,0,0.2) !important;
+                min-width: auto !important;
+                display: none;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding-left: 10px !important;
+            }
+            .menu-category-wrapper:hover > .submenu {
+                display: flex !important;
+                transform: none !important;
+            }
+            .brand-dropdown-menu {
+                max-height: 80vh !important;
+                overflow-y: auto !important;
+            }
+        }
+
+</style>
+</head>
+
+<body class="ethel-mode transition-colors duration-500">
+
+    <!-- FX Layers -->
+    <div class="scanlines"></div>
+    <div class="crt-flicker"></div>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-40 bg-black/90 border-b border-white/10 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div id="status-light"
+                    class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#00ff41]"></div>
+                <h1 class="text-xl md:text-2xl font-bold tracking-widest font-tech text-white flex items-center gap-2">
+                    <div class="brand-dropdown-container">
+                        <button onclick="toggleBrandMenu(event)" class="brand-trigger text-left" style="background: none; border: none; cursor: pointer; text-decoration: none; padding: 0;">
+                            <span class="ps-brand glitch-text" data-text="PIXELSTORTION" style="position:relative; top:0; left:0;">PIXELSTORTION</span>
+                        </button>
+                        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+                        <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">veX: Social Network</a>
+                        <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Silence is the trauma</a>
+                        <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+                        <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+                        <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+                        <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+                        <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
+                    </div>
+                    </div>
+                    <span class="text-[10px] opacity-50 align-top mt-1 font-sans">ARCHIVE_V.9</span>
+                </h1>
+            </div>
+
+            <!-- Filter Toggles -->
+            <div class="flex gap-2">
+                <button onclick="setMode('ethel')" id="btn-ethel"
+                    class="px-4 py-1 text-xs font-tech border border-green-500 bg-green-500/20 text-green-400 hover:bg-green-500 hover:text-black transition-all uppercase tracking-widest">
+                    Ethel's Story
+                </button>
+                <button onclick="setMode('isla')" id="btn-isla"
+                    class="px-4 py-1 text-xs font-tech border border-gray-700 text-gray-500 hover:border-pink-500 hover:text-pink-400 hover:bg-pink-500/10 transition-all uppercase tracking-widest">
+                    Isla's Hindsight
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-4 pt-24 pb-20 relative z-10 min-h-screen flex flex-col">
+
+        <!-- Intro Text -->
+        <div id="intro-text" class="mb-8 max-w-4xl mx-auto text-center transition-all duration-500">
+            <h2 class="text-4xl md:text-6xl font-bold mb-2 tracking-tighter uppercase glitch-text"
+                style="color: #00ff41;" id="mode-title">LINEAR STORY</h2>
+            <p class="text-gray-400 font-tech text-sm md:text-base max-w-2xl mx-auto" id="mode-desc">
+                Accessment. Chronological. Ethel's Story.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="gallery-grid"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 pb-20">
+            <!-- Content Injected via JS -->
+        </div>
+
+    </main>
+
+    <!-- FILE READER MODAL -->
+    <div id="reader-modal"
+        class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-0 md:p-6 overflow-hidden">
+
+        <!-- Background Blur -->
+        <div id="modal-bg-blur" class="absolute inset-0 bg-cover bg-center opacity-20 blur-xl scale-110"></div>
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+        <!-- Main Container -->
+        <div
+            class="relative w-full max-w-7xl h-full md:h-[90vh] bg-[#0a0a0a] border border-white/10 flex flex-col md:flex-row shadow-2xl overflow-hidden z-10">
+
+            <!-- Close Button -->
+            <button onclick="closeReader()"
+                class="absolute top-4 right-4 z-50 bg-black/50 hover:bg-red-500/20 border border-white/20 hover:border-red-500 text-white p-2 rounded-full transition-all group">
+                <span class="material-symbols-outlined group-hover:text-red-500">close</span>
+            </button>
+
+            <!-- LEFT: Visual & Player -->
+            <div
+                class="left-visual-panel w-full md:w-5/12 h-[40%] md:h-full flex flex-col bg-black/40 border-r border-white/10 relative">
+
+                <!-- YouTube Embed -->
+                <div class="w-full aspect-video bg-black border-b border-white/10 relative z-20 shadow-lg">
+                    <div id="video-container" class="w-full h-full"></div>
+                </div>
+
+                <!-- Cover Art & Meta (hidden on mobile) -->
+                <div id="cover-art-section" class="flex-grow relative overflow-hidden flex flex-col p-6">
+                    <div class="flex-grow flex items-center justify-center relative">
+                        <img id="modal-cover" src=""
+                            class="max-h-[200px] md:max-h-[300px] w-auto shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-white/10 z-10"
+                            alt="Cover">
+                        <!-- Decorative Lines -->
+                        <div class="absolute inset-0 border border-white/5 m-4 pointer-events-none"></div>
+                        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 m-4"></div>
+                        <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 m-4"></div>
+                    </div>
+
+                    <div class="mt-4 font-tech text-xs text-gray-400 space-y-1 z-10">
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span>FILE_ID</span>
+                            <span id="modal-id" class="text-white">000</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span>TIMESTAMP</span>
+                            <span id="modal-date" class="text-white">UNKNOWN</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>SUBJECT</span>
+                            <span id="modal-artist" class="uppercase">UNKNOWN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Text Content -->
+            <div class="w-full md:w-7/12 h-[60%] md:h-full flex flex-col bg-[#0f0f0f] relative">
+
+                <!-- Header -->
+                <div
+                    class="p-6 md:p-8 border-b border-white/10 bg-[#0f0f0f] sticky top-0 z-20 flex justify-between items-end">
+                    <div>
+                        <h2 id="modal-title"
+                            class="text-2xl md:text-4xl font-bold text-white font-tech uppercase leading-none tracking-tighter">
+                            TITLE</h2>
+                        <p id="modal-subtitle"
+                            class="text-[10px] md:text-xs text-gray-500 font-tech italic mt-1 tracking-wider opacity-70">
+                        </p>
+                    </div>
+                    <!-- Nav Buttons -->
+                    <div class="flex gap-2">
+                        <button onclick="navigate(-1)"
+                            class="p-2 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-sm">arrow_back</span>
+                        </button>
+                        <button onclick="navigate(1)"
+                            class="p-2 border border-white/10 hover:bg-white/5 text-gray-400 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div
+                    class="flex border-b border-white/10 font-tech text-xs md:text-sm uppercase tracking-widest bg-black/20">
+                    <button onclick="switchTab('story')" id="tab-story"
+                        class="flex-1 py-3 hover:bg-white/5 transition-colors active-tab">Decoded Story</button>
+                    <button onclick="switchTab('lyrics')" id="tab-lyrics"
+                        class="flex-1 py-3 hover:bg-white/5 transition-colors">Audio Transcript</button>
+                </div>
+
+                <!-- Content Area -->
+                <div class="flex-grow overflow-y-auto custom-scrollbar p-6 md:p-10 relative">
+
+                    <!-- Story View -->
+                    <div id="view-story" class="transition-opacity duration-300">
+                        <div class="text-gray-300 font-light text-sm md:text-base leading-relaxed space-y-6"
+                            id="story-content">
+                            <!-- Injected -->
+                        </div>
+                    </div>
+
+                    <!-- Lyrics View -->
+                    <div id="view-lyrics" class="hidden transition-opacity duration-300">
+                        <div class="lyrics-container">
+                            <div class="lyrics-scanline"></div>
+                            <div class="lyrics-header text-center">[START_TRANSCRIPT]</div>
+                            <div class="font-tech text-xs md:text-sm leading-loose text-center" id="lyrics-content">
+                                <!-- Injected line by line -->
+                            </div>
+                            <div class="lyrics-footer text-center">[EOF_SIGNAL_LOSS]</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- External Song Data (44 songs, main branch images) -->
+    <script src="ethel_lyrics_data.js"></script>
+
+    <script>
+        // --- CONFIGURATION ---
+        // Use external data if available, fallback to inline
+        const SONG_DATA = (typeof ARCHIVE_DATA !== 'undefined') ? ARCHIVE_DATA : [];
+        const IMAGE_BASE = (typeof IMG_BASE !== 'undefined') ? IMG_BASE : "../../library/media_covers_album/";
+
+        // Format: { id, title, artist, date, videoId, img, story, lyrics }
+        // NOTE: This is fallback data - external ethel_lyrics_data.js takes priority
+        const FALLBACK_DATA = [
+            // --- ETHEL LINEAR STORY (2 to 29 as requested) ---
+            {
+                id: 2,
+                title: "The Drop Pt. 1",
+                artist: "Ethel",
+                date: "NOV 14, 2016",
+                videoId: "zHWwhom80go",
+                img: "Album_single_ep_covers_0022_ETHEL_The_Drop_prt1.jpg",
+                story: "The world, for Ethel, was three colors. The deep blue of the sky, the impossible red of the desert and the living green of the forest. Home was the border between them all. She was interested in the 'weird pixel on satellite' that shouldn't have been there.\n\nIt wasn't a cliff, not exactly. It was a bend in the earth where the stone curves out drops twenty meters into a basin wrapped in green. The 'stock kids' wanted the moment, the film, the proof. Ethel just wanted to test their perspectives.",
+                lyrics: "Where the desert meets the forest\nRed\nBlue\nHome\n\nGran left the gate open\nShe always does\n\nI ride the fence line straight\nThey're ahead\nThree of them\nStock kids\n\nIt's not a cliff\nnot exactly\nIt's a bend in the earth\nwhere the stone curves out\ndrops twenty meters"
+            },
+            {
+                id: 3,
+                title: "The Drop Pt. 2",
+                artist: "Ethel",
+                date: "NOV 14, 2016",
+                videoId: "K0ILO8MwX4Y",
+                img: "Album_single_ep_covers_0020_ETHEL_The_Drop_Two.jpg",
+                story: "Geometry, she knew, never changes. But perspectives do. Like people with shaped lenses. And that, more than the fall itself, was what Ethel was testing.\n\nShe stood at the lip, moss soft under her toes. She wasn't guessing. Ethel was accessing the parallax, the perspective that twisted the view from below. She saw the 'direct line' they couldn't. She launched.",
+                lyrics: "Looks are deceiving\nFrom here?\nDirect line\nDeep water\nUnlikely to miss\n\nI won't\n\nFrom down there?\nParallax\nPerspective\nEdges jagged\n\nImpact\nwater wraps shut\nPressure locks the ribs"
+            },
+            {
+                id: 4,
+                title: "Structural Psychopathy",
+                artist: "Dominic",
+                date: "MAR 2019",
+                videoId: "8rvIVBLZg2o",
+                img: "Album_single_ep_covers_0003_DOMINIC_Structural_Psychopathy.jpg",
+                story: "People don't see the cause. They look at reaction. It's easier that way. Dominic knows this. He rewrites you when they can't read you. He flags your tone not the contact. He spins your story into his version. Then steps back.\n\nSomeone pushes your break line. Then acts shocked when it moves. They call you reactive. But never ask what they did before you broke surface.",
+                lyrics: "People don't see the cause\nThey look at reaction\nIt's easier that way\n\nThey track tone\nNot the trigger\nOutcome\nNot the structure underneath\n\nI'll rewrite your story when they can't read you\nI'll set your tone so they will not believe you\nI'll shape truths story into my version\nThen step back"
+            },
+            {
+                id: 6,
+                title: "Ride",
+                artist: "Ethel",
+                date: "JAN 20, 2019",
+                videoId: "0sgcZRtPO6s",
+                img: "Ethel_Ride.jpg",
+                story: "\"Ride\" was what Ethel did when she was seventeen, across red dirt on a bike built for escape. Raised by her grandparents in rural Australia, she was already learning to weigh harm and walk her own line.\n\nWhen others slipped into easy crime, she stepped back. The system called her “withdrawn,” “non-compliant.” No one saw the choice beneath it.",
+                lyrics: "Pulled the visor down on a sky like tin\nDidn't check the map\nDidn't ask the question\n\nI just see the mirror behind the stunt\nAnd who cops the hit when the fun runs blunt\n\nI watch for the part that gets left out\nThe wallet that doesn't make it home\n\nI never took the shortcut\nI just knew where the road was hiding"
+            },
+            {
+                id: 8,
+                title: "Gotta Move",
+                artist: "Ethel",
+                date: "MAR 02, 2019",
+                videoId: "06qE_-OeIT0",
+                img: "Ethel_Gotta_Move.jpg",
+                story: "'I just won’t break where others end.' Ethel sings like she already accepted the outcome. Not dramatic. Not desperate. Just on her way.\n\nShe didn’t get a real choice. Too much money in the way. Too much force wrapped around her life like it owned her. So she made one. A mental trick in essence.",
+                lyrics: "Didn't cry when they told me\nJust kicked the stand down slow\nPolice at the gate boots on gravel\nThey didn't know what I now know\n\nDon't light a candle don't play that hymn\nDon't speak in lines they wrote for them\nI know the way I know the bend\nI just won't break where others end"
+            },
+            {
+                id: 9,
+                title: "Won't Break",
+                artist: "Ethel",
+                date: "MAR 05, 2019",
+                videoId: "fJNMlT7UeW0",
+                img: "Album_single_ep_covers_0021_ETHEL_Wont_Break.jpg",
+                story: "The drive to Mosman wasn't scenic. Ethel didn't get a real choice, so she made one. A mental trick. She decided this was her own decision. No candles. No hymns. No pretty collapse.",
+                lyrics: "Red drops back Blue takes hold\nCabin hums with edges bold\nI said stop but meant I can't\nToo deep in to shift or plant\n\nDon't light a candle Don't frame my face\nDon't say I drifted out of place\nI'm not the tears they try to fake\nI'm what they build when something breaks"
+            },
+            {
+                id: 11,
+                title: "I Built A Box",
+                artist: "Ethel",
+                date: "JUN 2019",
+                videoId: "0F_prk5dGC4",
+                img: "Album_single_ep_covers_0030_ETHEL_Won_tBreak_Origin_Story_VOL1.jpg",
+                story: "\"I Built a Box\" marks a turning point in Ethel’s life. Seventeen, principled, caught between choice and coercion. Her father tells her things with just a look. The house nods in agreement.\n\nShe built the box and walked right in. Dressed it with justifications. Hung her guilt where the mirror should've been.",
+                lyrics: "He said\nJust until you're steady\nAnd it felt like sense\nBecause I wanted it to\n\nI built the box\nAnd walked right in\nDressed it with justifications\nHung my guilt\nWhere the mirror should've been\n\nIt smelled like home\nSo I let it stand"
+            },
+            {
+                id: 12,
+                title: "Same Breath",
+                artist: "Dominic",
+                date: "THE INCIDENT",
+                videoId: "6eZwBGXGSO4",
+                img: "Album_single_ep_covers_0018_Dominic_Same_Breath.jpg",
+                story: "This event shows Dominic Ryker's terrifying capacity for compartmentalization. During a convoy ambush, his men froze. Dominic ran a straight line, dragged a man out of fire, saved his life.\n\nLater, he executed the same man for freezing. Hero. Killer. Same step.",
+                lyrics: "Dominic ran.\nStraight line.\nGrabbed him by the belt.\nDragged him in.\nNo one else moved.\n\nSame breath.\nSame man.\nOne pulled back.\nOne never came.\n\nHero.\nKiller.\nSame step."
+            },
+            {
+                id: 14,
+                title: "For You",
+                artist: "Ethel",
+                date: "SEP 2019",
+                videoId: "f8o7zb3F-Xk",
+                img: "Album_single_ep_covers_0031_Ethel_For_You.jpg",
+                story: "Ethel yells the verdict: “You made a cage. FOR YOU!!!!!\". This track holds all the tension of that three year window spent in her estranged father's world. The gaslight fog. The psychological shell game. Silence isn't free and so this track is loud.",
+                lyrics: "Quiet isn't peace\nSilence isn't free\n\nThis isn't care\nThis isn't kind\nThis is a cage\nMade for my mind\n\nYou made a cage\nFor you!!\n\nI saw it\nI see it\nYou made a cage\nFor you!!"
+            },
+            {
+                id: 16,
+                title: "Hero Killer",
+                artist: "Ethel",
+                date: "TRIAL START",
+                videoId: "YkQOXPzYkkU",
+                img: "Album_single_ep_covers_0017_ETHEL_HERO_COMPLEX_COVER.jpg",
+                story: "The song sits at the start of a trial that’s been years coming. Dominic’s myth is crumbling in real time and Ethel’s not here to mourn it. Builder! Protector! Hero! Killer! Every wall he raised, someone buried under.",
+                lyrics: "They called him Builder.\nProtector.\nSaid he got things done.\n\nHero! Killer!\nEvery wall he raised,\nSomeone buried under.\n\nApplause hides the blood,\nBut the cracks keep showing."
+            },
+            {
+                id: 18,
+                title: "Nothing True",
+                artist: "Ethel",
+                date: "APR 2020",
+                videoId: "Ghg7pC3ms3I",
+                img: "Album_single_ep_covers_0010_ETHEL_The_Whole_Story.jpg",
+                story: "Ethel takes the stand knowing the court wants clarity. A yes or a no. But she knows her father’s methods, how stories get reshaped. She answers carefully. Leaves nothing that can be twisted later. It looks cautious, even rigid, but it isn’t.",
+                lyrics: "They asked the questions\nlike answers were furniture\n\nI didn’t sit.\nThey wanted yes.\nThey wanted no.\n\nNothing true. Nothing!\nNothing refuted. Refuted!\nEvery word a hinge,\nevery silence disputed."
+            },
+            {
+                id: 20,
+                title: "Harm's Ghost",
+                artist: "Ethel",
+                date: "POST-TRIAL",
+                videoId: "WZ3P96AJfEc",
+                img: "Album_single_ep_covers_0031_Ethel_For_You.jpg",
+                story: "Harm’s Ghost pulls you inside Ethel’s head, into the space between instinct and restraint. She sees what others either miss or refuse to confront out of fear or uncertainty. It isn’t about fear or control. It’s about the moment people see harm coming.",
+                lyrics: "It's not belief, it's balance\nIt's not doubt, it's damage\nIt's not panic, it's pattern\nI move with consequence managed\n\nMe? I move\nWhen the damage is nil\nIf I get it wrong\nI pay that bill"
+            },
+            {
+                id: 25,
+                title: "Ants On The Vine",
+                artist: "Ethel",
+                date: "2024",
+                videoId: "CaBcQ2aSjog",
+                img: "Album_single_ep_covers_0002_ETHEL_Platform_Eighteen.jpg",
+                story: "Ethel had been waiting on a Sydney train platform when a woman nearby reacted to something she saw on a digital billboard. Ethel looked closer. A timestamp in the corner did not belong. She follows what others overlook. Quiet irregularities. Kinley.",
+                lyrics: "People write lines\nAnts on the vine\n\nSelf-serve the lie I'll stitch the cost\nFake the fight I'll rig the loss\n\nBlog was old\nJust plain black\nHTML\nNo SEO\nand one mid-line:\nKinley said he'd help"
+            },
+            {
+                id: 26,
+                title: "Clipboard Man",
+                artist: "Ethel",
+                date: "2024",
+                videoId: "ZAhqNWTHTGU",
+                img: "Album_single_ep_covers_0002_ETHEL_Platform_Eighteen.jpg",
+                story: "\"Clipboard Man\" unfolds like a quiet chase told in reverse. Ethel knows clipboard man isn’t her threat. He’s a signal. A reflection. He's part of a larger thing that needs eyes and ears for its own protection. She sets her own decoy in motion.",
+                lyrics: "He's not my threat\nHe's my reflection\nIf they're watching him\nthey're reading my direction\n\nHe's not their man\nHe's in my plan\nAnd that's why\nI named him:\nClipboard Man"
+            },
+            {
+                id: 28,
+                title: "Red Stick",
+                artist: "Ethel",
+                date: "2024",
+                videoId: "iTOKsLS3jhM",
+                img: "Album_single_ep_covers_0014_ETHEL_Red_Stick.jpg",
+                story: "It began with a test. Subtle. Deliberate. A red stick wedged in the front wheel of her bike. Nothing dramatic, nothing random. A message to measure reaction. Ethel reads it the way others read handwriting. She notes the placement, the intent.",
+                lyrics: "I scanned.\nBehind me, shops.\nTo the right, a pub,\nBreakfast menu chalked up out front.\nSecond floor balcony.\n\nThen I see him.\nBlue sweater.\nJeans.\n\nI picked it up,\nPut it in my pack,\nAnd left the bike where it was."
+            },
+            {
+                id: 29,
+                title: "Make A Mistake On Purpose",
+                artist: "Ethel",
+                date: "2024",
+                videoId: "s9Z8dgRk-Q8",
+                img: "Album_single_ep_covers_0013_ETHEL_Make_A_Mistake_On_Purpose.jpg",
+                story: "Three years with her father after the crash taught her where pressure hides. Now she's asking the question: Can you make a mistake on purpose? Can you slip something into the feed and call it a misfire? Human error, the most believable lie we ever invented.",
+                lyrics: "I'm a little obsessive\nA little intense\nBut only when pointed\nOnly when it matters\n\nBut then I had a question\nCan you make a mistake\nOn purpose?\n\nJust a little one\nCan you slip something\nInto the feed\nAnd call it\nA misfire?"
+            },
+
+            // --- ISLA HINDSIGHT (The Twist) ---
+            {
+                id: 5,
+                title: "Polished Vomit",
+                artist: "Isla",
+                date: "FEB 14, 2019",
+                videoId: "MhEeDcdscrs",
+                img: "Album_single_ep_covers__Album_single_ep_covers_ISLA_Polished_Vomit.jpg",
+                story: "“Polished Vomit” is Isla at a wedding she shouldn’t have attended. It's the wedding of Isla's mother and Dominic. Why is it called 'Polished Vomit'? Because that is what she calls her mother. Beautiful on the outside, but inside her mother is a mess dressed up to look like cultured stability.",
+                lyrics: "Dominic reads his kind.\nNot me.\nMum’s his mirror.\nNapkin smile.\nPolished vomit.\n\nWedding cake wheeled out.\nUSB slipped in his shoe.\nOne guard blinked,\nEnough."
+            },
+            {
+                id: 10,
+                title: "Peek-A-Boo",
+                artist: "Isla",
+                date: "MAR 10, 2019",
+                videoId: "qbFxG7sK0pE",
+                img: "Album_single_ep_covers_0012vb_ISLA_BrokenEdge_01.jpg",
+                story: "Ethel and Isla. Not sisters in blood but in arms. They met in what Isla calls \"the crazy house\". Isla at her most manic and volatile. Peek-A-Boo catches that first spark between them. Rivalry, recognition, and a charge that would shadow them both.",
+                lyrics: "Peek-a-boo, inbox crack.\nSocials open, almost mine.\nBut she notes me fast.\nMirror trace.\nDoor knock.\n\nShe’s my sister.\nShe calls me crazy.\nI look it.\n\nShe’s kinda cool.\nFuck her."
+            },
+            {
+                id: 13,
+                title: "Burning Dominic's Bridge",
+                artist: "Isla",
+                date: "AUG 2019",
+                videoId: "nVKkwb4EnRc",
+                img: "Album_single_ep_covers_ISLA_Bridge_Burned.jpg",
+                story: "This song marks the night Isla burned Dominic's bridge to freedom. The song is part revenge, part release. She surfaced material that pointed to long running patterns. None of that becomes evidence until law enforcement recreates the trail.",
+                lyrics: "He bought me out in needles.\nFound my dealer, stacked it high.\nLike it made him noble.\n\nInside, my hands ran the system.\nEvery click mine.\nEvery lock theirs.\nNice to meet you.\nNow die in the cold.\n\nBridge burned!"
+            },
+            {
+                id: 15,
+                title: "Broken Edge",
+                artist: "Isla",
+                date: "OCT 2019",
+                videoId: "_gvv_W5_x10",
+                img: "Isla_BROKEN_EDGE.jpg",
+                story: "When Ethel met Isla, she met a mind that runs on both chaos and intellect. Dominic misread her. People don’t usually burn the bridge they’re standing on. Bet she won’t? You lose.",
+                lyrics: "Numbers whispered, walls so thin\nKeys inside the lines\nLet chaos win\n\nDominic's mistake, saw simple vice\nBut twisted edges aren't so nice\nI'll burn us both, no price too steep\nClarity lives where madness sleeps"
+            },
+            {
+                id: 35,
+                title: "Raise The Fourth",
+                artist: "Isla",
+                date: "HINDSIGHT",
+                videoId: "ey20cJsY82M",
+                img: "Album_single_ep_covers_0007_ISLA_Raise_the_Fourth.jpg",
+                story: "Isla isn’t hiding behind metaphor. She’s tracing a moment she once imagined might end her and singing about it as if it already has. In another version, the ending floods. Here, it freezes. A still surface. Porcelain.",
+                lyrics: "Milk glass light, chipped rim, tilt the cup, don’t drink\nCount tiles in threes, three three, then I forget\n\nRaise the fourth, cut the room, leave the hinge singing\nRaise the fourth, cut the room, leave the hinge singing\n\nI’m fine, I’m fine, hear the porcelain lie"
+            },
+            {
+                id: 41,
+                title: "What You Don't See",
+                artist: "Isla",
+                date: "HINDSIGHT",
+                videoId: "Y4VC6mh37NI",
+                img: "Album_single_ep_covers_0024_ISLA_What_You_Dont_See.jpg",
+                story: "Isla sings about growing up inside control, where love and fear spoke in the same voice, and about finding a way to step beyond it without disappearing. The song carries the pain of what was done to her, yet it isn’t about despair. It’s about repair.",
+                lyrics: "I used to count the cracks\nMy mind painted from above\nThoughts branched like rivers,\nNone of them led out\n\nIt said the world was run by those who know the rules\nAnd me, I learnt not to cry\n\nI’ll split the fracture\nTear the frame\nKeep the fire,\nBut forget the name"
+            },
+            {
+                id: 44,
+                title: "Give It Back",
+                artist: "Isla",
+                date: "HINDSIGHT",
+                videoId: "Aw2ZAkxp6b0",
+                img: "Album_single_ep_covers_0016_ISLA_Give_It_Back.jpg",
+                story: "Isla is reaching toward the years that were never really hers. Towards the innocent kind you’re meant to have. What she's really doing is promising to return everything taken from her, only louder. The stage becomes her witness box.",
+                lyrics: "Give it back, the year you pressed flat, give it back\nI sing the cut, I feed it air, give it back\nSalt in the mouth, iron and grit, no gloss, no patch, give it back\n\nIf it splits, leave it split\nIf it floods, let it hit"
+            },
+            {
+                id: 46,
+                title: "What This Was Always For",
+                artist: "Isla",
+                date: "HINDSIGHT",
+                videoId: "X9EUb1_QC9c",
+                img: "Album_single_ep_covers_0008_ISLA_What_This_Was_Always_For.jpg",
+                story: "The lyrics reclaim what was taken from her. Strength twisted into pain. Silence mistaken for control. She turns both back on themselves. The wall becomes noise. The damage becomes feedback. It’s not just heavy, it’s confrontation made musical. A statement.",
+                lyrics: "You built this for fists\nFor split lips\nFor broken things that don’t scream right\n\nI know what this was always for"
+            }
+        ];
+
+        // --- STATE & APP LOGIC ---
+        let currentMode = 'ethel';
+        let currentIndex = -1;
+        let filteredData = [];
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.body.className = `${mode}-mode transition-colors duration-500`;
+
+            // UI Colors
+            const btnEthel = document.getElementById('btn-ethel');
+            const btnIsla = document.getElementById('btn-isla');
+            const light = document.getElementById('status-light');
+            const title = document.getElementById('mode-title');
+            const desc = document.getElementById('mode-desc');
+
+            if (mode === 'ethel') {
+                btnEthel.className = "px-4 py-1 text-xs font-tech border border-green-500 bg-green-500/20 text-green-400 hover:bg-green-500 hover:text-black transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(0,255,65,0.3)]";
+                btnIsla.className = "px-4 py-1 text-xs font-tech border border-gray-700 text-gray-500 hover:border-pink-500 hover:text-pink-400 hover:bg-pink-500/10 transition-all uppercase tracking-widest";
+
+                light.className = "w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#00ff41]";
+                title.innerHTML = 'A FICTIONAL STORY <span style="color: rgba(255,255,255,0.25); font-size: 0.6em; letter-spacing: 0.05em;">...mostly</span>';
+                title.className = "text-1xl md:text-3xl font-bold mb-2 tracking-tighter uppercase glitch-text";
+                title.style.color = '#00ff41';
+                desc.innerText = "Accessing chronological story";
+            } else {
+                btnEthel.className = "px-4 py-1 text-xs font-tech border border-gray-700 text-gray-500 hover:border-green-500 hover:text-green-400 hover:bg-green-500/10 transition-all uppercase tracking-widest";
+                btnIsla.className = "px-4 py-1 text-xs font-tech border border-pink-500 bg-pink-500/20 text-pink-400 hover:bg-pink-500 hover:text-black transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(255,0,85,0.3)]";
+
+                light.className = "w-2 h-2 bg-pink-500 rounded-full animate-pulse shadow-[0_0_10px_#ff0055]";
+                title.innerText = "HINDSIGHT GRID";
+                title.className = "text-4xl md:text-6xl font-bold mb-2 tracking-tighter uppercase glitch-text";
+                title.style.color = '#ff0055';
+                desc.innerText = "Loud reflections on a past shaped by silence";
+            }
+
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+
+            // Filter data based on mode
+            // Ethel mode = main timeline (no RETROSPECT), Isla mode = hindsight (RETROSPECT only)
+            if (currentMode === 'ethel') {
+                filteredData = SONG_DATA.filter(item => !item.date.includes('RETROSPECT'));
+            } else {
+                filteredData = SONG_DATA.filter(item => item.date.includes('RETROSPECT'));
+            }
+
+            filteredData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "cover-card aspect-square bg-gray-900 cursor-pointer group";
+                card.onclick = () => openReader(index);
+
+                // Image
+                const img = document.createElement('img');
+                img.src = IMAGE_BASE + item.img;
+                img.alt = item.title;
+                img.className = "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110";
+
+                // Fallback for broken images
+                img.onerror = () => { img.src = "https://via.placeholder.com/400x400/111/333?text=NO_SIGNAL"; };
+
+                // Overlay Info
+                const overlay = document.createElement('div');
+                overlay.className = "absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300";
+                overlay.style.background = currentMode === 'ethel'
+                    ? "linear-gradient(to top, rgba(0,20,0,0.9), transparent)"
+                    : "linear-gradient(to top, rgba(20,0,10,0.9), transparent)";
+
+                const dateColor = currentMode === 'ethel' ? 'text-green-500' : 'text-pink-500';
+
+                overlay.innerHTML = `
+                    <div class="text-[10px] font-tech ${dateColor} mb-1 tracking-widest border-l-2 border-current pl-2">
+                        ${item.date}
+                    </div>
+                    <h3 class="text-white font-bold text-lg leading-tight uppercase font-tech drop-shadow-md">${item.title}</h3>
+                    ${item.subtitle ? `<div class="text-[9px] font-tech text-gray-400 mt-1 italic">${item.subtitle}</div>` : ''}
+                `;
+
+                card.appendChild(img);
+                card.appendChild(overlay);
+                grid.appendChild(card);
+            });
+        }
+
+        // --- MODAL LOGIC ---
+        const modal = document.getElementById('reader-modal');
+        const videoContainer = document.getElementById('video-container');
+
+        function openReader(index) {
+            if (!filteredData[index]) return;
+            currentIndex = index;
+            const item = filteredData[index];
+
+            // Update UI
+            document.getElementById('modal-cover').src = IMAGE_BASE + item.img;
+            document.getElementById('modal-bg-blur').style.backgroundImage = `url('${IMAGE_BASE + item.img}')`;
+
+            document.getElementById('modal-id').innerText = String(item.id).padStart(3, '0');
+            document.getElementById('modal-date').innerText = item.date;
+            document.getElementById('modal-artist').innerText = item.artist;
+            document.getElementById('modal-title').innerText = item.title;
+
+            // Set subtitle (the log line description)
+            const subtitleEl = document.getElementById('modal-subtitle');
+            if (subtitleEl && item.subtitle) {
+                subtitleEl.innerText = item.subtitle;
+            } else if (subtitleEl) {
+                subtitleEl.innerText = '';
+            }
+
+            // Update Colors based on Artist
+            const titleEl = document.getElementById('modal-title');
+            if (item.artist === 'Isla') {
+                titleEl.className = "text-2xl md:text-4xl font-bold text-pink-500 font-tech uppercase leading-none tracking-tighter";
+            } else if (item.artist === 'Dominic') {
+                titleEl.className = "text-2xl md:text-4xl font-bold text-blue-500 font-tech uppercase leading-none tracking-tighter";
+            } else {
+                titleEl.className = "text-2xl md:text-4xl font-bold text-white font-tech uppercase leading-none tracking-tighter";
+            }
+
+            // Format Content
+            document.getElementById('story-content').innerHTML = item.story.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('');
+
+            // Format Lyrics as individual hoverable lines with staggered animation
+            const lyricsContainer = document.getElementById('lyrics-content');
+            if (item.lyrics && item.lyrics.trim()) {
+                const lines = item.lyrics.split('\n');
+                lyricsContainer.innerHTML = lines.map((line, index) => {
+                    if (!line.trim()) {
+                        // Empty line = verse break
+                        return `<div class="lyric-line empty-line"></div>`;
+                    }
+                    return `<div class="lyric-line animate-in" style="animation-delay: ${index * 30}ms">${line}</div>`;
+                }).join('');
+            } else {
+                lyricsContainer.innerHTML = '<div class="lyric-line opacity-30">[NO AUDIO TRANSCRIPT AVAILABLE]</div>';
+            }
+
+            // Reset Tabs - Default to Lyrics
+            switchTab('lyrics');
+
+            // Remove any previous error overlays before loading new track
+            const existingError = document.getElementById('uplink-error-overlay');
+            if (existingError) existingError.remove();
+
+            // Embed YouTube using persistent IFrame API
+            if (item.videoId) {
+                if (!window.ytPlayer) {
+                    // First time initialization
+                    videoContainer.innerHTML = '<div id="yt-player-frame"></div>';
+                    window.ytPlayer = new YT.Player('yt-player-frame', {
+                        host: 'https://www.youtube.com', // RESTORED ALGORITHMIC TRUST
+                        width: '100%',
+                        height: '100%',
+                        videoId: item.videoId,
+                        playerVars: {
+                            autoplay: 0,
+                            modestbranding: 1,
+                            rel: 0,
+                            origin: window.location.origin,
+                            iv_load_policy: 3,
+                            playsinline: 1
+                        },
+                        events: {
+                            'onReady': function (event) {
+                                const iframe = event.target.getIframe();
+                                if (iframe) {
+                                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                                    iframe.setAttribute('referrerpolicy', 'origin');
+                                }
+                                event.target.playVideo(); // Play on user click
+                                startUplinkMonitor();     // Start the VPN timeout detector
+                            },
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                } else {
+                    // Player already exists, just load new video and play
+                    window.ytPlayer.loadVideoById({
+                        videoId: item.videoId,
+                        suggestedQuality: 'hd720'
+                    });
+                    startUplinkMonitor(); // Start detector for new track
+                }
+            } else {
+                if (window.ytPlayer && typeof window.ytPlayer.pauseVideo === 'function') {
+                    window.ytPlayer.pauseVideo();
+                }
+                videoContainer.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-500 font-tech">NO AUDIO SOURCE</div>';
+                window.ytPlayer = null; // Reset if they hit a track with no video
+                if (uplinkTimeout) clearTimeout(uplinkTimeout);
+            }
+
+            // Show
+            modal.classList.remove('hidden');
+        }
+
+        function closeReader() {
+            modal.classList.add('hidden');
+            if (window.ytPlayer && typeof window.ytPlayer.pauseVideo === 'function') {
+                window.ytPlayer.pauseVideo();
+            }
+            if (uplinkTimeout) clearTimeout(uplinkTimeout); // Clear timer if they close early
+        }
+
+        function navigate(dir) {
+            let nextIndex = currentIndex + dir;
+            if (nextIndex < 0) nextIndex = filteredData.length - 1;
+            if (nextIndex >= filteredData.length) nextIndex = 0;
+            openReader(nextIndex);
+        }
+
+        // Global timeout variable for the detector
+        let uplinkTimeout = null;
+
+        // YouTube player state change handler
+        function onPlayerStateChange(event) {
+            // YT.PlayerState.PLAYING === 1
+            if (event.data === 1) {
+                if (uplinkTimeout) clearTimeout(uplinkTimeout); // Success! Clear the error timer
+            }
+            // YT.PlayerState.ENDED === 0
+            if (event.data === 0) {
+                // Song finished, advance to next track
+                navigate(1);
+            }
+        }
+
+        // --- VPN / BOT-WALL DETECTOR ---
+        function startUplinkMonitor() {
+            if (uplinkTimeout) clearTimeout(uplinkTimeout);
+
+            uplinkTimeout = setTimeout(() => {
+                if (window.ytPlayer && typeof window.ytPlayer.getPlayerState === 'function') {
+                    const state = window.ytPlayer.getPlayerState();
+                    // -1 is unstarted, 3 is buffering. If it's stuck here, it's likely blocked.
+                    if (state === -1 || state === 3) {
+                        showUplinkError();
+                    }
+                }
+            }, 3000);
+        }
+
+        function showUplinkError() {
+            const container = document.getElementById('video-container');
+            if (document.getElementById('uplink-error-overlay')) return;
+
+            // Get current video ID for the YouTube link
+            const currentVideoId = filteredData[currentIndex]?.videoId || '';
+            const youtubeUrl = currentVideoId ? `https://www.youtube.com/watch?v=${currentVideoId}` : 'https://www.youtube.com';
+
+            const errorOverlay = document.createElement('div');
+            errorOverlay.id = 'uplink-error-overlay';
+            errorOverlay.className = 'absolute inset-0 z-[70] flex flex-col items-center justify-center bg-black/95 backdrop-blur-md text-center p-6';
+            errorOverlay.innerHTML = `
+                <span class="material-symbols-outlined text-[#00ff41] text-6xl mb-4 animate-pulse">warning</span>
+                <h2 class="text-xl md:text-2xl font-bold text-[#00ff41] font-tech tracking-widest mb-2 uppercase">PLAYBACK BLOCKED</h2>
+                <p class="text-gray-400 font-tech text-xs md:text-sm max-w-md leading-relaxed mb-6">
+                    Your VPN or browser privacy settings are interfering with playback. Try disabling your VPN or adjusting your tracking protection settings.
+                </p>
+                <div class="flex flex-col gap-3 items-center">
+                    <a href="${youtubeUrl}" target="_blank" rel="noopener noreferrer" class="border border-[#00ff41] text-[#00ff41] px-6 py-3 font-tech text-sm tracking-widest hover:bg-[#00ff41] hover:text-black transition-all uppercase flex items-center gap-2">
+                        WATCH DIRECTLY ON YOUTUBE
+                    </a>
+                </div>
+            `;
+            container.appendChild(errorOverlay);
+        }
+
+        function switchTab(tabName) {
+            const tabStory = document.getElementById('tab-story');
+            const tabLyrics = document.getElementById('tab-lyrics');
+            const viewStory = document.getElementById('view-story');
+            const viewLyrics = document.getElementById('view-lyrics');
+            const activeColor = currentMode === 'ethel' ? 'text-green-500' : 'text-pink-500';
+            const activeBorder = currentMode === 'ethel' ? 'border-green-500' : 'border-pink-500';
+
+            // Reset classes
+            tabStory.className = "flex-1 py-3 hover:bg-white/5 transition-colors";
+            tabLyrics.className = "flex-1 py-3 hover:bg-white/5 transition-colors";
+            tabStory.style.borderBottom = 'none';
+            tabLyrics.style.borderBottom = 'none';
+            tabStory.style.color = '#999';
+            tabLyrics.style.color = '#999';
+
+            if (tabName === 'story') {
+                viewStory.classList.remove('hidden');
+                viewLyrics.classList.add('hidden');
+                tabStory.className += ` ${activeColor}`;
+                tabStory.style.borderBottom = `2px solid ${currentMode === 'ethel' ? '#00ff41' : '#ff0055'}`;
+                tabStory.style.color = currentMode === 'ethel' ? '#00ff41' : '#ff0055';
+            } else {
+                viewStory.classList.add('hidden');
+                viewLyrics.classList.remove('hidden');
+                tabLyrics.className += ` ${activeColor}`;
+                tabLyrics.style.borderBottom = `2px solid ${currentMode === 'ethel' ? '#00ff41' : '#ff0055'}`;
+                tabLyrics.style.color = currentMode === 'ethel' ? '#00ff41' : '#ff0055';
+            }
+        }
+
+        // --- INIT ---
+        setMode('ethel'); // Start with Ethel
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'ArrowRight') navigate(1);
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'Escape') closeReader();
+        });
+
+        // Branding Glitch Script & Dropdown Toggle
+        class BrandingGlitch {
+            constructor(el) {
+                this.el = el;
+                this.chars = '!<>-_\\\\/[]{}-=+*^?#_01';
+                this.update = this.update.bind(this);
+            }
+            setText(newText) {
+                const oldText = this.el.innerText;
+                const length = Math.max(oldText.length, newText.length);
+                const promise = new Promise((resolve) => this.resolve = resolve);
+                this.queue = [];
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || '';
+                    const to = newText[i] || '';
+                    const start = Math.floor(Math.random() * 15);
+                    const end = start + Math.floor(Math.random() * 15);
+                    this.queue.push({ from, to, start, end });
+                }
+                cancelAnimationFrame(this.frameRequest);
+                this.frame = 0;
+                this.update();
+                return promise;
+            }
+            update() {
+                let output = '';
+                let complete = 0;
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i];
+                    if (this.frame >= end) {
+                        complete++;
+                        output += to;
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar();
+                            this.queue[i].char = char;
+                        }
+                        output += char;
+                    } else {
+                        output += from;
+                    }
+                }
+                this.el.innerText = output;
+                this.el.setAttribute('data-text', output);
+                if (complete === this.queue.length) {
+                    this.resolve();
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update);
+                    this.frame++;
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)];
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const brandEl = document.querySelector('.ps-brand');
+            if (brandEl) {
+                const brandFx = new BrandingGlitch(brandEl);
+                const brandWords = [
+                    'PIXELSTORTION', 'PROJECTS', 'BIO', 'SILENCE', 'MATAALA', 
+                    'CINEMA', 'MUSIC', 'VEX', 'SOCIAL NETWORK', 'PIXELSTORTION', 
+                    'NALANI', 'REDFERN', 'TURNBULL', 'PIXELSTORTION', 
+                    'ETHEL', 'ISLA', 'DOMINIC', 'STICKY', 'KINLEY', 'PIXELSTORTION'
+                ];
+                let wordIndex = 0;
+
+                function nextBrandWord() {
+                    wordIndex = (wordIndex + 1) % brandWords.length;
+                    brandFx.setText(brandWords[wordIndex]).then(() => {
+                        let delay = 1500;
+                        if (brandWords[wordIndex] === 'PIXELSTORTION') delay = 6000;
+                        setTimeout(nextBrandWord, delay);
+                    });
+                }
+                setTimeout(nextBrandWord, 6000);
+            }
+
+            // Highlight Active Link (Universal Matcher)
+            const currentUrl = window.location.href.toLowerCase();
+            const dropdownLinks = document.querySelectorAll('.brand-dropdown-item');
+
+            dropdownLinks.forEach(link => {
+                let href = link.getAttribute('href');
+                if (!href) return;
+                href = href.toLowerCase();
+                
+                let isMatch = false;
+                if (href.includes('vex_social_network') && currentUrl.includes('vex_social_network')) isMatch = true;
+                else if (href.includes('ethelryker.com') && currentUrl.includes('ethelryker')) isMatch = true;
+                else if (href.includes('dominicryker.com') && currentUrl.includes('dominicryker')) isMatch = true;
+                else if (href.includes('isla_album') && currentUrl.includes('isla_album')) isMatch = true;
+                else if (href === 'https://islaband.com' && currentUrl.includes('islaband') && !currentUrl.includes('isla_album')) isMatch = true;
+                else if (href.includes('zones/silence') && currentUrl.includes('silence') && !currentUrl.includes('silenceisthetrauma')) isMatch = true;
+                else if (href === 'https://silenceisthetrauma.com' && currentUrl.includes('silenceisthetrauma') && !currentUrl.includes('vex_social_network')) isMatch = true;
+                else if (href.includes('zones/mataala') && currentUrl.includes('mataala')) isMatch = true;
+                else if (href.includes('ethel_gallery') && currentUrl.includes('ethel_gallery')) isMatch = true;
+                else if (href.includes('silentcinema') && currentUrl.includes('silentcinema')) isMatch = true;
+                else if (href.includes('bio') && currentUrl.includes('bio')) isMatch = true;
+
+                if (isMatch) {
+                    link.removeAttribute('href');
+                    link.style.opacity = '0.4';
+                    link.style.cursor = 'default';
+                    link.style.pointerEvents = 'none';
+                    link.innerHTML += ' <span style="font-size:9px; letter-spacing:1px; margin-left:8px; color:#666;">[ACTIVE]</span>';
+                }
+            });
+        });
+
+        window.toggleBrandMenu = function(e) {
+            e.stopPropagation();
+            const menu = document.getElementById('brandDropdown');
+            if (menu) menu.classList.toggle('active');
+        };
+
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('brandDropdown');
+            if (menu && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+

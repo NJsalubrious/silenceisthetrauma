@@ -1,0 +1,1518 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXELSTORTION // VISUAL ARCHIVE</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H8LS884F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-34H8LS884F');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --neon-dim: rgba(0, 255, 65, 0.1);
+            --bg-dark: #050505;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .font-mono-custom {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* Glitch & Visuals */
+        /* ====== BRAND DROPDOWN ====== */
+        .brand-dropdown-container {
+            position: relative;
+        }
+
+        .brand-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 6px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid var(--border-dim, #1a1a1a);
+            min-width: 170px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            padding: 4px 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .brand-dropdown-item {
+            display: block;
+            padding: 4px 12px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: #ccc;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .brand-dropdown-item.item-silence:hover {
+            color: #fff;
+            background: rgba(0, 255, 65, 0.05);
+            border-left: 2px solid #00ff41;
+            padding-left: 24px;
+        }
+
+        .brand-dropdown-item.item-nalani:hover {
+            color: #fff;
+            background: rgba(255, 140, 0, 0.05);
+            border-left: 2px solid #ff8c00;
+            padding-left: 24px;
+        }
+
+        .brand-dropdown-item.item-cinema:hover {
+            color: #fff;
+            background: rgba(0, 255, 65, 0.05);
+            border-left: 2px solid #00ff41;
+            padding-left: 24px;
+        }
+
+        .brand-dropdown-item.item-bio:hover {
+            color: #fff;
+            background: rgba(0, 191, 255, 0.05);
+            border-left: 2px solid #00bfff;
+            padding-left: 24px;
+        }
+
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            clip-path: inset(0 0 0 0);
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: 1px 0 var(--neon-green);
+            clip-path: inset(0 0 0 0);
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip-path: inset(10% 0 80% 0);
+            }
+
+            20% {
+                clip-path: inset(80% 0 10% 0);
+            }
+
+            100% {
+                clip-path: inset(30% 0 60% 0);
+            }
+        }
+
+        .scanlines {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+            background-size: 100% 4px;
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Scrollbars */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 2px;
+        }
+
+        /* FILTER BUTTONS */
+        .filter-btn {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            padding: 3px 6px;
+            border: 1px solid #333;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: #666;
+            color: #aaa;
+        }
+
+        .filter-btn.active {
+            background: var(--neon-green);
+            color: black;
+            border-color: var(--neon-green);
+            font-weight: bold;
+            box-shadow: 0 0 8px var(--neon-dim);
+        }
+
+        /* MENU BUTTONS */
+        .protocol-btn {
+            text-align: left;
+            padding: 12px 16px;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            opacity: 0.5;
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .protocol-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 0.8;
+        }
+
+        .protocol-btn.active {
+            color: var(--neon-green);
+            opacity: 1;
+            text-shadow: 0 0 5px var(--neon-green);
+            font-weight: bold;
+        }
+
+        /* DESKTOP LAYOUT */
+        @media (min-width: 768px) {
+            .protocol-btn {
+                border-left: 2px solid transparent;
+                border-bottom: none;
+            }
+
+            .protocol-btn:hover {
+                padding-left: 20px;
+            }
+
+            .protocol-btn.active {
+                border-left: 2px solid var(--neon-green);
+                padding-left: 20px;
+                background: linear-gradient(90deg, var(--neon-dim) 0%, transparent 100%);
+            }
+        }
+
+        /* MOBILE LAYOUT */
+        @media (max-width: 767px) {
+            #sidebar-left {
+                height: auto;
+                flex-shrink: 0;
+            }
+
+            .mobile-header-text {
+                display: none;
+            }
+
+            #protocol-list {
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 0;
+                border-bottom: 1px solid #222;
+                background: #080808;
+                height: 40px;
+                align-items: center;
+            }
+
+            .protocol-btn {
+                padding: 0 12px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid transparent;
+                border-left: none;
+                font-size: 10px;
+                flex-shrink: 0;
+            }
+
+            .protocol-btn.active {
+                border-bottom: 2px solid var(--neon-green);
+                background: linear-gradient(0deg, var(--neon-dim) 0%, transparent 100%);
+            }
+        }
+
+        /* TRACKLIST OVERLAY */
+        #mobile-track-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 200;
+            /* Very high Z-index for fullscreen visibility */
+            display: none;
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+        }
+
+        #mobile-track-overlay.open {
+            display: flex;
+        }
+
+        .track-item {
+            padding: 10px 12px;
+            border-bottom: 1px solid #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .track-item:hover {
+            background: #111;
+        }
+
+        .track-item.active {
+            background: #1a1a1a;
+            border-left: 2px solid var(--neon-green);
+        }
+
+        .track-item.active .track-idx {
+            color: var(--neon-green);
+        }
+
+        /* Controls */
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #333;
+            background: #000;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-dim);
+        }
+
+        /* Fullscreen */
+        body.fullscreen-mode #sidebar-left,
+        body.fullscreen-mode #sidebar-right,
+        body.fullscreen-mode .header-bar {
+            display: none !important;
+        }
+
+        body.fullscreen-mode #main-container {
+            padding: 0;
+        }
+
+        body.fullscreen-mode #video-frame {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            height: 100vh;
+            width: 100vw;
+            border: none;
+        }
+
+        /* Show the fullscreen tools */
+        body.fullscreen-mode #fs-tools {
+            display: flex;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: #1a1a1a;
+            cursor: pointer;
+            position: relative;
+            transition: height 0.2s;
+        }
+
+        .progress-container:hover {
+            height: 6px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--neon-green);
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 8px var(--neon-dim);
+        }
+
+        .progress-container:hover .progress-bar {
+            box-shadow: 0 0 12px var(--neon-green);
+        }
+
+        .time-display {
+            font-family: 'Courier Prime', monospace;
+            font-size: 10px;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            /* Sidebar collapses to a compact strip on mobile */
+            #sidebar-left {
+                max-height: none;
+                overflow: visible;
+            }
+
+            /* Hide track list on mobile - user uses the overlay instead */
+            #protocol-list {
+                display: none;
+            }
+
+            /* Hide the shuffle button container on mobile */
+            #sidebar-left > .hidden.md\\:block {
+                display: none !important;
+            }
+
+            /* Cap video height so controls are visible */
+            #video-frame {
+                max-height: 45vh;
+                min-height: 30vh;
+            }
+
+            /* Tighter header bar on mobile */
+            .header-bar {
+                height: auto !important;
+                min-height: 56px;
+            }
+
+            /* Dropdown tap targets */
+            .brand-dropdown-item {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Force dropdown to escape all overflow:hidden parents */
+            .brand-dropdown-menu {
+                position: fixed !important;
+                top: auto;
+                left: 12px;
+                z-index: 9999;
+                margin-top: 4px;
+            }
+        }
+    
+        /* NESTED MENU CSS */
+        .menu-category-wrapper {
+            position: relative;
+        }
+
+        .menu-category {
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #888;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 10px 12px;
+            border-bottom: 1px solid #222;
+            background: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .menu-category:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #bbb;
+        }
+
+        .submenu {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 2px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid #333;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-5px);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            z-index: 10001;
+            padding: 4px 0;
+        }
+
+        .menu-category-wrapper:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .brand-dropdown-item {
+            display: block;
+            padding: 8px 16px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .brand-dropdown-item:hover {
+            color: #aaa;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 2px solid #555;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .submenu {
+                position: static !important;
+                margin-left: 0 !important;
+                transform: none !important;
+                border: none !important;
+                border-left: 2px solid #333 !important;
+                background: rgba(0,0,0,0.2) !important;
+                min-width: auto !important;
+                display: none;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding-left: 10px !important;
+            }
+            .menu-category-wrapper:hover > .submenu {
+                display: flex !important;
+                transform: none !important;
+            }
+            .brand-dropdown-menu {
+                max-height: 80vh !important;
+                overflow-y: auto !important;
+            }
+        }
+
+</style>
+</head>
+
+<body class="flex flex-col md:flex-row h-screen overflow-hidden bg-black text-white">
+
+    <div class="scanlines"></div>
+
+    <div id="mobile-track-overlay">
+        <div class="p-4 border-b border-[#333] flex justify-between items-center bg-[#050505]">
+            <h2 class="text-xs font-bold text-green-500 font-mono-custom tracking-widest">SELECT TRACK</h2>
+            <button onclick="toggleMobileTracklist()" class="text-white hover:text-red-500"><span
+                    class="material-symbols-outlined">close</span></button>
+        </div>
+        <div class="flex-1 overflow-y-auto" id="mobile-track-list-content">
+        </div>
+    </div>
+
+    <div id="sidebar-left" class="w-full md:w-56 bg-[#080808] border-r border-[#222] flex flex-col z-20">
+        <div class="p-3 md:p-6 border-b border-[#222]">
+            <div class="mb-2 md:mb-4">
+                <div class="brand-dropdown-container">
+                    <button onclick="toggleBrandMenu(event)" class="brand-trigger text-left" style="background: none; border: none; cursor: pointer; text-decoration: none; padding: 0;">
+                        <h1 class="text-lg font-bold font-mono-custom text-white glitch-text" data-text="PIXELSTORTION">PIXELSTORTION</h1>
+                    </button>
+                    <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+                        <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">veX: Social Network</a>
+                        <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Silence is the trauma</a>
+                        <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+                        <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+                        <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+                        <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+                        <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
+                    </div>
+                </div>
+                <p class="text-[9px] text-gray-500 mt-1 font-mono-custom tracking-widest">SILENCE IS THE TRAUMA</p>
+            </div>
+            <div class="flex gap-1 justify-center md:justify-start">
+                <button onclick="setFilter('videos')" id="filter-videos" class="filter-btn active">VIDEOS</button>
+                <button onclick="setFilter('songs')" id="filter-songs" class="filter-btn">SONGS</button>
+                <button onclick="setFilter('albums')" id="filter-albums" class="filter-btn">ALBUMS</button>
+                <button onclick="setFilter('all')" id="filter-all" class="filter-btn">ALL</button>
+            </div>
+        </div>
+
+        <div id="protocol-list" class="scrollbar-hide md:flex-1 md:overflow-y-auto"></div>
+
+        <div class="hidden md:block p-4 border-t border-[#222]">
+            <button onclick="shuffleGlobal()"
+                class="w-full py-2 border border-[#333] text-[10px] hover:border-green-500 hover:text-green-500 transition-colors font-mono-custom">GLOBAL
+                SHUFFLE</button>
+        </div>
+    </div>
+
+    <div id="main-container" class="flex-1 flex flex-col relative bg-[#050505]">
+
+        <div id="video-frame"
+            class="flex-1 relative bg-black flex items-center justify-center overflow-hidden border-b border-[#222]">
+            <div id="youtube-player" class="w-full h-full absolute inset-0"></div>
+            <div id="interaction-shield" class="absolute inset-0 z-50 pointer-events-none"></div>
+
+            <div id="uplink-trigger" onclick="establishUplink()"
+                class="absolute inset-0 z-[60] flex items-center justify-center bg-black/90 cursor-pointer">
+                <div
+                    class="border border-green-500 p-6 text-green-500 font-mono-custom text-sm hover:bg-green-500 hover:text-black transition-all tracking-widest animate-pulse">
+                    [ ESTABLISH VISUAL UPLINK ]
+                </div>
+            </div>
+
+            <div id="fs-tools" class="hidden absolute top-6 right-6 z-50 flex gap-3">
+                <button onclick="toggleMobileTracklist(true)"
+                    class="bg-black/80 text-white p-3 rounded-full border border-green-500 hover:bg-green-900/50 transition-colors shadow-lg">
+                    <span class="material-symbols-outlined">queue_music</span>
+                </button>
+                <button onclick="toggleFullscreen()"
+                    class="bg-black/80 text-white p-3 rounded-full border border-red-500 hover:bg-red-900/50 transition-colors shadow-lg">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-bar h-14 md:h-24 bg-[#080808] border-t border-[#222] flex flex-col z-20 flex-shrink-0">
+
+            <!-- Progress Bar (full width) -->
+            <div class="w-full px-4 md:px-6 pt-2">
+                <div class="progress-container" onclick="seekTo(event)">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="flex justify-between mt-1">
+                    <span class="time-display" id="current-time">0:00</span>
+                    <span class="time-display" id="duration-time">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controls Row -->
+            <div class="flex items-center justify-between px-4 md:px-6 pb-2 flex-1">
+                <div class="hidden md:block w-1/3">
+                    <div class="text-[10px] text-green-500 font-mono-custom mb-1">CURRENT FEED</div>
+                    <div id="current-title" class="text-sm font-bold truncate text-gray-300">CONNECTING...</div>
+                </div>
+
+                <div class="md:hidden w-1/3 overflow-hidden">
+                    <div id="current-title-mobile" class="text-xs font-bold truncate text-gray-300">...</div>
+                </div>
+
+                <div class="flex items-center gap-3 md:gap-4">
+                    <button class="control-btn" onclick="prevTrack()"><span
+                            class="material-symbols-outlined">skip_previous</span></button>
+                    <button class="control-btn" style="border-color: #555;" onclick="togglePlay()"><span id="play-icon"
+                            class="material-symbols-outlined text-2xl">play_arrow</span></button>
+                    <button class="control-btn" onclick="nextTrack()"><span
+                            class="material-symbols-outlined">skip_next</span></button>
+                </div>
+
+                <div class="flex items-center justify-end gap-2 md:gap-3 w-1/3">
+                    <button class="md:hidden text-gray-500 hover:text-green-500" onclick="toggleMobileTracklist()"
+                        title="View List">
+                        <span class="material-symbols-outlined">queue_music</span>
+                    </button>
+                    <button class="md:hidden text-gray-500" onclick="shuffleGlobal()"><span
+                            class="material-symbols-outlined text-sm">shuffle</span></button>
+                    <button id="quality-btn" class="text-gray-500 hover:text-green-500 text-xs font-mono-custom"
+                        onclick="toggleQuality()" title="Toggle Video Quality">
+                        HD
+                    </button>
+                    <button class="text-gray-500 hover:text-green-500" onclick="toggleFullscreen()"><span
+                            class="material-symbols-outlined">fullscreen</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sidebar-right"
+        class="w-full md:w-64 bg-[#080808] border-l border-[#222] flex flex-col z-20 flex-shrink-0 hidden md:flex">
+        <div class="p-4 border-b border-[#222] bg-[#0a0a0a]">
+            <h2 class="text-xs font-bold text-gray-400 font-mono-custom tracking-widest">FEED DATA</h2>
+        </div>
+        <div class="flex-1 overflow-y-auto" id="track-list">
+            <div class="p-4 text-xs text-gray-500">Establishing Uplink...</div>
+        </div>
+    </div>
+
+    <!-- YouTube IFrame API (loaded in body, not head, for Edge mobile compatibility) -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        // ███████████████████████████████████████████████████████████████████████████████
+        // ██                                                                           ██
+        // ██   ⚠️  PASTE ZONE: REPLACE ENTIRE STATIC_MEDIA OBJECT BELOW  ⚠️           ██
+        // ██                                                                           ██
+        // ██   1. Open listgrabber.html in browser                                    ██
+        // ██   2. Copy the ENTIRE output from the textarea                            ██
+        // ██   3. REPLACE lines 407-414 (the whole const STATIC_MEDIA = {...})        ██
+        // ██   4. DO NOT merge, DO NOT nest - FULL REPLACEMENT ONLY                   ██
+        // ██                                                                           ██
+        // ███████████████████████████████████████████████████████████████████████████████
+
+        // Build STATIC_MEDIA with auto-computed 'all' arrays
+        const STATIC_MEDIA_RAW = {
+            isla: {
+                videos: [
+                    { id: "7UOZCk5vvbA", title: "ISLA: Raise the Fourth(Drop From The Fourth)", start: 12 },
+                    { id: "Y4VC6mh37NI", title: "ISLA:  What You Don't See", start: 4 },
+                    { id: "a4TpIhna55k", title: "ISLA:  Melody of Normality" },
+                    { id: "_gvv_W5_x10", title: "ISLA: BROKEN EDGE" },
+                    { id: "Iav_vtlxM7U", title: "ISLA: Sublimate" }
+                ],
+                songs: [
+                    { id: "hm2kp7LOhsg", title: "ISLA: What You Don't See (Symphony Orchestra)" },
+                    { id: "ey20cJsY82M", title: "ISLA: Raise The Fourth" },
+                    { id: "fNVKsxe_EcM", title: "ISLA: The Porcelain Lie (Raise The Fourth)" },
+                    { id: "X9EUb1_QC9c", title: "ISLA: What This Was Always For" },
+                    { id: "nk4Re7OjTTM", title: "ISLA: Memory Under Water" },
+                    { id: "NwqHLFYR1mA", title: "ISLA: Don't Wake Him Yet" },
+                    { id: "yKkyU5r39-s", title: "ISLA: Melody Of Normality (live)" },
+                    { id: "Y4VC6mh37NI", title: "ISLA: What You Don't See (Music Video)" }
+                ]
+            },
+            ethel: {
+                videos: [
+                    { id: "f8o7zb3F-Xk", title: "ETHEL: FOR YOU" },
+                    { id: "s9Z8dgRk-Q8", title: "ETHEL: Mistake on purpose? - A story about soft power (Official Music Video)" },
+                    { id: "y6tgaXHq7K4", title: "ETHEL: The Drop | PIXELSTORTION #shorts" },
+                    { id: "qUTqb7FvCgg", title: "ETHEL: Let it go. Move on. Be normal! …But what if that's the problem? | PIXELSTORTION #Shorts" },
+                    { id: "9YKXulK0EYw", title: "ETHEL: NORMAL?! - A story of difference (Official Music Video)" },
+                    { id: "CaBcQ2aSjog", title: "ETHEL: KINLEY | Ants On Th Vine - Part 10 - Music Video | PIXELSTORTION" },
+                    { id: "WZ3P96AJfEc", title: "ETHEL: Harm's Ghost - Part 8 | Music Video | PIXELSTORTION" },
+                    { id: "SLMP5rDOS-k", title: "ETHEL: Ride & Gotta Move (Official music video)" },
+                    { id: "zuj7gZXeF3c", title: "ETHEL: The Weight of My Own Hands - Innocent but heavy. | PIXELSTORTION #shorts" },
+                    { id: "ffn-33nemy0", title: "ETHEL: Won't break Where others End - Part 3 - Lyric Video | PIXELSTORTION" },
+                    { id: "7JmxEtfhpgw", title: "ETHEL: DOMINIC | ISLA | I see my mind a little blind now | PIXELSTORTION #shorts" },
+                ],
+                songs: [
+                    { id: "s9Z8dgRk-Q8", title: "ETHEL: Can you make a mistake on purpose?" },
+                    { id: "iTOKsLS3jhM", title: "Ethel: Red Stick" },
+                    { id: "dLUClmr_Pf4", title: "ETHEL: My Story" },
+                    { id: "TqQwDmwSQXM", title: "ETHEL: Something Good" }
+                ]
+            },
+            dominic: {
+                videos: [
+                    { id: "I_KgCDWSD3g", title: "DOMINIC: You Will Thank Me Later #shorts" },
+                    { id: "C3vwtsNArz0", title: "DOMINIC: Dominic's Escape #shorts" },
+                    { id: "36Hzt9pyQMw", title: "WITNESS: Same Breath" },
+                    { id: "E-eORoHi0tY", title: "DOMINIC: You Will" },
+                ],
+                songs: [
+                    { id: "8rvIVBLZg2o", title: "Dominic: Structural Psychopathy 101" }
+                ]
+            },
+            sticky: {
+                videos: [
+                    { id: "Fs7BXBOVnvY", title: "STICKY: Rattled - Part 11 - Music Comic Art Video | PIXELSTORTION" },
+                ],
+                songs: []
+            },
+            kinley: {
+                videos: [
+                    { id: "Ac3cRsmjKpE", title: "KINLEY: Guilt Money - Origin of Kinley" },
+                ],
+                songs: []
+            },
+            clipboardMan: {
+                videos: [
+                    { id: "rYmwGCKUDhA", title: "ETHEL: CLIPBOARD MAN " },
+                ],
+                songs: []
+            },
+        };
+
+        // ALBUMS - Each album is a discrete selectable entity
+        const ALBUMS = {
+            "ethel-monologue": {
+                name: "ETHEL: Monologue",
+                tracks: [
+                    { id: "AOktpmGD0Po", title: "ETHEL: Monologue" },
+                    { id: "QM2hUMDu7WE", title: "DOMINIC: Structural Psychopathy 101" },
+                    { id: "VC6vQGPyF4c", title: "ETHEL: Platform 18" }
+                ]
+            },
+            "hero-complex": {
+                name: "HERO COMPLEX",
+                tracks: [
+                    { id: "Ugy7KVuhwpE", title: "WITNESS: Same Breath" },
+                    { id: "YkQOXPzYkkU", title: "ETHEL: Hero Killer" },
+                    { id: "lwd7KOScg0k", title: "ISLA: Burning Dominic's Bridge" },
+                    { id: "Bff42Vyv8HM", title: "ETHEL: Nothing True. Nothing Refuted." },
+                    { id: "7gc3DigBW1Y", title: "DOMINIC: Hero Complex" },
+                    { id: "t4AxR93yFNc", title: "Dominic & Ethel: Hero Complex" }
+                ]
+            },
+            "isla-stanmore": {
+                name: "Isla: The Stanmore Years",
+                tracks: [
+                    { id: "0tzOaukuBns", title: "ISLA: This isn't therapy (Isla)" },
+                    { id: "-3m2_zUNBlo", title: "ISLA: Stanmore Farewell (Isla)" },
+                    { id: "GFkK21BdE9o", title: "ISLA: The Porcelain Lie (Isla)" },
+                    { id: "dK8mqLNRZ2Q", title: "ISLA: Intro to the Shiny Headed Radio Man (Isla)" },
+                    { id: "UFZeKCcSMoE", title: "ISLA: Shiny Headed Radio Man (Isla)" },
+                    { id: "6bwKDegeBHU", title: "ISLA: A Drop From the Forth" }
+                ]
+            },
+            "ethel-origin-vol1": {
+                name: "ETHEL: Origin Story Volume 1",
+                tracks: [
+                    { id: "MrlyjQFhCBo", title: "ETHEL: Ride" },
+                    { id: "06qE_-OeIT0", title: "ETHEL: Gotta Move" },
+                    { id: "ho4AunZZO8E", title: "ETHEL: Wont Break Where Others End" },
+                    { id: "m1S5XmePVXE", title: "ETHEL: Wont Break Where Others End (Special Version)" },
+                    { id: "Tn1a7Zo9m74", title: "ETHEL: I Built A Box - Part 4" },
+                    { id: "f8o7zb3F-Xk", title: "ETHEL: FOR YOU - Part 6" },
+                    { id: "e2wt2VSi9xA", title: "ETHEL: Ants On The Vine" },
+                    { id: "ZAhqNWTHTGU", title: "ETHEL: Clipboard Man" },
+                    { id: "qQ1l6JAjE8M", title: "STICKY:(Some Things You Don't Chase)" },
+                    { id: "zh6HEd4lztU", title: "ETHEL: Harms Ghost" },
+                    { id: "OxHZnnRhtbk", title: "ETHEL: Normal Ethel" },
+                    { id: "V0hvxqMWcnE", title: "ETHEL: Intro (Normal Ethel)" },
+                    { id: "ht9PIloHD0Q", title: "ETHEL: Normal Ethel (Special Version)" },
+                    { id: "n6OgobffCzo", title: "DOMINIC: (You Will Thank Me Later)" },
+                    { id: "7-rS3HsHoFk", title: "ISLA: Broken Edge (Acoustic)" },
+                    { id: "7Bec0d8bD0w", title: "ISLA: Broken Edge (Electric)" },
+                    { id: "uovMKnwE34M", title: "KINLEY: Kinley (Guilt Money)" },
+                    { id: "6eZwBGXGSO4", title: "DOMINIC: Dominics Prison Escape" },
+                    { id: "t6vLU0uqIfc", title: "ETHEL: No Sparrow Caught Mid Flight" }
+                ]
+            },
+            "isla-experiments": {
+                name: "ISLA: Experiments in Crazy Noise",
+                tracks: [
+                    { id: "sXKAs0U8eO8", title: "ISLA: Doesn't Like Married Bankers" },
+                    { id: "K9lQ0IYiMoM", title: "ISLA: Peekaboo" },
+                    { id: "wMFoTfLAcWc", title: "ISLA: Burning Dominic's Bridge" },
+                    { id: "2hSYNLs7w3w", title: "ISLA: Polished Vomit Polished" },
+                    { id: "lOiveXRb3dw", title: "ISLA: Polished Vomit Polished (Special Version 1)" },
+                    { id: "MhEeDcdscrs", title: "ISLA: Polished Vomit Polished (Special Version 2)" },
+                    { id: "nVKkwb4EnRc", title: "ISLA: Burning Dominic's Bridge (Special Version 1)" },
+                    { id: "JWDbXkAKfOw", title: "ISLA: Burning Dominic's Bridge (Special Version 2)" },
+                    { id: "qbFxG7sK0pE", title: "ISLA: Peekaboo (Special Version 2)" }
+                ]
+            },
+            "ethel-musical-pt1": {
+                name: "ETHEL The Musical, Pt. 1",
+                tracks: [
+                    { id: "YKQk4G_XJ1w", title: "ETHEL: Intro To Harms Ghost" },
+                    { id: "Lkh53umi1L0", title: "ETHEL: Harms Ghost" },
+                    { id: "lV4572kA1RE", title: "ETHEL: Intro To The Drop" },
+                    { id: "zHWwhom80go", title: "ETHEL: The Drop" },
+                    { id: "VKJaSC_-0sM", title: "ETHEL: Intro To Polished Vomit" },
+                    { id: "fJsPZkBm-ew", title: "ISLA: Polished Vomit" },
+                    { id: "Jl8T2gWUVMY", title: "ETHEL: Intro To Dominics Intent" },
+                    { id: "b8kAEkLVIsA", title: "DOMINIC: Dominics Intent" },
+                    { id: "Wvu0JIV1ePQ", title: "ETHEL: Intro To Ride" },
+                    { id: "0sgcZRtPO6s", title: "ETHEL: Ride" },
+                    { id: "95wQ9YZUbcA", title: "ETHEL: Intro To Grief" },
+                    { id: "PMy76HBgpL8", title: "ETHEL: Grief" },
+                    { id: "IuyKvsxwBgY", title: "ETHEL: Intro To Move" },
+                    { id: "FIru9BYaNXw", title: "ETHEL: Move" },
+                    { id: "oPOEgISVQYk", title: "ETHEL: Intro To Wont Break Where Others End" },
+                    { id: "fJNMlT7UeW0", title: "ETHEL: Wont Break Where Others End" },
+                    { id: "8UvIT2TgY_Y", title: "ETHEL: Intro To Big House" },
+                    { id: "mj9MGf-VzJY", title: "ETHEL: Big House" },
+                    { id: "GaSUHEFlJVc", title: "ISLA:: Intro To Peek-A-Boo" },
+                    { id: "BV4nJjnd4d8", title: "ISLA: Peek-A-Boo" },
+                    { id: "dIh_CL7h7zU", title: "ETHEL: Intro To Northern Road" },
+                    { id: "OGim38Nw2hQ", title: "WITNESS: Northern Road" }
+                ]
+            },
+            "ethel-musical-pt2": {
+                name: "ETHEL The Musical, Pt. 2",
+                tracks: [
+                    { id: "VNln5R2iF9E", title: "ETHEL: Intro To Isla Hates Married Bankers" },
+                    { id: "Pe4kJsAo-DQ", title: "Isla Hates Married Bankers" },
+                    { id: "L-K0MrEKOAc", title: "ETHEL: Intro To I Built A Box" },
+                    { id: "yFx3UtzaYag", title: "Built A Box" },
+                    { id: "VUrJP86DHrU", title: "ETHEL: Intro To Islas Burning Dominics Bridge" },
+                    { id: "HCcHtojENjQ", title: "Islas Burning Dominics Bridge" },
+                    { id: "qtkHwKNnAo8", title: "ETHEL: Intro To For You" },
+                    { id: "1ameyfRFUuM", title: "ETHEL: For You" },
+                    { id: "ox_vABajRIw", title: "ETHEL: Intro To Broken Edge" },
+                    { id: "yeFovrcifYU", title: "Isla's Broken Edge" },
+                    { id: "mAZKRxhPMCg", title: "ETHEL: Intro To Hero Killer" },
+                    { id: "Rlmj04X4nYw", title: "ETHEL: Hero Killer" },
+                    { id: "cWYBZ0rGZVo", title: "ETHEL: Intro To Hero Complex" },
+                    { id: "yjgXRQ0iGeY", title: "DOMINIC:Hero Complex" },
+                    { id: "tpnmyIxM1p8", title: "ETHEL: Intro To Nothing True" },
+                    { id: "Ghg7pC3ms3I", title: "ETHEL: Nothing True" },
+                    { id: "qi0HqQ2URdU", title: "ETHEL: Intro to You Will Thank Me Later" },
+                    { id: "ErG_G79nplQ", title: "DOMINIC:You Will Thank Me Later" },
+                    { id: "kB5lGHjUqUY", title: "ETHEL: Intro To Dominics Escape" },
+                    { id: "JZq6IFn2-Oo", title: "DOMINIC:Dominics Escape" },
+                    { id: "D5afy4FucwA", title: "ETHEL: Ethels Conclusion" }
+                ]
+            }
+        };
+
+        // Auto-compute 'all' arrays by combining videos + songs
+        const STATIC_MEDIA = {};
+        for (const char in STATIC_MEDIA_RAW) {
+            STATIC_MEDIA[char] = {
+                videos: STATIC_MEDIA_RAW[char].videos,
+                songs: STATIC_MEDIA_RAW[char].songs,
+                all: [...STATIC_MEDIA_RAW[char].videos, ...STATIC_MEDIA_RAW[char].songs]
+            };
+        }
+
+        // ███████████████████████████████████████████████████████████████████████████████
+        // ██   ⚠️  END PASTE ZONE - DO NOT EDIT BELOW THIS LINE  ⚠️                   ██
+        // ███████████████████████████████████████████████████████████████████████████████
+
+        const CHARACTERS = [
+            { id: 'all', name: 'ALL' },
+            { id: 'isla', name: 'ISLA' },
+            { id: 'ethel', name: 'ETHEL' },
+            { id: 'dominic', name: 'DOMINIC' },
+            { id: 'sticky', name: 'STICKY' },
+            { id: 'kinley', name: 'KINLEY' },
+            { id: 'clipboardMan', name: 'CLIPBOARD MAN' },
+        ];
+
+        // State
+        let activeFilter = 'videos'; // 'videos', 'songs', 'albums', 'all'
+        let activeCharId = 'all';
+        let currentTracks = [];
+        let currentTrackIdx = 0;
+        let player;
+        let isPlaying = false;
+        let isShuffleOn = false; // Persistent shuffle state
+
+        async function updateTrackList() {
+            document.getElementById('track-list').innerHTML =
+                '<div class="p-4 text-xs text-gray-500">DECRYPTING DATA...</div>';
+
+            let newTracks = [];
+
+            // Determine which characters we are loading
+            const charsToFetch = activeCharId === 'all'
+                ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
+                : [activeCharId];
+
+            // Fetch ONE playlist per character (now from STATIC_MEDIA)
+            const promises = charsToFetch.map(async (cid) => {
+                // Read from STATIC_MEDIA instead of fetching
+                const data = STATIC_MEDIA[cid]?.[activeFilter] || [];
+                // Data is now an array of {id, title} objects
+                return data;
+            });
+
+            const results = await Promise.all(promises);
+            newTracks = results.flat();
+
+            if (newTracks.length === 0) {
+                currentTracks = [];
+                renderTracks();
+                document.getElementById('current-title').innerText = "NO DATA FOUND";
+                return;
+            }
+
+            // Save current playing track ID to preserve it when switching sets
+            const currentlyPlayingId = currentTracks[currentTrackIdx]?.id;
+
+            // Update Global State
+            currentTracks = newTracks;
+
+            // Try to find the currently playing track in the new set
+            if (currentlyPlayingId) {
+                const foundIdx = newTracks.findIndex(t => t.id === currentlyPlayingId);
+                if (foundIdx !== -1) {
+                    // Track exists in new set, keep playing it
+                    currentTrackIdx = foundIdx;
+                    renderTracks();
+                    return; // Don't load a new track
+                }
+            }
+
+            // If current track not in new set, reset index but don't auto-play
+            currentTrackIdx = 0;
+            renderTracks();
+        }
+
+        // --- UI FUNCTIONS ---
+
+        function renderMenu() {
+            const container = document.getElementById('protocol-list');
+
+            if (activeFilter === 'albums') {
+                // Show albums instead of characters
+                container.innerHTML = Object.keys(ALBUMS).map(albumId => {
+                    const album = ALBUMS[albumId];
+                    return `
+                        <div onclick="setAlbum('${albumId}')" id="album-btn-${albumId}" class="protocol-btn">
+                            ${album.name}
+                        </div>
+                    `;
+                }).join('');
+                // Activate first album by default
+                if (Object.keys(ALBUMS).length > 0) {
+                    const firstAlbumId = Object.keys(ALBUMS)[0];
+                    document.getElementById(`album-btn-${firstAlbumId}`)?.classList.add('active');
+                }
+            } else {
+                // Show characters
+                container.innerHTML = CHARACTERS.map(c => `
+                    <div onclick="setCharacter('${c.id}')" id="char-btn-${c.id}" class="protocol-btn ${c.id === 'all' ? 'active' : ''}">
+                        ${c.name}
+                    </div>
+                `).join('');
+            }
+        }
+
+        function setFilter(filter) {
+            activeFilter = filter;
+
+            // Update UI buttons
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`filter-${filter}`).classList.add('active');
+
+            // Re-render menu (characters vs albums)
+            renderMenu();
+
+            // Refresh track list
+            if (filter === 'albums') {
+                // Load first album by default
+                const firstAlbumId = Object.keys(ALBUMS)[0];
+                if (firstAlbumId) {
+                    setAlbum(firstAlbumId);
+                }
+            } else {
+                updateTrackList();
+            }
+        }
+
+        function setCharacter(id) {
+            activeCharId = id;
+
+            // Update UI
+            document.querySelectorAll('.protocol-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`char-btn-${id}`).classList.add('active');
+
+            // Scroll to button
+            document.getElementById(`char-btn-${id}`).scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+            // Refresh List
+            updateTrackList();
+        }
+
+        function setAlbum(albumId) {
+            const album = ALBUMS[albumId];
+            if (!album) return;
+
+            // Update UI
+            document.querySelectorAll('.protocol-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(`album-btn-${albumId}`)?.classList.add('active');
+
+            // Scroll to button
+            document.getElementById(`album-btn-${albumId}`)?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+            // Load album tracks into the list (don't auto-play)
+            currentTracks = album.tracks;
+            // Preserve current track index if the playing track exists in this album
+            const currentId = currentTracks[currentTrackIdx]?.id;
+            const foundInAlbum = album.tracks.findIndex(t => t.id === currentId);
+            currentTrackIdx = foundInAlbum !== -1 ? foundInAlbum : 0;
+            renderTracks();
+        }
+
+        function renderTracks() {
+            const desktopContainer = document.getElementById('track-list');
+            const mobileContainer = document.getElementById('mobile-track-list-content');
+
+            if (currentTracks.length === 0) {
+                const msg = '<div class="p-4 text-xs text-gray-500">No tracks available.</div>';
+                desktopContainer.innerHTML = msg;
+                mobileContainer.innerHTML = msg;
+                return;
+            }
+
+            const html = currentTracks.map((t, i) => `
+                <div onclick="loadTrack(${i}); toggleMobileTracklist(false);" class="track-item group" id="track-row-${i}">
+                    <span class="track-idx font-mono-custom text-[10px] text-gray-600 group-hover:text-white">${(i + 1).toString().padStart(2, '0')}</span>
+                    <div class="flex-1"><div class="text-[11px] text-gray-300 font-bold truncate">${t.title.toUpperCase()}</div></div>
+                    <span class="material-symbols-outlined text-[14px] text-gray-700 opacity-0 group-hover:opacity-100">play_circle</span>
+                </div>
+            `).join('');
+
+            desktopContainer.innerHTML = html;
+            mobileContainer.innerHTML = html;
+        }
+
+        function loadTrack(idx) {
+            if (!currentTracks[idx]) return;
+            currentTrackIdx = idx;
+            const track = currentTracks[idx];
+
+            // Build video options
+            const videoOptions = { videoId: track.id };
+            if (track.start !== undefined && track.start !== null) {
+                videoOptions.startSeconds = track.start;
+            }
+            if (track.end !== undefined && track.end !== null) {
+                videoOptions.endSeconds = track.end;
+            }
+
+            // PERSISTENT PLAYER: Create once, reuse via loadVideoById
+            if (!player) {
+                // First time: create the player
+                const container = document.getElementById('video-frame');
+                let playerDiv = document.getElementById('youtube-player');
+                if (!playerDiv) {
+                    playerDiv = document.createElement('div');
+                    playerDiv.id = 'youtube-player';
+                    playerDiv.className = 'w-full h-full absolute inset-0';
+                    container.insertBefore(playerDiv, container.firstChild);
+                }
+                playerDiv.innerHTML = '<div id="yt-player-frame"></div>';
+
+                player = new YT.Player('yt-player-frame', {
+                    host: 'https://www.youtube-nocookie.com',
+                    height: '100%',
+                    width: '100%',
+                    videoId: track.id,
+                    playerVars: {
+                        'autoplay': 0,
+                        'controls': 1,
+                        'origin': window.location.origin,
+                        'rel': 0,
+                        'modestbranding': 1,
+                        'iv_load_policy': 3,
+                        'playsinline': 1
+                    },
+                    events: {
+                        'onReady': (event) => {
+                            // Patch iframe for Edge
+                            const iframe = event.target.getIframe();
+                            if (iframe) {
+                                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                                iframe.setAttribute('referrerpolicy', 'origin');
+                            }
+                            // Play on user gesture (establishUplink was clicked)
+                            event.target.playVideo();
+                            startUplinkMonitor(); // Start the VPN timeout detector
+                        },
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            } else {
+                // Player already exists: just swap the video
+                player.loadVideoById(videoOptions);
+                startUplinkMonitor(); // Start detector for new track
+            }
+
+            const title = track.title.toUpperCase();
+            document.getElementById('current-title').innerText = title;
+            const mobTitle = document.getElementById('current-title-mobile');
+            if (mobTitle) mobTitle.innerText = title;
+
+            // Highlight
+            document.querySelectorAll('.track-item').forEach(el => el.classList.remove('active'));
+            const rows = document.querySelectorAll(`[id="track-row-${idx}"]`);
+            rows.forEach(r => {
+                r.classList.add('active');
+                r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
+        // --- YOUTUBE & CONTROLS ---
+
+        let apiReady = false;
+
+        function onYouTubeIframeAPIReady() {
+            apiReady = true;
+        }
+
+        function establishUplink() {
+            if (!apiReady) {
+                alert("Uplink unstable (API not ready). Please wait...");
+                return;
+            }
+
+            // 1. Remove the button
+            const btn = document.getElementById('uplink-trigger');
+            if (btn) btn.style.display = 'none';
+
+            // 2. Prepare the first track (so we don't load an empty player)
+            initPlayerWithFirstTrack();
+        }
+
+        async function initPlayerWithFirstTrack() {
+            // Populate the track list
+            const charsToFetch = activeCharId === 'all'
+                ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
+                : [activeCharId];
+
+            const promises = charsToFetch.map(async (cid) => STATIC_MEDIA[cid]?.[activeFilter] || []);
+            const results = await Promise.all(promises);
+            currentTracks = results.flat();
+
+            // Render UI, then load first track (loadTrack creates the player)
+            renderMenu();
+            renderTracks();
+            if (currentTracks.length > 0) {
+                loadTrack(0);
+            }
+        }
+
+        // Global timeout variable for the detector
+        let uplinkTimeout = null;
+
+        function onPlayerStateChange(event) {
+            const btn = document.getElementById('play-icon');
+            if (event.data == YT.PlayerState.PLAYING) {
+                btn.innerText = 'pause'; isPlaying = true;
+                if (uplinkTimeout) clearTimeout(uplinkTimeout); // Success! Clear the error timer
+            } else {
+                btn.innerText = 'play_arrow'; isPlaying = false;
+            }
+            if (event.data == YT.PlayerState.ENDED) nextTrack();
+        }
+
+        // --- VPN / BOT-WALL DETECTOR ---
+        function startUplinkMonitor() {
+            if (uplinkTimeout) clearTimeout(uplinkTimeout);
+
+            uplinkTimeout = setTimeout(() => {
+                if (player && typeof player.getPlayerState === 'function') {
+                    const state = player.getPlayerState();
+                    // -1 is unstarted, 3 is buffering. If it's stuck here, it's likely blocked.
+                    if (state === -1 || state === 3) {
+                        showUplinkError();
+                    }
+                }
+            }, 3000);
+        }
+
+        function showUplinkError() {
+            const container = document.getElementById('video-frame');
+            if (document.getElementById('uplink-error-overlay')) return;
+
+            // Get current video ID for the YouTube link
+            const currentVideoId = currentTracks[currentTrackIdx]?.id || '';
+            const youtubeUrl = currentVideoId ? `https://www.youtube.com/watch?v=${currentVideoId}` : 'https://www.youtube.com';
+
+            const errorOverlay = document.createElement('div');
+            errorOverlay.id = 'uplink-error-overlay';
+            errorOverlay.className = 'absolute inset-0 z-[70] flex flex-col items-center justify-center bg-black/95 backdrop-blur-md text-center p-6';
+            errorOverlay.innerHTML = `
+                <span class="material-symbols-outlined text-[#00ff41] text-6xl mb-4 animate-pulse">warning</span>
+                <h2 class="text-xl md:text-2xl font-bold text-[#00ff41] font-mono-custom tracking-widest mb-2 uppercase">PLAYBACK BLOCKED</h2>
+                <p class="text-gray-400 font-mono-custom text-xs md:text-sm max-w-md leading-relaxed mb-6">
+                    Your VPN or browser privacy settings are interfering with playback. Try disabling your VPN or adjusting your tracking protection settings.
+                </p>
+                <div class="flex flex-col gap-3 items-center">
+                    <a href="${youtubeUrl}" target="_blank" rel="noopener noreferrer" class="border border-[#00ff41] text-[#00ff41] px-6 py-3 font-mono-custom text-sm tracking-widest hover:bg-[#00ff41] hover:text-black transition-all uppercase flex items-center gap-2">
+                        WATCH DIRECTLY ON YOUTUBE
+                    </a>
+                </div>
+            `;
+            container.appendChild(errorOverlay);
+        }
+
+        function togglePlay() {
+            if (player && player.pauseVideo) isPlaying ? player.pauseVideo() : player.playVideo();
+        }
+
+        function nextTrack() {
+            if (currentTracks.length === 0) return;
+
+            if (isShuffleOn) {
+                // Pick a random track (excluding current one if possible)
+                if (currentTracks.length > 1) {
+                    let randomIdx;
+                    do {
+                        randomIdx = Math.floor(Math.random() * currentTracks.length);
+                    } while (randomIdx === currentTrackIdx && currentTracks.length > 1);
+                    loadTrack(randomIdx);
+                } else {
+                    loadTrack(0);
+                }
+            } else {
+                // Sequential play
+                loadTrack((currentTrackIdx + 1) % currentTracks.length);
+            }
+        }
+
+        function prevTrack() {
+            if (currentTracks.length > 0) loadTrack((currentTrackIdx - 1 + currentTracks.length) % currentTracks.length);
+        }
+
+        function toggleMobileTracklist(forceState) {
+            const el = document.getElementById('mobile-track-overlay');
+            if (typeof forceState !== 'undefined') {
+                if (forceState) el.classList.add('open');
+                else el.classList.remove('open');
+            } else {
+                el.classList.toggle('open');
+            }
+        }
+
+        function toggleFullscreen() {
+            const elem = document.body;
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) elem.requestFullscreen().catch(err => document.body.classList.toggle('fullscreen-mode'));
+                else document.body.classList.toggle('fullscreen-mode');
+            } else {
+                if (document.exitFullscreen) document.exitFullscreen();
+                document.body.classList.remove('fullscreen-mode');
+            }
+        }
+
+        // Quality toggle state
+        let isHD = true;
+
+        function toggleQuality() {
+            if (!player || !player.setPlaybackQuality) return;
+
+            const btn = document.getElementById('quality-btn');
+
+            if (isHD) {
+                // Switch to SD
+                player.setPlaybackQuality('small');
+                btn.innerText = 'SD';
+                btn.style.color = '#ff6b6b'; // Red-ish for SD
+                isHD = false;
+            } else {
+                // Switch to HD
+                player.setPlaybackQuality('hd720');
+                btn.innerText = 'HD';
+                btn.style.color = ''; // Reset to default
+                isHD = true;
+            }
+        }
+
+        function shuffleGlobal() {
+            // Toggle shuffle mode
+            isShuffleOn = !isShuffleOn;
+
+            // Update UI to show shuffle state
+            const shuffleBtns = document.querySelectorAll('[onclick=\"shuffleGlobal()\"]');
+            shuffleBtns.forEach(btn => {
+                if (isShuffleOn) {
+                    btn.style.color = 'var(--neon-green)';
+                    btn.style.borderColor = 'var(--neon-green)';
+                } else {
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }
+            });
+        }
+
+        // Progress Bar Functions
+        function formatTime(seconds) {
+            if (!seconds || isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function updateProgress() {
+            if (!player || !player.getCurrentTime || !player.getDuration) return;
+
+            const current = player.getCurrentTime();
+            const duration = player.getDuration();
+
+            if (duration > 0) {
+                const percent = (current / duration) * 100;
+                document.getElementById('progress-bar').style.width = percent + '%';
+                document.getElementById('current-time').innerText = formatTime(current);
+                document.getElementById('duration-time').innerText = formatTime(duration);
+            }
+        }
+
+        function seekTo(event) {
+            if (!player || !player.getDuration || !player.seekTo) return;
+
+            const progressContainer = event.currentTarget;
+            const rect = progressContainer.getBoundingClientRect();
+            const clickX = event.clientX - rect.left;
+            const percent = Math.max(0, Math.min(1, clickX / rect.width));
+            const duration = player.getDuration();
+            const seekTime = duration * percent;
+
+            player.seekTo(seekTime, true);
+        }
+
+        // Drag/scrub functionality
+        let isDragging = false;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressContainer = document.querySelector('.progress-container');
+            if (!progressContainer) return;
+
+            progressContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                seekTo(e);
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const progressContainer = document.querySelector('.progress-container');
+                if (!progressContainer || !player) return;
+
+                const rect = progressContainer.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const percent = Math.max(0, Math.min(1, clickX / rect.width));
+                const duration = player.getDuration();
+                const seekTime = duration * percent;
+
+                player.seekTo(seekTime, true);
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        });
+
+        // Update progress bar every second
+        setInterval(updateProgress, 1000);
+
+        // === TAB VISIBILITY HANDLER ===
+        // Mute when tab is hidden to prevent background throttle-pausing.
+        // Unmute when tab becomes visible again.
+        let wasPlayingBeforeHidden = false;
+        document.addEventListener('visibilitychange', () => {
+            if (!player || typeof player.isMuted !== 'function') return;
+            if (document.hidden) {
+                // Tab hidden: mute to exempt from background pause restriction
+                wasPlayingBeforeHidden = isPlaying;
+                if (isPlaying && !player.isMuted()) {
+                    player.mute();
+                }
+            } else {
+                // Tab visible: unmute
+                if (wasPlayingBeforeHidden && player.isMuted()) {
+                    player.unMute();
+                }
+            }
+        });
+
+        // === MUTATION OBSERVER: Auto-dismiss "Are you still watching?" ===
+        // YouTube spawns a yt-confirm-dialog-renderer when it wants to pause.
+        // This observer detects it and programmatically clicks the confirm button.
+        const ytDialogObserver = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                for (const node of mutation.addedNodes) {
+                    if (node.nodeType !== 1) continue;
+                    // Look for the confirm dialog
+                    const dialog = node.querySelector?.('yt-confirm-dialog-renderer') ||
+                        (node.tagName === 'YT-CONFIRM-DIALOG-RENDERER' ? node : null);
+                    if (dialog) {
+                        const confirmBtn = dialog.querySelector('#confirm-button a, #confirm-button button, .yt-confirm-dialog-renderer #confirm-button');
+                        if (confirmBtn) {
+                            confirmBtn.click();
+                            console.log('[PIXELSTORTION] Auto-dismissed YouTube still-watching prompt');
+                        }
+                    }
+                }
+            }
+        });
+        ytDialogObserver.observe(document.body, { childList: true, subtree: true });
+
+        // ============================================================
+        // BRAND DROPDOWN
+        // ============================================================
+        function toggleBrandMenu(e) {
+            e.stopPropagation();
+            const menu = document.getElementById('brandDropdown');
+            menu.classList.toggle('active');
+            // On mobile (position:fixed), position below the trigger button
+            if (menu.classList.contains('active') && window.innerWidth <= 768) {
+                const trigger = e.currentTarget;
+                const rect = trigger.getBoundingClientRect();
+                menu.style.top = (rect.bottom + 4) + 'px';
+                menu.style.left = rect.left + 'px';
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('brandDropdown');
+            if (menu && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href.toLowerCase();
+            const dropdownLinks = document.querySelectorAll('.brand-dropdown-item');
+            
+            dropdownLinks.forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const isSilenceLink = href.includes('/silence/');
+                const isMataalaLink = href.includes('/mataala/');
+                const isCinemaLink = href.includes('/silentcinema/');
+                const isBioLink = href.includes('/bio/');
+                
+                if ((currentUrl.includes('silence') && !currentUrl.includes('silentcinema') && isSilenceLink) || 
+                    (currentUrl.includes('mataala') && isMataalaLink) ||
+                    (currentUrl.includes('silentcinema') && isCinemaLink) ||
+                    (currentUrl.includes('bio') && isBioLink)) {
+                    link.removeAttribute('href');
+                    link.style.opacity = '0.4';
+                    link.style.cursor = 'default';
+                    link.style.pointerEvents = 'none';
+                    link.innerHTML += ' <span style="font-size:9px; letter-spacing:1px; margin-left:8px; color:#666;">[ACTIVE]</span>';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

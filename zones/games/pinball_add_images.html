@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BLAST RADIUS TOTAL COLLAPSE</title>
+
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+
+    <style>
+        /* RESET & GLOBAL */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --neon-green: #00ff41;
+            --neon-pink: #ff0055;
+            --neon-cyan: #00e5ff;
+            --neon-yellow: #ffea00;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background: #000;
+            color: #e4e4e7;
+            font-family: var(--font-mono);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+        }
+
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10000;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.25) 4px);
+        }
+
+        .vignette {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        #cabinet {
+            width: 100%;
+            max-width: 720px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #020204;
+            border-left: 2px solid rgba(0, 229, 255, 0.4);
+            border-right: 2px solid rgba(0, 229, 255, 0.4);
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 229, 255, 0.1);
+        }
+
+        #hud {
+            padding: 12px 15px;
+            text-align: center;
+            background: #050508;
+            border-bottom: 2px solid var(--neon-cyan);
+            z-index: 10;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hud-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hud-side.right {
+            align-items: flex-end;
+        }
+
+        .hud-label {
+            font-size: 10px;
+            color: var(--neon-pink);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hud-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-cyan);
+            letter-spacing: 1px;
+            margin-top: 2px;
+            transition: color 0.1s;
+        }
+
+        .hud-multiplier {
+            font-size: 18px;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 10px var(--neon-yellow);
+        }
+
+        #game-container {
+            flex: 1;
+            position: relative;
+            background: radial-gradient(ellipse at 50% 40%, #0a0a14 0%, #000 90%);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #terminal {
+            height: 140px;
+            background: #010102;
+            border-top: 2px solid var(--neon-green);
+            padding: 10px 15px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--neon-green);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            box-shadow: inset 0 20px 20px -20px rgba(0, 255, 65, 0.3);
+        }
+
+        .log-entry {
+            margin-bottom: 2px;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+            opacity: 0;
+            animation: fadeIn 0.2s forwards;
+        }
+
+        .log-damage {
+            color: var(--neon-pink);
+            text-shadow: 0 0 8px var(--neon-pink);
+        }
+
+        .log-alert {
+            color: var(--neon-yellow);
+            text-shadow: 0 0 8px var(--neon-yellow);
+            font-weight: bold;
+        }
+
+        .log-system {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        #controls {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            border-top: 1px dashed #222;
+            padding-top: 8px;
+        }
+
+        .glitch {
+            animation: glitchHit 0.2s cubic-bezier(.25, .46, .45, .94) both;
+            color: var(--neon-pink);
+        }
+
+        @keyframes glitchHit {
+            0% {
+                transform: translate(0)
+            }
+
+            20% {
+                transform: translate(-4px, 3px)
+            }
+
+            40% {
+                transform: translate(4px, -3px)
+            }
+
+            60% {
+                transform: translate(-3px, 3px)
+            }
+
+            80% {
+                transform: translate(3px, -3px)
+            }
+
+            100% {
+                transform: translate(0)
+            }
+        }
+
+        .flash {
+            animation: screenFlash 0.3s ease-out;
+        }
+
+        @keyframes screenFlash {
+            0% {
+                background: rgba(255, 0, 85, 0.3);
+            }
+
+            100% {
+                background: transparent;
+            }
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        /* RESET & GLOBAL */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --neon-green: #00ff41;
+            --neon-pink: #ff0055;
+            --neon-cyan: #00e5ff;
+            --neon-yellow: #ffea00;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background: #000;
+            color: #e4e4e7;
+            font-family: var(--font-mono);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+        }
+
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10000;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.25) 4px);
+        }
+
+        .vignette {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        #cabinet {
+            width: 100%;
+            max-width: 720px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #020204;
+            border-left: 2px solid rgba(0, 229, 255, 0.4);
+            border-right: 2px solid rgba(0, 229, 255, 0.4);
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 229, 255, 0.1);
+        }
+
+        #hud {
+            padding: 12px 15px;
+            text-align: center;
+            background: #050508;
+            border-bottom: 2px solid var(--neon-cyan);
+            z-index: 10;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hud-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hud-side.right {
+            align-items: flex-end;
+        }
+
+        .hud-label {
+            font-size: 10px;
+            color: var(--neon-pink);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hud-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-cyan);
+            letter-spacing: 1px;
+            margin-top: 2px;
+            transition: color 0.1s;
+        }
+
+        .hud-multiplier {
+            font-size: 18px;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 10px var(--neon-yellow);
+        }
+
+        #game-container {
+            flex: 1;
+            position: relative;
+            background: radial-gradient(ellipse at 50% 40%, #0a0a14 0%, #000 90%);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #terminal {
+            height: 140px;
+            background: #010102;
+            border-top: 2px solid var(--neon-green);
+            padding: 10px 15px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--neon-green);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            box-shadow: inset 0 20px 20px -20px rgba(0, 255, 65, 0.3);
+        }
+
+        .log-entry {
+            margin-bottom: 2px;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+            opacity: 0;
+            animation: fadeIn 0.2s forwards;
+        }
+
+        .log-damage {
+            color: var(--neon-pink);
+            text-shadow: 0 0 8px var(--neon-pink);
+        }
+
+        .log-alert {
+            color: var(--neon-yellow);
+            text-shadow: 0 0 8px var(--neon-yellow);
+            font-weight: bold;
+        }
+
+        .log-system {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        #controls {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            border-top: 1px dashed #222;
+            padding-top: 8px;
+        }
+
+        .glitch {
+            animation: glitchHit 0.2s cubic-bezier(.25, .46, .45, .94) both;
+            color: var(--neon-pink);
+        }
+
+        @keyframes glitchHit {
+            0% {
+                transform: translate(0)
+            }
+
+            20% {
+                transform: translate(-4px, 3px)
+            }
+
+            40% {
+                transform: translate(4px, -3px)
+            }
+
+            60% {
+                transform: translate(-3px, 3px)
+            }
+
+            80% {
+                transform: translate(3px, -3px)
+            }
+
+            100% {
+                transform: translate(0)
+            }
+        }
+
+        .flash {
+            animation: screenFlash 0.3s ease-out;
+        }
+
+        @keyframes screenFlash {
+            0% {
+                background: rgba(255, 0, 85, 0.3);
+            }
+
+            100% {
+                background: transparent;
+            }
+        }
+    </style>
+
+
+
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+
+    <div id="cabinet">
+        <div id="hud">
+            <div class="hud-side">
+                <div class="hud-label">Dominic's Empire</div>
+                <div id="score-display" class="hud-value">$20,000,000,000</div>
+            </div>
+            <div class="hud-side right">
+                <div class="hud-label">Multiplier</div>
+                <div id="multiplier-display" class="hud-value hud-multiplier">1.0x</div>
+            </div>
+        </div>
+
+        <div id="game-container"></div>
+
+        <div id="terminal">
+            <div id="log-output">
+                <div class="log-entry">> INITIATING BLAST RADIUS PROTOCOL.</div>
+                <div class="log-entry">> MASS/DENSITY: x10. GRAVITY: 2.8G.</div>
+                <div class="log-entry log-system">> WAITING FOR PAYLOAD INJECTION...</div>
+            </div>
+            <div id="controls">[TAP SIDES: FLIP] • [A/D or ←/→: FLIPPERS] • [W or ↑: NUDGE]</div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // GLOBAL STATE & DOM
+
+        const STATE = {
+            score: 20000000000,
+            multiplier: 1.0,
+            ballsInPlay: 0,
+            targetsCleared: 0,
+            isMultiball: false,
+            comboTimer: null
+        };
+
+        const DOM = {
+            score: document.getElementById('score-display'),
+            mult: document.getElementById('multiplier-display'),
+            log: document.getElementById('log-output'),
+            container: document.getElementById('game-container')
+        };
+
+        function formatMoney(amount) {
+            return '$' + amount.toLocaleString();
+        }
+
+        function addLog(msg, type = '') {
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.innerText = msg;
+            DOM.log.appendChild(entry);
+            if (DOM.log.childElementCount > 6) {
+                DOM.log.removeChild(DOM.log.firstChild);
+            }
+        }
+
+        function flashHUD() {
+            DOM.score.classList.remove('glitch');
+            void DOM.score.offsetWidth;
+            DOM.score.classList.add('glitch');
+        }
+
+
+        // PINBALL SCENE 720w x 1280h
+        // All image positions from implementation_plan.md
+        // Scale: 1.0 for all images (except ball at 0.70)
+        // Rotation: 0 for all images at start
+
+        class PinballSimulation extends Phaser.Scene {
+            constructor() {
+                super('PinballSimulation');
+                this.W = 720;
+                this.H = 1280;
+
+                // Collision Categories
+                this.CAT_BALL = 0x0001;
+                this.CAT_TABLE = 0x0002;
+                this.CAT_FLIPPER = 0x0004;
+                this.CAT_SENSOR = 0x0008;
+
+                this.balls = [];
+                this.dropTargets = [];
+                this.IMG = 'phone_1280_720/';
+            }
+
+
+            // PRELOAD load all image assets
+
+            preload() {
+                // Particle texture (generated)
+                let g = this.make.graphics({ x: 0, y: 0, add: false });
+                g.fillStyle(0xffffff, 1);
+                g.fillCircle(4, 4, 4);
+                g.generateTexture('particle', 8, 8);
+                g.clear();
+
+                const P = this.IMG;
+
+                // Triangles (138x138)
+                this.load.image('triangle_inactive', P + 'triangle_inactive.png');
+                this.load.image('triangle_active', P + 'triangle_active.png');
+
+                // Transport ball button (142x142)
+                this.load.image('transport_btn_inactive', P + 'transport_ball_button_inactive.png');
+                this.load.image('transport_btn_active', P + 'transport_ball_button_active.png');
+
+                // ISLA text (291x176)
+                this.load.image('isla_inactive', P + 'Text_ISLA_inactive.png');
+                this.load.image('isla_active', P + 'Text_ISLA_active.png');
+
+                // Stoppers (137x175)
+                this.load.image('stopper_inactive', P + 'stopper_inactive.png');
+                this.load.image('stopper_active', P + 'stopper_active.png');
+
+                // Reactive small bars (60x129)
+                this.load.image('bar_inactive', P + 'reactive_small_bar_inactive.png');
+                this.load.image('bar_active', P + 'reactive_small_bar_active.png');
+
+                // Lights
+                this.load.image('light_top', P + 'light_top.png');           // 430x216
+                this.load.image('light_side_top', P + 'light_side_top.png'); // 273x462
+                this.load.image('light_side_bottom', P + 'light_side_bottom.png'); // 262x417
+
+                // Bottom hole godrays (462x380)
+                this.load.image('godrays_1', P + 'hole_godrays_1_bottom.png');
+                this.load.image('godrays_2', P + 'hole_godrays_2_bottom.png');
+                this.load.image('godrays_3', P + 'hole_godrays_3_bottom.png');
+
+                // Flippers (263x226)
+                this.load.image('flipper_inactive', P + 'flipper_inactive.png');
+                this.load.image('flipper_translucent', P + 'flipper_translucent.png');
+                this.load.image('flipper_active', P + 'flipper_active.png');
+
+                // Bottom hole overlay (310x124)
+                this.load.image('bottom_overlay', P + 'bottom_hole_overlay.png');
+
+                // Blast ball (394x394)
+                this.load.image('blast_base', P + 'Blast_ball_Base.png');
+                this.load.image('blast_ring1', P + 'Blast_ball_ring_1.png');
+                this.load.image('blast_ring2', P + 'Blast_ball_ring_2.png');
+                this.load.image('blast_shiny', P + 'Blast_ball_shiny.png');
+                this.load.image('blast_glow3', P + 'Blast_ball_bright_glow_3.png');
+                this.load.image('blast_extra_glow3', P + 'Blast_ball_bright_extra_glow_3.png');
+
+                // Blast energy explosion yahhoooo... (720x1280 full screen)
+                this.load.image('godrays_blast', P + 'god_rays_from_blast_ball.png');
+                this.load.image('lightning_blast', P + 'lighting_from_blast_ball.png');
+
+                // Ball (151x151 displayed at 70% scale)
+                this.load.image('ball_base', P + 'Ball_drop_shadow.png');
+                this.load.image('ball_left', P + 'Ball_Left_Hit.png');
+                this.load.image('ball_right', P + 'Ball_Right_Hit.png');
+                this.load.image('ball_top', P + 'Ball_Top_Hit.png');
+                this.load.image('ball_bot', P + 'Ball_Bot_Hit.png');
+                this.load.image('ball_fresnel', P + 'Ball_fresnel_rim_glow.png');
+                this.load.image('ball_glow', P + 'Ball_glow.png');
+
+                // Background (720x1280)
+                this.load.image('background', P + 'background.png');
+            }
+
+
+            // CREATE
+
+            create() {
+                this.matter.world.autoUpdate = false;
+                this.matter.world.setBounds(0, -500, this.W, this.H + 800, 300, true, true, false, false);
+
+                // VFX particles
+                this.particles = this.add.particles(0, 0, 'particle', {
+                    speed: { min: 100, max: 400 },
+                    angle: { min: 0, max: 360 },
+                    scale: { start: 1.5, end: 0 },
+                    blendMode: 'ADD',
+                    lifespan: 400,
+                    tint: 0xffcc00,
+                    emitting: false
+                });
+
+                // ---- Build scene layers (bottom to top) ----
+                // Background at pos[360.0, 640.0] AE layer 36
+                this.add.image(360.0, 640.0, 'background').setDepth(0);
+
+                this.createLights();          // Depth 1-5, starts OFF
+                this.createBlastBall();       // Depth 6-9
+                this.createIslaText();        // Depth 10
+                this.createStoppers();        // Depth 12-13
+                this.createTriangles();       // Depth 14-15
+                this.createdropTargetBars();  // Depth 16-17
+                this.createTransportButton(); // Depth 18-19
+                this.createFlippers();        // Depth 20-25
+                this.createBottomGodrays();   // Depth 30, starts OFF
+                this.createBottomOverlay();   // Depth 100, always on top
+                this.createPhysicsWalls();    // Invisible physics geometry
+
+                // Spawn ball near ISLA text, let it drop
+                this.spawnBall();
+                this.setupControls();
+                this.setupCollisions();
+
+                this.lastNudge = 0;
+            }
+
+
+            // LIGHTS all default OFF (alpha 0), only flash on ball hit
+            // Positions from AE file (exact sub-pixel)
+
+            createLights() {
+                // light_top AE layer 32 at (353.0, 144.0) + layer 33 at (367.0, 144.0)
+                this.lightTop1 = this.add.image(353.0, 144.0, 'light_top')
+                    .setAlpha(0).setDepth(1);
+                this.lightTop2 = this.add.image(367.0, 144.0, 'light_top')
+                    .setAlpha(0).setDepth(1);
+
+                // light_side_top AE layer 13 at (164.6, 434.6) + mirror
+                this.lightSideTopL = this.add.image(164.6, 434.6, 'light_side_top')
+                    .setAlpha(0).setDepth(2);
+                this.lightSideTopR = this.add.image(556.2, 434.6, 'light_side_top')
+                    .setFlipX(true).setAlpha(0).setDepth(2);
+
+                // light_side_bottom AE layers 34+35 at (556.2, 808.1) and (163.8, 808.1)
+                this.lightSideBotL = this.add.image(163.8, 808.1, 'light_side_bottom')
+                    .setAlpha(0).setDepth(3);
+                this.lightSideBotR = this.add.image(556.2, 808.1, 'light_side_bottom')
+                    .setFlipX(true).setAlpha(0).setDepth(3);
+            }
+
+            // Flash a light on, then fade off (only on ball collision)
+            flashLight(lightOrArray) {
+                if (!lightOrArray) return;
+                const targets = Array.isArray(lightOrArray) ? lightOrArray : [lightOrArray];
+                this.tweens.add({
+                    targets: targets,
+                    alpha: { from: 1, to: 0 },
+                    duration: 300,
+                    ease: 'Cubic.easeOut'
+                });
+            }
+
+
+            // BLAST BALL AE layers 9-12 at (220.7, 229.9)
+            // Blast_ball_Base is default, others off
+
+            createBlastBall() {
+                // AE exact position for all Blast_ball layers
+                const bx = 220.7, by = 229.9;
+
+                // All at scale 1.0, rotation 0
+                this.blastBase = this.add.image(bx, by, 'blast_base').setDepth(6);
+                this.blastRing1 = this.add.image(bx, by, 'blast_ring1').setAlpha(0).setDepth(7);
+                this.blastRing2 = this.add.image(bx, by, 'blast_ring2').setAlpha(0).setDepth(7);
+                this.blastShiny = this.add.image(bx, by, 'blast_shiny').setAlpha(0).setDepth(8);
+                this.blastGlow3 = this.add.image(bx, by, 'blast_glow3').setAlpha(0).setDepth(8);
+                this.blastExtraGlow = this.add.image(bx, by, 'blast_extra_glow3').setAlpha(0).setDepth(9);
+
+                // Full-screen energy effects AE layer 4 at (360.0, 640.0)
+                this.godRaysBlast = this.add.image(360.0, 640.0, 'godrays_blast').setAlpha(0).setDepth(50);
+                this.lightningBlast = this.add.image(360.0, 640.0, 'lightning_blast').setAlpha(0).setDepth(50);
+
+                // Physics bumper at blast ball position (invisible)
+                const M = Phaser.Physics.Matter.Matter;
+                this.matter.world.add(M.Bodies.circle(bx, by, 90, {
+                    isStatic: true, restitution: 2.2, friction: 0, label: 'bumper',
+                    collisionFilter: { category: this.CAT_TABLE, mask: this.CAT_BALL },
+                    render: { visible: false },
+                    plugin: { dmg: 1000000, name: 'ISLA_CORE' }
+                }));
+            }
+
+            triggerBlastEffect() {
+                // Ring fade-on
+                this.tweens.add({ targets: this.blastRing1, alpha: { from: 0, to: 0.8 }, duration: 150, yoyo: true });
+                this.tweens.add({ targets: this.blastRing2, alpha: { from: 0, to: 0.6 }, duration: 200, yoyo: true, delay: 50 });
+            }
+
+            triggerBlastExplosion() {
+                // Full energy burst for big events
+                this.tweens.add({ targets: this.blastShiny, alpha: { from: 0, to: 1 }, duration: 100, yoyo: true, hold: 50 });
+                this.tweens.add({ targets: this.blastGlow3, alpha: { from: 0, to: 1 }, duration: 200, yoyo: true, hold: 100 });
+                this.tweens.add({ targets: this.blastExtraGlow, alpha: { from: 0, to: 1 }, duration: 200, yoyo: true, hold: 100, delay: 50 });
+                this.tweens.add({ targets: this.godRaysBlast, alpha: { from: 0, to: 0.7 }, duration: 300, yoyo: true, hold: 200 });
+                this.tweens.add({ targets: this.lightningBlast, alpha: { from: 0, to: 0.6 }, duration: 150, yoyo: true, hold: 100, delay: 100 });
+            }
+
+
+            // ISLA TEXT pos[368, 746], scale 1.0, rotation 0
+            // inactive=visible, active=off
+
+            createIslaText() {
+                // AE layers 26+27 at (368.2, 745.9)
+                this.islaInactive = this.add.image(368.2, 745.9, 'isla_inactive').setDepth(10);
+                this.islaActive = this.add.image(368.2, 745.9, 'isla_active').setAlpha(0).setDepth(11);
+            }
+
+
+            // STOPPERS (bumpers) positions from AE file
+            // Stopper 1 (AE layers 20-23): pos[269.4, 443.3]
+            // Stopper 2 (AE layers 24-25): pos[196.7, 557.8]
+            // Scale 1.0, rotation 0
+
+            createStoppers() {
+                const M = Phaser.Physics.Matter.Matter;
+                const bumpOpts = {
+                    isStatic: true, restitution: 2.2, friction: 0, label: 'bumper',
+                    collisionFilter: { category: this.CAT_TABLE, mask: this.CAT_BALL },
+                    render: { visible: false }
+                };
+
+                // Stopper 1 at AE (269.4, 443.3)
+                this.stopper1_inactive = this.add.image(269.4, 443.3, 'stopper_inactive').setDepth(12);
+                this.stopper1_active = this.add.image(269.4, 443.3, 'stopper_active').setAlpha(0).setDepth(13);
+                this.matter.world.add(M.Bodies.circle(269.4, 443.3, 45, {
+                    ...bumpOpts,
+                    plugin: { dmg: 500000, name: 'ETHEL_NODE', activeSprite: null }
+                }));
+
+                // Stopper 2 at AE (196.7, 557.8)
+                this.stopper2_inactive = this.add.image(196.7, 557.8, 'stopper_inactive').setDepth(12);
+                this.stopper2_active = this.add.image(196.7, 557.8, 'stopper_active').setAlpha(0).setDepth(13);
+                this.matter.world.add(M.Bodies.circle(196.7, 557.8, 45, {
+                    ...bumpOpts,
+                    plugin: { dmg: 600000, name: 'BRIDGE_NODE', activeSprite: null }
+                }));
+            }
+
+
+            // TRIANGLES (slingshots)
+            // Triangle 1: pos[220, 880]
+            // Triangle 2: mirrored at [500, 880] (720-220=500)
+            // Scale 1.0, rotation 0
+
+            createTriangles() {
+                const M = Phaser.Physics.Matter.Matter;
+                const slingOpts = {
+                    isStatic: true, restitution: 1.4, friction: 0, label: 'slingshot',
+                    chamfer: { radius: 8 },
+                    collisionFilter: { category: this.CAT_TABLE, mask: this.CAT_BALL },
+                    render: { visible: false }
+                };
+
+                // Triangle 1 (left) AE layer 31 at (173.3803, 861.4949)
+                const sx = 1.481778, sy = 1.674793;
+                this.tri1_inactive = this.add.image(173.3803, 861.4949, 'triangle_inactive').setScale(sx, sy).setAngle(-207).setDepth(14);
+                this.tri1_active = this.add.image(173.3803, 861.4949, 'triangle_active').setScale(sx, sy).setAngle(-207).setAlpha(0).setDepth(15);
+                let tri1body = M.Bodies.polygon(173.3803, 861.4949, 3, 55, { ...slingOpts, plugin: { id: 'tri1' } });
+                M.Body.scale(tri1body, sx, sy);
+                M.Body.setAngle(tri1body, -207 * Math.PI / 180);
+                this.matter.world.add(tri1body);
+
+                // Triangle 2 (right, mirrored) mirrored on X axis 720 - 173.3803 = 546.6197
+                this.tri2_inactive = this.add.image(546.6197, 861.4949, 'triangle_inactive').setFlipX(true).setScale(sx, sy).setAngle(207).setDepth(14);
+                this.tri2_active = this.add.image(546.6197, 861.4949, 'triangle_active').setFlipX(true).setScale(sx, sy).setAngle(207).setAlpha(0).setDepth(15);
+                let tri2body = M.Bodies.polygon(546.6197, 861.4949, 3, 55, { ...slingOpts, plugin: { id: 'tri2' } });
+                M.Body.scale(tri2body, sx, sy);
+                M.Body.setAngle(tri2body, 207 * Math.PI / 180);
+                this.matter.world.add(tri2body);
+            }
+
+
+            // drop TARGET BARS (reactive_small_bar)
+            // Bar 1: pos[530, 548]   Bar 2: pos[226, 463]   Bar 3: pos[521, 368]
+            // Default: inactive=visible, active=off
+            // Scale 1.0, rotation 0
+
+            createdropTargetBars() {
+                const M = Phaser.Physics.Matter.Matter;
+                // AE positions ALL bars on RIGHT side:
+                // Layer 16/19: (529.4, 547.6)
+                // Layer 15/18: (526.2, 463.0)
+                // Layer 14/17: (521.5, 369.0)
+                const positions = [
+                    { x: 529.4, y: 547.6, id: 0 },
+                    { x: 526.2, y: 463.0, id: 1 },
+                    { x: 521.5, y: 369.0, id: 2 }
+                ];
+
+                positions.forEach(pos => {
+                    let inactive = this.add.image(pos.x, pos.y, 'bar_inactive').setDepth(16);
+                    let active = this.add.image(pos.x, pos.y, 'bar_active').setAlpha(0).setDepth(17);
+
+                    let body = M.Bodies.rectangle(pos.x, pos.y, 30, 80, {
+                        isStatic: true, restitution: 0.1, label: 'drop_target',
+                        collisionFilter: { category: this.CAT_TABLE, mask: this.CAT_BALL },
+                        render: { visible: false },
+                        plugin: { active: true, id: pos.id, spriteInactive: inactive, spriteActive: active }
+                    });
+                    this.matter.world.add(body);
+                    this.dropTargets.push(body);
+                });
+            }
+
+
+            // TRANSPORT BALL BUTTON (subway/lock hole)
+            // pos[181, 750], scale 1.0, rotation 0
+
+            createTransportButton() {
+                const M = Phaser.Physics.Matter.Matter;
+
+                // AE layers 28+29 at (181.4, 749.8)
+                this.transportInactive = this.add.image(181.4, 749.8, 'transport_btn_inactive').setDepth(18);
+                this.transportActive = this.add.image(181.4, 749.8, 'transport_btn_active').setAlpha(0).setDepth(19);
+
+                this.subwayHole = M.Bodies.circle(181.4, 749.8, 40, {
+                    isStatic: true, isSensor: true, label: 'subway_hole',
+                    collisionFilter: { category: this.CAT_SENSOR, mask: this.CAT_BALL },
+                    render: { visible: false }
+                });
+                this.matter.world.add(this.subwayHole);
+            }
+
+
+            // FLIPPERS AE layers 7+8
+            // Left flipper: AE layer 8 at (239.8, 1073.6)
+            // Right flipper: AE layer 7 at (480.2, 1073.6)
+            // Images start at rotation 0, scale 1.0, default origin (0.5, 0.5)
+            // Physics handles rotation; sync orbits image center around knob
+
+            createFlippers() {
+                const M = Phaser.Physics.Matter.Matter;
+
+                const flipOpts = {
+                    density: 0.5, restitution: 0.3, friction: 0.2, label: 'flipper',
+                    chamfer: { radius: 12 },
+                    collisionFilter: { category: this.CAT_FLIPPER, mask: this.CAT_BALL },
+                    render: { visible: false }
+                };
+
+                const fScale = 1.13;
+                const fW = 190 * fScale, fH = 35 * fScale; // Scaled gap to allow ball to drop more easily
+
+                // Physics rest/active angles
+                this.L_REST = 0.55;
+                this.L_UP = -0.45;
+                this.R_REST = -0.55;
+                this.R_UP = 0.45;
+
+                // Flipper image: 263x226
+                // Knob position in image-local coords: approx (60, 95) from top-left
+                // Image center in local coords: (131.5, 113)
+                // Offset from knob to center: (71.5, 18)
+                this.flipKnobToCenterX = 71.5 * fScale;
+                this.flipKnobToCenterY = 18 * fScale;
+
+                // AE exact positions
+                const lx = 223.4169, ly = 1073.6;
+                const rx = 720 - 223.4169, ry = 1073.6;
+
+                const pivotOffset = 15 * fScale;
+
+                // --- LEFT FLIPPER ---
+                // Knob world pos = center - offset
+                this.knobL = { x: lx - this.flipKnobToCenterX, y: ly - this.flipKnobToCenterY };
+                this.flipL = M.Bodies.rectangle(this.knobL.x + fW / 2 - pivotOffset, this.knobL.y, fW, fH, flipOpts);
+                M.Body.setAngle(this.flipL, this.L_REST); // Initialize at rest angle
+                this.matter.world.add(this.flipL);
+                this.matter.world.add(M.Constraint.create({
+                    bodyA: this.flipL, pointA: { x: -fW / 2 + pivotOffset, y: 0 }, pointB: this.knobL,
+                    length: 0, stiffness: 1, render: { visible: false }
+                }));
+
+                // --- RIGHT FLIPPER ---
+                // Knob world pos = center + offset (mirrored X)
+                this.knobR = { x: rx + this.flipKnobToCenterX, y: ry - this.flipKnobToCenterY };
+                this.flipR = M.Bodies.rectangle(this.knobR.x - fW / 2 + pivotOffset, this.knobR.y, fW, fH, flipOpts);
+                M.Body.setAngle(this.flipR, this.R_REST); // Initialize at rest angle
+                this.matter.world.add(this.flipR);
+                this.matter.world.add(M.Constraint.create({
+                    bodyA: this.flipR, pointA: { x: fW / 2 - pivotOffset, y: 0 }, pointB: this.knobR,
+                    length: 0, stiffness: 1, render: { visible: false }
+                }));
+
+                // --- FLIPPER IMAGES ---
+                // Default origin (0.5, 0.5) center placed at AE position
+                // Left flipper at (239.8, 1073.6)
+                this.flipLInactive = this.add.image(lx, ly, 'flipper_inactive').setScale(fScale).setDepth(20);
+                this.flipLTranslucent = this.add.image(lx, ly, 'flipper_translucent').setScale(fScale).setAlpha(0).setDepth(21);
+                this.flipLActive = this.add.image(lx, ly, 'flipper_active').setScale(fScale).setAlpha(0).setDepth(22);
+
+                // Right flipper at (480.2, 1073.6) mirrored
+                this.flipRInactive = this.add.image(rx, ry, 'flipper_inactive').setScale(fScale).setFlipX(true).setDepth(20);
+                this.flipRTranslucent = this.add.image(rx, ry, 'flipper_translucent').setScale(fScale).setFlipX(true).setAlpha(0).setDepth(21);
+                this.flipRActive = this.add.image(rx, ry, 'flipper_active').setScale(fScale).setFlipX(true).setAlpha(0).setDepth(22);
+
+                this.flipLFlashing = false;
+                this.flipRFlashing = false;
+            }
+
+            // Flipper activation animation per plan:
+            // translucent fades onactive fades onactive fades offtranslucent fades off
+            flashFlipper(side) {
+                let translucent, active, flagProp;
+                if (side === 'left') {
+                    if (this.flipLFlashing) return;
+                    this.flipLFlashing = true;
+                    translucent = this.flipLTranslucent;
+                    active = this.flipLActive;
+                    flagProp = 'flipLFlashing';
+                } else {
+                    if (this.flipRFlashing) return;
+                    this.flipRFlashing = true;
+                    translucent = this.flipRTranslucent;
+                    active = this.flipRActive;
+                    flagProp = 'flipRFlashing';
+                }
+
+                // ON: translucent on, then active on
+                this.tweens.add({
+                    targets: translucent, alpha: { from: 0, to: 0.8 }, duration: 60,
+                    onComplete: () => {
+                        this.tweens.add({
+                            targets: active, alpha: { from: 0, to: 1 }, duration: 40,
+                            onComplete: () => {
+                                // OFF (inverted): active off, then translucent off
+                                this.tweens.add({
+                                    targets: active, alpha: 0, duration: 100,
+                                    onComplete: () => {
+                                        this.tweens.add({
+                                            targets: translucent, alpha: 0, duration: 100,
+                                            onComplete: () => { this[flagProp] = false; }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+
+
+            // BOTTOM GODRAYS pos[360, 1089], all OFF by default
+            // 3 layers in order of brightness
+
+            createBottomGodrays() {
+                // AE layers 1-3 at (360.3, 1089.0)
+                this.godrays1 = this.add.image(360.3, 1089.0, 'godrays_1').setAlpha(0).setDepth(30);
+                this.godrays2 = this.add.image(360.3, 1089.0, 'godrays_2').setAlpha(0).setDepth(31);
+                this.godrays3 = this.add.image(360.3, 1089.0, 'godrays_3').setAlpha(0).setDepth(32);
+            }
+
+            flashGodrays() {
+                // Cycle through in brightness order
+                this.tweens.add({ targets: this.godrays1, alpha: { from: 0, to: 0.6 }, duration: 150, yoyo: true });
+                this.tweens.add({ targets: this.godrays2, alpha: { from: 0, to: 0.8 }, duration: 200, yoyo: true, delay: 100 });
+                this.tweens.add({ targets: this.godrays3, alpha: { from: 0, to: 1 }, duration: 250, yoyo: true, delay: 200 });
+            }
+
+
+            // BOTTOM HOLE OVERLAY pos[348, 1204]
+            // Always on, on top of all other images
+
+            createBottomOverlay() {
+                // AE layer 21 at (347.9, 1203.6)
+                this.add.image(347.9, 1203.6, 'bottom_overlay').setDepth(100);
+            }
+
+
+            // INVISIBLE PHYSICS WALLS adapted for 720x1280
+
+            createPhysicsWalls() {
+                const M = Phaser.Physics.Matter.Matter;
+                const wallOpts = {
+                    isStatic: true, friction: 0.1, restitution: 0.3,
+                    collisionFilter: { category: this.CAT_TABLE, mask: this.CAT_BALL | this.CAT_FLIPPER },
+                    render: { visible: false }
+                };
+
+                // Thick outer frame edges (100px thick to match the glass rim constraint)
+                // Left wall (inner edge at x = 100)
+                this.matter.world.add(M.Bodies.rectangle(50, this.H / 2, 100, this.H + 400, { ...wallOpts, label: 'wall_left' }));
+
+                // Right wall (inner edge at x = W - 100)
+                this.matter.world.add(M.Bodies.rectangle(this.W - 50, this.H / 2, 100, this.H + 400, { ...wallOpts, label: 'wall_right' }));
+
+                // Top wall (inner edge at y = 100)
+                this.matter.world.add(M.Bodies.rectangle(this.W / 2, 50, this.W, 100, { ...wallOpts, label: 'wall_top' }));
+
+                // Bottom corner frames (inner edge at y = H - 100, leave center gap for drain)
+                this.matter.world.add(M.Bodies.rectangle(100, this.H - 50, 200, 100, wallOpts));
+                this.matter.world.add(M.Bodies.rectangle(this.W - 100, this.H - 50, 200, 100, wallOpts));
+
+                // Upper arch deflectors
+                this.matter.world.add(M.Bodies.rectangle(130, 190, 240, 40, { ...wallOpts, angle: -Math.PI / 4, label: 'wall_arch_left' }));
+                this.matter.world.add(M.Bodies.rectangle(this.W - 130, 190, 240, 40, { ...wallOpts, restitution: 0.5, angle: Math.PI / 4, label: 'wall_arch_right' }));
+
+                // Lower flipper guide rails (funnels)
+                // Left funnel (Double Red Block Obstacles: Base slope + Steeper upper slope)
+                this.matter.world.add(M.Bodies.rectangle(127, 1090, 360, 100, { ...wallOpts, angle: 0.5508 }));
+                this.matter.world.add(M.Bodies.rectangle(127, 1057, 330, 100, { ...wallOpts, angle: 0.8568 }));
+
+                // Right funnel (Mirrored Double Red Block Obstacles)
+                this.matter.world.add(M.Bodies.rectangle(this.W - 127, 1090, 360, 100, { ...wallOpts, angle: -0.5508 }));
+                this.matter.world.add(M.Bodies.rectangle(this.W - 127, 1057, 330, 100, { ...wallOpts, angle: -0.8568 }));
+
+                // Bottom drain funnels guide to center drain below flippers
+                this.matter.world.add(M.Bodies.rectangle(150, 1180, 200, 20, { ...wallOpts, angle: 0.45 }));
+                this.matter.world.add(M.Bodies.rectangle(this.W - 150, 1180, 200, 20, { ...wallOpts, angle: -0.45 }));
+            }
+
+
+            // BALL scale 0.70, spawns at random teleport spots
+
+            spawnBall(x = null, y = null, isAutoLaunch = false) {
+                if (x === null || y === null) {
+                    const teleportSpots = [
+                        { x: 404.7813, y: 225.0262 }, { x: 468.9679, y: 631.0437 },
+                        { x: 297.3061, y: 566.8571 }, { x: 566.8571, y: 757.9242 }, { x: 288.3499, y: 754.9388 }
+                    ];
+                    const spot = teleportSpots[Phaser.Math.Between(0, teleportSpots.length - 1)];
+                    x = spot.x;
+                    y = spot.y;
+                }
+                const M = Phaser.Physics.Matter.Matter;
+
+                const BALL_SCALE = 0.588;
+                const physicsRadius = 21; // Appropriate for gameplay at this canvas size
+
+                let body = M.Bodies.circle(x, y, physicsRadius, {
+                    label: 'ball',
+                    restitution: 0.3,
+                    friction: 0.001,
+                    frictionAir: 0.002,
+                    density: 0.05,
+                    isBullet: true,
+                    slop: 0.01,
+                    collisionFilter: { category: this.CAT_BALL, mask: this.CAT_TABLE | this.CAT_FLIPPER | this.CAT_SENSOR },
+                    render: { visible: false }
+                });
+                this.matter.world.add(body);
+
+                // Ball sprites all at scale 0.70, rotation 0
+                let baseSprite = this.add.image(x, y, 'ball_base').setScale(BALL_SCALE).setDepth(35);
+                let leftHit = this.add.image(x, y, 'ball_left').setScale(BALL_SCALE).setAlpha(0).setDepth(36);
+                let rightHit = this.add.image(x, y, 'ball_right').setScale(BALL_SCALE).setAlpha(0).setDepth(36);
+                let topHit = this.add.image(x, y, 'ball_top').setScale(BALL_SCALE).setAlpha(0).setDepth(36);
+                let botHit = this.add.image(x, y, 'ball_bot').setScale(BALL_SCALE).setAlpha(0).setDepth(36);
+                let fresnel = this.add.image(x, y, 'ball_fresnel').setScale(BALL_SCALE).setAlpha(0).setDepth(37);
+                let glow = this.add.image(x, y, 'ball_glow').setScale(BALL_SCALE).setAlpha(0).setDepth(34);
+
+                let ballObj = {
+                    body: body,
+                    sprites: { base: baseSprite, left: leftHit, right: rightHit, top: topHit, bot: botHit, fresnel: fresnel, glow: glow },
+                    inSubway: false
+                };
+                this.balls.push(ballObj);
+                STATE.ballsInPlay++;
+
+                if (isAutoLaunch) {
+                    M.Body.setVelocity(body, { x: Phaser.Math.Between(-5, 5), y: -45 });
+                }
+            }
+
+            // Flash directional hit glow on ball
+            flashBallHit(ballObj, direction) {
+                let target = ballObj.sprites[direction];
+                if (!target) return;
+                this.tweens.add({
+                    targets: target,
+                    alpha: { from: 0, to: 1 },
+                    duration: 60, yoyo: true, hold: 30
+                });
+                // Fresnel flash
+                this.tweens.add({
+                    targets: ballObj.sprites.fresnel,
+                    alpha: { from: 0, to: 0.8 },
+                    duration: 80, yoyo: true
+                });
+                // Glow flash
+                this.tweens.add({
+                    targets: ballObj.sprites.glow,
+                    alpha: { from: 0, to: 0.6 },
+                    duration: 100, yoyo: true
+                });
+            }
+
+            setBallVisible(ballObj, visible) {
+                Object.values(ballObj.sprites).forEach(s => s.setVisible(visible));
+            }
+
+            getHitDirection(ballBody, otherBody) {
+                const dx = ballBody.position.x - otherBody.position.x;
+                const dy = ballBody.position.y - otherBody.position.y;
+                if (Math.abs(dx) > Math.abs(dy)) {
+                    return dx > 0 ? 'right' : 'left';
+                } else {
+                    return dy > 0 ? 'bot' : 'top';
+                }
+            }
+
+            setBallVisible(ballObj, visible) {
+                Object.values(ballObj.sprites).forEach(s => s.setVisible(visible));
+            }
+
+
+            // VFX
+
+            spawnFloatingText(x, y, text, color = '#ff0055') {
+                let t = this.add.text(x, y, text, {
+                    fontFamily: "'Courier New', Courier, monospace",
+                    fontSize: '24px', fontStyle: 'bold', color: color,
+                    stroke: '#000', strokeThickness: 4
+                }).setOrigin(0.5).setDepth(60);
+
+                this.tweens.add({
+                    targets: t, y: y - 60, alpha: 0, scale: 1.5, duration: 800,
+                    ease: 'Cubic.easeOut', onComplete: () => t.destroy()
+                });
+            }
+
+            triggerExplosion(x, y, colorHex) {
+                this.particles.setParticleTint(colorHex);
+                this.particles.emitParticleAt(x, y, 30);
+                this.cameras.main.shake(150, 0.015);
+            }
+
+            dealDamage(amount, source, x, y, isHeavy = false) {
+                let finalDmg = Math.floor(amount * STATE.multiplier);
+                STATE.score = Math.max(0, STATE.score - finalDmg);
+                DOM.score.innerText = formatMoney(STATE.score);
+                flashHUD();
+                this.spawnFloatingText(x, y, `-$${(finalDmg / 1000000).toFixed(1)}M`, '#ff0055');
+
+                if (isHeavy) {
+                    addLog(`> TARGET NEUTRALIZED: ${source} [-${formatMoney(finalDmg)}]`, 'log-damage');
+                    this.cameras.main.shake(300, 0.03);
+                    DOM.container.classList.add('flash');
+                    setTimeout(() => DOM.container.classList.remove('flash'), 300);
+                    this.triggerBlastEffect();
+                }
+
+                STATE.multiplier = Math.min(5.0, STATE.multiplier + 0.1);
+                DOM.mult.innerText = STATE.multiplier.toFixed(1) + 'x';
+
+                if (STATE.comboTimer) this.time.removeEvent(STATE.comboTimer);
+                STATE.comboTimer = this.time.delayedCall(4000, () => {
+                    STATE.multiplier = 1.0;
+                    DOM.mult.innerText = '1.0x';
+                });
+            }
+
+
+            // CONTROLS
+
+            setupControls() {
+                this.cursors = this.input.keyboard.createCursorKeys();
+                this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+                this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+                this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+                this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
+                this.spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+                this.input.addPointer(2);
+            }
+
+
+            // COLLISION HANDLING
+
+            setupCollisions() {
+                const M = Phaser.Physics.Matter.Matter;
+
+                this.matter.world.on('collisionstart', (e) => {
+                    e.pairs.forEach(pair => {
+                        let ballBody = pair.bodyA.label === 'ball' ? pair.bodyA : (pair.bodyB.label === 'ball' ? pair.bodyB : null);
+                        let otherBody = pair.bodyA.label === 'ball' ? pair.bodyB : pair.bodyA;
+                        if (!ballBody) return;
+
+                        let ballObj = this.balls.find(b => b.body === ballBody);
+                        if (ballObj && ballObj.inSubway) return;
+
+                        // Ball directional hit glow
+                        if (ballObj && otherBody.label !== 'subway_hole') {
+                            this.flashBallHit(ballObj, this.getHitDirection(ballBody, otherBody));
+                        }
+
+                        // --- BUMPERS (blast ball + stoppers) ---
+                        if (otherBody.label === 'bumper') {
+                            this.triggerExplosion(otherBody.position.x, otherBody.position.y, 0xffcc00);
+                            this.dealDamage(otherBody.plugin.dmg, otherBody.plugin.name, otherBody.position.x, otherBody.position.y, true);
+
+                            // Flash appropriate stopper active image
+                            this.flashStopperHit(otherBody);
+                        }
+
+                        // --- SLINGSHOTS (triangles) ---
+                        else if (otherBody.label === 'slingshot') {
+                            this.triggerExplosion(otherBody.position.x, otherBody.position.y, 0xff55ff);
+                            this.dealDamage(150000, 'SLINGSHOT_KICK', otherBody.position.x, otherBody.position.y, false);
+
+                            // Flash triangle active
+                            this.flashTriangleHit(otherBody);
+
+                            // Velocity kick
+                            const dx = ballBody.position.x - otherBody.position.x;
+                            const dy = ballBody.position.y - otherBody.position.y;
+                            const angle = Math.atan2(dy, dx);
+                            const speed = Math.sqrt(ballBody.velocity.x ** 2 + ballBody.velocity.y ** 2);
+                            const kickSpeed = Math.max(speed + 15, 35);
+                            M.Body.setVelocity(ballBody, {
+                                x: Math.cos(angle) * kickSpeed,
+                                y: Math.sin(angle) * kickSpeed
+                            });
+                        }
+
+                        // --- WALL LIGHTS ---
+                        else if (otherBody.label && otherBody.label.startsWith('wall_')) {
+                            // Flash top lights if hitting top wall or arches
+                            if (otherBody.label === 'wall_top' || otherBody.label.startsWith('wall_arch')) {
+                                this.flashLight([this.lightTop1, this.lightTop2]);
+                            } else if (otherBody.label === 'wall_left') {
+                                if (ballBody.position.y < 600) this.flashLight(this.lightSideTopL);
+                                else this.flashLight(this.lightSideBotL);
+                            } else if (otherBody.label === 'wall_right') {
+                                if (ballBody.position.y < 600) this.flashLight(this.lightSideTopR);
+                                else this.flashLight(this.lightSideBotR);
+                            }
+                        }
+
+                        // --- drop TARGETS (reactive bars) ---
+                        else if (otherBody.label === 'drop_target' && otherBody.plugin.active) {
+                            otherBody.plugin.active = false;
+                            otherBody.isSensor = true;
+
+                            // Dim inactive, flash active
+                            if (otherBody.plugin.spriteInactive) otherBody.plugin.spriteInactive.setAlpha(0.3);
+                            if (otherBody.plugin.spriteActive) {
+                                this.tweens.add({
+                                    targets: otherBody.plugin.spriteActive,
+                                    alpha: { from: 0, to: 1 }, duration: 100, yoyo: true, hold: 200
+                                });
+                            }
+
+                            this.triggerExplosion(otherBody.position.x, otherBody.position.y, 0xffcc00);
+                            this.dealDamage(250000, 'SECURITY_BREACH', otherBody.position.x, otherBody.position.y, false);
+
+                            STATE.targetsCleared++;
+                            if (STATE.targetsCleared >= 3) {
+                                addLog('> SECURITY BANK DOWN. CORE OPEN.', 'log-alert');
+                                STATE.multiplier += 1.0;
+                                this.cameras.main.shake(400, 0.02);
+                                this.triggerBlastExplosion();
+
+                                this.time.delayedCall(5000, () => {
+                                    this.dropTargets.forEach(t => {
+                                        t.plugin.active = true;
+                                        t.isSensor = false;
+                                        if (t.plugin.spriteInactive) t.plugin.spriteInactive.setAlpha(1);
+                                    });
+                                    STATE.targetsCleared = 0;
+                                    addLog('> SECURITY PROTOCOLS RESTORED.', 'log-system');
+                                });
+                            }
+                        }
+
+                        // --- SUBWAY HOLE (transport button) ---
+                        else if (otherBody.label === 'subway_hole') {
+                            this.handleSubwayLock(ballObj);
+                        }
+
+                        // --- FLIPPER collisionflash ---
+                        else if (otherBody.label === 'flipper') {
+                            if (otherBody === this.flipL) this.flashFlipper('left');
+                            else if (otherBody === this.flipR) this.flashFlipper('right');
+                        }
+                    });
+                });
+            }
+
+            // Flash stopper active sprite based on which bumper was hit
+            flashStopperHit(body) {
+                let activeSprite = null;
+                // Match by position (AE positions)
+                if (Math.abs(body.position.x - 269.4) < 30 && Math.abs(body.position.y - 443.3) < 30) {
+                    activeSprite = this.stopper1_active;
+                } else if (Math.abs(body.position.x - 196.7) < 30 && Math.abs(body.position.y - 557.8) < 30) {
+                    activeSprite = this.stopper2_active;
+                }
+                if (activeSprite) {
+                    this.tweens.add({
+                        targets: activeSprite,
+                        alpha: { from: 0, to: 1 }, duration: 80, yoyo: true
+                    });
+                }
+            }
+
+            // Flash triangle active sprite
+            flashTriangleHit(body) {
+                let activeSprite = null;
+                if (Math.abs(body.position.x - 173.3803) < 30) {
+                    activeSprite = this.tri1_active;
+                } else if (Math.abs(body.position.x - 546.6197) < 30) {
+                    activeSprite = this.tri2_active;
+                }
+                if (activeSprite) {
+                    this.tweens.add({
+                        targets: activeSprite,
+                        alpha: { from: 0, to: 1 }, duration: 100, yoyo: true
+                    });
+                }
+            }
+
+
+            // SUBWAY LOCK
+
+            handleSubwayLock(ballObj) {
+                if (!ballObj || ballObj.inSubway) return;
+                ballObj.inSubway = true;
+                const M = Phaser.Physics.Matter.Matter;
+
+                // Flash transport button active
+                this.tweens.add({
+                    targets: this.transportActive,
+                    alpha: { from: 0, to: 1 }, duration: 200, yoyo: true, repeat: 2
+                });
+
+                // Flash ISLA text active
+                this.tweens.add({
+                    targets: this.islaActive,
+                    alpha: { from: 0, to: 1 }, duration: 300, yoyo: true, hold: 500
+                });
+
+                addLog('> PAYLOAD TELEPORT INITIATED...', 'log-system');
+                this.dealDamage(500000, 'DATA_TELEPORT', 181, 750, false);
+
+                if (STATE.targetsCleared >= 3 && !STATE.isMultiball) {
+                    this.triggerTotalCollapse(ballObj);
+                } else {
+                    const teleportSpots = [
+                        { x: 404.7813, y: 225.0262 },
+                        { x: 468.9679, y: 631.0437 },
+                        { x: 297.3061, y: 566.8571 },
+                        { x: 566.8571, y: 757.9242 },
+                        { x: 288.3499, y: 754.9388 }
+                    ];
+                    const randomSpot = teleportSpots[Phaser.Math.Between(0, teleportSpots.length - 1)];
+
+                    // Instantly teleport
+                    M.Body.setPosition(ballObj.body, randomSpot);
+                    M.Body.setVelocity(ballObj.body, { x: 0, y: 5 }); // tiny drop velocity
+                    this.cameras.main.shake(100, 0.01);
+                    addLog('> TELEPORT SUCCESSFUL.', 'log-system');
+
+                    // Reset subway flag so it can teleport again later
+                    this.time.delayedCall(500, () => {
+                        if (ballObj) ballObj.inSubway = false;
+                    });
+                }
+            }
+
+
+            // TOTAL COLLAPSE (multiball)
+
+            triggerTotalCollapse(originalBallObj) {
+                STATE.isMultiball = true;
+                addLog('>>> TOTAL COLLAPSE INITIATED <<<', 'log-alert');
+                DOM.container.classList.add('flash');
+                setTimeout(() => DOM.container.classList.remove('flash'), 500);
+                this.cameras.main.shake(800, 0.04);
+                this.triggerBlastExplosion();
+
+                const M = Phaser.Physics.Matter.Matter;
+
+                // Original ball teleports out
+                const teleportSpots = [
+                    { x: 404.7813, y: 225.0262 }, { x: 468.9679, y: 631.0437 },
+                    { x: 297.3061, y: 566.8571 }, { x: 566.8571, y: 757.9242 }, { x: 288.3499, y: 754.9388 }
+                ];
+                const spot1 = teleportSpots[Phaser.Math.Between(0, teleportSpots.length - 1)];
+                M.Body.setPosition(originalBallObj.body, spot1);
+                M.Body.setVelocity(originalBallObj.body, { x: 0, y: 15 });
+                originalBallObj.inSubway = false;
+
+                // Multiball removed per user request: only one ball allowed.
+                // this.time.delayedCall(500, () => this.spawnBall(null, null, true));
+                // this.time.delayedCall(1200, () => this.spawnBall(null, null, true));
+            }
+
+
+            // NUDGE
+
+            nudgeTable() {
+                const now = this.time.now;
+                if (now - this.lastNudge < 1000) return;
+                this.lastNudge = now;
+                addLog('> KINETIC NUDGE APPLIED', 'log-system');
+                this.cameras.main.shake(100, 0.02);
+
+                const M = Phaser.Physics.Matter.Matter;
+                this.balls.forEach(b => {
+                    if (!b.inSubway) {
+                        M.Body.setVelocity(b.body, {
+                            x: b.body.velocity.x + (Math.random() * 10 - 5),
+                            y: b.body.velocity.y - 15
+                        });
+                    }
+                });
+            }
+
+
+            // UPDATE LOOP
+
+            update(time, delta) {
+                const M = Phaser.Physics.Matter.Matter;
+
+                // Physics sub-stepping
+                const subSteps = 4;
+                const fixedDelta = 16.666 / subSteps;
+                for (let i = 0; i < subSteps; i++) {
+                    this.processInputs(M, fixedDelta);
+                    this.matter.world.step(fixedDelta);
+                    this.enforcePhysicsLimits(M);
+                }
+
+                // Sync ball sprites to physics bodies
+                for (let i = this.balls.length - 1; i >= 0; i--) {
+                    let b = this.balls[i];
+                    const px = b.body.position.x;
+                    const py = b.body.position.y;
+                    Object.values(b.sprites).forEach(s => s.setPosition(px, py));
+
+                    // Drain detection
+                    if (py > this.H + 50) {
+                        this.matter.world.remove(b.body);
+                        Object.values(b.sprites).forEach(s => s.destroy());
+                        this.balls.splice(i, 1);
+                        STATE.ballsInPlay--;
+
+                        this.flashGodrays();
+                        addLog('> PAYLOAD LOST. EMPIRE RECOVERS.', 'log-damage');
+                        STATE.score = Math.min(20000000000, STATE.score + 50000000);
+                        DOM.score.innerText = formatMoney(STATE.score);
+                        STATE.multiplier = 1.0;
+                        DOM.mult.innerText = '1.0x';
+
+                        if (STATE.ballsInPlay === 0) {
+                            STATE.isMultiball = false;
+                            this.time.delayedCall(1000, () => {
+                                addLog('> DEPLOYING NEW PAYLOAD.', 'log-system');
+                                this.spawnBall();
+                            });
+                        }
+                    }
+                }
+
+                // Sync flipper sprites to physics body rotation
+                // Image rotation offset = physicsAngle - restAngle (so at rest, rotation = 0)
+                this.syncFlipperSprites();
+
+                // Win state
+                if (STATE.score <= 0) {
+                    addLog('>>> EMPIRE DESTROYED. HEIST COMPLETE. <<<', 'log-alert');
+                    DOM.score.innerText = "$0 [HACKED]";
+                    this.triggerBlastExplosion();
+                    this.scene.pause();
+                }
+            }
+
+            syncFlipperSprites() {
+                // Left flipper: orbit image center around knob pivot
+                // At rest (angle=0): center is at plan position (240, 1074)
+                const lAngle = this.flipL.angle - this.L_REST; // 0 at rest
+                const oX = this.flipKnobToCenterX;
+                const oY = this.flipKnobToCenterY;
+                const lCosA = Math.cos(lAngle), lSinA = Math.sin(lAngle);
+                const lx = this.knobL.x + oX * lCosA - oY * lSinA;
+                const ly = this.knobL.y + oX * lSinA + oY * lCosA;
+                [this.flipLInactive, this.flipLTranslucent, this.flipLActive].forEach(s => {
+                    s.setPosition(lx, ly);
+                    s.setRotation(lAngle);
+                });
+
+                // Right flipper: orbit image center around knob pivot (mirrored)
+                // At rest (angle=0): center is at plan position (480, 1074)
+                const rAngle = this.flipR.angle - this.R_REST; // 0 at rest
+                const rCosA = Math.cos(rAngle), rSinA = Math.sin(rAngle);
+                // Mirrored: offset is negative X
+                const rx = this.knobR.x - oX * rCosA - oY * rSinA;
+                const ry = this.knobR.y - oX * rSinA + oY * rCosA;
+                [this.flipRInactive, this.flipRTranslucent, this.flipRActive].forEach(s => {
+                    s.setPosition(rx, ry);
+                    s.setRotation(rAngle);
+                });
+            }
+
+            processInputs(M, delta) {
+                let flipL = this.cursors.left.isDown || this.keyA.isDown;
+                let flipR = this.cursors.right.isDown || this.keyD.isDown;
+                let nudge = this.cursors.up.isDown || this.keyW.isDown || this.keyS.isDown;
+
+                // Touch controls
+                this.input.manager.pointers.forEach(p => {
+                    if (p.isDown) {
+                        if (p.y < 200) nudge = true; // Covers top-left and top-right corners
+                        else if (p.x < this.W / 2) flipL = true;
+                        else flipR = true;
+                    }
+                });
+
+                if (nudge) this.nudgeTable();
+
+                // Flipper physics: Massive acceleration + Rubber stops
+                const K_UP = 0.35;       // Violent acceleration
+                const DAMP_UP = 0.85;    // Keep momentum high for hard impact
+                const K_DOWN = 0.25;     // Gravity drop acceleration
+                const DAMP_DOWN = 0.85;  
+
+                // Left Flipper
+                let velL = 0;
+                if (flipL) {
+                    if (this.flipL.angle <= this.L_UP) {
+                        // Rubber stop (UP limit)
+                        let cVel = this.flipL.angularVelocity;
+                        if (cVel < 0) cVel *= 0.1; // Absorb forward momentum
+                        let force = (this.L_UP - this.flipL.angle) * 1.5; 
+                        velL = (cVel + force) * 0.4;
+                    } else {
+                        // Free swing
+                        let force = (this.L_UP - this.flipL.angle) * K_UP;
+                        velL = (this.flipL.angularVelocity + force) * DAMP_UP;
+                    }
+                } else {
+                    if (this.flipL.angle >= this.L_REST) {
+                        // Rubber stop (DOWN limit)
+                        let cVel = this.flipL.angularVelocity;
+                        if (cVel > 0) cVel *= 0.1; // Absorb forward momentum
+                        let force = (this.L_REST - this.flipL.angle) * 1.5; 
+                        velL = (cVel + force) * 0.4;
+                    } else {
+                        let force = (this.L_REST - this.flipL.angle) * K_DOWN;
+                        velL = (this.flipL.angularVelocity + force) * DAMP_DOWN;
+                    }
+                }
+                M.Body.setAngularVelocity(this.flipL, velL);
+
+                // Right Flipper
+                let velR = 0;
+                if (flipR) {
+                    if (this.flipR.angle >= this.R_UP) {
+                        // Rubber stop (UP limit)
+                        let cVel = this.flipR.angularVelocity;
+                        if (cVel > 0) cVel *= 0.1; 
+                        let force = (this.R_UP - this.flipR.angle) * 1.5; 
+                        velR = (cVel + force) * 0.4;
+                    } else {
+                        let force = (this.R_UP - this.flipR.angle) * K_UP;
+                        velR = (this.flipR.angularVelocity + force) * DAMP_UP;
+                    }
+                } else {
+                    if (this.flipR.angle <= this.R_REST) {
+                        // Rubber stop (DOWN limit)
+                        let cVel = this.flipR.angularVelocity;
+                        if (cVel < 0) cVel *= 0.1; 
+                        let force = (this.R_REST - this.flipR.angle) * 1.5; 
+                        velR = (cVel + force) * 0.4;
+                    } else {
+                        let force = (this.R_REST - this.flipR.angle) * K_DOWN;
+                        velR = (this.flipR.angularVelocity + force) * DAMP_DOWN;
+                    }
+                }
+                M.Body.setAngularVelocity(this.flipR, velR);
+            }
+
+            enforcePhysicsLimits(M) {
+                this.balls.forEach(b => {
+                    const vx = b.body.velocity.x;
+                    const vy = b.body.velocity.y;
+                    const speed = Math.sqrt(vx * vx + vy * vy);
+                    const MAX_SPEED = 75;
+                    if (speed > MAX_SPEED) {
+                        const ratio = MAX_SPEED / speed;
+                        M.Body.setVelocity(b.body, { x: vx * ratio, y: vy * ratio });
+                    }
+                });
+            }
+        }
+
+
+        // GAME CONFIG 720w x 1280h, auto-scale to fit screen
+
+        window.onload = function () {
+            new Phaser.Game({
+                type: Phaser.WEBGL,
+                width: 720,
+                height: 1280,
+                parent: 'game-container',
+                transparent: true,
+                scene: PinballSimulation,
+                physics: {
+                    default: 'matter',
+                    matter: {
+                        gravity: { y: 2.8 },
+                        positionIterations: 16,
+                        velocityIterations: 12,
+                        enableSleeping: false,
+                        debug: false
+                    }
+                },
+                scale: {
+                    mode: Phaser.Scale.FIT,
+                    autoCenter: Phaser.Scale.CENTER_BOTH
+                }
+            });
+        };
+    </script>
+</main>
+</body>
+
+</html>

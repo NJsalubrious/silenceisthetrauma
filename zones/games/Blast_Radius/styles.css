@@ -1,0 +1,1115 @@
+/* ================================================================
+   DOMINIC'S DOWNFALL — Version 2 Stylesheet
+   Pixelstortion Aesthetic + Smart-Dumb Protocol + Cymatic Fracture
+   ================================================================ */
+
+/* ============ RESET & GLOBAL ============ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --neon-green: #00ff41;
+    --neon-pink: #ff0055;
+    --neon-magenta: #ff00ff;
+    --terminal-bg: #050505;
+    --panel-bg: #0a0a0a;
+    --border-glow: #1a1a2e;
+    --text-dim: #71717a;
+    --glass-surface: rgba(255, 255, 255, 0.03);
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    --font-display: 'Orbitron', 'JetBrains Mono', monospace;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #020204;
+    font-family: var(--font-mono);
+    color: #e4e4e7;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ============ CABINET LAYOUT — 4-ZONE GRID ============ */
+#anti-slot-cabinet {
+    width: 100%;
+    max-width: 520px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(ellipse at 50% 30%, #0d0d1a 0%, #020204 70%);
+    position: relative;
+    overflow: hidden;
+    
+    /* Empire Oppression Filter — dynamically driven by JS */
+    filter: saturate(var(--opp-sat, 1)) brightness(var(--opp-bright, 1));
+    transition: filter 1.5s ease-in-out;
+}
+
+/* ============ ZONE 1: JACKPOT METERS ============ */
+#jackpot-meters { padding: 0 8px 0; margin-bottom: 0px; }
+
+.grand-meter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    border: none;
+    background: url('images/topBigGrandMeter.png') no-repeat center center;
+    background-size: 100% 100%;
+    height: 110px;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -4px; /* Pulls the video container up just slightly to ensure lines touch completely */
+}
+
+.meter-label {
+    display: none;
+}
+
+.meter-value {
+    font-family: var(--font-display);
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px var(--neon-magenta),
+        0 0 40px var(--neon-magenta);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hidden-funds-mode {
+    color: #fff !important;
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px var(--neon-magenta) !important;
+}
+
+/* Impact VFX when particles hit the meter during prison */
+.meter-impact {
+    animation: meterShake 0.6s ease-out;
+}
+
+@keyframes meterShake {
+    0% { transform: translate(0, 0) scale(1); filter: brightness(1); }
+    10% { transform: translate(-3px, -2px) scale(1.05); filter: brightness(2.5); }
+    20% { transform: translate(4px, 1px) scale(1.03); filter: brightness(2); }
+    30% { transform: translate(-2px, 2px) scale(1.02); filter: brightness(1.8); }
+    50% { transform: translate(1px, -1px) scale(1.01); filter: brightness(1.4); }
+    100% { transform: translate(0, 0) scale(1); filter: brightness(1); }
+}/* ============ ZONE 2: FEATURE VIDEO (ISLA CLIPS) ============ */
+
+/* ============ EMPIRE OPPRESSION — THREAT PULSE ============ */
+.threat-pulse {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 900;
+    background: radial-gradient(ellipse at center, rgba(180, 0, 20, 0.5) 0%, rgba(100, 0, 0, 0.3) 40%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.threat-pulse.active {
+    opacity: 1;
+    transition: opacity 0.15s ease-in;
+}
+
+/* ============ ZONE 2: FEATURE VIDEO (ISLA CLIPS) ============ */
+#feature-video-container {
+    width: calc(100% - 16px);
+    margin: 0 8px; /* perfectly aligns with the reel container */
+    aspect-ratio: 880 / 448; /* Exact aspect ratio requested */
+    background: #050508;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid rgba(212, 0, 106, 0.25);
+    box-shadow: 0 0 10px rgba(212, 0, 106, 0.1), inset 0 0 10px rgba(212, 0, 106, 0.05);
+}
+
+#feature-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============ ZONE 3: REEL WINDOW — NEON GLOW AESTHETIC ============ */
+#slot-grid-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 0, 106, 0.35);
+    border-radius: 3px;
+    margin: 0 8px;
+    aspect-ratio: 5 / 3;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                opacity 0.6s ease;
+
+    /* Breathing neon border glow — deep magenta, NOT cyan */
+    box-shadow:
+        0 0 8px  rgba(212, 0, 106, 0.25),
+        0 0 20px rgba(180, 0, 90, 0.15),
+        0 0 45px rgba(140, 0, 80, 0.08),
+        inset 0 0 12px rgba(212, 0, 106, 0.06);
+    animation: reelBreathe 3.5s ease-in-out infinite;
+}
+
+/* Ambient reflection: disabled to close gap */
+
+/* The breathing pulse — subtle swell, not a strobe */
+@keyframes reelBreathe {
+    0%, 100% {
+        box-shadow:
+            0 0 8px  rgba(212, 0, 106, 0.25),
+            0 0 20px rgba(180, 0, 90, 0.15),
+            0 0 45px rgba(140, 0, 80, 0.08),
+            inset 0 0 12px rgba(212, 0, 106, 0.06);
+        border-color: rgba(212, 0, 106, 0.35);
+    }
+    50% {
+        box-shadow:
+            0 0 12px rgba(212, 0, 106, 0.45),
+            0 0 30px rgba(180, 0, 90, 0.25),
+            0 0 60px rgba(140, 0, 80, 0.12),
+            inset 0 0 18px rgba(212, 0, 106, 0.10);
+        border-color: rgba(212, 0, 106, 0.55);
+    }
+}
+
+/* Intensified glow during active spin */
+#slot-grid-container.spin-active {
+    animation: reelSpinGlow 1.2s ease-in-out infinite;
+    border-color: rgba(212, 0, 106, 0.6);
+}
+
+@keyframes reelSpinGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 12px rgba(212, 0, 106, 0.5),
+            0 0 35px rgba(180, 0, 90, 0.3),
+            0 0 70px rgba(140, 0, 80, 0.15),
+            inset 0 0 20px rgba(212, 0, 106, 0.12);
+    }
+    50% {
+        box-shadow:
+            0 0 18px rgba(255, 0, 85, 0.6),
+            0 0 45px rgba(212, 0, 106, 0.35),
+            0 0 90px rgba(180, 0, 90, 0.18),
+            inset 0 0 25px rgba(255, 0, 85, 0.15);
+    }
+}
+
+#slot-grid-container.breached {
+    transform: scale(0.85) rotate(-2deg);
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+#reel-window {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050508;
+    flex: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+#reel-window canvas {
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Intro video splash — covers the reel area until first spin */
+#intro-video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: #050508;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1.5s ease-out;
+}
+
+#intro-video-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#intro-video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* ============ ZONE 4: COMMAND DECK ============ */
+#ui-deck {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4px 8px 6px;
+    flex-shrink: 0;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+/* ---- POWER DIFFERENTIAL HEALTH BAR ---- */
+#health-bar-container {
+    position: relative;
+    width: 120px;
+    height: 14px;
+    background: rgba(20, 0, 0, 0.8);
+    border: 1px solid rgba(255, 0, 85, 0.4);
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#health-bar-fill {
+    height: 100%;
+    width: 100%; /* starts full, JS will shrink */
+    background: linear-gradient(90deg, #ff0055, #e500ff);
+    border-radius: 1px;
+    transition: width 1.2s ease-out, background 1.2s ease-out;
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.5), inset 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Color tiers driven by JS class */
+#health-bar-fill.critical {
+    background: linear-gradient(90deg, #990000, #ff0000);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+#health-bar-fill.danger {
+    background: linear-gradient(90deg, #cc2200, #ff4400);
+    box-shadow: 0 0 10px rgba(255, 68, 0, 0.6);
+}
+#health-bar-fill.warning {
+    background: linear-gradient(90deg, #ff4400, #ff8800);
+}
+
+#health-bar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: 5px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* ---- GAME OVER OVERLAY ---- */
+#game-over-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s ease-in;
+}
+#game-over-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.game-over-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: #ff0033;
+    text-shadow: 0 0 20px #ff0033, 0 0 60px rgba(255, 0, 51, 0.4);
+    letter-spacing: 12px;
+    margin-bottom: 20px;
+    animation: gameOverPulse 2s ease-in-out infinite;
+}
+.game-over-subtitle {
+    font-family: var(--font-display);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+@keyframes gameOverPulse {
+    0%, 100% { opacity: 1; text-shadow: 0 0 20px #ff0033, 0 0 60px rgba(255, 0, 51, 0.4); }
+    50% { opacity: 0.7; text-shadow: 0 0 40px #ff0033, 0 0 100px rgba(255, 0, 51, 0.6); }
+}
+
+.damage-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deck-icon {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 255, 0.4));
+}
+
+.damage-value {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--neon-magenta), 0 0 20px var(--neon-magenta);
+    max-width: 320px;
+    max-height: 36px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.terminal-status {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.terminal-prompt {
+    color: var(--neon-green);
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.terminal-output {
+    display: flex;
+    gap: 6px;
+    font-size: 11px;
+    flex-wrap: wrap;
+}
+
+.terminal-user {
+    color: var(--neon-green);
+    font-weight: 700;
+}
+
+.terminal-cursor {
+    color: var(--text-dim);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+/* ============ SMART-DUMB PROTOCOL: TERMINAL INPUT ============ */
+.terminal-input-zone {
+    margin-top: 6px;
+    padding: 6px 0;
+    border-top: 1px solid #1a1a2e;
+}
+
+.terminal-input-zone.hidden {
+    display: none;
+}
+
+.terminal-input-zone.active {
+    display: block;
+    animation: hackPulse 2s ease-in-out infinite;
+}
+
+.input-prompt {
+    font-size: 10px;
+    color: var(--neon-magenta);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input-row {
+    display: flex;
+    gap: 4px;
+}
+
+#terminal-input {
+    flex: 1;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid var(--neon-green);
+    border-radius: 2px;
+    color: var(--neon-green);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    outline: none;
+    caret-color: var(--neon-green);
+    text-transform: lowercase;
+}
+
+#terminal-input::placeholder {
+    color: rgba(0, 255, 65, 0.2);
+    font-style: italic;
+}
+
+#terminal-input:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+    background: rgba(0, 255, 65, 0.08);
+}
+
+.submit-hack-btn {
+    background: transparent;
+    border: 1px solid var(--neon-magenta);
+    color: var(--neon-magenta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.submit-hack-btn:hover {
+    background: rgba(255, 0, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* ============ SPIN BUTTON ============ */
+.spin-button {
+    position: relative;
+    padding: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.spin-button:hover:not(:disabled) {
+    filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.5)) brightness(1.15);
+}
+
+.spin-button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.spin-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.spin-button .deck-icon {
+    height: 50px;
+}
+
+/* ============ GLITCH TEXT ============ */
+.glitch-text {
+    position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-shadow: none !important;
+}
+
+.glitch-text::before {
+    color: cyan;
+    z-index: -1;
+    animation: glitchBefore 4s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    color: var(--neon-pink);
+    z-index: -1;
+    animation: glitchAfter 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitchBefore {
+    0%, 94% { clip-path: inset(0 0 0 0); transform: translate(0); }
+    95% { clip-path: inset(40% 0 20% 0); transform: translate(-3px, 1px); }
+    96% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+    97% { clip-path: inset(70% 0 5% 0); transform: translate(-1px, 2px); }
+    100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+}
+
+@keyframes glitchAfter {
+    0%, 92% { clip-path: inset(0 0 0 0); transform: translate(0); }
+    93% { clip-path: inset(20% 0 50% 0); transform: translate(3px, -1px); }
+    95% { clip-path: inset(60% 0 10% 0); transform: translate(-2px, 1px); }
+    97% { clip-path: inset(5% 0 70% 0); transform: translate(1px, -2px); }
+    100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+}
+
+/* ============ CRT SCANLINES ============ */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10000;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+    );
+}
+
+/* ============ JAILBREAK ESCAPE OVERLAY ============ */
+.escape-notification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 102, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 60;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    border-radius: 3px;
+    box-shadow: inset 0 0 50px rgba(0, 255, 102, 0.5);
+    animation: escapeFlash 0.3s ease-out;
+}
+
+@keyframes escapeFlash {
+    0% { background: rgba(0, 255, 102, 0.8); box-shadow: inset 0 0 100px rgba(0, 255, 102, 1); }
+    100% { background: rgba(0, 255, 102, 0.15); box-shadow: inset 0 0 50px rgba(0, 255, 102, 0.5); }
+}
+
+.escape-neon {
+    font-size: 32px;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #00ff66, 0 0 40px #00ff66, 0 0 80px #00ff66;
+    animation: escapePulse 1.5s infinite alternate;
+}
+
+@keyframes escapePulse {
+    0% { transform: scale(1); text-shadow: 0 0 10px #fff, 0 0 20px #00ff66, 0 0 40px #00ff66; }
+    100% { transform: scale(1.05); text-shadow: 0 0 20px #fff, 0 0 40px #00ff66, 0 0 80px #00ff66, 0 0 120px #00ff66; }
+}
+
+/* ============ PASSWORD HACK OVERLAY — Covers feature video zone ONLY ============ */
+#password-hack-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    border-radius: 3px;
+}
+
+#password-hack-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.hack-inner {
+    text-align: center;
+    width: 90%;
+    max-width: 100%;
+    padding: 8px;
+}
+
+.hack-title {
+    font-family: var(--font-display);
+    font-size: clamp(10px, 2.5vw, 16px);
+    font-weight: 900;
+    color: var(--neon-pink);
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+    margin-bottom: 8px;
+}
+
+.hack-passcode {
+    font-family: var(--font-mono);
+    font-size: clamp(20px, 5vw, 36px);
+    font-weight: 800;
+    color: var(--neon-green);
+    letter-spacing: 6px;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+    margin: 6px 0;
+}
+
+.hack-attempts {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin: 4px 0;
+}
+
+.hack-damage {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 4px 0;
+    min-height: 16px;
+}
+
+.bridge-burned {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--neon-pink);
+    letter-spacing: 4px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bridge-burned.flash-visible {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 30px rgba(255, 0, 85, 0.8);
+}
+
+/* ============ TEASE / WIND-UP VFX ============ */
+#anti-slot-cabinet.tease-active {
+    animation: teaseShake 0.1s linear infinite;
+}
+
+@keyframes teaseShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* ============ WIN FLASH ============ */
+#slot-grid-container.win-flash {
+    animation: winPulse 0.4s ease-out 3;
+}
+
+@keyframes winPulse {
+    0%, 100% { box-shadow: none; }
+    50% { box-shadow: inset 0 0 30px rgba(0, 255, 65, 0.3), 0 0 20px rgba(0, 255, 65, 0.2); }
+}
+
+/* ============ MASSIVE SHAKE (JAILBREAK) ============ */
+#slot-grid-container.massive-shake {
+    animation: massiveShake 0.15s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+@keyframes massiveShake {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    10%, 90% { transform: translate3d(-6px, -4px, 0); }
+    20%, 80% { transform: translate3d(8px, 6px, 0); }
+    30%, 50%, 70% { transform: translate3d(-10px, 12px, 0); }
+    40%, 60% { transform: translate3d(12px, -8px, 0); }
+}
+
+/* ============ HACK PULSE (SMART-DUMB ACTIVE) ============ */
+@keyframes hackPulse {
+    0%, 100% { border-top-color: #1a1a2e; }
+    50% { border-top-color: var(--neon-magenta); }
+}
+
+/* ============ PUZZLE LOCKED STATE ============ */
+.spin-button.puzzle-locked {
+    border-color: var(--neon-magenta) !important;
+    color: var(--neon-magenta) !important;
+}
+
+.spin-button.puzzle-locked .spin-text::after {
+    content: ' — LOCKED';
+}
+
+.spin-button.puzzle-locked .spin-sweep {
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.1), transparent);
+}
+
+/* ============ CYMATIC FRACTURE GLOW ============ */
+.cymatic-glow {
+    box-shadow: 
+        0 0 40px rgba(255, 0, 85, 0.4),
+        0 0 80px rgba(255, 0, 85, 0.2),
+        inset 0 0 30px rgba(255, 0, 85, 0.1);
+}
+
+
+
+
+/* ============ INTRO TITLE IMAGE (BLAST_RADIUS.png) ============ */
+#intro-title-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ============ FEATURE VIDEO CONTAINER — Rattle on particle arrival ============ */
+#feature-video-container.rattle {
+    animation: featureRattle 0.5s ease-out;
+}
+
+@keyframes featureRattle {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.02) rotate(-0.5deg); }
+    20% { transform: scale(1.015) rotate(0.3deg); }
+    30% { transform: scale(1.01) rotate(-0.2deg); }
+    50% { transform: scale(1.005); }
+    100% { transform: scale(1); }
+}
+
+/* ============ HARDWARE PARTICLE CANVAS ============ */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+/* ============ HERO PROJECTILE (DOM Fallback) ============ */
+.hero-projectile {
+    will-change: left, top, transform, opacity;
+}
+
+/* ============ BLAST RADIUS VIDEO OVERLAY ============ */
+.blast-radius-overlay {
+    border: none;
+    display: block;
+}
+
+/* ============ SYMBOL VIDEO OVERLAYS ============ */
+.symbol-video-overlay {
+    border: none;
+    display: block;
+}
+
+/* ============ STICKY SYMBOLS (Free Spins) ============ */
+.sticky-symbol {
+    box-shadow:
+        0 0 12px rgba(0, 255, 65, 0.5),
+        0 0 30px rgba(0, 255, 65, 0.3),
+        inset 0 0 8px rgba(0, 255, 65, 0.2);
+    border: 1px solid rgba(0, 255, 65, 0.6);
+    animation: stickyPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes stickyPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 12px rgba(0, 255, 65, 0.5),
+            0 0 30px rgba(0, 255, 65, 0.3);
+    }
+    50% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 65, 0.7),
+            0 0 50px rgba(0, 255, 65, 0.4);
+    }
+}
+
+/* ============ PASSWORD DIGIT REVEAL ============ */
+.password-digit.revealed {
+    color: var(--neon-green);
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+    animation: digitReveal 0.5s ease-out;
+}
+
+@keyframes digitReveal {
+    0% { transform: scale(2) rotate(15deg); opacity: 0; }
+    50% { transform: scale(1.3) rotate(-5deg); opacity: 0.7; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ============ PRISON ENVIRONMENTAL OVERLAY ============ */
+.prison-tint-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 800; /* Above game but below modals */
+    background: rgba(0, 255, 102, 0.24);
+    mix-blend-mode: overlay; /* Replicates pure prison green coloration */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.prison-mode-active .prison-tint-layer {
+    opacity: 1;
+}
+
+/* ============ SETTINGS (GAFF) CONSOLE ============ */
+.gaff-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 100;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.3);
+    font-family: var(--font-display);
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.gaff-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.gaff-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Assuming 16:9 for frame */
+    z-index: 500;
+    background: url('stills/paytableBG.png') no-repeat center center;
+    background-size: 100% 100%;
+    
+    border: none;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: var(--font-mono);
+    
+    /* Pad heavily so content strictly sits inside the graphical frame bounds */
+    padding: 6% 8% 8%; 
+}
+
+.gaff-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
+
+.gaff-header h2 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.nav-btn {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid cyan;
+    color: cyan;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 10px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.nav-btn:hover {
+    background: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 10px cyan;
+}
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: transparent;
+}
+
+#gaff-close-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    border-radius: 3px;
+    color: var(--neon-pink);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 2px 8px;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+#gaff-close-btn:hover {
+    background: rgba(255, 0, 85, 0.2);
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+}
+
+.gaff-page {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+}
+
+.gaff-page.active {
+    display: flex;
+}
+
+.paytable-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.paytable-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.paytable-text {
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+.gaff-body {
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gaff-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(0, 255, 255, 0.03);
+    padding: 10px 12px;
+    border-left: 2px solid var(--neon-magenta);
+}
+
+.gaff-row label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+}
+
+.gaff-row input[type="range"] {
+    accent-color: var(--neon-magenta);
+    width: 100%;
+}
+
+.gaff-row small {
+    font-size: 9px;
+    color: #888;
+}
+
+.gaff-checklist {
+    list-style: none;
+    margin-top: 4px;
+    font-size: 10px;
+    color: #aaa;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.gaff-checklist li {
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ============ GAME OVER / WIN OVERLAY ============ */
+#game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease-in-out;
+}
+
+#game-over-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.game-over-inner {
+    text-align: center;
+    font-family: var(--font-display);
+}
+
+.game-over-title {
+    font-size: 8vw;
+    color: red;
+    text-shadow: 0 0 20px red, 0 0 60px rgba(255, 0, 0, 0.4);
+    margin: 0 0 20px 0;
+    letter-spacing: 12px;
+}
+
+.game-over-subtitle {
+    font-size: 2vw;
+    color: #fff;
+    opacity: 0.8;
+    letter-spacing: 4px;
+    margin: 0;
+}

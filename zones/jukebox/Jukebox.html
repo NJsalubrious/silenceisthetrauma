@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PIXELSTORTION // JUKEBOX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --fire-orange: #ff4500;
+            --void: #050505;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, #071016 0%, #050505 45%, #020206 100%);
+            overflow: hidden;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: crosshair;
+        }
+
+        /* --- VISUAL LAYERS --- */
+
+        /* Layer 0: Narrative Gallery */
+        #bg-gallery {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .gallery-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            /* NO BLUR. Just dimmed and slightly desaturated for UI contrast */
+            filter: brightness(0.5) grayscale(0.2);
+            transform: scale(1.05);
+            transition: opacity 2s ease, transform 15s ease-out;
+        }
+
+        .gallery-img.active {
+            opacity: 1.0;
+            transform: scale(1.0);
+            /* Gentle drift */
+        }
+
+        /* Layer 1: Fluid Canvas */
+        #fluid-canvas {
+            opacity: 0.95;
+            mix-blend-mode: lighten;
+            filter: saturate(1.6) contrast(1.1);
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            /* Screen mode drops out black, showing the fluid over the images */
+            mix-blend-mode: screen;
+            /* Soften the fluid layer so it acts like a delicate fog */
+            opacity: 0.65;
+        }
+
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0) 50%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    rgba(0, 0, 0, 0.6) 100%);
+            background-size: 100% 4px;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0.35;
+        }
+
+        /* Layer 5: Vignette — heavy, frames the narrative images into the void */
+        .vignette {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.20) 65%, rgba(0, 0, 0, 0.35) 92%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* --- UI LAYERS --- */
+        #ui-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            pointer-events: none;
+            /* Let clicks pass to fluid */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        .interactive {
+            pointer-events: auto;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .glitch-text {
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            position: relative;
+            color: white;
+            mix-blend-mode: difference;
+        }
+
+        .font-mono-custom {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* --- CONTROLS --- */
+        .control-btn {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .control-btn:hover {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            transform: scale(1.1);
+            background: rgba(0, 20, 0, 0.6);
+        }
+
+        .control-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* --- PROGRESS BAR --- */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-top: 1rem;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--neon-green);
+            width: 0%;
+            box-shadow: 0 0 10px var(--neon-green);
+            transition: width 0.1s linear;
+        }
+
+        /* --- HIDDEN YOUTUBE (Covered Visible Player Pattern) --- */
+        /* Player must remain on-screen to avoid browser throttling. */
+        /* Pushed behind the gallery layer (z-index -2). */
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* --- START OVERLAY --- */
+        #start-overlay {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .start-btn {
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 20px 60px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            display: none;
+            /* Hidden until ready */
+        }
+
+        .start-btn:hover {
+            background: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+        }
+
+        /* --- TRACK DATE --- */
+        #track-date {
+            min-height: 1.2em;
+        }
+
+        #whisper-overlay {
+            position: fixed;
+            left: 18px;
+            bottom: 22px;
+            z-index: 60;
+            max-width: min(780px, calc(100vw - 36px));
+            color: rgba(199, 255, 221, 0.92);
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            pointer-events: none;
+            text-shadow: 0 0 14px rgba(0, 255, 65, 0.18);
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 280ms ease, transform 280ms ease;
+            mix-blend-mode: screen;
+        }
+
+        #whisper-overlay.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #whisper-overlay .meta {
+            opacity: 0.55;
+            font-size: 10px;
+            letter-spacing: 0.22em;
+        }
+
+        #whisper-overlay .red {
+            color: rgba(255, 120, 120, 0.92);
+            text-shadow: 0 0 16px rgba(255, 60, 60, 0.22);
+        }
+
+        #whisper-overlay .tiny {
+            font-size: 10px;
+            opacity: 0.75;
+        }
+
+        #postfx-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            opacity: 0.75;
+            filter: contrast(1.15) saturate(1.25);
+            display: none;
+            /* Disabled: causes GPU sync artifacts in Chrome/Edge */
+        }
+
+        #glyph-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 4;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            filter: contrast(1.1) saturate(1.15);
+            opacity: 0.40;
+            display: none;
+            /* Disabled: causes GPU sync artifacts in Chrome/Edge */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- NARRATIVE GALLERY (Layer 0) -->
+    <div id="bg-gallery">
+        <img id="gallery-img-a" class="gallery-img active" />
+        <img id="gallery-img-b" class="gallery-img" />
+    </div>
+
+    <!-- VISUALS -->
+    <canvas id="fluid-canvas"></canvas>
+    <canvas id="postfx-canvas"></canvas>
+    <canvas id="glyph-canvas"></canvas>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- START SCREEN -->
+    <div id="start-overlay">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter">PIXELSTORTION</h1>
+        <button id="init-btn" class="start-btn" onclick="startSystem()">INITIALIZE SYSTEM</button>
+        <p id="loading-text" class="mt-4 text-gray-500 font-mono-custom text-xs animate-pulse">ESTABLISHING UPLINK...
+        </p>
+    </div>
+
+    <!-- UI OVERLAY -->
+    <div id="ui-layer">
+
+        <!-- TOP BAR -->
+        <div class="flex justify-between items-start">
+            <div>
+                <div class="text-[10px] text-green-500 font-mono-custom tracking-[0.2em] mb-1">CURRENT TRACK</div>
+                <h1 id="track-title"
+                    class="text-4xl md:text-7xl font-bold text-white leading-none tracking-tighter mix-blend-difference mb-2">
+                    SILENCE</h1>
+                <h2 id="track-artist" class="text-xl md:text-2xl text-gray-400 font-light">WAITING FOR INPUT...</h2>
+                <h3 id="track-date" class="text-sm text-green-700 font-mono-custom tracking-widest mt-1"></h3>
+            </div>
+
+            <div class="text-right hidden md:block">
+                <div class="text-[10px] text-gray-500 font-mono-custom tracking-[0.2em]">SYSTEM STATUS</div>
+                <div id="status-indicator" class="text-green-500 font-bold">STANDBY</div>
+            </div>
+            <div id="whisper-overlay" class="font-mono-custom"></div>
+        </div>
+
+        <!-- CENTER (Empty for visuals) -->
+
+        <!-- BOTTOM CONTROLS -->
+        <div class="w-full max-w-4xl mx-auto interactive">
+
+            <!-- Controls -->
+            <div class="flex items-center justify-center gap-6 mb-4">
+                <button class="control-btn" onclick="jukebox.prev()">
+                    <span class="material-symbols-outlined">skip_previous</span>
+                </button>
+
+                <button class="control-btn" style="width: 80px; height: 80px; border-color: white;"
+                    onclick="jukebox.togglePlay()">
+                    <span id="play-icon" class="material-symbols-outlined" style="font-size: 40px;">play_arrow</span>
+                </button>
+
+                <button class="control-btn" onclick="jukebox.next()">
+                    <span class="material-symbols-outlined">skip_next</span>
+                </button>
+
+                <button class="control-btn" onclick="toggleFullscreen()">
+                    <span class="material-symbols-outlined">fullscreen</span>
+                </button>
+            </div>
+
+            <!-- Progress -->
+            <div class="flex justify-between text-xs font-mono-custom text-gray-500 px-1">
+                <span id="curr-time">0:00</span>
+                <span id="total-time">0:00</span>
+            </div>
+            <div class="progress-container" onclick="jukebox.seek(event)">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-[10px] text-gray-600 font-mono-custom uppercase tracking-widest">
+                    Catalogue: 45 Tracks // Mode: Random Access
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIDDEN PLAYER -->
+    <div id="video-container">
+        <div id="player"></div>
+    </div>
+
+    <!-- FLUID ENGINE SCRIPT (External Library) -->
+    <script src="js/fluid-simulator.js"></script>
+
+    <!-- JUKEBOX LOGIC -->
+    <script>
+        // --- DATA ARCHIVE ---
+        // galleryTrack maps to keys in gallery_map.json (unused). storyDate from narrative metadata.
+        const SONG_ARCHIVE = [
+            { id: 2, title: "The Drop 1", artist: "Ethel", videoId: "zHWwhom80go", storyDate: "NOV 14, 2016 (AGE 15)", galleryTrack: "track_02" },
+            { id: 4, title: "The Drop 2", artist: "Ethel", videoId: "K0ILO8MwX4Y", storyDate: "NOV 14, 2016 (AGE 15)", galleryTrack: "track_04" },
+            { id: 6, title: "Polished Vomit", artist: "Isla", videoId: "MhEeDcdscrs", storyDate: "FEB 14, 2019 (THE WEDDING)", galleryTrack: "track_06" },
+            { id: 8, title: "Structural Psychopathy", artist: "Dominic", videoId: "8rvIVBLZg2o", storyDate: "MAR 2019 (PROFILE)", galleryTrack: "track_08" },
+            { id: 10, title: "Ride", artist: "Ethel", videoId: "0sgcZRtPO6s", storyDate: "JAN 20, 2024 (AGE 17)", galleryTrack: "track_10" },
+            { id: 12, title: "Grief", artist: "Ethel", videoId: "PMy76HBgpL8", storyDate: "FEB 28, 2024 (THE CRASH)", galleryTrack: "track_12" },
+            { id: 14, title: "Gotta Move", artist: "Ethel", videoId: "06qE_-OeIT0", storyDate: "MAR 02, 2024 (LEAVING HOME)", galleryTrack: "track_14" },
+            { id: 16, title: "Won't Break Where Others End", artist: "Ethel", videoId: "fJNMlT7UeW0", storyDate: "MAR 05, 2024 (MOSMAN)", galleryTrack: "track_16" },
+            { id: 18, title: "Big House", artist: "Ethel", videoId: "mj9MGf-VzJY", storyDate: "MAR 05, 2024 (MOSMAN)", galleryTrack: "track_18" },
+            { id: 20, title: "Peek-A-Boo", artist: "Isla", videoId: "qbFxG7sK0pE", storyDate: "MAR 10, 2024 (MOSMAN)", galleryTrack: "track_20" },
+            { id: 22, title: "Northern Road", artist: "Dominic", videoId: "P19KBEQdVjQ", storyDate: "MAR 15, 2024", galleryTrack: "track_22" },
+            { id: 24, title: "Isla Hates Married Bankers", artist: "Isla", videoId: "sXKAs0U8eO8", storyDate: "MAY 2024", galleryTrack: "track_24" },
+            { id: 26, title: "I Built A Box", artist: "Ethel", videoId: "0F_prk5dGC4", storyDate: "JUN 2024 (THE SAFE HOUSE)", galleryTrack: "track_26" },
+            { id: 28, title: "Isla's Burning Dominic's Bridge", artist: "Isla", videoId: "nVKkwb4EnRc", storyDate: "AUG 2024 (THE LEAK)", galleryTrack: "track_28" },
+            { id: 30, title: "For You!!!", artist: "Ethel", videoId: "f8o7zb3F-Xk", storyDate: "SEP 2024", galleryTrack: "track_30" },
+            { id: 32, title: "Isla's Broken Edge", artist: "Isla", videoId: "_gvv_W5_x10", storyDate: "OCT 2024", galleryTrack: "track_32" },
+            { id: 34, title: "Hero Complex", artist: "Dominic", videoId: "YkQOXPzYkkU", storyDate: "FEB 2020 (THE TRIAL START)", galleryTrack: "track_34" },
+            { id: 36, title: "Nothing True", artist: "Ethel", videoId: "Ghg7pC3ms3I", storyDate: "APR 2020 (THE TESTIMONY)", galleryTrack: "track_36" },
+            { id: 38, title: "You Will Thank Me Later", artist: "Dominic", videoId: "n6OgobffCzo", storyDate: "JUN 2020 (PRISON)", galleryTrack: "track_38" },
+            { id: 39, title: "No Sparrow Caught Mid Flight", artist: "Ethel", videoId: "t6vLU0uqIfc", storyDate: "DEC 2024 (POST-TRIAL)", galleryTrack: "track_39" },
+            { id: 41, title: "Dominic's Escape", artist: "Dominic", videoId: "6eZwBGXGSO4", storyDate: "JAN 2024 (THE ESCAPE)", galleryTrack: "track_41" },
+            { id: 42, title: "Ethel's Story - Overview", artist: "Ethel", videoId: "dLUClmr_Pf4", storyDate: "(ARCHIVE REVIEW)", galleryTrack: "track_42" },
+            { id: 43, title: "Ethel's Conclusion", artist: "Ethel", videoId: "D5afy4FucwA", storyDate: "(ARCHIVE REVIEW)", galleryTrack: "track_43" },
+            { id: 44, title: "Ethel:Spoken: Projection", artist: "Ethel", videoId: "AOktpmGD0Po", storyDate: "UNKNOWN", galleryTrack: "track_44" },
+            { id: 45, title: "Platform 18", artist: "Ethel", videoId: "VC6vQGPyF4c", storyDate: "UNKNOWN", galleryTrack: "track_45" },
+            { id: 46, title: "Kinley (Guilt Money)", artist: "Kinley", videoId: "Ac3cRsmjKpE", storyDate: "UNKNOWN", galleryTrack: "track_46" },
+            { id: 47, title: "Ants On The Vine", artist: "Ethel", videoId: "CaBcQ2aSjog", storyDate: "UNKNOWN", galleryTrack: "track_47" },
+            { id: 48, title: "Rattled", artist: "Ethel", videoId: "Fs7BXBOVnvY", storyDate: "UNKNOWN", galleryTrack: "track_48" },
+            { id: 49, title: "Clipboard Man", artist: "Ethel", videoId: "ZAhqNWTHTGU", storyDate: "UNKNOWN", galleryTrack: "track_49" },
+            { id: 50, title: "Make A Mistake On Purpose", artist: "Ethel", videoId: "s9Z8dgRk-Q8", storyDate: "UNKNOWN", galleryTrack: "track_50" },
+            { id: 51, title: "Red Stick", artist: "Ethel", videoId: "iTOKsLS3jhM", storyDate: "UNKNOWN", galleryTrack: "track_51" },
+            { id: 52, title: "Harms Ghost", artist: "Ethel", videoId: "WZ3P96AJfEc", storyDate: "UNKNOWN", galleryTrack: "track_52" },
+            { id: 54, title: "Normal?!", artist: "Ethel", videoId: "8GCXnOQI60g", storyDate: "UNKNOWN", galleryTrack: "track_54" },
+            { id: 55, title: "This isn't therapy", artist: "Isla", videoId: "0tzOaukuBns", storyDate: "UNKNOWN", galleryTrack: "track_55" },
+            { id: 56, title: "A Drop From the Forth", artist: "Isla", videoId: "6bwKDegeBHU", storyDate: "UNKNOWN", galleryTrack: "track_56" },
+            { id: 57, title: "The Porcelain Lie", artist: "Isla", videoId: "GFkK21BdE9o", storyDate: "UNKNOWN", galleryTrack: "track_57" },
+            { id: 58, title: "Memory under Water", artist: "Isla", videoId: "nk4Re7OjTTM", storyDate: "UNKNOWN", galleryTrack: "track_58" },
+            { id: 59, title: "Raise The Fourth", artist: "Isla", videoId: "ey20cJsY82M", storyDate: "UNKNOWN", galleryTrack: "track_59" },
+            { id: 60, title: "Raise The Fourth Version 2", artist: "Isla", videoId: "fNVKsxe_EcM", storyDate: "UNKNOWN", galleryTrack: "track_60" },
+            { id: 61, title: "Intro to Shiny Headed Radio Man", artist: "Isla", videoId: "dK8mqLNRZ2Q", storyDate: "UNKNOWN", galleryTrack: "track_61" },
+            { id: 62, title: "Shiny Headed Radio Man", artist: "Isla", videoId: "UFZeKCcSMoE", storyDate: "UNKNOWN", galleryTrack: "track_62" },
+            { id: 63, title: "Stanmore Farewell", artist: "Isla", videoId: "-3m2_zUNBlo", storyDate: "UNKNOWN", galleryTrack: "track_63" },
+            { id: 64, title: "Don't Wake Him Yet", artist: "Isla", videoId: "NwqHLFYR1mA", storyDate: "UNKNOWN", galleryTrack: "track_64" },
+            { id: 65, title: "What You Don't See", artist: "Isla", videoId: "Y4VC6mh37NI", storyDate: "UNKNOWN", galleryTrack: "track_65" },
+            { id: 66, title: "Melody of Normality (Live)", artist: "Isla", videoId: "a4TpIhna55k", storyDate: "UNKNOWN", galleryTrack: "track_66" },
+            { id: 67, title: "Drop From the Fourth (Symphony)", artist: "Isla", videoId: "7UOZCk5vvbA", storyDate: "UNKNOWN", galleryTrack: "track_67" },
+            { id: 68, title: "What you dont see (Symphony)", artist: "Isla", videoId: "hm2kp7LOhsg", storyDate: "UNKNOWN", galleryTrack: "track_68" },
+            { id: 69, title: "Give it back", artist: "Isla", videoId: "Aw2ZAkxp6b0", storyDate: "UNKNOWN", galleryTrack: "track_69" },
+            { id: 70, title: "What This Was Always For", artist: "Isla", videoId: "X9EUb1_QC9c", storyDate: "UNKNOWN", galleryTrack: "track_70" },
+            { id: 71, title: "FIELD NOTES FROM THE LANGTANG TRAIL, 1966", artist: "UNKNOWN", videoId: "8nuKkf_oe1s", storyDate: "1966", galleryTrack: "track_71" }
+        ];
+
+        // --- GALLERY ENGINE (Image Slideshow) ---
+        // Loads narrative images from gallery_map.json (unused) and crossfades them behind the fluid
+        class GalleryEngine {
+            constructor() {
+                this.galleryMap = null;
+                this.currentImages = [];
+                this.currentIndex = 0;
+                this.activeSlot = 'a';
+                this.intervalId = null;
+                this.imgA = document.getElementById('gallery-img-a');
+                this.imgB = document.getElementById('gallery-img-b');
+                this.container = document.getElementById('bg-gallery');
+                this.onImageReady = null;
+            }
+
+            async loadMap() {
+                try {
+                    const resp = await fetch('library/char_ethel_media/gallery_map.json (unused)');
+                    const rawMap = await resp.json();
+
+                    // Transform remote GitHub Pages URLs to local relative paths.
+                    // GitHub Pages 301-redirects case-mismatched URLs, stripping CORS headers.
+                    // Local paths eliminate CORS entirely since images are co-located.
+                    const REMOTE_BASE = /https:\/\/NJsalubrious\.github\.io\/pixelstortion-assets\/assets_for_ethel_songs\/images\//gi;
+                    const LOCAL_BASE = 'library/char_ethel_media/images/';
+
+                    this.galleryMap = {};
+                    for (const [track, urls] of Object.entries(rawMap)) {
+                        this.galleryMap[track] = urls.map(url => url.replace(REMOTE_BASE, LOCAL_BASE));
+                    }
+
+                    console.log('[Gallery] Map loaded:', Object.keys(this.galleryMap).length, 'tracks (local paths)');
+                } catch (e) {
+                    console.warn('[Gallery] Failed to load gallery_map.json (unused):', e);
+                }
+            }
+
+            loadTrack(galleryTrack) {
+                // Aggressively clear any running interval before anything else
+                this.stopCycling();
+                this.currentIndex = 0;
+
+                if (!galleryTrack || !this.galleryMap || !this.galleryMap[galleryTrack]) {
+                    // No gallery for this track — hide the container entirely
+                    this.currentImages = [];
+                    this.container.style.opacity = '0';
+                    // Remove active class from both slots so previous images don't linger
+                    this.imgA.classList.remove('active');
+                    this.imgB.classList.remove('active');
+                    return;
+                }
+
+                this.currentImages = this.galleryMap[galleryTrack];
+                this.container.style.opacity = '1';
+
+                // Show the first image immediately
+                if (this.currentImages.length > 0) {
+                    this.showImage(this.currentImages[0]);
+                }
+            }
+
+            showImage(url) {
+                const target = this.activeSlot === 'a' ? this.imgA : this.imgB;
+                const other = this.activeSlot === 'a' ? this.imgB : this.imgA;
+
+                // CRITICAL: Set crossOrigin BEFORE src to avoid tainted canvas
+                target.crossOrigin = 'Anonymous';
+                target.onload = () => {
+                    target.classList.add('active');
+                    other.classList.remove('active');
+                    this.activeSlot = this.activeSlot === 'a' ? 'b' : 'a';
+
+                    // Notify the color extractor that a new image is ready
+                    if (this.onImageReady) this.onImageReady(target);
+                };
+                target.onerror = () => {
+                    console.warn('[Gallery] Failed to load image:', url);
+                };
+                target.src = url;
+            }
+
+            startCycling() {
+                this.stopCycling();
+                if (this.currentImages.length <= 1) return;
+
+                this.intervalId = setInterval(() => {
+                    this.currentIndex = (this.currentIndex + 1) % this.currentImages.length;
+                    this.showImage(this.currentImages[this.currentIndex]);
+                }, 6000);
+            }
+
+            stopCycling() {
+                if (this.intervalId) {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                }
+            }
+        }
+
+        // --- COLOR EXTRACTOR (Shape & Color Hotspot Scanner) ---
+        // Scans image for bright/colorful regions and uses those as fluid spawn points
+        class ColorExtractor {
+            constructor() {
+                this.canvas = document.createElement('canvas');
+                this.ctx = this.canvas.getContext('2d', { willReadFrequently: true });
+                this.width = 128;
+                this.height = 128;
+                this.canvas.width = this.width;
+                this.canvas.height = this.height;
+                this.hotspots = [];
+            }
+
+            extractFromImage(img) {
+                try {
+                    this.ctx.drawImage(img, 0, 0, this.width, this.height);
+                    const data = this.ctx.getImageData(0, 0, this.width, this.height).data;
+                    this.hotspots = [];
+
+                    // Scan the image for non-dark areas to extract shape
+                    for (let i = 0; i < data.length; i += 4) {
+                        let r = data[i] / 255;
+                        let g = data[i + 1] / 255;
+                        let b = data[i + 2] / 255;
+                        let luminance = (r * 0.299 + g * 0.587 + b * 0.114);
+
+                        // If it's bright or colorful enough, log it as a fluid spawn point
+                        if (luminance > 0.15) {
+                            let x = ((i / 4) % this.width) / this.width;
+                            let y = Math.floor((i / 4) / this.width) / this.height;
+
+                            // Boost saturation slightly for the mist effect
+                            const max = Math.max(r, g, b);
+                            if (max > 0 && max < 0.8) {
+                                const boost = 0.8 / max;
+                                r *= boost; g *= boost; b *= boost;
+                            }
+
+                            this.hotspots.push({ x: x, y: 1.0 - y, r, g, b }); // Y inverted for WebGL
+                        }
+                    }
+                    console.log(`[Color] Mapped ${this.hotspots.length} emission points.`);
+                } catch (e) {
+                    console.warn('[Color] Extraction failed:', e.message);
+                    this.hotspots = [];
+                }
+            }
+
+            getRandomHotspot() {
+                if (this.hotspots.length === 0) {
+                    return { x: 0.2 + Math.random() * 0.6, y: 0.2 + Math.random() * 0.6, r: 0, g: 0.6, b: 0.3 };
+                }
+                return this.hotspots[Math.floor(Math.random() * this.hotspots.length)];
+            }
+        }
+
+        // --- HYPERPULSE ENGINE (Visual Logic) ---
+        // Not audio-derived: uses lyricFeel + time + deterministic seed to synthesize onsets.
+        // Goal: violent, colorful, track-distinct behavior.
+        class HyperPulseEngine {
+            constructor(fluidEngine) {
+                this.fluid = fluidEngine;
+                this.active = false;
+                this.timer = null;
+                this.energy = 0.25;      // 0..1
+                this.volatility = 0.15;  // 0..1
+                this.seed = 1337;
+                this.phase = 0;
+                this.artist = "UNKNOWN";
+            }
+
+            setTrack(track) {
+                const s = (track.videoId || "") + "|" + (track.title || "") + "|" + (track.storyDate || "");
+                this.seed = this.hash(s);
+                this.artist = track.artist || "UNKNOWN";
+                this.phase = 0;
+            }
+
+            setDrive(energy, volatility) {
+                this.energy = Math.max(0, Math.min(1, energy || 0));
+                this.volatility = Math.max(0, Math.min(1, volatility || 0));
+            }
+
+            start() { this.active = true; this.loop(); }
+            stop() { this.active = false; if (this.timer) clearTimeout(this.timer); }
+
+            loop() {
+                if (!this.active) return;
+                const e = this.energy, v = this.volatility;
+                // tempo tightens under pressure; volatility causes jitter clusters
+                const bpm = 70 + e * 140 + v * 80;
+                const jitter = (this.rand() * 0.45 - 0.18) * (0.2 + v);
+                const ms = Math.max(18, (60000 / bpm) * (0.55 + this.rand() * 0.75 + jitter));
+                this.timer = setTimeout(() => { this.trigger(); this.loop(); }, ms);
+            }
+
+            trigger() {
+                if (!this.fluid) return;
+                const e = this.energy, v = this.volatility;
+
+                // choose palette color via HSV rotation (hyper-chromatic)
+                const baseHue = this.artist === "Isla" ? 0.94 : (this.artist === "Dominic" ? 0.33 : (this.artist === "Ethel" ? 0.58 : 0.12));
+                const hue = (baseHue + 0.18 * Math.sin(this.phase * 0.7) + 0.12 * (this.rand() - 0.5)) % 1.0;
+                const sat = Math.min(1, 0.65 + e * 0.45 + v * 0.25);
+                const val = Math.min(1, 0.55 + e * 0.55);
+                const rgb = this.hsv(hue, sat, val);
+
+                // violence factor: Isla erupts in clusters; Dominic in razor pulses; Ethel in pressure waves
+                let bursts = 1 + Math.floor((e * 3.0 + v * 2.0) * (this.artist === "Isla" ? 1.7 : 1.2));
+                if (this.artist === "Dominic") bursts = 1 + Math.floor(e * 2.2 + v * 1.2);
+                if (this.artist === "Ethel") bursts = 1 + Math.floor(e * 2.6 + v * 1.0);
+
+                for (let i = 0; i < bursts; i++) {
+                    const x = this.rand();
+                    const y = this.rand();
+                    const amp = Math.min(1, 0.15 + e * 0.95 + v * 0.35);
+                    const dx = (this.rand() - 0.5) * (1200 + amp * 6200) * (this.artist === "Dominic" ? 0.75 : 1.0);
+                    const dy = (this.rand() - 0.5) * (1400 + amp * 7200);
+
+                    this.fluid.splatStack.push({
+                        x, y, dx, dy,
+                        color: { r: rgb.r, g: rgb.g, b: rgb.b }
+                    });
+                }
+
+                // occasional "shock ring" (center blast) at very high energy
+                if (e > 0.82 && this.rand() < 0.08 + v * 0.10) {
+                    const cx = 0.5 + (this.rand() - 0.5) * 0.08;
+                    const cy = 0.5 + (this.rand() - 0.5) * 0.08;
+                    const amp = Math.min(1, e * 1.15);
+                    const rgb2 = this.hsv((hue + 0.5) % 1.0, 1.0, 1.0);
+                    this.fluid.splatStack.push({
+                        x: cx, y: cy,
+                        dx: (this.rand() - 0.5) * (9000 * amp),
+                        dy: (this.rand() - 0.5) * (9000 * amp),
+                        color: { r: rgb2.r, g: rgb2.g, b: rgb2.b }
+                    });
+                }
+
+                this.phase += 1;
+            }
+
+            // deterministic-ish RNG
+            hash(str) {
+                let h = 2166136261;
+                for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+                return h >>> 0;
+            }
+            rand() {
+                // xorshift32
+                let x = this.seed || 123456789;
+                x ^= x << 13; x ^= x >>> 17; x ^= x << 5;
+                this.seed = x >>> 0;
+                return (this.seed % 10000) / 10000;
+            }
+            hsv(h, s, v) {
+                // inline HSV->RGB
+                const i = Math.floor(h * 6);
+                const f = h * 6 - i;
+                const p = v * (1 - s);
+                const q = v * (1 - f * s);
+                const t = v * (1 - (1 - f) * s);
+                let r = v, g = t, b = p;
+                switch (i % 6) {
+                    case 0: r = v; g = t; b = p; break;
+                    case 1: r = q; g = v; b = p; break;
+                    case 2: r = p; g = v; b = t; break;
+                    case 3: r = p; g = q; b = v; break;
+                    case 4: r = t; g = p; b = v; break;
+                    case 5: r = v; g = p; b = q; break;
+                }
+                return { r, g, b };
+            }
+        }
+
+        // --- UPLINK MONITOR (Hard Lore Gate) ---
+        let uplinkTimeout = null;
+
+        function startUplinkMonitor(videoId) {
+            if (uplinkTimeout) clearTimeout(uplinkTimeout);
+
+            uplinkTimeout = setTimeout(() => {
+                let isActuallyPlaying = false;
+                if (jukebox.player && typeof jukebox.player.getPlayerState === 'function') {
+                    isActuallyPlaying = (jukebox.player.getPlayerState() === 1);
+                }
+
+                if (!isActuallyPlaying) {
+                    showUplinkError(videoId);
+                }
+            }, 4500);
+        }
+
+        function showUplinkError(videoId) {
+            if (document.getElementById('uplink-error-overlay')) return;
+
+            const errorOverlay = document.createElement('div');
+            errorOverlay.id = 'uplink-error-overlay';
+            errorOverlay.className = 'fixed inset-0 z-[200] flex flex-col items-center justify-center bg-black/95 backdrop-blur-md text-center p-6 pointer-events-auto';
+            errorOverlay.innerHTML = `
+                <span class="material-symbols-outlined text-[var(--neon-green)] text-7xl mb-6" style="font-variation-settings: 'FILL' 1;">warning</span>
+                <h2 class="text-3xl font-bold text-[var(--neon-green)] font-mono-custom tracking-widest mb-6 uppercase glitch-text" data-text="PLAYBACK BLOCKED">PLAYBACK BLOCKED</h2>
+                
+                <div class="text-center mb-10 max-w-lg">
+                    <p class="text-gray-300 font-mono-custom text-sm md:text-base leading-relaxed">
+                        Your VPN or browser privacy settings are interfering<br class="hidden md:block">
+                        with playback. Try disabling your VPN or adjusting<br class="hidden md:block">
+                        your tracking protection settings.
+                    </p>
+                </div>
+
+                <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="border border-[var(--neon-green)] text-[var(--neon-green)] px-10 py-3 font-mono-custom text-sm hover:bg-[var(--neon-green)] hover:text-black transition-all uppercase tracking-widest flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-sm">open_in_new</span> WATCH DIRECTLY ON YOUTUBE
+                </a>
+            `;
+            document.body.appendChild(errorOverlay);
+        }
+
+        // --- JUKEBOX CONTROLLER ---
+        class Jukebox {
+            constructor() {
+                this.player = null;
+                this.currentTrackIndex = -1;
+                this.playedHistory = [];
+                this.isPlaying = false;
+                this.beatEngine = null;
+            }
+
+            init(fluidEngine) {
+                this.beatEngine = new HyperPulseEngine(fluidEngine);
+            }
+
+            loadRandomTrack() {
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * SONG_ARCHIVE.length);
+                } while (newIndex === this.currentTrackIndex && SONG_ARCHIVE.length > 1);
+
+                this.loadTrack(newIndex);
+            }
+
+            loadTrack(index) {
+                // Clear any existing uplink error overlay
+                const existingError = document.getElementById('uplink-error-overlay');
+                if (existingError) existingError.remove();
+
+                this.currentTrackIndex = index;
+                const track = SONG_ARCHIVE[index];
+
+                // Build lyric-driven curve (duration will be corrected once player reports it)
+                lyricFeel.buildForTrack(track, 240);
+                whisper.say(`LOADED: ${track.title}`, { meta: "SYSTEM", tiny: true, fast: true });
+
+
+
+                try { palette.setTrack(track); } catch (_) { }
+                try { this.beatEngine && this.beatEngine.setTrack(track); } catch (_) { }
+                // UI Update
+                document.getElementById('track-title').innerText = track.title;
+                document.getElementById('track-artist').innerText = track.artist;
+                document.getElementById('track-date').innerText = track.storyDate || '';
+                document.getElementById('status-indicator').innerText = "BUFFERING";
+
+                // Gallery Update — load images for this track
+                if (galleryEngine) {
+                    galleryEngine.loadTrack(track.galleryTrack);
+                }
+
+                // Load Video
+                if (this.player && this.player.loadVideoById) {
+                    this.player.loadVideoById(track.videoId);
+                    startUplinkMonitor(track.videoId);
+                }
+            }
+
+            togglePlay() {
+                if (!this.player) return;
+                const state = this.player.getPlayerState();
+                if (state === 1) { // Playing
+                    this.player.pauseVideo();
+
+                    if (window.branch) branch.action("pause");
+                } else {
+                    this.player.playVideo();
+
+                    if (window.branch) branch.action("play");
+                }
+            }
+
+            next() {
+                if (window.branch) branch.action("skip"); this.loadRandomTrack();
+            }
+
+            prev() {
+                if (window.branch) branch.action("skip"); // For a random jukebox, prev just loads another random track (chaos mode)
+                this.loadRandomTrack();
+            }
+
+            seek(event) {
+                if (!this.player) return;
+                const container = document.querySelector('.progress-container');
+                const rect = container.getBoundingClientRect();
+                const clickX = event.clientX - rect.left;
+                const percent = Math.max(0, Math.min(1, clickX / rect.width));
+                const duration = this.player.getDuration();
+                this.player.seekTo(duration * percent, true);
+
+                if (window.branch) branch.action("seek");
+            }
+
+            onStateChange(event) {
+                const status = document.getElementById('status-indicator');
+                const playIcon = document.getElementById('play-icon');
+
+                if (event.data === YT.PlayerState.PLAYING) {
+                    if (uplinkTimeout) clearTimeout(uplinkTimeout);
+                    this.isPlaying = true;
+                    try {
+                        const track = SONG_ARCHIVE[this.currentTrackIndex];
+                        const d = this.player.getDuration ? this.player.getDuration() : 240;
+                        lyricFeel.buildForTrack(track, d || 240);
+                    } catch (_) { }
+                    if (window.branch) branch.action("play");
+
+                    status.innerText = "PLAYING";
+                    status.style.color = "#00ff41"; // Neon Green
+                    playIcon.innerText = "pause";
+                    this.beatEngine.start(); // Start Visuals
+                    // Start Slideshow
+                }
+                else if (event.data === YT.PlayerState.PAUSED) {
+                    this.isPlaying = false;
+                    status.innerText = "PAUSED";
+                    status.style.color = "orange";
+                    playIcon.innerText = "play_arrow";
+                    this.beatEngine.stop(); // Stop Visuals
+                    // Pause Slideshow
+                }
+                else if (event.data === YT.PlayerState.ENDED) {
+                    this.isPlaying = false;
+                    status.innerText = "LOADING NEXT...";
+                    this.beatEngine.stop();
+                    this.next(); // Auto-advance
+                }
+            }
+
+            updateProgress() {
+                if (!this.player || !this.isPlaying) return;
+
+                const curr = this.player.getCurrentTime();
+                const total = this.player.getDuration();
+
+                if (total > 0) {
+                    const pct = (curr / total) * 100;
+                    document.getElementById('progress-bar').style.width = `${pct}%`;
+                    document.getElementById('curr-time').innerText = this.formatTime(curr);
+                    document.getElementById('total-time').innerText = this.formatTime(total);
+                }
+            }
+
+            formatTime(s) {
+                const m = Math.floor(s / 60);
+                const secs = Math.floor(s % 60);
+                return `${m}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            onError(event) {
+                console.warn("YouTube Player Error:", event.data);
+                const status = document.getElementById('status-indicator');
+                if (status) {
+                    status.innerText = "SIGNAL LOST";
+                    status.style.color = "red";
+                }
+
+                // Fallback: Start visual engine in "Simulation Mode"
+                if (this.beatEngine && !this.beatEngine.active) {
+                    console.log("Activating Visual Fallback Mode");
+                    this.beatEngine.start();
+                }
+            }
+        }
+
+        // --- INITIALIZATION ---
+        let fluid;
+        let galleryEngine;
+        let colorExtractor;
+        const jukebox = new Jukebox();
+
+        function startSystem() {
+            console.log('[JB] startSystem() called');
+
+            // Remove Overlay
+            const overlay = document.getElementById('start-overlay');
+            overlay.style.opacity = '0';
+            setTimeout(() => overlay.remove(), 500);
+
+            // ── DIAGNOSTIC: Check canvas element ──
+            const canvasEl = document.getElementById('fluid-canvas');
+            console.log('[JB] Canvas element:', canvasEl);
+            console.log('[JB] Canvas clientWidth:', canvasEl?.clientWidth, 'clientHeight:', canvasEl?.clientHeight);
+
+            if (!canvasEl) {
+                console.error('[JB] FATAL: Canvas element #fluid-canvas not found!');
+                return;
+            }
+
+            // ── DIAGNOSTIC: Check if FluidSimulator class exists ──
+            console.log('[JB] FluidSimulator class:', typeof FluidSimulator);
+            if (typeof FluidSimulator === 'undefined') {
+                console.error('[JB] FATAL: FluidSimulator class not loaded! Check js/fluid-simulator.js');
+                // FALLBACK: Draw green screen to prove canvas is visible
+                const ctx = canvasEl.getContext('2d');
+                if (ctx) {
+                    canvasEl.width = window.innerWidth;
+                    canvasEl.height = window.innerHeight;
+                    ctx.fillStyle = '#00ff41';
+                    ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
+                    ctx.fillStyle = '#000';
+                    ctx.font = '48px monospace';
+                    ctx.fillText('FLUID ENGINE FAILED TO LOAD', 50, 100);
+                }
+                return;
+            }
+
+            // ── Init Fluid (External Library) ──
+            try {
+                fluid = new FluidSimulator(canvasEl, null);
+                console.log('[JB] FluidSimulator created:', fluid);
+                console.log('[JB] fluid.gl:', fluid?.gl);
+                console.log('[JB] fluid.ext:', fluid?.ext);
+                console.log('[JB] fluid.splatStack:', fluid?.splatStack);
+                console.log('[JB] fluid.canvas.width:', fluid?.canvas?.width, 'height:', fluid?.canvas?.height);
+            } catch (e) {
+                console.error('[JB] FluidSimulator constructor THREW:', e);
+                return;
+            }
+
+            if (!fluid || !fluid.gl) {
+                console.error('[JB] FATAL: FluidSimulator created but gl context is null!');
+                return;
+            }
+
+            // ── Init Gallery & Color Extraction Engine ──
+            galleryEngine = new GalleryEngine();
+            colorExtractor = new ColorExtractor();
+            galleryEngine.onImageReady = (img) => colorExtractor.extractFromImage(img);
+            galleryEngine.loadMap(); // Async — loads gallery_map.json (unused) in background
+
+            // --- ELEGANT MIST CONFIGURATION ---
+            if (window.FLUID_CONFIG) {
+                window.FLUID_CONFIG.DENSITY_DISSIPATION = 0.992; // Lingers much longer
+                window.FLUID_CONFIG.VELOCITY_DISSIPATION = 0.985; // Slows down gracefully
+                window.FLUID_CONFIG.SPLAT_RADIUS = 0.9;          // Very wide, soft clouds
+                window.FLUID_CONFIG.CURL = 2;                    // VERY low curl to stop the messy swirling
+            }
+
+            // Init Jukebox Logic
+            jukebox.init(fluid);
+
+            // FORCE START VISUALS NOW
+            console.log("[JB] Pushing initial splats...");
+            for (let i = 0; i < 5; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                fluid.splatStack.push({
+                    x: 0.5 + Math.cos(angle) * 0.1,
+                    y: 0.5 + Math.sin(angle) * 0.1,
+                    dx: Math.cos(angle) * 4000,
+                    dy: Math.sin(angle) * 4000,
+                    color: { r: 0.0, g: 1.0, b: 0.25 }
+                });
+            }
+            console.log("[JB] splatStack after push:", fluid.splatStack.length, "items");
+            jukebox.beatEngine.start();
+            console.log("[JB] BeatEngine started");
+
+            // Start Progress Loop
+            setInterval(() => jukebox.updateProgress(), 1000);
+
+            // Play the first track immediately
+            if (jukebox.player) {
+                jukebox.loadRandomTrack();
+            } else {
+                console.warn("[JB] Player not ready yet, retrying...");
+                setTimeout(() => jukebox.loadRandomTrack(), 1000);
+            }
+            console.log("[JB] startSystem() complete");
+        }
+
+        // Load YouTube API Immediately on Page Load
+        function onYouTubeIframeAPIReady() {
+            jukebox.player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                host: 'https://www.youtube.com', // RESTORES ALGORITHMIC TRUST
+                playerVars: {
+                    'playsinline': 1,
+                    'controls': 0,
+                    'disablekb': 1,
+                    'origin': window.location.origin,
+                    'rel': 0,
+                    'modestbranding': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': (e) => jukebox.onStateChange(e),
+                    'onError': (e) => jukebox.onError(e)
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            console.log("Player Ready - Waiting for User Command");
+            // Change text to show ready
+            const loadingText = document.getElementById('loading-text');
+            const initBtn = document.getElementById('init-btn');
+
+            if (loadingText && initBtn) {
+                loadingText.style.display = 'none'; // Hide loading text
+                initBtn.style.display = 'block'; // Show button
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+
+        /**
+         * ===========================================================
+         *  LYRIC-DRIVEN "FEEL ENGINE" (YouTube-only, no waveform access)
+         * ===========================================================
+         * Reality check: you cannot read raw audio samples/waveform from a YouTube iframe for security/CORS reasons.
+         * So we derive a *track-specific intensity curve* from lyrics + metadata and sync it to player.getCurrentTime().
+         * If lyrics are missing, we fall back to title+artist heuristics so *every* track still hits uniquely.
+         */
+
+        /** Optional: paste lyrics per track here (keyed by galleryTrack). */
+        const LYRICS_ARCHIVE = {
+            // Example:
+            // "track_06": `Polished vomit\nNapkin smile\n...`
+        };
+
+        /** A tiny lexical kit for intensity estimation (fast + deterministic). */
+        const LEX = {
+            neg: new Set(["blood", "vomit", "knife", "dead", "rot", "hate", "burn", "crash", "scream", "break", "ash", "fear", "panic", "kill", "ruin", "trauma", "hole", "shame", "dirty", "liar", "cage", "prison", "cold", "glass", "wound", "acid", "spit", "choke", "crawl", "stain", "gun", "bruise", "sick", "throat", "mask", "leash", "bite"]),
+            dom: new Set(["control", "optimize", "compliance", "system", "metrics", "yield", "policy", "authority", "procedure", "audit", "protocol", "discipline", "standard"]),
+            ethel: new Set(["data", "model", "signal", "noise", "calibrate", "ratio", "proof", "vector", "error", "map", "function", "trace", "forensic"]),
+            isla: new Set(["glass", "fire", "salt", "milk", "wedding", "mirror", "bruise", "mouth", "dress", "rings", "white", "black", "pretty", "taste"])
+        };
+
+        /**
+         * Builds a per-second curve in [0..1] based on lyrics features.
+         * We "time-stretch" lines evenly across duration (no timestamps required).
+         */
+        class LyricFeelEngine {
+            constructor() {
+                this.curve = null;      // Float32Array per second
+                this.durationS = 0;
+                this.trackKey = null;
+                this.mode = "fallback";
+            }
+
+            buildForTrack(track, durationS) {
+                this.durationS = Math.max(1, Math.floor(durationS || 1));
+                this.trackKey = track.galleryTrack || ("id_" + track.id);
+                const raw = (LYRICS_ARCHIVE[this.trackKey] || "").trim();
+
+                // Fallback text if no lyrics provided
+                const seedText = raw.length ? raw : `${track.title}\n${track.artist}\n${track.storyDate || ""}`;
+
+                // Split into lines; remove blanks but keep structure
+                const lines = seedText.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+                const n = Math.max(1, lines.length);
+                const perLine = this.durationS / n;
+
+                const curve = new Float32Array(this.durationS);
+                for (let i = 0; i < n; i++) {
+                    const line = lines[i];
+                    const feat = this.lineIntensity(line, track);
+                    const start = Math.floor(i * perLine);
+                    const end = Math.min(this.durationS - 1, Math.floor((i + 1) * perLine));
+
+                    for (let t = start; t <= end; t++) {
+                        // Add a little "phrase attack/decay"
+                        const p = (t - start) / Math.max(1, (end - start));
+                        const env = (p < 0.18) ? (p / 0.18) : (p > 0.92 ? (1 - (p - 0.92) / 0.08) : 1);
+                        curve[t] = Math.max(curve[t], feat * env);
+                    }
+                }
+
+                // Smooth + add macro-structure (intro/verse/peak/outro)
+                this.curve = this.smooth(curve, 5);
+                this.applyMacroShape(track);
+                this.mode = raw.length ? "lyrics" : "fallback";
+            }
+
+            tokenize(s) {
+                return s.toLowerCase().replace(/[^a-z0-9\s'!-]/g, " ").split(/\s+/).filter(Boolean);
+            }
+
+            lineIntensity(line, track) {
+                const CONTRA_A = new Set(["wedding", "white", "pretty", "cake", "dress", "ring", "smile", "silk", "clean", "gold"]);
+                const CONTRA_B = new Set(["vomit", "blood", "rot", "knife", "bruise", "cage", "prison", "spit", "choke", "ash", "stain", "dead", "mask"]);
+
+                const toks = this.tokenize(line);
+                const len = toks.length;
+
+                let score = 0.08;
+                // Density: more words = more pressure
+                score += Math.min(0.35, len / 22);
+
+                // Punctuation + casing = spike
+                const ex = (line.match(/!/g) || []).length;
+                const q = (line.match(/\?/g) || []).length;
+                const caps = (line.match(/[A-Z]/g) || []).length;
+                score += Math.min(0.28, ex * 0.06 + q * 0.04 + Math.min(0.18, caps / 80));
+
+                // Lexical bias by character-world
+                let neg = 0, dom = 0, et = 0, is = 0;
+                for (const w of toks) {
+                    if (LEX.neg.has(w)) neg++;
+                    if (LEX.dom.has(w)) dom++;
+                    if (LEX.ethel.has(w)) et++;
+                    if (LEX.isla.has(w)) is++;
+                }
+                score += Math.min(0.42, neg * 0.06);
+
+                // Artist signature: Dominic = colder, Ethel = structured, Isla = volatile
+                if (track.artist === "Dominic") { score += Math.min(0.30, dom * 0.07); score += 0.05; }
+                if (track.artist === "Ethel") { score += Math.min(0.24, et * 0.06); score *= 0.92; }
+                if (track.artist === "Isla") { score += Math.min(0.34, is * 0.07); score *= 1.08; }
+
+                // Contradiction multiplier: beauty+rot in same line spikes hard (Isla signature)
+                let ca = 0, cb = 0;
+                for (const w of toks) { if (CONTRA_A.has(w)) ca++; if (CONTRA_B.has(w)) cb++; }
+                if (ca > 0 && cb > 0) { score *= (1.0 + Math.min(0.55, 0.12 * ca + 0.18 * cb)); }
+
+                // Clamp
+                return Math.max(0, Math.min(1, score));
+            }
+
+            smooth(arr, radius) {
+                const out = new Float32Array(arr.length);
+                for (let i = 0; i < arr.length; i++) {
+                    let s = 0, c = 0;
+                    for (let k = -radius; k <= radius; k++) {
+                        const j = i + k;
+                        if (j >= 0 && j < arr.length) { s += arr[j]; c++; }
+                    }
+                    out[i] = s / Math.max(1, c);
+                }
+                return out;
+            }
+
+            applyMacroShape(track) {
+                if (!this.curve) return;
+                const n = this.curve.length;
+                for (let t = 0; t < n; t++) {
+                    const p = t / Math.max(1, n - 1);
+                    // Base story arc
+                    let m = 1;
+                    if (track.artist === "Ethel") {
+                        // controlled ramp + late peak
+                        m = 0.75 + 0.45 * Math.pow(p, 1.7);
+                    } else if (track.artist === "Dominic") {
+                        // high early authority -> unnerving plateau
+                        m = 0.95 + 0.10 * Math.sin(p * Math.PI * 2);
+                    } else if (track.artist === "Isla") {
+                        // unstable: two peaks
+                        m = 0.75 + 0.55 * Math.sin(p * Math.PI) + 0.25 * Math.sin(p * Math.PI * 3);
+                    } else {
+                        m = 0.85 + 0.30 * Math.sin(p * Math.PI);
+                    }
+                    this.curve[t] = Math.max(0, Math.min(1, this.curve[t] * m));
+                }
+            }
+
+            sample(timeS) {
+                if (!this.curve) return 0;
+                const i = Math.max(0, Math.min(this.curve.length - 1, Math.floor(timeS)));
+                return this.curve[i];
+            }
+        }
+
+        /**
+         * ===========================================================
+         *  DOMINIC "SYSTEM WHISPER" + BRANCH TRIGGERS
+         * ===========================================================
+         * No questions. The listener's behavior IS the input device.
+         */
+        class Whisper {
+            constructor() {
+                this.el = document.getElementById('whisper-overlay');
+                this.cooldownUntil = 0;
+                this.last = "";
+            }
+            say(text, opts = {}) {
+                const now = performance.now();
+                if (now < this.cooldownUntil) return;
+                if (text === this.last && Math.random() < 0.65) return;
+                this.last = text;
+                this.cooldownUntil = now + (opts.fast ? 900 : 1800);
+
+                const meta = opts.meta || "SYSTEM WHISPER";
+                const cls = opts.red ? "red" : "";
+                const tiny = opts.tiny ? "tiny" : "";
+
+                this.el.innerHTML = `<div class="meta ${tiny}">${meta}</div><div class="${cls}">${text}</div>`;
+                this.el.classList.add("show");
+                clearTimeout(this._t);
+                this._t = setTimeout(() => this.el.classList.remove("show"), opts.long ? 3400 : 2200);
+            }
+        }
+
+        class BranchEngine {
+            constructor(whisper) {
+                this.whisper = whisper;
+                this.reset();
+            }
+            reset() {
+                this.state = "NEUTRAL";
+                this.c = { seek: 0, skip: 0, play: 0, pause: 0 };
+                this.window = [];
+                this.lockUntil = 0;
+            }
+            action(type) {
+                const t = performance.now();
+                this.window.push({ type, t });
+                // 10s rolling window
+                this.window = this.window.filter(e => t - e.t < 10000);
+                this.c[type] = (this.c[type] || 0) + 1;
+            }
+            update(intensity) {
+                const t = performance.now();
+                if (t < this.lockUntil) return;
+
+                const seeks = this.window.filter(e => e.type === "seek").length;
+                const skips = this.window.filter(e => e.type === "skip").length;
+                const pauses = this.window.filter(e => e.type === "pause").length;
+
+                // Behavioural classification
+                let next = "NEUTRAL";
+                if (skips >= 3) next = "AVOIDING";
+                else if (seeks >= 3) next = "CONTROLLING";
+                else if (pauses >= 3) next = "FREEZING";
+                else if (intensity > 0.78) next = "PRESSURE";
+
+                if (next !== this.state) {
+                    this.state = next;
+                    if (next === "AVOIDING") this.whisper.say("YOU KEEP MOVING THE SCENE. IT DOESN'T MOVE YOU.", { meta: "DOMINIC / OBSERVATION" });
+                    if (next === "CONTROLLING") this.whisper.say("YOU'RE EDITING A MEMORY. THAT'S NOT HOW IT WORKS.", { meta: "DOMINIC / CONTROL" });
+                    if (next === "FREEZING") this.whisper.say("PAUSE DOESN'T STOP CONSEQUENCE.", { meta: "DOMINIC / PROCEDURE", red: true });
+                    if (next === "PRESSURE") this.whisper.say("LOOK AT IT. DON'T SOLVE IT.", { meta: "DOMINIC / INSTRUCTION" });
+                    this.lockUntil = t + 800; // stop chatter
+                }
+            }
+        }
+
+        /**
+         * ===========================================================
+         *  GPU POSTFX (bloom-ish + glitch) driven by intensity curve
+         * ===========================================================
+         * We render the hidden fluid-canvas into a WebGL canvas and apply a shader.
+         * This works even without audio waveform.
+         */
+        class PostFX {
+            constructor() {
+                this.canvas = document.getElementById('postfx-canvas');
+                this.srcCanvas = document.getElementById('fluid-canvas');
+                this.gl = this.canvas.getContext('webgl', { premultipliedAlpha: false, alpha: true, antialias: false, preserveDrawingBuffer: false });
+                this.ready = false;
+                this.t0 = performance.now();
+                this.intensity = 0;
+            }
+            init() {
+                if (!this.gl || this.ready) return;
+                const gl = this.gl;
+
+                const vs = `
+      attribute vec2 aPos;
+      varying vec2 vUV;
+      void main(){
+        vUV = aPos*0.5 + 0.5;
+        gl_Position = vec4(aPos, 0.0, 1.0);
+      }`;
+                const fs = `
+      precision mediump float;
+      varying vec2 vUV;
+      uniform sampler2D uTex;
+      uniform vec2 uRes;
+      uniform float uTime;
+      uniform float uI;
+
+      float rand(vec2 co){
+        return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+      }
+
+      void main(){
+        vec2 uv = vUV;
+
+        // subtle screen tear (reduced for Chrome/Edge compatibility)
+        float tear = step(0.993, rand(vec2(uTime*0.1, uv.y))) * (0.02 + 0.08*uI);
+        uv.x += tear * (rand(vec2(uv.y, uTime)) - 0.5);
+
+        // chromatic drift on intensity (reduced)
+        float c = 0.003 + 0.010*uI;
+        vec4 col;
+        col.r = texture2D(uTex, uv + vec2( c, 0.0)).r;
+        col.g = texture2D(uTex, uv).g;
+        col.b = texture2D(uTex, uv + vec2(-c, 0.0)).b;
+        col.a = texture2D(uTex, uv).a;
+
+        // bloom-ish: cheap bright-pass + blur taps
+        float luma = dot(col.rgb, vec3(0.299,0.587,0.114));
+        vec3 bloom = vec3(0.0);
+        float k = smoothstep(0.50, 0.90, luma) * (0.10 + 0.35*uI);
+        vec2 px = 1.0 / uRes;
+        bloom += texture2D(uTex, uv + px*vec2( 1.0, 0.0)).rgb;
+        bloom += texture2D(uTex, uv + px*vec2(-1.0, 0.0)).rgb;
+        bloom += texture2D(uTex, uv + px*vec2( 0.0, 1.0)).rgb;
+        bloom += texture2D(uTex, uv + px*vec2( 0.0,-1.0)).rgb;
+        bloom *= 0.25;
+
+        // noise grain (reduced)
+        float n = (rand(uv*uRes + uTime) - 0.5) * (0.04 + 0.10*uI);
+
+        vec3 outc = col.rgb + bloom*(k*1.8) + n;
+        // neon grade
+        outc = pow(outc, vec3(0.85));
+        outc *= (0.9 + 0.35*uI);
+
+        gl_FragColor = vec4(outc, col.a);
+      }`;
+
+                function compile(type, src) {
+                    const sh = gl.createShader(type);
+                    gl.shaderSource(sh, src);
+                    gl.compileShader(sh);
+                    if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
+                        console.warn("Shader compile error:", gl.getShaderInfoLog(sh));
+                    }
+                    return sh;
+                }
+                const prog = gl.createProgram();
+                gl.attachShader(prog, compile(gl.VERTEX_SHADER, vs));
+                gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, fs));
+                gl.linkProgram(prog);
+                gl.useProgram(prog);
+
+                const buf = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+
+                const loc = gl.getAttribLocation(prog, "aPos");
+                gl.enableVertexAttribArray(loc);
+                gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+                this.uTex = gl.getUniformLocation(prog, "uTex");
+                this.uRes = gl.getUniformLocation(prog, "uRes");
+                this.uTime = gl.getUniformLocation(prog, "uTime");
+                this.uI = gl.getUniformLocation(prog, "uI");
+
+                this.tex = gl.createTexture();
+                gl.bindTexture(gl.TEXTURE_2D, this.tex);
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+                gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+                gl.uniform1i(this.uTex, 0);
+                this.ready = true;
+                this.resize();
+                window.addEventListener("resize", () => this.resize());
+            }
+            resize() {
+                const dpr = Math.min(2, window.devicePixelRatio || 1);
+                const w = Math.floor(innerWidth * dpr);
+                const h = Math.floor(innerHeight * dpr);
+                this.canvas.width = w; this.canvas.height = h;
+                this.canvas.style.width = "100%";
+                this.canvas.style.height = "100%";
+                if (this.gl) {
+                    this.gl.viewport(0, 0, w, h);
+                    this.gl.uniform2f(this.uRes, w, h);
+                }
+            }
+            setIntensity(v) { this.intensity = Math.max(0, Math.min(1, v)); }
+            render() {
+                if (!this.ready) return;
+                const gl = this.gl;
+                const w = this.canvas.width, h = this.canvas.height;
+                const t = (performance.now() - this.t0) * 0.001;
+
+                // Upload current fluid frame as a texture
+                gl.activeTexture(gl.TEXTURE0);
+                gl.bindTexture(gl.TEXTURE_2D, this.tex);
+                try {
+                    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, this.srcCanvas);
+                } catch (e) {
+                    // If the source canvas is not ready yet, ignore this frame
+                    return;
+                }
+
+                gl.uniform1f(this.uTime, t);
+                gl.uniform1f(this.uI, this.intensity);
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+            }
+        }
+
+
+
+        // --- PALETTE ENGINE (stub — artist fluid tuning) ---
+        class PaletteEngine {
+            constructor() { this.artist = ''; }
+            setTrack(track) {
+                this.artist = track.artist || '';
+                if (!window.FLUID_CONFIG) return;
+                if (this.artist === 'Ethel') { FLUID_CONFIG.CURL = 1; FLUID_CONFIG.SPLAT_RADIUS = 0.6; FLUID_CONFIG.DENSITY_DISSIPATION = 0.994; FLUID_CONFIG.VELOCITY_DISSIPATION = 0.99; }
+                else if (this.artist === 'Isla') { FLUID_CONFIG.CURL = 6; FLUID_CONFIG.SPLAT_RADIUS = 1.2; FLUID_CONFIG.DENSITY_DISSIPATION = 0.985; FLUID_CONFIG.VELOCITY_DISSIPATION = 0.97; }
+                else if (this.artist === 'Dominic') { FLUID_CONFIG.CURL = 0.5; FLUID_CONFIG.SPLAT_RADIUS = 0.4; FLUID_CONFIG.DENSITY_DISSIPATION = 0.998; FLUID_CONFIG.VELOCITY_DISSIPATION = 0.995; }
+                else if (this.artist === 'Kinley') { FLUID_CONFIG.CURL = 3; FLUID_CONFIG.SPLAT_RADIUS = 0.7; FLUID_CONFIG.DENSITY_DISSIPATION = 0.993; FLUID_CONFIG.VELOCITY_DISSIPATION = 0.98; }
+                else { FLUID_CONFIG.CURL = 2; FLUID_CONFIG.SPLAT_RADIUS = 0.9; FLUID_CONFIG.DENSITY_DISSIPATION = 0.992; FLUID_CONFIG.VELOCITY_DISSIPATION = 0.985; }
+            }
+        }
+
+        /** =========================
+         *  GLOBAL PSYCH INSTRUMENTS
+         * ========================= */
+        const lyricFeel = new LyricFeelEngine();
+        const whisper = new Whisper();
+        const branch = new BranchEngine(whisper);
+        const postfx = new PostFX();
+        const palette = new PaletteEngine();
+
+        function clamp01(x) { return Math.max(0, Math.min(1, x)); }
+
+
+        // EXTREME toggle: press X
+        let EXTREME = false;
+        window.addEventListener('keydown', (e) => {
+            if ((e.key || '').toLowerCase() === 'x') {
+                EXTREME = !EXTREME;
+                const c = document.getElementById('postfx-canvas');
+                const g = document.getElementById('glyph-canvas');
+                if (EXTREME) {
+                    c.style.display = "block";
+                    c.style.opacity = "0.75";
+                    g.style.display = "block";
+                    g.style.opacity = "0.40";
+                    whisper.say("EXTREME MODE: ON", { meta: "SYSTEM", fast: true });
+                } else {
+                    c.style.display = "none";
+                    g.style.display = "none";
+                    whisper.say("EXTREME MODE: OFF", { meta: "SYSTEM", fast: true });
+                }
+            }
+        });
+
+
+        /** Drive visuals without real waveform: intensity = lyric curve @ time + micro-jitter */
+        function psychTick() {
+            // Init postfx once WebGL is available
+            if (!postfx.ready) postfx.init();
+
+            // YT time sync
+            let t = 0, dur = 1, playing = false;
+            try {
+                if (jukebox && jukebox.player && jukebox.player.getCurrentTime) {
+                    t = jukebox.player.getCurrentTime() || 0;
+                    dur = jukebox.player.getDuration() || 1;
+                    playing = jukebox.isPlaying;
+                }
+            } catch (_) { }
+
+            const base = lyricFeel.sample(t);
+            const basePrev = lyricFeel.sample(Math.max(0, t - 0.25));
+            const volatility = clamp01(Math.abs(base - basePrev) * 3.4);
+
+            // add controlled "false beat" tremor (gives rhythm without claiming waveform)
+            const trem = 0.06 * Math.sin((t * 2.0) + (base * 4.0)) + 0.03 * Math.sin((t * 6.0) + 1.3);
+            let intensity = clamp01(base + trem);
+            if (EXTREME) { intensity = clamp01(Math.pow(intensity, 0.68) * 1.15 + volatility * 0.08); }
+
+
+            // drive pulse engine
+            try { jukebox && jukebox.beatEngine && jukebox.beatEngine.setDrive(intensity, volatility); } catch (_) { }
+
+            // branch reactions
+            branch.update(intensity);
+
+            // push into postfx
+            postfx.setIntensity(intensity);
+            postfx.render();
+            // PEAK BURST: phrase hits
+            if (playing && intensity > 0.78 && Math.random() < (0.05 + volatility * 0.08)) {
+                for (let i = 0; i < 3; i++) {
+                    const col = { r: 0.2 + 0.8 * Math.random(), g: 0.2 + 0.8 * Math.random(), b: 0.2 + 0.8 * Math.random() };
+                    fluid && fluid.splatStack && fluid.splatStack.push({ x: Math.random(), y: Math.random(), dx: (Math.random() - 0.5) * 9000, dy: (Math.random() - 0.5) * 9000, color: col });
+                }
+            }
+
+            try { window.drawGlyphStorm && window.drawGlyphStorm(intensity, volatility); } catch (_) { }
+
+
+            // push into fluid: periodic splats tied to intensity + artist
+            if (playing && fluid && fluid.splatStack && Math.random() < (0.020 + intensity * 0.10)) {
+                const x = Math.random(), y = Math.random();
+                const dx = (Math.random() - 0.5) * (0.6 + intensity * 2.0);
+                const dy = (Math.random() - 0.5) * (0.6 + intensity * 2.0);
+                fluid.splatStack.push({ x, y, dx: dx * 2200, dy: dy * 2600, color: { r: 0.9 * intensity, g: 0.2 + 0.8 * (1 - intensity), b: 1.0 } });
+            }
+
+            // occasional whispers on peaks
+            if (playing && intensity > 0.82 && Math.random() < 0.02) {
+                whisper.say("THIS PART IS WHY YOU'RE HERE.", { meta: "DOMINIC / TIMELINE", fast: true });
+            }
+
+            requestAnimationFrame(psychTick);
+        }
+        requestAnimationFrame(psychTick);
+
+    </script>
+</body>
+
+</html>

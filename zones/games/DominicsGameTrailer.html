@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMINIC_GAME | WIP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --glitch-red: #ff0055;
+            --glitch-cyan: #00ff41;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Static Background */
+        .static-bg {
+            position: fixed;
+            inset: 0;
+            opacity: 0.08;
+            background: url('https://media.giphy.com/media/oEI9uWUPr9WUM/giphy.gif');
+            background-size: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Scanlines */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Container styling */
+        .content-wrapper {
+            max-width: 650px;
+            padding: 2rem;
+            position: relative;
+            z-index: 20;
+            text-align: center;
+        }
+
+        /* Glitch Title */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 var(--glitch-red);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: 1px 0 var(--glitch-cyan);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim2 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(10px, 9999px, 15px, 0);
+            }
+
+            20% {
+                clip: rect(60px, 9999px, 70px, 0);
+            }
+
+            100% {
+                clip: rect(20px, 9999px, 30px, 0);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(40px, 9999px, 45px, 0);
+            }
+
+            20% {
+                clip: rect(10px, 9999px, 20px, 0);
+            }
+
+            100% {
+                clip: rect(50px, 9999px, 60px, 0);
+            }
+        }
+
+        /* Button Styling */
+        .terminal-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .terminal-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Utilities */
+        .hidden {
+            display: none !important;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in;
+        }
+
+        /* Video Container */
+        #video-wrapper {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 928/400;
+            background: black;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        :root {
+            --glitch-red: #ff0055;
+            --glitch-cyan: #00ff41;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Static Background */
+        .static-bg {
+            position: fixed;
+            inset: 0;
+            opacity: 0.08;
+            background: url('https://media.giphy.com/media/oEI9uWUPr9WUM/giphy.gif');
+            background-size: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Scanlines */
+        .scanlines {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Container styling */
+        .content-wrapper {
+            max-width: 650px;
+            padding: 2rem;
+            position: relative;
+            z-index: 20;
+            text-align: center;
+        }
+
+        /* Glitch Title */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 var(--glitch-red);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: 1px 0 var(--glitch-cyan);
+            clip: rect(0, 0, 0, 0);
+            animation: glitch-anim2 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(10px, 9999px, 15px, 0);
+            }
+
+            20% {
+                clip: rect(60px, 9999px, 70px, 0);
+            }
+
+            100% {
+                clip: rect(20px, 9999px, 30px, 0);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(40px, 9999px, 45px, 0);
+            }
+
+            20% {
+                clip: rect(10px, 9999px, 20px, 0);
+            }
+
+            100% {
+                clip: rect(50px, 9999px, 60px, 0);
+            }
+        }
+
+        /* Button Styling */
+        .terminal-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .terminal-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Utilities */
+        .hidden {
+            display: none !important;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in;
+        }
+
+        /* Video Container */
+        #video-wrapper {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 928/400;
+            background: black;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+
+
+    <div class="static-bg"></div>
+    <div class="scanlines"></div>
+
+    <div id="intro-screen" class="content-wrapper transition-opacity duration-700">
+        <h1 class="glitch-text mb-6" data-text="DOMINIC'S GAME">DOMINIC'S GAME</h1>
+
+        <div class="font-mono text-sm md:text-base text-gray-400 leading-relaxed mb-8 tracking-wide">
+            <p class="mb-4">
+                It's a choose your own <span class="text-white">'Moral Adventure'</span> except there's a psychopath in
+                your head distracting you whilst you try to figure out what the hell he is up to.
+            </p>
+            <p>
+                You can win but it won't be... <span class="text-red-500">tidy!</span><br>
+                The decision tree is huge.
+            </p>
+            <p class="mt-4 text-xs uppercase tracking-[0.3em] opacity-60">Here is a moment.</p>
+        </div>
+
+        <button onclick="playMoment()" class="terminal-btn">
+            [ Play moment ]
+        </button>
+
+        <div class="mt-12">
+            <a href="index.html"
+                class="text-[10px] font-mono text-gray-600 hover:text-white uppercase tracking-[0.3em] transition-colors">
+                [ Return to Index ]
+            </a>
+        </div>
+    </div>
+
+    <div id="video-screen" class="content-wrapper hidden w-full max-w-4xl">
+        <div id="video-wrapper" class="relative">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span class="font-mono text-xs animate-pulse">LOADING_STREAM...</span>
+            </div>
+
+            <video id="game-trailer" controls playsinline>
+                <source
+                    src="https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/DominicsGameAssets/DominicsGame_trailer.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <button onclick="stopMoment()"
+            class="mt-8 font-mono text-xs text-red-500 hover:text-red-400 uppercase tracking-[0.2em] border-b border-transparent hover:border-red-500 transition-all">
+            [ Terminate Stream ]
+        </button>
+    </div>
+
+    <script>
+        function playMoment() {
+            const intro = document.getElementById('intro-screen');
+            const videoScreen = document.getElementById('video-screen');
+            const video = document.getElementById('game-trailer');
+
+            // Fade out text
+            intro.style.opacity = '0';
+
+            setTimeout(() => {
+                intro.classList.add('hidden');
+                videoScreen.classList.remove('hidden');
+
+                // Trigger reflow/animation
+                setTimeout(() => {
+                    videoScreen.style.opacity = '1';
+                    video.play();
+                }, 50);
+            }, 700);
+        }
+
+        function stopMoment() {
+            const intro = document.getElementById('intro-screen');
+            const videoScreen = document.getElementById('video-screen');
+            const video = document.getElementById('game-trailer');
+
+            video.pause();
+            video.currentTime = 0; // Optional: reset video
+            videoScreen.classList.add('hidden');
+
+            intro.classList.remove('hidden');
+            setTimeout(() => {
+                intro.style.opacity = '1';
+            }, 50);
+        }
+    </script>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE REFRAME // SYSTEM_ETHEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Inter:wght@300;600&display=swap">
+    <style>
+        :root {
+            --term-green: #00ff41;
+            --term-bg: #050505;
+            --wellness-blue: #a0d8ef;
+            --alert-red: #ff3333;
+        }
+
+        body {
+            background-color: var(--term-bg);
+            color: var(--term-green);
+            font-family: 'JetBrains Mono', monospace;
+            overflow: hidden;
+            height: 100vh;
+            user-select: none;
+        }
+
+        /* BACKGROUND */
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: url('https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_ethelGameV1/IMG_REFRAME_BKG.jpg') center/cover no-repeat;
+            opacity: 0.4;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 255, 65, 0.04) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.1;
+            position: absolute;
+            bottom: 100%;
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0% {
+                bottom: 100%;
+            }
+
+            100% {
+                bottom: -100%;
+            }
+        }
+
+        .crt-overlay {
+            background: radial-gradient(circle, rgba(10, 10, 10, 0) 50%, rgba(0, 0, 0, 0.6) 100%),
+                repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        /* DYNAMIC BLUR (The Gaslight) */
+        #game-stage {
+            transition: filter 1s ease;
+        }
+
+        .blur-stage-0 {
+            filter: blur(0px) contrast(1.1);
+        }
+
+        .blur-stage-1 {
+            filter: blur(1px) contrast(1.0);
+        }
+
+        .blur-stage-2 {
+            filter: blur(2px) opacity(0.9);
+        }
+
+        .blur-stage-3 {
+            filter: blur(4px) opacity(0.8);
+        }
+
+        .blur-stage-4 {
+            filter: blur(8px) opacity(0.5);
+        }
+
+        /* CARD STYLING */
+        .card-container {
+            perspective: 1000px;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            position: relative;
+        }
+
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border: 1px solid var(--term-green);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s;
+            overflow: hidden;
+        }
+
+        .card-image {
+            height: 50%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #222;
+            position: relative;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, #000 0%, transparent 100%);
+        }
+
+        .card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card.exit-left {
+            transform: translateX(-120%) rotate(-5deg);
+            opacity: 0;
+        }
+
+        .card.exit-right {
+            transform: translateX(120%) rotate(5deg);
+            opacity: 0;
+        }
+
+        /* HUD */
+        .hud-bar {
+            height: 4px;
+            background: #222;
+            width: 100%;
+            margin-top: 4px;
+        }
+
+        .hud-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        /* INTRO */
+        #intro-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-main {
+            border: 1px solid var(--term-green);
+            color: var(--term-green);
+            padding: 1rem 3rem;
+            font-family: 'JetBrains Mono';
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.2s;
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        .btn-main:hover {
+            background: var(--term-green);
+            color: #000;
+            box-shadow: 0 0 15px var(--term-green);
+        }
+
+        .btn-main:disabled {
+            opacity: 0.5;
+            cursor: wait;
+        }
+
+        /* GLITCH TEXT */
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -1px 0 blue;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(14px, 9999px, 122px, 0);
+            }
+
+            5% {
+                clip: rect(88px, 9999px, 34px, 0);
+            }
+
+            100% {
+                clip: rect(34px, 9999px, 12px, 0);
+            }
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body class="flex flex-col">
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        :root {
+            --term-green: #00ff41;
+            --term-bg: #050505;
+            --wellness-blue: #a0d8ef;
+            --alert-red: #ff3333;
+        }
+
+        body {
+            background-color: var(--term-bg);
+            color: var(--term-green);
+            font-family: 'JetBrains Mono', monospace;
+            overflow: hidden;
+            height: 100vh;
+            user-select: none;
+        }
+
+        /* BACKGROUND */
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: url('https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_ethelGameV1/IMG_REFRAME_BKG.jpg') center/cover no-repeat;
+            opacity: 0.4;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 255, 65, 0.04) 50%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.1;
+            position: absolute;
+            bottom: 100%;
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0% {
+                bottom: 100%;
+            }
+
+            100% {
+                bottom: -100%;
+            }
+        }
+
+        .crt-overlay {
+            background: radial-gradient(circle, rgba(10, 10, 10, 0) 50%, rgba(0, 0, 0, 0.6) 100%),
+                repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        /* DYNAMIC BLUR (The Gaslight) */
+        #game-stage {
+            transition: filter 1s ease;
+        }
+
+        .blur-stage-0 {
+            filter: blur(0px) contrast(1.1);
+        }
+
+        .blur-stage-1 {
+            filter: blur(1px) contrast(1.0);
+        }
+
+        .blur-stage-2 {
+            filter: blur(2px) opacity(0.9);
+        }
+
+        .blur-stage-3 {
+            filter: blur(4px) opacity(0.8);
+        }
+
+        .blur-stage-4 {
+            filter: blur(8px) opacity(0.5);
+        }
+
+        /* CARD STYLING */
+        .card-container {
+            perspective: 1000px;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            position: relative;
+        }
+
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border: 1px solid var(--term-green);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s;
+            overflow: hidden;
+        }
+
+        .card-image {
+            height: 50%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #222;
+            position: relative;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, #000 0%, transparent 100%);
+        }
+
+        .card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card.exit-left {
+            transform: translateX(-120%) rotate(-5deg);
+            opacity: 0;
+        }
+
+        .card.exit-right {
+            transform: translateX(120%) rotate(5deg);
+            opacity: 0;
+        }
+
+        /* HUD */
+        .hud-bar {
+            height: 4px;
+            background: #222;
+            width: 100%;
+            margin-top: 4px;
+        }
+
+        .hud-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        /* INTRO */
+        #intro-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-main {
+            border: 1px solid var(--term-green);
+            color: var(--term-green);
+            padding: 1rem 3rem;
+            font-family: 'JetBrains Mono';
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.2s;
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        .btn-main:hover {
+            background: var(--term-green);
+            color: #000;
+            box-shadow: 0 0 15px var(--term-green);
+        }
+
+        .btn-main:disabled {
+            opacity: 0.5;
+            cursor: wait;
+        }
+
+        /* GLITCH TEXT */
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -1px 0 blue;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(14px, 9999px, 122px, 0);
+            }
+
+            5% {
+                clip: rect(88px, 9999px, 34px, 0);
+            }
+
+            100% {
+                clip: rect(34px, 9999px, 12px, 0);
+            }
+        }
+    </style>
+
+
+
+    <div class="page-bg"></div>
+    <div class="scanline"></div>
+    <div class="crt-overlay"></div>
+
+    <audio id="audio-player"></audio>
+    <audio id="sfx-player"></audio>
+
+    <div id="intro-screen">
+        <h1 class="text-6xl font-black mb-2 glitch" data-text="THE REFRAME" style="color: var(--term-green);">THE
+            REFRAME</h1>
+        <p class="text-white/60 font-mono tracking-widest mb-10 text-sm">AUDIO REQUIRED // SYSTEM_ETHEL</p>
+        <button id="start-btn" class="btn-main" onclick="startGame()">INITIALIZE SESSION</button>
+        <div id="loading-text" class="mt-4 text-xs text-white/40 font-mono hidden">LOADING ASSETS...</div>
+    </div>
+
+    <div class="fixed top-0 w-full p-6 flex justify-between z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="w-1/3">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest mb-1">
+                <span class="text-[--term-green]">Forensic Integrity</span>
+                <span id="score-integrity">100%</span>
+            </div>
+            <div class="hud-bar">
+                <div id="bar-integrity" class="hud-fill bg-[--term-green]" style="width: 100%"></div>
+            </div>
+        </div>
+        <div class="text-center w-1/3">
+            <div id="timer" class="text-xl font-bold font-mono text-white">02:00</div>
+        </div>
+        <div class="w-1/3 text-right">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest mb-1">
+                <span class="text-[--wellness-blue]">Comfort Level</span>
+                <span id="score-comfort">0%</span>
+            </div>
+            <div class="hud-bar">
+                <div id="bar-comfort" class="hud-fill bg-[--wellness-blue]" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="game-stage" class="flex-grow flex items-center justify-center p-4 blur-stage-0 relative z-10">
+        <div id="card-container" class="card-container">
+        </div>
+    </main>
+
+    <div id="controls" class="fixed bottom-8 w-full max-w-3xl left-1/2 -translate-x-1/2 flex gap-4 px-4 z-50">
+        <button id="btn-soften" onclick="makeChoice('soften')"
+            class="flex-1 p-6 border border-[--wellness-blue] text-[--wellness-blue] bg-black hover:bg-[--wellness-blue] hover:text-black transition-all uppercase font-bold tracking-widest text-xs md:text-sm group">
+            <span class="block opacity-50 text-[10px] mb-1 group-hover:text-black">Option A</span>
+            Soften Reality
+        </button>
+        <button id="btn-investigate" onclick="makeChoice('investigate')"
+            class="flex-1 p-6 border border-[--term-green] text-[--term-green] bg-black hover:bg-[--term-green] hover:text-black transition-all uppercase font-bold tracking-widest text-xs md:text-sm group">
+            <span class="block opacity-50 text-[10px] mb-1 group-hover:text-black">Option B</span>
+            Preserve Data
+        </button>
+    </div>
+
+    <div id="end-screen"
+        class="hidden fixed inset-0 z-[60] bg-black flex-col items-center justify-center p-8 text-center border-4 border-[--term-green]">
+        <h1 id="end-title" class="text-5xl font-black mb-4 tracking-tighter uppercase text-white">SESSION CLOSED</h1>
+        <p id="end-desc" class="text-sm md:text-lg mb-8 font-mono text-white/60 max-w-xl leading-relaxed"></p>
+        <button onclick="location.reload()" class="btn-main">RESTART PROTOCOL</button>
+    </div>
+
+    <script>
+        // --- ASSETS ---
+        const AUDIO_PATH = "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/audio_ethelGameV1/";
+        const IMG_PATH = "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/images_ethelGameV1/";
+
+        // --- DATA ---
+        const CARDS = [
+            {
+                id: "c1",
+                text: "There is a red stick wedged vertically in my bike wheel. Dead straight. Zero bounce. It was placed there.",
+                src: "INCIDENT LOG: MORNING",
+                img: "IMG_REFRAME_BKG.jpg", // Placeholder per availability
+                a_txt: "Maybe it was just a kid playing? Let's not catastrophize.",
+                b_txt: "It's a test of reaction time. Who is watching from the balcony?",
+                audio_t: "THERAPIST_C1.mp3",
+                audio_e: "ETHEL_C1.mp3"
+            },
+            {
+                id: "c2",
+                text: "The man with the Clipboard matches my pace. He doesn't look at me, but he stops when I stop.",
+                src: "SURVEILLANCE: VICTORIA ST",
+                img: "IMG_CARD_CLIPBOARD.jpg",
+                a_txt: "You're feeling watched because of your history. It's coincidence.",
+                b_txt: "He's not a threat, he's a reflection. Log his pattern.",
+                audio_t: "THERAPIST_C2.mp3",
+                audio_e: "ETHEL_C2.mp3"
+            },
+            {
+                id: "c3",
+                text: "Gran was a chemist. Precise. She didn't 'drift' off a road she drove for forty years.",
+                src: "MEMORY: THE CRASH",
+                img: "IMG_CARD_CRASH.jpg", // Assuming placeholder if file missing
+                a_txt: "Grief looks for reasons. Accidents happen to everyone.",
+                b_txt: "The police report had missing pages. Timeline doesn't fit physics.",
+                audio_t: "THERAPIST_C3.mp3",
+                audio_e: "ETHEL_C3.mp3"
+            },
+            {
+                id: "c4",
+                text: "He didn't 'take me in'. He acquired me. The house was a cage with glass walls.",
+                src: "PROFILE: DOMINIC RYKER",
+                img: "IMG_CARD_DOMINIC.jpg",
+                a_txt: "He was your father trying to connect in a difficult time.",
+                b_txt: "He needed the asset. He used silence as a weapon.",
+                audio_t: "THERAPIST_C4.mp3",
+                audio_e: "ETHEL_C4.mp3"
+            },
+            {
+                id: "c5",
+                text: "Kinley's name appeared in the commit history for three minutes. Then it was retracted.",
+                src: "DATA: GITHUB LOGS",
+                img: "IMG_CARD_CODE.jpg",
+                a_txt: "Glitches happen. Don't let obsession ruin your new job.",
+                b_txt: "Screenshot the hash. That wasn't a glitch, it was a signal.",
+                audio_t: "THERAPIST_C5.mp3",
+                audio_e: "ETHEL_C4.mp3" // Using C4 as per logic if C5 missing, or matching closely
+            },
+            {
+                id: "c6",
+                text: "Detective Sticky said: 'You will be reckless. You will be a problem.' He's trying to stop me.",
+                src: "INTERACTION: DETECTIVE",
+                img: "IMG_CARD_DETECTIVE.jpg",
+                a_txt: "He's trying to help you stay safe. You need allies.",
+                b_txt: "He sees the rattle. He knows I'm right but the system is rigged.",
+                audio_t: "THERAPIST_C6.mp3",
+                audio_e: "ETHEL_C5.mp3"
+            },
+            {
+                id: "c7",
+                text: "I can feel the 'Harm's Ghost'. I know the damage is coming before it hits.",
+                src: "SYSTEM ALERT",
+                img: "IMG_CARD_HARM.jpg",
+                a_txt: "This is anxiety talking. Work on tolerance for uncertainty.",
+                b_txt: "Trust pattern recognition. If inputs match model, initiate exit.",
+                audio_t: "THERAPIST_C7.mp3",
+                audio_e: null
+            }
+        ];
+
+        // --- STATE ---
+        let state = {
+            idx: 0,
+            integrity: 100,
+            comfort: 0,
+            blur: 0,
+            locked: false,
+            timer: 120,
+            interval: null
+        };
+
+        const player = document.getElementById('audio-player');
+
+        // --- INIT ---
+        async function startGame() {
+            document.getElementById('start-btn').disabled = true;
+            document.getElementById('loading-text').classList.remove('hidden');
+
+            // Audio Context for SFX
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            const actx = new AudioContext();
+
+            // Preload First Audio to ensure it works
+            player.src = AUDIO_PATH + "THERAPIST_INTRO.mp3";
+            try {
+                await player.play();
+            } catch (e) { console.log("Autoplay blocked"); }
+
+            // Wait for Intro to finish
+            player.onended = () => {
+                // Play Ethel Intro
+                player.src = AUDIO_PATH + "ETHEL_INTRO.mp3";
+                player.play();
+                player.onended = () => {
+                    document.getElementById('intro-screen').style.display = 'none';
+                    startTimer();
+                    renderCard();
+                }
+            };
+        }
+
+        function startTimer() {
+            state.interval = setInterval(() => {
+                state.timer--;
+                const m = Math.floor(state.timer / 60);
+                const s = state.timer % 60;
+                document.getElementById('timer').innerText = `0${m}:${s < 10 ? '0' + s : s}`;
+                if (state.timer <= 0) endGame('time');
+            }, 1000);
+        }
+
+        // --- RENDER ---
+        function renderCard() {
+            if (state.idx >= CARDS.length) return endGame('win');
+
+            const cardData = CARDS[state.idx];
+            const container = document.getElementById('card-container');
+            container.innerHTML = ''; // Clear
+
+            const div = document.createElement('div');
+            div.className = 'card';
+            div.innerHTML = `
+                <div class="card-image" style="background-image: url('${IMG_PATH}${cardData.img}')">
+                    <div class="absolute top-4 left-4 bg-black/80 px-2 py-1 text-[10px] text-white/50 border border-white/20 font-mono">
+                        ${cardData.src}
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="text-lg md:text-xl font-bold text-white leading-tight mb-4 text-center">"${cardData.text}"</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-auto border-t border-white/10 pt-4">
+                        <div class="text-left">
+                            <span class="text-[10px] text-[--wellness-blue] uppercase font-bold block mb-1">Option A</span>
+                            <p class="text-xs text-white/60 italic leading-snug">"${cardData.a_txt}"</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[10px] text-[--term-green] uppercase font-bold block mb-1">Option B</span>
+                            <p class="text-xs text-white/60 font-mono leading-snug">"${cardData.b_txt}"</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+            state.locked = false;
+            updateControls();
+        }
+
+        // --- MECHANICS ---
+        function makeChoice(type) {
+            if (state.locked) return;
+            state.locked = true;
+            disableControls();
+
+            const cardData = CARDS[state.idx];
+            const cardEl = document.querySelector('.card');
+
+            if (type === 'soften') {
+                // TRAP: REFRAME
+                // 1. Play Glitch SFX
+                playGlitch();
+
+                // 2. Play Therapist Audio
+                player.src = AUDIO_PATH + cardData.audio_t;
+                player.play();
+
+                // 3. Stats & Visuals
+                state.integrity -= 20;
+                state.comfort += 20;
+                state.blur++;
+                applyBlur();
+
+                // 4. Wait for audio
+                player.onended = () => {
+                    cardEl.classList.add('exit-left');
+                    setTimeout(nextTurn, 500);
+                };
+
+            } else {
+                // TRUTH: INVESTIGATE
+                // 1. Play Lock SFX
+                playLock();
+
+                // 2. Play Ethel Audio (if exists)
+                if (cardData.audio_e) {
+                    player.src = AUDIO_PATH + cardData.audio_e;
+                    player.play();
+                } else {
+                    // Fallback delay if no audio
+                    setTimeout(nextTurn, 1500);
+                    return;
+                }
+
+                // 3. Stats
+                state.integrity += 10;
+                state.comfort -= 10;
+                if (state.blur > 0) state.blur--;
+                applyBlur();
+
+                // 4. Wait for audio
+                player.onended = () => {
+                    cardEl.classList.add('exit-right');
+                    setTimeout(nextTurn, 500);
+                };
+            }
+            updateHUD();
+        }
+
+        function nextTurn() {
+            if (state.integrity <= 0) return endGame('gaslight');
+            state.idx++;
+            renderCard();
+        }
+
+        function updateHUD() {
+            // Clamp
+            state.integrity = Math.max(0, Math.min(100, state.integrity));
+            state.comfort = Math.max(0, Math.min(100, state.comfort));
+
+            document.getElementById('score-integrity').innerText = state.integrity + "%";
+            document.getElementById('bar-integrity').style.width = state.integrity + "%";
+
+            document.getElementById('score-comfort').innerText = state.comfort + "%";
+            document.getElementById('bar-comfort').style.width = state.comfort + "%";
+
+            // Visual feedback
+            const intBar = document.getElementById('bar-integrity');
+            if (state.integrity < 30) intBar.classList.replace('bg-[--term-green]', 'bg-[--alert-red]');
+            else intBar.classList.replace('bg-[--alert-red]', 'bg-[--term-green]');
+        }
+
+        function applyBlur() {
+            const stage = document.getElementById('game-stage');
+            stage.className = `flex-grow flex items-center justify-center p-4 relative z-10 blur-stage-${Math.min(4, state.blur)}`;
+        }
+
+        function updateControls() {
+            document.getElementById('btn-soften').disabled = false;
+            document.getElementById('btn-investigate').disabled = false;
+            document.getElementById('btn-soften').classList.remove('opacity-50');
+            document.getElementById('btn-investigate').classList.remove('opacity-50');
+        }
+
+        function disableControls() {
+            document.getElementById('btn-soften').disabled = true;
+            document.getElementById('btn-investigate').disabled = true;
+            document.getElementById('btn-soften').classList.add('opacity-50');
+            document.getElementById('btn-investigate').classList.add('opacity-50');
+        }
+
+        // --- SFX (Synthesized) ---
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const ctx = new AudioContext();
+
+        function playGlitch() {
+            if (ctx.state === 'suspended') ctx.resume();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(100, ctx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(800, ctx.currentTime + 0.1);
+            gain.gain.setValueAtTime(0.1, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.1);
+        }
+
+        function playLock() {
+            if (ctx.state === 'suspended') ctx.resume();
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(60, ctx.currentTime);
+            gain.gain.setValueAtTime(0.1, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.15);
+        }
+
+        // --- END ---
+        function endGame(reason) {
+            clearInterval(state.interval);
+            const screen = document.getElementById('end-screen');
+            const title = document.getElementById('end-title');
+            const desc = document.getElementById('end-desc');
+            screen.classList.remove('hidden');
+            screen.classList.add('flex');
+
+            if (reason === 'gaslight') {
+                title.innerText = "SUBJECT NEUTRALIZED";
+                title.style.color = "var(--wellness-blue)";
+                desc.innerText = "You have successfully reframed reality until it disappeared. You feel calm, safe, and remember nothing.";
+                player.src = AUDIO_PATH + "ETHEL_LOSE.mp3";
+            } else if (reason === 'time') {
+                title.innerText = "TIMELINE EXPIRED";
+                title.style.color = "var(--alert-red)";
+                desc.innerText = "Hesitation is a decision. The evidence has been overwritten.";
+                player.src = AUDIO_PATH + "THERAPIST_LOSE.mp3";
+            } else {
+                if (state.integrity > 50) {
+                    title.innerText = "WITNESS CONFIRMED";
+                    title.style.color = "var(--term-green)";
+                    desc.innerText = "You are labeled 'hostile' and 'paranoid'. But you have the files. You know the truth.";
+                    player.src = AUDIO_PATH + "ETHEL_WIN.mp3";
+                } else {
+                    title.innerText = "COMPROMISED";
+                    desc.innerText = "You survived, but you traded too much truth for comfort. The timeline is blurry.";
+                    player.src = AUDIO_PATH + "ETHEL_LOSE.mp3";
+                }
+            }
+            player.play();
+        }
+    </script>
+</main>
+</body>
+
+</html>

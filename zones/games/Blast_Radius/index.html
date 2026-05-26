@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAST RADIUS — Dominic's Downfall</title>
+    <meta name="description" content="Hack Dominic Ryker's criminal empire. Smart-Dumb Protocol active.">
+
+    <!-- Open Graph — Social Sharing -->
+    <meta property="og:title" content="BLAST RADIUS — Dominic's Downfall" />
+    <meta property="og:description" content="Hack Dominic Ryker's criminal empire. Smart-Dumb Protocol active." />
+    <meta property="og:image" content="https://pixelstortion.com/zones/games/Blast_Radius/BLAST_RADIUS.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pixelstortion.com/zones/games/Blast_Radius/" />
+    <meta property="og:site_name" content="PIXELSTORTION" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BLAST RADIUS — Dominic's Downfall" />
+    <meta name="twitter:description" content="Hack Dominic Ryker's criminal empire. Smart-Dumb Protocol active." />
+    <meta name="twitter:image" content="https://pixelstortion.com/zones/games/Blast_Radius/BLAST_RADIUS.jpg" />
+
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; }
+        .ps-brand { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: #3f3f46; text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #ef4444; text-shadow: 0 0 8px rgba(220,38,38,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { display: block; padding: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #666; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease; border-left: 2px solid transparent; white-space: nowrap; }
+        .brand-dropdown-item:hover { color: #aaa; background: rgba(255,255,255,0.03); border-left: 2px solid #555; padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- INJECTED GLOBAL NAVIGATION -->
+    <nav style="position: fixed; top: 0; width: 100%; z-index: 9999; background: rgba(0,0,0,0.9); border-bottom: 1px solid #333; backdrop-filter: blur(8px);">
+        <div style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; height: 4rem;">
+                <!-- Left Side: Back Button -->
+                <a href="javascript:history.back()" style="display: flex; align-items: center; gap: 0.5rem; color: #9ca3af; text-decoration: none; font-family: 'Courier Prime', monospace; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
+                    <span style="font-size: 1.125rem;">&lt;</span> BACK
+                </a>
+                
+                <!-- Right Side: Branding Dropdown -->
+                <div style="position: relative;">
+                    <button onclick="document.getElementById('brandDropdown').classList.toggle('show'); event.stopPropagation();" 
+                        style="background: none; border: none; cursor: pointer; text-decoration: none; padding: 0;">
+                        <h1 style="font-size: 1.25rem; font-weight: bold; letter-spacing: -0.05em; color: #fff; margin:0;" data-text="PIXELSTORTION">PIXELSTORTION</h1>
+                    </button>
+                    <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()" style="right: 0; left: auto; text-align: right;">
+                        <a href="../../veX_social_network/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">veX: Social Network</a>
+                        <span class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">Silence is the trauma</span>
+                        <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+                        <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+                        <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+                        <a href="../../zones/mataala/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+                        <a href="../../bio/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .brand-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,255,65,0.2);
+            z-index: 50;
+            border: 1px solid #333;
+            padding: 8px;
+        }
+        .brand-dropdown-menu.show {
+            display: block;
+        }
+        .brand-dropdown-item {
+            color: #ccc;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Courier Prime', monospace;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        .brand-dropdown-item:hover {
+            background-color: #111;
+            color: #00ff41;
+            padding-right: 16px;
+        }
+        body { padding-top: 64px !important; }
+    </style>
+    <script>
+        document.addEventListener('click', function(event) {
+            var dropdowns = document.getElementsByClassName("brand-dropdown-menu");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        });
+    </script>
+    <!-- END INJECTED GLOBAL NAVIGATION -->
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+    <!-- ============================================================ -->
+    <!-- ANTI-SLOT CABINET — 4-ZONE PORTRAIT LAYOUT                   -->
+    <!-- ============================================================ -->
+    <div id="anti-slot-cabinet">
+
+        <!-- ======================================================== -->
+        <!-- ZONE 1: DOMINIC'S EMPIRE METRICS (Jackpot Ledgers)       -->
+        <!-- ======================================================== -->
+        <div id="jackpot-meters">
+            <div id="grand-meter" class="grand-meter" style="position: relative;">
+                <span id="dominic-empire-value" class="meter-value glitch-text" data-text="$20,000,000,000" data-current-value="2000" style="margin-top: -2px;">$20,000,000,000</span>
+                <span id="hidden-funds-label" style="display: none; font-size: 13px; color: #d4006a; letter-spacing: 3px; font-weight: 800; text-shadow: 0 0 10px rgba(212, 0, 106, 0.6); position: absolute; bottom: 6px;">HIDDEN ASSETS</span>
+            </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- ZONE 2: FEATURE VIDEO (BLAST_RADIUS intro → ISLA clips)  -->
+        <!-- ======================================================== -->
+        <div id="feature-video-container">
+            <!-- BLAST_RADIUS.png title card — fades on first spin -->
+            <img id="intro-title-image" src="stills/BLAST_RADIUS.png" alt="BLAST RADIUS" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 50;">
+            <video id="feature-video" muted playsinline preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 10;"></video>
+            <video id="feature-video-buffer" muted playsinline preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 5; opacity: 0;"></video>
+            
+            <!-- Gaff Button (Bottom Right Absolute) -->
+            <button id="gaff-toggle-btn" class="gaff-button">RULES</button>
+            
+
+            
+
+            <!-- Password hack overlay — lives inside feature zone, reels stay visible -->
+            <div id="password-hack-container">
+                <div class="hack-inner">
+                    <h1 class="hack-title">BRUTE_FORCE_INITIATED</h1>
+                    <div id="passcode-display" class="hack-passcode">_ _ _ _ _ _</div>
+                    <p id="hack-attempts-left" class="hack-attempts">ATTEMPTS REMAINING: 10</p>
+                    <p id="hack-damage-total" class="hack-damage"></p>
+                    <p id="bridge-burned-msg" class="bridge-burned">THIS IS WINNING — BRIDGE BURNED</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- ZONE 3: REEL WINDOW (Phaser Canvas — 5×3 Masked Grid)    -->
+        <!-- ======================================================== -->
+        <div id="slot-grid-container">
+            <div id="reel-window">
+                <!-- Phaser 3 will inject its canvas here -->
+                <!-- Intro video overlay — fades on first spin -->
+                <div id="intro-video-overlay">
+                    <video id="intro-video" autoplay muted loop playsinline src="Videos/Isla_TextName_Roll.mp4"></video>
+                </div>
+            </div>
+            
+            <!-- Settings Modal Overlay -->
+            <div id="gaff-menu" class="gaff-modal" style="display: none;">
+                <div class="gaff-header">
+                    <button id="gaff-prev-btn" class="nav-btn" disabled>&larr;</button>
+                    <h2>⚙ RULES</h2>
+                    <button id="gaff-next-btn" class="nav-btn">&rarr;</button>
+                    <button id="gaff-close-btn">X</button>
+                </div>
+                <div class="gaff-body">
+                    
+                    <!-- PAGE 1: Controls -->
+                    <div class="gaff-page active" data-page="0" style="overflow-y:auto; overflow-x:hidden;">
+                        <div class="gaff-row">
+                            <label for="gaff-volatility">RNG VOLATILITY STRESS: <span id="lbl-volatility">NORMAL (1)</span></label>
+                            <input type="range" id="gaff-volatility" min="1" max="10" value="1">
+                        </div>
+                        <div class="gaff-row">
+                            <label for="gaff-prison-chance">DOMINIC PRISON CHANCE: <span id="lbl-prison">DYNAMIC ESCALATION</span></label>
+                            <input type="range" id="gaff-prison-chance" min="-1" max="100" value="-1">
+                            <small>-1 = Internal Progressive Math. 0-100 = Forced Probability.</small>
+                        </div>
+                        <div class="gaff-row">
+                            <label for="gaff-ethel-intel">ETHEL INTELLIGENCE: <span id="lbl-ethel">0% (BLIND)</span></label>
+                            <input type="range" id="gaff-ethel-intel" min="0" max="100" value="0">
+                            <small>Chance Ethel will dodge Isla's blast (re-rolls off the phone row).</small>
+                        </div>
+                        <div class="gaff-row">
+                            <label for="gaff-intercept-rate">DOMINIC INTERCEPT RATE: <span id="lbl-intercept">100%</span></label>
+                            <input type="range" id="gaff-intercept-rate" min="0" max="100" value="100">
+                            <small>Probability Dominic intercepts & steals 50% of your damage.</small>
+                        </div>
+                        <div class="gaff-row">
+                            <label>
+                                <input type="checkbox" id="gaff-narrative-lock"> 
+                                ENFORCE PRISON LOCK (NARRATIVE)
+                            </label>
+                            <ul class="gaff-checklist">
+                                <li id="req-blasts">❌ <span class="val">0</span>/2 Phone Blasts</li>
+                                <li id="req-intercepts">❌ <span class="val">0</span>/1 Negative Intercepts</li>
+                                <li id="req-burns">❌ <span class="val">0</span>/2 Money Burns</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PAGE 2: Hierarchy & Base Hits -->
+                    <div class="gaff-page" data-page="1">
+                        <p class="paytable-text">ETHEL and ISLA deal the most damage. BRIDGE, BIKE, and HEART deal moderate damage. Hits are multipled by 6x.</p>
+                        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+                            <div style="text-align:center;">
+                                <img src="stills/Ethel_pulse.png" alt="Ethel" style="height:70px; border:2px solid #ff0055; border-radius:4px;">
+                                <div style="color:#ff0055; font-size:12px; font-weight:bold; margin-top:4px;">ETHEL</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <img src="stills/Isla_pulse.png" alt="Isla" style="height:70px; border:2px solid #e500ff; border-radius:4px;">
+                                <div style="color:#e500ff; font-size:12px; font-weight:bold; margin-top:4px;">ISLA</div>
+                            </div>
+                        </div>
+                        <div class="paytable-img-container">
+                            <img src="stills/BLAST_RADIUS.png" alt="Hierarchy">
+                        </div>
+                    </div>
+
+                    <!-- PAGE 3: Bracket Rules -->
+                    <div class="gaff-page" data-page="2">
+                        <p class="paytable-text">BRACKETS: When Ethel or Isla land on both sides of Dominic, he is sent to PRISON. When they bracket his house, the house BURNS.</p>
+                        <div class="paytable-img-container">
+                            <img src="stills/ethel_dominic_pulse.png" alt="Bracket Types">
+                        </div>
+                    </div>
+
+                    <!-- PAGE 4: Blast Radius -->
+                    <div class="gaff-page" data-page="3">
+                        <p class="paytable-text">BLAST RADIUS: When Isla's Phone lands, it damages itself and adjacent symbols. Positive and negative hits accumulate.</p>
+                        <div class="paytable-img-container">
+                            <img src="stills/blast_radius_PhoneReveal_A.png" alt="Blast Radius">
+                        </div>
+                    </div>
+
+                    <!-- PAGE 5: Prison & Escape -->
+                    <div class="gaff-page" data-page="4">
+                        <p class="paytable-text">PRISON: Dominic loses all visible assets ($1B hidden remains). All regular hits do only 5% damage representing prison resistance.</p>
+                        <div class="paytable-img-container">
+                            <img src="stills/dominic_prison_loop.png" alt="Prison Rules">
+                        </div>
+                    </div>
+
+                    <!-- PAGE 6: Smart/Dumb Hacks -->
+                    <div class="gaff-page" data-page="5">
+                        <p class="paytable-text">SMART/DUMB PROTOCOL: System occasionally intercepts spins, requiring a password crack to burn bridges and deal massive damage.</p>
+                        <div class="paytable-img-container">
+                            <img src="stills/isla_phone_pulse.png" alt="Hacks">
+                        </div>
+                    </div>
+
+                    <!-- PAGE 7: Math Core -->
+                    <div class="gaff-page" data-page="6">
+                        <div class="paytable-text" style="text-align: left; padding: 0 10px; flex: 1;">
+                            <strong style="color:cyan;">ENGINE MATH: PROGRESSIVE METERS</strong><br>
+                            The machine tracks an internal value starting at $2,000. For UI scaling, this is multiplied by 10M to hit the $20B starting visual. Contributions route 2.5% of "Dead Spin" values directly into the core pool.
+                            <br><br>
+                            <strong style="color:cyan;">ENGINE MATH: PAYOUT HIERARCHY</strong><br>
+                            All base engine payouts scale natively dynamically. Standard 6x scaled yields:<br>
+                            &bull; <strong>ETHEL:</strong> $120 / $360 / $1500 damage<br>
+                            &bull; <strong>ISLA:</strong> $60 / $180 / $600 damage<br>
+                            &bull; <strong>OTHERS:</strong> Linear scale off base rank
+                        </div>
+                    </div>
+
+                    <!-- PAGE 8: Math Escalation -->
+                    <div class="gaff-page" data-page="7">
+                        <div class="paytable-text" style="text-align: left; padding: 0 10px; flex: 1;">
+                            <strong style="color:cyan;">NARRATIVE ESCALATION RNG</strong><br>
+                            The game uses a dynamic scaling algorithm designed to prevent the empire from naturally reaching the $50B Fatal limit.<br><br>
+                            As Dominic breaches $23B, a background <span style="color:var(--neon-pink)">Intervention Roll</span> begins. The probability of the engine forcefully interrupting standard RNG cleanly maps to the danger threshold, maxing out at an 85% probability of an immediate, enforced Arrest Bracket sequence right before $50B.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- ZONE 4: COMMAND TERMINAL (Health Bar + Spin Button)       -->
+        <!-- ======================================================== -->
+        <div id="ui-deck">
+            <div class="damage-display">
+                <div id="health-bar-container">
+                    <div id="health-bar-fill"></div>
+                    <span id="health-bar-label">POWER DIFFERENTIAL</span>
+                </div>
+                <span id="system-status" class="damage-value"></span>
+            </div>
+            <button id="btn-spin" class="spin-button" aria-label="Spin the reels">
+                <img src="images/SPIN.png" alt="SPIN" class="deck-icon">
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Custom WebGL particle canvas — MUST be outside #anti-slot-cabinet so CSS filters don't trap it -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Threat Pulse Overlay (blood-red flash when empire grows) -->
+    <div class="threat-pulse" id="threat-pulse"></div>
+    
+    <!-- Game Over Overlay -->
+    <div id="game-over-overlay">
+        <div class="game-over-inner">
+            <h1 class="game-over-title" id="game-over-title">YOU LOSE</h1>
+            <p class="game-over-subtitle" id="game-over-subtitle">STRUCTURE ISN'T A SUGGESTION</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- CRT SCANLINES OVERLAY                                        -->
+    <!-- ============================================================ -->
+    <div class="scanlines"></div>
+
+    <!-- Game Logic -->
+    <script src="particleSystem.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>
+

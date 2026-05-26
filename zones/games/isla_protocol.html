@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISLA // OBSERVER_PROTOCOL</title>
+    <style>
+        :root {
+            --neon-primary: #ff00ff;
+            /* Magenta */
+            --neon-secondary: #9d00ff;
+            /* Violet */
+            --bg-color: #050505;
+            --glass-color: rgba(20, 20, 20, 0.8);
+            --text-color: #e0e0e0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Share Tech Mono', monospace;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: crosshair;
+            user-select: none;
+            transition: background-color 5s ease;
+        }
+
+        /* --- ATMOSPHERE --- */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+            transition: opacity 4s ease-in-out;
+        }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9;
+            transition: opacity 4s ease-in-out;
+        }
+
+        /* --- BACKGROUND WINGS --- */
+        .wings-container {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.3;
+            transition: opacity 2s ease;
+        }
+
+        .wing-path {
+            fill: none;
+            stroke: var(--neon-secondary);
+            stroke-width: 2;
+            stroke-dasharray: 10, 20;
+            filter: drop-shadow(0 0 10px var(--neon-secondary));
+            opacity: 0.5;
+            transition: stroke 1s, filter 1s, opacity 2s;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.02);
+                opacity: 0.5;
+            }
+        }
+
+        /* --- UI CONTAINER --- */
+        .interface-container {
+            position: relative;
+            z-index: 2;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* --- MARQUEE --- */
+        .thought-rail {
+            width: 100%;
+            border-top: 1px solid var(--neon-primary);
+            border-bottom: 1px solid var(--neon-primary);
+            padding: 5px 0;
+            margin-bottom: 20px;
+            color: var(--neon-primary);
+            text-shadow: 0 0 5px var(--neon-primary);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: rgba(255, 0, 255, 0.05);
+            transition: opacity 2s;
+        }
+
+        .thought-content {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        /* --- DISPLAY --- */
+        .display-screen {
+            width: 100%;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            letter-spacing: 10px;
+            color: white;
+            text-shadow: 0 0 10px white;
+            position: relative;
+            transition: border-color 0.5s, opacity 2s, font-size 1s;
+            text-align: center;
+        }
+
+        .display-screen::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--neon-primary);
+            box-shadow: 0 0 10px var(--neon-primary);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .display-screen.scanning::after {
+            opacity: 1;
+        }
+
+        /* --- KEYPAD --- */
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 100%;
+            transition: opacity 3s;
+        }
+
+        .key {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #333;
+            color: #555;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: all 0.1s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .key:hover {
+            border-color: #666;
+            color: #aaa;
+        }
+
+        .key:active {
+            transform: scale(0.98);
+        }
+
+        /* --- TELL SYSTEM VISUALS --- */
+        .key.glow-true {
+            color: white;
+            border-color: var(--neon-primary);
+            box-shadow: 0 0 10px var(--neon-primary);
+            text-shadow: 0 0 5px white;
+            transition: all 0.05s ease-out;
+        }
+
+        .key.glow-lie {
+            color: #ffccff;
+            border-color: white;
+            box-shadow: 0 0 25px var(--neon-primary), inset 0 0 10px white;
+            text-shadow: 0 0 15px white;
+            transition: all 0.05s ease-out;
+        }
+
+        .key.decay-slow {
+            transition: all 2.0s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        .key.decay-fast {
+            transition: all 0.3s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        .key.decay-wrong {
+            transition: all 0.8s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        /* --- STATUS --- */
+        .status-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #444;
+            margin-top: 10px;
+            transition: opacity 2s;
+        }
+
+        .level-glyph {
+            font-size: 1.2rem;
+            color: var(--neon-secondary);
+            text-shadow: 0 0 5px var(--neon-secondary);
+            margin-right: 10px;
+        }
+
+        .mood-indicator {
+            color: #333;
+            transition: color 0.5s;
+        }
+
+        .mood-indicator.nervous {
+            color: red;
+            text-shadow: 0 0 5px red;
+        }
+
+        .mood-indicator.calm {
+            color: var(--neon-primary);
+            text-shadow: 0 0 5px var(--neon-primary);
+        }
+
+        /* --- ENDING STATES (CLARITY MODE) --- */
+        body.clarity-mode .scanlines,
+        body.clarity-mode .noise {
+            opacity: 0;
+        }
+
+        body.clarity-mode .keypad {
+            opacity: 0.3;
+        }
+
+        /* Dead keys during Role Reversal */
+        .key.dead {
+            cursor: default;
+        }
+
+        .key.dead:hover {
+            border-color: #333;
+            color: #555;
+            box-shadow: none;
+            text-shadow: none;
+        }
+
+        .key.dead:active {
+            transform: none;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes unlock-flash {
+            0% {
+                background: transparent;
+            }
+
+            10% {
+                background: white;
+            }
+
+            100% {
+                background: transparent;
+            }
+        }
+
+        .unlocked-anim {
+            animation: unlock-flash 0.5s ease-out;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        :root {
+            --neon-primary: #ff00ff;
+            /* Magenta */
+            --neon-secondary: #9d00ff;
+            /* Violet */
+            --bg-color: #050505;
+            --glass-color: rgba(20, 20, 20, 0.8);
+            --text-color: #e0e0e0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Share Tech Mono', monospace;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: crosshair;
+            user-select: none;
+            transition: background-color 5s ease;
+        }
+
+        /* --- ATMOSPHERE --- */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2));
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+            transition: opacity 4s ease-in-out;
+        }
+
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9;
+            transition: opacity 4s ease-in-out;
+        }
+
+        /* --- BACKGROUND WINGS --- */
+        .wings-container {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            z-index: 0;
+            opacity: 0.3;
+            transition: opacity 2s ease;
+        }
+
+        .wing-path {
+            fill: none;
+            stroke: var(--neon-secondary);
+            stroke-width: 2;
+            stroke-dasharray: 10, 20;
+            filter: drop-shadow(0 0 10px var(--neon-secondary));
+            opacity: 0.5;
+            transition: stroke 1s, filter 1s, opacity 2s;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.02);
+                opacity: 0.5;
+            }
+        }
+
+        /* --- UI CONTAINER --- */
+        .interface-container {
+            position: relative;
+            z-index: 2;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* --- MARQUEE --- */
+        .thought-rail {
+            width: 100%;
+            border-top: 1px solid var(--neon-primary);
+            border-bottom: 1px solid var(--neon-primary);
+            padding: 5px 0;
+            margin-bottom: 20px;
+            color: var(--neon-primary);
+            text-shadow: 0 0 5px var(--neon-primary);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            background: rgba(255, 0, 255, 0.05);
+            transition: opacity 2s;
+        }
+
+        .thought-content {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+
+        /* --- DISPLAY --- */
+        .display-screen {
+            width: 100%;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            letter-spacing: 10px;
+            color: white;
+            text-shadow: 0 0 10px white;
+            position: relative;
+            transition: border-color 0.5s, opacity 2s, font-size 1s;
+            text-align: center;
+        }
+
+        .display-screen::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--neon-primary);
+            box-shadow: 0 0 10px var(--neon-primary);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .display-screen.scanning::after {
+            opacity: 1;
+        }
+
+        /* --- KEYPAD --- */
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            width: 100%;
+            transition: opacity 3s;
+        }
+
+        .key {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #333;
+            color: #555;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: all 0.1s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .key:hover {
+            border-color: #666;
+            color: #aaa;
+        }
+
+        .key:active {
+            transform: scale(0.98);
+        }
+
+        /* --- TELL SYSTEM VISUALS --- */
+        .key.glow-true {
+            color: white;
+            border-color: var(--neon-primary);
+            box-shadow: 0 0 10px var(--neon-primary);
+            text-shadow: 0 0 5px white;
+            transition: all 0.05s ease-out;
+        }
+
+        .key.glow-lie {
+            color: #ffccff;
+            border-color: white;
+            box-shadow: 0 0 25px var(--neon-primary), inset 0 0 10px white;
+            text-shadow: 0 0 15px white;
+            transition: all 0.05s ease-out;
+        }
+
+        .key.decay-slow {
+            transition: all 2.0s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        .key.decay-fast {
+            transition: all 0.3s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        .key.decay-wrong {
+            transition: all 0.8s ease-out;
+            color: #555;
+            border-color: #333;
+            box-shadow: none;
+        }
+
+        /* --- STATUS --- */
+        .status-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #444;
+            margin-top: 10px;
+            transition: opacity 2s;
+        }
+
+        .level-glyph {
+            font-size: 1.2rem;
+            color: var(--neon-secondary);
+            text-shadow: 0 0 5px var(--neon-secondary);
+            margin-right: 10px;
+        }
+
+        .mood-indicator {
+            color: #333;
+            transition: color 0.5s;
+        }
+
+        .mood-indicator.nervous {
+            color: red;
+            text-shadow: 0 0 5px red;
+        }
+
+        .mood-indicator.calm {
+            color: var(--neon-primary);
+            text-shadow: 0 0 5px var(--neon-primary);
+        }
+
+        /* --- ENDING STATES (CLARITY MODE) --- */
+        body.clarity-mode .scanlines,
+        body.clarity-mode .noise {
+            opacity: 0;
+        }
+
+        body.clarity-mode .keypad {
+            opacity: 0.3;
+        }
+
+        /* Dead keys during Role Reversal */
+        .key.dead {
+            cursor: default;
+        }
+
+        .key.dead:hover {
+            border-color: #333;
+            color: #555;
+            box-shadow: none;
+            text-shadow: none;
+        }
+
+        .key.dead:active {
+            transform: none;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes unlock-flash {
+            0% {
+                background: transparent;
+            }
+
+            10% {
+                background: white;
+            }
+
+            100% {
+                background: transparent;
+            }
+        }
+
+        .unlocked-anim {
+            animation: unlock-flash 0.5s ease-out;
+        }
+    </style>
+
+
+
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <div class="wings-container">
+        <svg viewBox="0 0 800 500" width="100%" height="100%">
+            <path id="wingPath" class="wing-path"
+                d="M100,300 Q200,100 400,250 Q600,100 700,300 L650,400 Q500,200 400,350 Q300,200 150,400 Z" />
+        </svg>
+    </div>
+
+    <div class="interface-container">
+        <div class="thought-rail" id="rail">
+            <span class="thought-content" id="monologue">SYSTEM INITIALIZING...</span>
+        </div>
+
+        <div class="display-screen" id="display">____</div>
+
+        <div class="status-bar" id="statusBar">
+            <div style="display:flex; align-items:center;">
+                <span id="levelGlyph" class="level-glyph">▢</span>
+                <span id="systemVersion">SYS.01</span>
+            </div>
+            <span id="mood" class="mood-indicator calm">STABLE</span>
+        </div>
+
+        <div class="keypad" id="keypad">
+            <div class="key" data-num="1">1</div>
+            <div class="key" data-num="2">2</div>
+            <div class="key" data-num="3">3</div>
+            <div class="key" data-num="4">4</div>
+            <div class="key" data-num="5">5</div>
+            <div class="key" data-num="6">6</div>
+            <div class="key" data-num="7">7</div>
+            <div class="key" data-num="8">8</div>
+            <div class="key" data-num="9">9</div>
+            <div class="key" style="grid-column: 2;" data-num="0">0</div>
+        </div>
+    </div>
+
+    <script>
+        // -- CONFIG --
+        const LEVELS = [
+            { id: 1, glyph: "▢", stressThreshold: 80, lieChance: 0.0, decaySpeed: "slow", monologue: ["SYSTEM STABLE", "RHYTHM ACCEPTED", "LISTEN FIRST"], wingSpeed: "6s" },
+            { id: 2, glyph: "◧", stressThreshold: 50, lieChance: 0.1, decaySpeed: "normal", monologue: ["YOU ARE BEING READ", "MEMORY IS USELESS", "PATTERN REQUIRED"], wingSpeed: "3s" },
+            { id: 3, glyph: "◨", stressThreshold: 30, lieChance: 0.4, decaySpeed: "fast", monologue: ["DON'T ASK IT", "WATCH IT", "IT TELLS ON ITSELF"], wingSpeed: "0.5s" },
+            { id: 4, glyph: "■", stressThreshold: 10, lieChance: 0.0, decaySpeed: "instant", monologue: ["...", "WAIT", " "], wingSpeed: "0s" }
+        ];
+
+        // -- STATE --
+        let currentLevelIndex = 0;
+        let stressLevel = 0;
+        let currentInput = "";
+        let lastInputTime = 0;
+        let successfulInputs = 0;
+
+        // ENDING STATE MACHINE
+        // 0 = Playing, 1 = Withdrawal, 2 = Role Reversal, 3 = Proof/Clarity
+        let endingPhase = 0;
+        let endingCalmTimer = 0;
+
+        let audioCtx;
+
+        // --- ENDING AUDIO ---
+        const observerAudio = new Audio(
+            "https://raw.githubusercontent.com/NJsalubrious/pixelstortion-assets/eee7ff95df27de443c263ebbb8f2d7930af6b72c/Isla_misc/Audio/YouveBeenObservedLongEnough.wav"
+        );
+        observerAudio.preload = "auto";
+        observerAudio.volume = 0.85;
+
+
+        // -- DOM --
+        const display = document.getElementById('display');
+        const monologue = document.getElementById('monologue');
+        const moodText = document.getElementById('mood');
+        const wingPath = document.getElementById('wingPath');
+        const levelGlyph = document.getElementById('levelGlyph');
+        const rail = document.getElementById('rail');
+        const statusBar = document.getElementById('statusBar');
+        const keys = document.querySelectorAll('.key');
+
+        // -- AUDIO --
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+        }
+
+        function playTone(type) {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            // SILENCE IN ENDING PHASES
+            if (endingPhase > 1) return; // Dead silence in Role Reversal
+
+            const volume = currentLevelIndex === 3 ? 0.05 : 0.2;
+
+            if (type === 'lie') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.linearRampToValueAtTime(750, now + 0.1);
+                gain.gain.setValueAtTime(volume, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+                osc.start(now);
+                osc.stop(now + 0.1);
+            } else if (type === 'truth') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(200, now);
+                const tail = currentLevelIndex === 0 ? 1.5 : 0.5;
+                gain.gain.setValueAtTime(volume, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + tail);
+                osc.start(now);
+                osc.stop(now + tail);
+            } else {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(100, now);
+                gain.gain.setValueAtTime(volume * 0.5, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+                osc.start(now);
+                osc.stop(now + 0.05);
+            }
+        }
+
+        function playAdvanceSound() {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.frequency.setValueAtTime(55, now);
+            osc.frequency.linearRampToValueAtTime(110, now + 2);
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.4, now + 1);
+            gain.gain.linearRampToValueAtTime(0, now + 3);
+            osc.start(now);
+            osc.stop(now + 3);
+        }
+
+        // -- CORE MECHANICS --
+
+        function updateMonologue() {
+            if (endingPhase > 0) return; // Monologue stops in ending
+            const config = LEVELS[currentLevelIndex];
+            const phrase = config.monologue[Math.floor(Math.random() * config.monologue.length)];
+            monologue.innerText = phrase + " // " + phrase + " // " + phrase;
+        }
+        setInterval(updateMonologue, 4000);
+
+        function updateStateVisuals() {
+            if (endingPhase > 0) return; // Visuals freeze in ending
+
+            const config = LEVELS[currentLevelIndex];
+            wingPath.style.animation = `breathe ${config.wingSpeed} infinite ease-in-out`;
+
+            if (stressLevel > config.stressThreshold) {
+                moodText.innerText = "DEFENSIVE";
+                moodText.className = "mood-indicator nervous";
+                wingPath.style.stroke = "red";
+            } else {
+                moodText.innerText = "OBSERVING";
+                moodText.className = "mood-indicator calm";
+                wingPath.style.stroke = "var(--neon-secondary)";
+            }
+
+            if (currentLevelIndex === 3) {
+                rail.style.opacity = 0.2;
+                display.style.opacity = 0.5;
+            }
+        }
+
+        function handleInput(keyVal) {
+            initAudio();
+            const now = Date.now();
+            const dt = now - lastInputTime;
+            lastInputTime = now;
+
+            // --- ENDING PHASE LOGIC ---
+            if (endingPhase === 1) return; // Ignoring input during Withdrawal
+
+            if (endingPhase === 2 || endingPhase === 3) {
+                // BEAT 2/3: ROLE REVERSAL
+                // Input is allowed, but it BREAKS the calm timer
+                // No feedback. No sound. Just resetting the test.
+                endingCalmTimer = 0;
+                return;
+            }
+            // ---------------------------
+
+            const config = LEVELS[currentLevelIndex];
+
+            // 1. CALCULATE STRESS
+            if (dt < 250) stressLevel += 15;
+            else if (dt > 800) stressLevel = Math.max(0, stressLevel - 10);
+            if (config.id === 3 && dt > 400 && dt < 600) stressLevel += 5;
+
+            updateStateVisuals();
+
+            // 2. VISUAL FEEDBACK
+            let isLie = false;
+            if (stressLevel > config.stressThreshold && Math.random() < config.lieChance) isLie = true;
+
+            const keyEl = document.querySelector(`.key[data-num="${keyVal}"]`);
+            triggerKeyVisual(keyEl, isLie, config);
+
+            // 3. LEVEL LOGIC
+            if (config.id === 1) {
+                if (dt > 400) successfulInputs++;
+                if (successfulInputs > 8) advanceLevel();
+            }
+            if (config.id === 2) {
+                if (stressLevel > config.stressThreshold) {
+                    playTone('lie');
+                } else {
+                    successfulInputs++;
+                    if (successfulInputs > 12) advanceLevel();
+                }
+            }
+            if (config.id === 3) {
+                if (stressLevel < config.stressThreshold && dt > 600) successfulInputs++;
+                if (successfulInputs > 10) advanceLevel();
+            }
+            if (config.id === 4) {
+                endingCalmTimer = 0; // Input resets L4 calm
+                successfulInputs = 0;
+            }
+
+            // Dummy Display
+            currentInput += keyVal;
+            if (currentInput.length > 4) currentInput = currentInput.slice(1);
+            display.innerText = currentInput.padEnd(4, '_');
+            display.classList.add('scanning');
+            setTimeout(() => display.classList.remove('scanning'), 100);
+        }
+
+        function triggerKeyVisual(el, isLie, config) {
+            el.className = 'key';
+            void el.offsetWidth;
+
+            if (isLie) {
+                el.classList.add('glow-lie');
+                playTone('lie');
+                setTimeout(() => el.classList.add('decay-wrong'), 100);
+            } else {
+                el.classList.add('glow-true');
+                playTone('truth');
+                const decayClass = config.decaySpeed === 'slow' ? 'decay-slow' :
+                    config.decaySpeed === 'fast' ? 'decay-fast' : 'decay-wrong';
+                setTimeout(() => el.classList.add(decayClass), 50);
+            }
+        }
+
+        // --- THE ENDING LOOP ---
+        setInterval(() => {
+            // NORMAL LEVEL 4 PLAY
+            if (LEVELS[currentLevelIndex].id === 4 && endingPhase === 0) {
+                if (stressLevel === 0) {
+                    endingCalmTimer += 1;
+                    if (endingCalmTimer > 5) initiateEndingBeat1(); // Trigger Climax
+                } else {
+                    endingCalmTimer = 0;
+                }
+                stressLevel = Math.max(0, stressLevel - 2);
+            }
+
+            // BEAT 2 LOOP (Checking for Proof of Training)
+            if (endingPhase === 2) {
+                endingCalmTimer += 1;
+                // Requires longer silence (6 ticks) to verify
+                if (endingCalmTimer > 6) initiateEndingBeat3();
+            }
+
+        }, 1000);
+
+        function initiateEndingBeat1() {
+            // WITHDRAWAL: "No further input required"
+            endingPhase = 1;
+            console.log("PHASE 1: WITHDRAWAL");
+
+            // Strip elements
+            rail.style.opacity = 0;
+            wingPath.style.opacity = 0;
+            statusBar.style.opacity = 0;
+
+            display.style.opacity = 1; // Make sure we see this
+            display.style.fontSize = "1rem";
+            display.style.letterSpacing = "2px";
+            display.style.border = "none";
+            display.innerText = "NO FURTHER INPUT REQUIRED";
+
+            // Wait 4 seconds, then flip
+            setTimeout(initiateEndingBeat2, 4000);
+        }
+
+        function initiateEndingBeat2() {
+            // ROLE REVERSAL: "Observer Required" + Dead Keys
+            endingPhase = 2;
+            endingCalmTimer = 0; // Reset timer for the final test
+            console.log("PHASE 2: ROLE REVERSAL");
+
+            display.innerText = "SYSTEM STABLE // OBSERVER REQUIRED";
+
+            // Add dead class to keys (visual only, logic handled in handleInput)
+            keys.forEach(k => k.classList.add('dead'));
+
+            // PLAY OBSERVER AUDIO (once) with psychological delay
+            setTimeout(() => {
+                try {
+                    observerAudio.currentTime = 0;
+                    observerAudio.play();
+                } catch (e) {
+                    console.warn("Observer audio blocked until user interaction.");
+                }
+            }, 700);
+        }
+
+        function initiateEndingBeat3() {
+            // PROOF: Perceptual Relief
+            endingPhase = 3;
+            console.log("PHASE 3: CLARITY");
+
+            // Clear text
+            display.innerText = "";
+
+            // Trigger CSS Clarity Mode
+            document.body.classList.add('clarity-mode');
+        }
+
+        function advanceLevel() {
+            if (currentLevelIndex >= LEVELS.length - 1) return;
+
+            playAdvanceSound();
+            document.body.classList.add('unlocked-anim');
+            setTimeout(() => document.body.classList.remove('unlocked-anim'), 500);
+
+            currentLevelIndex++;
+            successfulInputs = 0;
+            stressLevel = 0;
+            currentInput = "";
+
+            levelGlyph.innerText = LEVELS[currentLevelIndex].glyph;
+            updateMonologue();
+            updateStateVisuals();
+        }
+
+        // -- INPUT LISTENERS --
+        document.addEventListener('keydown', (e) => {
+            if (e.key >= '0' && e.key <= '9') handleInput(e.key);
+        });
+        keys.forEach(k => {
+            k.addEventListener('mousedown', () => handleInput(k.dataset.num));
+        });
+
+        updateStateVisuals();
+
+    </script>
+</main>
+</body>
+
+</html>

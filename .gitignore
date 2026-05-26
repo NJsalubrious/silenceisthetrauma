@@ -1,0 +1,36 @@
+# ── Dev / build scripts at root ──────────────────────────────
+_UNISON_METHOD.md
+_build_dict.py
+_convert_*.py
+_patch_*.py
+_seo_*.py
+_seo_cast_index_fragment.html
+
+# ── Dev / build scripts in vex_network ───────────────────────
+vex_network/_AUDIT_*.py
+vex_network/_build_preview.py
+
+# ── Dev artefacts ────────────────────────────────────────────
+CurrentChatLog/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+
+# ── Backups ──────────────────────────────────────────────────
+*.bak
+*.backup
+*.pre_arc_backup
+
+# ── Editor / IDE ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Secrets (defense in depth — none expected, but safety) ───
+.env
+.env.local
+*.key
+*.pem

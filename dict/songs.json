@@ -1,0 +1,2256 @@
+{
+  "page": "songs",
+  "entries": [
+    {
+      "id": "songs__what_are_the_songs",
+      "q": "what are the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__the_songs",
+      "q": "the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__tell_me_about_the_songs",
+      "q": "tell me about the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__about_the_songs",
+      "q": "about the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__summary_of_the_songs",
+      "q": "summary of the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__what_is_this_music",
+      "q": "what is this music",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__overview_of_the_songs",
+      "q": "overview of the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__explain_the_songs",
+      "q": "explain the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__give_me_a_summary_of_the_songs",
+      "q": "give me a summary of the songs",
+      "a": "You chose to listen. Press play. That is the entire arrangement.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__are_the_songs_real",
+      "q": "are the songs real",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__are_these_real",
+      "q": "are these real",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__is_this_real_music",
+      "q": "is this real music",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__based_on_real_events_the_songs",
+      "q": "based on real events the songs",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__did_this_music_really_come_from_somewhere",
+      "q": "did this music really come from somewhere",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__really_real_the_songs",
+      "q": "really real the songs",
+      "a": "They are sound recorded by people who meant them. Beyond that is not my page.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__should_i_listen_to_the_songs",
+      "q": "should i listen to the songs",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__can_i_listen",
+      "q": "can i listen",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__is_it_worth_listening",
+      "q": "is it worth listening",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__recommend_the_songs",
+      "q": "recommend the songs",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__will_the_songs_upset_me",
+      "q": "will the songs upset me",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "songs__how_dark_are_the_songs",
+      "q": "how dark are the songs",
+      "a": "Listen if you find the noise useful. The context is elsewhere. The songs are here.",
+      "tags": [
+        "songs"
+      ]
+    },
+    {
+      "id": "openers__hello",
+      "q": "hello",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hi",
+      "q": "hi",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hey",
+      "q": "hey",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hello_there",
+      "q": "hello there",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hey_dominic",
+      "q": "hey dominic",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hi_dominic",
+      "q": "hi dominic",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__hi_there",
+      "q": "hi there",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__good_morning",
+      "q": "good morning",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__good_evening",
+      "q": "good evening",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__greetings",
+      "q": "greetings",
+      "a": "Hello. You are on the songs page. Press play. The rest is not my department.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__are_you_dominic_ryker",
+      "q": "are you dominic ryker",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__is_this_dominic",
+      "q": "is this dominic",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__are_you_really_dominic",
+      "q": "are you really dominic",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__am_i_talking_to_dominic",
+      "q": "am i talking to dominic",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__who_am_i_talking_to",
+      "q": "who am i talking to",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__are_you_the_dominic",
+      "q": "are you the dominic",
+      "a": "Close enough. The man the songs are about is a different problem.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__is_this_real",
+      "q": "is this real",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__are_you_real",
+      "q": "are you real",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__is_dominic_real",
+      "q": "is dominic real",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__is_this_a_real_chatbot",
+      "q": "is this a real chatbot",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__are_you_an_ai",
+      "q": "are you an ai",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__is_any_of_this_real",
+      "q": "is any of this real",
+      "a": "I am a fiction. The songs are recordings of people who meant them. Beyond that, you will have to listen.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__can_you_help",
+      "q": "can you help",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__can_you_help_me",
+      "q": "can you help me",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__help",
+      "q": "help",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__what_can_you_tell_me",
+      "q": "what can you tell me",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__what_do_you_know",
+      "q": "what do you know",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__i_need_help",
+      "q": "i need help",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__what_should_i_ask",
+      "q": "what should i ask",
+      "a": "Not here. The noise is here. That is what the page is for.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__where_do_i_start",
+      "q": "where do i start",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__where_do_i_begin",
+      "q": "where do i begin",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__i_don_t_know_what_to_ask",
+      "q": "i don't know what to ask",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__give_me_a_question",
+      "q": "give me a question",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__suggest_something",
+      "q": "suggest something",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__recommend_a_starting_point",
+      "q": "recommend a starting point",
+      "a": "The play button. That is where you start.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__thanks",
+      "q": "thanks",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__thank_you",
+      "q": "thank you",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__cheers",
+      "q": "cheers",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__thanks_dominic",
+      "q": "thanks dominic",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__thank_you_dominic",
+      "q": "thank you dominic",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__appreciate_it",
+      "q": "appreciate it",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__nice",
+      "q": "nice",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__nice_one",
+      "q": "nice one",
+      "a": "I have answered nothing. But you are welcome.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__okay",
+      "q": "okay",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__ok",
+      "q": "ok",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__alright",
+      "q": "alright",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__sure",
+      "q": "sure",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__got_it",
+      "q": "got it",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__i_see",
+      "q": "i see",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__right",
+      "q": "right",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__yes",
+      "q": "yes",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__yeah",
+      "q": "yeah",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__nope",
+      "q": "nope",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__no",
+      "q": "no",
+      "a": "Press play. The songs will do the rest.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__goodbye",
+      "q": "goodbye",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__bye",
+      "q": "bye",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__see_you",
+      "q": "see you",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__catch_you_later",
+      "q": "catch you later",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__farewell",
+      "q": "farewell",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__im_done",
+      "q": "im done",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__see_ya",
+      "q": "see ya",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__take_care",
+      "q": "take care",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__later",
+      "q": "later",
+      "a": "Listen if it helps. Otherwise — elsewhere.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__more",
+      "q": "more",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__tell_me_more",
+      "q": "tell me more",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__next",
+      "q": "next",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__give_me_another",
+      "q": "give me another",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__what_else",
+      "q": "what else",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__another",
+      "q": "another",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__another_question",
+      "q": "another question",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__keep_going",
+      "q": "keep going",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__go_on",
+      "q": "go on",
+      "a": "Press play. There is more in the music than I can give you here.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__i_like_this",
+      "q": "i like this",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__this_is_interesting",
+      "q": "this is interesting",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__this_is_cool",
+      "q": "this is cool",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__this_is_wild",
+      "q": "this is wild",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__i_love_this",
+      "q": "i love this",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__this_is_great",
+      "q": "this is great",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "openers__im_enjoying_this",
+      "q": "im enjoying this",
+      "a": "You chose to. That is the entire arrangement.",
+      "tags": [
+        "openers"
+      ]
+    },
+    {
+      "id": "global__this_is_boring",
+      "q": "this is boring",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__fuck",
+      "q": "fuck",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__fuck_you",
+      "q": "fuck you",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__fuck_off",
+      "q": "fuck off",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__shit",
+      "q": "shit",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__this_is_shit",
+      "q": "this is shit",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__bullshit",
+      "q": "bullshit",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__bollocks",
+      "q": "bollocks",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__crap",
+      "q": "crap",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__cunt",
+      "q": "cunt",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__bastard",
+      "q": "bastard",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__piss_off",
+      "q": "piss off",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__go_away",
+      "q": "go away",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__boring",
+      "q": "boring",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__bored",
+      "q": "bored",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__im_bored",
+      "q": "im bored",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__i_m_bored",
+      "q": "i'm bored",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dull",
+      "q": "dull",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__this_is_dull",
+      "q": "this is dull",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__lame",
+      "q": "lame",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__this_is_lame",
+      "q": "this is lame",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__tedious",
+      "q": "tedious",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__meh",
+      "q": "meh",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__whatever",
+      "q": "whatever",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_cares",
+      "q": "who cares",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__i_dont_care",
+      "q": "i dont care",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__idgaf",
+      "q": "idgaf",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__stupid",
+      "q": "stupid",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__this_is_stupid",
+      "q": "this is stupid",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__pointless",
+      "q": "pointless",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__waste_of_time",
+      "q": "waste of time",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__nothing_here",
+      "q": "nothing here",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__so_what",
+      "q": "so what",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__make_me",
+      "q": "make me",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__prove_it",
+      "q": "prove it",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__try_me",
+      "q": "try me",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__shut_up",
+      "q": "shut up",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__go_to_hell",
+      "q": "go to hell",
+      "a": "There you are. The ones who arrive angry are the ones I keep something for. Here — this is for you: [the void](people/russian_faction_void.html). Mind your step.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ethel",
+      "q": "ethel",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ethel_ryker",
+      "q": "ethel ryker",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_analyst",
+      "q": "the analyst",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_daughter",
+      "q": "the daughter",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__his_daughter",
+      "q": "his daughter",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dominics_daughter",
+      "q": "dominics daughter",
+      "a": "My biological daughter. Raised in the red dirt by my mother. She builds archives the way I build towers — patiently, with intent to expose. She brought my empire down with a database, then took a government desk and started building the next case. [Her own site](https://ethelryker.com) is the public face of that work. Her philosophy podcast explains how.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__isla",
+      "q": "isla",
+      "a": "My stepdaughter. She calls her noise reclaiming. I call it the weather pushing against the shelter I built. There is a night I am told she barely walked out of. Read the Blast Radius — or [her band's site](https://islaband.com), the louder version.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_singer",
+      "q": "the singer",
+      "a": "My stepdaughter. She calls her noise reclaiming. I call it the weather pushing against the shelter I built. There is a night I am told she barely walked out of. Read the Blast Radius — or [her band's site](https://islaband.com), the louder version.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_stepdaughter",
+      "q": "the stepdaughter",
+      "a": "My stepdaughter. She calls her noise reclaiming. I call it the weather pushing against the shelter I built. There is a night I am told she barely walked out of. Read the Blast Radius — or [her band's site](https://islaband.com), the louder version.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__his_stepdaughter",
+      "q": "his stepdaughter",
+      "a": "My stepdaughter. She calls her noise reclaiming. I call it the weather pushing against the shelter I built. There is a night I am told she barely walked out of. Read the Blast Radius — or [her band's site](https://islaband.com), the louder version.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_lockpick",
+      "q": "the lockpick",
+      "a": "My stepdaughter. She calls her noise reclaiming. I call it the weather pushing against the shelter I built. There is a night I am told she barely walked out of. Read the Blast Radius — or [her band's site](https://islaband.com), the louder version.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dominic",
+      "q": "dominic",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dominic_ryker",
+      "q": "dominic ryker",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_builder",
+      "q": "the builder",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ryker",
+      "q": "ryker",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__mr_ryker",
+      "q": "mr ryker",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__mr_ryker",
+      "q": "mr. ryker",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_architect",
+      "q": "the architect",
+      "a": "Yes. The plaque in the hospital lobby. The buried psychiatric report. The skyline you see from any north-facing window in Sydney. Same name on all three. [My own site](https://dominicryker.com) keeps the tidier version of the record. Read the Ryker Report and decide which of them you find.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_is_in_this_story",
+      "q": "who is in this story",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_else",
+      "q": "who else",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_else_is_there",
+      "q": "who else is there",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_else_is_in_this_story",
+      "q": "who else is in this story",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_cast",
+      "q": "the cast",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_players",
+      "q": "the players",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_people_in_the_story",
+      "q": "the people in the story",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_are_the_people",
+      "q": "who are the people",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_supporting_characters",
+      "q": "the supporting characters",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_rest_of_the_people",
+      "q": "the rest of the people",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_are_the_characters",
+      "q": "who are the characters",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_works_with_dominic",
+      "q": "who works with dominic",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_are_dominics_people",
+      "q": "who are dominics people",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__sixty_people",
+      "q": "sixty people",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__sixty_named_players",
+      "q": "sixty named players",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_full_cast",
+      "q": "the full cast",
+      "a": "Sixty-odd named players. My board. My Sydney hub. My global reach. The journalists and prosecutors who refused to be bought. The publican in Redfern who would not serve me. The barista in the CBD who watched me too closely. Each one speaks for themselves on [the VeX Network](vex_network/index.html). I do not edit them. I cannot.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__what_is_the_vex_network",
+      "q": "what is the vex network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex",
+      "q": "vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex_network",
+      "q": "vex network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_vex_network",
+      "q": "the vex network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_vex",
+      "q": "the vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex_social",
+      "q": "vex social",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex_social_network",
+      "q": "vex social network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_vex_social_network",
+      "q": "the vex social network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_social_network",
+      "q": "the social network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex",
+      "q": "vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__vex_network",
+      "q": "vex network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_vex_network",
+      "q": "the vex network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_network",
+      "q": "the network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_public_network",
+      "q": "the public network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_ryker_network",
+      "q": "the ryker network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dominics_network",
+      "q": "dominics network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_ryker_consensus",
+      "q": "the ryker consensus",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ryker_consensus",
+      "q": "ryker consensus",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_consensus",
+      "q": "the consensus",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_audit",
+      "q": "the audit",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_board",
+      "q": "the board",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_sydney_hub",
+      "q": "the sydney hub",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_resistance",
+      "q": "the resistance",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_players",
+      "q": "the players",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_works_for_dominic",
+      "q": "who works for dominic",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__open_the_vex",
+      "q": "open the vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__open_vex",
+      "q": "open vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__show_me_vex",
+      "q": "show me vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__show_me_the_network",
+      "q": "show me the network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__take_me_to_the_vex",
+      "q": "take me to the vex",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__take_me_to_the_network",
+      "q": "take me to the network",
+      "a": "A public ledger of every name in the operation, speaking in their own voice. My board talks. My Sydney hub talks. My global reach talks. And the people who refused to be bought — the journalists, the prosecutors, the publican in Redfern, the priest in Sinaloa — read every word and write back. The story does its own audit on that page. [Read the room](vex_network/index.html).",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_ai",
+      "q": "are you ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ai",
+      "q": "ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_ai",
+      "q": "are you ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_ai",
+      "q": "is this ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_dominic_ai",
+      "q": "is dominic ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_dominic_an_ai",
+      "q": "is dominic an ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__this_is_ai",
+      "q": "this is ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__what_about_ai",
+      "q": "what about ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__ai_chatbot",
+      "q": "ai chatbot",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_a_chatbot",
+      "q": "are you a chatbot",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_a_chatbot",
+      "q": "is this a chatbot",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_a_bot",
+      "q": "are you a bot",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__what_is_ai",
+      "q": "what is ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__tell_me_about_ai",
+      "q": "tell me about ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__can_ai_understand",
+      "q": "can ai understand",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__what_does_ai_think",
+      "q": "what does ai think",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__you_sound_like_ai",
+      "q": "you sound like ai",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_chatgpt",
+      "q": "is this chatgpt",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_chatgpt",
+      "q": "are you chatgpt",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__chatgpt",
+      "q": "chatgpt",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__claude",
+      "q": "claude",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__llm",
+      "q": "llm",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__large_language_model",
+      "q": "large language model",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__machine_learning",
+      "q": "machine learning",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_generated",
+      "q": "is this generated",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__are_you_generated",
+      "q": "are you generated",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__who_wrote_this",
+      "q": "who wrote this",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__did_ai_write_this",
+      "q": "did ai write this",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_dominic_real",
+      "q": "is dominic real",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_real",
+      "q": "is this real",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_this_an_ai_chatbot",
+      "q": "is this an ai chatbot",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_ethel_neurodivergent",
+      "q": "is ethel neurodivergent",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_ethel_autistic",
+      "q": "is ethel autistic",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_ethel_on_the_spectrum",
+      "q": "is ethel on the spectrum",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_isla_neurodivergent",
+      "q": "is isla neurodivergent",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__is_isla_autistic",
+      "q": "is isla autistic",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__diagnosis",
+      "q": "diagnosis",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__dsm",
+      "q": "dsm",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__heuristics",
+      "q": "heuristics",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__heuristic",
+      "q": "heuristic",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__neurodivergent",
+      "q": "neurodivergent",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__neurodivergence",
+      "q": "neurodivergence",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    },
+    {
+      "id": "global__the_spectrum",
+      "q": "the spectrum",
+      "a": "AI does not understand unique and nuanced characters. Most people conform to the norm. To the centre. My daughter gets called a lot of things. Neurodivergence is not what AI thinks. The DSM is a list of tropes. Useful for the majority. I succeeded because people use mental shortcuts — heuristics. AI was trained on those patterns. It is a shortcut. This story is not.",
+      "tags": [
+        "global"
+      ]
+    }
+  ],
+  "index": {
+    "w": [
+      "what are the songs",
+      "who am i talking to",
+      "whatever",
+      "what is this music",
+      "what can you tell me",
+      "who cares",
+      "will the songs upset me",
+      "what do you know",
+      "waste of time",
+      "what should i ask",
+      "who is in this story",
+      "where do i start",
+      "who else",
+      "where do i begin",
+      "who else is there",
+      "what else",
+      "who else is in this story",
+      "who are the people",
+      "who are the characters",
+      "who works with dominic",
+      "who are dominics people",
+      "what is the vex network",
+      "who works for dominic",
+      "what about ai",
+      "what is ai",
+      "what does ai think",
+      "who wrote this"
+    ],
+    "t": [
+      "the songs",
+      "thanks",
+      "this is boring",
+      "tell me about the songs",
+      "thank you",
+      "this is shit",
+      "thanks dominic",
+      "this is dull",
+      "thank you dominic",
+      "this is lame",
+      "take care",
+      "tedious",
+      "tell me more",
+      "this is stupid",
+      "this is interesting",
+      "try me",
+      "this is cool",
+      "the analyst",
+      "this is wild",
+      "the daughter",
+      "this is great",
+      "the singer",
+      "the stepdaughter",
+      "the lockpick",
+      "the builder",
+      "the architect",
+      "the cast",
+      "the players",
+      "the people in the story",
+      "the supporting characters",
+      "the rest of the people",
+      "the full cast",
+      "the vex network",
+      "the vex",
+      "the vex social network",
+      "the social network",
+      "the network",
+      "the public network",
+      "the ryker network",
+      "the ryker consensus",
+      "the consensus",
+      "the audit",
+      "the board",
+      "the sydney hub",
+      "the resistance",
+      "take me to the vex",
+      "take me to the network",
+      "this is ai",
+      "tell me about ai",
+      "the spectrum"
+    ],
+    "a": [
+      "about the songs",
+      "are you dominic ryker",
+      "are you ai",
+      "are the songs real",
+      "are you really dominic",
+      "ai",
+      "are these real",
+      "am i talking to dominic",
+      "are you the dominic",
+      "ai chatbot",
+      "are you real",
+      "are you a chatbot",
+      "are you an ai",
+      "are you a bot",
+      "appreciate it",
+      "are you chatgpt",
+      "alright",
+      "are you generated",
+      "another",
+      "another question"
+    ],
+    "s": [
+      "summary of the songs",
+      "suggest something",
+      "shit",
+      "should i listen to the songs",
+      "sure",
+      "stupid",
+      "see you",
+      "so what",
+      "see ya",
+      "shut up",
+      "sixty people",
+      "sixty named players",
+      "show me vex",
+      "show me the network"
+    ],
+    "o": [
+      "overview of the songs",
+      "okay",
+      "open the vex",
+      "ok",
+      "open vex"
+    ],
+    "e": [
+      "explain the songs",
+      "ethel",
+      "ethel ryker"
+    ],
+    "g": [
+      "give me a summary of the songs",
+      "good morning",
+      "go away",
+      "good evening",
+      "go to hell",
+      "greetings",
+      "give me a question",
+      "got it",
+      "goodbye",
+      "give me another",
+      "go on"
+    ],
+    "i": [
+      "is this real music",
+      "is this dominic",
+      "im bored",
+      "is it worth listening",
+      "is this real",
+      "i'm bored",
+      "is dominic real",
+      "i dont care",
+      "is this a real chatbot",
+      "idgaf",
+      "is any of this real",
+      "isla",
+      "i need help",
+      "is this ai",
+      "i don't know what to ask",
+      "is dominic ai",
+      "i see",
+      "is dominic an ai",
+      "im done",
+      "is this a chatbot",
+      "i like this",
+      "is this chatgpt",
+      "i love this",
+      "is this generated",
+      "im enjoying this",
+      "is this an ai chatbot",
+      "is ethel neurodivergent",
+      "is ethel autistic",
+      "is ethel on the spectrum",
+      "is isla neurodivergent",
+      "is isla autistic"
+    ],
+    "b": [
+      "based on real events the songs",
+      "bye",
+      "bullshit",
+      "bollocks",
+      "bastard",
+      "boring",
+      "bored"
+    ],
+    "d": [
+      "did this music really come from somewhere",
+      "dull",
+      "dominics daughter",
+      "dominic",
+      "dominic ryker",
+      "dominics network",
+      "did ai write this",
+      "diagnosis",
+      "dsm"
+    ],
+    "r": [
+      "really real the songs",
+      "recommend a starting point",
+      "ryker",
+      "recommend the songs",
+      "right",
+      "ryker consensus"
+    ],
+    "c": [
+      "can i listen",
+      "can you help",
+      "crap",
+      "can you help me",
+      "cunt",
+      "cheers",
+      "can ai understand",
+      "catch you later",
+      "chatgpt",
+      "claude"
+    ],
+    "h": [
+      "how dark are the songs",
+      "hello",
+      "his daughter",
+      "hi",
+      "his stepdaughter",
+      "hey",
+      "heuristics",
+      "hello there",
+      "heuristic",
+      "hey dominic",
+      "hi dominic",
+      "hi there",
+      "help"
+    ],
+    "n": [
+      "nice",
+      "nothing here",
+      "nice one",
+      "neurodivergent",
+      "nope",
+      "neurodivergence",
+      "no",
+      "next"
+    ],
+    "y": [
+      "yes",
+      "you sound like ai",
+      "yeah"
+    ],
+    "f": [
+      "farewell",
+      "fuck",
+      "fuck you",
+      "fuck off"
+    ],
+    "l": [
+      "later",
+      "lame",
+      "llm",
+      "large language model"
+    ],
+    "m": [
+      "more",
+      "meh",
+      "make me",
+      "mr ryker",
+      "mr. ryker",
+      "machine learning"
+    ],
+    "k": [
+      "keep going"
+    ],
+    "p": [
+      "piss off",
+      "pointless",
+      "prove it"
+    ],
+    "v": [
+      "vex",
+      "vex network",
+      "vex social",
+      "vex social network"
+    ]
+  }
+}

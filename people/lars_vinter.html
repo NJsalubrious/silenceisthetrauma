@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinter Digital Assets | Tallinn</title>
+    <meta name="description" content="Next-generation cryptographic security and digital asset tumbling based in Estonia.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vinter Digital Assets">
+    <meta property="og:description" content="Obfuscation as a Service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silenceisthetrauma.com/people/lars_vinter.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="lars vinter, @lars_vinter, tallinn, chain, analysis, looks, laundry, network character, silence is the trauma, ryker case, satirical crime fiction, art installation, pixelstortion">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/lars_vinter.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="Vinter Digital Assets | Tallinn">
+    <meta name="twitter:description" content="Next-generation cryptographic security and digital asset tumbling based in Estonia.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/lars_vinter.jpg">
+
+        <link rel="canonical" href="https://silenceisthetrauma.com/people/lars_vinter.html">
+<meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD Schema (Hidden Lore: Crypto Tumbling) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "additionalType": "https://schema.org/CreativeWork",
+      "genre": "Satirical Crime Fiction",
+      "isPartOf": {"@type": "CreativeWorkSeries", "name": "Silence Is The Trauma"},
+      "@type": "FinancialService",
+      "name": "Vinter Digital Assets",
+      "founder": {
+        "@type": "Person",
+        "name": "Lars Vinter",
+        "jobTitle": "Lead Cryptographer"
+      },
+      "description": "Julian Moretti washes the cash in Miami. I wash the crypto in Tallinn. A client drops 500 Bitcoin into my protocol. I shatter it into ten thousand micro-transactions, bounce them across 40 different unregulated exchanges, and reassemble the balance in a clean Swiss account controlled by Marcus Vane. Interpol's blockchain analysts are five years behind my code.",
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Algorithmic Tumbling",
+        "description": "Severing the cryptographic link between the source of funds and the destination wallet."
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cyber-dark: #050507;
+            --cyber-panel: #0d0d12;
+            --neon-blue: #00f3ff;
+            --neon-green: #39ff14;
+            --text-main: #a0aab2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--cyber-dark);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            border-top: 2px solid var(--neon-blue);
+        }
+
+        /* Nav */
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 7, 0.9);
+            backdrop-filter: blur(5px);
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+        }
+
+        .brand {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .brand span { color: var(--neon-blue); }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            margin-left: 2rem;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+        nav a:hover {
+            color: var(--neon-green);
+            text-shadow: 0 0 8px var(--neon-green);
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background-image: url('../assets/images/characters/cards/lars_vinter-card.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(5,5,7,0.7) 0%, rgba(5,5,7,0.95) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .terminal-block {
+            background: rgba(13, 13, 18, 0.8);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 4px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.05);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-cyber {
+            background: transparent;
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            padding: 0.8rem 2rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-cyber:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+
+        /* Main Content */
+        .services {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--cyber-panel);
+            padding: 3rem 2rem;
+            border-top: 2px solid rgba(255,255,255,0.05);
+            transition: border-color 0.3s;
+        }
+
+        .service-card:hover {
+            border-top-color: var(--neon-green);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Environmental Lore Leak */
+        .code-leak {
+            grid-column: 1 / -1;
+            background: #020202;
+            padding: 2rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: #222; /* Extremely dark text */
+            border-left: 2px solid #111;
+            margin-top: 2rem;
+        }
+        .code-leak::selection { background: var(--neon-green); color: #000; }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.75rem;
+            color: #444;
+            border-top: 1px solid #111;
+        }
+    </style>
+
+    <!-- Legal & SEO Satire Declarations -->
+    <meta name="classification" content="Fiction, Satire, Art Installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta name="genre" content="Crime Fiction">
+</head>
+<body>
+    <header>
+        <div class="brand">VINTER_<span>ASSETS</span></div>
+        <nav>
+            <a href="#obfuscation">// OBFUSCATION</a>
+            <a href="#custody">// COLD_CUSTODY</a>
+            <a href="#api">// API_DOCS</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="terminal-block">
+                <h1>Privacy is a human right.</h1>
+                <p>We provide enterprise-grade cryptographic obfuscation for institutional clients. Break the chain of analysis. Secure your digital sovereignty.</p>
+                <button class="btn-cyber">INITIALIZE PROTOCOL</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="services" id="obfuscation">
+        <div class="service-card">
+            <h3>Algorithmic Tumbling</h3>
+            <p>Our proprietary routing engine shatters your inbound deposit into micro-transactions, dispersing them across decentralized liquidity pools before reassembly.</p>
+        </div>
+        <div class="service-card">
+            <h3>Jurisdictional Shielding</h3>
+            <p>Based in Tallinn, Estonia, we operate strictly outside the purview of the SEC and US financial regulators, ensuring zero data retention and total client anonymity.</p>
+        </div>
+
+        <!-- Hidden Lore -->
+        <div class="code-leak" aria-hidden="true">
+            // TERMINAL_LOG_0x88fA // OVERRIDE_LARS //
+            function route_funds(payload, destination="ZURICH_VANE_SECURE") {
+                // The cartel money just hit the ingest node.
+                // Shattering 8,000 ETH into 45,000 ghost wallets.
+                const fragments = shatter_payload(payload);
+                
+                // Route through darknet tumbling pools to sever the chain history.
+                execute_tumbler(fragments, depth=5000);
+                
+                // Reassemble the clean funds into Marcus Vane's Swiss account.
+                // The feds will think the money disappeared into the void.
+                deposit_to_target(destination, fragments.reassemble());
+                
+                return "WASH_COMPLETE";
+            }
+        </div>
+    </main>
+
+    <footer>
+        [ EST: 2026 // TALLINN, ESTONIA // ENCRYPTED P2P ]
+    </footer>
+
+    <!-- OS-Level Network Overlay -->
+    <script src="pixelstortion-overlay.js"></script>
+</body>
+</html>
+
+
+

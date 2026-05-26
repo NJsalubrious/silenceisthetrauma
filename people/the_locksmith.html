@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE LOCKSMITH // ONION ROUTER // V 9.9.1</title>
+    <meta name="description" content="Decentralized identity erasure and cryptographic secure communications.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Locksmith">
+    <meta property="og:description" content="Identity Erasure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silenceisthetrauma.com/people/the_locksmith.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="the locksmith, @the_locksmith, digital, dark, plausible, deniability, network character, silence is the trauma, ryker case, satirical crime fiction, art installation, pixelstortion">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/the_locksmith.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="THE LOCKSMITH // ONION ROUTER // V 9.9.1">
+    <meta name="twitter:description" content="Decentralized identity erasure and cryptographic secure communications.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/the_locksmith.jpg">
+
+        <link rel="canonical" href="https://silenceisthetrauma.com/people/the_locksmith.html">
+<meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD Schema (Hidden Lore: Digital Assassination) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "additionalType": "https://schema.org/CreativeWork",
+      "genre": "Satirical Crime Fiction",
+      "isPartOf": {"@type": "CreativeWorkSeries", "name": "Silence Is The Trauma"},
+      "@type": "Service",
+      "name": "The Locksmith",
+      "provider": {
+        "@type": "Person",
+        "name": "Unknown",
+        "jobTitle": "Data Broker / Eraser"
+      },
+      "description": "If Elena Corves wants you gone, she doesn't send a hitman. She sends me a Bitcoin payment. I delete your birth certificate from the state servers. I wipe your passport from the DHS database. I drain your bank accounts to zero and delete the transaction logs. In 48 hours, you digitally cease to exist. You can't rent a car, buy food, or prove who you are. Digital assassination is much cleaner than the physical kind.",
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Identity Erasure",
+        "description": "Total deletion of a target's digital footprint across government, financial, and civil databases."
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --term-bg: #000000;
+            --term-text: #00ff41;
+            --term-highlight: #008f11;
+            --term-error: #ff003c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--term-bg);
+            color: var(--term-text);
+            font-family: 'Fira Code', monospace;
+            overflow-x: hidden;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Scanline effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.25) 50%
+            );
+            background-size: 100% 4px;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        .terminal {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0,20,0,0.8);
+            border: 1px solid var(--term-highlight);
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+
+        .header-ascii {
+            white-space: pre;
+            font-size: 10px;
+            line-height: 10px;
+            margin-bottom: 2rem;
+            color: var(--term-highlight);
+            text-align: center;
+        }
+
+        .output-line {
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .prompt {
+            color: #fff;
+        }
+
+        .command {
+            color: var(--term-text);
+            font-weight: 700;
+        }
+
+        .typing-animation {
+            border-right: 10px solid var(--term-text);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--term-text); }
+        }
+
+        .menu {
+            margin-top: 2rem;
+            border: 1px dashed var(--term-highlight);
+            padding: 1.5rem;
+        }
+
+        .menu-item {
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            padding: 0.5rem;
+        }
+
+        .menu-item:hover {
+            background: var(--term-highlight);
+            color: #000;
+        }
+
+        .menu-item span {
+            color: #fff;
+            margin-right: 1rem;
+        }
+
+        .menu-item:hover span { color: #000; }
+
+        /* Environmental Lore Leak */
+        .hidden-log {
+            margin-top: 3rem;
+            opacity: 0.1;
+            font-size: 0.75rem;
+            color: var(--term-highlight);
+            transition: opacity 0.3s;
+        }
+        .hidden-log:hover { opacity: 1; }
+        .hidden-log::selection { background: var(--term-text); color: black; }
+        
+        .error { color: var(--term-error); }
+    </style>
+
+    <!-- Legal & SEO Satire Declarations -->
+    <meta name="classification" content="Fiction, Satire, Art Installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta name="genre" content="Crime Fiction">
+</head>
+<body>
+    <div class="terminal">
+        <div class="header-ascii">
+  _    _   ___  ___  _  __  ___  __  __  ___  _____  _   _ 
+ | |  | | / _ \/ __|| |/ / / __||  \/  ||_ _||_   _|| | | |
+ | |__| || (_) \__ \| ' <  \__ \| |\/| | | |   | |  | |_| |
+ |____|_| \___/|___/|_|\_\ |___/|_|  |_||___|  |_|   \___/ 
+        </div>
+
+        <div class="output-line">ESTABLISHING SECURE CONNECTION... <span class="prompt">[OK]</span></div>
+        <div class="output-line">ROUTING THROUGH 14 ONION NODES... <span class="prompt">[OK]</span></div>
+        <div class="output-line">PGP KEY VERIFIED. WELCOME.</div>
+        <br>
+        <div class="output-line typing-animation">
+            <span class="prompt">guest@locksmith:~$</span> <span class="command">./list_services.sh</span>
+        </div>
+
+        <div class="menu">
+            <div class="menu-item" onclick="alert('Insufficient funds. Current wallet balance: 0.0000 BTC. Required: 5.0000 BTC')">
+                <span>[01]</span> DATABASE_SCRUB (FINANCIAL/CIVIL)
+            </div>
+            <div class="menu-item" onclick="alert('Insufficient funds. Current wallet balance: 0.0000 BTC. Required: 8.5000 BTC')">
+                <span>[02]</span> DIGITAL_ASSASSINATION (TOTAL WIPE)
+            </div>
+            <div class="menu-item" onclick="alert('Insufficient funds. Current wallet balance: 0.0000 BTC. Required: 2.0000 BTC')">
+                <span>[03]</span> SECURE_COMMS_ARCHUITECHTURE
+            </div>
+        </div>
+
+        <!-- Hidden Lore -->
+        <div class="hidden-log" aria-hidden="true">
+            <span class="prompt">SYSTEM_LOG_ARCHIVE:</span><br>
+            > INBOUND MESSAGE FROM: E.CORVES (PGP_SIG_VERIFIED)<br>
+            > "Locksmith, we have a problem. A journalist named Sarah K. is asking questions about the fire in Prague. She's getting too close to Dominic's evasion route."<br>
+            > REPLY TO E.CORVES:<br>
+            > "Understood. I will initiate a Tier 2 scrub. By tomorrow morning, her bank accounts will be frozen for 'suspected terrorism', her passport will be flagged by Interpol (I'll ping Inspector Weber in Berlin to push it through), and her domain registrar will delete her website. She won't be able to buy a coffee, let alone a plane ticket. Invoice sent to Vane Capital."
+        </div>
+    </div>
+
+    <!-- OS-Level Network Overlay -->
+    <script src="pixelstortion-overlay.js"></script>
+</body>
+</html>
+
+

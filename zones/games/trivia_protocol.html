@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Protocol | Cipher Decryption</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --glitch-color-1: #00ff41;
+            --glitch-color-2: #ff0055;
+            --bg-dark: #050505;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-dark);
+            color: #fff;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        .font-mono-custom {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* Cipher Game Styles */
+        .game-container {
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+            border-left: 2px solid var(--glitch-color-1);
+        }
+
+        .cipher-option {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 12px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .cipher-option:hover {
+            background: #1a1a1a;
+            border-color: var(--glitch-color-1);
+            transform: translateX(4px);
+        }
+
+        .cipher-option.correct {
+            background: rgba(0, 255, 65, 0.2);
+            border-color: var(--glitch-color-1);
+            animation: pulse 0.5s ease;
+        }
+
+        .cipher-option.wrong {
+            background: rgba(255, 0, 85, 0.2);
+            border-color: var(--glitch-color-2);
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        .intel-reward {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 1px solid var(--glitch-color-1);
+            padding: 16px;
+            margin: 12px 0;
+            font-size: 11px;
+            line-height: 1.6;
+            border-radius: 4px;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timer-display {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .timer-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--glitch-color-1);
+        }
+
+        .timer-value.critical {
+            color: var(--glitch-color-2);
+            animation: pulse-timer 0.5s ease infinite;
+        }
+
+        @keyframes pulse-timer {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .timer-bar {
+            width: 100%;
+            height: 4px;
+            background: #1a1a1a;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .timer-fill {
+            height: 100%;
+            background: var(--glitch-color-1);
+            transition: width 1s linear;
+        }
+
+        .profile-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            color: #888;
+        }
+
+        .profile-bar span {
+            width: 80px;
+            text-align: right;
+        }
+
+        .bar-fill {
+            height: 8px;
+            background: var(--glitch-color-1);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        :root {
+            --glitch-color-1: #00ff41;
+            --glitch-color-2: #ff0055;
+            --bg-dark: #050505;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-dark);
+            color: #fff;
+            overflow-y: auto;
+            height: 100vh;
+        }
+
+        .font-mono-custom {
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* Cipher Game Styles */
+        .game-container {
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+            background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+            border-left: 2px solid var(--glitch-color-1);
+        }
+
+        .cipher-option {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 12px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .cipher-option:hover {
+            background: #1a1a1a;
+            border-color: var(--glitch-color-1);
+            transform: translateX(4px);
+        }
+
+        .cipher-option.correct {
+            background: rgba(0, 255, 65, 0.2);
+            border-color: var(--glitch-color-1);
+            animation: pulse 0.5s ease;
+        }
+
+        .cipher-option.wrong {
+            background: rgba(255, 0, 85, 0.2);
+            border-color: var(--glitch-color-2);
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        .intel-reward {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 1px solid var(--glitch-color-1);
+            padding: 16px;
+            margin: 12px 0;
+            font-size: 11px;
+            line-height: 1.6;
+            border-radius: 4px;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timer-display {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .timer-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--glitch-color-1);
+        }
+
+        .timer-value.critical {
+            color: var(--glitch-color-2);
+            animation: pulse-timer 0.5s ease infinite;
+        }
+
+        @keyframes pulse-timer {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .timer-bar {
+            width: 100%;
+            height: 4px;
+            background: #1a1a1a;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .timer-fill {
+            height: 100%;
+            background: var(--glitch-color-1);
+            transition: width 1s linear;
+        }
+
+        .profile-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            color: #888;
+        }
+
+        .profile-bar span {
+            width: 80px;
+            text-align: right;
+        }
+
+        .bar-fill {
+            height: 8px;
+            background: var(--glitch-color-1);
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+    </style>
+
+
+    <div class="game-container">
+        <div class="p-6">
+            <div class="border-b border-gray-700 pb-4 mb-6">
+                <h3 class="text-xl font-bold text-green-500 font-mono-custom mb-2">CIPHER PROTOCOL</h3>
+                <p class="text-xs text-gray-500">DECRYPT CLASSIFIED INTEL</p>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-gray-500 font-mono-custom">SECURITY CLEARANCE</span>
+                    <span id="game-score" class="text-green-500 font-bold font-mono-custom">0 / 12</span>
+                </div>
+                <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                    <div id="game-progress"
+                        class="h-full bg-gradient-to-r from-green-500 to-cyan-400 w-0 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-timer" class="timer-display" style="display:none;">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-gray-500">TIME REMAINING</span>
+                    <span id="timer-value" class="timer-value">20s</span>
+                </div>
+                <div class="timer-bar">
+                    <div id="timer-fill" class="timer-fill" style="width: 100%; background: var(--glitch-color-1);">
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-content">
+                <div class="text-center py-8">
+                    <p class="text-gray-400 text-sm mb-4">Select protocol to begin decryption</p>
+                    <div class="space-y-3">
+                        <button onclick="startGame('ethel')"
+                            class="w-full py-3 bg-green-900/30 border border-green-500 text-green-500 hover:bg-green-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                            <div class="font-bold">ETHEL PROTOCOL</div>
+                            <div class="text-xs opacity-70">Pattern Recognition</div>
+                        </button>
+                        <button onclick="startGame('isla')"
+                            class="w-full py-3 bg-blue-900/30 border border-blue-500 text-blue-500 hover:bg-blue-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                            <div class="font-bold">ISLA PROTOCOL</div>
+                            <div class="text-xs opacity-70">Creative Chaos</div>
+                        </button>
+                        <button onclick="startGame('dominic')"
+                            class="w-full py-3 bg-red-900/30 border border-red-500 text-red-500 hover:bg-red-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                            <div class="font-bold">DOMINIC PROTOCOL</div>
+                            <div class="text-xs opacity-70">Strategic Control</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="intel-rewards" class="mt-6"></div>
+        </div>
+    </div>
+
+    <script>
+        // Cipher game data - Questions and puzzles for each protocol
+        const cipherPuzzles = {
+            ethel: [
+                {
+                    cipher: "PROCEDURE ≠ SAFETY",
+                    question: "Why does Ethel distrust process-first decision making?",
+                    options: [
+                        "Because procedures are often outdated",
+                        "Because process can outlive the risk it was meant to manage",
+                        "Because human judgment should override rules",
+                        "Because procedures slow response time"
+                    ],
+                    correct: 1,
+                    intel: "Process is often mistaken for protection. Once the context shifts, the checklist becomes decorative.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "DOCUMENTATION ≠ ACCOUNTABILITY",
+                    question: "What does Ethel identify as the failure point in post-incident reviews?",
+                    options: [
+                        "The substitution of narrative coherence for responsibility",
+                        "Incomplete data collection",
+                        "Emotional bias from stakeholders",
+                        "Insufficient external oversight"
+                    ],
+                    correct: 0,
+                    intel: "When the story makes sense, people stop asking who approved it.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "CONSENSUS = DILUTION",
+                    question: "Why does Ethel treat consensus decisions with suspicion?",
+                    options: [
+                        "Because shared ownership reduces individual liability",
+                        "Because they take too long to reach",
+                        "Because they often reflect political compromise",
+                        "Because they discourage innovation"
+                    ],
+                    correct: 0,
+                    intel: "If everyone agreed, no one decided.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "RISK LANGUAGE = BLUNTING TOOL",
+                    question: "What is the function of softened risk language?",
+                    options: [
+                        "To avoid public panic",
+                        "To make unacceptable outcomes sound manageable",
+                        "To remain legally precise",
+                        "To preserve stakeholder confidence"
+                    ],
+                    correct: 1,
+                    intel: "Adverse outcomes is a way of not saying who gets hurt.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "ESCALATION ≠ FAILURE",
+                    question: "Why does Ethel escalate issues earlier than protocol recommends?",
+                    options: [
+                        "Because she lacks patience for hierarchy",
+                        "Because she distrusts middle management",
+                        "Because delay compounds downstream harm",
+                        "Because she prefers decisive action"
+                    ],
+                    correct: 2,
+                    intel: "Escalation is only seen as failure by systems that measure calm instead of damage.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "POLITENESS = RISK MASK",
+                    question: "When does politeness become dangerous?",
+                    options: [
+                        "When it undermines authority",
+                        "When it slows communication",
+                        "When it prevents naming an imminent outcome",
+                        "When it causes interpersonal friction"
+                    ],
+                    correct: 2,
+                    intel: "Courtesy is not neutral. It has a cost curve.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "ASSUMED COMPETENCE = BLIND SPOT",
+                    question: "What does Ethel see as the risk of credential-based trust?",
+                    options: [
+                        "It discourages peer review",
+                        "It creates power imbalance",
+                        "It replaces verification with reputation",
+                        "It slows corrective feedback"
+                    ],
+                    correct: 2,
+                    intel: "Competence that isn’t checked becomes mythology.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "SCOPE = RESPONSIBILITY FILTER",
+                    question: "How is 'out of scope' most often used?",
+                    options: [
+                        "To maintain project focus",
+                        "To protect limited resources",
+                        "To exclude foreseeable consequences",
+                        "To avoid duplication of effort"
+                    ],
+                    correct: 2,
+                    intel: "If you narrow the scope enough, nothing is your fault.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "METRICS ≠ IMPACT",
+                    question: "Why does Ethel resist metric-only evaluation?",
+                    options: [
+                        "Because metrics lag real-world events",
+                        "Because they are vulnerable to manipulation",
+                        "Because they abstract harm into tolerable numbers",
+                        "Because they require expert interpretation"
+                    ],
+                    correct: 2,
+                    intel: "Numbers behave. Outcomes don’t.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "SILENCE = LEASH",
+                    question: "Why does Ethel treat silence during decision windows as an active force?",
+                    options: [
+                        "Because it creates ambiguity",
+                        "Because it delays alignment",
+                        "Because it signals uncertainty",
+                        "Because it coerces compliance without record"
+                    ],
+                    correct: 3,
+                    intel: "This is not hesitation. This is control through omission. If no one speaks, the outcome still lands — it just lands unowned.",
+                    timeLimit: 25
+                },
+
+                {
+                    cipher: "STABILITY ≠ SAFETY",
+                    question: "Why does Ethel challenge systems that appear stable?",
+                    options: [
+                        "Because stability resists improvement",
+                        "Because stability hides inefficiency",
+                        "Because stability creates complacency",
+                        "Because stability can indicate suppressed failure"
+                    ],
+                    correct: 3,
+                    intel: "Nothing breaks loudly if it’s being held together quietly.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "AUTHORITY ≠ CLARITY",
+                    question: "What does Ethel see as the danger of deferring to authority?",
+                    options: [
+                        "It discourages independent thinking",
+                        "It slows corrective action",
+                        "It undermines collaboration",
+                        "It substitutes rank for analysis"
+                    ],
+                    correct: 3,
+                    intel: "Titles don’t improve signal quality.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "DELAY = DECISION",
+                    question: "How does Ethel interpret prolonged indecision?",
+                    options: [
+                        "As uncertainty that needs more data",
+                        "As a failure of leadership",
+                        "As a necessary pause",
+                        "As a choice to accept the default outcome"
+                    ],
+                    correct: 3,
+                    intel: "If you don’t choose, the system chooses for you.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "GOOD INTENT ≠ SAFE DESIGN",
+                    question: "Why does Ethel reject intent-based justifications?",
+                    options: [
+                        "Because intent is difficult to verify",
+                        "Because intent can change",
+                        "Because intent complicates enforcement",
+                        "Because outcomes are indifferent to motive"
+                    ],
+                    correct: 3,
+                    intel: "The damage doesn’t care what you meant.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "CLARITY IS NOT AGGRESSION",
+                    question: "Why does Ethel accept being labelled 'abrasive'?",
+                    options: [
+                        "Because she lacks social finesse",
+                        "Because she prioritises efficiency",
+                        "Because she doesn’t value consensus",
+                        "Because precision feels hostile to vague systems"
+                    ],
+                    correct: 3,
+                    intel: "Clarity only sounds aggressive to processes built on blur.",
+                    timeLimit: 18
+                }
+            ],
+            isla: [
+
+                {
+                    cipher: "DOORWAY TEST",
+                    question: "Why does Isla always stand near exits?",
+                    options: [
+                    "Because it gives her better sightlines",
+                    "Because she hates feeling boxed in",
+                    "Because she’s impatient",
+                    "Because it shortens response time if something shifts"
+                    ],
+                    correct: 3,
+                    intel: "Positioning is decided before the room registers as a room.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "NO RECEIPTS",
+                    question: "Why does Isla avoid keeping records of small favours?",
+                    options: [
+                    "Because she doesn’t care about credit",
+                    "Because records turn help into leverage",
+                    "Because paperwork slows things down",
+                    "Because she forgets"
+                    ],
+                    correct: 1,
+                    intel: "Anything that can be tallied can be used later.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "EYE CONTACT",
+                    question: "Why does Isla break eye contact first?",
+                    options: [
+                    "Because she gets bored easily",
+                    "Because it makes people uncomfortable",
+                    "Because sustained eye contact invites escalation",
+                    "Because she’s hiding something"
+                    ],
+                    correct: 2,
+                    intel: "She reads faster than she signals.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "TOOLS, NOT TALISMANS",
+                    question: "Why does Isla keep objects that look meaningless?",
+                    options: [
+                    "Because they’re lucky",
+                    "Because she forgets to throw things out",
+                    "Because she’s sentimental in odd ways",
+                    "Because they solve problems quietly"
+                    ],
+                    correct: 3,
+                    intel: "Anything that worked once stays close.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "SMALL TALK",
+                    question: "Why does Isla derail polite conversation?",
+                    options: [
+                    "Because she lacks social awareness",
+                    "Because she enjoys making people nervous",
+                    "Because she prefers honesty",
+                    "Because politeness hides information"
+                    ],
+                    correct: 3,
+                    intel: "Politeness smooths over the part that matters.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "LOCKED ROOMS",
+                    question: "Why does Isla check bathrooms and side rooms first?",
+                    options: [
+                    "Because she’s curious",
+                    "Because she doesn’t like crowds",
+                    "Because enclosed spaces change behaviour",
+                    "Because she’s paranoid"
+                    ],
+                    correct: 2,
+                    intel: "Containment reveals intent faster than conversation.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "PHONE WEIGHT",
+                    question: "Why does Isla notice phones before faces?",
+                    options: [
+                    "Because she doesn’t trust expressions",
+                    "Because she’s rude",
+                    "Because devices carry context people don’t",
+                    "Because she’s addicted to screens"
+                    ],
+                    correct: 2,
+                    intel: "Patterns live where people forget to curate.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "LAUGHTER TIMING",
+                    question: "Why does Isla laugh at the wrong moment?",
+                    options: [
+                    "Because she doesn’t take things seriously",
+                    "Because humour diffuses tension",
+                    "Because the danger has already passed",
+                    "Because she’s socially off-beat"
+                    ],
+                    correct: 2,
+                    intel: "Relief arrives late. So does the laugh.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "NO WARNINGS",
+                    question: "Why does Isla act without announcing it?",
+                    options: [
+                    "Because she likes surprise",
+                    "Because she enjoys control",
+                    "Because warnings create counter-moves",
+                    "Because she’s impulsive"
+                    ],
+                    correct: 2,
+                    intel: "Advance notice helps the wrong side prepare.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "AFTER THE FACT",
+                    question: "Why does Isla go quiet after something blows up?",
+                    options: [
+                    "Because she’s ashamed",
+                    "Because she’s dissociating",
+                    "Because the objective is already complete",
+                    "Because she’s processing emotion"
+                    ],
+                    correct: 2,
+                    intel: "Once the structure moves, attention is unnecessary.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "BACKGROUND NOISE",
+                    question: "Why does Isla always register ambient sound?",
+                    options: [
+                    "Because silence makes her uneasy",
+                    "Because sound changes before behaviour does",
+                    "Because she likes busy environments",
+                    "Because she’s easily distracted"
+                    ],
+                    correct: 1,
+                    intel: "The room speaks before people do.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "OBJECT TEST",
+                    question: "Why does Isla touch things while talking?",
+                    options: [
+                    "Because it annoys people",
+                    "Because objects don’t perform",
+                    "Because she fidgets when anxious",
+                    "Because she’s grounding herself"
+                    ],
+                    correct: 1,
+                    intel: "Objects tell the truth about use.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "CHANNEL CLOSED",
+                    question: "Why does Isla stop responding when questions turn serious?",
+                    options: [
+                    "Because she doesn’t have an answer yet",
+                    "Because she shuts down under pressure",
+                    "Because the channel has become unsafe",
+                    "Because she wants control of the interaction"
+                    ],
+                    correct: 2,
+                    intel: "When the signal is misused, she cuts transmission.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "EXIT FIRST",
+                    question: "Why does Isla leave before conversations conclude?",
+                    options: [
+                    "Because she doesn’t care about closure",
+                    "Because the useful information is already collected",
+                    "Because she avoids emotional moments",
+                    "Because she gets bored quickly"
+                    ],
+                    correct: 1,
+                    intel: "Once the signal stabilises, staying adds risk.",
+                    timeLimit: 15
+                },
+
+                {
+                    cipher: "UNPACKED BAGS",
+                    question: "Why does Isla keep her belongings loosely organised?",
+                    options: [
+                    "Because she’s messy",
+                    "Because she doesn’t plan ahead",
+                    "Because fixed order slows adaptation",
+                    "Because she’s careless"
+                    ],
+                    correct: 2,
+                    intel: "Flexibility beats neatness when conditions shift.",
+                    timeLimit: 15
+                }
+
+                ]
+
+
+            ,
+            dominic: [
+
+                {
+                    cipher: "ARCHITECTURE != COPING",
+                    question: "Why Dominic compartmentalises his life?",
+                    options: [
+                        "To allow incompatible actions to coexist without friction",
+                        "To keep work and home life balanced",
+                        "To protect his family from difficult decisions",
+                        "To manage stress across competing responsibilities"
+                    ],
+                    correct: 0,
+                    intel: "Wrong answers are therapy-coded. Correct answer is design logic.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "CHARISMA = AFTERIMAGE",
+                    question: "Why does Dominic reject the idea that his influence is “charisma”?",
+                    options: [
+                        "Because he enjoys being admired",
+                        "Because “charisma” is a flattering lie that hides method",
+                        "Because it sounds like a compliment, and compliments disarm scrutiny",
+                        "Because it makes people feel safe around him"
+                    ],
+                    correct: 1,
+                    intel: "Option 4 is funny because it’s technically true.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "HELP → DEBT",
+                    question: "How does Dominic convert assistance into control?",
+                    options: [
+                        "By always asking first",
+                        "By timing relief so dependence forms naturally",
+                        "By choosing moments when refusal would feel impolite",
+                        "By reminding people of what he’s done for them"
+                    ],
+                    correct: 1,
+                    intel: "The “always asking first” option is quietly horrifying.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "SYNC → SUBMISSION",
+                    question: "What does Dominic mean by “matching rhythm”?",
+                    options: [
+                        "Reducing resistance by eliminating timing gaps",
+                        "Being very good at conversation",
+                        "Mirroring tone to build trust",
+                        "Adapting communication styles for rapport"
+                    ],
+                    correct: 0,
+                    intel: "This one should feel too clean.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "POLITENESS = LEASH",
+                    question: "Why is politeness so effective for Dominic?",
+                    options: [
+                        "It keeps situations civil",
+                        "It makes resistance feel socially incorrect",
+                        "It lowers people’s guard",
+                        "It signals respect and good intentions"
+                    ],
+                    correct: 1,
+                    intel: "The laugh here comes after the click.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "REPEAT → DISAPPEAR",
+                    question: "What happens once control becomes routine?",
+                    options: [
+                        "Everyone relaxes",
+                        "It stops being recognised as control at all",
+                        "People stop noticing it",
+                        "It feels less aggressive"
+                    ],
+                    correct: 1,
+                    intel: "Option 4 is darkly funny because Dominic would say it sincerely.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "PRESSURE → RELIEF → LOYALTY",
+                    question: "What is relief, to Dominic?",
+                    options: [
+                        "Something people remember",
+                        "A transaction that binds without paperwork",
+                        "A sign of trust",
+                        "A moment of safety"
+                    ],
+                    correct: 1,
+                    intel: "This one lands well if played deadpan.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "IMPLICIT > EXPLICIT",
+                    question: "Why does Dominic avoid naming what he’s doing?",
+                    options: [
+                        "Because he dislikes labels",
+                        "Because naming removes its efficiency",
+                        "To avoid confrontation",
+                        "To stay legally protected"
+                    ],
+                    correct: 1,
+                    intel: "Option 4 is funny in a “corporate bio” way.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "SPLIT ATTENTION = CAPACITY",
+                    question: "What does Ethel recognise in Dominic’s divided gaze?",
+                    options: [
+                        "Fatigue",
+                        "Parallel assessment without moral interference",
+                        "Professional discipline",
+                        "Emotional detachment"
+                    ],
+                    correct: 1,
+                    intel: "This should feel clinical, not dramatic.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "TRANSFER ≠ ESCORT",
+                    question: "How does Dominic view the act of “collecting” someone?",
+                    options: [
+                        "As a family duty",
+                        "As asset relocation",
+                        "As responsibility",
+                        "As protection"
+                    ],
+                    correct: 1,
+                    intel: "Option 4 is extremely dark-funny if you’ve heard the audio.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "VOLUME = IRRELEVANT",
+                    question: "Why does Dominic never raise his voice?",
+                    options: [
+                        "He doesn’t like shouting",
+                        "NOISE = WASTE",
+                        "He’s calm under pressure",
+                        "He’s disciplined"
+                    ],
+                    correct: 1,
+                    intel: "This one should feel almost boring — that’s the horror.",
+                    timeLimit: 18
+                },
+
+                {
+                    cipher: "SIMPLICITY = MISDIRECTION",
+                    question: "Why does Dominic present complex systems as “simple”?",
+                    options: [
+                        "Because he understands them well",
+                        "To discourage deeper inspection",
+                        "To appear confident",
+                        "To reassure others"
+                    ],
+                    correct: 1,
+                    intel: "That last option is almost correct — which makes it wrong.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "EVALUATION > RECOGNITION",
+                    question: "What does Dominic see when he looks at someone?",
+                    options: [
+                        "Their potential",
+                        "Their future utility",
+                        "Their loyalty",
+                        "Their emotional state"
+                    ],
+                    correct: 1,
+                    intel: "“Potential” is the corporate trap.",
+                    timeLimit: 20
+                },
+
+                {
+                    cipher: "SURVIVAL ≠ MORAL FAILURE",
+                    question: "Why does Dominic believe people identify with power?",
+                    options: [
+                        "Because they lack principles",
+                        "Because proximity reduces threat",
+                        "Because they admire strength",
+                        "Because they want protection"
+                    ],
+                    correct: 1,
+                    intel: "This one flips judgement back onto the system.",
+                    timeLimit: 22
+                },
+
+                {
+                    cipher: "OUTCOME > INTENT",
+                    question: "What is Dominic’s favourite kind of reputation?",
+                    options: [
+                        "Private citizen",
+                        "The kind that makes questions feel rude",
+                        "Gets things done",
+                        "Hard but fair"
+                    ],
+                    correct: 1,
+                    intel: "That last option should get a nervous laugh.",
+                    timeLimit: 18
+                }
+
+            ]
+
+        };
+
+        const finalIntel = {
+            ethel: "PROFILE COMPLETE: High-resolution empathy with forensic precision. Survival: Compartmentalization. Threat to Dominic: EXTREME. Status: BUILDING CASE.",
+            isla: "PROFILE COMPLETE: Weaponizes chaos as boundary enforcement. Trauma converted to art. Threat to system: HIGH. Status: DETONATING SILENCE.",
+            dominic: "PROFILE COMPLETE: Structural psychopath. Control via rhythm manipulation. Empathy simulation for tactical advantage. Threat to society: CRITICAL. Status: AT LARGE. ARMED AND DANGEROUS."
+        };
+
+        // Game state
+        let gameScore = 0;
+        let currentPuzzleIndex = 0;
+        let currentProtocol = '';
+        let unlockedIntel = [];
+        let gameTimer = null;
+        let timeLeft = 0;
+        let psychProfile = { empathy: 0, pragmatism: 0, rebellion: 0, control: 0 };
+
+        function startGame(protocol) {
+            currentProtocol = protocol;
+            currentPuzzleIndex = 0;
+            gameScore = 0;
+            unlockedIntel = [];
+            psychProfile = { empathy: 0, pragmatism: 0, rebellion: 0, control: 0 };
+
+            const puzzles = [...cipherPuzzles[protocol]];
+            for (let i = puzzles.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [puzzles[i], puzzles[j]] = [puzzles[j], puzzles[i]];
+            }
+
+            window.shuffledPuzzles = puzzles;
+            updateScore();
+            loadPuzzle();
+        }
+
+        function loadPuzzle() {
+            const puzzles = window.shuffledPuzzles;
+            if (!puzzles || currentPuzzleIndex >= puzzles.length) {
+                showCompletion();
+                return;
+            }
+
+            const puzzle = puzzles[currentPuzzleIndex];
+            const colors = { ethel: 'text-green-500', isla: 'text-blue-500', dominic: 'text-red-500' };
+
+            document.getElementById('game-timer').style.display = 'block';
+            document.getElementById('game-content').innerHTML = `
+        <div class="mb-6">
+            <div class="bg-black/50 border border-gray-700 p-4 mb-4">
+                <p class="text-xs text-gray-500 font-mono-custom mb-2">ENCRYPTED MESSAGE</p>
+                <p class="text-sm ${colors[currentProtocol]} font-mono-custom font-bold break-words leading-relaxed">${puzzle.cipher}</p>
+            </div>
+            <p class="text-xs text-gray-300 mb-4 font-mono-custom leading-relaxed">${puzzle.question}</p>
+            <div class="space-y-2">
+                ${puzzle.options.map((opt, idx) => `
+                    <div class="cipher-option" onclick="checkAnswer(${idx})">
+                        <span class="text-gray-400">[${String.fromCharCode(65 + idx)}]</span>
+                        <span class="text-white ml-3">${opt}</span>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        <div class="text-center">
+            <p class="text-xs text-gray-500 font-mono-custom">
+                FILE ${currentPuzzleIndex + 1} OF ${puzzles.length} — ${currentProtocol.toUpperCase()} PROTOCOL
+            </p>
+        </div>
+    `;
+
+            startTimer(puzzle.timeLimit);
+        }
+
+        function startTimer(seconds) {
+            timeLeft = seconds;
+            updateTimer();
+
+            if (gameTimer) clearInterval(gameTimer);
+            gameTimer = setInterval(() => {
+                timeLeft--;
+                updateTimer();
+
+                if (timeLeft <= 0) {
+                    clearInterval(gameTimer);
+                    handleTimeout();
+                }
+            }, 1000);
+        }
+
+        function updateTimer() {
+            const puzzles = window.shuffledPuzzles;
+            const puzzle = puzzles[currentPuzzleIndex];
+
+            document.getElementById('timer-value').innerText = timeLeft + 's';
+            document.getElementById('timer-fill').style.width = `${(timeLeft / puzzle.timeLimit) * 100}%`;
+
+            if (timeLeft <= 5) {
+                document.getElementById('timer-value').classList.add('critical');
+                document.getElementById('timer-fill').style.background = 'var(--glitch-color-2)';
+            } else {
+                document.getElementById('timer-value').classList.remove('critical');
+                document.getElementById('timer-fill').style.background = 'var(--glitch-color-1)';
+            }
+        }
+
+        function handleTimeout() {
+            const puzzles = window.shuffledPuzzles;
+            const puzzle = puzzles[currentPuzzleIndex];
+
+            unlockIntel(`TIMEOUT PENALTY: ${puzzle.intel}`);
+
+            setTimeout(() => {
+                currentPuzzleIndex++;
+                loadPuzzle();
+            }, 1500);
+        }
+
+        function checkAnswer(selectedIdx) {
+            if (gameTimer) clearInterval(gameTimer);
+
+            const puzzles = window.shuffledPuzzles;
+            const puzzle = puzzles[currentPuzzleIndex];
+            const options = document.querySelectorAll('.cipher-option');
+
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+
+            if (selectedIdx === puzzle.correct) {
+                options[selectedIdx].classList.add('correct');
+                gameScore++;
+
+                if (currentProtocol === 'ethel') psychProfile.empathy += 1;
+                if (currentProtocol === 'isla') psychProfile.rebellion += 1;
+                if (currentProtocol === 'dominic') psychProfile.control += 1;
+                psychProfile.pragmatism += 1;
+
+                updateScore();
+
+                setTimeout(() => {
+                    unlockIntel(puzzle.intel);
+                    currentPuzzleIndex++;
+                    setTimeout(loadPuzzle, 500);
+                }, 1000);
+            } else {
+                options[selectedIdx].classList.add('wrong');
+                options[puzzle.correct].classList.add('correct');
+
+                setTimeout(() => {
+                    unlockIntel(`FAILED: ${puzzle.intel}`);
+                    currentPuzzleIndex++;
+                    setTimeout(loadPuzzle, 500);
+                }, 1500);
+            }
+        }
+
+        function updateScore() {
+            const puzzles = window.shuffledPuzzles || cipherPuzzles[currentProtocol] || [];
+            const total = puzzles.length || 12;
+            document.getElementById('game-score').innerText = `${gameScore} / ${total}`;
+            const percentage = (gameScore / total) * 100;
+            document.getElementById('game-progress').style.width = percentage + '%';
+        }
+
+        function unlockIntel(intelText) {
+            unlockedIntel.push(intelText);
+            const rewardsContainer = document.getElementById('intel-rewards');
+            const intelDiv = document.createElement('div');
+            intelDiv.className = 'intel-reward';
+            intelDiv.innerHTML = `
+        <div class="flex items-start gap-2 mb-2">
+            <span class="text-green-500 text-xs">✓</span>
+            <span class="text-green-500 text-xs font-mono-custom font-bold">INTEL DECRYPTED</span>
+        </div>
+        <p class="text-gray-300 text-xs leading-relaxed">${intelText}</p>
+    `;
+            rewardsContainer.appendChild(intelDiv);
+            rewardsContainer.scrollTop = rewardsContainer.scrollHeight;
+        }
+
+        function showCompletion() {
+            if (gameTimer) clearInterval(gameTimer);
+            document.getElementById('game-timer').style.display = 'none';
+
+            const puzzles = window.shuffledPuzzles;
+            const colors = { ethel: 'border-green-500 text-green-500', isla: 'border-blue-500 text-blue-500', dominic: 'border-red-500 text-red-500' };
+
+            const total = Object.values(psychProfile).reduce((a, b) => a + b, 0);
+            const dominant = Object.entries(psychProfile).reduce((a, b) => a[1] > b[1] ? a : b);
+
+            const analyses = {
+                empathy: "HIGH EMPATHY: You prioritize understanding psychological damage. You see the victim. This makes you dangerous to gaslighters when mixed with pragmatism.",
+                pragmatism: "HIGH PRAGMATISM: You make hard choices under pressure. You value real-world effectiveness over sentiment.",
+                rebellion: "HIGH REBELLION: You challenge systems that enable harm. You detonate structures to expose rot. Chaos as tool.",
+                control: "HIGH CONTROL: You value strategic thinking and influence patterns. Concerning similarity to Dominic detected."
+            };
+
+            document.getElementById('game-content').innerHTML = `
+        <div class="text-center py-8">
+            <div class="mb-6">
+                <div class="text-5xl mb-4">${gameScore === puzzles.length ? '🔓' : '🔒'}</div>
+                <h3 class="text-2xl font-bold ${colors[currentProtocol]} font-mono-custom mb-2">
+                    ${gameScore === puzzles.length ? 'PROTOCOL COMPLETE' : 'PROTOCOL FAILED'}
+                </h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    ${gameScore} / ${puzzles.length} FILES DECRYPTED
+                </p>
+            </div>
+
+            <div class="border ${colors[currentProtocol]} bg-black/50 p-4 mb-4 text-left">
+                <p class="text-xs text-gray-500 font-mono-custom mb-2">PSYCHOLOGICAL PROFILE</p>
+                <p class="text-xs text-gray-300 leading-relaxed mb-3">${analyses[dominant[0]]}</p>
+                <div class="space-y-2">
+                    <div class="profile-bar">
+                        <span>Empathy</span>
+                        <div class="bar-fill" style="width: ${(psychProfile.empathy / 12) * 100}%;"></div>
+                    </div>
+                    <div class="profile-bar">
+                        <span>Pragmatism</span>
+                        <div class="bar-fill" style="width: ${(psychProfile.pragmatism / 12) * 100}%;"></div>
+                    </div>
+                    <div class="profile-bar">
+                        <span>Rebellion</span>
+                        <div class="bar-fill" style="width: ${(psychProfile.rebellion / 12) * 100}%;"></div>
+                    </div>
+                    <div class="profile-bar">
+                        <span>Control</span>
+                        <div class="bar-fill" style="width: ${(psychProfile.control / 12) * 100}%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border ${colors[currentProtocol]} bg-black/50 p-4 mb-6 text-left">
+                <p class="text-xs text-gray-300 leading-relaxed">${finalIntel[currentProtocol]}</p>
+            </div>
+
+            <button onclick="startGame('${currentProtocol}')" class="w-full py-3 border ${colors[currentProtocol]} hover:bg-white/10 transition-all font-mono-custom text-sm uppercase tracking-wider mb-2">
+                RETRY PROTOCOL
+            </button>
+            <button onclick="resetGame()" class="w-full py-3 border border-gray-600 text-gray-400 hover:bg-white/10 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                NEW PROTOCOL
+            </button>
+        </div>
+    `;
+
+            if (gameScore === puzzles.length) {
+                unlockIntel(finalIntel[currentProtocol]);
+            }
+        }
+
+        function resetGame() {
+            if (gameTimer) clearInterval(gameTimer);
+            document.getElementById('game-timer').style.display = 'none';
+            document.getElementById('intel-rewards').innerHTML = '';
+            gameScore = 0;
+            currentPuzzleIndex = 0;
+            psychProfile = { empathy: 0, pragmatism: 0, rebellion: 0, control: 0 };
+            updateScore();
+
+            document.getElementById('game-content').innerHTML = `
+        <div class="text-center py-8">
+            <p class="text-gray-400 text-sm mb-4">Select protocol to begin decryption</p>
+            <div class="space-y-3">
+                <button onclick="startGame('ethel')" class="w-full py-3 bg-green-900/30 border border-green-500 text-green-500 hover:bg-green-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                    <div class="font-bold">ETHEL PROTOCOL</div>
+                    <div class="text-xs opacity-70">Pattern Recognition</div>
+                </button>
+                <button onclick="startGame('isla')" class="w-full py-3 bg-blue-900/30 border border-blue-500 text-blue-500 hover:bg-blue-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                    <div class="font-bold">ISLA PROTOCOL</div>
+                    <div class="text-xs opacity-70">Creative Chaos</div>
+                </button>
+                <button onclick="startGame('dominic')" class="w-full py-3 bg-red-900/30 border border-red-500 text-red-500 hover:bg-red-900/50 transition-all font-mono-custom text-sm uppercase tracking-wider">
+                    <div class="font-bold">DOMINIC PROTOCOL</div>
+                    <div class="text-xs opacity-70">Strategic Control</div>
+                </button>
+            </div>
+        </div>
+    `;
+        }
+
+        // Auto-start with protocol selection menu on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Cipher Protocol System Online');
+            // Game starts with menu visible - user selects protocol
+        });
+    </script>
+</main>
+</body>
+
+</html>

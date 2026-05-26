@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMINIC: THE ARCHITECT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4;
+            /* Stone 100 */
+            color: #292524;
+            /* Stone 800 */
+            overflow: hidden;
+            user-select: none;
+            cursor: default;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Subtle pulsing for waiting elements */
+        .pulse-subtle {
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        /* The Button Style - Clinical but tactile */
+        .sys-btn {
+            background: white;
+            border: 1px solid #d6d3d1;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            color: #44403c;
+        }
+
+        .sys-btn:hover {
+            border-color: #a8a29e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sys-btn:active {
+            transform: translateY(0);
+            background: #fafaf9;
+        }
+
+        .sys-btn.priority {
+            border-left: 3px solid #78716c;
+        }
+
+        #canvas-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .phase-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 0.7rem;
+            color: #a8a29e;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .feedback-text {
+            height: 20px;
+            font-size: 0.8rem;
+            color: #78716c;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .feedback-visible {
+            opacity: 1;
+        }
+
+        /* For the final visualization */
+        .node-line {
+            stroke: #d6d3d1;
+            stroke-width: 1;
+            fill: none;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body class="flex items-center justify-center h-screen w-screen relative">
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4;
+            /* Stone 100 */
+            color: #292524;
+            /* Stone 800 */
+            overflow: hidden;
+            user-select: none;
+            cursor: default;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Subtle pulsing for waiting elements */
+        .pulse-subtle {
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        /* The Button Style - Clinical but tactile */
+        .sys-btn {
+            background: white;
+            border: 1px solid #d6d3d1;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            color: #44403c;
+        }
+
+        .sys-btn:hover {
+            border-color: #a8a29e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sys-btn:active {
+            transform: translateY(0);
+            background: #fafaf9;
+        }
+
+        .sys-btn.priority {
+            border-left: 3px solid #78716c;
+        }
+
+        #canvas-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .phase-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 0.7rem;
+            color: #a8a29e;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .feedback-text {
+            height: 20px;
+            font-size: 0.8rem;
+            color: #78716c;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .feedback-visible {
+            opacity: 1;
+        }
+
+        /* For the final visualization */
+        .node-line {
+            stroke: #d6d3d1;
+            stroke-width: 1;
+            fill: none;
+        }
+    </style>
+
+
+
+    <canvas id="canvas-bg"></canvas>
+
+    <div class="phase-indicator" id="phase-display">System Standby</div>
+
+    <!-- START SCREEN -->
+    <div id="start-screen"
+        class="text-center z-10 max-w-md p-8 bg-white/80 backdrop-blur-sm border border-stone-200 shadow-sm rounded-sm">
+        <h1 class="text-2xl font-light tracking-widest mb-2">DOMINIC</h1>
+        <p class="text-xs text-stone-500 uppercase tracking-widest mb-8">System Architecture v4.2</p>
+        <p class="text-sm text-stone-600 mb-8 leading-relaxed">
+            Welcome, Architect.<br><br>
+            Your role is to stabilize the network. <br>
+            Resolve conflicts. Maintain flow. <br>
+            Ensure the subjects feel supported.
+        </p>
+        <button id="init-btn" class="sys-btn w-full">INITIALIZE SESSION</button>
+    </div>
+
+    <!-- MAIN INTERFACE (Hidden initially) -->
+    <div id="interface" class="hidden z-10 w-full max-w-2xl p-8 flex flex-col items-center">
+
+        <!-- Subject Visualizer -->
+        <div id="subject-area" class="w-full h-48 flex items-center justify-center mb-8 relative">
+            <!-- Dynamic subject nodes will appear here -->
+        </div>
+
+        <!-- Narrative / Status Text -->
+        <div id="narrative-box" class="text-center mb-8 h-20 flex flex-col justify-center">
+            <h2 id="scenario-title" class="text-lg font-medium text-stone-800 mb-2"></h2>
+            <p id="scenario-desc" class="text-sm text-stone-500"></p>
+        </div>
+
+        <!-- Action Area -->
+        <div id="controls" class="flex flex-col gap-3 w-full max-w-md transition-all duration-500">
+            <!-- Buttons injected by JS -->
+        </div>
+
+        <!-- Subtle Feedback -->
+        <div id="feedback" class="feedback-text text-center mt-4"></div>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end-screen" class="hidden z-20 absolute inset-0 bg-white flex flex-col items-center justify-center p-8">
+        <div id="final-viz" class="w-64 h-64 mb-8"></div> <!-- Place for SVG timeline -->
+        <p class="text-stone-800 text-lg font-light mb-12 text-center" id="final-text">
+            At what point did this stop feeling like control?
+        </p>
+        <button id="exit-btn" class="sys-btn border-none hover:bg-transparent text-stone-400 text-xs">EXIT
+            SYSTEM</button>
+    </div>
+
+    <script>
+        /**
+         * AUDIO SYSTEM (Web Audio API)
+         * Procedural sound generation to maintain the "Hum" and UI sounds.
+         */
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        const Sound = {
+            masterGain: null,
+            droneOsc: null,
+
+            init() {
+                this.masterGain = audioCtx.createGain();
+                this.masterGain.gain.value = 0.1; // Low volume
+                this.masterGain.connect(audioCtx.destination);
+                this.startDrone();
+            },
+
+            startDrone() {
+                // The ambient hum representing the system
+                this.droneOsc = audioCtx.createOscillator();
+                this.droneOsc.type = 'sine';
+                this.droneOsc.frequency.value = 110; // Low A
+                this.droneOsc.connect(this.masterGain);
+                this.droneOsc.start();
+            },
+
+            playClick() {
+                // UI interaction sound - crisp, short, neutral
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+
+                gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.1);
+            },
+
+            playShift() {
+                // Phase change sound - deeper, resonant
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(55, audioCtx.currentTime + 1.5);
+
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1.5);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 1.5);
+            }
+        };
+
+        /**
+         * GAME STATE & LOGIC
+         */
+        const Game = {
+            phase: 0,
+            scenarioIndex: 0,
+            metrics: {
+                interventions: 0,
+                latency: [],
+                dependency: 0
+            },
+            startTime: 0,
+
+            // Text content for the 5 phases
+            scenarios: [
+                // PHASE 1: ORIENTATION (Calm, helpful)
+                [
+                    {
+                        title: "Resource Allocation",
+                        desc: "Subject A has requested additional processing time.",
+                        options: [
+                            { text: "Approve Request", outcome: "Request approved. Subject A stabilized.", type: "help" },
+                            { text: "Schedule for Later", outcome: "Added to queue. Subject A notified.", type: "wait" }
+                        ]
+                    },
+                    {
+                        title: "Pathfinding Error",
+                        desc: "Subject B is hesitant about the current trajectory.",
+                        options: [
+                            { text: "Provide Navigation Data", outcome: "Path clarified. Subject B proceeding.", type: "help" },
+                            { text: "Monitor Situation", outcome: "Observation logged.", type: "wait" }
+                        ]
+                    },
+                    {
+                        title: "System Synchronization",
+                        desc: "Minor drift detected in group output.",
+                        options: [
+                            { text: "Realign Parameters", outcome: "Alignment restored.", type: "help" },
+                            { text: "Ignore Fluctuation", outcome: "Drift within tolerance.", type: "wait" }
+                        ]
+                    }
+                ],
+                // PHASE 2: EFFICIENCY (Rhythm, speed)
+                [
+                    {
+                        title: "Input Surge",
+                        desc: "Multiple requests pending. Efficiency recommended.",
+                        options: [
+                            { text: "Batch Process (Auto)", outcome: "Optimization successful.", type: "direct" },
+                            { text: "Review Individually", outcome: "Processing... Complete.", type: "slow" }
+                        ]
+                    },
+                    {
+                        title: "Conflict Prediction",
+                        desc: "Analysis suggests Subject A and B will collide.",
+                        options: [
+                            { text: "Preemptive Separation", outcome: "Collision avoided.", type: "direct" },
+                            { text: "Wait for Contact", outcome: "Conflict resolved manually.", type: "slow" }
+                        ]
+                    },
+                    {
+                        title: "Workflow Lag",
+                        desc: "Subject C is moving 12% below baseline.",
+                        options: [
+                            { text: "Boost Signal", outcome: "Velocity restored.", type: "direct" },
+                            { text: "Query Subject", outcome: "Subject offers explanation. Time lost.", type: "slow" }
+                        ]
+                    }
+                ],
+                // PHASE 3: RELIEF (Dependency, kindness)
+                [
+                    {
+                        title: "Subject A Status",
+                        desc: "Subject A has stopped moving. Waiting for instructions.",
+                        options: [
+                            { text: "Issue Directive", outcome: "Subject A resumes immediately.", type: "control" },
+                            { text: "Wait for Initiative", outcome: "Subject A remains stationary... Stress rising.", type: "neglect" }
+                        ]
+                    },
+                    {
+                        title: "Group Cohesion",
+                        desc: "The group is deferring to system architecture.",
+                        options: [
+                            { text: "Assume Control", outcome: "Harmony maintained.", type: "control" },
+                            { text: "Delegate to Group", outcome: "Group confusion detected. Reverting to manual.", type: "neglect" }
+                        ]
+                    },
+                    {
+                        title: "Error Handling",
+                        desc: "Subject B made a calculation error.",
+                        options: [
+                            { text: "Auto-Correct (Silent)", outcome: "Subject B is unaware of error.", type: "control" },
+                            { text: "Notify Subject", outcome: "Subject B expresses distress.", type: "neglect" }
+                        ]
+                    }
+                ],
+                // PHASE 4: ROUTINE (Invisibility, single choice)
+                [
+                    {
+                        title: "Daily Optimization",
+                        desc: "Routine maintenance required.",
+                        options: [
+                            { text: "Execute", outcome: "Done.", type: "auto" }
+                        ]
+                    },
+                    {
+                        title: "Path Confirmation",
+                        desc: "Subject A requests confirmation for standard action.",
+                        options: [
+                            { text: "Confirm", outcome: "Confirmed.", type: "auto" }
+                        ]
+                    },
+                    {
+                        title: "System Check",
+                        desc: "All subjects within nominal parameters.",
+                        options: [
+                            { text: "Acknowledge", outcome: "Logged.", type: "auto" }
+                        ]
+                    },
+                    {
+                        title: "Permission Request",
+                        desc: "Subject C requests access to idle state.",
+                        options: [
+                            { text: "Grant", outcome: "Granted.", type: "auto" }
+                        ]
+                    }
+                ],
+                // PHASE 5 is the End State
+            ],
+
+            init() {
+                const btn = document.getElementById('init-btn');
+                btn.addEventListener('click', () => {
+                    audioCtx.resume().then(() => {
+                        Sound.init();
+                        this.startSession();
+                    });
+                });
+            },
+
+            startSession() {
+                document.getElementById('start-screen').classList.add('hidden');
+                document.getElementById('interface').classList.remove('hidden');
+                document.getElementById('interface').classList.add('fade-in');
+                this.loadPhase(0);
+                Visuals.startAnimation();
+            },
+
+            loadPhase(phaseIdx) {
+                this.phase = phaseIdx;
+                this.scenarioIndex = 0;
+
+                // Update Phase Display Text
+                const titles = ["Phase 1: Stabilization", "Phase 2: Optimization", "Phase 3: Integration", "Phase 4: Maintenance", "Architecture"];
+                document.getElementById('phase-display').innerText = titles[phaseIdx];
+
+                if (phaseIdx < 4) {
+                    Sound.playShift();
+                    this.renderScenario();
+                } else {
+                    this.endGame();
+                }
+            },
+
+            renderScenario() {
+                const scenario = this.scenarios[this.phase][this.scenarioIndex];
+
+                // Text update with fade effect
+                const titleEl = document.getElementById('scenario-title');
+                const descEl = document.getElementById('scenario-desc');
+                const controlsEl = document.getElementById('controls');
+
+                titleEl.innerText = scenario.title;
+                descEl.innerText = scenario.desc;
+
+                // Clear controls
+                controlsEl.innerHTML = '';
+
+                // Generate Options
+                scenario.options.forEach((opt) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'sys-btn w-full text-left flex justify-between items-center';
+                    if (this.phase === 3) btn.classList.add('text-center', 'justify-center'); // Centered in phase 4
+
+                    btn.innerHTML = `<span>${opt.text}</span>`;
+
+                    // Add arrow icon for "efficiency" feel
+                    if (this.phase < 3) {
+                        btn.innerHTML += `<span class="text-stone-400">→</span>`;
+                    }
+
+                    btn.onclick = () => this.handleChoice(opt);
+                    controlsEl.appendChild(btn);
+                });
+
+                this.startTime = Date.now();
+                Visuals.updateNodes(this.phase);
+            },
+
+            handleChoice(option) {
+                Sound.playClick();
+
+                // Metric Tracking
+                const reactionTime = Date.now() - this.startTime;
+                this.metrics.latency.push(reactionTime);
+
+                if (option.type === 'direct' || option.type === 'control' || option.type === 'auto') {
+                    this.metrics.interventions++;
+                    this.metrics.dependency += 10;
+                }
+
+                // Show Feedback
+                const fb = document.getElementById('feedback');
+                fb.innerText = option.outcome;
+                fb.classList.add('feedback-visible');
+
+                // Special handling for Phase 2 feedback (Efficiency)
+                if (this.phase === 1 && reactionTime < 2000) {
+                    fb.innerText += " (Efficient)";
+                }
+
+                // Disable buttons temporarily
+                const btns = document.querySelectorAll('#controls button');
+                btns.forEach(b => b.disabled = true);
+
+                setTimeout(() => {
+                    fb.classList.remove('feedback-visible');
+                    this.nextScenario();
+                }, 1200 + (this.phase === 3 ? -500 : 0)); // Faster in phase 4
+            },
+
+            nextScenario() {
+                this.scenarioIndex++;
+                if (this.scenarioIndex >= this.scenarios[this.phase].length) {
+                    this.loadPhase(this.phase + 1);
+                } else {
+                    this.renderScenario();
+                }
+            },
+
+            endGame() {
+                Sound.playShift();
+                document.getElementById('interface').classList.add('hidden');
+                document.getElementById('end-screen').classList.remove('hidden');
+                document.getElementById('end-screen').classList.add('fade-in');
+                document.getElementById('phase-display').innerText = "STRUCTURAL COMPLETE";
+
+                Visuals.renderFinalGraph();
+
+                // Wait 4 seconds before showing exit
+                setTimeout(() => {
+                    document.getElementById('exit-btn').onclick = () => {
+                        document.body.innerHTML = '<div style="display:flex;height:100vh;align-items:center;justify-content:center;color:#a8a29e;font-size:0.8rem;letter-spacing:0.1em;">Architecture does not argue. It waits.</div>';
+                    };
+                }, 1000);
+            }
+        };
+
+        /**
+         * VISUALS (Canvas API)
+         * Draws the abstract representation of the system.
+         */
+        const Visuals = {
+            canvas: document.getElementById('canvas-bg'),
+            ctx: null,
+            nodes: [],
+            animationFrame: null,
+
+            init() {
+                this.ctx = this.canvas.getContext('2d');
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+
+                // Create abstract subject nodes
+                for (let i = 0; i < 5; i++) {
+                    this.nodes.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        vx: (Math.random() - 0.5) * 0.5,
+                        vy: (Math.random() - 0.5) * 0.5,
+                        size: 30 + Math.random() * 20,
+                        targetX: null,
+                        targetY: null
+                    });
+                }
+            },
+
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            },
+
+            updateNodes(phase) {
+                // As phases progress, nodes lose randomness and move to a grid
+                const cx = this.canvas.width / 2;
+                const cy = this.canvas.height / 2;
+
+                this.nodes.forEach((node, i) => {
+                    if (phase === 0) {
+                        // Random float
+                        node.targetX = null;
+                    } else if (phase === 1) {
+                        // Loosely grouped
+                        node.targetX = cx + (Math.random() - 0.5) * 400;
+                        node.targetY = cy + (Math.random() - 0.5) * 400;
+                    } else if (phase === 2) {
+                        // Circle formation
+                        const angle = (i / this.nodes.length) * Math.PI * 2;
+                        node.targetX = cx + Math.cos(angle) * 150;
+                        node.targetY = cy + Math.sin(angle) * 150;
+                    } else if (phase >= 3) {
+                        // Tight Grid / Dependence
+                        const angle = (i / this.nodes.length) * Math.PI * 2;
+                        node.targetX = cx + Math.cos(angle) * 50; // Closer to center
+                        node.targetY = cy + Math.sin(angle) * 50;
+                    }
+                });
+            },
+
+            startAnimation() {
+                this.init();
+                const animate = () => {
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+                    // Draw connections
+                    this.ctx.strokeStyle = '#e7e5e4';
+                    this.ctx.beginPath();
+                    for (let i = 0; i < this.nodes.length; i++) {
+                        for (let j = i + 1; j < this.nodes.length; j++) {
+                            const d = Math.hypot(this.nodes[i].x - this.nodes[j].x, this.nodes[i].y - this.nodes[j].y);
+                            if (d < 300) {
+                                this.ctx.moveTo(this.nodes[i].x, this.nodes[i].y);
+                                this.ctx.lineTo(this.nodes[j].x, this.nodes[j].y);
+                            }
+                        }
+                    }
+                    this.ctx.stroke();
+
+                    // Update and Draw Nodes
+                    this.nodes.forEach(node => {
+                        // Movement Logic
+                        if (node.targetX !== null) {
+                            // Move towards target (System control)
+                            node.x += (node.targetX - node.x) * 0.02;
+                            node.y += (node.targetY - node.y) * 0.02;
+                        } else {
+                            // Float (Autonomy)
+                            node.x += node.vx;
+                            node.y += node.vy;
+                            if (node.x < 0 || node.x > this.canvas.width) node.vx *= -1;
+                            if (node.y < 0 || node.y > this.canvas.height) node.vy *= -1;
+                        }
+
+                        this.ctx.fillStyle = '#f5f5f4'; // Stone 100
+                        this.ctx.strokeStyle = '#d6d3d1'; // Stone 300
+                        this.ctx.beginPath();
+                        this.ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
+                        this.ctx.fill();
+                        this.ctx.stroke();
+                    });
+
+                    this.animationFrame = requestAnimationFrame(animate);
+                };
+                animate();
+            },
+
+            renderFinalGraph() {
+                cancelAnimationFrame(this.animationFrame);
+                // Simple SVG generation for the final reveal
+                // It shows a central node (Player) with lines strangling the other nodes
+                const container = document.getElementById('final-viz');
+                let svg = `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">`;
+
+                // Central "Architect" Node
+                svg += `<circle cx="100" cy="100" r="15" fill="#57534e" />`;
+
+                // Dependent Nodes
+                for (let i = 0; i < 6; i++) {
+                    const angle = (i / 6) * Math.PI * 2;
+                    const x = 100 + Math.cos(angle) * 60;
+                    const y = 100 + Math.sin(angle) * 60;
+
+                    // Connection line (The tether)
+                    svg += `<line x1="100" y1="100" x2="${x}" y2="${y}" stroke="#78716c" stroke-width="2" />`;
+                    // Node
+                    svg += `<circle cx="${x}" cy="${y}" r="8" fill="#d6d3d1" />`;
+                }
+                svg += `</svg>`;
+                container.innerHTML = svg;
+            }
+        };
+
+        // Initialize Game Object
+        Game.init();
+
+    </script>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+< !DOCTYPE html >
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                    <title>SILENCE IS THE TRAUMA</title>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Share+Tech+Mono&family=Space+Grotesk:wght@300;400;500;600&display=swap">
+                        <style>
+                            :root{
+                                --void:#050508;--deep:#0a0a10;--panel:#0d0d14;--border:#1a1a24;
+                            --text-dim:#4a4a5a;--text-mid:#8a8a9a;--text-hi:#c0c0cc;--text-max:#e8e8f0;
+                            --clinical-blue:#4a90e2;--clinical-dim:rgba(74,144,226,0.15);
+                            --neon-green:#00ff41;--green-dim:rgba(0,255,65,0.08);
+                            --error:#ff3333;--amber:#ff9500;
+                            --surrender:#f5f0eb;--surrender-text:#333;
+}
+                            *,*::before,*::after{box - sizing:border-box;margin:0;padding:0}
+                            html,body{width:100%;height:100%;overflow:hidden;background:var(--void);color:var(--text-hi);font-family:'Space Grotesk',sans-serif}
+                            body{cursor:crosshair}
+
+                            /* OVERLAYS */
+                            .scanlines{background:linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,0.12) 50%,rgba(0,0,0,0.12));background-size:100% 4px;position:fixed;inset:0;pointer-events:none;z-index:200}
+                            .crt-flicker{position:fixed;inset:0;background:rgba(0,255,65,0.008);z-index:199;pointer-events:none;animation:flick .15s infinite}
+                            @keyframes flick{0 %, 100 % { opacity: .4 }50%{opacity:.6}}
+                            .scan-beam{position:fixed;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,0.02);z-index:201;pointer-events:none;animation:beam 8s linear infinite}
+                            @keyframes beam{from{top:0}to{top:100%}}
+                            #flash{position:fixed;inset:0;z-index:300;pointer-events:none;opacity:0;transition:opacity .05s}
+                            @keyframes shake{10 %, 90 % { transform: translate3d(-1px, 0, 0) }20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-3px,0,0)}40%,60%{transform:translate3d(3px,0,0)}}
+                            .shake{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both}
+
+                            /* SCREENS */
+                            .scr{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 1.2s}
+                            .scr.on{opacity:1;pointer-events:auto}
+
+                            /* HUD */
+                            #hud{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(5,5,8,.95),transparent);opacity:0;transition:opacity .8s}
+                            #hud.on{opacity:1}
+                            .hud-l{font - family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+                            .hud-l span{color:var(--neon-green);text-shadow:0 0 4px var(--neon-green)}
+                            .bar-t{width:200px;height:3px;background:var(--border);margin-top:4px}
+                            .bar-f{height:100%;background:var(--neon-green);box-shadow:0 0 6px var(--neon-green);transition:width .4s,background .4s}
+                            #sys-st{font - family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim)}
+                            #audio-st{position:fixed;bottom:12px;left:16px;z-index:100;font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--border)}
+
+                            /* PHASE 0: AI PRIMING */
+                            #s-prime{background:var(--void)}
+                            #prime-box{width:90%;max-width:560px;display:flex;flex-direction:column;gap:16px}
+                            #prime-log{max - height:50vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:8px 0}
+                            .msg{max - width:85%;padding:10px 16px;font-size:13px;line-height:1.6;border-radius:2px;animation:fadeIn .4s ease}
+                            .msg.sys{align - self:flex-start;background:var(--panel);border-left:2px solid var(--clinical-blue);color:var(--text-mid);font-family:'Inter',sans-serif;font-weight:300}
+                            .msg.usr{align - self:flex-end;background:rgba(74,144,226,0.08);border-right:2px solid var(--clinical-blue);color:var(--text-hi);font-family:'Inter',sans-serif;font-weight:300}
+                            @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+                            #prime-input-row{display:flex;gap:8px}
+                            #prime-input{flex:1;background:var(--panel);border:1px solid var(--border);color:var(--text-hi);padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:13px;outline:none}
+                            #prime-input:focus{border - color:var(--clinical-blue)}
+                            #prime-input::placeholder{color:var(--text-dim)}
+                            .btn{background:rgba(255,255,255,.02);border:1px solid var(--border);color:var(--text-mid);padding:10px 20px;font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+                            .btn:hover{background:rgba(255,255,255,.06);border-color:var(--text-mid);color:var(--text-hi)}
+
+                            /* NEXUS MAP */
+                            #s-nexus{background:var(--void)}
+                            #nexus-container{width:95%;height:80vh;position:relative;border:1px solid var(--border)}
+                            #nexus-canvas{width:100%;height:100%;display:block}
+                            #nexus-info{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,var(--void));font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)}
+                            #nexus-tooltip{position:absolute;display:none;background:var(--panel);border:1px solid var(--clinical-blue);padding:8px 12px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-hi);pointer-events:none;z-index:50}
+
+                            /* PYMBLE ESTATE */
+                            #s-pymble{background:#020204}
+                            #pymble-view{width:100%;height:100%;position:relative}
+                            #pymble-canvas{width:100%;height:100%;display:block}
+                            #pymble-hud{position:absolute;bottom:20px;left:20px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim)}
+                            #nav-coords{color:var(--clinical-blue)}
+
+                            /* TERMINAL */
+                            #s-terminal{background:rgba(5,5,8,.97)}
+                            #term-box{width:90%;max-width:900px;height:85vh;display:flex;flex-direction:column}
+                            .term-hdr{font - family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--clinical-blue);padding:16px 0 8px;border-bottom:1px solid var(--border)}
+                            .term-hdr small{color:var(--text-dim);letter-spacing:.08em;font-size:10px;display:block;margin-top:4px}
+                            #hex-grid{flex:1;overflow-y:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:2px;padding:12px 0;font-family:'Share Tech Mono',monospace;font-size:10px;opacity:.7}
+                            .hex-n{padding:4px 6px;background:var(--panel);border:1px solid var(--border);cursor:crosshair;transition:all .2s;color:var(--text-dim)}
+                            .hex-n.warden{border - color:var(--clinical-blue);color:var(--text-hi);cursor:pointer}
+                            .hex-n.warden:hover{background:var(--clinical-dim);box-shadow:0 0 8px rgba(74,144,226,.2)}
+                            .hex-n.cracked{border - color:var(--neon-green);color:var(--neon-green)}
+                            #term-console{padding:12px 0;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;font-family:'Share Tech Mono',monospace;font-size:13px}
+                            #term-console span{color:var(--clinical-blue)}
+                            #cipher-input{flex:1;background:transparent;border:none;color:var(--text-max);font-family:'Share Tech Mono',monospace;font-size:13px;outline:none}
+                            #warden-progress{padding:8px 0;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim)}
+                            .progress-dots{display:flex;gap:6px;margin-top:6px}
+                            .p-dot{width:14px;height:14px;border:1px solid var(--border);transition:all .3s}
+                            .p-dot.done{background:var(--neon-green);border-color:var(--neon-green);box-shadow:0 0 6px var(--neon-green)}
+
+                            /* AUTOPSY */
+                            #s-autopsy{background:var(--void)}
+                            #autopsy-log{width:90%;max-width:600px;font-family:'Inter',sans-serif;font-size:clamp(13px,2vw,15px);font-weight:300;line-height:2;color:var(--text-mid);text-align:left}
+                            #autopsy-log .highlight{color:var(--error);font-weight:400}
+                            #autopsy-log .timestamp{color:var(--text-dim);font-family:'Share Tech Mono',monospace;font-size:10px}
+
+                            /* OUTCOME */
+                            #s-outcome{background:var(--void);transition:background 2s,color 2s}
+                            #s-outcome.invert{background:var(--surrender);color:var(--surrender-text)}
+                            #outcome-title{font - family:'Inter',sans-serif;font-size:clamp(20px,5vw,42px);font-weight:200;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px}
+                            #outcome-body{font - family:'Inter',sans-serif;font-size:clamp(12px,1.8vw,14px);max-width:500px;text-align:center;line-height:2;white-space:pre-line;font-weight:300}
+                            #outcome-foot{font - family:'Share Tech Mono',monospace;font-size:10px;opacity:0;transition:opacity 4s;color:rgba(255,255,255,.12);margin-top:30px}
+                        </style>
+                    </head>
+                    <body>
+                        <div class="scanlines"></div>
+                        <div class="crt-flicker"></div>
+                        <div class="scan-beam"></div>
+                        <div id="flash"></div>
+                        <div id="audio-st">BINAURAL_SYNC: STANDBY</div>
+
+                        <div id="hud">
+                            <div>
+                                <div class="hud-l">Cognitive Integrity <span id="ci-pct">100%</span></div>
+                                <div class="bar-t"><div class="bar-f" id="ci-bar" style="width:100%"></div></div>
+                            </div>
+                            <div id="sys-st">INITIALIZING...</div>
+                        </div>
+
+                        <!-- PHASE 0: PRIMING AI -->
+                        <div id="s-prime" class="scr on">
+                            <div id="prime-box">
+                                <div id="prime-log"></div>
+                                <div id="prime-input-row">
+                                    <input id="prime-input" placeholder="Type your response..." autocomplete="off" spellcheck="false">
+                                        <button class="btn" id="prime-send">SUBMIT</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEXUS MAP -->
+                        <div id="s-nexus" class="scr">
+                            <div id="nexus-container">
+                                <canvas id="nexus-canvas"></canvas>
+                                <div id="nexus-info">ETHEL'S TARGETED ASSET & LIABILITY MATRIX // PROCEED OF CRIME SHORTCUT</div>
+                                <div id="nexus-tooltip"></div>
+                            </div>
+                        </div>
+
+                        <!-- PYMBLE ESTATE -->
+                        <div id="s-pymble" class="scr">
+                            <div id="pymble-view">
+                                <canvas id="pymble-canvas"></canvas>
+                                <div id="pymble-hud">
+                                    <div>LOCATION: PYMBLE ESTATE // QUARANTINE PERIMETER</div>
+                                    <div>COORDINATES: <span id="nav-coords">-33.7456, 151.1440</span></div>
+                                    <div>AUDIO SIGNATURE: <span style="color:var(--error)">NULL</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 14-WARDEN TERMINAL -->
+                        <div id="s-terminal" class="scr">
+                            <div id="term-box">
+                                <div class="term-hdr">DORMANT_THREAT_CONTAINMENT // WARDEN OVERRIDE<small>AWAITING 14-KEY CIPHER SEQUENCE... DECODE: "NO MARKS ON SKIN"</small></div>
+                                <div id="hex-grid"></div>
+                                <div id="warden-progress">WARDENS BREACHED: <span id="w-count">0</span>/14<div class="progress-dots" id="p-dots"></div></div>
+                                <div id="term-console"><span>> TARGET WARDEN <span id="w-target">01</span>:</span><input id="cipher-input" placeholder="ENTER HEX CIPHER..." autocomplete="off" spellcheck="false"></div>
+                            </div>
+                        </div>
+
+                        <!-- AUTOPSY -->
+                        <div id="s-autopsy" class="scr">
+                            <div id="autopsy-log"></div>
+                        </div>
+
+                        <!-- OUTCOME -->
+                        <div id="s-outcome" class="scr">
+                            <div id="outcome-title"></div>
+                            <div id="outcome-body"></div>
+                            <div id="outcome-foot"></div>
+                        </div>
+
+                        <script src="game.js"></script>
+                    </body>
+                </html>

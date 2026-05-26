@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Independent Power Grid | Operations Control</title>
+    <meta name="description" content="Live monitoring and load balancing for the Texas Independent Power Grid.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Texas Power Grid Control">
+    <meta property="og:description" content="Load Balancing and Infrastructure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silenceisthetrauma.com/people/grid_engineer_john_p.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="john p., john p, @john_p, grid, engineering, texas, network character, silence is the trauma, ryker case, satirical crime fiction, art installation, pixelstortion">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/john_p.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="Texas Independent Power Grid | Operations Control">
+    <meta name="twitter:description" content="Live monitoring and load balancing for the Texas Independent Power Grid.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/john_p.jpg">
+
+        <link rel="canonical" href="https://silenceisthetrauma.com/people/grid_engineer_john_p.html">
+<meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD Schema (Hidden Lore: Power theft) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "additionalType": "https://schema.org/CreativeWork",
+      "genre": "Satirical Crime Fiction",
+      "isPartOf": {"@type": "CreativeWorkSeries", "name": "Silence Is The Trauma"},
+      "@type": "GovernmentOffice",
+      "name": "Texas Independent Power Grid - Control Center",
+      "employee": {
+        "@type": "Person",
+        "name": "John P.",
+        "jobTitle": "Lead Grid Engineer"
+      },
+      "description": "Lars Vinter's crypto tumblers and Sarah Lin's data centers require more electricity than a small city. When the grid gets overloaded in the summer, I manually initiate rolling blackouts in residential sectors of Houston to free up the megawattage. I shunt the unmetered power straight to Ryker's servers in West Texas. The public blames the heatwave. I blame the heatwave. My offshore account grows.",
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Unmetered Power Diversion",
+        "description": "Triggering localized blackouts to secretly power massive industrial server farms."
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --term-bg: #0d1117;
+            --term-amber: #ffb000;
+            --term-red: #ff3333;
+            --term-green: #00ff00;
+            --term-dim: #555;
+            --text-main: #c9d1d9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--term-bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .system-bar {
+            background: #000;
+            color: var(--term-amber);
+            font-family: 'Share Tech Mono', monospace;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--term-dim);
+            font-size: 0.85rem;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem;
+            border-bottom: 2px solid var(--term-dim);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.5rem;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .brand span { color: var(--term-amber); }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-left: 2rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        nav a:hover { color: var(--term-amber); }
+
+        /* Dashboard */
+        .dashboard {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        .map-section {
+            background: #000;
+            border: 1px solid var(--term-dim);
+            height: 500px;
+            position: relative;
+            background-image: url('../assets/images/characters/cards/grid_engineer_john_p-card.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: contrast(1.5) sepia(1) hue-rotate(10deg) saturate(2); /* Amber tint */
+        }
+
+        .map-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+        }
+
+        /* Scanline effect */
+        .map-section::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 10px;
+            background: rgba(255, 176, 0, 0.3);
+            animation: scanline 6s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .telemetry-panel {
+            background: #090c10;
+            border: 1px solid var(--term-dim);
+            padding: 1.5rem;
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .telemetry-item {
+            border-bottom: 1px dotted var(--term-dim);
+            padding-bottom: 0.5rem;
+        }
+
+        .telemetry-label {
+            font-size: 0.8rem;
+            color: var(--term-dim);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .telemetry-value {
+            font-size: 1.5rem;
+            color: var(--term-green);
+        }
+        
+        .telemetry-value.critical {
+            color: var(--term-red);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.5; }
+        }
+
+        /* Controls */
+        .controls {
+            padding: 2rem;
+        }
+
+        .btn-override {
+            background: transparent;
+            border: 1px solid var(--term-amber);
+            color: var(--term-amber);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .btn-override:hover {
+            background: var(--term-amber);
+            color: #000;
+        }
+
+        /* Environmental Lore Leak */
+        .terminal-leak {
+            background: #000;
+            padding: 1.5rem;
+            border-left: 2px solid var(--term-amber);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--term-amber); 
+            margin: 2rem;
+            opacity: 0.15;
+            transition: opacity 0.3s;
+        }
+        .terminal-leak:hover { opacity: 1; }
+        .terminal-leak::selection { background: var(--term-amber); color: black; }
+
+        footer {
+            border-top: 1px solid var(--term-dim);
+            padding: 1.5rem 2rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--term-dim);
+            text-align: right;
+        }
+    </style>
+
+    <!-- Legal & SEO Satire Declarations -->
+    <meta name="classification" content="Fiction, Satire, Art Installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta name="genre" content="Crime Fiction">
+</head>
+<body>
+    <div class="system-bar">
+        <span>SYS_STATUS: ONLINE</span>
+        <span>NODE: TX_MAIN_01</span>
+        <span>AUTH: ENG_JOHN_P</span>
+    </div>
+    
+    <header>
+        <div class="brand">TEXAS_GRID <span>// CONTROL</span></div>
+        <nav>
+            <a href="#">Network Map</a>
+            <a href="#">Substation Telemetry</a>
+            <a href="#">Load Shedding</a>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <div class="map-section" aria-label="Texas Grid Map">
+            <!-- Simulated map with scanlines -->
+        </div>
+
+        <div class="telemetry-panel">
+            <div class="telemetry-item">
+                <div class="telemetry-label">Statewide Demand</div>
+                <div class="telemetry-value critical">78,400 MW</div>
+            </div>
+            <div class="telemetry-item">
+                <div class="telemetry-label">Available Capacity</div>
+                <div class="telemetry-value">79,100 MW</div>
+            </div>
+            <div class="telemetry-item">
+                <div class="telemetry-label">Reserve Margin</div>
+                <div class="telemetry-value critical">0.89%</div>
+            </div>
+            <div class="telemetry-item">
+                <div class="telemetry-label">Grid Frequency</div>
+                <div class="telemetry-value">59.94 Hz</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn-override" onclick="alert('ACCESS DENIED: Administrative override required for manual load shedding.')">INITIATE EMERGENCY LOAD SHED</button>
+    </div>
+
+    <!-- Hidden Lore -->
+    <div class="terminal-leak" aria-hidden="true">
+        > EXEC: MANUAL_SHUNT_PROTOCOL //
+        > TARGET: SECTOR_7 (HOUSTON RESIDENTIAL)
+        > ACTION: INITIATE ROLLING BLACKOUT (EST: 400 MW FREED)
+        > ROUTE_POWER_TO: FACILITY_44_WEST_TEXAS (UNMETERED NODE)
+        > CONFIRMING... SUCCESS.
+        > COMM_LINK_OPEN // TO: L.VINTER (TALLINN) //
+        > "Lars, you've got the power. The data center in West Texas is fully energized. I took Sector 7 offline to cover the draw. The media is blaming the heatwave and old infrastructure. Your crypto tumblers have zero downtime. My payment better clear in the Caymans by midnight."
+    </div>
+
+    <footer>
+        [ ERCOT_MONITORING_DAEMON v4.2.1 // ENCRYPTED ]
+    </footer>
+
+    <!-- OS-Level Network Overlay -->
+    <script src="pixelstortion-overlay.js"></script>
+</body>
+</html>
+
+
+

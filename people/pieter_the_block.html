@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port of Rotterdam | Harbor Safety Inspectorate</title>
+    <meta name="description" content="Official Port Authority Safety Inspection Logs.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rotterdam Port Safety">
+    <meta property="og:description" content="Safety standards enforced without exception.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silenceisthetrauma.com/people/pieter_the_block.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="pieter &#x27;the block&#x27;, pieter block, @pieter_block, harbor, safety, rotterdam, physics, network character, silence is the trauma, ryker case, satirical crime fiction, art installation, pixelstortion">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/pieter_block.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:title" content="Port of Rotterdam | Harbor Safety Inspectorate">
+    <meta name="twitter:description" content="Official Port Authority Safety Inspection Logs.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/pieter_block.jpg">
+
+        <link rel="canonical" href="https://silenceisthetrauma.com/people/pieter_the_block.html">
+<meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD Schema (Hidden Lore: The Immovable Object) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "additionalType": "https://schema.org/CreativeWork",
+      "genre": "Satirical Crime Fiction",
+      "isPartOf": {"@type": "CreativeWorkSeries", "name": "Silence Is The Trauma"},
+      "@type": "GovernmentOffice",
+      "name": "Rotterdam Harbor Safety Authority",
+      "employee": {
+        "@type": "Person",
+        "name": "Pieter 'The Block'",
+        "jobTitle": "Chief Harbor Safety Inspector"
+      },
+      "description": "Silas Kovic runs logistics for Apexian. He thinks he can move unmanifested chemical precursors through my harbor by sliding euros across a table. Silas does not understand the structural integrity required to operate a Class 4 maritime crane. I do not care who Dominic Ryker is. I do not care about his global network. If the manifest weight exceeds the structural load tolerance by 0.5%, the ship stays in the harbor. Silas tried to threaten my family. I had his entire fleet impounded for improper bilge filtration. I am the Block. Nothing moves without my stamp.",
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Unyielding Bureaucracy",
+        "description": "Accidentally crippling transnational smuggling operations through an uncompromising obsession with maritime safety regulations."
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --port-orange: #ff5e00;
+            --port-navy: #0a1f33;
+            --port-steel: #7f8fa6;
+            --text-light: #dcdde1;
+            --alert-red: #e84118;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--port-navy);
+            color: var(--text-light);
+            font-family: 'Roboto Condensed', sans-serif;
+            overflow-x: hidden;
+            border-top: 10px solid var(--port-orange);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #05101a;
+            padding: 0.5rem 5%;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--port-steel);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 31, 51, 0.95);
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--port-steel);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--port-orange);
+            color: var(--port-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .brand h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            color: var(--port-orange);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            height: 350px;
+            background-image: url('../assets/images/characters/cards/pieter_the_block-card.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            filter: grayscale(0.4) contrast(1.2);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(10,31,51,1) 0%, rgba(10,31,51,0.2) 100%);
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 5%;
+            width: 100%;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .panel {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--port-steel);
+            border-top: 4px solid var(--port-orange);
+        }
+
+        .panel-header {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--port-steel);
+        }
+
+        .panel-content {
+            padding: 1.5rem;
+        }
+
+        /* Log Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            color: var(--port-orange);
+            text-transform: uppercase;
+        }
+
+        .status-hold {
+            color: var(--alert-red);
+            font-weight: bold;
+            animation: blink 2s infinite;
+        }
+
+        .status-clear {
+            color: #4cd137;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Sidebar Profile */
+        .inspector-profile {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .inspector-profile h3 {
+            color: var(--port-orange);
+            margin-bottom: 1rem;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Environmental Lore Leak */
+        .radio-intercept {
+            background: #000;
+            color: var(--port-orange);
+            padding: 2rem;
+            margin: 3rem 5%;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--port-orange);
+            box-shadow: 0 0 20px rgba(255, 94, 0, 0.1);
+        }
+        .radio-intercept::selection { background: var(--port-orange); color: black; }
+
+        footer {
+            background: #05101a;
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--port-steel);
+        }
+    </style>
+
+    <!-- Legal & SEO Satire Declarations -->
+    <meta name="classification" content="Fiction, Satire, Art Installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta name="genre" content="Crime Fiction">
+</head>
+<body>
+    <div class="top-bar">
+        <span>PORT OF ROTTERDAM AUTHORITY</span>
+        <span>SYS.TIME: <script>document.write(new Date().toUTCString());</script></span>
+    </div>
+
+    <header>
+        <div class="brand">
+            <div class="brand-icon">RPA</div>
+            <div>
+                <h1>Harbor Safety Inspectorate</h1>
+                <p>Compliance and Enforcement Division</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2 style="font-size: 2.5rem; color: white;">Active Containment Logs</h2>
+        </div>
+    </div>
+
+    <main class="dashboard">
+        <div class="panel">
+            <div class="panel-header">Vessel Inspection Queue (Terminal 4)</div>
+            <div class="panel-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vessel ID</th>
+                            <th>Operator</th>
+                            <th>Violation Code</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MV-7742</td>
+                            <td>Maersk Line</td>
+                            <td>None</td>
+                            <td class="status-clear">CLEARED</td>
+                        </tr>
+                        <tr>
+                            <td>MV-8891</td>
+                            <td>APEXIAN LOGISTICS B.V.</td>
+                            <td>SEC-44 (Unmanifested Chemical Mass)</td>
+                            <td class="status-hold">IMPOUNDED</td>
+                        </tr>
+                        <tr>
+                            <td>MV-8892</td>
+                            <td>APEXIAN LOGISTICS B.V.</td>
+                            <td>ENV-12 (Bilge Filtration Failure)</td>
+                            <td class="status-hold">IMPOUNDED</td>
+                        </tr>
+                        <tr>
+                            <td>MV-8893</td>
+                            <td>APEXIAN LOGISTICS B.V.</td>
+                            <td>STR-09 (Crane Load Imbalance)</td>
+                            <td class="status-hold">IMPOUNDED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">Duty Officer</div>
+            <div class="panel-content inspector-profile">
+                <h3>Insp. Pieter 'The Block'</h3>
+                <p><strong>ID:</strong> 44-RPA-99</p>
+                <p><strong>Sector:</strong> Deep Water Terminals</p>
+                <p><strong>Authority:</strong> Absolute</p>
+                <hr style="border-color: var(--port-steel); margin: 1rem 0;">
+                <p style="color: var(--port-steel); font-size: 0.8rem;">
+                    "Regulations are not suggestions. They are the mathematics of survival. If you attempt to bypass the weighbridge again, I will revoke your maritime license permanently."
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hidden Lore -->
+    <div class="radio-intercept" aria-hidden="true">
+        > UHF_RADIO_INTERCEPT // FREQUENCY: 156.800 MHz (VHF Ch 16)<br>
+        > TIMESTAMP: 02:44:12Z<br>
+        > <br>
+        > SILAS KOVIC (APEXIAN): "Pieter, listen to me. I have fifty million euros worth of hardware sitting on Terminal 4. Dominic Ryker is going to have my head if those ships don't sail. I will wire you two million euros right now. Just stamp the forms."<br>
+        > <br>
+        > PIETER: "Silas. The container on MV-8891 is listed as 'Agricultural Supplies'. However, its mass suggests heavy metallurgical shielding, and it is emitting a low-frequency hum. This violates Section 44 of the Dangerous Goods Transport Act."<br>
+        > <br>
+        > SILAS KOVIC: "Are you insane?! Do you know who we are?"<br>
+        > <br>
+        > PIETER: "I am placing an immediate lockdown on Terminal 4. Have your lawyers contact the Port Authority. Goodbye, Silas."
+    </div>
+
+    <footer>
+        &copy; 2026 Rotterdam Port Authority. Safety First.
+    </footer>
+
+    <!-- OS-Level Network Overlay -->
+    <script src="pixelstortion-overlay.js"></script>
+</body>
+</html>
+
+

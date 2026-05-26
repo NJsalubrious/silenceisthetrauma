@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://silenceisthetrauma.com/people/osint_monitor.html">
+    <!-- BATCH meta block (Phase 1 SEO) -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="description" content="Open-source intelligence. Military and logistics tracking. — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta name="keywords" content="osint monitor, conflict osint, @conflict_osint, open-source, intelligence, military, logistics, tracking, everything, network character, silence is the trauma, ryker case, satirical crime fiction, art installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="OSINT // TACTICAL OVERWATCH">
+    <meta property="og:description" content="Open-source intelligence. Military and logistics tracking. — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta property="og:site_name" content="Silence Is The Trauma">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://silenceisthetrauma.com/assets/images/social_share/conflict_osint.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OSINT // TACTICAL OVERWATCH">
+    <meta name="twitter:description" content="Open-source intelligence. Military and logistics tracking. — A character in Silence Is The Trauma, an art-installation crime fiction project.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/assets/images/social_share/conflict_osint.jpg">
+
+    <link rel="canonical" href="https://silenceisthetrauma.com/people/osint_monitor.html">
+<title>OSINT // TACTICAL OVERWATCH</title>
+    <style>
+        :root {
+            --bg-color: #020502;
+            --text-color: #00ff00;
+            --dim-text: #004400;
+            --alert: #ff0033;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            overflow: hidden; /* Terminal vibe */
+        }
+
+        .terminal-header {
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            height: 85vh;
+        }
+
+        .feed-window {
+            border: 1px solid var(--dim-text);
+            padding: 15px;
+            position: relative;
+            background: rgba(0, 20, 0, 0.4);
+            overflow-y: auto;
+        }
+
+        .feed-window::before {
+            content: 'LIVE_INTERCEPT_STREAM';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: var(--bg-color);
+            padding: 0 5px;
+            font-size: 0.8rem;
+            color: var(--dim-text);
+        }
+
+        .log-entry {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.2;
+            border-left: 2px solid var(--dim-text);
+            padding-left: 10px;
+        }
+
+        .log-entry.alert {
+            color: var(--alert);
+            border-color: var(--alert);
+        }
+
+        .timestamp {
+            color: var(--dim-text);
+            margin-right: 10px;
+        }
+
+        .sidebar-window {
+            border: 1px solid var(--dim-text);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .target-profile img {
+            width: 100%;
+            filter: grayscale(100%) contrast(1.5) sepia(100%) hue-rotate(80deg);
+            border: 1px solid var(--text-color);
+        }
+
+        .status-box {
+            border: 1px dashed var(--text-color);
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 100px;
+            z-index: 10;
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,255,0,0.1) 50%, rgba(0,0,0,0) 100%);
+            opacity: 0.3;
+            animation: scan 5s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: -100px; }
+            100% { top: 100%; }
+        }
+        
+        /* Custom scrollbar for terminal */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--dim-text); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-color); }
+
+    </style>
+</head>
+<body>
+    <div class="scanline"></div>
+    
+    <div class="terminal-header">
+        <div>NODE: OSINT_MONITOR_01</div>
+        <div>STATUS: ACTIVE_GATHERING</div>
+        <div>ENCRYPTION: AES-256 (VERIFIED)</div>
+    </div>
+
+    <div class="dashboard">
+        <div class="feed-window">
+            <div class="log-entry">
+                <span class="timestamp">[14:02:44.110]</span>
+                INFO: Packet sniff successful on node IP: 192.168.x.x (Langtang Corp Subnet).
+            </div>
+            <div class="log-entry">
+                <span class="timestamp">[14:02:45.301]</span>
+                INFO: Analyzing structural metadata from 'Keep It Real Bro' podcast feed. Routing match found: OOO Novator Strategies -> X-CARTEL-SINALOA-NULL.
+            </div>
+            <div class="log-entry alert">
+                <span class="timestamp">[14:03:10.992]</span>
+                WARNING: Anomaly detected near Langtang industrial zone. Vehicle registry match: Vance, Chloe. Status: Abandoned.
+            </div>
+            <div class="log-entry">
+                <span class="timestamp">[14:03:15.004]</span>
+                INFO: Cross-referencing missing persons database. Local police suppression detected (ID: Officer Vance). Logging collusion pattern.
+            </div>
+            <div class="log-entry">
+                <span class="timestamp">[14:04:01.222]</span>
+                INFO: Scraping 'Zero State Media' donor lists. 42% overlap with offshore accounts linked to 'The Evaluator' clinic.
+            </div>
+            <div class="log-entry alert">
+                <span class="timestamp">[14:05:11.880]</span>
+                CRITICAL: Secure comms intercepted between Dominic Ryker and Unknown Actor (Location: Prague). Decryption in progress...
+            </div>
+            <div class="log-entry">
+                <span class="timestamp">[14:05:12.001]</span>
+                INFO: Everything leaves a digital wake. Compiling target matrix.
+            </div>
+            <!-- Simulating endless scroll -->
+            <div style="color: var(--dim-text); text-align: center; margin-top: 50px;">
+                ... AWAITING PACKETS ...
+            </div>
+        </div>
+
+        <div class="sidebar-window">
+            <div class="target-profile">
+                <div style="font-size: 0.8rem; margin-bottom: 5px;">CURRENT ACTIVE OBSERVER</div>
+                <img src="../assets/images/characters/avatars/osint-monitor-open-source-intelligence-avatar.jpg" alt="OSINT Monitor">
+            </div>
+            
+            <div class="status-box">
+                <strong>SYSTEM METRICS</strong><br><br>
+                NODES TRACKED: 101<br>
+                EXPOSED VECTORS: 47<br>
+                COMPROMISED ENTITIES: 88%<br><br>
+                <em>"The truth is just a data visualization problem."</em>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pixelstortion Overlay -->
+    <script src="pixelstortion-overlay.js"></script>
+</body>
+</html>

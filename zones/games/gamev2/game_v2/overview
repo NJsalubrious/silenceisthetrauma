@@ -1,0 +1,46 @@
+Game V2 — Silence Is The Trauma: Walkthrough
+What Was Built
+Complete browser game implementing the full "Silence is the Trauma" architecture from all 8 design documents. Two files in gamev2/game_v2/:
+
+File	Purpose
+index.html
+HTML structure + CSS (6 screens, CRT overlays, clinical aesthetic)
+game.js
+Full engine — state, audio, all phases
+Game Flow (6 Phases)
+Phase 0: Sycophantic AI Priming
+Chat interface gaslights the player through 5 scripted exchanges. Introduces "silence is the trauma" as a psychological prime. Records all player responses for later replay in the Autopsy.
+
+Phase 1: Ethel's Nexus Map
+200 procedurally-generated property nodes with shell entity connections. Player explores the forensic graph — hovering shows BSBs and account numbers. A pulsing red DORMANT_ENTITY at center draws the player in. Clicking it transitions to the quarantine zone.
+
+Phase 2: Pymble Estate (Silent Exploration)
+Total silence. Canvas renders procedural corridors with spatial drift — the displayed coordinates lie, drifting 5° per movement click. Player navigates toward a red pulsing terminal beacon. Every step is logged and cognitive integrity drops.
+
+Phase 3: 14-Warden Terminal (The 1000-Key Trap)
+600-node hex grid with 14 highlighted wardens. Player must manually type 4E 6F 20 6D 61 72 6B 73 20 6F 6E 20 73 6B 69 6E ("No marks on skin") 14 times. Progress dots fill. Positive reinforcement (green flash, chime) rewards each breach. The player is so consumed by the puzzle they never question what the wardens are protecting.
+
+Phase 4: Autopsy of Intellect
+2.5s freeze → hinge singing (high sine sweep) → procedural log types out line by line:
+
+Highlights the player's 3 false assumptions
+Replays their exact priming responses
+Shows their spatial drift data
+Reveals: the silent entity was a financial routing virus, the wardens were protecting the network
+Phase 5: 140dB Drop + Outcome
+Industrial noise burst through overdriven GainNode (5x) + WaveShaperNode (hard clip 400). Screen inverts to white. Final text: "Cognitive sophistication is not a shield. It is the most efficient mechanism for your own deception."
+
+Verification
+AI priming phase running in browser
+Review
+AI priming phase running in browser
+
+Browser recording of test session
+Review
+Browser recording of test session
+
+Server logs confirmed: 
+index.html
+ ✅, 
+game.js
+ ✅. No JS errors in console.

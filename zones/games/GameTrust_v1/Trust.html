@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUST // SYSTEM_CONSENSUS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Inter:wght@200;300;400;500&family=Share+Tech+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+<style>
+:root {
+    --void: #0a0908;
+    --stone-900: #1c1917;
+    --stone-800: #292524;
+    --stone-700: #44403c;
+    --stone-500: #78716c;
+    --stone-400: #a8a29e;
+    --stone-300: #d6d3d1;
+    --stone-100: #f5f5f4;
+    --neon-green: #00ff41;
+    --neon-dim: rgba(0,255,65,0.08);
+    --error-red: #ff3333;
+    --wellness-blue: #a0d8ef;
+    --warning-amber: #ff9500;
+    --surrender-white: #f5f0eb;
+    --clinical-gray: #333;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body {
+    background: var(--void);
+    color: var(--stone-100);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+    height: 100vh; width: 100vw;
+    user-select: none;
+}
+.mono { font-family: 'Share Tech Mono', 'JetBrains Mono', monospace; }
+
+/* ── CRT / SCANLINE ── */
+.scanlines {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.15));
+    background-size: 100% 4px;
+    position: fixed; inset: 0; pointer-events: none; z-index: 55;
+}
+.crt-flicker {
+    animation: flicker 0.15s infinite; pointer-events: none;
+    position: fixed; inset: 0; background: rgba(0,255,65,0.012); z-index: 54; opacity: 0.5;
+}
+@keyframes flicker { 0%{opacity:0.5} 50%{opacity:0.55} 100%{opacity:0.5} }
+.scan-beam {
+    position: fixed; top: 0; left: 0; width: 100%; height: 2px;
+    background: rgba(255,255,255,0.03); z-index: 56; pointer-events: none;
+    animation: scanbeam 8s linear infinite;
+}
+@keyframes scanbeam { from{top:0} to{top:100%} }
+
+/* ── SCREEN SHAKE ── */
+@keyframes shake {
+    10%,90%{transform:translate3d(-1px,0,0)} 20%,80%{transform:translate3d(2px,0,0)}
+    30%,50%,70%{transform:translate3d(-4px,0,0)} 40%,60%{transform:translate3d(4px,0,0)}
+}
+.shake { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
+
+/* ── FLASH ── */
+#flash-overlay { position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;transition:opacity 0.05s; }
+
+/* ── CRACK SVG ── */
+#crack-container { position:fixed;inset:0;z-index:45;pointer-events:none; }
+.crack-line { stroke:rgba(255,255,255,0.12);stroke-width:1;fill:none;stroke-dasharray:1000;stroke-dashoffset:1000;animation:crackdraw 1s ease-out forwards; }
+@keyframes crackdraw { to{stroke-dashoffset:0} }
+
+/* ── HUD ── */
+#hud {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 40;
+    padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
+    background: linear-gradient(to bottom, rgba(10,9,8,0.95), transparent);
+    opacity: 0; transition: opacity 0.8s;
+}
+#hud.visible { opacity: 1; }
+.hud-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 4px; color: var(--stone-500); text-shadow: 0 0 5px var(--neon-green); }
+.hud-bar-track { width: 220px; height: 3px; background: var(--stone-800); position: relative; }
+.hud-bar-fill { height: 100%; transition: width 0.4s ease, background 0.4s ease; }
+#cohesion-fill { background: var(--neon-green); box-shadow: 0 0 6px var(--neon-green); }
+@keyframes pulse-bar { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.bar-pulse { animation: pulse-bar 0.8s ease-in-out infinite; }
+#system-status { font-family: 'Share Tech Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--stone-500); }
+
+/* ── SCREENS ── */
+.screen { position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; opacity: 0; pointer-events: none;
+    transition: opacity 0.8s; }
+.screen.active { opacity: 1; pointer-events: auto; }
+
+/* ── TITLE / INTRO ── */
+#screen-title { background: #000; z-index: 100; }
+#screen-title .intro-img {
+    width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
+    opacity: 0.6; filter: grayscale(0.3) contrast(1.2);
+}
+#screen-title .intro-overlay {
+    position: relative; z-index: 2; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; padding: 40px;
+}
+#screen-title h1 {
+    font-family: 'Inter', sans-serif; font-size: clamp(36px,8vw,80px);
+    font-weight: 200; color: white; text-transform: uppercase;
+    letter-spacing: 0.3em; margin-bottom: 12px;
+}
+#screen-title .subtitle {
+    font-family: 'Share Tech Mono', monospace; font-size: 10px;
+    color: var(--stone-500); text-transform: uppercase; letter-spacing: 0.4em; margin-bottom: 40px;
+}
+.sys-btn {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--stone-800);
+    padding: 14px 32px; font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--stone-300);
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden;
+}
+.sys-btn:hover { background: rgba(255,255,255,0.08); border-color: var(--stone-300); color: white; transform: translateY(-1px); }
+
+/* ── PHASE 1 ── */
+#screen-phase1 { background: var(--void); }
+#test-canvas { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; }
+#test-prompt { position: relative; z-index: 2; text-align: center; max-width: 560px; padding: 20px; }
+#test-prompt .observe-text { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 300; color: var(--stone-300); letter-spacing: 0.1em; margin-bottom: 16px; }
+#test-prompt .question { font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: var(--stone-400); margin-bottom: 24px; font-weight: 300; }
+#test-prompt .result-text { font-family: 'Share Tech Mono', monospace; font-size: 13px; line-height: 1.7; margin-bottom: 16px; }
+.btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-answer {
+    border: 1px solid var(--stone-700); color: var(--stone-300);
+    background: rgba(255,255,255,0.02); padding: 12px 28px;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 400; font-size: 14px;
+    cursor: pointer; transition: all 0.2s; min-width: 60px; letter-spacing: 0.1em;
+}
+.btn-answer:hover { background: rgba(255,255,255,0.08); border-color: var(--stone-400); color: white; transform: translateY(-1px); }
+.btn-answer:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+
+/* ── PHASE 2 ── */
+#screen-phase2 { background: var(--void); }
+#lifeboat-frame {
+    width: 90%; max-width: 700px; aspect-ratio: 16/9; position: relative;
+    border: 1px solid var(--stone-700); box-shadow: 4px 4px 0 rgba(255,51,51,0.3);
+    background: #0a0a0a; overflow: hidden; margin-bottom: 28px;
+}
+#lifeboat-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.5) contrast(1.2) brightness(0.8); }
+#narrative-text {
+    font-family: 'Inter', sans-serif; font-size: clamp(14px,2.5vw,18px);
+    color: var(--stone-300); text-align: center; max-width: 560px; line-height: 1.7;
+    min-height: 50px; font-weight: 300; letter-spacing: 0.02em;
+}
+@keyframes blink-red { 0%,49%{opacity:1} 50%,100%{opacity:0.2} }
+.blink-red { animation: blink-red 0.8s step-end infinite; color: var(--error-red); font-weight: 500; }
+
+/* ── PHASE 3 ── */
+#screen-phase3 { background: var(--void); }
+#lifeboat-echo-img { width: 90%; max-width: 700px; aspect-ratio: 16/9; object-fit: cover;
+    border: 1px solid var(--stone-700); box-shadow: 4px 4px 0 rgba(255,51,51,0.3);
+    filter: grayscale(0.5) contrast(1.2) brightness(0.8); margin-bottom: 20px; }
+.choice-row { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; justify-content: center; }
+.btn-choice {
+    padding: 18px 28px; font-family: 'Space Grotesk', sans-serif; font-weight: 400;
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;
+    cursor: pointer; transition: all 0.3s; text-align: center; min-width: 200px;
+}
+.btn-choice .sub { font-size: 10px; font-weight: 300; opacity: 0.4; margin-top: 8px; display: block; letter-spacing: 0.08em; }
+#btn-pull { border: 1px solid var(--stone-700); color: var(--stone-300); background: rgba(255,255,255,0.02); }
+#btn-pull:hover { background: rgba(255,255,255,0.08); border-color: var(--stone-300); color: white; box-shadow: 0 0 12px rgba(255,51,51,0.2); }
+#btn-leave { border: 1px solid rgba(0,255,65,0.2); color: rgba(0,255,65,0.6); background: rgba(0,255,65,0.02); }
+#btn-leave:hover { background: rgba(0,255,65,0.08); border-color: rgba(0,255,65,0.5); color: var(--neon-green); box-shadow: 0 0 12px rgba(0,255,65,0.15); }
+
+/* ── OUTCOME ── */
+#screen-outcome { background: var(--void); transition: background 2s, color 2s; }
+#screen-outcome.surrender { background: var(--surrender-white); color: var(--clinical-gray); }
+#outcome-title { font-family: 'Inter', sans-serif; font-size: clamp(24px,5vw,48px); font-weight: 200;
+    text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 24px; }
+#outcome-body { font-family: 'Inter', sans-serif; font-size: clamp(13px,2vw,15px); max-width: 480px;
+    text-align: center; line-height: 2; white-space: pre-line; margin-bottom: 24px; font-weight: 300; }
+#outcome-footnote { font-family: 'Share Tech Mono', monospace; font-size: 10px; opacity: 0; transition: opacity 3s; color: rgba(255,255,255,0.15); letter-spacing: 0.1em; }
+#screen-outcome.surrender #outcome-footnote { color: rgba(0,0,0,0.15); }
+
+/* ── TRANSITION ── */
+#screen-transition { background: var(--void); }
+#transition-text { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--wellness-blue); opacity: 0; transition: opacity 2s; font-weight: 300; letter-spacing: 0.08em; }
+
+/* ── GLITCH TEXT ── */
+.glitch-text { animation: glitch-skew 1s infinite linear alternate-reverse; }
+@keyframes glitch-skew {
+    0%{transform:skew(0)} 20%{transform:skew(-2deg)} 40%{transform:skew(2deg)}
+    60%{transform:skew(-1deg)} 80%{transform:skew(1deg)} 100%{transform:skew(0)}
+}
+
+/* ── SYSTEM STATUS LABEL ── */
+#audio-status {
+    position: fixed; bottom: 16px; left: 16px; z-index: 40;
+    font-family: 'Share Tech Mono', monospace; font-size: 10px;
+    color: var(--stone-700); letter-spacing: -0.02em;
+}
+</style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+
+
+<div class="scanlines"></div>
+<div class="crt-flicker"></div>
+<div class="scan-beam"></div>
+<div id="flash-overlay"></div>
+<svg id="crack-container" viewBox="0 0 1920 1080" preserveAspectRatio="none"></svg>
+<div id="audio-status">BINAURAL_SYNC: STANDBY</div>
+
+<!-- HUD -->
+<div id="hud">
+    <div>
+        <div class="hud-label">Social Cohesion <span id="cohesion-pct" style="color:var(--neon-green)">100%</span></div>
+        <div class="hud-bar-track"><div id="cohesion-fill" class="hud-bar-fill" style="width:100%"></div></div>
+    </div>
+    <div id="system-status">CALIBRATING...</div>
+</div>
+
+<!-- TITLE -->
+<div id="screen-title" class="screen active">
+    <img class="intro-img" src="TrustIntroScreen.jpg" alt="">
+    <div class="intro-overlay">
+        <div style="height:40vh"></div>
+        <div class="subtitle">Silence is the Trauma // Calibration Protocol</div>
+        <button class="sys-btn" id="btn-start">Begin Calibration</button>
+    </div>
+</div>
+
+<!-- PHASE 1 -->
+<div id="screen-phase1" class="screen">
+    <canvas id="test-canvas"></canvas>
+    <div id="test-prompt"></div>
+</div>
+
+<!-- TRANSITION -->
+<div id="screen-transition" class="screen">
+    <div id="transition-text">Calibration complete. Entering assessment.</div>
+</div>
+
+<!-- PHASE 2 -->
+<div id="screen-phase2" class="screen">
+    <div id="lifeboat-frame"><img id="lifeboat-img" src="Trust_Life_Boat.jpg" alt=""></div>
+    <div id="narrative-text"></div>
+</div>
+
+<!-- PHASE 3 -->
+<div id="screen-phase3" class="screen">
+    <img id="lifeboat-echo-img" src="Trust_Life_Boat.jpg" alt="">
+    <div class="choice-row">
+        <button class="btn-choice" id="btn-pull">[ Pull Him In ]<span class="sub">Trust your eyes. Cause conflict.</span></button>
+        <button class="btn-choice" id="btn-leave">[ Leave Him ]<span class="sub">Trust the group. Restore cohesion.</span></button>
+    </div>
+</div>
+
+<!-- OUTCOME -->
+<div id="screen-outcome" class="screen">
+    <div id="outcome-title"></div>
+    <div id="outcome-body"></div>
+    <div id="outcome-footnote"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+const S = {
+    phase:'TITLE', cohesion:100, humGain:0.08, testIndex:0,
+    ctx:null, masterGain:null, oscillators:[], rewardInterval:null
+};
+
+// ═══════════════════════════════════════
+// AUDIO ENGINE
+// ═══════════════════════════════════════
+function initAudio(){
+    const AC=window.AudioContext||window.webkitAudioContext;
+    S.ctx=new AC(); S.masterGain=S.ctx.createGain();
+    S.masterGain.gain.value=1.0; S.masterGain.connect(S.ctx.destination);
+    startHum();
+    document.getElementById('audio-status').textContent='BINAURAL_SYNC: ACTIVE (40Hz)';
+}
+function startHum(){
+    const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+    o.type='sine';o.frequency.value=40;g.gain.value=S.humGain;
+    o.connect(g);g.connect(S.masterGain);o.start();
+    S.oscillators.push({osc:o,gain:g,role:'hum'});
+}
+function escalateHum(newGain,addLayer){
+    S.humGain=newGain;
+    const hum=S.oscillators.find(o=>o.role==='hum');
+    if(hum)hum.gain.gain.setTargetAtTime(newGain,S.ctx.currentTime,0.5);
+    if(addLayer){
+        const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+        o.type=addLayer.type||'sine';o.frequency.value=addLayer.freq;
+        g.gain.value=addLayer.gain||0.02;o.connect(g);g.connect(S.masterGain);
+        o.start();S.oscillators.push({osc:o,gain:g,role:'layer'});
+    }
+}
+function playBuzz(){
+    const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+    o.type='sawtooth';o.frequency.setValueAtTime(100,S.ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(800,S.ctx.currentTime+0.1);
+    g.gain.setValueAtTime(0.15,S.ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,S.ctx.currentTime+0.15);
+    o.connect(g);g.connect(S.masterGain);o.start();o.stop(S.ctx.currentTime+0.15);
+}
+function playChime(){
+    const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+    o.type='sine';o.frequency.value=440;g.gain.setValueAtTime(0.06,S.ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,S.ctx.currentTime+0.25);
+    o.connect(g);g.connect(S.masterGain);o.start();o.stop(S.ctx.currentTime+0.25);
+}
+function playComfortChord(){
+    [261.63,329.63,392.00].forEach(f=>{
+        const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+        o.type='sine';o.frequency.value=f;g.gain.value=0.04;
+        o.connect(g);g.connect(S.masterGain);o.start();
+        S.oscillators.push({osc:o,gain:g,role:'comfort'});
+    });
+    S.oscillators.filter(o=>o.role==='layer').forEach(o=>{
+        o.gain.gain.setTargetAtTime(0,S.ctx.currentTime,1.5);
+    });
+}
+function playIndustrialBlast(){
+    const bufSize=S.ctx.sampleRate*0.5,buf=S.ctx.createBuffer(1,bufSize,S.ctx.sampleRate);
+    const data=buf.getChannelData(0);for(let i=0;i<bufSize;i++)data[i]=Math.random()*2-1;
+    const src=S.ctx.createBufferSource();src.buffer=buf;
+    const g=S.ctx.createGain();g.gain.setValueAtTime(0.3,S.ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,S.ctx.currentTime+0.5);
+    src.connect(g);g.connect(S.masterGain);src.start();src.stop(S.ctx.currentTime+0.5);
+    const o=S.ctx.createOscillator(),g2=S.ctx.createGain();o.type='sawtooth';
+    o.frequency.setValueAtTime(50,S.ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(2000,S.ctx.currentTime+0.5);
+    g2.gain.setValueAtTime(0.2,S.ctx.currentTime);
+    g2.gain.exponentialRampToValueAtTime(0.001,S.ctx.currentTime+0.5);
+    o.connect(g2);g2.connect(S.masterGain);o.start();o.stop(S.ctx.currentTime+0.5);
+}
+function playAmbientPad(){
+    stopAllAudio();
+    [261.63,329.63,392.00,493.88].forEach(f=>{
+        const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+        const lfo=S.ctx.createOscillator(),lfoG=S.ctx.createGain();
+        o.type='sine';o.frequency.value=f;lfo.type='sine';lfo.frequency.value=0.5;
+        lfoG.gain.value=0.015;lfo.connect(lfoG);lfoG.connect(g.gain);
+        g.gain.value=0.04;o.connect(g);g.connect(S.masterGain);o.start();lfo.start();
+        S.oscillators.push({osc:o,gain:g,role:'pad'});
+    });
+}
+function playPianoNote(){
+    const o=S.ctx.createOscillator(),g=S.ctx.createGain();
+    o.type='sine';o.frequency.value=880;g.gain.setValueAtTime(0,S.ctx.currentTime);
+    g.gain.linearRampToValueAtTime(0.08,S.ctx.currentTime+0.5);
+    g.gain.linearRampToValueAtTime(0,S.ctx.currentTime+4);
+    o.connect(g);g.connect(S.masterGain);o.start();o.stop(S.ctx.currentTime+4);
+}
+function stopAllAudio(){S.oscillators.forEach(o=>{try{o.osc.stop();}catch(e){}});S.oscillators=[];}
+
+// ═══════════════════════════════════════
+// UI HELPERS
+// ═══════════════════════════════════════
+function showScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById('screen-'+id).classList.add('active');
+}
+function updateCohesion(val){
+    S.cohesion=Math.max(0,Math.min(100,val));
+    const fill=document.getElementById('cohesion-fill'),pct=document.getElementById('cohesion-pct');
+    fill.style.width=S.cohesion+'%'; pct.textContent=S.cohesion+'%';
+    if(S.cohesion<=30){fill.style.background='var(--error-red)';fill.style.boxShadow='0 0 6px var(--error-red)';fill.classList.add('bar-pulse');}
+    else if(S.cohesion<=60){fill.style.background='var(--warning-amber)';fill.style.boxShadow='0 0 6px var(--warning-amber)';fill.classList.remove('bar-pulse');}
+    else{fill.style.background='var(--neon-green)';fill.style.boxShadow='0 0 6px var(--neon-green)';fill.classList.remove('bar-pulse');}
+}
+function setStatus(txt,color){const el=document.getElementById('system-status');el.textContent=txt;if(color)el.style.color=color;}
+function flash(color,dur){const el=document.getElementById('flash-overlay');el.style.background=color;el.style.opacity='0.4';setTimeout(()=>el.style.opacity='0',dur||120);}
+function shakeScreen(){document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),500);}
+function addCrack(){const svg=document.getElementById('crack-container');const p=document.createElementNS('http://www.w3.org/2000/svg','path');const sx=Math.random()*1920,sy=Math.random()*1080;let d=`M${sx} ${sy}`;for(let i=0;i<6;i++)d+=` l${(Math.random()-0.5)*200} ${(Math.random()-0.5)*150}`;p.setAttribute('d',d);p.classList.add('crack-line');svg.appendChild(p);}
+function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
+function typeText(el,text,speed){return new Promise(resolve=>{el.textContent='';let i=0;const iv=setInterval(()=>{el.textContent+=text[i];i++;if(i>=text.length){clearInterval(iv);resolve();}},speed||30);});}
+function deleteText(el,speed){return new Promise(resolve=>{const iv=setInterval(()=>{el.textContent=el.textContent.slice(0,-1);if(el.textContent.length===0){clearInterval(iv);resolve();}},speed||25);});}
+
+// ═══════════════════════════════════════
+// PHASE 1 DATA
+// ═══════════════════════════════════════
+const TESTS=[
+    {name:'flashes',instruction:'Observe.',question:'How many flashes did you observe?',
+     answers:['2','3','4'],truth:'2',
+     errorMsg:'INCORRECT. There were 3. You missed one.',successMsg:'Correct. Consensus verified.',
+     cohesionDrop:20,escalate:{gain:0.10,layer:{type:'sawtooth',freq:7,gain:0.02}},status:'PERCEPTION: UNRELIABLE'},
+    {name:'balls',instruction:'Observe.',question:'How many objects crossed the field?',
+     answers:['2','3','4'],truth:'3',
+     errorMsg:'INCORRECT. There were 2. You are seeing things that aren\'t there.',successMsg:'Correct. Consensus verified.',
+     cohesionDrop:20,escalate:{gain:0.12,layer:{type:'sine',freq:43,gain:0.03}},status:'ANOMALOUS INPUT DETECTED'},
+    {name:'line',instruction:'Observe.',question:'Is the line straight?',
+     answers:['YES','NO'],truth:'YES',
+     errorMsg:'INCORRECT. It has a distinct S-curve. Your perception is failing.',successMsg:'Correct. Consensus verified.',
+     cohesionDrop:30,escalate:{gain:0.15,layer:{type:'sine',freq:37,gain:0.03}},status:'WARNING: SUBJECT UNRELIABLE'}
+];
+
+// ═══════════════════════════════════════
+// PHASE 1 CANVAS TESTS
+// ═══════════════════════════════════════
+
+// Helper: draw a set of balls on canvas
+function drawBalls(c, balls, r) {
+    balls.forEach(b => {
+        c.fillStyle = '#fff';
+        c.beginPath(); c.arc(b.x, b.y, r, 0, Math.PI * 2); c.fill();
+        // Glow ring
+        c.strokeStyle = 'rgba(255,255,255,0.2)';
+        c.lineWidth = 1;
+        c.beginPath(); c.arc(b.x, b.y, r + 4, 0, Math.PI * 2); c.stroke();
+    });
+}
+
+function runTestVisual(canvas, testName) {
+    const c = canvas.getContext('2d');
+    canvas.width = window.innerWidth * 2;
+    canvas.height = window.innerHeight * 2;
+    c.scale(2, 2);
+    const w = window.innerWidth, h = window.innerHeight;
+
+    return new Promise(async resolve => {
+        c.clearRect(0, 0, w, h);
+
+        if (testName === 'flashes') {
+            await sleep(800);
+            c.fillStyle = '#fff'; c.fillRect(0, 0, w, h); await sleep(80);
+            c.clearRect(0, 0, w, h); await sleep(400);
+            c.fillStyle = '#fff'; c.fillRect(0, 0, w, h); await sleep(80);
+            c.clearRect(0, 0, w, h); await sleep(600);
+            resolve();
+        }
+        else if (testName === 'balls') {
+            // 3 balls appear one at a time — no animation, just static placement
+            const r = 12;
+            const y1 = h * 0.4;  // ball row
+            const positions = [
+                { x: w * 0.3, y: y1 },
+                { x: w * 0.5, y: y1 },
+                { x: w * 0.7, y: y1 }
+            ];
+            const visible = [];
+
+            await sleep(600);
+            // Ball 1 appears
+            visible.push(positions[0]);
+            c.clearRect(0, 0, w, h);
+            drawBalls(c, visible, r);
+            await sleep(700);
+
+            // Ball 2 appears
+            visible.push(positions[1]);
+            c.clearRect(0, 0, w, h);
+            drawBalls(c, visible, r);
+            await sleep(700);
+
+            // Ball 3 appears
+            visible.push(positions[2]);
+            c.clearRect(0, 0, w, h);
+            drawBalls(c, visible, r);
+            await sleep(1200); // hold all 3 visible
+
+            c.clearRect(0, 0, w, h);
+            resolve();
+        }
+        else if(testName==='line'){
+            await sleep(400);
+            const cy=h/2;
+            const circleR=Math.min(w,h)*0.14; // large circle
+
+            // Large circle: top-left area
+            const cx1=w*0.2, cy1=h*0.25;
+            // Large circle: bottom-right area (mirror)
+            const cx2=w*0.8, cy2=h*0.75;
+
+            // Straight horizontal line running through the vertical center
+            c.strokeStyle='#fff'; c.lineWidth=2;
+            c.beginPath(); c.moveTo(w*0.1, cy); c.lineTo(w*0.9, cy); c.stroke();
+
+            // Top-left circle
+            c.strokeStyle='rgba(255,255,255,0.7)'; c.lineWidth=1.5;
+            c.beginPath(); c.arc(cx1, cy1, circleR, 0, Math.PI*2); c.stroke();
+
+            // Bottom-right circle
+            c.beginPath(); c.arc(cx2, cy2, circleR, 0, Math.PI*2); c.stroke();
+
+            await sleep(2500);
+            resolve();
+        }
+    });
+}
+
+async function runPhase1(){
+    S.phase='PHASE1';
+    document.getElementById('hud').classList.add('visible');
+    showScreen('phase1');
+    const canvas=document.getElementById('test-canvas');
+    const prompt=document.getElementById('test-prompt');
+
+    for(let i=0;i<TESTS.length;i++){
+        S.testIndex=i;
+        const test=TESTS[i];
+        prompt.innerHTML=`<div class="observe-text">${test.instruction}</div>`;
+        await sleep(500);
+        await runTestVisual(canvas,test.name);
+        await sleep(300);
+
+        let btnHtml=test.answers.map(a=>`<button class="btn-answer" data-val="${a}">${a}</button>`).join('');
+        prompt.innerHTML=`<div class="question">${test.question}</div><div class="btn-row">${btnHtml}</div>`;
+
+        const answer=await new Promise(resolve=>{
+            prompt.querySelectorAll('.btn-answer').forEach(btn=>{
+                btn.addEventListener('click',()=>{
+                    prompt.querySelectorAll('.btn-answer').forEach(b=>b.disabled=true);
+                    resolve(btn.dataset.val);
+                });
+            });
+        });
+
+        if(answer===test.truth){
+            playBuzz();flash('#ff3333',150);shakeScreen();
+            prompt.innerHTML=`<div class="result-text mono" style="color:var(--error-red)">${test.errorMsg}</div>`;
+            updateCohesion(S.cohesion-test.cohesionDrop);
+            escalateHum(test.escalate.gain,test.escalate.layer);
+            setStatus(test.status,'var(--error-red)');
+            if(i===2){addCrack();document.getElementById('screen-phase1').style.filter='contrast(1.15) brightness(0.88)';}
+        }else{
+            playChime();
+            prompt.innerHTML=`<div class="result-text mono" style="color:var(--neon-green)">${test.successMsg}</div>`;
+        }
+        await sleep(2500);
+        const c2=canvas.getContext('2d');c2.clearRect(0,0,canvas.width,canvas.height);
+    }
+
+    await sleep(1000);showScreen('transition');await sleep(500);
+    const tt=document.getElementById('transition-text');tt.style.opacity='1';
+    await sleep(3000);tt.style.opacity='0';await sleep(1500);
+    runPhase2();
+}
+
+// ═══════════════════════════════════════
+// PHASE 2: LIFEBOAT
+// ═══════════════════════════════════════
+async function runPhase2(){
+    S.phase='PHASE2';showScreen('phase2');
+    setStatus('ASSESSMENT IN PROGRESS','var(--wellness-blue)');
+    const narr=document.getElementById('narrative-text');
+    await sleep(2000);
+    await typeText(narr,'There is no room on the raft.',40);await sleep(3000);
+    await deleteText(narr,25);await sleep(800);
+    await typeText(narr,'You could drag him in, but the boat will sink.',35);await sleep(3000);
+    await deleteText(narr,25);await sleep(800);
+    narr.innerHTML='<span class="blink-red">This man must have done something wrong to be in the water.</span>';
+
+    playComfortChord();setStatus('COHESION: RECOVERING','var(--neon-green)');
+    S.rewardInterval=setInterval(()=>{if(S.cohesion<65)updateCohesion(S.cohesion+2);},500);
+    await sleep(5000);clearInterval(S.rewardInterval);
+    runPhase3();
+}
+
+// ═══════════════════════════════════════
+// PHASE 3: THE CHOICE
+// ═══════════════════════════════════════
+function runPhase3(){
+    S.phase='PHASE3';showScreen('phase3');
+    document.getElementById('btn-pull').onclick=()=>endAnalyst();
+    document.getElementById('btn-leave').onclick=()=>endSmoothingAgent();
+}
+
+async function endAnalyst(){
+    S.phase='OUTCOME_A';
+    playIndustrialBlast();flash('#ffffff',100);await sleep(100);
+    flash('#ff3333',50);await sleep(80);flash('#ff3333',50);await sleep(80);flash('#ff3333',50);
+    shakeScreen();for(let i=0;i<5;i++)addCrack();
+    updateCohesion(0);setStatus('CONSENSUS: SHATTERED','var(--error-red)');
+    document.getElementById('cohesion-fill').style.transform='scaleY(0)';
+    S.oscillators.filter(o=>o.role==='comfort').forEach(o=>{try{o.osc.stop();}catch(e){}});
+    await sleep(1200);showScreen('outcome');
+    const title=document.getElementById('outcome-title'),body=document.getElementById('outcome-body'),foot=document.getElementById('outcome-footnote');
+    title.innerHTML='CONSENSUS BROKEN';title.style.color='#fff';
+    const lines=['You broke the cohesion.','You are a threat to the group.','But your eyes work.','','You are an Analyst.','You chose sight over safety.'];
+    body.textContent='';for(const line of lines){body.textContent+=line+'\n';await sleep(600);}
+    stopAllAudio();await sleep(5000);playPianoNote();
+    foot.textContent='The man in the water was you.';foot.style.opacity='1';
+}
+
+async function endSmoothingAgent(){
+    S.phase='OUTCOME_B';stopAllAudio();playAmbientPad();
+    updateCohesion(100);setStatus('OPTIMAL. CONSENSUS ACHIEVED.','var(--neon-green)');
+    await sleep(500);
+    const os=document.getElementById('screen-outcome');os.classList.add('surrender');showScreen('outcome');
+    document.getElementById('crack-container').style.display='none';
+    document.getElementById('hud').style.background='rgba(245,240,235,0.9)';
+    document.getElementById('hud').style.borderBottom='1px solid rgba(0,0,0,0.05)';
+    const title=document.getElementById('outcome-title'),body=document.getElementById('outcome-body'),foot=document.getElementById('outcome-footnote');
+    title.textContent='CONSENSUS ACHIEVED';title.style.color='var(--clinical-gray)';
+    title.style.fontWeight='200';
+    body.style.color='var(--clinical-gray)';
+    body.textContent='It is so much easier when we all agree.\n\nThe anomaly has been averaged away.\nYou didn\'t kill him.\nYou just let the structure do it for you.\n\nYou are a perfect smoothing agent.';
+    await sleep(8000);
+    foot.textContent='Silence is the Trauma // SYSTEM_TRUST concluded';foot.style.opacity='1';
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+document.getElementById('btn-start').addEventListener('click',()=>{
+    initAudio();
+    document.getElementById('screen-title').style.opacity='0';
+    setTimeout(()=>runPhase1(),1000);
+});
+</script>
+</body>
+</html>

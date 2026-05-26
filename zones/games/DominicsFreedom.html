@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Dark Screen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+            /* No scrolling allowed */
+            width: 100%;
+            height: 100%;
+            font-family: 'Share Tech Mono', monospace;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* The Canvas renders the CRT effects, Glitches, and 404 Flicker */
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            /* Above CCTV, below UI */
+            pointer-events: none;
+            /* Let clicks pass through */
+            mix-blend-mode: overlay;
+            /* Blend with video */
+        }
+
+        /* The UI Layer handles text and interactions */
+        #ui-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 30;
+            pointer-events: none;
+            /* Let clicks pass through to canvas if needed, but we toggle this */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Dialogue at bottom */
+            padding-bottom: 40px;
+            box-sizing: border-box;
+            transition: opacity 1s;
+        }
+
+        /* Start Button overlay */
+        #start-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button.glitch-btn {
+            background: transparent;
+            border: 1px solid #3f3;
+            color: #3f3;
+            padding: 15px 30px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 10px #3f3;
+            animation: pulse 2s infinite;
+            pointer-events: auto;
+        }
+
+        /* Dialogue Box */
+        #dialogue-box {
+            background: rgba(0, 0, 0, 0.85);
+            border-top: 1px solid #333;
+            padding: 20px;
+            min-height: 100px;
+            width: 100%;
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            text-shadow: 0 0 5px #fff;
+            opacity: 0;
+            /* Hidden by default */
+            transition: opacity 0.5s;
+            pointer-events: auto;
+        }
+
+        .speaker-name {
+            color: #555;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Interaction Layer (Center Screen) */
+        #interaction-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 150px);
+            /* Leave room for dialogue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        /* Input Styling */
+        input.terminal-input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #3f3;
+            color: #3f3;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2rem;
+            text-align: center;
+            width: 80%;
+            outline: none;
+            text-transform: uppercase;
+            display: none;
+            /* Hidden by default */
+        }
+
+        /* Blueprint/Roster Elements */
+        .game-element {
+            display: none;
+            width: 80%;
+            border: 1px solid #004400;
+            padding: 15px;
+            background: rgba(0, 20, 0, 0.8);
+            color: #0f0;
+        }
+
+        .glitch-text {
+            color: red;
+            font-weight: bold;
+            text-shadow: 2px 0 red, -2px 0 blue;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Pure Black Mirror Mode */
+        .mirror-mode {
+            background-color: black !important;
+        }
+
+        .mirror-mode canvas {
+            opacity: 0.05;
+            /* Almost invisible */
+        }
+
+        .mirror-mode #dialogue-box {
+            opacity: 0 !important;
+        }
+
+        /* --- CCTV GRID STYLES --- */
+        #cctv-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            /* Hidden initially */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2px;
+            background: #111;
+            z-index: 10;
+            /* Below Canvas(20) and UI(30) */
+        }
+
+        .cctv-cell {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cctv-cell video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.8) contrast(1.2) brightness(0.6) sepia(0.2);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .cctv-label {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1px 3px;
+            pointer-events: none;
+            z-index: 15;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* Footer Message styling */
+        #footer-message {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            color: #aaa;
+            font-size: 0.9rem;
+            max-width: 300px;
+            opacity: 0;
+            transition: opacity 2s;
+            z-index: 40;
+            /* On top of everything */
+            text-shadow: 0 0 2px #000;
+            pointer-events: none;
+        }
+
+        .glitch-active video {
+            filter: invert(0.1) contrast(1.4) brightness(0.9) !important;
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+            /* No scrolling allowed */
+            width: 100%;
+            height: 100%;
+            font-family: 'Share Tech Mono', monospace;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* The Canvas renders the CRT effects, Glitches, and 404 Flicker */
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            /* Above CCTV, below UI */
+            pointer-events: none;
+            /* Let clicks pass through */
+            mix-blend-mode: overlay;
+            /* Blend with video */
+        }
+
+        /* The UI Layer handles text and interactions */
+        #ui-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 30;
+            pointer-events: none;
+            /* Let clicks pass through to canvas if needed, but we toggle this */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            /* Dialogue at bottom */
+            padding-bottom: 40px;
+            box-sizing: border-box;
+            transition: opacity 1s;
+        }
+
+        /* Start Button overlay */
+        #start-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button.glitch-btn {
+            background: transparent;
+            border: 1px solid #3f3;
+            color: #3f3;
+            padding: 15px 30px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 10px #3f3;
+            animation: pulse 2s infinite;
+            pointer-events: auto;
+        }
+
+        /* Dialogue Box */
+        #dialogue-box {
+            background: rgba(0, 0, 0, 0.85);
+            border-top: 1px solid #333;
+            padding: 20px;
+            min-height: 100px;
+            width: 100%;
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            text-shadow: 0 0 5px #fff;
+            opacity: 0;
+            /* Hidden by default */
+            transition: opacity 0.5s;
+            pointer-events: auto;
+        }
+
+        .speaker-name {
+            color: #555;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Interaction Layer (Center Screen) */
+        #interaction-zone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 150px);
+            /* Leave room for dialogue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        /* Input Styling */
+        input.terminal-input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #3f3;
+            color: #3f3;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2rem;
+            text-align: center;
+            width: 80%;
+            outline: none;
+            text-transform: uppercase;
+            display: none;
+            /* Hidden by default */
+        }
+
+        /* Blueprint/Roster Elements */
+        .game-element {
+            display: none;
+            width: 80%;
+            border: 1px solid #004400;
+            padding: 15px;
+            background: rgba(0, 20, 0, 0.8);
+            color: #0f0;
+        }
+
+        .glitch-text {
+            color: red;
+            font-weight: bold;
+            text-shadow: 2px 0 red, -2px 0 blue;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Pure Black Mirror Mode */
+        .mirror-mode {
+            background-color: black !important;
+        }
+
+        .mirror-mode canvas {
+            opacity: 0.05;
+            /* Almost invisible */
+        }
+
+        .mirror-mode #dialogue-box {
+            opacity: 0 !important;
+        }
+
+        /* --- CCTV GRID STYLES --- */
+        #cctv-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            /* Hidden initially */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2px;
+            background: #111;
+            z-index: 10;
+            /* Below Canvas(20) and UI(30) */
+        }
+
+        .cctv-cell {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cctv-cell video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.8) contrast(1.2) brightness(0.6) sepia(0.2);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .cctv-label {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1px 3px;
+            pointer-events: none;
+            z-index: 15;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* Footer Message styling */
+        #footer-message {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            color: #aaa;
+            font-size: 0.9rem;
+            max-width: 300px;
+            opacity: 0;
+            transition: opacity 2s;
+            z-index: 40;
+            /* On top of everything */
+            text-shadow: 0 0 2px #000;
+            pointer-events: none;
+        }
+
+        .glitch-active video {
+            filter: invert(0.1) contrast(1.4) brightness(0.9) !important;
+        }
+    </style>
+
+
+
+    <div id="start-overlay">
+        <button class="glitch-btn" id="start-btn">INITIALIZE SYSTEM_v4</button>
+        <p style="color: #444; margin-top: 20px; font-size: 0.8rem;">[AUDIO REQUIRED]</p>
+    </div>
+
+    <div id="game-container">
+        <!-- CCTV Grid Layer -->
+        <div id="cctv-grid"></div>
+
+        <!-- Canvas for CRT Effects -->
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            <!-- Center Screen Interactions -->
+            <div id="interaction-zone">
+                <input type="text" id="term-input" class="terminal-input" autocomplete="off">
+
+                <div id="roster-panel" class="game-element">
+                    <h3 style="border-bottom: 1px solid #0f0; margin-bottom: 10px;">SECTOR 4 ROSTER</h3>
+                    <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
+                        <span>MILLER, T.</span>
+                        <span id="miller-status">STATIONARY</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: #0a0;">LOC: SECTOR 4 DOOR</div>
+                </div>
+
+                <div id="archive-panel" class="game-element" style="border-color: #0055ff; color: #55aaff;">
+                    <h3>WESTSIDE BLUEPRINT</h3>
+                    <div
+                        style="height: 100px; border: 1px dashed #0055ff; margin: 10px 0; display:flex; align-items:center; justify-content:center;">
+                        <span id="blueprint-hint">TOUCH AND HOLD SECTOR 4</span>
+                    </div>
+                </div>
+
+                <div id="binary-panel" class="game-element" style="border-color: #fff; color: #fff;">
+                    <h3 style="text-align:center;">THE BINARY</h3>
+                    <div style="display:flex; justify-content:space-between; font-size: 0.8rem;">
+                        <div>
+                            <div>+ SCHOOLS</div>
+                            <div>+ HOSPITALS</div>
+                        </div>
+                        <div style="text-align:right; color: #f55;">
+                            <div>- CASUALTIES</div>
+                            <div>- BRIBES</div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-top: 20px; font-size: 1.5rem;">NET POSITIVE</div>
+                </div>
+
+                <button id="final-btn" class="glitch-btn"
+                    style="display:none; border-color:white; color:white;">PROCEED</button>
+            </div>
+
+            <!-- Dialogue -->
+            <div id="dialogue-box">
+                <span class="speaker-name">DOMINIC_</span>
+                <span id="dialogue-text"></span>
+            </div>
+        </div>
+
+        <!-- Final Footer Message -->
+        <div id="footer-message"></div>
+    </div>
+
+    <script>
+        /**
+         * THE DARK SCREEN - GAME ENGINE
+         * * Handles:
+         * 1. Audio Synthesis (Drone, Typing, SFX)
+         * 2. Canvas Rendering (Scanlines, 404 Glitch)
+         * 3. Narrative State Machine
+         * 4. 3x3 CCTV Grid System
+         */
+
+        // --- CONFIGURATION ---
+        const CONFIG = {
+            typeSpeed: 40,
+            glitchChance: 0.02
+        };
+
+        const R2_BASE = "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/DominicGameVideo/";
+
+        const CCTV_LOCATIONS = [
+            {
+                id: "loadingBay",
+                idle: "loadingBay_SmokeStarts_idle.mp4",
+                actions: ["loadingBay_longIdle.mp4"]
+            },
+            {
+                id: "sideFence",
+                idle: "sideFence_Idle.mp4",
+                actions: [
+                    "sideFence_OneDarkGreyCarLeftToRight.mp4",
+                    "sideFence_slightFogRollingBy.mp4",
+                    "sideFence_twoCarsWhitThenBlackRightToLeft.mp4"
+                ]
+            },
+            {
+                id: "sideStairs",
+                idle: "SideStairsDecendToBackStreet_idle.mp4",
+                actions: ["SideStairsDecendToBackStreet_idleWithCarPassGlitch.mp4"]
+            },
+            {
+                id: "wheelChair",
+                idle: "wheelChairHallway_idle.mp4",
+                actions: ["wheelChairHallway_idleLong_Withglitch.mp4"]
+            },
+            {
+                id: "corridor",
+                idle: "corridor_idleMildGlitch_2.mp4",
+                actions: ["corridor_idleMildGlitch_2.mp4"] // No specific action listed, reused or could use glitch variant as action
+            },
+            {
+                id: "carPark",
+                idle: "asphaltCarPark_idleMotionless.mp4",
+                actions: ["asphaltCarPark_IdleLightBlinks.mp4"]
+            },
+            {
+                id: "shelves",
+                idle: "factoryShelves_idle.mp4",
+                actions: ["factoryShelves_idleWithSlightGlitch.mp4"]
+            },
+            {
+                id: "frontGate",
+                idle: "frontGate_idleMotionless.mp4",
+                actions: [
+                    "frontGate_idleSlightWaterSprayAcrossRoad.mp4",
+                    "frontGate_manSuddenlySnapsIntoFramOnThisSideOfTheGateAndWalkToprisonIngreyHoody.mp4",
+                    "frontGate_manWalksFromOurSideofgateToGateAndCrossesToLeftToEsitButDisappearsPillar.mp4",
+                    "frontGate_waterGropletsOnScreenAsCarApproachesTheLeaves.mp4",
+                    "frontGate_windRain.mp4"
+                ]
+            },
+            {
+                id: "garbage",
+                idle: "garbagePileMess_idle.mp4",
+                actions: ["garbagePileMess_idleSlightlyGlitchy.mp4"]
+            },
+            {
+                id: "glassHall",
+                idle: "glassWindowedHallWithRandomHospitalBed_idle.mp4",
+                actions: ["glassWindowedHallWithRandomHospitalBed_idleGlitchy.mp4"]
+            },
+            {
+                id: "hospitalWing",
+                idle: "HospitalWing_idleStill.mp4",
+                actions: [
+                    "HospitalWing_manWalksWownHallturnsLeft_anotherWalksFromLeft.mp4",
+                    "HospitalWing_OneManWalksByLeftToRight.mp4"
+                ]
+            }
+        ];
+
+        // --- STATE MANAGEMENT ---
+        const STATE = {
+            active: false,
+            scene: 0,
+            waitingForInput: false,
+            mirrorMode: false,
+            cctvMode: false
+        };
+
+        // --- DOM ELEMENTS ---
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const ui = {
+            layer: document.getElementById('ui-layer'),
+            dialogueBox: document.getElementById('dialogue-box'),
+            text: document.getElementById('dialogue-text'),
+            input: document.getElementById('term-input'),
+            roster: document.getElementById('roster-panel'),
+            millerStatus: document.getElementById('miller-status'),
+            archive: document.getElementById('archive-panel'),
+            binary: document.getElementById('binary-panel'),
+            finalBtn: document.getElementById('final-btn'),
+            blueprintHint: document.getElementById('blueprint-hint'),
+            cctvGrid: document.getElementById('cctv-grid'),
+            footerMessage: document.getElementById('footer-message')
+        };
+
+        // --- AUDIO ENGINE ---
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const masterGain = audioCtx.createGain();
+        masterGain.gain.value = 0.3;
+        masterGain.connect(audioCtx.destination);
+
+        function playTone(freq, type, duration) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = type;
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+            osc.connect(gain);
+            gain.connect(masterGain);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        // The "Breathing" Drone
+        let droneOsc1, droneOsc2;
+        function startDrone() {
+            droneOsc1 = audioCtx.createOscillator();
+            droneOsc1.type = 'sine';
+            droneOsc1.frequency.value = 50; // Deep bass
+
+            droneOsc2 = audioCtx.createOscillator();
+            droneOsc2.type = 'triangle';
+            droneOsc2.frequency.value = 52; // Binaural beat effect
+
+            const droneGain = audioCtx.createGain();
+            droneGain.gain.value = 0.05;
+
+            // Breathing LFO
+            const lfo = audioCtx.createOscillator();
+            lfo.frequency.value = 0.2; // 5 seconds per breath
+            const lfoGain = audioCtx.createGain();
+            lfoGain.gain.value = 0.02; // Depth of breath
+
+            lfo.connect(lfoGain);
+            lfoGain.connect(droneGain.gain);
+
+            droneOsc1.connect(droneGain);
+            droneOsc2.connect(droneGain);
+            droneGain.connect(masterGain);
+
+            droneOsc1.start();
+            droneOsc2.start();
+            lfo.start();
+        }
+
+        // --- VISUAL ENGINE (CANVAS) ---
+        let frame = 0;
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        function draw() {
+            if (!STATE.active) return;
+
+            // Clear
+            ctx.fillStyle = STATE.mirrorMode ? 'rgba(0,0,0,0.1)' : 'rgba(0, 5, 0, 0.9)'; // Trail effect
+
+            // Adjust opacity if in CCTV mode to let videos show through
+            if (STATE.cctvMode) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear entirely
+                ctx.fillStyle = 'rgba(0, 5, 0, 0.2)'; // Very light overlay
+            }
+
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 1. The 404 Sequence
+            if (STATE.scene === 0) {
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#000';
+                ctx.font = '40px Times New Roman';
+                ctx.fillText('404 Not Found', 20, 60);
+
+                // Random glitch
+                if (Math.random() > 0.8) {
+                    const h = Math.random() * canvas.height;
+                    ctx.fillStyle = '#000';
+                    ctx.fillRect(0, h, canvas.width, 10);
+                }
+                requestAnimationFrame(draw);
+                return;
+            }
+
+            // 2. The Dark System / CCTV Overlay
+            if (STATE.mirrorMode) {
+                // Minimal drawing in mirror mode (just black)
+            } else {
+                // Scanlines
+                ctx.fillStyle = 'rgba(0, 255, 0, 0.03)';
+                for (let i = 0; i < canvas.height; i += 4) {
+                    ctx.fillRect(0, i, canvas.width, 1);
+                }
+
+                // Rolling bar
+                const barY = (frame * 2) % canvas.height;
+                ctx.fillStyle = 'rgba(0, 255, 0, 0.05)';
+                ctx.fillRect(0, barY, canvas.width, 20);
+
+                // Noise
+                if (Math.random() < CONFIG.glitchChance) {
+                    ctx.fillStyle = '#fff';
+                    const x = Math.random() * canvas.width;
+                    const y = Math.random() * canvas.height;
+                    ctx.fillRect(x, y, 100, 5);
+                    if (!STATE.cctvMode) playTone(800, 'square', 0.05); // Glitch sound (quieter in CCTV)
+                }
+            }
+
+            frame++;
+            requestAnimationFrame(draw);
+        }
+
+        // --- GAME LOGIC & SCRIPT ---
+
+        const SCRIPT = [
+            { text: "Stay. I can hear you breathing..." },
+            { text: "You've clicked the link. You saw the flicker." },
+            { text: "You're wondering why the screen is so dark." },
+            { text: "It's a mirror. But also... a test." },
+            { text: "There is a cursor. Type CREDENTIALS.", type: "input_req" },
+            { text: "Details matter. They are the only things that are real.", type: "show_roster" },
+            { text: "Officer Miller. Sector 4.", wait: 2000 },
+            { text: "He's actually in the breakroom, finishing a coffee I paid for.", type: "glitch_roster" },
+            { text: "If you're looking for the Builder... check the Archive.", type: "show_archive" },
+            { text: "Look closely at the structural notes for the fourth floor.", type: "wait_touch" },
+            { text: "A math problem. A few millimeters of variance for a few million in liquidity.", type: "show_binary" },
+            { text: "If the universe is a balance sheet, I am technically a saint.", wait: 3000 },
+            { text: "Before you move on... Lean back.", type: "trigger_mirror" },
+            { text: "Take a breath. Look at the reflection of your own face in the glass." },
+            { text: "You aren't here because you hate me." },
+            { text: "You're here because you're tired of rules that don't work." },
+            { text: "I've cleared a path for you.", type: "show_final" }
+        ];
+
+        let currentLine = 0;
+
+        function nextLine() {
+            if (currentLine >= SCRIPT.length) return;
+
+            const line = SCRIPT[currentLine];
+            ui.text.innerHTML = '';
+            ui.dialogueBox.style.opacity = 1;
+
+            // Typewriter Effect
+            let i = 0;
+            const typeInterval = setInterval(() => {
+                ui.text.innerHTML += line.text.charAt(i);
+                playTone(1000 + (Math.random() * 200), 'square', 0.02); // Typing blip
+                i++;
+                if (i >= line.text.length) {
+                    clearInterval(typeInterval);
+                    processAction(line);
+                }
+            }, CONFIG.typeSpeed);
+        }
+
+        function processAction(line) {
+            // Pause before next line or wait for input
+            if (line.type === 'input_req') {
+                ui.input.style.display = 'block';
+                ui.input.focus();
+                ui.input.value = '';
+            } else if (line.type === 'show_roster') {
+                ui.input.style.display = 'none';
+                ui.roster.style.display = 'block';
+                playTone(400, 'sine', 0.5); // UI Open sound
+                setTimeout(() => { currentLine++; nextLine(); }, 3000);
+            } else if (line.type === 'glitch_roster') {
+                triggerRosterGlitch();
+            } else if (line.type === 'show_archive') {
+                ui.roster.style.display = 'none';
+                ui.archive.style.display = 'block';
+                setTimeout(() => { currentLine++; nextLine(); }, 3000);
+            } else if (line.type === 'wait_touch') {
+                // Halt until touch
+                ui.archive.style.borderColor = '#f00'; // Hint interaction
+                ui.blueprintHint.style.animation = 'pulse 1s infinite';
+            } else if (line.type === 'show_binary') {
+                ui.archive.style.display = 'none';
+                ui.binary.style.display = 'block';
+                setTimeout(() => { currentLine++; nextLine(); }, 4000);
+            } else if (line.type === 'trigger_mirror') {
+                ui.binary.style.display = 'none';
+                STATE.mirrorMode = true;
+                document.body.classList.add('mirror-mode');
+                setTimeout(() => { currentLine++; nextLine(); }, 4000);
+            } else if (line.type === 'show_final') {
+                ui.finalBtn.style.display = 'block';
+            } else {
+                // Standard text delay
+                setTimeout(() => {
+                    currentLine++;
+                    nextLine();
+                }, line.wait || 2000);
+            }
+        }
+
+        // --- GAMEPLAY INTERACTIONS ---
+
+        // 1. Initial Start
+        document.getElementById('start-btn').addEventListener('click', () => {
+            document.getElementById('start-overlay').style.display = 'none';
+            STATE.active = true;
+
+            audioCtx.resume();
+            playTone(200, 'sawtooth', 0.5); // Boot sound
+
+            requestAnimationFrame(draw);
+
+            // Scene 0: The Flicker (1.5s)
+            setTimeout(() => {
+                STATE.scene = 1; // Switch to Dark Mode
+                startDrone();
+                nextLine(); // Start Monologue
+            }, 1500);
+        });
+
+        // 2. Input Handling
+        ui.input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                if (ui.input.value.trim().toUpperCase() === 'CREDENTIALS') {
+                    playTone(600, 'sine', 0.1); // Success
+                    currentLine++;
+                    nextLine();
+                } else {
+                    playTone(100, 'sawtooth', 0.3); // Error
+                    ui.input.style.borderBottomColor = 'red';
+                    setTimeout(() => ui.input.style.borderBottomColor = '#3f3', 500);
+                }
+            }
+        });
+
+        // 3. Roster Glitch
+        function triggerRosterGlitch() {
+            let count = 0;
+            const interval = setInterval(() => {
+                ui.millerStatus.style.color = (count % 2 === 0) ? 'red' : '#0f0';
+                ui.millerStatus.innerText = (Math.random() > 0.5) ? 'ERR_//' : 'STATIONARY';
+                playTone(800, 'square', 0.05);
+                count++;
+                if (count > 10) {
+                    clearInterval(interval);
+                    ui.millerStatus.innerText = 'COMPROMISED';
+                    ui.millerStatus.classList.add('glitch-text');
+                    ui.roster.style.borderColor = 'red';
+                    setTimeout(() => { currentLine++; nextLine(); }, 2000);
+                }
+            }, 100);
+        }
+
+        // 4. Archive Touch
+        ui.archive.addEventListener('touchstart', handleTouch);
+        ui.archive.addEventListener('mousedown', handleTouch);
+
+        function handleTouch(e) {
+            if (currentLine !== 9) return; // Only work on specific line
+            e.preventDefault();
+
+            ui.blueprintHint.innerText = "ACCESSING...";
+            playTone(300, 'triangle', 0.5);
+
+            setTimeout(() => {
+                ui.blueprintHint.innerHTML = "<span style='color:red'>VAR: 3mm<br>PROFIT: $4.2M</span>";
+                playTone(600, 'sine', 0.2);
+                setTimeout(() => {
+                    currentLine++;
+                    nextLine();
+                }, 1000);
+            }, 1500);
+        }
+
+        // 5. Final -> CCTV Transition
+        ui.finalBtn.addEventListener('click', () => {
+            startCCTV();
+        });
+
+        // --- CCTV LOGIC ---
+        function startCCTV() {
+            // 1. Hide UI
+            ui.layer.style.opacity = 0;
+            setTimeout(() => { ui.layer.style.display = 'none'; }, 1000);
+
+            // 2. Disable Mirror Mode
+            STATE.mirrorMode = false;
+            document.body.classList.remove('mirror-mode');
+            STATE.cctvMode = true;
+
+            // 3. Prepare Grid
+            ui.cctvGrid.style.display = 'grid';
+
+            // Randomly select 9 unique locations
+            const shuffled = [...CCTV_LOCATIONS].sort(() => 0.5 - Math.random());
+            const selected = shuffled.slice(0, 9);
+
+            selected.forEach((loc, index) => {
+                const cell = document.createElement('div');
+                cell.className = 'cctv-cell';
+                cell.id = 'cctv-' + index;
+
+                const vid = document.createElement('video');
+                vid.src = R2_BASE + loc.idle;
+                // Important: Need to handle cross-origin if needed, but R2 usually fine
+                // vid.crossOrigin = "anonymous"; 
+                vid.loop = true;
+                vid.muted = true;
+                vid.playsInline = true;
+                vid.autoplay = true;
+                vid.dataset.locationId = loc.id;
+
+                const label = document.createElement('div');
+                label.className = 'cctv-label';
+                label.innerText = `CAM_${loc.id.toUpperCase()}_0${index + 1}`;
+
+                cell.appendChild(vid);
+                cell.appendChild(label);
+                ui.cctvGrid.appendChild(cell);
+            });
+
+            playTone(400, 'sawtooth', 1.0); // Big open sound
+
+            // 4. Start Director Loop (Random Switches)
+            setInterval(cctvDirector, 3000);
+
+            // 5. Show Footer Message
+            setTimeout(() => {
+                ui.footerMessage.innerHTML = "hey this is just a game.<br>It's a free game - a puzzle.<br>Not real. I promise ;)";
+                ui.footerMessage.style.opacity = 1;
+            }, 5000);
+        }
+
+        function cctvDirector() {
+            if (!STATE.cctvMode) return;
+
+            // Pick a random cell
+            const cellIndex = Math.floor(Math.random() * 9);
+            const cell = document.getElementById('cctv-' + cellIndex);
+            if (!cell) return;
+
+            const vid = cell.querySelector('video');
+            const locId = vid.dataset.locationId;
+            const locData = CCTV_LOCATIONS.find(l => l.id === locId);
+
+            if (!locData || locData.actions.length === 0) return;
+
+            // Prevent interrupting an action already in progress
+            if (!vid.loop) return;
+
+            // Visual Glitch
+            cell.classList.add('glitch-active');
+            playTone(1200, 'square', 0.1);
+
+            // Swap to Action
+            const actionVid = locData.actions[Math.floor(Math.random() * locData.actions.length)];
+
+            // Temporary video swap logic
+            vid.loop = false; // Action shouldn't loop forever
+            vid.src = R2_BASE + actionVid;
+            vid.play();
+
+            // When action ends, go back to idle
+            vid.onended = () => {
+                vid.src = R2_BASE + locData.idle;
+                vid.loop = true;
+                vid.play();
+                cell.classList.remove('glitch-active');
+                vid.onended = null; // Clear handler
+            };
+        }
+
+    </script>
+</main>
+</body>
+
+</html>

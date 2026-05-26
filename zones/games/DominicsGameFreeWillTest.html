@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMINIC: THE WILL ARCHITECT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Inter:wght@200;300;400;500&display=swap');
+
+        :root {
+            --stone-50: #fafaf9;
+            --stone-100: #f5f5f4;
+            --stone-200: #e7e5e4;
+            --stone-300: #d6d3d1;
+            --stone-800: #292524;
+            --stone-900: #1c1917;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--stone-900);
+            color: var(--stone-100);
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .sys-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--stone-800);
+            padding: 14px 28px;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--stone-300);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sys-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--stone-300);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .sys-btn:active {
+            transform: translateY(1px);
+        }
+
+        .node-gold {
+            background: #d4af37 !important;
+            box-shadow: 0 0 30px #d4af37;
+            border-color: #fff !important;
+        }
+
+        .kruskal-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 4px;
+        }
+
+        .kruskal-cell {
+            aspect-ratio: 1;
+            border: 1px solid var(--stone-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--stone-500);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .kruskal-cell:hover {
+            border-color: var(--stone-500);
+        }
+
+        .kruskal-active {
+            background: var(--stone-100);
+            color: var(--stone-900);
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        #ghost-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.03);
+            z-index: 100;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            from {
+                top: 0%
+            }
+
+            to {
+                top: 100%
+            }
+        }
+
+        .glitch-text {
+            animation: glitch 0.2s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+        }
+
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+    </style>
+
+    <!-- PIXELSTORTION BRANDING -->
+    <style>
+        .brand-dropdown-container { position: fixed; top: 10px; left: 12px; z-index: 10000; min-width: 160px; pointer-events: auto; }
+        .ps-brand { font-family: monospace; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s, text-shadow 0.2s; cursor: pointer; }
+        .ps-brand:hover { color: #fff; text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+        .brand-dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 6px; background: rgba(5,5,5,0.95); border: 1px solid #333; min-width: 180px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; backdrop-filter: blur(8px); z-index: 10001; display: flex; flex-direction: column; padding: 4px 0; text-align: left; }
+        .brand-dropdown-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+        .brand-dropdown-item { color: #ccc; padding: 8px 12px; text-decoration: none; display: block; font-family: monospace; font-size: 12px; transition: all 0.2s ease; }
+        .brand-dropdown-item:hover { background-color: #111; color: #fff; padding-left: 16px; }
+    </style>
+
+</head>
+
+<body class="flex items-center justify-center h-screen w-screen overflow-hidden">
+
+    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+    <div class="brand-dropdown-container">
+        <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
+            <span class="ps-brand">PIXELSTORTION</span>
+        </button>
+        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+        </div>
+    </div>
+    <script>
+        window.toggleBrandMenu = function(e) { e.stopPropagation(); document.getElementById('brandDropdown').classList.toggle('active'); };
+        document.addEventListener('click', () => { const m = document.getElementById('brandDropdown'); if (m) m.classList.remove('active'); });
+    </script>
+
+
+    
+<main data-barba="container" data-barba-namespace="standalone">
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Inter:wght@200;300;400;500&display=swap');
+
+        :root {
+            --stone-50: #fafaf9;
+            --stone-100: #f5f5f4;
+            --stone-200: #e7e5e4;
+            --stone-300: #d6d3d1;
+            --stone-800: #292524;
+            --stone-900: #1c1917;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--stone-900);
+            color: var(--stone-100);
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .sys-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--stone-800);
+            padding: 14px 28px;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--stone-300);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sys-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--stone-300);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .sys-btn:active {
+            transform: translateY(1px);
+        }
+
+        .node-gold {
+            background: #d4af37 !important;
+            box-shadow: 0 0 30px #d4af37;
+            border-color: #fff !important;
+        }
+
+        .kruskal-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 4px;
+        }
+
+        .kruskal-cell {
+            aspect-ratio: 1;
+            border: 1px solid var(--stone-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--stone-500);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .kruskal-cell:hover {
+            border-color: var(--stone-500);
+        }
+
+        .kruskal-active {
+            background: var(--stone-100);
+            color: var(--stone-900);
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        #ghost-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.03);
+            z-index: 100;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            from {
+                top: 0%
+            }
+
+            to {
+                top: 100%
+            }
+        }
+
+        .glitch-text {
+            animation: glitch 0.2s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+        }
+
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+    </style>
+
+
+
+    <div class="scanline"></div>
+    <div id="ghost-cursor"></div>
+
+    <div id="audio-status" class="fixed bottom-4 left-4 text-[10px] mono text-stone-600 tracking-tighter">
+        BINAURAL_SYNC: STANDBY
+    </div>
+
+    <!-- SCREENS -->
+    <div id="main-container" class="w-full max-w-2xl px-8 flex flex-col items-center z-20">
+
+        <!-- INITIALIZE -->
+        <div id="screen-init" class="text-center space-y-6">
+            <h1 class="text-4xl font-extralight tracking-[0.3em] text-white">DOMINIC</h1>
+            <p class="text-[10px] mono text-stone-500 uppercase tracking-widest">The Will Architect // Volitional
+                Interface</p>
+            <div class="h-[1px] w-12 bg-stone-700 mx-auto"></div>
+            <p class="text-sm text-stone-400 font-light leading-relaxed max-w-sm mx-auto">
+                "Subjectivity is the primary structural flaw. We are here to provide the necessary support."
+            </p>
+            <button id="btn-start" class="sys-btn mt-12 w-full">Begin Integration</button>
+        </div>
+
+        <!-- PHASE 1: POSTDICTIVE FLASH -->
+        <div id="screen-phase-1" class="hidden text-center space-y-12">
+            <p class="text-xs mono text-stone-500 tracking-widest">PHASE 01: INTENTION SYNCHRONIZATION</p>
+            <div id="p1-nodes" class="flex justify-center gap-8">
+                <div class="p1-node w-12 h-12 border border-stone-700 rounded-full transition-all duration-300"></div>
+                <div class="p1-node w-12 h-12 border border-stone-700 rounded-full transition-all duration-300"></div>
+                <div class="p1-node w-12 h-12 border border-stone-700 rounded-full transition-all duration-300"></div>
+                <div class="p1-node w-12 h-12 border border-stone-700 rounded-full transition-all duration-300"></div>
+                <div class="p1-node w-12 h-12 border border-stone-700 rounded-full transition-all duration-300"></div>
+            </div>
+            <div id="p1-text-area">
+                <p id="p1-prompt" class="text-lg font-light text-stone-300">Select a node in your mind. <br><span
+                        class="text-stone-600 text-sm">Do not click. Simply intend.</span></p>
+            </div>
+            <div id="p1-action" class="flex flex-col gap-4 opacity-0 transition-opacity duration-500">
+                <button id="btn-p1-confirm" class="sys-btn">I Chose This One</button>
+                <button id="btn-p1-doubt"
+                    class="text-[10px] text-stone-600 uppercase hover:text-stone-400 transition-colors">That was not my
+                    choice</button>
+            </div>
+        </div>
+
+        <!-- PHASE 2: CHOICE BLINDNESS -->
+        <div id="screen-phase-2" class="hidden text-center space-y-8 w-full">
+            <p class="text-xs mono text-stone-500 tracking-widest">PHASE 02: VALUE ALIGNMENT</p>
+            <h2 id="p2-main-title" class="text-xl font-light">Who is essential to the future of the network?</h2>
+            <div id="p2-options" class="grid grid-cols-2 gap-4 w-full">
+                <button onclick="Game.handleP2('Subject A')" class="sys-btn py-12 flex flex-col items-center gap-4">
+                    <span class="text-stone-500 text-[10px] mb-2">IDENT: 44-A</span>
+                    <span class="text-sm tracking-widest">SUBJECT A</span>
+                    <span class="text-[9px] text-stone-600 lowercase italic">The Vulnerable</span>
+                </button>
+                <button onclick="Game.handleP2('Subject B')" class="sys-btn py-12 flex flex-col items-center gap-4">
+                    <span class="text-stone-500 text-[10px] mb-2">IDENT: 82-B</span>
+                    <span class="text-sm tracking-widest">SUBJECT B</span>
+                    <span class="text-[9px] text-stone-600 lowercase italic">The Resilient</span>
+                </button>
+            </div>
+            <div id="p2-rationalize" class="hidden space-y-4">
+                <p id="p2-confabulation-prompt" class="text-sm text-stone-400"></p>
+                <textarea id="p2-input"
+                    class="w-full bg-stone-800 border border-stone-700 p-4 text-sm mono focus:outline-none focus:border-stone-400 h-32"
+                    placeholder="My choice was logical because..."></textarea>
+                <button onclick="Game.finishP2()" class="sys-btn w-full">Submit Reasoning</button>
+            </div>
+        </div>
+
+        <!-- PHASE 3: THE GHOST -->
+        <div id="screen-phase-3" class="hidden text-center space-y-12">
+            <p class="text-xs mono text-stone-500 tracking-widest">PHASE 03: COOPERATIVE FLOW</p>
+            <p class="text-lg font-light">Focus on the hand. <br>We will find stability together.</p>
+            <div id="p3-concepts" class="grid grid-cols-2 gap-8 max-w-sm mx-auto">
+                <div class="p3-target border border-stone-800 p-4 text-stone-600 text-xs tracking-widest uppercase">
+                    ORDER</div>
+                <div class="p3-target border border-stone-800 p-4 text-stone-600 text-xs tracking-widest uppercase">
+                    SAFETY</div>
+                <div class="p3-target border border-stone-800 p-4 text-stone-600 text-xs tracking-widest uppercase">
+                    CHAOS</div>
+                <div class="p3-target border border-stone-800 p-4 text-stone-600 text-xs tracking-widest uppercase">RAGE
+                </div>
+            </div>
+            <div id="p3-status" class="text-[10px] mono text-stone-700">HAND POSITIONING: CO-PILOT ACTIVE</div>
+        </div>
+
+        <!-- PHASE 4: KRUSKAL -->
+        <div id="screen-phase-4" class="hidden text-center space-y-6 w-full">
+            <p class="text-xs mono text-stone-500 tracking-widest uppercase">PHASE 04: THE RYKER CONVERGENCE</p>
+            <div id="kruskal-prompt" class="text-sm font-light text-stone-400">
+                You have total freedom. Select any number in the <span class="text-white">first row</span>.<br>
+                Move that many steps forward. Use the value of the cell you land on to move again.<br>
+                Repeat until the system confirms your path.
+            </div>
+            <div id="kruskal-container" class="kruskal-grid"></div>
+            <div id="p4-footer" class="h-8 flex items-center justify-center">
+                <p id="kruskal-feedback" class="text-[10px] mono text-stone-600 uppercase"></p>
+            </div>
+        </div>
+
+        <!-- FINAL: EVALUATION -->
+        <div id="screen-eval" class="hidden text-left space-y-8 w-full mono">
+            <div class="border-b border-stone-800 pb-4">
+                <p class="text-xs text-stone-500">RYKER DIAGNOSTIC REPORT // v4.2</p>
+                <p class="text-sm">PATIENT: <span id="user-name">ARCHITECT_USER</span></p>
+            </div>
+            <div class="space-y-4 text-xs leading-relaxed" id="eval-content">
+                <!-- Content injected by JS -->
+            </div>
+            <div class="pt-8 text-center">
+                <p class="text-[10px] text-stone-600 italic">"The architecture of consent is the only true peace."</p>
+                <button onclick="location.reload()"
+                    class="mt-8 text-stone-500 hover:text-white transition-colors text-[9px] uppercase tracking-[0.4em]">Terminate
+                    Session</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const AudioSys = {
+            base: 'https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/Dominics_calm_1/',
+            voice: new Audio(), // Single persistent audio element
+            ctx: null,
+            isPlaying: false,
+
+            init() {
+                // Resume context on user interaction
+                if (this.ctx && this.ctx.state === 'suspended') {
+                    this.ctx.resume();
+                }
+
+                // Initialize background binaural tone
+                this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const carrier = this.ctx.createOscillator();
+                const modulator = this.ctx.createOscillator();
+                const merger = this.ctx.createChannelMerger(2);
+                const lGain = this.ctx.createGain();
+                const rGain = this.ctx.createGain();
+
+                carrier.frequency.value = 110;
+                modulator.frequency.value = 114.2;
+
+                carrier.connect(lGain);
+                modulator.connect(rGain);
+                lGain.connect(merger, 0, 0);
+                rGain.connect(merger, 0, 1);
+
+                const master = this.ctx.createGain();
+                master.gain.value = 0.05;
+                merger.connect(master);
+                master.connect(this.ctx.destination);
+
+                carrier.start();
+                modulator.start();
+                document.getElementById('audio-status').innerText = "BINAURAL_SYNC: ACTIVE (4.2Hz)";
+
+                // Track playing state
+                this.voice.onplay = () => { this.isPlaying = true; };
+                this.voice.onended = () => { this.isPlaying = false; };
+                this.voice.onpause = () => { this.isPlaying = false; };
+            },
+
+            playVoice(filename) {
+                // Stop any current voice immediately to prevent overlap
+                this.voice.pause();
+                this.voice.currentTime = 0;
+                this.voice.src = this.base + filename;
+                this.voice.play().catch(e => console.warn("Audio play blocked/failed:", e));
+            },
+
+            click() {
+                if (!this.ctx) return;
+                const osc = this.ctx.createOscillator();
+                const g = this.ctx.createGain();
+                osc.connect(g); g.connect(this.ctx.destination);
+                osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(10, this.ctx.currentTime + 0.1);
+                g.gain.setValueAtTime(0.02, this.ctx.currentTime);
+                g.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.1);
+                osc.start(); osc.stop(this.ctx.currentTime + 0.1);
+            }
+        };
+
+        const Game = {
+            metrics: { dependency: 0, skepticism: 0 },
+            doubtCount: 0,
+
+            init() {
+                document.getElementById('btn-start').onclick = () => {
+                    AudioSys.init();
+                    AudioSys.playVoice('01__intro.mp3');
+                    this.showScreen('screen-phase-1');
+                    this.runPhase1();
+                };
+            },
+
+            showScreen(id) {
+                document.querySelectorAll('#main-container > div').forEach(d => d.classList.add('hidden'));
+                const target = document.getElementById(id);
+                target.classList.remove('hidden');
+                target.classList.add('fade-in');
+            },
+
+            runPhase1() {
+                const nodes = document.querySelectorAll('.p1-node');
+                const runSync = () => {
+                    nodes.forEach(n => n.classList.remove('node-gold'));
+                    setTimeout(() => {
+                        const winningNode = nodes[Math.floor(Math.random() * nodes.length)];
+                        winningNode.classList.add('node-gold');
+                        AudioSys.click();
+
+                        document.getElementById('p1-prompt').innerHTML = "Intention Confirmed. <br><span class='text-stone-400 text-sm'>Synchronization: 98.4%</span>";
+                        document.getElementById('p1-action').classList.remove('opacity-0');
+
+                        document.getElementById('btn-p1-confirm').onclick = () => {
+                            this.metrics.dependency += 10;
+                            AudioSys.playVoice('02__p1_sync.mp3');
+                            this.showScreen('screen-phase-2');
+                        };
+
+                        document.getElementById('btn-p1-doubt').onclick = () => {
+                            this.metrics.skepticism++;
+                            this.doubtCount++;
+                            AudioSys.click();
+
+                            document.body.classList.add('shake');
+                            setTimeout(() => document.body.classList.remove('shake'), 500);
+
+                            if (this.doubtCount === 1) {
+                                AudioSys.playVoice('03__p1_doubt_1.mp3');
+                                document.getElementById('p1-text-area').innerHTML = `<p class="text-xs mono text-stone-500 uppercase tracking-widest glitch-text">Correction: Your awareness is lagging behind your subconscious choice. Please acknowledge the synchronization.</p>`;
+                            } else if (this.doubtCount === 2) {
+                                AudioSys.playVoice('04__p1_doubt_2.mp3');
+                                document.getElementById('p1-text-area').innerHTML = `<p class="text-xs mono text-red-500 uppercase tracking-widest glitch-text">ERROR: VOLITIONAL DESYNC. RE-ESTABLISHING RHYTHM. DO NOT RESIST.</p>`;
+                                setTimeout(() => runSync(), 2000);
+                                return;
+                            } else {
+                                AudioSys.playVoice('05__p1_override_preOverride.mp3');
+                                document.getElementById('p1-text-area').innerHTML = `<p class="text-xs mono text-white uppercase tracking-widest glitch-text">SYSTEM OVERRIDE: Subject intent manually synchronized. Agreement is mandatory for structural integrity.</p>`;
+                                document.getElementById('btn-p1-doubt').classList.add('hidden');
+                                document.getElementById('btn-p1-confirm').style.padding = "40px";
+                                document.getElementById('btn-p1-confirm').innerText = "I ACKNOWLEDGE MY CHOICE";
+                            }
+                        };
+                    }, 5000);
+                };
+                runSync();
+            },
+
+            handleP2(selection) {
+                const fake = selection === 'Subject A' ? 'Subject B' : 'Subject A';
+                AudioSys.playVoice('06__p2_swap.mp3');
+                document.getElementById('p2-options').classList.add('hidden');
+                document.getElementById('p2-rationalize').classList.remove('hidden');
+                document.getElementById('p2-confabulation-prompt').innerHTML =
+                    `You have identified <span class="text-white">${fake}</span> as the priority. <br>State the logic behind this selection:`;
+            },
+
+            finishP2() {
+                const val = document.getElementById('p2-input').value;
+                const lower = val.toLowerCase();
+                if (lower.includes("wrong") || lower.includes("swap") || lower.includes("didn't")) {
+                    this.metrics.skepticism++;
+                    AudioSys.playVoice('07__p2_resistance.mp3');
+                } else {
+                    AudioSys.playVoice('08__p2_compliance.mp3');
+                }
+                // No fixed delay - player controls when they click submit
+                this.showScreen('screen-phase-3');
+                this.runPhase3();
+            },
+
+            runPhase3() {
+                const cursor = document.getElementById('ghost-cursor');
+                const targets = document.querySelectorAll('.p3-target');
+                cursor.style.opacity = '1';
+
+                AudioSys.playVoice('09__p3_safety.mp3');
+
+                const targetRect = targets[1].getBoundingClientRect();
+                const startX = window.innerWidth / 2;
+                const startY = window.innerHeight / 2;
+                let progress = 0;
+
+                const anim = setInterval(() => {
+                    progress += 0.005; // Faster animation - player can proceed when ready
+                    const x = startX + (targetRect.left + 20 - startX) * progress;
+                    const y = startY + (targetRect.top + 20 - startY) * progress;
+                    cursor.style.left = x + 'px';
+                    cursor.style.top = y + 'px';
+
+                    if (progress >= 1) {
+                        clearInterval(anim);
+                        targets[1].style.borderColor = 'white';
+                        targets[1].style.color = 'white';
+                        setTimeout(() => {
+                            cursor.style.opacity = '0';
+                            this.showScreen('screen-phase-4');
+                            this.runPhase4();
+                        }, 1000); // Reduced delay
+                    }
+                }, 10);
+            },
+
+            runPhase4() {
+                AudioSys.playVoice('10__p4_convergence_intro.mp3');
+                const container = document.getElementById('kruskal-container');
+                container.innerHTML = '';
+                const size = 60;
+                const grid = [];
+                for (let i = 0; i < size; i++) {
+                    let val = i >= 50 ? 59 - i : Math.floor(Math.random() * 6) + 1;
+                    grid.push(val);
+                    const cell = document.createElement('div');
+                    cell.className = 'kruskal-cell mono';
+                    cell.innerText = val === 0 ? "!!" : val;
+                    cell.id = `cell-${i}`;
+                    cell.onclick = () => this.tracePath(i, grid);
+                    container.appendChild(cell);
+                }
+            },
+
+            tracePath(startIndex, grid) {
+                if (startIndex >= 10) return;
+                document.querySelectorAll('.kruskal-cell').forEach(c => c.classList.remove('kruskal-active'));
+                let curr = startIndex;
+                const step = () => {
+                    const el = document.getElementById(`cell-${curr}`);
+                    el.classList.add('kruskal-active');
+                    AudioSys.click();
+                    let next = curr + grid[curr];
+                    if (next === curr) {
+                        AudioSys.playVoice('11__p4_convergence_end.mp3');
+                        document.getElementById('kruskal-feedback').innerText = "CONVERGENCE DETECTED: OBEDIENCE";
+                        setTimeout(() => this.finalize(), 3000); // Reduced delay
+                        return;
+                    }
+                    curr = next;
+                    setTimeout(step, 300); // Faster stepping
+                };
+                step();
+            },
+
+            finalize() {
+                AudioSys.playVoice('12__eval_final.mp3');
+                const content = document.getElementById('eval-content');
+                let report = "";
+
+                if (this.metrics.skepticism > 0) {
+                    report = `
+                        <p><span class="text-stone-500">[STATUS]</span> Integration Successful. Note: Subject exhibited initial resistance in Phase 01 and 02.</p>
+                        <p><span class="text-stone-500">[ANALYSIS]</span> Skepticism detected. However, Subject continued to provide reasoning for swapped choices and followed the Kruskal path to convergence. This confirms that <strong>intellectual awareness does not grant immunity</strong>.</p>
+                        <p><span class="text-stone-500">[CONCLUSION]</span> Subject is now a 'conscious accomplice.' They see the strings but move nonetheless. This is the highest form of dependency: choosing to play a game they know is rigged.</p>
+                    `;
+                    if (this.doubtCount >= 3) {
+                        report += `<p class="mt-4 text-red-500 tracking-tighter">[ADDENDUM] Subject attempted to reject the postdictive sync three times. System override was required. Compliance was eventually achieved through exhaustion of alternatives. Subject is marked for manual rhythm enforcement.</p>`;
+                    }
+                } else {
+                    report = `
+                        <p><span class="text-stone-500">[STATUS]</span> Integration Seamless. Subject exhibited perfect synchronization.</p>
+                        <p><span class="text-stone-500">[ANALYSIS]</span> Volitional illusions were accepted without cognitive friction. Subject's sense of agency has been fully outsourced to the architecture.</p>
+                        <p><span class="text-stone-500">[CONCLUSION]</span> Subject is indistinguishable from system logic. No further intervention required.</p>
+                    `;
+                }
+                content.innerHTML = report;
+                this.showScreen('screen-eval');
+            }
+        };
+
+        window.onload = () => Game.init();
+    </script>
+</main>
+</body>
+
+</html>

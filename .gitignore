@@ -9,6 +9,7 @@ _seo_cast_index_fragment.html
 # ── Dev / build scripts in veX_social_network ───────────────────────
 veX_social_network/_AUDIT_*.py
 veX_social_network/_build_preview.py
+veX_social_network/preview.html
 
 # ── Dev artefacts ────────────────────────────────────────────
 CurrentChatLog/

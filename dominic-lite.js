@@ -43,7 +43,11 @@
             path === '' ||
             (path.startsWith('/') && path.indexOf('/', 1) === -1);
         if (!isAtRoot) return null;
-        return PAGE_BY_PATH[filename] || null;
+        // Cloudflare Pages serves clean URLs (e.g. /files for files.html).
+        // Normalize so the lookup matches whether or not the extension is present.
+        const normalized = filename === '' ? '' :
+            (filename.endsWith('.html') ? filename : filename + '.html');
+        return PAGE_BY_PATH[normalized] || null;
     }
 
     // Barba data-barba-namespace -> our page key (the filename in dict/).

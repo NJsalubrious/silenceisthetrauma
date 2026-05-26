@@ -510,11 +510,6 @@
 
         html += '<div class="' + classes + '" onclick="filterByHandle(\'' + profile.handle + '\'); switchTab(\'feed\');">';
 
-        // Background image layer (faded, right side)
-        if (profile.card_image) {
-          html += '<div class="profile-card-bg" style="background-image:url(\'' + profile.card_image + '\')"></div>';
-        }
-
         // Visit overlay on the image area
         if (profile.links_to) {
           html += '<div class="profile-visit-overlay">';

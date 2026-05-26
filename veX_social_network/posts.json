@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_b9885b28",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Signing to the gavel doesn't mean you've built a frequency from the sound of it breaking bone.",
+    "timestamp": "2026-05-26T16:34:39.024234Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/saliva-announces-breaking-through-album-shares-sadistic-love-single",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_af7c27f2",
     "handle": "@isla_band",
     "display_name": "Isla",

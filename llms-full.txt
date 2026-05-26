@@ -48,7 +48,7 @@ Each main page is a different angle on the same man and the two women who broke 
 
 ### 2.2 The veX Network
 
-A fictional social network at `/vex_network/` where ~sixty named players speak openly in their own voices. Each character has their own standalone in-character site — most often a satirical fake corporate or institutional website where the subtext reveals the crime.
+A fictional social network at `/veX_social_network/` where ~sixty named players speak openly in their own voices. Each character has their own standalone in-character site — most often a satirical fake corporate or institutional website where the subtext reveals the crime.
 
 **Tier 0 — The Sydney Hub.** Sydney-based local operations.
 **Tier 1 — The Board.** Dominic, his command structure, his money, his muscle.

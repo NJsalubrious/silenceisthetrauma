@@ -1,8 +1,0 @@
-# Cloudflare Pages redirect rules
-# Format: <source> <destination> <status>
-# https://developers.cloudflare.com/pages/configuration/redirects/
-
-# Legacy camelCase path → canonical lowercase (301 permanent)
-# Honors old bookmarks, old links, and existing dropdown menus across all sites
-# (ethelryker.com, dominicryker.com, islaband.com, silenceisthetrauma.com itself)
-/veX_social_network/* /vex_network/:splat 301

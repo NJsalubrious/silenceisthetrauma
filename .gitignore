@@ -6,9 +6,9 @@ _patch_*.py
 _seo_*.py
 _seo_cast_index_fragment.html
 
-# ── Dev / build scripts in vex_network ───────────────────────
-vex_network/_AUDIT_*.py
-vex_network/_build_preview.py
+# ── Dev / build scripts in veX_social_network ───────────────────────
+veX_social_network/_AUDIT_*.py
+veX_social_network/_build_preview.py
 
 # ── Dev artefacts ────────────────────────────────────────────
 CurrentChatLog/

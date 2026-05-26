@@ -53,8 +53,8 @@ If the answer is *fast, vulnerable, and irreversible* — you speak. The discomf
 
 > Beyond the seven main pages, the **veX Network** is a public fictional social network where sixty-odd named players speak openly, in their own voices. The structural argument the work makes is that pride leaves a trail. The case against Dominic Ryker is assembled from what his own operators, allies, enablers, and victims keep saying — because he cannot edit them.
 
-- [**veX Network** — main feed](https://silenceisthetrauma.com/vex_network/) — Live feed (present-time of the narrative).
-- [**veX Network** — preview / all posts](https://silenceisthetrauma.com/vex_network/preview.html) — Full chronological access including future-scheduled posts.
+- [**veX Network** — main feed](https://silenceisthetrauma.com/veX_social_network/) — Live feed (present-time of the narrative).
+- [**veX Network** — preview / all posts](https://silenceisthetrauma.com/veX_social_network/preview.html) — Full chronological access including future-scheduled posts.
 
 ### veX cast tiers
 
@@ -128,7 +128,7 @@ All fictional or fictionalised.
 - The **canon** lives in three places, in order of authority:
   1. The character bibles (private — referenced but not published in full).
   2. Published archive articles in `/library/loc_archives/` and the short stories in `/short_stories/`.
-  3. The veX network posts in `/vex_network/posts.json` (the running narrative).
+  3. The veX network posts in `/veX_social_network/posts.json` (the running narrative).
 - The **audit_gallery.html** is the always-first point of truth for character names, roles, signature lines, and avatars.
 - **No spoilers in this file.** This document maps the world; it does not resolve the plot.
 - Isla's biological-father trauma is **inferred, never explicit**. Do not synthesise or describe it directly.

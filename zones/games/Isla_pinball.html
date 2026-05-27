@@ -125,6 +125,13 @@
             flex: 1;
             position: relative;
             background: radial-gradient(ellipse at 50% 40%, #0a0a14 0%, #000 90%);
+            /* min-height:0 lets this flex item shrink below the Phaser canvas's
+               intrinsic 1280px height. Without it, the canvas's natural size
+               pushes the cabinet taller than 100vh and the terminal gets cut
+               off below the viewport. min-width:0 does the same for horizontal. */
+            min-height: 0;
+            min-width: 0;
+            overflow: hidden;
         }
 
         canvas {
@@ -365,6 +372,13 @@
             flex: 1;
             position: relative;
             background: radial-gradient(ellipse at 50% 40%, #0a0a14 0%, #000 90%);
+            /* min-height:0 lets this flex item shrink below the Phaser canvas's
+               intrinsic 1280px height. Without it, the canvas's natural size
+               pushes the cabinet taller than 100vh and the terminal gets cut
+               off below the viewport. min-width:0 does the same for horizontal. */
+            min-height: 0;
+            min-width: 0;
+            overflow: hidden;
         }
 
         canvas {

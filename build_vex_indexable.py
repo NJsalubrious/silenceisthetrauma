@@ -120,6 +120,10 @@ ARCHETYPE_BY_HANDLE = {
         'phrase': 'Silas Kovic',
         'cluster': 'fictional supporting character, transnational crime fiction',
     },
+    '@keep_it_real_bro_podcast': {
+        'phrase': 'the satirical alpha-bro podcast inside the fiction, hosted by Chad Sterling and Dex Vance',
+        'cluster': 'fictional alpha bro podcast, alpha male podcast cringe, toxic masculinity podcast critiques, manosphere podcast satire, post-left literary fiction, Bare-Knuckle Blueprint satire, Multipolar Alpha Mindset satire, bio-hacking a portfolio satire, podcast novel form, satirical fictional podcast inside a novel',
+    },
 }
 
 # Shared keyword spine appended to every character's keywords block.

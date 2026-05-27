@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About veX | Silence Is The Trauma</title>
+  <meta name="description" content="veX is a fake social network inside the fiction project Silence Is The Trauma. Every voice on the feed is a character from the story. Reading it is a slow lesson in how online crowds rush to label each other wrongly.">
+
+  <link rel="canonical" href="https://silenceisthetrauma.com/veX_social_network/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About veX">
+  <meta property="og:description" content="veX is a fake social network inside the fiction project Silence Is The Trauma. Reading the feed is a slow lesson in how online crowds rush to label each other wrongly, and what happens when somebody refuses to play along.">
+  <meta property="og:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://silenceisthetrauma.com/veX_social_network/about.html">
+  <meta property="og:site_name" content="veX Network">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About veX">
+  <meta name="twitter:description" content="veX is a fake social network inside the fiction project Silence Is The Trauma.">
+  <meta name="twitter:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg">
+
+  <link rel="stylesheet" href="style.css?v=1">
+  <link rel="icon" href="logo/logo_veX_sm.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About veX",
+    "description": "veX is a fake social network inside the fiction project Silence Is The Trauma. Every voice on the feed is a character from the story.",
+    "url": "https://silenceisthetrauma.com/veX_social_network/about.html",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "veX Network",
+      "url": "https://silenceisthetrauma.com/veX_social_network/"
+    },
+    "about": {
+      "@type": "CreativeWork",
+      "name": "Silence Is The Trauma",
+      "url": "https://silenceisthetrauma.com/"
+    }
+  }
+  </script>
+
+  <style>
+    /* Standalone bio page, extends style.css */
+    .about-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 96px 28px 64px;
+    }
+    .about-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .about-h1 {
+      font-family: var(--font-serif);
+      color: var(--text-primary);
+      font-size: 2rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+    }
+    .about-gold-tick {
+      width: 40px; height: 1px; background: var(--gold); margin-bottom: 40px;
+    }
+    .about-short {
+      color: var(--text-primary);
+      font-size: 1.08rem;
+      line-height: 1.9;
+      font-weight: 200;
+      margin-bottom: 40px;
+    }
+    .about-divider {
+      border-top: 1px solid var(--border-dim);
+      margin: 40px 0 4px;
+    }
+
+    /* <details>/<summary> styling */
+    details.about-disclosure { margin: 8px 0 0; }
+    details.about-disclosure summary {
+      list-style: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 600;
+      user-select: none;
+      transition: color 0.25s, text-shadow 0.25s;
+    }
+    details.about-disclosure summary::-webkit-details-marker { display: none; }
+    details.about-disclosure summary::before {
+      content: "\25BE";
+      display: inline-block;
+      font-size: 0.7rem;
+      transition: transform 0.35s ease;
+    }
+    details[open].about-disclosure summary::before { transform: rotate(180deg); }
+    details.about-disclosure summary:hover { color: #fff; text-shadow: 0 0 8px var(--gold-dim); }
+    details.about-disclosure summary .about-cta-alt { display: none; }
+    details[open].about-disclosure summary .about-cta-default { display: none; }
+    details[open].about-disclosure summary .about-cta-alt { display: inline; }
+
+    .about-section-h {
+      font-family: var(--font-serif);
+      color: var(--text-primary);
+      font-size: 1.18rem;
+      margin: 48px 0 14px;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .about-section-h::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .about-p {
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.85;
+      font-weight: 200;
+      font-size: 0.98rem;
+    }
+    .about-p em { color: var(--text-primary); font-style: italic; font-weight: 300; }
+    .about-p strong { color: var(--text-primary); font-weight: 400; }
+
+    .about-bullet {
+      margin: 14px 0 14px 12px;
+      padding-left: 16px;
+      border-left: 1px solid var(--border-card);
+    }
+    .about-bullet-label {
+      color: var(--gold);
+      font-family: var(--font-serif);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .about-bullet-body {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 200;
+      font-size: 0.95rem;
+    }
+
+    .about-related {
+      border-top: 1px solid var(--border-dim);
+      margin-top: 56px;
+      padding-top: 28px;
+    }
+    .about-related h3 {
+      font-family: var(--font-serif);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .about-related-links { display: flex; flex-direction: column; gap: 8px; }
+
+    .about-back-to-feed {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-dim);
+      text-align: center;
+    }
+    .about-back-to-feed a {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .about-back-to-feed a:hover { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .about-wrap { padding: 72px 22px 56px; }
+      .about-h1 { font-size: 1.6rem; }
+      .about-short { font-size: 1rem; }
+      .about-section-h { font-size: 1.08rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP-LEFT PIXELSTORTION BRANDING DROPDOWN (matches other pages) -->
+  <div class="ps-brand-dropdown">
+    <button class="ps-brand" onclick="togglePixelstortion()" id="psBtn"
+      style="background:none; border:none; cursor:pointer; padding:0;">
+      PIXELSTORTION <span class="arrow" style="font-size:0.4rem; vertical-align:middle; margin-left:4px;">&#9662;</span>
+    </button>
+    <div class="pixelstortion-menu" id="psMenu">
+      <span class="ps-menu-item"
+        style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">veX: Social Network</span>
+      <a href="https://silenceisthetrauma.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Silence is the trauma</a>
+      <a href="https://islaband.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
+      <a href="https://ethelryker.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
+      <a href="https://dominicryker.com/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
+      <a href="https://pixelstortion.com/zones/mataala/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
+      <a href="https://pixelstortion.com/bio/" class="ps-menu-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
+    </div>
+  </div>
+
+  <main class="about-wrap">
+    <div class="about-eyebrow">About</div>
+    <h1 class="about-h1">veX</h1>
+    <div class="about-gold-tick"></div>
+
+    <p class="about-short">
+      veX is a fake social network inside the fiction project <a href="https://silenceisthetrauma.com">Silence Is The Trauma</a>. It works like Twitter or Bluesky with profiles, posts and replies but every voice is a character from the story: the billionaire on the run, his daughter, his non-biological step-daughter, the podcasters who hate them, the people complicit in everything around them. Reading the feed is a slow lesson in how online crowds rush to label each other wrongly, and what happens when somebody refuses to play along.
+    </p>
+
+    <div class="about-divider"></div>
+
+    <details class="about-disclosure">
+      <summary>
+        <span class="about-cta-default">Read the longer answer</span>
+        <span class="about-cta-alt">Hide the longer answer</span>
+      </summary>
+
+      <h2 class="about-section-h">What veX is: the longer answer</h2>
+      <p class="about-p">veX is the social network at the centre of Silence Is The Trauma. The surface is conventional. Feed, profiles, threads, replies. The reason it exists is not the surface.</p>
+      <p class="about-p">Roughly one hundred and twenty characters post on it. They are not actors performing for the reader's amusement. They are the entire ecosystem of a structural crime. Perpetrators, enablers, witnesses, dissenters, savants, and the polite middle that kept the room quiet. All placed in the one environment where each of them has to speak in their own voice, in public, on the record.</p>
+      <p class="about-p">You can read the case files. You can read the trial transcripts. You can read the songs and the short fiction. veX is the part where the people involved talk in their own words. The veX scanner lets you hear their inner thoughts spoken in their own voice. The work does not editorialise the posts. It lets them post.</p>
+
+      <h2 class="about-section-h">What you are watching when you read the feed</h2>
+      <p class="about-p">Five performances of the same cognitive equipment, in different costumes:</p>
+
+      <div class="about-bullet">
+        <span class="about-bullet-label">Operational architecture</span>
+        <span class="about-bullet-body">Dominic. The voice that arranges the room so the rule breaks itself and someone else walks into the consequences. Never apologises. Never concedes a wound.</span>
+      </div>
+      <div class="about-bullet">
+        <span class="about-bullet-label">Right-tribal performance</span>
+        <span class="about-bullet-body">Keep It Real Bro (Chad and Dex). Permission to be angry, sold as truth-telling. The cosplay of stoicism.</span>
+      </div>
+      <div class="about-bullet">
+        <span class="about-bullet-label">Left-tribal performance</span>
+        <span class="about-bullet-body">Zero State Media (Orion and Luna). Dialectical certainty, sold as critique. The cosplay of opposition.</span>
+      </div>
+      <div class="about-bullet">
+        <span class="about-bullet-label">Academic annexation</span>
+        <span class="about-bullet-body">Dr. Cosgrove Wendlebury Reeve. The voice that does not attack and does not agree. It claims. It cites. It treats you as material for a book that will not arrive. If you know him then you will no doubt like or dislike him. There is rarely an in-between.</span>
+      </div>
+      <div class="about-bullet">
+        <span class="about-bullet-label">Everyday complicity</span>
+        <span class="about-bullet-body">The Sydney hub, the global enablers. The CFMEU delegate, the strata manager, the developer, the cop, the tabloid editor, the vice-chancellor. The middle of the room, where the silence is most expensive.</span>
+      </div>
+
+      <p class="about-p">The vocabulary of these five differs. The cognitive equipment underneath is identical: act on the category before doing the careful read. That is the diagnosis the work is making. The vocabularies are usually mistaken for opposing each other. They are not opposing each other. They are the same equipment in different costumes.</p>
+      <p class="about-p"><em>And then refusing the equipment:</em></p>
+      <p class="about-p"><strong>Cognitive discipline.</strong> Ethel. Isla. The Resistance: Iron Irene, Sarah K, Jack Hennessy, Dr Al-Fayed, Frau Edelstein, Big Marge, Father Mateo. The savants: Ash, Penelope, Kaylee. People willing to do the slow, individual read on a person the room has already filed. They pay for it. They do it anyway.</p>
+      <p class="about-p">They are not virtuous. They are not morally superior. They are <em>cognitively disciplined.</em> That is the only difference, and it is the whole difference.</p>
+
+      <h2 class="about-section-h">What is not on offer</h2>
+      <p class="about-p">The satisfaction of watching a team win. The satisfaction of having your priors confirmed. The satisfaction of being told who to hate. The satisfaction of a hero who never doubts. The satisfaction of a villain who breaks down and confesses.</p>
+      <p class="about-p">None of these arrive. They were never going to.</p>
+
+      <h2 class="about-section-h">What is on offer</h2>
+      <p class="about-p">A long, quiet exhibition of cognition under social pressure. Two women doing the careful read at cost. Five performances of the equipment that produces structural harm, displayed in their own words. A reader's slow accumulation of the recognition that the equipment is not foreign. It is the equipment the reader has been issued and has been using.</p>
+
+      <h2 class="about-section-h">Why women?</h2>
+      <p class="about-p">Because the heuristic must meet the road.</p>
+      <p class="about-p">A male character with Ethel's cognitive equipment, refusing to perform, naming what is true, doing the slow read at cost, is admitted into a category the audience already has. <em>Stoic. Principled. Outsider. Hero.</em> He is allowed to be those things. He is often praised for them.</p>
+      <p class="about-p">The same equipment in Ethel gets filed as <em>cold, scolding, woke, posturing, daddy issues, ice queen, secretly desperate for male approval.</em> The behaviour did not change. The category did.</p>
+      <p class="about-p">A male character with Isla's voice, loud, unmanaged, refusing to soften, gets called <em>raw, authentic, a real one, finally somebody saying it.</em> The same voice in Isla gets called <em>manic, borderline, attention-seeking, chaos in a leather jacket.</em> The volume did not change. The category did.</p>
+      <p class="about-p">Some of those categories are, in part, true. The mania is real. The instability is real. They are not the whole story.</p>
+      <p class="about-p">The whole story: her biological father is a High Court judge. The abuse was Epstein-adjacent. She never said it. No blog post, no interview, no complaint that would have been retracted by morning. What she did was hack him, find what would get him killed in prison if it surfaced, and leave a note. He is contained. She is free. She has money. The system did not do this. She did. The songs, <em>What You Don't See</em>, <em>Give It Back</em>, <em>Raise the Fourth</em>, are where the proof sits in public without being spoken. The stage is the witness box. The amps are the evidence. He knows which song refers to which year. The audience does not need to.</p>
+      <p class="about-p">The heuristic that calls her <em>unhinged</em> is the same one that calls every survivor of high-status abuse <em>unhinged.</em> Except Isla never accused. There is only a singer making a great deal of noise and an old judge who will not leave his house without checking who is on the corner. The chaos is the instrument, not the symptom. It put one of the most insulated men in the country on a permanent leash, while she went on tour.</p>
+      <p class="about-p">The gap is not always there. But it is often there. And often is enough.</p>
+      <p class="about-p">The work uses women because the heuristic fires harder and faster on women doing this work. The harder it fires, the more visible it becomes. Visibility is the point. If the same behaviour produced the same category regardless of who was performing it, the substrate would be invisible and there would be nothing to expose. The fact that it does not, the fact that the categories shift the moment the body changes, is the diagnostic.</p>
+      <p class="about-p">This is not a complaint. It is the test condition. Place cognitive discipline in a female body and the room sorts itself by which readers can hold the discipline alongside the body and which readers cannot. The ones who cannot are not the audience. The ones who can are the work.</p>
+      <p class="about-p">The pleasure is the older one: being read carefully by a work that assumes the reader is capable of doing the careful read themselves.</p>
+
+      <h2 class="about-section-h">What is asked</h2>
+      <p class="about-p"><strong>Nothing.</strong></p>
+      <p class="about-p">You can scroll. You can stop. You can take a side and be wrong. You can take no side and be wrong. The feed will continue.</p>
+      <p class="about-p">If something in the work loosens something in you, that is the work. If nothing does, also fine. The door is visible. Walking through it is not the work's business.</p>
+    </details>
+
+    <div class="about-related">
+      <h3>Related sites</h3>
+      <div class="about-related-links">
+        <a href="https://silenceisthetrauma.com">silenceisthetrauma.com</a>
+        <a href="https://dominicryker.com">dominicryker.com</a>
+        <a href="https://ethelryker.com">ethelryker.com</a>
+        <a href="https://islaband.com">islaband.com</a>
+        <a href="https://pixelstortion.com">pixelstortion.com</a>
+      </div>
+    </div>
+
+    <div class="about-back-to-feed">
+      <a href="./">&larr; Back to the veX feed</a>
+    </div>
+  </main>
+
+  <script>
+    function togglePixelstortion() {
+      document.getElementById('psMenu').classList.toggle('show');
+      document.getElementById('psBtn').classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.ps-brand-dropdown')) {
+        document.getElementById('psMenu').classList.remove('show');
+        document.getElementById('psBtn').classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -753,36 +753,48 @@ if(!visualizer) return;
                 return;
             }
 
-            currentTrackId = id;
             const track = tracks.find(t => t.id === id);
+            if (!track) {
+                console.warn(`selectTrack: no track found with id ${id}`);
+                return;
+            }
+            currentTrackId = id;
 
             // Update ghost text to show song-specific suggestion
             if (typeof updateGhostText === 'function') {
                 setTimeout(updateGhostText, 50);
             }
 
-            // UI Updates
-            document.getElementById('current-track-title').innerText = track.title;
+            // UI Updates (null-guarded so missing DOM nodes never block playback)
+            const titleEl = document.getElementById('current-track-title');
+            if (titleEl) titleEl.innerText = track.title;
 
             // UPDATE DATE
             const dateEl = document.getElementById('current-track-date');
-            if (track.storyDate) {
-                dateEl.innerText = `TIMELINE: ${track.storyDate}`;
-                dateEl.style.color = "#00ff41"; // Matrix Green
-            } else {
-                dateEl.innerText = "TIMELINE: REDACTED";
-                dateEl.style.color = "#555"; // Dim Gray
+            if (dateEl) {
+                if (track.storyDate) {
+                    dateEl.innerText = `TIMELINE: ${track.storyDate}`;
+                    dateEl.style.color = "#00ff41"; // Matrix Green
+                } else {
+                    dateEl.innerText = "TIMELINE: REDACTED";
+                    dateEl.style.color = "#555"; // Dim Gray
+                }
             }
 
-            document.getElementById('current-track-artist').innerText = "SOURCE NODE: " + (track.videoId || "UNKNOWN");
-            document.getElementById('lyrics-display').innerText = track.lyric;
-            document.getElementById('lyrics-display').scrollTop = 0;
+            const artistEl = document.getElementById('current-track-artist');
+            if (artistEl) artistEl.innerText = "SOURCE NODE: " + (track.videoId || "UNKNOWN");
+            const lyricsEl = document.getElementById('lyrics-display');
+            if (lyricsEl) {
+                lyricsEl.innerText = track.lyric;
+                lyricsEl.scrollTop = 0;
+            }
 
             const ytIframe = document.getElementById('youtube-player'); // The actual iframe
 
             // Highlight active track
             document.querySelectorAll('[id^="track-"]').forEach(el => el.classList.remove('track-active'));
-            document.getElementById(`track-${id}`).classList.add('track-active');
+            const trackRow = document.getElementById(`track-${id}`);
+            if (trackRow) trackRow.classList.add('track-active');
 
             // --- RESET STATES ---
             // Stop Gallery Timer by default

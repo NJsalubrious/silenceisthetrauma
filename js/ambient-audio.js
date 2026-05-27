@@ -184,8 +184,14 @@
             // Leaving Songs page — fade back in
             if (isFadedOut && audio) {
                 isFadedOut = false;
+                userHasInteracted = true;
                 audio.play().then(() => {
                     fadeTo(TARGET_VOLUME, 1500);
+                    if (muteToggle) {
+                        const icon = muteToggle.querySelector('.material-symbols-outlined');
+                        if (icon) icon.textContent = 'pause';
+                        muteToggle.style.color = '#00ff41';
+                    }
                 }).catch(() => {});
             }
         }
@@ -208,17 +214,34 @@
         createAudioElement();
         createMuteToggle();
 
-        // Listen for first interaction to start playback
-        const interactionEvents = ['click', 'touchstart', 'keydown'];
-        const onFirstInteraction = () => {
-            startPlayback();
+        // If the user landed directly on the Songs page, suppress ambient at
+        // start so the YouTube track isn't fighting the theme song. Flag it
+        // as faded-out so onBarbaPageChange will fade it in when they navigate away.
+        const initialContainer = document.querySelector('[data-barba="container"]');
+        const initialNamespace = initialContainer && initialContainer.getAttribute('data-barba-namespace');
+        if (initialNamespace === 'audio') {
+            isFadedOut = true;
+            audio.volume = 0; // so the fade-in on leaving Songs is smooth
+            if (muteToggle) {
+                const icon = muteToggle.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = 'play_arrow';
+                muteToggle.style.color = '#666';
+            }
+            // Still allow saveState etc. to attach below; just don't bind the
+            // first-interaction starter on this page.
+        } else {
+            // Listen for first interaction to start playback
+            const interactionEvents = ['click', 'touchstart', 'keydown'];
+            const onFirstInteraction = () => {
+                startPlayback();
+                interactionEvents.forEach(evt => {
+                    document.removeEventListener(evt, onFirstInteraction);
+                });
+            };
             interactionEvents.forEach(evt => {
-                document.removeEventListener(evt, onFirstInteraction);
+                document.addEventListener(evt, onFirstInteraction, { once: false });
             });
-        };
-        interactionEvents.forEach(evt => {
-            document.addEventListener(evt, onFirstInteraction, { once: false });
-        });
+        }
 
         // Save state before unload
         window.addEventListener('beforeunload', saveState);

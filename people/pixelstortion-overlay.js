@@ -127,10 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="pxl-chameleon-menu">
             <span class="pxl-muted-header">Network Architecture</span>
             <a href="https://silenceisthetrauma.com/veX_social_network/">veX: Social Network</a>
-            <a href="https://pixelstortion.com/zones/silence/">Transmission Hub</a>
-            <a href="https://islaband.com/">Subject: Isla</a>
-            <a href="https://ethelryker.com/">Subject: Ethel Ryker</a>
-            <a href="https://dominicryker.com/">Subject: Dominic Ryker</a>
+            <a href="https://silenceisthetrauma.com/">Silence Is The Trauma</a>
+            <a href="https://islaband.com/">Isla</a>
+            <a href="https://ethelryker.com/">Ethel Ryker</a>
+            <a href="https://dominicryker.com/">Dominic Ryker</a>
+            <a href="https://pixelstortion.com/">Nalani</a>
+            <a href="https://pixelstortion.com/bio/">Bio</a>
         </div>
     `;
 

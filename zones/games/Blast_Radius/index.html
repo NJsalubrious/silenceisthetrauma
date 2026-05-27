@@ -45,90 +45,18 @@
 </head>
 <body>
 
-    <!-- INJECTED GLOBAL NAVIGATION -->
-    <nav style="position: fixed; top: 0; width: 100%; z-index: 9999; background: rgba(0,0,0,0.9); border-bottom: 1px solid #333; backdrop-filter: blur(8px);">
-        <div style="max-width: 80rem; margin: 0 auto; padding: 0 1rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; height: 4rem;">
-                <!-- Left Side: Back Button -->
-                <a href="javascript:history.back()" style="display: flex; align-items: center; gap: 0.5rem; color: #9ca3af; text-decoration: none; font-family: 'Courier Prime', monospace; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
-                    <span style="font-size: 1.125rem;">&lt;</span> BACK
-                </a>
-                
-                <!-- Right Side: Branding Dropdown -->
-                <div style="position: relative;">
-                    <button onclick="document.getElementById('brandDropdown').classList.toggle('show'); event.stopPropagation();" 
-                        style="background: none; border: none; cursor: pointer; text-decoration: none; padding: 0;">
-                        <h1 style="font-size: 1.25rem; font-weight: bold; letter-spacing: -0.05em; color: #fff; margin:0;" data-text="PIXELSTORTION">PIXELSTORTION</h1>
-                    </button>
-                    <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()" style="right: 0; left: auto; text-align: right;">
-                        <a href="../../veX_social_network/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">veX: Social Network</a>
-                        <span class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px; opacity: 0.5; cursor: default; pointer-events: none;">Silence is the trauma</span>
-                        <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Isla</a>
-                        <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Ethel Ryker</a>
-                        <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Dominic Ryker</a>
-                        <a href="../../zones/mataala/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">Nalani</a>
-                        <a href="../../bio/" class="brand-dropdown-item" style="border-bottom: 1px solid #222; margin-bottom: 4px;">BIO</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <style>
-        .brand-dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            background-color: #000;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,255,65,0.2);
-            z-index: 50;
-            border: 1px solid #333;
-            padding: 8px;
-        }
-        .brand-dropdown-menu.show {
-            display: block;
-        }
-        .brand-dropdown-item {
-            color: #ccc;
-            padding: 8px 12px;
-            text-decoration: none;
-            display: block;
-            font-family: 'Courier Prime', monospace;
-            font-size: 12px;
-            transition: all 0.2s ease;
-        }
-        .brand-dropdown-item:hover {
-            background-color: #111;
-            color: #00ff41;
-            padding-right: 16px;
-        }
-        body { padding-top: 64px !important; }
-    </style>
-    <script>
-        document.addEventListener('click', function(event) {
-            var dropdowns = document.getElementsByClassName("brand-dropdown-menu");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        });
-    </script>
-    <!-- END INJECTED GLOBAL NAVIGATION -->
-
-    <!-- PIXELSTORTION BRANDING DROPDOWN -->
+<!-- PIXELSTORTION BRANDING DROPDOWN -->
     <div class="brand-dropdown-container">
         <button onclick="toggleBrandMenu(event)" style="background:none;border:none;padding:0;cursor:pointer;">
             <span class="ps-brand">PIXELSTORTION</span>
         </button>
         <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
             <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
-            <a href="https://pixelstortion.com/zones/silence/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+            <a href="https://silenceisthetrauma.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
             <a href="https://islaband.com" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
             <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
             <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
-            <a href="https://pixelstortion.com/zones/mataala/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+            <a href="https://pixelstortion.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
             <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
         </div>
     </div>

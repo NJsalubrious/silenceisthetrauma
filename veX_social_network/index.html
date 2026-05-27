@@ -633,7 +633,25 @@
     }
     function renderSidebar() {
       const container = document.getElementById('whoToFollow');
-      const featured = allProfiles.filter(p => p.tier === 'primary' || (p.tier === 'secondary' && !p.memorial && !p.silent)).slice(0, 8);
+      // Explicit ordered list of the 10 handles to feature in the sidebar.
+      // Bypasses tier-based filtering so 'network' tier profiles (Jack, The
+      // Liability, Sarah K) can appear here while still being filed as
+      // 'network' for other code paths that read .tier.
+      const featuredHandles = [
+        '@dominic_ryker',
+        '@ethel_ryker',
+        '@isla_band',
+        '@keep_it_real_bro_podcast',
+        '@zero_state_media',
+        '@drcosgrovereeve',
+        '@jack_shiv',
+        '@the_liability',
+        '@sarah_k',
+        '@ross_kinley'
+      ];
+      const byHandle = {};
+      allProfiles.forEach(p => { byHandle[p.handle] = p; });
+      const featured = featuredHandles.map(h => byHandle[h]).filter(p => p);
       let html = '<h3>Who to follow</h3>';
       featured.forEach(p => {
         html += '<div class="sidebar-profile" onclick="filterByHandle(\'' + p.handle + '\'); switchTab(\'feed\');">';

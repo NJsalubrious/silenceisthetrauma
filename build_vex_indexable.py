@@ -124,6 +124,14 @@ ARCHETYPE_BY_HANDLE = {
         'phrase': 'the satirical alpha-bro podcast inside the fiction, hosted by Chad Sterling and Dex Vance',
         'cluster': 'fictional alpha bro podcast, alpha male podcast cringe, toxic masculinity podcast critiques, manosphere podcast satire, post-left literary fiction, Bare-Knuckle Blueprint satire, Multipolar Alpha Mindset satire, bio-hacking a portfolio satire, podcast novel form, satirical fictional podcast inside a novel',
     },
+    '@trish_halloran': {
+        'phrase': 'the Sydney public-school teacher and neurodivergent advocate who reported the funding gap',
+        'cluster': 'Different Wiring advocacy, neurodivergent advocacy NSW, neuroaffirming classroom, school-induced trauma, ADHD autism schooling adjustments NSW, inclusive education NSW, diagnosis support funding gap, NSW public school funding gap, teacher burnout NSW, leaving the teaching profession Australia, fictional teacher whistleblower, public interest disclosure Australia',
+    },
+    '@phillip_miller': {
+        'phrase': 'the fictional school principal whose four-day transfer landed days after a teacher reported the funding gap',
+        'cluster': 'fictional school principal character, principal welcome page satire, school administrator transfer fiction, undisclosed personnel circumstances, bureaucratic cover-up fiction, whistleblower retaliation fiction, public school administrative governance fiction',
+    },
 }
 
 # Shared keyword spine appended to every character's keywords block.

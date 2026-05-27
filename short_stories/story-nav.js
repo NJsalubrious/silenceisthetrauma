@@ -263,7 +263,7 @@
     { label: 'Isla',                  href: 'https://islaband.com/' },
     { label: 'Ethel Ryker',           href: 'https://ethelryker.com/' },
     { label: 'Dominic Ryker',         href: 'https://dominicryker.com/' },
-    { label: 'Nalani',                href: 'https://pixelstortion.com/zones/mataala/' },
+    { label: 'Nalani',                href: 'https://pixelstortion.com/' },
     { label: 'BIO',                   href: 'https://pixelstortion.com/bio/' },
   ];
 

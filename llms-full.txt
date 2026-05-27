@@ -368,7 +368,7 @@ Both are foundational reading. The order is canon. The Ryker Case introduces the
 
 This section bundles every public veX post by character. veX is a fictional social network within the Silence Is The Trauma art installation. Every handle, every post, every interaction is part of the fiction; no real persons are depicted.
 
-_Posts shown: 757 across 64 characters. Generated 2026-05-27._
+_Posts shown: 760 across 64 characters. Generated 2026-05-27._
 
 ### Isla (@isla_band)
 > Silence was the Trauma.
@@ -535,7 +535,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/isla_band
 
 ### Ethel Ryker (@ethel_ryker)
 > I document what others dont see.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html). 105 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html). 107 public posts._
 
 - **2025-03-15T09:00:00Z**: @gran_ryker You are so very missed. It all feels like yesterday that you were here. I don't know how to fill the quiet you left. I don't know how to right the wrong.
 - **2025-06-02T11:30:00Z**: @pop_ryker My grandfather. Maybe not in biology. But in mind, in every way that matters, in every room he walked into. You were our rock. Not spiritual. Just real. Just there. Always there.
@@ -581,6 +581,8 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryk
 - **2026-05-23T11:28:16.781943Z**: The price tag on the news rarely includes the cost of what it buries. (link: https://www.theguardian.com/media/2026/may/20/james-murdoch-vox-media-deal)
 - **2026-05-24T09:39:53.036355Z**: The audit trail for the Sydney land deal has a gap in the third quarter.
 - **2026-05-24T11:31:07.300789Z**: The numbers on the page never account for the missing hours.
+- **2026-05-27T10:26:56.706070Z**: The Rotterdam manifest is still short one container.
+- **2026-05-27T12:09:17.742349Z**: The offshore account ledger has a blank page where a transfer should be.
 - **2026-05-28T20:00:00Z**: Ask him about the red stick. Ask him about the kite. Ask him about the man in the blue sweater. Ask him about 2pm Chatswood Concourse. He will know which morning. I do not need the audience to.
 - **2026-05-30T14:00:00Z**: He killed Gran. He killed Pop. His actions caused a man with a suppressor sent to my kitchen. Forgiveness, metaphysical or not, is not a substitute for an arrest warrant. The volume is forthcoming. The verdict is in.
 - **2026-05-30T23:35:00Z**: He learned to burn evidence on a building site at Camperdown. He is doing the same to a city.
@@ -702,7 +704,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/keep_it_r
 
 ### Dominic Ryker (@dominic_ryker)
 > Structure isn't a suggestion.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html). 42 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html). 43 public posts._
 
 - **2026-04-29T14:20:00Z**: People confuse comfort with safety. They are not the same structure.
 - **2026-05-01T12:00:00Z**: Every building is a decision someone made about how much your life is worth.
@@ -746,6 +748,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_r
 - **2026-05-24T06:25:58.281889Z**: @isla_band You think you are the origin. You are the output.
 - **2026-05-24T08:07:12.275743Z**: @truckie_dave Order is not self-sustaining.
 - **2026-05-27T06:59:00.883107Z**: @isla_band You did not create the force. You channel it.
+- **2026-05-27T08:45:00.903912Z**: @isla_band Your "blast radius" is merely a function of the system I maintain.
 
 ### Big Marge (@bigmarge)
 > Publican. Redfern. My pub, my rules.

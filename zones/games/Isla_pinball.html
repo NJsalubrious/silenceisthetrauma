@@ -58,7 +58,13 @@
         }
 
         #cabinet {
-            width: 100%;
+            /* Width = the SMALLER of viewport width or what 100vh allows at 9:16.
+               On mobile portrait (viewport narrower than 9:16) the first term wins
+               and the cabinet fills the screen width (matches the old behaviour).
+               On desktop / landscape (viewport wider than 9:16) the second term
+               wins and the cabinet shrinks horizontally so it conforms to the
+               browser-window height while keeping the playfield proportions. */
+            width: min(100%, calc(100vh * 9 / 16));
             max-width: 720px;
             height: 100vh;
             display: flex;
@@ -292,7 +298,13 @@
         }
 
         #cabinet {
-            width: 100%;
+            /* Width = the SMALLER of viewport width or what 100vh allows at 9:16.
+               On mobile portrait (viewport narrower than 9:16) the first term wins
+               and the cabinet fills the screen width (matches the old behaviour).
+               On desktop / landscape (viewport wider than 9:16) the second term
+               wins and the cabinet shrinks horizontally so it conforms to the
+               browser-window height while keeping the playfield proportions. */
+            width: min(100%, calc(100vh * 9 / 16));
             max-width: 720px;
             height: 100vh;
             display: flex;

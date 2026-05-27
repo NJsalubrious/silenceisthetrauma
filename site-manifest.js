@@ -44,7 +44,7 @@ const PIXEL_MANIFEST = {
     // 3. GAMES (Structured game data with url, name, thumbnail, fullscreen)
     GAMES: {
         Blast_Radius: {
-            url: 'https://pixelstortion.com/zones/games/Blast_Radius/',
+            url: '/zones/games/Blast_Radius/',
             name: "Isla's Invers Slot Machine",
             thumb: '/library/silence_games/Isla_Slot_Machine_1.jpg',
             fullscreen: true

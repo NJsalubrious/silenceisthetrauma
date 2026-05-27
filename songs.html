@@ -544,15 +544,8 @@
                 }
             }
 
-            // On mobile, just cue the track (don't auto-play) to avoid YouTube bot detection
-            if (window.innerWidth <= 768) {
-                console.log('Mobile detected: track cued, tap play to start');
-                selectTrack(trackId);
-                // Pause immediately so user must tap play
-                setTimeout(() => { if (ytPlayer && ytPlayer.pauseVideo) ytPlayer.pauseVideo(); }, 800);
-            } else {
-                setTimeout(() => selectTrack(trackId), 500);
-            }
+            // Initial load: cue the track but don't auto-play. User must click play.
+            selectTrack(trackId, false);
         }
 
         function onPlayerStateChange(event) {
@@ -746,7 +739,7 @@ if(!visualizer) return;
 
         // Initialize Audio Player with robust Event Listeners
 
-        function selectTrack(id) {
+        function selectTrack(id, autoplay = true) {
             // Don't restart if same track is already playing
             if (currentTrackId === id) {
                 console.log(`Track ${id} already playing - skipping restart`);
@@ -812,12 +805,12 @@ if(!visualizer) return;
                 const existingError = document.getElementById('uplink-error-overlay');
                 if (existingError) existingError.remove();
 
-                if (protocolPanelOpen) {
+                if (protocolPanelOpen || !autoplay) {
                     ytPlayer.cueVideoById({
                         videoId: track.videoId,
                         suggestedQuality: 'hd720'
                     });
-                    console.log("Protocol panel open - cueing video without auto-play");
+                    console.log(autoplay ? "Protocol panel open - cueing video without auto-play" : "Initial load - cueing video, waiting for play click");
                 } else {
                     // Normal behavior - load and auto-play
                     ytPlayer.loadVideoById({
@@ -1805,14 +1798,8 @@ if(!container) return;
                 }
             }
 
-            // On mobile, just cue the track (don't auto-play) to avoid YouTube bot detection
-            if (window.innerWidth <= 768) {
-                console.log('Mobile detected: track cued, tap play to start');
-                selectTrack(trackId);
-                setTimeout(() => { if (ytPlayer && ytPlayer.pauseVideo) ytPlayer.pauseVideo(); }, 800);
-            } else {
-                setTimeout(() => selectTrack(trackId), 500);
-            }
+            // Initial load: cue the track but don't auto-play. User must click play.
+            setTimeout(() => selectTrack(trackId, false), 500);
         });
 
         // --- MEDIA PANEL (Cinema/Gallery) ---

@@ -161,19 +161,26 @@
             games:    'A game is a system that chose its ending before you sat down.',
             podcast:  'Every recording is an edit that someone approved.',
             stories:  'A story is evidence with better lighting.',
-            songs:    'A song is a confession the singer believes they chose to make.'
+            songs:    "You're free to listen; they were never arranged for your understanding."
         };
         // Practical guidance for the visitor, kept OUT of Dominic's spoken line
         // (which stays pure aphorism). This is plain UI placeholder text in the
         // input field, telling them what they can actually ask about per page.
+        // Hints match what Dominic's per-page dictionary can actually answer:
+        //   files / subjects / stories  -> have item-specific Q&A -> "a specific X"
+        //   home                         -> case + character coverage
+        //   podcast                      -> the two named shows (not "episodes")
+        //   games / songs                -> by design he DEFLECTS specifics
+        //     ("You chose to listen. Press play.") so people engage the work
+        //     directly; the hint stays general and promises nothing per-item.
         const PLACEHOLDER_HINTS = {
             home:     'ask about anyone in the case...',
             files:    'ask about a specific file...',
             subjects: 'ask about a specific subject...',
-            games:    'ask about a specific game...',
-            podcast:  'ask about a specific episode...',
+            games:    'ask about the games...',
+            podcast:  'ask about the podcast...',
             stories:  'ask about a specific story...',
-            songs:    'ask about a specific song...'
+            songs:    'ask about the music...'
         };
         const DEFAULT_OPENING_LINE = 'Go on.';
         function playOpeningLine() {

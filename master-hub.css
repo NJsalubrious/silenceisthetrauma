@@ -1400,10 +1400,10 @@
             opacity: 0;
             transition: opacity 0.6s ease, border-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 0 12px rgba(255, 0, 85, 0.2);
-            /* Calm most of the cycle, then an occasional attention-grabbing
-               double-beat glow ("look here") — a controlled heartbeat, on
-               brand for Dominic's "rhythm". */
-            animation: dominic-orb-attract 18s ease-in-out infinite;
+            /* A frequent, unmistakable "look at me" pop: bright red flare
+               plus a size bump every few seconds. Motion + brightness is what
+               catches peripheral vision. */
+            animation: dominic-orb-attract 5s ease-in-out infinite;
         }
 
         #dominic-orb.visible {
@@ -1421,34 +1421,26 @@
         }
 
         @keyframes dominic-orb-attract {
-            /* Resting: low, steady glow for most of the 18s cycle. */
+            /* Baseline: always-present glow so it never goes dead. */
             0%,
-            62%,
+            55%,
             100% {
-                box-shadow: 0 0 8px rgba(255, 0, 85, 0.15);
-                border-color: rgba(255, 0, 85, 0.4);
+                box-shadow: 0 0 12px rgba(255, 0, 85, 0.3);
+                border-color: rgba(255, 0, 85, 0.5);
+                transform: scale(1);
             }
 
-            /* First beat. */
-            68% {
-                box-shadow: 0 0 26px 3px rgba(255, 0, 85, 0.65);
-                border-color: rgba(255, 0, 85, 0.95);
-            }
-
+            /* The pop — bright flare + size bump, ~every 5s. */
             72% {
-                box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
-                border-color: rgba(255, 0, 85, 0.45);
-            }
-
-            /* Second beat — the louder "look here". */
-            77% {
-                box-shadow: 0 0 34px 6px rgba(255, 0, 85, 0.85);
+                box-shadow: 0 0 40px 10px rgba(255, 0, 85, 0.95);
                 border-color: rgba(255, 0, 85, 1);
+                transform: scale(1.2);
             }
 
-            84% {
-                box-shadow: 0 0 8px rgba(255, 0, 85, 0.15);
-                border-color: rgba(255, 0, 85, 0.4);
+            88% {
+                box-shadow: 0 0 12px rgba(255, 0, 85, 0.3);
+                border-color: rgba(255, 0, 85, 0.5);
+                transform: scale(1);
             }
         }
 

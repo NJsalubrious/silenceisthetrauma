@@ -290,10 +290,19 @@
         if (submit) submit.addEventListener('click', function () { submitCurrent(); });
 
         // Mobile: tap the ghost-text region to accept the current suggestion.
+        // The ghost overlay sits ON TOP of the input on mobile (pointer-events:
+        // auto, z-index 5), so it intercepts taps meant for the field. If there
+        // is no suggestion to accept, the tap must still fall through to focusing
+        // the input, or the user can't re-enter the field after blurring it.
+        // focus() is called synchronously inside the gesture so the mobile
+        // keyboard reopens.
         const ghost = document.getElementById('dominic-ghost-text');
         if (ghost) {
             ghost.addEventListener('click', function (e) {
-                if (!_currentSuggestion) return;
+                if (!_currentSuggestion) {
+                    input.focus();
+                    return;
+                }
                 e.preventDefault();
                 e.stopPropagation();
                 acceptCurrentSuggestion();

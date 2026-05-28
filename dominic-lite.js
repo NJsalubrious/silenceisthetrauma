@@ -213,7 +213,7 @@
                 .then(function (r) { return r.ok ? r.json() : null; })
                 .then(function (dict) {
                     if (!dict) return; // 404 / parse failure -> silent no-op
-                    loadScriptOnce('/dominic-predict.js').then(function () {
+                    loadScriptOnce('/dominic-predict.js?v=20260528c').then(function () {
                         if (window.DominicPredict && window.DominicShell) {
                             window.DominicPredict.init({ dict: dict, shell: window.DominicShell });
                         }

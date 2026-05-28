@@ -29,7 +29,16 @@
         audio = document.createElement('audio');
         audio.id = 'ambient-audio';
         audio.preload = 'auto';
+        audio.setAttribute('playsinline', ''); // iOS: allow inline (non-fullscreen) playback
         audio.volume = TARGET_VOLUME;
+
+        // Restore the track index from a prior session (hard-refresh continuity)
+        // BEFORE setting src, so the gesture-driven play() doesn't have to swap
+        // src mid-gesture (which mobile browsers often refuse).
+        const savedTrack = sessionStorage.getItem('ambient_track');
+        if (savedTrack !== null) {
+            currentTrackIndex = parseInt(savedTrack, 10) || 0;
+        }
         audio.src = TRACKS[currentTrackIndex];
 
         // When one track ends, play the next and loop
@@ -145,30 +154,22 @@
      * Start playback after first user interaction
      */
     function startPlayback() {
-        if (userHasInteracted || !audio) return;
-        userHasInteracted = true;
-
-        // Try to resume from sessionStorage
-        const savedPos = sessionStorage.getItem('ambient_position');
-        const savedTrack = sessionStorage.getItem('ambient_track');
-        
-        if (savedTrack !== null) {
-            currentTrackIndex = parseInt(savedTrack, 10) || 0;
-            audio.src = TRACKS[currentTrackIndex];
-        }
-
+        if (!audio) return Promise.reject(new Error('no audio element'));
         const playPromise = audio.play();
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                if (savedPos) {
-                    audio.currentTime = parseFloat(savedPos) || 0;
-                }
-                refreshToggleUI();
-            }).catch(() => {
-                // Autoplay blocked — will try again on next interaction
-                userHasInteracted = false;
-            });
+        if (playPromise === undefined) {
+            userHasInteracted = true;
+            return Promise.resolve();
         }
+        return playPromise.then(() => {
+            userHasInteracted = true;
+            // Resume saved position (hard-refresh continuity). Track index was
+            // already applied in createAudioElement, so no src swap needed here.
+            const savedPos = sessionStorage.getItem('ambient_position');
+            if (savedPos) {
+                try { audio.currentTime = parseFloat(savedPos) || 0; } catch (e) {}
+            }
+            refreshToggleUI();
+        });
     }
 
     /**
@@ -250,17 +251,25 @@
             // Still allow saveState etc. to attach below; just don't bind the
             // first-interaction starter on this page.
         } else {
-            // Listen for first interaction to start playback
-            const interactionEvents = ['click', 'touchstart', 'keydown'];
+            // Start playback on the first real user gesture. Mobile (esp. iOS)
+            // is fussy: touchstart often does NOT unlock audio, but touchend /
+            // click / pointerup do. So we:
+            //   - listen for several gesture types,
+            //   - run in the CAPTURE phase so inner stopPropagation() (brand
+            //     dropdown, mute button) can't swallow the gesture,
+            //   - only unbind once play() actually RESOLVES, so a blocked first
+            //     tap retries on the next interaction instead of giving up.
+            const interactionEvents = ['pointerup', 'touchend', 'click', 'keydown'];
             const onFirstInteraction = () => {
-                startPlayback();
-                interactionEvents.forEach(evt => {
-                    document.removeEventListener(evt, onFirstInteraction);
+                startPlayback().then(() => {
+                    interactionEvents.forEach(evt =>
+                        document.removeEventListener(evt, onFirstInteraction, true));
+                }).catch(() => {
+                    // Still blocked — keep the listeners attached to retry.
                 });
             };
-            interactionEvents.forEach(evt => {
-                document.addEventListener(evt, onFirstInteraction, { once: false });
-            });
+            interactionEvents.forEach(evt =>
+                document.addEventListener(evt, onFirstInteraction, true));
         }
 
         // Save state before unload

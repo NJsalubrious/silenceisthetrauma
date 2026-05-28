@@ -155,12 +155,12 @@
         // what to do. (Functional "ask about X" hints belong in the input
         // ghost-text, not in Dominic's voice.)
         const OPENING_LINES = {
-            home:     'A transmission only reaches the people it was aimed at.',
-            files:    "An archive only incriminates the people who can't read it.",
-            subjects: "Every subject here is a variable that hasn't been placed yet.",
-            games:    'A game is a system that chose its ending before you sat down.',
-            podcast:  'Every recording is an edit that someone approved.',
-            stories:  'A story is evidence with better lighting.',
+            home:     "A transmission. Read between the noise. I'm here to help.",
+            files:    'The Archives. Ask me about them.',
+            subjects: 'Me. My daughter Ethel and my step-daughter Isla. Ask me about them.',
+            games:    'Games. Safe little escapism. I prefer reality.',
+            podcast:  'The narratives people tell themselves. I prefer mine. Ask me about them.',
+            stories:  "It's all about who controls the narrative. Give me a story by title.",
             songs:    "You're free to listen; they were never arranged for your understanding."
         };
         // Practical guidance for the visitor, kept OUT of Dominic's spoken line
@@ -179,7 +179,7 @@
             subjects: 'ask about a specific subject...',
             games:    'ask about the games...',
             podcast:  'ask about the podcast...',
-            stories:  'ask about a specific story...',
+            stories:  'The Equation shows my better side. Listen to it...',
             songs:    "listen to 'Structural Psychopathy'..."
         };
         const DEFAULT_OPENING_LINE = 'Go on.';

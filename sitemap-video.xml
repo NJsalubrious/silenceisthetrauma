@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- silenceisthetrauma.com video sitemap. Each YouTube video listed once (deduplicated across the songs page, cinema and gallery). -->
+<!-- player_loc uses youtube-nocookie.com for privacy-restricted browsers. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://silenceisthetrauma.com/songs</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/YKQk4G_XJ1w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Introduction</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Introduction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/YKQk4G_XJ1w</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zHWwhom80go/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Drop 1</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: The Drop 1.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/zHWwhom80go</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/lV4572kA1RE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: The Drop</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: The Drop.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/lV4572kA1RE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/K0ILO8MwX4Y/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Drop 2</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: The Drop 2.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/K0ILO8MwX4Y</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VKJaSC_-0sM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Polished Vomit</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Polished Vomit.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VKJaSC_-0sM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/MhEeDcdscrs/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Polished Vomit</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Polished Vomit.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/MhEeDcdscrs</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Jl8T2gWUVMY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Dominic's Intent</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Dominic's Intent.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Jl8T2gWUVMY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8rvIVBLZg2o/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Structural Psychopathy</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Structural Psychopathy.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/8rvIVBLZg2o</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Wvu0JIV1ePQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Ride</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Ride.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Wvu0JIV1ePQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0sgcZRtPO6s/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ride</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ride.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0sgcZRtPO6s</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/95wQ9YZUbcA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Grief</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Grief.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/95wQ9YZUbcA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/PMy76HBgpL8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Grief</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Grief.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/PMy76HBgpL8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/IuyKvsxwBgY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Gotta Move</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Gotta Move.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/IuyKvsxwBgY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/06qE_-OeIT0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Gotta Move</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Gotta Move.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/06qE_-OeIT0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/oPOEgISVQYk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Won't Break</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Won't Break.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/oPOEgISVQYk</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fJNMlT7UeW0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Won't Break Where Others End</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Won't Break Where Others End.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/fJNMlT7UeW0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8UvIT2TgY_Y/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Big House</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Big House.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/8UvIT2TgY_Y</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/mj9MGf-VzJY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Big House</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Big House.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/mj9MGf-VzJY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/GaSUHEFlJVc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Peek-A-Boo</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Peek-A-Boo.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/GaSUHEFlJVc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qbFxG7sK0pE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Peek-A-Boo</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Peek-A-Boo.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qbFxG7sK0pE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/dIh_CL7h7zU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Northern Road</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Northern Road.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/dIh_CL7h7zU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/P19KBEQdVjQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Northern Road</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Northern Road.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/P19KBEQdVjQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VNln5R2iF9E/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Isla Hates Bankers</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Isla Hates Bankers.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VNln5R2iF9E</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/sXKAs0U8eO8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla Hates Married Bankers</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Isla Hates Married Bankers.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/sXKAs0U8eO8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/L-K0MrEKOAc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: I Built A Box</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: I Built A Box.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/L-K0MrEKOAc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0F_prk5dGC4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>I Built A Box</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: I Built A Box.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0F_prk5dGC4</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VUrJP86DHrU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Burning Bridges</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Burning Bridges.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VUrJP86DHrU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/nVKkwb4EnRc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla's Burning Dominic's Bridge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Isla's Burning Dominic's Bridge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/nVKkwb4EnRc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qtkHwKNnAo8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: For You!!!</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: For You!!!.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qtkHwKNnAo8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/f8o7zb3F-Xk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>For You!!!</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: For You!!!.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/f8o7zb3F-Xk</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ox_vABajRIw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Broken Edge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Broken Edge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ox_vABajRIw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/_gvv_W5_x10/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla's Broken Edge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Isla's Broken Edge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/_gvv_W5_x10</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/mAZKRxhPMCg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/mAZKRxhPMCg</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/YkQOXPzYkkU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/YkQOXPzYkkU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/tpnmyIxM1p8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Nothing True</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Nothing True.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/tpnmyIxM1p8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ghg7pC3ms3I/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Nothing True</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Nothing True.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Ghg7pC3ms3I</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qi0HqQ2URdU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Thank Me Later</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Thank Me Later.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qi0HqQ2URdU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/n6OgobffCzo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>You Will Thank Me Later</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: You Will Thank Me Later.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/n6OgobffCzo</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/t6vLU0uqIfc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>No Sparrow Caught Mid Flight</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: No Sparrow Caught Mid Flight.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/t6vLU0uqIfc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/kB5lGHjUqUY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Intro: Dominic's Escape</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Intro: Dominic's Escape.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/kB5lGHjUqUY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/6eZwBGXGSO4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Dominic's Escape</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Dominic's Escape.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/6eZwBGXGSO4</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/dLUClmr_Pf4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Story - Overview</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Story - Overview.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/dLUClmr_Pf4</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/D5afy4FucwA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel's Conclusion</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel's Conclusion.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/D5afy4FucwA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/AOktpmGD0Po/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethel:Spoken: Projection</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethel:Spoken: Projection.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/AOktpmGD0Po</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VC6vQGPyF4c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Platform 18</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Platform 18.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VC6vQGPyF4c</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ac3cRsmjKpE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Kinley (Guilt Money)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Kinley (Guilt Money).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Ac3cRsmjKpE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/CaBcQ2aSjog/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ants On The Vine</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ants On The Vine.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/CaBcQ2aSjog</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Fs7BXBOVnvY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Rattled</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Rattled.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Fs7BXBOVnvY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZAhqNWTHTGU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Clipboard Man</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Clipboard Man.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ZAhqNWTHTGU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/s9Z8dgRk-Q8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Make A Mistake On Purpose</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Make A Mistake On Purpose.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/s9Z8dgRk-Q8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/iTOKsLS3jhM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Red Stick</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Red Stick.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/iTOKsLS3jhM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/WZ3P96AJfEc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Harms Ghost</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Harms Ghost.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/WZ3P96AJfEc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/V0hvxqMWcnE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ethe's Intro: Normal?!</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Ethe's Intro: Normal?!.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/V0hvxqMWcnE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8GCXnOQI60g/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Normal?!</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Normal?!.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/8GCXnOQI60g</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0tzOaukuBns/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>This isn't therapy (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: This isn't therapy (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0tzOaukuBns</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/6bwKDegeBHU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>A Drop From the Forth (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: A Drop From the Forth (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/6bwKDegeBHU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/GFkK21BdE9o/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Porcelain Lie (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: The Porcelain Lie (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/GFkK21BdE9o</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/nk4Re7OjTTM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Memory under Water (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Memory under Water (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/nk4Re7OjTTM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ey20cJsY82M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Raise The Fourth (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Raise The Fourth (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ey20cJsY82M</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fNVKsxe_EcM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Raise The Fourth Version 2 (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Raise The Fourth Version 2 (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/fNVKsxe_EcM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/dK8mqLNRZ2Q/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Intro to Shiny Headed Radio Man (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Intro to Shiny Headed Radio Man (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/dK8mqLNRZ2Q</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/UFZeKCcSMoE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Shiny Headed Radio Man (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Shiny Headed Radio Man (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/UFZeKCcSMoE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-3m2_zUNBlo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Stanmore Farewell (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Stanmore Farewell (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/-3m2_zUNBlo</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/NwqHLFYR1mA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Don't Wake Him Yet (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Don't Wake Him Yet (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/NwqHLFYR1mA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Y4VC6mh37NI/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What You Don't See (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: What You Don't See (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Y4VC6mh37NI</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/a4TpIhna55k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Melody of Normality (Isla Live)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Melody of Normality (Isla Live).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/a4TpIhna55k</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7UOZCk5vvbA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Drop From the Fourth (Isla With Symphony)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Drop From the Fourth (Isla With Symphony).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7UOZCk5vvbA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/hm2kp7LOhsg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What you dont see (Isla With Symphony)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: What you dont see (Isla With Symphony).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/hm2kp7LOhsg</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Aw2ZAkxp6b0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Give it back (Isla)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Give it back (Isla).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Aw2ZAkxp6b0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/X9EUb1_QC9c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What This Was Always For (Isla With Symphony)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: What This Was Always For (Isla With Symphony).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/X9EUb1_QC9c</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8nuKkf_oe1s/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>FIELD NOTES FROM THE LANGTANG TRAIL, 1966</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: FIELD NOTES FROM THE LANGTANG TRAIL, 1966.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/8nuKkf_oe1s</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://silenceisthetrauma.com/zones/silentcinema/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Iav_vtlxM7U/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Sublimate</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Sublimate.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Iav_vtlxM7U</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/yKkyU5r39-s/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Melody Of Normality (live)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Melody Of Normality (live).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/yKkyU5r39-s</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/y6tgaXHq7K4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: The Drop | PIXELSTORTION #shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: The Drop | PIXELSTORTION #shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/y6tgaXHq7K4</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qUTqb7FvCgg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Let it go. Move on. Be normal! …But what if that's the problem? | PIXELSTORTION #Shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Let it go. Move on. Be normal! …But what if that's the problem? | PIXELSTORTION #Shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qUTqb7FvCgg</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/9YKXulK0EYw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: NORMAL?! - A story of difference (Official Music Video)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: NORMAL?! - A story of difference (Official Music Video).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/9YKXulK0EYw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/SLMP5rDOS-k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Ride &amp; Gotta Move (Official music video)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Ride &amp; Gotta Move (Official music video).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/SLMP5rDOS-k</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zuj7gZXeF3c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: The Weight of My Own Hands - Innocent but heavy. | PIXELSTORTION #shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: The Weight of My Own Hands - Innocent but heavy. | PIXELSTORTION #shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/zuj7gZXeF3c</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ffn-33nemy0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Won't break Where others End - Part 3 - Lyric Video | PIXELSTORTION</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Won't break Where others End - Part 3 - Lyric Video | PIXELSTORTION.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ffn-33nemy0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7JmxEtfhpgw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: DOMINIC | ISLA | I see my mind a little blind now | PIXELSTORTION #shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: DOMINIC | ISLA | I see my mind a little blind now | PIXELSTORTION #shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7JmxEtfhpgw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/TqQwDmwSQXM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Something Good</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Something Good.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/TqQwDmwSQXM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/I_KgCDWSD3g/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: You Will Thank Me Later #shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: You Will Thank Me Later #shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/I_KgCDWSD3g</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/C3vwtsNArz0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: Dominic's Escape #shorts</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: Dominic's Escape #shorts.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/C3vwtsNArz0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/36Hzt9pyQMw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>WITNESS: Same Breath</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: WITNESS: Same Breath.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/36Hzt9pyQMw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/E-eORoHi0tY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: You Will</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: You Will.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/E-eORoHi0tY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/rYmwGCKUDhA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: CLIPBOARD MAN</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: CLIPBOARD MAN.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/rYmwGCKUDhA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/QM2hUMDu7WE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: Structural Psychopathy 101</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: Structural Psychopathy 101.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/QM2hUMDu7WE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ugy7KVuhwpE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>WITNESS: Same Breath</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: WITNESS: Same Breath.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Ugy7KVuhwpE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/lwd7KOScg0k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Burning Dominic's Bridge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Burning Dominic's Bridge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/lwd7KOScg0k</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Bff42Vyv8HM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Nothing True. Nothing Refuted.</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Nothing True. Nothing Refuted..</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Bff42Vyv8HM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7gc3DigBW1Y/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7gc3DigBW1Y</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/t4AxR93yFNc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Dominic &amp; Ethel: Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Dominic &amp; Ethel: Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/t4AxR93yFNc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/MrlyjQFhCBo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Ride</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Ride.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/MrlyjQFhCBo</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ho4AunZZO8E/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Wont Break Where Others End</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Wont Break Where Others End.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ho4AunZZO8E</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/m1S5XmePVXE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Wont Break Where Others End (Special Version)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Wont Break Where Others End (Special Version).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/m1S5XmePVXE</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Tn1a7Zo9m74/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: I Built A Box - Part 4</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: I Built A Box - Part 4.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Tn1a7Zo9m74</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/e2wt2VSi9xA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Ants On The Vine</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Ants On The Vine.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/e2wt2VSi9xA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qQ1l6JAjE8M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>STICKY:(Some Things You Don't Chase)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: STICKY:(Some Things You Don't Chase).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qQ1l6JAjE8M</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zh6HEd4lztU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Harms Ghost</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Harms Ghost.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/zh6HEd4lztU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/OxHZnnRhtbk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Normal Ethel</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Normal Ethel.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/OxHZnnRhtbk</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ht9PIloHD0Q/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Normal Ethel (Special Version)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Normal Ethel (Special Version).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ht9PIloHD0Q</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7-rS3HsHoFk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Broken Edge (Acoustic)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Broken Edge (Acoustic).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7-rS3HsHoFk</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7Bec0d8bD0w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Broken Edge (Electric)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Broken Edge (Electric).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7Bec0d8bD0w</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/uovMKnwE34M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>KINLEY: Kinley (Guilt Money)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: KINLEY: Kinley (Guilt Money).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/uovMKnwE34M</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/K9lQ0IYiMoM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Peekaboo</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Peekaboo.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/K9lQ0IYiMoM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/wMFoTfLAcWc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Burning Dominic's Bridge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Burning Dominic's Bridge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/wMFoTfLAcWc</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/2hSYNLs7w3w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Polished Vomit Polished</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Polished Vomit Polished.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/2hSYNLs7w3w</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/lOiveXRb3dw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Polished Vomit Polished (Special Version 1)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Polished Vomit Polished (Special Version 1).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/lOiveXRb3dw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/JWDbXkAKfOw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Burning Dominic's Bridge (Special Version 2)</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Burning Dominic's Bridge (Special Version 2).</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/JWDbXkAKfOw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Lkh53umi1L0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Harms Ghost</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Harms Ghost.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Lkh53umi1L0</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fJsPZkBm-ew/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Polished Vomit</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Polished Vomit.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/fJsPZkBm-ew</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/b8kAEkLVIsA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC: Dominics Intent</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC: Dominics Intent.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/b8kAEkLVIsA</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/FIru9BYaNXw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Move</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Move.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/FIru9BYaNXw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/BV4nJjnd4d8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ISLA: Peek-A-Boo</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ISLA: Peek-A-Boo.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/BV4nJjnd4d8</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/OGim38Nw2hQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>WITNESS: Northern Road</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: WITNESS: Northern Road.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/OGim38Nw2hQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Pe4kJsAo-DQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla Hates Married Bankers</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Isla Hates Married Bankers.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Pe4kJsAo-DQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/yFx3UtzaYag/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Built A Box</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Built A Box.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/yFx3UtzaYag</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/HCcHtojENjQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Islas Burning Dominics Bridge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Islas Burning Dominics Bridge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/HCcHtojENjQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/1ameyfRFUuM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: For You</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: For You.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/1ameyfRFUuM</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/yeFovrcifYU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla's Broken Edge</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: Isla's Broken Edge.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/yeFovrcifYU</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Rlmj04X4nYw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Hero Killer</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Hero Killer.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Rlmj04X4nYw</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/cWYBZ0rGZVo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>ETHEL: Intro To Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: ETHEL: Intro To Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/cWYBZ0rGZVo</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/yjgXRQ0iGeY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC:Hero Complex</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC:Hero Complex.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/yjgXRQ0iGeY</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ErG_G79nplQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC:You Will Thank Me Later</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC:You Will Thank Me Later.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ErG_G79nplQ</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/JZq6IFn2-Oo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>DOMINIC:Dominics Escape</video:title>
+      <video:description>Fictional musical work from Silence Is The Trauma: DOMINIC:Dominics Escape.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/JZq6IFn2-Oo</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+</urlset>

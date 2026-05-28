@@ -368,11 +368,11 @@ Both are foundational reading. The order is canon. The Ryker Case introduces the
 
 This section bundles every public veX post by character. veX is a fictional social network within the Silence Is The Trauma art installation. Every handle, every post, every interaction is part of the fiction; no real persons are depicted.
 
-_Posts shown: 760 across 64 characters. Generated 2026-05-27._
+_Posts shown: 761 across 64 characters. Generated 2026-05-28._
 
 ### Isla (@isla_band)
 > Silence was the Trauma.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/isla_band.html](https://silenceisthetrauma.com/veX_social_network/feed/isla_band.html). 158 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/isla_band](https://silenceisthetrauma.com/veX_social_network/feed/isla_band). 158 public posts._
 
 - **2026-04-29T03:50:00Z**: Same guy. Every show. Up in the rafters. I see you mate.
 - **2026-05-01T22:10:00Z**: The witness box stage. Every night. They sit in the chair and I scream the verdict at them.
@@ -535,7 +535,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/isla_band
 
 ### Ethel Ryker (@ethel_ryker)
 > I document what others dont see.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker.html). 107 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker](https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryker). 107 public posts._
 
 - **2025-03-15T09:00:00Z**: @gran_ryker You are so very missed. It all feels like yesterday that you were here. I don't know how to fill the quiet you left. I don't know how to right the wrong.
 - **2025-06-02T11:30:00Z**: @pop_ryker My grandfather. Maybe not in biology. But in mind, in every way that matters, in every room he walked into. You were our rock. Not spiritual. Just real. Just there. Always there.
@@ -646,7 +646,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ethel_ryk
 - **2026-08-12T23:35:07Z**: I know peace. I knew it at the lab with Gran and at the gate with Pop and at the drop in the green basin where the water fell like glass when the light was right. I know exactly where it is. You do not. That is why you pity me. The pity is the tell.
 
 ### Keep It Real Bro Podcast (@keep_it_real_bro_podcast)
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/keep_it_real_bro_podcast.html](https://silenceisthetrauma.com/veX_social_network/feed/keep_it_real_bro_podcast.html). 53 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/keep_it_real_bro_podcast](https://silenceisthetrauma.com/veX_social_network/feed/keep_it_real_bro_podcast). 53 public posts._
 
 - **2026-05-18T09:00:00Z**: 🔥 NEW EP — 'THE WAREHOUSE COVERUP' 🔥 Chad & Dex on why three buildings don't burn down by accident and why nobody in the legacy media will say the obvious. It's organised crime, lads. The men's voice. The truth. Subscribe.
 - **2026-05-19T07:30:00Z**: 🚨 BONUS DROP 🚨 'THE TEACHER INDUSTRY' — Chad on why the legacy media is suddenly elevating a sob-story school teacher's complaints about education funding to push the same anti-business narrative they've used for fifteen years. Dex on why Apex Holdings is a normal Aussie company being scapegoated. 1h 33m. Subscribe.
@@ -704,7 +704,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/keep_it_r
 
 ### Dominic Ryker (@dominic_ryker)
 > Structure isn't a suggestion.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html](https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker.html). 43 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker](https://silenceisthetrauma.com/veX_social_network/feed/dominic_ryker). 44 public posts._
 
 - **2026-04-29T14:20:00Z**: People confuse comfort with safety. They are not the same structure.
 - **2026-05-01T12:00:00Z**: Every building is a decision someone made about how much your life is worth.
@@ -749,10 +749,11 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dominic_r
 - **2026-05-24T08:07:12.275743Z**: @truckie_dave Order is not self-sustaining.
 - **2026-05-27T06:59:00.883107Z**: @isla_band You did not create the force. You channel it.
 - **2026-05-27T08:45:00.903912Z**: @isla_band Your "blast radius" is merely a function of the system I maintain.
+- **2026-05-27T13:30:17.350693Z**: @isla_band You are still performing inside the boundary I set.
 
 ### Big Marge (@bigmarge)
 > Publican. Redfern. My pub, my rules.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/bigmarge.html](https://silenceisthetrauma.com/veX_social_network/feed/bigmarge.html). 31 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/bigmarge](https://silenceisthetrauma.com/veX_social_network/feed/bigmarge). 31 public posts._
 
 - **2026-05-07T15:30:00Z**: Some suit walked in last night with two blokes who looked like they eat protein powder for breakfast. Ordered a Grange. Threatened my glassie. I barred them. For life. My pub. My rules.
 - **2026-05-10T20:00:00Z**: Quiet night. Just the regulars. Old Tony played the pokies for three hours and won twelve dollars. He bought a schooner with it. That's the economy working as intended.
@@ -788,7 +789,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/bigmarge.
 
 ### Stevo (@stevo)
 > Property management. Western Sydney. Bond recovery specialist.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/stevo.html](https://silenceisthetrauma.com/veX_social_network/feed/stevo.html). 30 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/stevo](https://silenceisthetrauma.com/veX_social_network/feed/stevo). 30 public posts._
 
 - **2026-05-06T10:15:00Z**: Sent Sandra the pre-tenancy photos. Time-stamped, geo-tagged, professionally labelled. She cannot dispute the stain in the garage. The soil report confirms it.
 - **2026-05-08T17:15:00Z**: Woke up at 5 AM worrying about the bond. Drove to the property. Took thirty-seven photos of the bathroom grout. Sandra will not beat me on this. I am a professional tenant.
@@ -823,7 +824,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/stevo.htm
 
 ### Penelope (@the_barista)
 > Coffee. Observations. The lobby sees everything.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_barista.html](https://silenceisthetrauma.com/veX_social_network/feed/the_barista.html). 30 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_barista](https://silenceisthetrauma.com/veX_social_network/feed/the_barista). 30 public posts._
 
 - **2026-04-29T12:00:00Z**: Same order every morning. Same silence. Same tip. Some people say more by never changing.
 - **2026-05-05T07:02:00Z**: New regular. Third Tuesday in a row. Long black, no sugar, pays cash. Sits facing the door. I shouldn't notice these things but I do.
@@ -858,7 +859,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_baris
 
 ### Dr. Al-Fayed (@dr_alfayed)
 > Chief Coroner. London. The body tells the truth.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_alfayed.html](https://silenceisthetrauma.com/veX_social_network/feed/dr_alfayed.html). 28 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_alfayed](https://silenceisthetrauma.com/veX_social_network/feed/dr_alfayed). 28 public posts._
 
 - **2026-05-05T19:00:00Z**: Spent the morning reviewing old files. Some cases age like wine. Others age like evidence. The Harrington file is the latter.
 - **2026-05-06T18:00:00Z**: A colleague asked why I keep Harrington's file on my desk. I said it reminds me that patience is a medical instrument.
@@ -891,7 +892,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_alfaye
 
 ### Truckie Dave (@truckie_dave)
 > Logistics. Port Botany.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/truckie_dave.html](https://silenceisthetrauma.com/veX_social_network/feed/truckie_dave.html). 28 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/truckie_dave](https://silenceisthetrauma.com/veX_social_network/feed/truckie_dave). 28 public posts._
 
 - **2026-05-05T07:45:00Z**: Three hours at the boom gate. Gazza reckons the scanner's updating. Always updating. Never updated. Had to eat me sandwich cold. Unacceptable.
 - **2026-05-06T07:15:00Z**: Early start. 4 AM. Roads are empty. This is when I love the job. No traffic, no questions, just the road and the radio. Dropped the load by six. Beautiful.
@@ -924,7 +925,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/truckie_d
 
 ### Daz O'Malley (@daz_omalley)
 > CFMEU delegate. Western Sydney.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/daz_omalley.html](https://silenceisthetrauma.com/veX_social_network/feed/daz_omalley.html). 27 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/daz_omalley](https://silenceisthetrauma.com/veX_social_network/feed/daz_omalley). 27 public posts._
 
 - **2026-05-06T16:15:00Z**: Safety audit at the Parramatta site. Found a loose bolt on the scaffolding. Shut the whole thing down for 48 hours. Management screamed. The bolt didn't.
 - **2026-05-09T18:15:00Z**: Management at Parramatta want to restart before the 48 hours are up. I said the bolt needs testing by the certifier. The certifier is in Wollongong. Coming Thursday. Should've thought about the bolt.
@@ -956,7 +957,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/daz_omall
 
 ### Surry Hills Resident (@surry_hills_view)
 > Just a bloke in Surry Hills. Why are there sirens every night?
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/surry_hills_view.html](https://silenceisthetrauma.com/veX_social_network/feed/surry_hills_view.html). 27 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/surry_hills_view](https://silenceisthetrauma.com/veX_social_network/feed/surry_hills_view). 27 public posts._
 
 - **2026-05-12T07:45:00Z**: Sirens again. That's three nights in a row. It's getting ridiculous around here.
 - **2026-05-19T15:56:00Z**: Sirens again. That's three nights in a row. It's getting ridiculous around here.
@@ -988,7 +989,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/surry_hil
 
 ### OSINT Monitor (@conflict_osint)
 > Open-source intelligence. Military and logistics tracking.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/conflict_osint.html](https://silenceisthetrauma.com/veX_social_network/feed/conflict_osint.html). 17 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/conflict_osint](https://silenceisthetrauma.com/veX_social_network/feed/conflict_osint). 17 public posts._
 
 - **2026-05-15T10:30:00Z**: Three Cyprus shell-corp directors named in the Macready brief have filed for retirement within a week of each other. Two of them are thirty-eight years old.
 - **2026-05-26T14:00:00Z**: Frank Crusher's yard at Yagoona has put four black SUVs through the press in ten days. Two of them are on the AFP movement log for the Ryker file. The registrations are not the registrations they were sold under.
@@ -1010,7 +1011,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/conflict_
 
 ### Dr. Cosgrove Wendlebury Reeve (@drcosgrovereeve)
 > Senior Fellow, The Phaedrus Initiative for the Re-Enchantment of the Western Subject. Pennsylvania. The forthcoming volume.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/drcosgrovereeve.html](https://silenceisthetrauma.com/veX_social_network/feed/drcosgrovereeve.html). 12 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/drcosgrovereeve](https://silenceisthetrauma.com/veX_social_network/feed/drcosgrovereeve). 12 public posts._
 
 - **2026-05-30T09:00:00Z**: What we are witnessing in Ethel Ryker is not, and here we must be careful, not malice. It is kataphasis-in-arrest. A daughter frozen at the moment of refusal. She cannot affirm. She cannot deny. She has built a forensic accountancy in the place where a yes should sit. In my forthcoming volume I devote a chapter to this. Section 4, lines 22 through 91. The wound is axiomatic. Forgiveness is not transactional, dear ones. It is metaphysical.
 - **2026-06-05T21:00:00Z**: And here, of course, we encounter — the matter of Isla. The menad. The maenad-in-stagecraft. A young woman whose Dionysian energies have been commodified by the ticketed economy. One feels, watching her perform, the absence of the Apollonian counterweight. She requires — and I say this with great love — a husband old enough to remember the war.
@@ -1027,7 +1028,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/drcosgrov
 
 ### Jack 'The Shiv' (@jack_shiv)
 > Investigative journalist. Freelance. The blunt instrument.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jack_shiv.html](https://silenceisthetrauma.com/veX_social_network/feed/jack_shiv.html). 10 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jack_shiv](https://silenceisthetrauma.com/veX_social_network/feed/jack_shiv). 10 public posts._
 
 - **2026-04-30T10:15:00Z**: Three sources. None of them wrong. All of them scared. That's the story.
 - **2026-05-05T16:30:00Z**: Got a call from a bloke I haven't heard from in eight years. Used to drink at the same pub. He sounded different. Scared, maybe. Buying him lunch on Thursday.
@@ -1041,7 +1042,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jack_shiv
 - **2026-05-27T14:30:00Z**: This is a national tragedy. A young Northern Beaches uni student and two others, murdered in cold blood. You don't run an empire for twenty years without filling a few cemeteries, but this? Dominic Ryker is reaching out from Europe and killing Australians. I’ll bring my pen, Dom. Let's see who bleeds first.
 
 ### Zero State Media (@zero_state_media)
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/zero_state_media.html](https://silenceisthetrauma.com/veX_social_network/feed/zero_state_media.html). 10 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/zero_state_media](https://silenceisthetrauma.com/veX_social_network/feed/zero_state_media). 10 public posts._
 
 - **2026-07-22T21:32:00Z**: ▒ The line is wherever capital extracts consent ▒ Wage labour is coercion ▒ Rent is coercion ▒ The border is coercion ▒ The carceral apparatus is coercion ▒ The family unit is coercion ▒
 - **2026-07-22T21:36:00Z**: the line is wherever the structure produces the harm sister
@@ -1056,7 +1057,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/zero_stat
 
 ### Gleb (@gleb_r)
 > .
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/gleb_r.html](https://silenceisthetrauma.com/veX_social_network/feed/gleb_r.html). 9 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/gleb_r](https://silenceisthetrauma.com/veX_social_network/feed/gleb_r). 9 public posts._
 
 - **2026-04-27T06:00:00Z**: .
 - **2026-05-20T00:53:00Z**: .
@@ -1070,7 +1071,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/gleb_r.ht
 
 ### Ratibor (@ratibor_r)
 > .
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ratibor_r.html](https://silenceisthetrauma.com/veX_social_network/feed/ratibor_r.html). 9 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ratibor_r](https://silenceisthetrauma.com/veX_social_network/feed/ratibor_r). 9 public posts._
 
 - **2026-05-11T04:22:00Z**: .
 - **2026-05-28T02:38:00Z**: .
@@ -1084,7 +1085,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ratibor_r
 
 ### Conflict Reporter (@frontline_journo)
 > Freelance conflict correspondent. Slovak-Ukrainian border region.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/frontline_journo.html](https://silenceisthetrauma.com/veX_social_network/feed/frontline_journo.html). 8 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/frontline_journo](https://silenceisthetrauma.com/veX_social_network/feed/frontline_journo). 8 public posts._
 
 - **2026-05-19T13:40:00Z**: The informant's intel is tearing the network apart. They can't touch the offshore cash, but they are systematically severing the access points. The laundering channels are burning. Ryker is losing his grip on the infrastructure.
 - **2026-07-18T12:30:00Z**: Twenty-storey block in Letná evacuated by Czech police at 11:40. CCTV across the street picked up the same balcony-rail device that started the Prague 7 fire on 1 June. The registered owner of the block has filings in the 2022 Ryker brief.
@@ -1097,7 +1098,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/frontline
 
 ### Lev (@lev_r)
 > .
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/lev_r.html](https://silenceisthetrauma.com/veX_social_network/feed/lev_r.html). 8 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/lev_r](https://silenceisthetrauma.com/veX_social_network/feed/lev_r). 8 public posts._
 
 - **2026-04-30T15:30:00Z**: .
 - **2026-05-05T18:07:00Z**: .
@@ -1110,7 +1111,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/lev_r.htm
 
 ### 'Iron' Irene (@iron_irene)
 > Prosecutor. No deals.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/iron_irene.html](https://silenceisthetrauma.com/veX_social_network/feed/iron_irene.html). 7 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/iron_irene](https://silenceisthetrauma.com/veX_social_network/feed/iron_irene). 7 public posts._
 
 - **2026-05-01T16:45:00Z**: I don't make deals. I make consequences.
 - **2026-05-05T09:10:00Z**: Bail application denied. Defence argued community ties. His passport has more stamps than a post office. Try again, sweetheart.
@@ -1122,7 +1123,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/iron_iren
 
 ### Ross Kinley (@ross_kinley)
 > Councillor. Community engagement. Infrastructure advocacy.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ross_kinley.html](https://silenceisthetrauma.com/veX_social_network/feed/ross_kinley.html). 7 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ross_kinley](https://silenceisthetrauma.com/veX_social_network/feed/ross_kinley). 7 public posts._
 
 - **2026-04-30T17:00:00Z**: Community engagement session went well today. Productive conversations about infrastructure investment. Listening matters.
 - **2026-05-05T15:00:00Z**: Proud to announce $14M in community infrastructure upgrades for Western Sydney. Roads, bridges, futures. Building tomorrow, today.
@@ -1134,7 +1135,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ross_kinl
 
 ### Sarah K (@sarah_k)
 > Investigative journalist. The whole picture.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_k.html](https://silenceisthetrauma.com/veX_social_network/feed/sarah_k.html). 7 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_k](https://silenceisthetrauma.com/veX_social_network/feed/sarah_k). 7 public posts._
 
 - **2026-05-05T17:00:00Z**: Started pulling the thread on the Barangaroo rezoning. The shell company has a PO box in George Town. The PO box has a PO box. This is going to be a long week.
 - **2026-05-07T14:00:00Z**: The PO box in George Town is registered to a law firm. The law firm has three partners. One of them lives in Sydney. This is going to take a while. I have time.
@@ -1146,7 +1147,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_k.h
 
 ### The Liability (@the_liability)
 > Logistics. The warehouse.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_liability.html](https://silenceisthetrauma.com/veX_social_network/feed/the_liability.html). 7 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_liability](https://silenceisthetrauma.com/veX_social_network/feed/the_liability). 7 public posts._
 
 - **2026-05-05T13:15:00Z**: Great news. Registered the business with SafeWork NSW. We are now officially Sunrise Pool Supplies Pty Ltd. Inspector comes Tuesday. Should probably move the... equipment.
 - **2026-05-06T17:00:00Z**: Boss asked me to clean up the office. I cleaned up the office. Mopped, swept, put the chemicals in the proper storage cabinet. Even labelled them. Now he's angry about the labels. Can't win.
@@ -1158,7 +1159,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_liabi
 
 ### Det. Inspector Macready (@AFP_Macready)
 > AFP Major Crime. Sydney. 28 years on the force. The law is a suggestion someone else wrote.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/AFP_Macready.html](https://silenceisthetrauma.com/veX_social_network/feed/AFP_Macready.html). 6 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/AFP_Macready](https://silenceisthetrauma.com/veX_social_network/feed/AFP_Macready). 6 public posts._
 
 - **2026-05-12T09:00:00Z**: My best Czech contact has stopped answering. His handset has been logged onto a barge between Děčín and Hřensko at 04:11. Then nothing. The handset is in the river.
 - **2026-05-14T16:45:00Z**: OSINT flagged a post from a pool supply shop out west. Bloke's using a flight log to prop up his coffee. Zoomed in on the page sticking out—flight 402-B to Zurich. We coordinated with the Swiss. They just pulled an Australian off that flight. Looks like he was walking right into a meeting. We broke the chain.
@@ -1169,7 +1170,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/AFP_Macre
 
 ### Agent Allie Miller (@agent_miller)
 > FBI Financial Crimes. Newark.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/agent_miller.html](https://silenceisthetrauma.com/veX_social_network/feed/agent_miller.html). 6 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/agent_miller](https://silenceisthetrauma.com/veX_social_network/feed/agent_miller). 6 public posts._
 
 - **2026-05-05T14:20:00Z**: Third coffee. Pulled the Jersey City permit archive for 1999. Cross-referencing with the holding company filings. My boss asked why I'm still on this. I said I like reading.
 - **2026-05-06T13:00:00Z**: The 1999 permit connects to a company dissolved in 2003. The director of that company is now on the board of a Zurich-registered holding firm. Six degrees. Getting warmer.
@@ -1180,7 +1181,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/agent_mil
 
 ### Elena Corves (@elena_corves)
 > Asset management. NYC.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/elena_corves.html](https://silenceisthetrauma.com/veX_social_network/feed/elena_corves.html). 6 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/elena_corves](https://silenceisthetrauma.com/veX_social_network/feed/elena_corves). 6 public posts._
 
 - **2026-05-05T12:30:00Z**: Dinner at Per Se. The General Counsel brought his wife. She wore the necklace from the Hamptons weekend. Bold choice. I complimented it.
 - **2026-05-06T06:45:00Z**: Coffee with Martin from Deutsche. He looks thinner. Stress does that. I asked about his daughter's recital. He changed the subject. Interesting.
@@ -1191,7 +1192,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/elena_cor
 
 ### Trish Halloran (@trish_halloran)
 > South Sydney High teacher. Department of Education whistleblower.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/trish_halloran.html](https://silenceisthetrauma.com/veX_social_network/feed/trish_halloran.html). 6 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/trish_halloran](https://silenceisthetrauma.com/veX_social_network/feed/trish_halloran). 6 public posts._
 
 - **2026-05-22T22:00:00Z**: Year 8 girl reading at university level. School insists she keep doing the work the slowest kid in her stream can keep up with. She asks if she can sit in the library at lunch and read what she chooses. We told her no. Then we wonder why she stops talking.
 - **2026-06-12T23:35:00Z**: Year 9 kid stepped in to stop a bully and a fight broke out. The bully has family issues, the other has a great heart. Guess who got suspended? The kid with the heart. He didn't throw a punch until one was coming for him. Bright kid, thinks faster than the adults around him — and gets punished for it. We wonder why these kids stop trusting us by Year 10.
@@ -1202,7 +1203,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/trish_hal
 
 ### Tourist in Prague (@prague_backpacker)
 > Gap year. Waiting for my Ryanair flight. OH MY GOD.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/prague_backpacker.html](https://silenceisthetrauma.com/veX_social_network/feed/prague_backpacker.html). 4 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/prague_backpacker](https://silenceisthetrauma.com/veX_social_network/feed/prague_backpacker). 4 public posts._
 
 - **2026-05-31T08:15:00Z**: Sirens since five. 20-storey block opposite is on fire. Police perimeter at fifty metres. No firefighters approaching.
 - **2026-08-06T09:05:00Z**: i'm on the concourse. people running both ways. sparks coming down from the ceiling. i don't know which direction is the exit.
@@ -1210,7 +1211,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/prague_ba
 - **2026-08-07T10:30:00Z**: Embassy got me on a flight out. Someone shared this CCTV frame from 09:34. Could be the man on the news. Could be anyone.
 
 ### University Vice-Chancellor (@university_vice-chancellor)
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/university_vice-chancellor.html](https://silenceisthetrauma.com/veX_social_network/feed/university_vice-chancellor.html). 4 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/university_vice-chancellor](https://silenceisthetrauma.com/veX_social_network/feed/university_vice-chancellor). 4 public posts._
 
 - **2026-05-05T17:45:00Z**: Excellent news: international applications up 38% for Semester 2. Our Global Pathways initiative is resonating.
 - **2026-05-06T20:00:00Z**: Concerning reports that the proposed fee cap may impact our research output. Education is an investment. Capping investment is capping aspiration.
@@ -1219,7 +1220,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/universit
 
 ### Agent Aris Vosh (@europol_vosh)
 > Europol Intelligence Coordinator. The Hague. Classified.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/europol_vosh.html](https://silenceisthetrauma.com/veX_social_network/feed/europol_vosh.html). 3 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/europol_vosh](https://silenceisthetrauma.com/veX_social_network/feed/europol_vosh). 3 public posts._
 
 - **2026-05-27T18:00:00Z**: The international media attention is deafening. The political pressure from Australia has forced our hand. His ability to fly under the radar is completely gone. Private jets are seized, bank accounts frozen. The network access is dead.
 - **2026-06-02T11:20:00Z**: Twenty-storey block at Prague 7. The fire began five minutes after our search warrant was logged. CCTV across the street recovered a frame of a remote-trigger device on a balcony rail. We are trying to stop the next building.
@@ -1227,7 +1228,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/europol_v
 
 ### Kaylee (@kaylee)
 > Front desk. Wellness coordinator. Cookies.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kaylee.html](https://silenceisthetrauma.com/veX_social_network/feed/kaylee.html). 3 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kaylee](https://silenceisthetrauma.com/veX_social_network/feed/kaylee). 3 public posts._
 
 - **2026-05-06T19:30:00Z**: Made snickerdoodles for the night shift. Kevin left his badge on the counter AGAIN. I put it in the lost and found. I'm too nice.
 - **2026-05-08T18:00:00Z**: Saturday shift. Server room was warm again. The intake vent needs cleaning. I told maintenance. They said Monday. I said okay. Brought iced tea for the guys instead.
@@ -1235,7 +1236,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kaylee.ht
 
 ### Mara Quinn (@mara_quinn)
 > Senior Reporter, The Southern Objective.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/mara_quinn.html](https://silenceisthetrauma.com/veX_social_network/feed/mara_quinn.html). 3 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/mara_quinn](https://silenceisthetrauma.com/veX_social_network/feed/mara_quinn). 3 public posts._
 
 - **2026-05-02T14:30:00Z**: Start with the documents. Their path into court isn't a heist narrative. It's procedure.
 - **2026-05-29T06:40:00Z**: Embargo lifts at midday Sydney time. The compliance certifier who signed twenty-three of the projects in the Targeted Asset and Liability Matrix has given a 47-page sworn deposition. He names every site, every shortcut, every email he received. The Public Record is publishing the unredacted text in full.
@@ -1243,7 +1244,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/mara_quin
 
 ### Phillip Miller (@phillip_miller)
 > Principal — South Sydney High School.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/phillip_miller.html](https://silenceisthetrauma.com/veX_social_network/feed/phillip_miller.html). 3 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/phillip_miller](https://silenceisthetrauma.com/veX_social_network/feed/phillip_miller). 3 public posts._
 
 - **2026-05-15T14:00:00Z**: Spent forty minutes this afternoon with a parent who escalated. Documented. The word that protects us — and I say it plainly because I've been in education long enough — is 'harassment'. It is a magic word. It changes what a meeting was, what a tone was, what a parent thinks they can demand. We are not punching bags. We are professionals.
 - **2026-06-05T10:00:00Z**: Another meeting. Another parent. Another raised voice in a corridor I'm meant to feel grateful for. My office is not a soft landing. Behavioural standards are reasonable. When a child is suspended it is because a child has, by definition, breached the boundary. The aggression a parent then directs at staff is, by definition, harassment. We have procedures. I have used them.
@@ -1251,7 +1252,7 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/phillip_m
 
 ### Sarah Lin (@sarah_lin)
 > IP law. Hong Kong.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_lin.html](https://silenceisthetrauma.com/veX_social_network/feed/sarah_lin.html). 3 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_lin](https://silenceisthetrauma.com/veX_social_network/feed/sarah_lin). 3 public posts._
 
 - **2026-05-06T14:30:00Z**: Acquired the .com, .net, and .org for a rather interesting company name this morning. Protective registration, of course. The company hasn't launched yet. I like to plan ahead.
 - **2026-05-08T15:00:00Z**: Interesting morning. A mid-size tech company launched a product using a name remarkably similar to a domain I registered three years ago. I've sent a polite letter. These things resolve themselves.
@@ -1259,190 +1260,190 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sarah_lin
 
 ### Ash (@ash)
 > Temp. Data entry. North Sydney.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ash.html](https://silenceisthetrauma.com/veX_social_network/feed/ash.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/ash](https://silenceisthetrauma.com/veX_social_network/feed/ash). 2 public posts._
 
 - **2026-05-07T13:30:00Z**: The spreadsheet has 4,000 rows but column F goes blank after row 2,046. I mentioned it to the manager. She said just skip it. You can't just skip 1,954 rows. That's not how numbers work.
 - **2026-05-10T17:00:00Z**: Column F is still blank after row 2,046. I wrote a script to check the pattern. The blanks aren't random. They correspond to invoices from a single vendor. The vendor name is redacted. I deleted the script. Not my problem.
 
 ### Dr. Kovac (@dr_kovac_med)
 > Regional Medical Director. Eastern Slovakia.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_kovac_med.html](https://silenceisthetrauma.com/veX_social_network/feed/dr_kovac_med.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_kovac_med](https://silenceisthetrauma.com/veX_social_network/feed/dr_kovac_med). 2 public posts._
 
 - **2026-08-01T22:10:00Z**: Power out at 22:08. Gensets not starting. Switchroom door has been melted from the outside. We are on flashlights.
 - **2026-08-02T01:30:00Z**: 01:30. Three patients on bagged ventilation in ICU. Two in casualty triaged by phone-torch. Switchboard cannot raise the grid operator. I am told the substation transformer at Holešovice is on fire.
 
 ### Dr. Elizabeth Vance (@dr_liz_chem)
 > Forensic Chemist. Independent consultant. Chemistry doesn't lie.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_liz_chem.html](https://silenceisthetrauma.com/veX_social_network/feed/dr_liz_chem.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dr_liz_chem](https://silenceisthetrauma.com/veX_social_network/feed/dr_liz_chem). 2 public posts._
 
 - **2026-05-23T08:15:00Z**: My niece Chloe is gone. A brilliant, innocent girl who just wanted to study soil. I don't care who you are or how much money you have. I will not stop until the people who did this are dragged into the light and broken.
 - **2026-05-28T11:30:00Z**: Riverstone warehouse residue, third pass. Three accelerants in layered application — initial primer chosen for evaporation rate, secondary for burn temperature, tertiary for visual misdirection. The order is the signature. Same signature on a 2019 supplier invoice from the Camperdown site. Chain of custody is being prepared.
 
 ### Jan Horák (@jan_ramp_prg)
 > Baggage handler. Václav Havel Airport. Morning shift.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jan_ramp_prg.html](https://silenceisthetrauma.com/veX_social_network/feed/jan_ramp_prg.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jan_ramp_prg](https://silenceisthetrauma.com/veX_social_network/feed/jan_ramp_prg). 2 public posts._
 
 - **2026-08-06T09:15:00Z**: still under the bowser at stand 12. firing hasn't stopped. josef. lukáš. petr. answer your phones.
 - **2026-08-06T09:35:00Z**: under the bowser still. cargo plane at 14 has the rear ramp down. men in tactical gear loading. one civilian walking up the ramp.
 
 ### Kate Jennings (@kate_jennings)
 > Investigative journalist.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings.html](https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings](https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings). 2 public posts._
 
 - **2026-05-02T15:12:00Z**: Day 3. The witness box. She didn't flinch once.
 - **2026-05-17T08:00:00Z**: Front page today. Two years on the paper trail. Apex Holdings, the 'two rods offset the load' email, and the installer's widow no investigator ever called back. Six pages. The lawyers cleared every line.
 
 ### Klara Novotná (@klarak_prg)
 > Flight attendant. Czech Airlines OK442.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/klarak_prg.html](https://silenceisthetrauma.com/veX_social_network/feed/klarak_prg.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/klarak_prg](https://silenceisthetrauma.com/veX_social_network/feed/klarak_prg). 2 public posts._
 
 - **2026-08-06T09:20:00Z**: still on the taxiway. captain has stopped. smoke from row two. told to stay in seats.
 - **2026-08-06T09:40:00Z**: can see the cargo plane from row two. ramp is up. taxiing. nobody on the steps where the civilian was.
 
 ### Marcus Vane (@marcus_vane)
 > Finance. Zurich. Transaction velocity.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/marcus_vane.html](https://silenceisthetrauma.com/veX_social_network/feed/marcus_vane.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/marcus_vane](https://silenceisthetrauma.com/veX_social_network/feed/marcus_vane). 2 public posts._
 
 - **2026-04-28T07:30:00Z**: The speed of money is a moral position.
 - **2026-05-05T06:14:00Z**: Quarterly compliance review complete. Eighteen jurisdictions. All green. The machine doesn't need a driver. It needs maintenance.
 
 ### Pieter 'The Block' (@pieter_block)
 > Harbor safety. Rotterdam. Physics.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/pieter_block.html](https://silenceisthetrauma.com/veX_social_network/feed/pieter_block.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/pieter_block](https://silenceisthetrauma.com/veX_social_network/feed/pieter_block). 2 public posts._
 
 - **2026-05-05T20:30:00Z**: Container 4471-B listed as agricultural equipment. Weight discrepancy of 340kg. Holding for secondary inspection. The captain can call whoever he wants. Gate 7 stays closed.
 - **2026-05-09T17:30:00Z**: Container 4471-B cleared after secondary inspection revealed a manifest discrepancy of 12 units. The Captain blamed translation error. From what language? Mathematics is universal. Report filed.
 
 ### Commander Kaelen (@pmc_kaelen)
 > No affiliation. No insignia. Contract fulfilled.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/pmc_kaelen.html](https://silenceisthetrauma.com/veX_social_network/feed/pmc_kaelen.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/pmc_kaelen](https://silenceisthetrauma.com/veX_social_network/feed/pmc_kaelen). 2 public posts._
 
 - **2026-06-11T04:02:00Z**: @volkov_logistics Delete this. Now. Go dark. You are posting operational details on an open network. Are you trying to get us killed?
 - **2026-06-20T01:20:00Z**: Boots on the ground. The extraction corridor is being prepped. Local law enforcement has been... persuaded to look away. Night-vision green is the only color that matters tonight.
 
 ### Yuri Volkov (@volkov_logistics)
 > Logistics. Eastern corridor. Contract work.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/volkov_logistics.html](https://silenceisthetrauma.com/veX_social_network/feed/volkov_logistics.html). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/volkov_logistics](https://silenceisthetrauma.com/veX_social_network/feed/volkov_logistics). 2 public posts._
 
 - **2026-06-10T03:15:00Z**: The target's access is compromised. Relocating assets to the border. He pays, we provide the harbor. No ideology, just business. The convoy leaves at midnight.
 - **2026-06-21T01:45:00Z**: @pmc_kaelen You just did the same thing. Shut up. Delete everything. Both of us. Now.
 
 ### Arthur Penn (@arthur_penn)
 > Code enforcement. Mobile.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/arthur_penn.html](https://silenceisthetrauma.com/veX_social_network/feed/arthur_penn.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/arthur_penn](https://silenceisthetrauma.com/veX_social_network/feed/arthur_penn). 1 public posts._
 
 - **2026-05-08T20:15:00Z**: Property inspection complete. Three permit violations documented. One minor. Two significant. The fire exit is not a fire exit if it opens into a wall. Remediation timeline: 14 days.
 
 ### Bruce Carter (@bruce_carter)
 > Sunrise Pool Supplies. Western Sydney.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/bruce_carter.html](https://silenceisthetrauma.com/veX_social_network/feed/bruce_carter.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/bruce_carter](https://silenceisthetrauma.com/veX_social_network/feed/bruce_carter). 1 public posts._
 
 - **2026-05-12T08:15:00Z**: If anyone sees Spud, tell him to get his arse to work. We sell pool filters, mate, we don't pay you to be late! I'm running a business here, not a charity for blokes who can't set an alarm.
 
 ### Chloe Vance (@chloe_enviro)
 > Horticulture student. The soil tells the truth.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/chloe_enviro.html](https://silenceisthetrauma.com/veX_social_network/feed/chloe_enviro.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/chloe_enviro](https://silenceisthetrauma.com/veX_social_network/feed/chloe_enviro). 1 public posts._
 
 - **2026-05-21T04:30:00Z**: Early start for the horticulture field trip! Walking along the country road near the Hawkesbury. It's freezing, but wearing my bright reflective vest so the trucks don't hit us! 🌿 Gotta get these samples before the sun comes up properly.
 
 ### Dean Vasic (@dean_vasic)
 > Drums. Kit. Airport security.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dean_vasic.html](https://silenceisthetrauma.com/veX_social_network/feed/dean_vasic.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/dean_vasic](https://silenceisthetrauma.com/veX_social_network/feed/dean_vasic). 1 public posts._
 
 - **2026-05-02T05:01:00Z**: My kit smelled like sulphur for three days after that.
 
 ### Eli Ward (@eli_ward)
 > Music journalist.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/eli_ward.html](https://silenceisthetrauma.com/veX_social_network/feed/eli_ward.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/eli_ward](https://silenceisthetrauma.com/veX_social_network/feed/eli_ward). 1 public posts._
 
 - **2026-04-28T11:00:00Z**: Saw ISLABAND last night. The witness box stage is something else. You don't watch it. It watches you.
 
 ### Flynn Calder (@flynn_calder)
 > Bass.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/flynn_calder.html](https://silenceisthetrauma.com/veX_social_network/feed/flynn_calder.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/flynn_calder](https://silenceisthetrauma.com/veX_social_network/feed/flynn_calder). 1 public posts._
 
 - **2026-05-01T20:00:00Z**: Catering tonight was a bread roll and rage. Standard.
 
 ### Frau Edelstein (@frau_edelstein)
 > Senior Compliance. Zurich.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/frau_edelstein.html](https://silenceisthetrauma.com/veX_social_network/feed/frau_edelstein.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/frau_edelstein](https://silenceisthetrauma.com/veX_social_network/feed/frau_edelstein). 1 public posts._
 
 - **2026-05-07T18:30:00Z**: Transaction 402 in the Vane quarterly lacks a counter-party signature. I have requested clarification. Until then, the account is under review. Switzerland does not have glitches.
 
 ### Jess Vance (@jess_vance88)
 > Has anyone seen Chloe?
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jess_vance88.html](https://silenceisthetrauma.com/veX_social_network/feed/jess_vance88.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jess_vance88](https://silenceisthetrauma.com/veX_social_network/feed/jess_vance88). 1 public posts._
 
 - **2026-05-23T06:30:00Z**: Please, if anyone has seen my sister Chloe or the two students she was with... They never returned from their field trip yesterday morning. Her phone is off. We are terrified. Please share.
 
 ### Lachlan Sterling (@lachlan_sterling)
 > CEO, Apexian. Barangaroo.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/lachlan_sterling.html](https://silenceisthetrauma.com/veX_social_network/feed/lachlan_sterling.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/lachlan_sterling](https://silenceisthetrauma.com/veX_social_network/feed/lachlan_sterling). 1 public posts._
 
 - **2026-04-30T08:00:00Z**: Floor space ratio is poetry. The rest is sentiment.
 
 ### Mateo Silva (@mateo_flies)
 > Architectural consultant. Layover in Prague. I am never flying again.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/mateo_flies.html](https://silenceisthetrauma.com/veX_social_network/feed/mateo_flies.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/mateo_flies](https://silenceisthetrauma.com/veX_social_network/feed/mateo_flies). 1 public posts._
 
 - **2026-08-06T09:10:00Z**: in the lounge with maybe twenty others. we can see them through the glass.
 
 ### Dmitry (@prague_dmitry)
 > Pankrác Remand Prison. Cell Block 4. The man does not sleep.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/prague_dmitry.html](https://silenceisthetrauma.com/veX_social_network/feed/prague_dmitry.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/prague_dmitry](https://silenceisthetrauma.com/veX_social_network/feed/prague_dmitry). 1 public posts._
 
 - **2026-06-01T22:45:00Z**: We have the perimeter secured, but the heat from the structure is literally melting our visors. Whoever designed this fire wanted everything inside turned to ash before we could breach the lobby. It's a complete wipe.
 
 ### Reuben Oakes (@reuben_oakes)
 > Lead guitar. Arrangements. The band existed before her but she made it real.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/reuben_oakes.html](https://silenceisthetrauma.com/veX_social_network/feed/reuben_oakes.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/reuben_oakes](https://silenceisthetrauma.com/veX_social_network/feed/reuben_oakes). 1 public posts._
 
 - **2026-05-01T23:40:00Z**: Restrung the Les Paul mid-set. Nobody noticed. That's the point.
 
 ### Seb Harlow (@seb_harlow)
 > Rhythm guitar.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/seb_harlow.html](https://silenceisthetrauma.com/veX_social_network/feed/seb_harlow.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/seb_harlow](https://silenceisthetrauma.com/veX_social_network/feed/seb_harlow). 1 public posts._
 
 - **2026-04-27T16:00:00Z**: 
 
 ### Sgt. 'Robbo' (@sgt_robbo)
 > King's Cross. The blind eye.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sgt_robbo.html](https://silenceisthetrauma.com/veX_social_network/feed/sgt_robbo.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sgt_robbo](https://silenceisthetrauma.com/veX_social_network/feed/sgt_robbo). 1 public posts._
 
 - **2026-04-30T21:30:00Z**: Some things you don't see because you weren't looking. Some things you don't see because you know better.
 
 ### Shazza (@shazza)
 > Payroll. Western Sydney. The numbers don't lie.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/shazza.html](https://silenceisthetrauma.com/veX_social_network/feed/shazza.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/shazza](https://silenceisthetrauma.com/veX_social_network/feed/shazza). 1 public posts._
 
 - **2026-05-05T18:15:00Z**: Someone submitted a fuel receipt from a Shell station that closed in 2019. The Shell station is now a Bunnings. Do they think I don't use Google Maps? Claim rejected.
 
 ### Silas Kovic (@silas_kovic)
 > Rotterdam. Displacement.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/silas_kovic.html](https://silenceisthetrauma.com/veX_social_network/feed/silas_kovic.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/silas_kovic](https://silenceisthetrauma.com/veX_social_network/feed/silas_kovic). 1 public posts._
 
 - **2026-05-07T20:00:00Z**: Minor supply chain disruption in the North Sea corridor. Container 4471-B held at Gate 7 for re-inspection. These delays cost time and money. Patience.
 
 ### Sticky (@sticky_)
 > .
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sticky_.html](https://silenceisthetrauma.com/veX_social_network/feed/sticky_.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/sticky_](https://silenceisthetrauma.com/veX_social_network/feed/sticky_). 1 public posts._
 
 - **2026-04-29T09:15:00Z**: Done.
 
 ### Tabloid Baz (@tabloid_baz)
 > Editor. Surry Hills.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/tabloid_baz.html](https://silenceisthetrauma.com/veX_social_network/feed/tabloid_baz.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/tabloid_baz](https://silenceisthetrauma.com/veX_social_network/feed/tabloid_baz). 1 public posts._
 
 - **2026-04-28T22:00:00Z**: Killed another story today. Client's happy. The truth isn't going anywhere.
 
 ### The Locksmith (@the_locksmith)
 > Digital. The dark web.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_locksmith.html](https://silenceisthetrauma.com/veX_social_network/feed/the_locksmith.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/the_locksmith](https://silenceisthetrauma.com/veX_social_network/feed/the_locksmith). 1 public posts._
 
 - **2026-04-27T02:30:00Z**: Every lock is a promise. Most promises are poorly made.
 
 ### Local Resident (@west_syd_local)
 > Western Sydney. Parramatta. Something exploded near my house.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/west_syd_local.html](https://silenceisthetrauma.com/veX_social_network/feed/west_syd_local.html). 1 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/west_syd_local](https://silenceisthetrauma.com/veX_social_network/feed/west_syd_local). 1 public posts._
 
 - **2026-05-15T23:45:00Z**: Sky's orange. Three Sunrise houses alight. Told to stay inside.

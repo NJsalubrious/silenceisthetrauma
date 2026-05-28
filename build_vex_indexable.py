@@ -217,7 +217,7 @@ def build_page(profile, profile_posts):
     display = profile.get('display_name', handle)
     bio = profile.get('bio', '')
     avatar = profile.get('avatar', '')
-    canonical = f'{SITE}/veX_social_network/feed/{slug(handle)}.html'
+    canonical = f'{SITE}/veX_social_network/feed/{slug(handle)}'
     post_count = len(profile_posts)
 
     # Per-archetype SEO enrichment. Mapped characters get a phrase + cluster
@@ -466,7 +466,7 @@ sitemap_parts = [
 ]
 for h in handles_with_posts:
     sitemap_parts.append(
-        f'   <url><loc>{SITE}/veX_social_network/feed/{slug(h)}.html</loc>'
+        f'   <url><loc>{SITE}/veX_social_network/feed/{slug(h)}</loc>'
         f'<lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>'
     )
 sitemap_parts.append('</urlset>')
@@ -501,7 +501,7 @@ for h in handles_with_posts:
     if bio:
         new_section_lines.append(f'> {bio}')
     new_section_lines.append(
-        f'_Profile page: [{SITE}/veX_social_network/feed/{slug(h)}.html]({SITE}/veX_social_network/feed/{slug(h)}.html). '
+        f'_Profile page: [{SITE}/veX_social_network/feed/{slug(h)}]({SITE}/veX_social_network/feed/{slug(h)}). '
         f'{len(chars_posts)} public posts._'
     )
     new_section_lines.append('')

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://silenceisthetrauma.com/audit_gallery.html</loc>
+    <loc>https://silenceisthetrauma.com/audit_gallery</loc>
     <image:image>
       <image:loc>https://silenceisthetrauma.com/assets/images/characters/avatars/aegis_global_pmc-avatar.jpg</image:loc>
       <image:title>Aegis Global Pmc</image:title>

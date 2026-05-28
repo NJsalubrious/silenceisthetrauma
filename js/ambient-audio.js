@@ -18,7 +18,7 @@
     let userHasInteracted = false;
     let isFadedOut = false;
     let fadeInterval = null;
-    let muteToggle = null;
+    let muteToggles = []; // one button in the desktop nav, one in the mobile burger row
     let isMuted = false;
     const TARGET_VOLUME = 0.25; // Ambient, not dominant
 
@@ -43,17 +43,16 @@
     }
 
     /**
-     * Create the mute/unmute toggle button in the nav
+     * Build a single mute/unmute toggle button (styled, wired to toggleMute).
      */
-    function createMuteToggle() {
-        muteToggle = document.createElement('button');
-        muteToggle.id = 'ambient-mute-toggle';
-        muteToggle.setAttribute('aria-label', 'Toggle ambient music');
-        muteToggle.setAttribute('title', 'Toggle ambient music');
-        muteToggle.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">volume_up</span>';
-        
-        // Style it
-        Object.assign(muteToggle.style, {
+    function buildToggleButton() {
+        const btn = document.createElement('button');
+        btn.className = 'ambient-mute-toggle';
+        btn.setAttribute('aria-label', 'Toggle ambient music');
+        btn.setAttribute('title', 'Toggle ambient music');
+        btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:18px;">volume_up</span>';
+
+        Object.assign(btn.style, {
             background: 'none',
             border: '1px solid rgba(255,255,255,0.15)',
             borderRadius: '50%',
@@ -70,24 +69,58 @@
             flexShrink: '0'
         });
 
-        muteToggle.addEventListener('mouseover', () => {
-            muteToggle.style.opacity = '1';
-            muteToggle.style.borderColor = '#00ff41';
+        btn.addEventListener('mouseover', () => {
+            btn.style.opacity = '1';
+            btn.style.borderColor = '#00ff41';
         });
-        muteToggle.addEventListener('mouseout', () => {
-            muteToggle.style.opacity = '0.6';
-            muteToggle.style.borderColor = 'rgba(255,255,255,0.15)';
+        btn.addEventListener('mouseout', () => {
+            btn.style.opacity = '0.6';
+            btn.style.borderColor = 'rgba(255,255,255,0.15)';
         });
-
-        muteToggle.addEventListener('click', (e) => {
+        btn.addEventListener('click', (e) => {
             e.stopPropagation();
             toggleMute();
         });
 
-        // Insert into the nav bar, after the desktop nav links
-        const navLinks = document.querySelector('.ml-10.flex.items-baseline');
-        if (navLinks) {
-            navLinks.appendChild(muteToggle);
+        return btn;
+    }
+
+    /**
+     * Reflect the current play/pause state on every toggle button.
+     */
+    function refreshToggleUI() {
+        const playing = audio && !audio.paused && !isMuted;
+        muteToggles.forEach(btn => {
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (icon) icon.textContent = playing ? 'pause' : 'play_arrow';
+            btn.style.color = playing ? '#00ff41' : '#666';
+        });
+    }
+
+    /**
+     * Create mute/unmute toggles in BOTH the desktop nav and the mobile burger
+     * row, so the control is reachable on every breakpoint. The desktop nav
+     * group is hidden on mobile (hidden md:block), so a mobile-only copy is
+     * placed next to the hamburger button (.flex.md:hidden).
+     */
+    function createMuteToggle() {
+        muteToggles = [];
+
+        const desktopNav = document.querySelector('.ml-10.flex.items-baseline');
+        if (desktopNav) {
+            const b = buildToggleButton();
+            desktopNav.appendChild(b);
+            muteToggles.push(b);
+        }
+
+        // Mobile: the hamburger lives in a `-mr-2 flex md:hidden` container.
+        const mobileBurgerRow = document.querySelector('.flex.md\\:hidden');
+        if (mobileBurgerRow) {
+            const b = buildToggleButton();
+            b.style.marginLeft = '0';
+            b.style.marginRight = '8px';
+            mobileBurgerRow.insertBefore(b, mobileBurgerRow.firstChild);
+            muteToggles.push(b);
         }
     }
 
@@ -104,14 +137,8 @@
             audio.pause();
             isMuted = true;
         }
-        
-        if (muteToggle) {
-            const icon = muteToggle.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.textContent = audio.paused ? 'play_arrow' : 'pause';
-            }
-            muteToggle.style.color = audio.paused ? '#666' : '#00ff41';
-        }
+
+        refreshToggleUI();
     }
 
     /**
@@ -136,6 +163,7 @@
                 if (savedPos) {
                     audio.currentTime = parseFloat(savedPos) || 0;
                 }
+                refreshToggleUI();
             }).catch(() => {
                 // Autoplay blocked — will try again on next interaction
                 userHasInteracted = false;
@@ -187,11 +215,7 @@
                 userHasInteracted = true;
                 audio.play().then(() => {
                     fadeTo(TARGET_VOLUME, 1500);
-                    if (muteToggle) {
-                        const icon = muteToggle.querySelector('.material-symbols-outlined');
-                        if (icon) icon.textContent = 'pause';
-                        muteToggle.style.color = '#00ff41';
-                    }
+                    refreshToggleUI();
                 }).catch(() => {});
             }
         }
@@ -222,11 +246,7 @@
         if (initialNamespace === 'audio') {
             isFadedOut = true;
             audio.volume = 0; // so the fade-in on leaving Songs is smooth
-            if (muteToggle) {
-                const icon = muteToggle.querySelector('.material-symbols-outlined');
-                if (icon) icon.textContent = 'play_arrow';
-                muteToggle.style.color = '#666';
-            }
+            refreshToggleUI();
             // Still allow saveState etc. to attach below; just don't bind the
             // first-interaction starter on this page.
         } else {
@@ -254,11 +274,7 @@
             if (audio && !audio.paused) {
                 audio.pause();
                 isMuted = true;
-                if (muteToggle) {
-                    const icon = muteToggle.querySelector('.material-symbols-outlined');
-                    if (icon) icon.textContent = 'play_arrow';
-                    muteToggle.style.color = '#666';
-                }
+                refreshToggleUI();
             }
         };
     }

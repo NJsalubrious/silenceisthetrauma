@@ -101,6 +101,10 @@
         if (typeof observerAutoCloseTimer !== 'undefined' && observerAutoCloseTimer) {
             clearTimeout(observerAutoCloseTimer);
         }
+        // Collapse the mobile burger menu on every navigation so it doesn't
+        // stay open after a link is selected.
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
     }
 
     /**
@@ -292,6 +296,17 @@
             setActiveNav(initialNamespace);
             initPageScripts(initialNamespace);
         }
+
+        // Collapse the mobile burger menu the instant any menu link is tapped.
+        // Covers the same-page case where Barba does not fire a navigation
+        // (cleanupPageState handles the cross-page case). Attached once on the
+        // persistent shell, which survives PJAX swaps.
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('#mobile-menu a')) {
+                const menu = document.getElementById('mobile-menu');
+                if (menu) menu.classList.add('hidden');
+            }
+        });
     }
 
     // Start when DOM is ready

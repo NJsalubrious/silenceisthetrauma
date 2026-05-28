@@ -34,6 +34,7 @@
     let _shell = null;
     let _currentSuggestion = null;
     let _typing = false;
+    let _answerTimer = null;
 
     // Multi-match cycling: when the typed prefix matches more than one
     // dictionary question, we rotate through them so the visitor sees the
@@ -161,7 +162,9 @@
     function typewriteAnswer(text) {
         const tw = _shell.typewriter;
         if (!tw) return;
-        if (_typing) return;
+        // Cancel any answer already being typed and replace it, rather than
+        // dropping the new one (which the old `if (_typing) return` did).
+        if (_answerTimer) { clearTimeout(_answerTimer); _answerTimer = null; }
         _typing = true;
         tw.textContent = '';
 
@@ -192,11 +195,11 @@
                 }
                 if (charIdx >= tok.v.length) {
                     tokenIdx++; charIdx = 0; activeText = null;
-                    setTimeout(step, 0);
+                    _answerTimer = setTimeout(step, 0);
                     return;
                 }
                 activeText.appendData(tok.v[charIdx++]);
-                setTimeout(step, 28);
+                _answerTimer = setTimeout(step, 28);
             } else {
                 // Anchor pops in as a unit — the visual cue is meant to be seen.
                 // Always open in a new tab: bypasses Barba's PJAX interception
@@ -213,7 +216,7 @@
                 tw.appendChild(a);
                 activeText = null;
                 tokenIdx++;
-                setTimeout(step, 28);
+                _answerTimer = setTimeout(step, 28);
             }
         })();
     }
@@ -221,6 +224,10 @@
     function submitCurrent() {
         const typed = (_shell.input.value || '').trim();
         if (!typed) return;
+        // Kill any in-progress opening line before delivering an answer, or the
+        // two typewriters fight over #dominic-typewriter and produce garbled
+        // output (e.g. the opener's leftover "...e me a story by title").
+        if (_shell.cancelOpeningLine) _shell.cancelOpeningLine();
         const entry = lookupAnswer(typed);
         if (entry) {
             typewriteAnswer(entry.a);

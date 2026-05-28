@@ -148,6 +148,7 @@
         // The `page` closure var is kept current by init() and by
         // onDominicPageChange, so the right line is picked on each open.
         let _typing = false;
+        let _openingTimer = null;
         // Single architectural aphorism per page, per the Dominic bible:
         // one sentence, true in general, concealing a move, no instruction,
         // no question, no explanation. Each is about its page's domain, so it
@@ -191,10 +192,21 @@
             typewriter.textContent = '';
             let i = 0;
             (function step() {
-                if (i >= line.length) { _typing = false; return; }
+                // Bail if the opener was cancelled (visitor engaged / an answer
+                // is being delivered) so we never keep appending leftover
+                // opener characters into a box the predict engine is now using.
+                if (!_typing) return;
+                if (i >= line.length) { _typing = false; _openingTimer = null; return; }
                 typewriter.textContent += line[i++];
-                setTimeout(step, 55);
+                _openingTimer = setTimeout(step, 55);
             })();
+        }
+        // Cancel an in-progress opening line. Called when the visitor starts
+        // typing or when the predict engine is about to deliver an answer,
+        // preventing the two typewriters from clobbering the same element.
+        function cancelOpeningLine() {
+            _typing = false;
+            if (_openingTimer) { clearTimeout(_openingTimer); _openingTimer = null; }
         }
 
         // ===== Phase 2: lazy-load predict engine + per-page dictionary =====
@@ -213,7 +225,7 @@
                 .then(function (r) { return r.ok ? r.json() : null; })
                 .then(function (dict) {
                     if (!dict) return; // 404 / parse failure -> silent no-op
-                    loadScriptOnce('/dominic-predict.js?v=20260528c').then(function () {
+                    loadScriptOnce('/dominic-predict.js?v=20260528e').then(function () {
                         if (window.DominicPredict && window.DominicShell) {
                             window.DominicPredict.init({ dict: dict, shell: window.DominicShell });
                         }
@@ -256,8 +268,16 @@
             get ghostCompletion() { return document.querySelector('#dominic-ghost-text .ghost-completion'); },
             get actionBar() { return document.getElementById('dominic-action-bar'); },
             openPanel: openPanel,
-            closePanel: closePanel
+            closePanel: closePanel,
+            cancelOpeningLine: cancelOpeningLine
         };
+
+        // Once the visitor actually types, the opener is irrelevant — stop it
+        // so it can't keep appending characters while the predict engine is
+        // about to deliver an answer into the same box.
+        if (input) {
+            input.addEventListener('input', cancelOpeningLine);
+        }
     }
 
     if (document.readyState === 'loading') {

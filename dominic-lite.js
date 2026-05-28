@@ -92,6 +92,9 @@
             orb.classList.remove('visible');
             panel.classList.add('open');
             playOpeningLine();
+            // Practical "ask about a specific X" hint in the input itself.
+            // `page` is kept current by init() + onDominicPageChange.
+            if (input) input.placeholder = PLACEHOLDER_HINTS[page] || '';
             if (input) setTimeout(function () { input.focus(); }, 350);
             // Phase 2: lazy-load predict engine + per-page dictionary
             // on first open. Subsequent opens are no-ops because
@@ -139,19 +142,50 @@
             }
         };
 
-        // Placeholder opening line. Single short, low-key, voice-neutral.
-        // Phase 2 will replace this when the predict/respond engine loads.
+        // Per-page opening line, in Dominic's voice. Each one tells the
+        // visitor what they can ask on this page (ask about X by name) while
+        // staying in character: cold, controlling, everything-is-a-system.
+        // The `page` closure var is kept current by init() and by
+        // onDominicPageChange, so the right line is picked on each open.
         let _typing = false;
-        const OPENING_LINE = 'Go on.';
+        // Single architectural aphorism per page, per the Dominic bible:
+        // one sentence, true in general, concealing a move, no instruction,
+        // no question, no explanation. Each is about its page's domain, so it
+        // orients the visitor by what it concerns rather than by telling them
+        // what to do. (Functional "ask about X" hints belong in the input
+        // ghost-text, not in Dominic's voice.)
+        const OPENING_LINES = {
+            home:     'A transmission only reaches the people it was aimed at.',
+            files:    "An archive only incriminates the people who can't read it.",
+            subjects: "Every subject here is a variable that hasn't been placed yet.",
+            games:    'A game is a system that chose its ending before you sat down.',
+            podcast:  'Every recording is an edit that someone approved.',
+            stories:  'A story is evidence with better lighting.',
+            songs:    'A song is a confession the singer believes they chose to make.'
+        };
+        // Practical guidance for the visitor, kept OUT of Dominic's spoken line
+        // (which stays pure aphorism). This is plain UI placeholder text in the
+        // input field, telling them what they can actually ask about per page.
+        const PLACEHOLDER_HINTS = {
+            home:     'ask about anyone in the case...',
+            files:    'ask about a specific file...',
+            subjects: 'ask about a specific subject...',
+            games:    'ask about a specific game...',
+            podcast:  'ask about a specific episode...',
+            stories:  'ask about a specific story...',
+            songs:    'ask about a specific song...'
+        };
+        const DEFAULT_OPENING_LINE = 'Go on.';
         function playOpeningLine() {
             if (!typewriter) return;
             if (_typing || typewriter.textContent) return;
             _typing = true;
+            const line = OPENING_LINES[page] || DEFAULT_OPENING_LINE;
             typewriter.textContent = '';
             let i = 0;
             (function step() {
-                if (i >= OPENING_LINE.length) { _typing = false; return; }
-                typewriter.textContent += OPENING_LINE[i++];
+                if (i >= line.length) { _typing = false; return; }
+                typewriter.textContent += line[i++];
                 setTimeout(step, 55);
             })();
         }

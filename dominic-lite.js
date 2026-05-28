@@ -180,7 +180,7 @@
             games:    'ask about the games...',
             podcast:  'ask about the podcast...',
             stories:  'ask about a specific story...',
-            songs:    'ask about the music...'
+            songs:    "listen to 'Structural Psychopathy'..."
         };
         const DEFAULT_OPENING_LINE = 'Go on.';
         function playOpeningLine() {

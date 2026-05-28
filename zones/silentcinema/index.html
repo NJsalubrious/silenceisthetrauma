@@ -916,7 +916,25 @@
         // ██   ⚠️  END PASTE ZONE - DO NOT EDIT BELOW THIS LINE  ⚠️                   ██
         // ███████████████████████████████████████████████████████████████████████████████
 
+        // SITT MIX: curated recommended playlist; the default section visitors land on.
+        const SITT_MIX = [
+            { id: "f8o7zb3F-Xk", title: "ETHEL: FOR YOU" },
+            { id: "7UOZCk5vvbA", title: "ISLA: Raise the Fourth (Drop From The Fourth)", start: 12 },
+            { id: "9YKXulK0EYw", title: "ETHEL: NORMAL?! - A Story of Difference" },
+            { id: "Y4VC6mh37NI", title: "ISLA: What You Don't See", start: 4 },
+            { id: "ffn-33nemy0", title: "ETHEL: Won't Break Where Others End - Part 3" },
+            { id: "_gvv_W5_x10", title: "ISLA: Broken Edge" },
+            { id: "CaBcQ2aSjog", title: "ETHEL: KINLEY | Ants On The Vine - Part 10" },
+            { id: "WZ3P96AJfEc", title: "ETHEL: Harm's Ghost - Part 8" },
+            { id: "a4TpIhna55k", title: "ISLA: Melody of Normality" },
+            { id: "s9Z8dgRk-Q8", title: "ETHEL: Can You Make a Mistake on Purpose?" },
+            { id: "SLMP5rDOS-k", title: "ETHEL: Ride & Gotta Move" },
+            { id: "E-eORoHi0tY", title: "DOMINIC: You Will" },
+            { id: "C3vwtsNArz0", title: "DOMINIC: Dominic's Escape" },
+        ];
+
         const CHARACTERS = [
+            { id: 'sitt', name: 'SITT MIX' },
             { id: 'all', name: 'ALL' },
             { id: 'isla', name: 'ISLA' },
             { id: 'ethel', name: 'ETHEL' },
@@ -928,7 +946,7 @@
 
         // State
         let activeFilter = 'videos'; // 'videos', 'songs', 'albums', 'all'
-        let activeCharId = 'all';
+        let activeCharId = 'sitt';
         let currentTracks = [];
         let currentTrackIdx = 0;
         let player;
@@ -941,21 +959,26 @@
 
             let newTracks = [];
 
-            // Determine which characters we are loading
-            const charsToFetch = activeCharId === 'all'
-                ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
-                : [activeCharId];
+            if (activeCharId === 'sitt') {
+                // Curated SITT MIX, fixed order, independent of the videos/songs filter
+                newTracks = SITT_MIX;
+            } else {
+                // Determine which characters we are loading
+                const charsToFetch = activeCharId === 'all'
+                    ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
+                    : [activeCharId];
 
-            // Fetch ONE playlist per character (now from STATIC_MEDIA)
-            const promises = charsToFetch.map(async (cid) => {
-                // Read from STATIC_MEDIA instead of fetching
-                const data = STATIC_MEDIA[cid]?.[activeFilter] || [];
-                // Data is now an array of {id, title} objects
-                return data;
-            });
+                // Fetch ONE playlist per character (now from STATIC_MEDIA)
+                const promises = charsToFetch.map(async (cid) => {
+                    // Read from STATIC_MEDIA instead of fetching
+                    const data = STATIC_MEDIA[cid]?.[activeFilter] || [];
+                    // Data is now an array of {id, title} objects
+                    return data;
+                });
 
-            const results = await Promise.all(promises);
-            newTracks = results.flat();
+                const results = await Promise.all(promises);
+                newTracks = results.flat();
+            }
 
             if (newTracks.length === 0) {
                 currentTracks = [];
@@ -1009,7 +1032,7 @@
             } else {
                 // Show characters
                 container.innerHTML = CHARACTERS.map(c => `
-                    <div onclick="setCharacter('${c.id}')" id="char-btn-${c.id}" class="protocol-btn ${c.id === 'all' ? 'active' : ''}">
+                    <div onclick="setCharacter('${c.id}')" id="char-btn-${c.id}" class="protocol-btn ${c.id === activeCharId ? 'active' : ''}">
                         ${c.name}
                     </div>
                 `).join('');
@@ -1195,13 +1218,17 @@
 
         async function initPlayerWithFirstTrack() {
             // Populate the track list
-            const charsToFetch = activeCharId === 'all'
-                ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
-                : [activeCharId];
+            if (activeCharId === 'sitt') {
+                currentTracks = SITT_MIX;
+            } else {
+                const charsToFetch = activeCharId === 'all'
+                    ? ['isla', 'ethel', 'dominic', 'sticky', 'kinley', 'clipboardMan']
+                    : [activeCharId];
 
-            const promises = charsToFetch.map(async (cid) => STATIC_MEDIA[cid]?.[activeFilter] || []);
-            const results = await Promise.all(promises);
-            currentTracks = results.flat();
+                const promises = charsToFetch.map(async (cid) => STATIC_MEDIA[cid]?.[activeFilter] || []);
+                const results = await Promise.all(promises);
+                currentTracks = results.flat();
+            }
 
             // Render UI, then load first track (loadTrack creates the player)
             renderMenu();

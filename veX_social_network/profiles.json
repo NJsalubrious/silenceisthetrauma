@@ -800,7 +800,7 @@
     "handle": "@sal_doorman",
     "display_name": "Sal",
     "avatar": "../assets/images/characters/avatars/sal-doorman-avatar.jpg",
-    "bio": "Building union. Upper East Side.",
+    "bio": "Head doorman, 740 Park Ave. Local 32BJ union rep.",
     "tier": "network",
     "verified": false,
     "links_to": "../people/sal_the_doorman.html",
@@ -808,8 +808,8 @@
     "memorial": false,
     "follows": [],
     "card_image": "../assets/images/characters/cards/sal_doorman_header.jpg",
-    "quote": "\"I control the supply.\"",
-    "reveal_secret": "Controls supply chains."
+    "quote": "\"Move the car. Now. Have a nice day.\"",
+    "reveal_secret": "Incorruptible. Refused a cash bribe and reported it to the FBI; can't be bought."
   },
   {
     "id": "old_miller",

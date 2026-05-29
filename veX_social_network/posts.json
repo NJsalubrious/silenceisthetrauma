@@ -3372,20 +3372,6 @@
     "pinned": false
   },
   {
-    "id": "penelope_barista_d6405368",
-    "handle": "@the_barista",
-    "display_name": "Penelope",
-    "avatar": "../assets/images/characters/avatars/the-barista-avatar.jpg",
-    "content": "The men in the black suits haven't come in for their usual flat whites this week. The whole CBD feels... tense. Like everyone is waiting for a shoe to drop.",
-    "timestamp": "2026-05-17T17:30:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
-  },
-  {
     "id": "isla_8be54e99",
     "handle": "@isla_band",
     "display_name": "Isla",

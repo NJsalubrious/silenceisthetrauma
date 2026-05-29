@@ -4868,7 +4868,9 @@
     "display_name": "Dr. Cosgrove Wendlebury Reeve",
     "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
     "timestamp": "2026-07-21T09:00:00Z",
-    "content": "What is so striking about the Ryker phenomenon — and forgive me, I shall coin this on air — is that we are witnessing what I shall call sororal kataphasis-through-rupture. Two non-genetic sisters, bonded not by blood but by the shared act of speaking-the-no. It is, in the most literal sense, a marriage. A marriage of refusals. Lovely. Oh, that's lovely."
+    "content": "What is so striking about the Ryker phenomenon — and forgive me, I shall coin this on air — is that we are witnessing what I shall call sororal kataphasis-through-rupture. Two non-genetic sisters, bonded not by blood but by the shared act of speaking-the-no. It is, in the most literal sense, a marriage. A marriage of refusals. Lovely. Oh, that's lovely.",
+    "image": "../assets/images/posts/General_misc/Reeve_on_a_podcast_hands_up_slightly_smiling.jpg",
+    "image_alt": "Dr Cosgrove Reeve recording in a radio studio, headphones on, hands raised mid-gesture with a slight smile, an ON AIR sign behind him."
   },
   {
     "id": "ethel_fc873ddc",
@@ -6559,8 +6561,8 @@
     "timestamp": "2026-07-22T21:38:00Z",
     "reply_to": "zero_state_media_zsm_9e739db5",
     "link": null,
-    "image": null,
-    "image_alt": null,
+    "image": "../assets/images/posts/General_misc/Ethel_BW_At_Work_RTA_Two_men_Same_street_where_is_the_line.jpg",
+    "image_alt": "Black and white photo of Ethel Ryker at her RTA workstation in front of a wall of CCTV traffic monitors, wearing a dark coat and lanyard.",
     "type": "post",
     "pinned": false
   },
@@ -7007,8 +7009,8 @@
     "timestamp": "2026-07-22T16:00:00Z",
     "reply_to": null,
     "link": null,
-    "image": null,
-    "image_alt": null,
+    "image": "../assets/images/posts/General_misc/Phillip_Millers_farewell_post.jpg",
+    "image_alt": "Principal Phillip Miller in a school corridor holding a cardboard box with a pot plant and a long service certificate, students passing behind him.",
     "type": "post",
     "pinned": false
   },

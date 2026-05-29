@@ -84,6 +84,16 @@
                 out.push(bucket[i]);
             }
         }
+        // Easter egg: 'secret' is never first. Appended as the LAST
+        // cyclable option when the typed text is a prefix of it, so a
+        // visitor only finds it by cycling the 's' suggestions to the
+        // end or by typing the word out.
+        const SECRET = 'secret';
+        if (lc.length > 0 && lc.length < SECRET.length && SECRET.startsWith(lc) && out.indexOf(SECRET) === -1) {
+            const capped = out.slice(0, MAX_MATCHES - 1);
+            capped.push(SECRET);
+            return capped;
+        }
         return out;
     }
 
@@ -153,6 +163,10 @@
         // canonical "Ethel." and typing "hello." matches "hello". Keep in
         // sync with _build_dict.py's q_lc normalisation.
         const lc = (text || '').toLowerCase().replace(/[?.!]+$/, '').trim();
+        // Easter egg answer, independent of the per-page dictionary.
+        if (lc === 'secret') {
+            return { q: 'secret', a: 'A secret? Here is my entire global network. Link: [NETWORK SECRETS](https://silenceisthetrauma.com/audit_gallery)' };
+        }
         for (let i = 0; i < _dict.entries.length; i++) {
             if (_dict.entries[i].q === lc) return _dict.entries[i];
         }

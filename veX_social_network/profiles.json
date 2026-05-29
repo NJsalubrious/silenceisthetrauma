@@ -799,7 +799,7 @@
     "id": "sal_doorman",
     "handle": "@sal_doorman",
     "display_name": "Sal",
-    "avatar": "../assets/images/characters/avatars/hector-salamanca-avatar.jpg",
+    "avatar": "../assets/images/characters/avatars/sal-doorman-avatar.jpg",
     "bio": "Building union. Upper East Side.",
     "tier": "network",
     "verified": false,

@@ -258,7 +258,7 @@
 
   const menuItems = [
     { label: 'Stories',               href: '../stories.html' },
-    { label: 'Silence is the trauma', href: 'https://pixelstortion.com/zones/silence/' },
+    { label: 'Silence is the trauma', href: 'https://silenceisthetrauma.com/' },
     { label: 'veX: Social Network',   href: 'https://silenceisthetrauma.com/veX_social_network/' },
     { label: 'Isla',                  href: 'https://islaband.com/' },
     { label: 'Ethel Ryker',           href: 'https://ethelryker.com/' },

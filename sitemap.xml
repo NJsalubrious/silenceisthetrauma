@@ -55,6 +55,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://silenceisthetrauma.com/zones/ethel_gallery/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://silenceisthetrauma.com/short_stories/Islas_Blast_Radius</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>

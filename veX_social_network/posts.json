@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_6affa566",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The polite fictions always break on the sharp edges.",
+    "timestamp": "2026-05-29T12:07:38.571964Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/lawmakers-demand-reforms-tear-gas-children",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_1b9a38a4",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

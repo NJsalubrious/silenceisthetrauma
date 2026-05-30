@@ -388,7 +388,7 @@ Dominic notices the needs, the mistakes, the misplaced trust, the small openings
         artist: "Kinley",
         date: "FEB 2024 (EMERGENCE)",
         subtitle: "Handler archetype · optics over truth",
-        videoId: "uovMKnwE34M",
+        videoId: "Ac3cRsmjKpE",
         img: "KINLEY_ORIGIN_STORY.jpg",
         story: `In the void left after Dominic there are new contenders. Kinley is best seen as the system embodied. A presence that cannot be beaten. Only endured or outmaneuvered.
 
@@ -572,7 +572,7 @@ Same meaning, grander scale. The orchestra amplifies every fracture, every momen
         artist: "Isla",
         date: "RETROSPECT (OCT 21, 2025 EVENT)",
         subtitle: "Exposure · endurance held live",
-        videoId: "ZBLMDbwcy4g",
+        videoId: "7UOZCk5vvbA",
         img: "Isla_Raise_the_fourth_isla_with_symphony.jpg",
         story: `Raise the Fourth (A Drop from the Fourth) is Isla at her most exposed. She's singing from that narrow edge between thought and action.
 

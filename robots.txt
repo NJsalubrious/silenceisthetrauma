@@ -14,3 +14,4 @@ Sitemap: https://silenceisthetrauma.com/sitemap.xml
 Sitemap: https://silenceisthetrauma.com/sitemap-images.xml
 Sitemap: https://silenceisthetrauma.com/sitemap-vex.xml
 Sitemap: https://silenceisthetrauma.com/sitemap-video.xml
+Sitemap: https://silenceisthetrauma.com/sitemap-songs.xml

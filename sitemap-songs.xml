@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Per-song pages for Silence Is The Trauma. Each entry carries the page, its cover image and its video. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-my-story</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-My-story.jpg</image:loc>
+      <image:title>My Story by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/dLUClmr_Pf4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>My Story by Ethel Ryker</video:title>
+      <video:description>My Story by Ethel Ryker: misread at 150+ IQ, expelled for exposing a teacher's fraud, then orphaned into Dominic's world. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/dLUClmr_Pf4</video:player_loc>
+      <video:publication_date>2025-10-09T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-the-drop-pt-1</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-The-drop-pt-1.jpg</image:loc>
+      <image:title>The Drop Pt.1 by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zHWwhom80go/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Drop Pt.1 by Ethel Ryker</video:title>
+      <video:description>The Drop Pt.1 by Ethel Ryker: at fifteen she reads a wrong pixel on satellite, finds a basin drop, while stock kids film. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/zHWwhom80go</video:player_loc>
+      <video:publication_date>2025-12-09T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-the-drop-pt-2</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-The-drop-pt-2.jpg</image:loc>
+      <image:title>The Drop Pt.2 by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/K0ILO8MwX4Y/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Drop Pt.2 by Ethel Ryker</video:title>
+      <video:description>The Drop Pt.2 by Ethel Ryker: she reads the parallax others can't, dives clean, learns reality differs from perception. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/K0ILO8MwX4Y</video:player_loc>
+      <video:publication_date>2025-08-11T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-structural-psychopathy</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-Structural-psychopathy.jpg</image:loc>
+      <image:title>Structural Psychopathy by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/8rvIVBLZg2o/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Structural Psychopathy by Dominic Ryker</video:title>
+      <video:description>Structural Psychopathy by Dominic Ryker: the Builder never breaks the law, he engineers the frame so others break it for him, and thank him after. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/8rvIVBLZg2o</video:player_loc>
+      <video:publication_date>2025-12-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-polished-vomit</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Polished-vomit.jpg</image:loc>
+      <image:title>Polished Vomit by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/2hSYNLs7w3w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Polished Vomit by Isla</video:title>
+      <video:description>Polished Vomit by Isla: at her mother's wedding to Dominic she slips a USB in his shoe and projects his hidden accounts. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/2hSYNLs7w3w</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-ride</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Ride.jpg</image:loc>
+      <image:title>Ride by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0sgcZRtPO6s/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ride by Ethel Ryker</video:title>
+      <video:description>Ride by Ethel Ryker: at seventeen she steps back from easy crime, then logs a teacher's fraud and is expelled while he stays. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0sgcZRtPO6s</video:player_loc>
+      <video:publication_date>2025-12-09T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-grief</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Grief.jpg</image:loc>
+      <image:title>Grief by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/PMy76HBgpL8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Grief by Ethel Ryker</video:title>
+      <video:description>Grief by Ethel Ryker: after the crash kills Gran and Pop, she finds a steel key and a vault of tracked names, one AFP number. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/PMy76HBgpL8</video:player_loc>
+      <video:publication_date>2025-12-09T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-gotta-move</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Gotta-move.jpg</image:loc>
+      <image:title>Gotta Move by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/06qE_-OeIT0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Gotta Move by Ethel Ryker</video:title>
+      <video:description>Gotta Move by Ethel Ryker: social services hand her tea and finished sentences, staples gone, and she counts the exits. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/06qE_-OeIT0</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-wont-break-where-others-end</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Wont-break-where-others-end.jpg</image:loc>
+      <image:title>Won't Break Where Others End by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fJNMlT7UeW0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Won't Break Where Others End by Ethel Ryker</video:title>
+      <video:description>Won't Break by Ethel Ryker: routed to Dominic's Mosman fortress with a tail two cars back, she reframes captivity as choice. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/fJNMlT7UeW0</video:player_loc>
+      <video:publication_date>2025-12-09T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-peek-a-boo</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Peek-a-boo.jpg</image:loc>
+      <image:title>Peek-A-Boo by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/K9lQ0IYiMoM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Peek-A-Boo by Isla</video:title>
+      <video:description>Peek-A-Boo by Isla: manic in the crazy house, she yanks the keys at a red light, but Ethel out-maths her, takes the wallet. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/K9lQ0IYiMoM</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-i-built-a-box</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-I-built-a-box.jpg</image:loc>
+      <image:title>I Built A Box by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0F_prk5dGC4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>I Built A Box by Ethel Ryker</video:title>
+      <video:description>I Built A Box by Ethel Ryker: coaxed to pin her card to a refund, she watches a man simply vanish like pressed delete. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0F_prk5dGC4</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-same-breath</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-same-breath.jpg</image:loc>
+      <image:title>Same Breath by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ugy7KVuhwpE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Same Breath by Dominic Ryker</video:title>
+      <video:description>Same Breath by Dominic Ryker: in Italy he drags a frozen man from the firefight, then executes him an hour later, asset saved, liability removed. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Ugy7KVuhwpE</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-burning-dominics-bridge</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Burning-dominics-bridge.jpg</image:loc>
+      <image:title>Burning Dominic's Bridge by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/lwd7KOScg0k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Burning Dominic's Bridge by Isla</video:title>
+      <video:description>Burning Dominic's Bridge by Isla: she locks the dealer in, leaks his emails to his partners, then strips the servers. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/lwd7KOScg0k</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-for-you</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-For-you.jpg</image:loc>
+      <image:title>For You by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/f8o7zb3F-Xk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>For You by Ethel Ryker</video:title>
+      <video:description>For You by Ethel Ryker: 140-decibel metal from the gaslight years in Dominic's house, the night a man came to kill her. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/f8o7zb3F-Xk</video:player_loc>
+      <video:publication_date>2025-05-05T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-broken-edge</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Broken-edge.jpg</image:loc>
+      <image:title>Broken Edge by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/_gvv_W5_x10/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Broken Edge by Isla</video:title>
+      <video:description>Broken Edge by Isla: the addict-girl headline weaponised back, broken edges turned to craft, needle and song both tried. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/_gvv_W5_x10</video:player_loc>
+      <video:publication_date>2025-04-26T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-hero-killer</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Hero-killer.jpg</image:loc>
+      <image:title>Hero / Killer by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/YkQOXPzYkkU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hero / Killer by Ethel Ryker</video:title>
+      <video:description>Hero / Killer by Ethel Ryker: as the trial opens she strips the Builder-Protector myth, the missing part of the design. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/YkQOXPzYkkU</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-hero-complex</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-Hero-complex.jpg</image:loc>
+      <image:title>Hero Complex by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7gc3DigBW1Y/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hero Complex by Dominic Ryker</video:title>
+      <video:description>Hero Complex by Dominic Ryker: Dr. Cole's forensic diagnosis in sound, the man on the hospital plaque who manufactures consent through exhaustion. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7gc3DigBW1Y</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-nothing-true</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Nothing-true.jpg</image:loc>
+      <image:title>Nothing True by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Bff42Vyv8HM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Nothing True by Ethel Ryker</video:title>
+      <video:description>Nothing True by Ethel Ryker: on the stand she refuses the clean yes or no, knowing Dominic reshapes stories to reuse later. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Bff42Vyv8HM</video:player_loc>
+      <video:publication_date>2025-09-04T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-you-will-thank-me-later</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-You-will-thank-me-later.jpg</image:loc>
+      <image:title>You Will Thank Me Later by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/n6OgobffCzo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>You Will Thank Me Later by Dominic Ryker</video:title>
+      <video:description>You Will Thank Me Later by Dominic Ryker: in prison he turns a cellmate's trust into currency, even voice, matched rhythm, until he holds the ending. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/n6OgobffCzo</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-this-isnt-therapy</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-This-isnt-therapy.jpg</image:loc>
+      <image:title>This Isn't Therapy by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/0tzOaukuBns/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>This Isn't Therapy by Isla</video:title>
+      <video:description>This Isn't Therapy by Isla: expelled from the Conservatorium for being too loud, she builds a band from that same fire. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/0tzOaukuBns</video:player_loc>
+      <video:publication_date>2025-10-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-intro-to-shiny-headed-radio-man</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Intro-to-shiny-headed-radio-man.jpg</image:loc>
+      <image:title>Intro to Shiny Headed Radio Man by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/dK8mqLNRZ2Q/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Intro to Shiny Headed Radio Man by Isla</video:title>
+      <video:description>Intro to Shiny Headed Radio Man by Isla: a gatekeeper wants payment that isn't music, so she decides to frighten him instead. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/dK8mqLNRZ2Q</video:player_loc>
+      <video:publication_date>2025-10-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-shiny-headed-radio-man</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Shiny-headed-radio-man.jpg</image:loc>
+      <image:title>Shiny Headed Radio Man by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/UFZeKCcSMoE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Shiny Headed Radio Man by Isla</video:title>
+      <video:description>Shiny Headed Radio Man by Isla: a sleazy gatekeeper treats access like currency, so she gives him exactly what he fears. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/UFZeKCcSMoE</video:player_loc>
+      <video:publication_date>2025-10-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-stanmore-farewell</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Stanmore-farewell.jpg</image:loc>
+      <image:title>Stanmore Farewell by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/-3m2_zUNBlo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Stanmore Farewell by Isla</video:title>
+      <video:description>Stanmore Farewell by Isla: in an inner-west flat paid for with silence money, she loves the band but keeps tasting runway. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/-3m2_zUNBlo</video:player_loc>
+      <video:publication_date>2025-10-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-harms-ghost</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Harms-ghost.jpg</image:loc>
+      <image:title>Harm's Ghost by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zh6HEd4lztU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Harm's Ghost by Ethel Ryker</video:title>
+      <video:description>Harm's Ghost by Ethel Ryker: not panic but pattern, she moves when the damage is nil and owns it fast if she is wrong. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/zh6HEd4lztU</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-no-sparrow-caught-mid-flight</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-No-sparrow-caught-mid-flight.jpg</image:loc>
+      <image:title>No Sparrow Caught Mid Flight by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/t6vLU0uqIfc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>No Sparrow Caught Mid Flight by Ethel Ryker</video:title>
+      <video:description>No Sparrow by Ethel Ryker: trial done, he gets four walls and she gets a road that won't land, refusing to be his echo. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/t6vLU0uqIfc</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-prison-escape</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-Prison-escape.jpg</image:loc>
+      <image:title>Prison Escape by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/6eZwBGXGSO4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Prison Escape by Dominic Ryker</video:title>
+      <video:description>Prison Escape by Dominic Ryker: he doesn't dig a tunnel, he sequences out, grooming guards until the doors open, then says he is the infrastructure. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/6eZwBGXGSO4</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/kinley-guilt-money-origin</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Kinley-Guilt-money-origin.jpg</image:loc>
+      <image:title>Guilt Money (Origin) by Kinley</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Ac3cRsmjKpE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Guilt Money (Origin) by Kinley</video:title>
+      <video:description>Guilt Money by Kinley: thirty years wound tight, a political spine bent from a good bloodline, paper stacks and legalese, a handler only endured. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Ac3cRsmjKpE</video:player_loc>
+      <video:publication_date>2025-06-30T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-ants-on-the-vine</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Ants-on-the-vine.jpg</image:loc>
+      <image:title>Ants on the Vine by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/e2wt2VSi9xA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Ants on the Vine by Ethel Ryker</video:title>
+      <video:description>Ants on the Vine by Ethel Ryker: a woman flinches at a billboard, a wrong timestamp leads to a README and one name, Kinley. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/e2wt2VSi9xA</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-clipboard-man</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-clipboard-man.jpg</image:loc>
+      <image:title>Clipboard Man by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ZAhqNWTHTGU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Clipboard Man by Ethel Ryker</video:title>
+      <video:description>Clipboard Man by Ethel Ryker: she hires a PI as a moving mirror to track the man tracking her, until Kinley's people surface. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ZAhqNWTHTGU</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/sticky-rattled</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Sticky-Rattled.jpg</image:loc>
+      <image:title>Rattled by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qQ1l6JAjE8M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Rattled by Sticky</video:title>
+      <video:description>Rattled by Sticky: the world-weary detective clocks Ethel as too bright, mirroring her old man's edge, and pokes her guard. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qQ1l6JAjE8M</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-red-stick</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Red-stick.jpg</image:loc>
+      <image:title>Red Stick by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/iTOKsLS3jhM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Red Stick by Ethel Ryker</video:title>
+      <video:description>Red Stick by Ethel Ryker: a stick wedged vertical in her wheel is a test, so she reads the vantage and Kinley's card. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/iTOKsLS3jhM</video:player_loc>
+      <video:publication_date>2025-09-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-can-you-make-a-mistake-on-purpose</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Can-you-make-a-mistake-on-purpose.jpg</image:loc>
+      <image:title>Can You Make A Mistake On Purpose? by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/s9Z8dgRk-Q8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Can You Make A Mistake On Purpose? by Ethel Ryker</video:title>
+      <video:description>Can You Make A Mistake On Purpose by Ethel Ryker: a Transport job, a screen at 2:01pm, defects misfiled for Kinley. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/s9Z8dgRk-Q8</video:player_loc>
+      <video:publication_date>2025-09-29T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-intro-to-normal</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Intro-to-normal.jpg</image:loc>
+      <image:title>Intro to Normal?! by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/V0hvxqMWcnE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Intro to Normal?! by Ethel Ryker</video:title>
+      <video:description>Intro to Normal?! by Ethel Ryker: a monologue on rooms where that logic cost lives, silence was tactic, politeness the leash. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/V0hvxqMWcnE</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-normal</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Normal.jpg</image:loc>
+      <image:title>Normal?! by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/OxHZnnRhtbk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Normal?! by Ethel Ryker</video:title>
+      <video:description>Normal?! by Ethel Ryker: she refuses collective denial, names harm before the room will, asks who calls that silence normal. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/OxHZnnRhtbk</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-normal-special-version</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Normal-special-version.jpg</image:loc>
+      <image:title>Normal?! (Special Version) by Ethel</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ht9PIloHD0Q/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Normal?! (Special Version) by Ethel Ryker</video:title>
+      <video:description>Normal?! (Special Version) by Ethel Ryker: a reworked take on naming harm clearly while the room pretends not to know. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ht9PIloHD0Q</video:player_loc>
+      <video:publication_date>2025-07-28T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-memory-under-water</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Memory-under-water.jpg</image:loc>
+      <image:title>Memory Under Water by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/nk4Re7OjTTM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Memory Under Water by Isla</video:title>
+      <video:description>Memory Under Water by Isla: her mother's final quiet walk, the smile taught to act like skin, performance she sets down. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/nk4Re7OjTTM</video:player_loc>
+      <video:publication_date>2025-09-30T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-the-porcelain-lie-raise-the-fourth</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-The-porcelain-lie-raise-the-fourth.jpg</image:loc>
+      <image:title>The Porcelain Lie (Raise The Fourth) by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/fNVKsxe_EcM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>The Porcelain Lie (Raise The Fourth) by Isla</video:title>
+      <video:description>The Porcelain Lie by Isla: an ending that froze instead of flooding, counting tiles in threes, the hinge still singing. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/fNVKsxe_EcM</video:player_loc>
+      <video:publication_date>2025-10-20T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-raise-the-fourth</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Raise-the-fourth.jpg</image:loc>
+      <image:title>Raise The Fourth by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/ey20cJsY82M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Raise The Fourth by Isla</video:title>
+      <video:description>Raise The Fourth by Isla: a moment that nearly ended her, sung as if it already had, dissonant and still, surviving it once. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/ey20cJsY82M</video:player_loc>
+      <video:publication_date>2025-10-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-what-you-dont-see</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-What-you-dont-see.jpg</image:loc>
+      <image:title>What You Don't See by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Y4VC6mh37NI/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What You Don't See by Isla</video:title>
+      <video:description>What You Don't See by Isla: growing up inside control where silence learned to speak, half its mind, never its voice. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Y4VC6mh37NI</video:player_loc>
+      <video:publication_date>2025-07-20T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-what-you-dont-see-symphony</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-What-you-dont-see-symphony.jpg</image:loc>
+      <image:title>What You Don't See (Symphony) by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/hm2kp7LOhsg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What You Don't See (Symphony) by Isla</video:title>
+      <video:description>What You Don't See (Symphony) by Isla: the live piano and orchestra take, control turned to sound, proof not therapy. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/hm2kp7LOhsg</video:player_loc>
+      <video:publication_date>2025-10-22T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-raise-the-fourth-with-symphony</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Raise-the-fourth-with-symphony.jpg</image:loc>
+      <image:title>Raise The Fourth (With Symphony) by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/7UOZCk5vvbA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Raise The Fourth (With Symphony) by Isla</video:title>
+      <video:description>Raise The Fourth (With Symphony) by Isla: she sings from the edge between thought and action, the hinge still singing. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/7UOZCk5vvbA</video:player_loc>
+      <video:publication_date>2025-11-24T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-give-it-back</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Give-it-back.jpg</image:loc>
+      <image:title>Give It Back by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Aw2ZAkxp6b0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Give It Back by Isla</video:title>
+      <video:description>Give It Back by Isla: a demand and a promise to return louder the years pressed flat, no marks on skin, just rules that bit. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/Aw2ZAkxp6b0</video:player_loc>
+      <video:publication_date>2025-09-26T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-dont-wake-him-yet</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Dont-wake-him-yet.jpg</image:loc>
+      <image:title>Don't Wake Him Yet by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/NwqHLFYR1mA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Don't Wake Him Yet by Isla</video:title>
+      <video:description>Don't Wake Him Yet by Isla: at fifteen she runs with a boy and a borrowed card, he swallows pills at customs, dies mid-air. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/NwqHLFYR1mA</video:player_loc>
+      <video:publication_date>2025-09-26T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-melody-of-normality</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-Melody-of-normality.jpg</image:loc>
+      <image:title>Melody of Normality by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/a4TpIhna55k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Melody of Normality by Isla</video:title>
+      <video:description>Melody of Normality by Isla: her first true show with the band she crossed oceans for, scars turned to guitars, pain to art. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/a4TpIhna55k</video:player_loc>
+      <video:publication_date>2025-07-14T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/isla-what-this-was-always-for</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Isla-What-this-was-always-for.jpg</image:loc>
+      <image:title>What This Was Always For by Isla</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/X9EUb1_QC9c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>What This Was Always For by Isla</video:title>
+      <video:description>What This Was Always For by Isla: the first song with her new band, pressure with no valve finally turned to feedback. A song from Silence Is The Trauma.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/X9EUb1_QC9c</video:player_loc>
+      <video:publication_date>2025-10-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-isla-burnt-my-fathers-bridge-spoken-word</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Isla-Burnt-My-Fathers-Bridge-Spoken-Word.jpg</image:loc>
+      <image:title>Ethel Ryker — Isla Burnt My Father's Bridge (Spoken Word) by Ethel Ryker</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/qtkHwKNnAo8/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla Burnt My Father's Bridge: Ethel Ryker Spoken Word</video:title>
+      <video:description>Spoken word by Ethel Ryker: the night Isla strips ten terabytes of evidence from Dominic's servers, then Ethel builds the court-proof case against him. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/qtkHwKNnAo8</video:player_loc>
+      <video:publication_date>2025-12-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-hero-killer-spoken-word</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Hero-Killer-Spoken-Word.jpg</image:loc>
+      <image:title>Ethel Ryker — Hero Killer (Spoken Word) by Ethel Ryker</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/mAZKRxhPMCg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hero Killer: Ethel Ryker Spoken Word</video:title>
+      <video:description>Spoken word by Ethel Ryker: at the trial she strips the builder, protector and hero myth down to documents and patterns the jury can clearly follow. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/mAZKRxhPMCg</video:player_loc>
+      <video:publication_date>2025-12-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-isla-hates-married-bankers-spoken-word</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Isla-Hates-Married-Bankers-Spoken-Word.jpg</image:loc>
+      <image:title>Ethel Ryker — Isla Hates Married Bankers (Spoken Word) by Ethel Ryker</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VNln5R2iF9E/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Isla Hates Married Bankers: Ethel Ryker Spoken Word</video:title>
+      <video:description>Spoken word by Ethel Ryker: on survival mind-blindness inside Dominic's house, and Isla the behavioural cryptanalyst who can open absolutely anything. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VNln5R2iF9E</video:player_loc>
+      <video:publication_date>2025-12-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://silenceisthetrauma.com/songs/ethel-ryker-platform-18</loc>
+    <lastmod>2026-05-30</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Platform-18.jpg</image:loc>
+      <image:title>Ethel Ryker — Platform 18 by Ethel Ryker</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/VC6vQGPyF4c/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Platform 18: Ethel Ryker Spoken Word</video:title>
+      <video:description>Spoken word by Ethel Ryker: an amber alert flickers behind a victim's name on a station billboard, the crowd rewrites her, but intent cuts true. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/VC6vQGPyF4c</video:player_loc>
+      <video:publication_date>2025-12-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>

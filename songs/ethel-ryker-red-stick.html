@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Red Stick by Ethel Ryker | a test placed dead-straight in her wheel | Silence Is The Trauma</title>
+    <meta name="description" content="Red Stick by Ethel Ryker: a stick wedged vertical in her wheel is a test, so she reads the vantage and Kinley&#039;s card. A song from Silence Is The Trauma.">
+    <meta name="keywords" content="red stick ethel ryker, ethel ryker song, first test kinley, reading intent, outback noir, true detective, anatomy of a scandal readers, australian noir, transmedia fiction, sydney corruption">
+    <link rel="canonical" href="https://silenceisthetrauma.com/songs/ethel-ryker-red-stick">
+    <meta name="classification" content="Fiction, Satire, Art Installation">
+    <meta name="author" content="Silence Is The Trauma">
+    <meta name="genre" content="Concept Album">
+    <meta property="og:type" content="music.song">
+    <meta property="og:url" content="https://silenceisthetrauma.com/songs/ethel-ryker-red-stick">
+    <meta property="og:title" content="Red Stick by Ethel Ryker | a test placed dead-straight in her wheel | Silence Is The Trauma">
+    <meta property="og:description" content="Red Stick by Ethel Ryker: a stick wedged vertical in her wheel is a test, so she reads the vantage and Kinley&#039;s card. A song from Silence Is The Trauma.">
+    <meta property="og:image" content="https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Red-stick.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Red Stick by Ethel Ryker | a test placed dead-straight in her wheel | Silence Is The Trauma">
+    <meta name="twitter:description" content="Red Stick by Ethel Ryker: a stick wedged vertical in her wheel is a test, so she reads the vantage and Kinley&#039;s card. A song from Silence Is The Trauma.">
+    <meta name="twitter:image" content="https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Red-stick.jpg">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34H8LS884F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-34H8LS884F');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --neon-green-dim: rgba(0, 255, 65, 0.2);
+            --neon-pink: #ff0055;
+            --neon-pink-dim: rgba(255, 0, 85, 0.2);
+            --bg-dark: #050505;
+            --glass: rgba(10, 10, 10, 0.95);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #e0e0e0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(0, 20, 0, 0.4), transparent 80%),
+                linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+            min-height: 100vh;
+        }
+
+        /* ====== BRAND DROPDOWN ====== */
+        .brand-dropdown-container { position: relative; min-width: 160px; }
+
+        .ps-brand {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1.25rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s, text-shadow 0.2s;
+            position: relative;
+        }
+
+        .ps-brand:hover {
+            color: #00ff41;
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+        }
+
+        .ps-brand::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #00ff41;
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .ps-brand:hover::after {
+            opacity: 0.6;
+            transform: scaleX(1);
+        }
+
+        .brand-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 10px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid #333;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .menu-category-wrapper {
+            position: relative;
+        }
+
+        .menu-category {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #888;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 10px 12px;
+            border-bottom: 1px solid #222;
+            background: rgba(0,0,0,0.5);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .menu-category:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #bbb;
+        }
+
+        .submenu {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            margin-left: 2px;
+            background: rgba(5, 5, 5, 0.95);
+            border: 1px solid #333;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-5px);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            z-index: 10001;
+            padding: 4px 0;
+        }
+
+        .menu-category-wrapper:hover > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .brand-dropdown-item {
+            display: block;
+            padding: 8px 16px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            color: #666;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+            white-space: nowrap;
+        }
+
+        .brand-dropdown-item:hover {
+            color: #aaa;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 2px solid #555;
+            padding-left: 20px;
+        }
+
+        /* --- FX --- */
+        .scanlines {
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0) 50%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    rgba(0, 0, 0, 0.2));
+            background-size: 100% 4px;
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .crt-flicker {
+            animation: flicker 0.15s infinite;
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 255, 65, 0.01);
+            z-index: 49;
+            opacity: 0.2;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            50% {
+                opacity: 0.12;
+            }
+
+            100% {
+                opacity: 0.1;
+            }
+        }
+
+        /* --- TYPOGRAPHY --- */
+        .font-tech {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .glitch-text:hover {
+            animation: glitch-anim 0.3s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        /* --- CARDS --- */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .cover-card {
+            transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            filter: grayscale(100%) brightness(0.95) contrast(1.1);
+            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, black, transparent);
+            opacity: 0.4;
+        }
+
+        .cover-card:hover {
+            filter: grayscale(0%) brightness(1.1) contrast(1);
+            transform: translateY(-5px) scale(1.02);
+            z-index: 10;
+        }
+
+        /* Ethel Style */
+        .ethel-mode .cover-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green-dim);
+        }
+
+        .ethel-mode .active-tab {
+            border-bottom: 2px solid var(--neon-green);
+            color: var(--neon-green);
+        }
+
+        /* Isla Style */
+        .isla-mode .cover-card:hover {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-pink-dim);
+        }
+
+        .isla-mode .active-tab {
+            border-bottom: 2px solid var(--neon-pink);
+            color: var(--neon-pink);
+        }
+
+        /* --- MODAL --- */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.3s ease-out;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #111;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* --- LYRICS DATA STREAM STYLING --- */
+        .lyrics-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        /* Technical markers */
+        .lyrics-header,
+        .lyrics-footer {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            opacity: 0.3;
+            margin-bottom: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .lyrics-footer {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        /* Strophe dividers */
+        .strophe-divider {
+            width: 5%;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+            margin: 1rem auto;
+        }
+
+        /* Individual lyric lines */
+        .lyric-line {
+            margin-bottom: 0.25rem;
+            opacity: 0.55;
+            transition: all 0.2s ease;
+            padding: 0.15rem 0;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .lyric-line:hover {
+            opacity: 1;
+        }
+
+        /* Ethel mode lyrics (mint green tint) */
+        .ethel-mode .lyric-line {
+            color: rgba(200, 255, 220, 0.7);
+        }
+
+        .ethel-mode .lyric-line:hover {
+            color: #a0ffc0;
+            text-shadow: 0 0 8px rgba(0, 255, 65, 0.4), 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        /* Isla mode lyrics (pale rose tint) */
+        .isla-mode .lyric-line {
+            color: rgba(255, 200, 220, 0.7);
+        }
+
+        .isla-mode .lyric-line:hover {
+            color: #ffc0d0;
+            text-shadow: 0 0 8px rgba(255, 0, 85, 0.4), 0 0 20px rgba(255, 0, 85, 0.2);
+        }
+
+        /* Empty lines (verse breaks) */
+        .lyric-line.empty-line {
+            height: 0.8rem;
+            opacity: 0;
+        }
+
+        /* Scanline effect for lyrics */
+        .lyrics-scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            animation: scanline-move 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanline-move {
+            0% {
+                top: 0;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+
+        /* Entrance animation for lyrics */
+        .lyric-line.animate-in {
+            animation: lyric-fade-in 0.3s ease forwards;
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        @keyframes lyric-fade-in {
+            to {
+                opacity: 0.55;
+                transform: translateY(0);
+            }
+        }
+
+        /* Typewriter Cursor */
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Mobile: Hide cover art section to maximize video/lyrics space */
+        @media (max-width: 767px) {
+            #cover-art-section {
+                display: none !important;
+            }
+
+            /* Shrink left panel to just fit video */
+            .left-visual-panel {
+                height: auto !important;
+                flex-shrink: 0;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .submenu {
+                position: static !important;
+                margin-left: 0 !important;
+                transform: none !important;
+                border: none !important;
+                border-left: 2px solid #333 !important;
+                background: rgba(0,0,0,0.2) !important;
+                min-width: auto !important;
+                display: none;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding-left: 10px !important;
+            }
+            .menu-category-wrapper:hover > .submenu {
+                display: flex !important;
+                transform: none !important;
+            }
+            .brand-dropdown-menu {
+                max-height: 80vh !important;
+                overflow-y: auto !important;
+            }
+        }
+
+</style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicRecording",
+      "name": "Red Stick",
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Ethel"
+      },
+      "url": "https://silenceisthetrauma.com/songs/ethel-ryker-red-stick",
+      "datePublished": "2025-09-28",
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Silence Is The Trauma",
+        "url": "https://silenceisthetrauma.com/"
+      },
+      "recordingOf": {
+        "@type": "MusicComposition",
+        "name": "Red Stick"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Red Stick — Ethel",
+      "description": "Red Stick by Ethel Ryker: a stick wedged vertical in her wheel is a test, so she reads the vantage and Kinley's card. A song from Silence Is The Trauma.",
+      "thumbnailUrl": "https://silenceisthetrauma.com/songs/covers/Ethel-Ryker-Red-stick.jpg",
+      "uploadDate": "2025-09-28",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/iTOKsLS3jhM",
+      "contentUrl": "https://www.youtube.com/watch?v=iTOKsLS3jhM",
+      "isFamilyFriendly": true
+    }
+  ]
+}
+    </script>
+</head>
+
+<body class="ethel-mode transition-colors duration-500">
+    <div class="scanlines"></div>
+    <div class="crt-flicker"></div>
+
+    <!-- HEADER (branding left, More Songs right) -->
+    <header class="fixed top-0 w-full z-40 bg-black/90 border-b border-white/10 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap gap-y-2 justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#00ff41]"></div>
+                <h1 class="text-xl md:text-2xl font-bold tracking-widest font-tech text-white flex items-center gap-2">
+                    <div class="brand-dropdown-container">
+                        <button onclick="toggleBrandMenu(event)" class="brand-trigger text-left" style="background:none;border:none;cursor:pointer;text-decoration:none;padding:0;">
+                            <span class="ps-brand glitch-text" data-text="PIXELSTORTION" style="position:relative;top:0;left:0;">PIXELSTORTION</span>
+                        </button>
+                        <div id="brandDropdown" class="brand-dropdown-menu" onclick="event.stopPropagation()">
+                            <a href="https://silenceisthetrauma.com/veX_social_network/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">veX: Social Network</a>
+                            <a href="https://silenceisthetrauma.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Silence is the trauma</a>
+                            <a href="https://islaband.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Isla</a>
+                            <a href="https://ethelryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Ethel Ryker</a>
+                            <a href="https://dominicryker.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Dominic Ryker</a>
+                            <a href="https://pixelstortion.com/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">Nalani</a>
+                            <a href="https://pixelstortion.com/bio/" class="brand-dropdown-item" style="border-bottom:1px solid #222;margin-bottom:4px;">BIO</a>
+                        </div>
+                    </div>
+                    <span class="text-[10px] opacity-50 align-top mt-1 font-sans">ARCHIVE_V.9</span>
+                </h1>
+            </div>
+            <a href="https://silenceisthetrauma.com/zones/ethel_gallery/"
+               class="px-4 py-1 text-xs font-tech border border-green-500 bg-green-500/20 text-green-400 hover:bg-green-500 hover:text-black transition-all uppercase tracking-widest no-underline">
+               More Songs &rsaquo;
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN: single song -->
+    <main class="container mx-auto px-4 pt-24 pb-20 relative z-10 min-h-screen">
+      <article class="w-full max-w-7xl mx-auto bg-[#0a0a0a] border border-white/10 flex flex-col md:flex-row shadow-2xl overflow-hidden">
+
+        <!-- LEFT: video + cover + meta (pinned so it stays in view while lyrics scroll) -->
+        <div class="w-full md:w-5/12 flex flex-col bg-black/40 border-r border-white/10 md:self-start md:sticky md:top-0">
+            <div class="w-full aspect-video bg-black border-b border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/iTOKsLS3jhM" title="Red Stick — Ethel" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
+            </div>
+            <div class="relative overflow-hidden flex flex-col p-6">
+                <div class="flex items-center justify-center relative">
+                    <img src="covers/Ethel-Ryker-Red-stick.jpg" alt="Red Stick cover art" class="max-h-[200px] md:max-h-[300px] w-auto shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-white/10 z-10">
+                </div>
+                <div class="mt-4 font-tech text-xs text-gray-400 space-y-1 z-10">
+                    <div class="flex justify-between border-b border-white/5 pb-1"><span>FILE_ID</span><span class="text-white">31</span></div>
+                    <div class="flex justify-between border-b border-white/5 pb-1"><span>TIMESTAMP</span><span class="text-white">JUN 2024 (FIRST TEST)</span></div>
+                    <div class="flex justify-between"><span>SUBJECT</span><span class="uppercase">Ethel</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: title + description/story + lyrics -->
+        <div class="w-full md:w-7/12 flex flex-col bg-[#0f0f0f]">
+            <div class="p-6 md:p-8 border-b border-white/10">
+                <h2 class="text-2xl md:text-4xl font-bold text-white font-tech uppercase leading-none tracking-tighter">Red Stick</h2>
+                <p class="text-[10px] md:text-xs text-gray-500 font-tech italic mt-1 tracking-wider opacity-70">Reaction measured · signal answered</p>
+            </div>
+
+            <div class="p-6 md:p-10 space-y-10">
+                <section>
+                    <h3 class="font-tech text-xs md:text-sm uppercase tracking-widest text-green-400 mb-4 border-b border-white/10 pb-2">Decoded Story</h3>
+                    <div class="text-gray-300 font-light text-sm md:text-base leading-relaxed space-y-6">
+                        <p>It begins with a test. Subtle. Deliberate. Seemingly harmless.</p>
+<p>A red stick wedged in the front wheel of her bike. Nothing dramatic, nothing random. A message to measure reaction.</p>
+<p>The song follows Ethel as she reads it the way others read handwriting.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="font-tech text-xs md:text-sm uppercase tracking-widest text-green-400 mb-4 border-b border-white/10 pb-2">Audio Transcript — Lyrics</h3>
+                    <div class="lyrics-container">
+                        <div class="lyrics-scanline"></div>
+                        <div class="lyrics-header text-center">[START_TRANSCRIPT]</div>
+                        <div class="font-tech text-xs md:text-sm leading-loose text-center">
+                            <div class="lyric-line">There are things you learn </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">When life stops pulling punches </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And starts aiming for the gut.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">That you can’t get from a book,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Or a podcast,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Or hearing it second-hand</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">From someone who tells you they’ve made peace with it.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It doesn’t always land the first time, either.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Some people go through it</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And come out thinking it was just hard.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But some of us</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Note the shapes</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">That burn around the edges.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">You learn what matters</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">After the noise drops out.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How you move.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How you’re read.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How you’re misread.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How quickly some people</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Will decide what your silence means, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">When they’ve never seen too many possibilities  think.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">An then... some of us </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">We start to realize</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">That the things we were told were weaknesses</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Were never soft.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">They just didn’t translate well.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It’s not about toughness.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It’s about precision.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">About knowing the cause,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">The action,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">The impact, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And who cops it.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Because I’ve felt the hit.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Not in the abstract.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Not in metaphor.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But in the way that leaves you</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">With a second sense</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">For tension,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">For tells in posture,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">For methods.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">So when I walked outside that morning,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Slid on the gloves,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Checked the brakes,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And saw the red stick</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Slotted straight,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Dead center</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Between front wheel and frame, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Smooth.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Unsplintered.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Dry.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I didn’t pause.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I did the math in silence.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">That stick wasn’t kicked up.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Wasn’t dropped.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It was placed.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Vertical.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Dead straight.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Zero bounce.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It wasn’t random.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It wasn’t angry.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It was someone testing</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How long I take to react.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">How fast my eyes track anomalies.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Whether I ride anyway.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Whether I rage.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Whether I report.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Or whether I keep moving</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Like nothing happened.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">So I did none of those.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I picked it up,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Put it in my pack,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And left the bike where it was.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">No statement.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">No sudden turn.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Across the street </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">A park.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Half a red tail caught in a branch.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Too low to be missed,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Too high for a kid to reach.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I scanned.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Behind me,  shops.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">To the right,  a pub,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Breakfast menu chalked up out front.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Second floor balcony.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Beyond the park, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Just units.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Private. Forgettable.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">The pub?</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">That’s the vantage.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I crossed,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Grabbed the kite, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">It came easy.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Back to the bike.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Pack open.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Kite in.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Engine kick off.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I pulled up fast,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Park it quickly.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Through the door,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Up the stairs,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Onto the balcony.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Still-warm coffee.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Uneaten croissant.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Napkin scribbled on.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Chair still observing.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Then I see him.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Blue sweater.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Jeans.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Grey hair, thin build.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Crossing the street below.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Glance up.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">We see each other.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Then he’s walking, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Not rushing,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But not slow, </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Toward the only street</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">You might find a park</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">On a weekday before noon.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I go the long way.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Round the block.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I’m faster.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I run.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Just as I round the bend,</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">I see the grey sedan.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Driver-side door closing.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Engine low.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Gone before I get there.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But up at the curb?</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">A business card.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Face down.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Fluttering.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Not placed.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Dropped.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Like an accident</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">In peak hour.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Councilor Ross Kinley. </div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">No Facebook....</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But this friend of his has one.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">And his friend</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Is too proud.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Tagline-proud.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Name-drop proud.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Smile-next-to-the-mayor proud.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Same beard.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Same sweater.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Dumb-smart.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Where the latter</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">Hasn’t yet met the former.</div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line empty-line"></div>
+<div class="lyric-line">But I’ll introduce them.</div>
+                        </div>
+                        <div class="lyrics-footer text-center">[EOF_SIGNAL_LOSS]</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+      </article>
+    </main>
+
+    <script>
+        function toggleBrandMenu(e){e.stopPropagation();var m=document.getElementById('brandDropdown');if(m)m.classList.toggle('active');}
+        document.addEventListener('click',function(){var m=document.getElementById('brandDropdown');if(m)m.classList.remove('active');});
+    </script>
+</body>
+</html>

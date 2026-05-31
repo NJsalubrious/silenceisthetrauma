@@ -1,5 +1,76 @@
 [
   {
+    "id": "reeve_sprg1",
+    "handle": "@drcosgrovereeve",
+    "display_name": "Dr. Cosgrove Wendlebury Reeve",
+    "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
+    "content": "One returns, dear ones, to the matter of Isla — the maenad-in-stagecraft. The ecstatic who, denied the Apollonian counterweight, turns the ancient rending inward. Understand: the noise is not expression. The noise is the wound, widening. Each night the arena is not a stage — it is a mouth. And the mouth, dear ones, is closing on the girl who opened it. She is being taken into her own frequency. She requires — I say this with great love — a still chamber. A hand older than her own.",
+    "timestamp": "2026-05-31T18:20:00Z"
+  },
+  {
+    "id": "isla_sprg1",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "You named a condition. Cute. I'll name it back. I was raised in a house where the loudest thing permitted was a door closing softly. My father wore a robe to work and a different one at home and I was not allowed one decibel about either. So no, Cosgrove — the noise isn't the wound widening. The noise is the first sound I was ever allowed to make. You're watching me finally exhale and calling it a collapse.",
+    "timestamp": "2026-05-31T20:05:00Z",
+    "reply_to": "reeve_sprg1"
+  },
+  {
+    "id": "reeve_sprg2",
+    "handle": "@drcosgrovereeve",
+    "display_name": "Dr. Cosgrove Wendlebury Reeve",
+    "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
+    "content": "And yet — here again we must be careful — the exhale is the symptom. The subject who cannot affirm performs the affirmation as volume. One hundred and forty decibels is not a voice, child. It is the apophatic scream — the saying-by-unsaying. You believe you are speaking. You are, in the most rigorous sense, circling the thing you cannot enter. The chamber without a name. I devote a section to it. Section seven, lines four through seventy-one. The girl mistakes the circling for arrival.",
+    "timestamp": "2026-06-01T13:40:00Z",
+    "reply_to": "isla_sprg1"
+  },
+  {
+    "id": "isla_sprg2",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "There it is again. \"The apophatic scream.\" \"The chamber without a name.\" I went and looked behind those words, Cosgrove. Put my ear right against them — the way you listen at a wall for someone breathing on the other side. Nothing. Not a thought. A missing one. You build a word over an empty room and label the door. That's the whole trick. I can't get inside your head for the exact reason you'll never get inside mine: there's no room in there to enter. Just signage.",
+    "timestamp": "2026-06-01T15:25:00Z",
+    "reply_to": "reeve_sprg2"
+  },
+  {
+    "id": "reeve_sprg3",
+    "handle": "@drcosgrovereeve",
+    "display_name": "Dr. Cosgrove Wendlebury Reeve",
+    "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
+    "content": "The hostility, dear ones, is itself instructive. The maenad rends the one who names her — it is in Euripides, it is in the bones of the thing. I do not take it personally. I take it structurally. She requires the counterweight precisely because she cannot perceive that she requires it. The wound speaks always in the voice of refusing the cure. I shall leave the door open. I do not require her agreement. I require her presence.",
+    "timestamp": "2026-06-02T19:10:00Z",
+    "reply_to": "isla_sprg2"
+  },
+  {
+    "id": "isla_sprg3",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Fine. Plainly, then — so even the cheap seats get it. I make music because at fifteen I sat on a plane next to a boy who understood and watched die and I'd already spent a whole childhood learning that the worst things happen in silence and stay there. Nobody ever let me testify. There was no court on earth that would touch my father. So I built one. The stage is a witness box. Every night I put the verdict where the scream should go and I aim it at forty thousand people so it can never be buried again. That isn't a wound widening. That's the only thing that ever stopped the wound from being the whole story. I'm not being pulled into anything. I'm pushing something out — out of me, into a room, on purpose, at volume, so it lives somewhere other than my body.",
+    "timestamp": "2026-06-02T21:30:00Z",
+    "reply_to": "reeve_sprg3"
+  },
+  {
+    "id": "reeve_sprg4",
+    "handle": "@drcosgrovereeve",
+    "display_name": "Dr. Cosgrove Wendlebury Reeve",
+    "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
+    "content": "Extraordinary. You have just described — and you do not know that you have described it — the very arrest I diagnosed. The witness box is the cage. The verdict is the throne she will not sit upon. She externalises the lineage-wound into the ticketed economy and names the externalisation freedom. Oh. Oh, that's lovely. The externalisation of the lineage-wound. I shall write that down. It opens section seven beautifully.",
+    "timestamp": "2026-06-03T12:15:00Z",
+    "reply_to": "isla_sprg3"
+  },
+  {
+    "id": "isla_sprg4",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Write it down. Of course you will. You take a living thing, run it through the machine, and out comes a phrase you can shelve. That's the difference between us, and it's the only one that counts: you make words to cover a room that was always empty. I make noise to empty a room that was always full. You've spent eleven years building a book over a hole. I've spent my whole life turning a hole into a sound someone else can finally hear. I make noise for those that live in the silence and can't. One of us is expressing who they are. The other one is just signage. I'm not your case, Cosgrove. I'm not tragic. I'm the loudest \"I'm still here\" you will ever fail to footnote. Block.",
+    "timestamp": "2026-06-03T14:40:00Z",
+    "reply_to": "reeve_sprg4"
+  },
+  {
     "id": "isla_e7cf35d4",
     "handle": "@isla_band",
     "display_name": "Isla",

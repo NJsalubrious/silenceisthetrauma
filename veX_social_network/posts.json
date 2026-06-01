@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_138d28c8",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "You don't \"factory reset\" a frequency; you weaponize it.",
+    "timestamp": "2026-06-01T15:29:25.491143Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/armored-saint-john-bush-emotion-factory-reset-album-title-interview/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_72d9e925",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

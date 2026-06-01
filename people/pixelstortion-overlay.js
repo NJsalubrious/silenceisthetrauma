@@ -9,19 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
         #pxl-disclaimer-bar {
             position: fixed;
             bottom: 0; left: 0; width: 100%;
-            background: rgba(10, 10, 10, 0.9);
-            color: #777;
+            background: rgba(10, 10, 10, 0.95);
+            color: #d4d4d4;
             text-align: center;
-            padding: 8px 15px;
-            font-size: 11px;
+            padding: 12px 16px;
+            font-size: 14px;
+            line-height: 1.45;
+            font-weight: 500;
             font-family: 'Courier New', Courier, monospace;
             z-index: 2147483647;
             backdrop-filter: blur(5px);
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
             pointer-events: auto;
         }
 
-        #pxl-disclaimer-bar strong { color: #aaa; }
+        #pxl-disclaimer-bar strong { color: #fff; }
 
         /* 2. The Chameleon Wrapper - Inherits layout from the host site */
         .pxl-chameleon-wrapper {
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(styleElement);
 
     // 2. Prevent disclaimer from covering native footer content
-    document.body.style.paddingBottom = '40px';
+    document.body.style.paddingBottom = '56px';
 
     // 3. Inject Disclaimer
     const disclaimer = document.createElement('div');

@@ -38,7 +38,8 @@
             color: var(--text-color);
             margin: 0;
             padding: 20px;
-            overflow: hidden; /* Terminal vibe */
+            overflow-x: hidden;
+            overflow-y: auto; /* allow mouse-wheel page scroll; terminal vibe kept */
         }
 
         .terminal-header {
@@ -170,7 +171,7 @@
             </div>
             <div class="log-entry alert">
                 <span class="timestamp">[14:05:11.880]</span>
-                CRITICAL: Secure comms intercepted between Dominic Ryker and Unknown Actor (Location: Prague). Decryption in progress...
+                CRITICAL: Secure comms intercepted between <a href="https://dominicryker.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Dominic Ryker</a> and Unknown Actor (Location: Prague). Decryption in progress...
             </div>
             <div class="log-entry">
                 <span class="timestamp">[14:05:12.001]</span>

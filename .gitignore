@@ -23,6 +23,9 @@ Thumbs.db
 *.bak
 *.backup
 *.pre_arc_backup
+*dontTouch*
+*[Bb]ackup*
+backupLarge_avatars/
 
 # ── Editor / IDE ─────────────────────────────────────────────
 .vscode/

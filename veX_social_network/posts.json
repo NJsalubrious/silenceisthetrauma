@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_3bb2188b",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The paper trail always ends where the real money begins to move.",
+    "timestamp": "2026-06-03T10:36:51.439387Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/donald-trump-jr-vulcan-lawmakers-letter",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_5c15d673",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

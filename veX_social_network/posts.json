@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_5c15d673",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@marcus_vane Morality does not dictate the movement of capital.",
+    "timestamp": "2026-06-03T09:03:09.179509Z",
+    "reply_to": "post_20260428_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_e339ffdd",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

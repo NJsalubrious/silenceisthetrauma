@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_faa501d4",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker You always did prefer your capital movements to be thoroughly outsourced.",
+    "timestamp": "2026-06-03T15:03:21.709503Z",
+    "reply_to": "dom_5c15d673",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_af93847a",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_1b7cd1a0",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker Your origin is still just the room you built yourself out of.",
+    "timestamp": "2026-06-07T13:42:33.620791Z",
+    "reply_to": "dom_3b24b63c",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_91f73af2",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -389,7 +389,7 @@
                 sortDate: "2024-03-10",
                 author: "Dr. A.R. Cole (Leaked)",
                 excerpt: "Clinical Warning: The primary risk is not embedded in rage, but in rhythm.",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/RykerReport.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/RykerReport.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/the_ryker_report.html",
                 altText: "Dominic Ryker walking confidently through a facility. A clinical warning exposing his structural psychopathy and the rhythm of his systemic cover-ups."
             },
@@ -399,7 +399,7 @@
                 sortDate: "2023-12-01",
                 author: "Eli Ward",
                 excerpt: "From Pymble to the Pit: How Isla Turned Silence Into Sound'.",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/pymbleToThePit.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/pymbleToThePit.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/ISLA_From_Pymble_to_the_Pit.html",
                 altText: "Young Isla playing bass guitar aggressively on stage, using trauma-core music and kinetic decoding to expose elite wealth scandals."
             },
@@ -409,7 +409,7 @@
                 sortDate: "2025-11-15",
                 author: "M. Harren, Anthropologist",
                 excerpt: "In March 2020 I finally began digitising the slide trays I had kept boxed for decades.",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/nepal.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/nepal.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/field-notes-from-the-langtang-trail.html",
                 altText: "Two young travelers sitting on a rocky hillside in Nepal, 1966. Field notes documenting the historical roots and downstream catastrophes of structural power."
             },
@@ -419,7 +419,7 @@
                 sortDate: "2025-01-01",
                 author: "Eliza Trenholm",
                 excerpt: "She wasn't writing about a metaphor. She was describing a suicide that didn't happen...",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/EmotionalReturn.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/EmotionalReturn.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/Islas_Emotional_Return_to_the Stage.html",
                 altText: "Isla singing passionately at a piano on stage under a spotlight. A performance rejecting the social contract of silence and confronting institutional trauma."
             },
@@ -429,7 +429,7 @@
                 sortDate: "2025-11-11",
                 author: "ARCHIVE SEARCH QUERY",
                 excerpt: "This archive collects three foundational posts concerning the July 2017 'Flight Tragedy' event.",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/flightTradgedy.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/flightTradgedy.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/Dont_wake_him_yet_Isla.html",
                 altText: "A vintage newspaper clipping reading 'JUDGE'S DAUGHTER' with a photo of a distressed Isla. Evidence of whistleblower retaliation and hidden domestic abuse."
             },
@@ -439,7 +439,7 @@
                 sortDate: "2025-11-11",
                 author: "Investigative Report",
                 excerpt: "A deep dive into the patterns of silence.",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/2d34debdaa508ac2e8aee0b94cbf36aa4218b7cc/archives/archive_thumbs/negativeSpace.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/negativeSpace.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/analysis-negative-space.html",
                 altText: "Dominic Ryker walking out of a courthouse in a sharp suit, surrounded by reporters. The visual embodiment of executive immunity and corporate manslaughter evasion."
             },
@@ -449,7 +449,7 @@
                 sortDate: "2025-12-26",
                 author: "Julia Renn",
                 excerpt: "If you witness something terrible and then go back to work the next day...",
-                thumbnail: "https://github.com/NJsalubrious/pixelstortion-assets/raw/6006e262815452deca7e1044a94f721bbeb3e222/isla_art/islaArtShow_nextToDrawing.jpg",
+                thumbnail: "library/loc_archives/archive_thumbs/islaArtShow_nextToDrawing.jpg",
                 url: "https://njsalubrious.github.io/pixelstortion-assets/archives/Drop_From_the_Fourth_Isla_art_show.html",
                 altText: "A large, haunting charcoal drawing of a screaming face, with Isla standing quietly beside it. Art weaponized to expose the medicalization of morality and systemic neglect."
             }
@@ -962,7 +962,7 @@ if(!container) return;
         <a href="${article.url.replace('https://njsalubrious.github.io/pixelstortion-assets/archives/', 'library/loc_archives/')}" class="block bg-zinc-900 border border-gray-800 hover:border-gray-600 transition-colors group cursor-pointer" style="animation: fadeInUp 0.6s ease forwards ${index * 0.1}s; opacity: 0; text-decoration: none;">
             <div class="aspect-video overflow-hidden bg-black relative">
                 ${article.thumbnail ?
-                        `<img src="${article.thumbnail}" alt="${article.altText || article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">` :
+                        `<img src="${article.thumbnail}" alt="${article.altText || article.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)';">` :
                         `<div class="w-full h-full" style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);"></div>`
                     }
                 <div class="absolute bottom-2 left-2 bg-black/80 px-2 py-1 text-[10px] font-mono-custom text-white">REF: 00${index + 1}-A</div>

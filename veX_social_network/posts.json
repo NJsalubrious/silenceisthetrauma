@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_ab0f4d5d",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Fairness does not build stadiums.",
+    "timestamp": "2026-06-10T07:01:00.963350Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/football/2026/jun/09/stadium-hotel-workers-strike-world-cup",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ccbd3532",
     "handle": "@isla_band",
     "display_name": "Isla",

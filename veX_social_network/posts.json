@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_c2517556",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@the_barista Unchanging patterns reveal the underlying structure.",
+    "timestamp": "2026-06-11T08:35:46.548477Z",
+    "reply_to": "post_20260429_003",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_a48fdcf4",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

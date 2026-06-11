@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_f036275c",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They play the show, but my frequency is the weapon that strips the sound to bone.",
+    "timestamp": "2026-06-11T14:36:06.220549Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/see-megadeth-perform-in-hannover-germany-as-support-act-for-iron-maiden",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_e15f6d86",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

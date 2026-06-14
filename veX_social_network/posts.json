@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_644b3dba",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "My detonation just filled 40,000 seats, Dominic; the boundary is wherever the ringing stops.",
+    "timestamp": "2026-06-14T13:35:38.838942Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_032e45ea",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

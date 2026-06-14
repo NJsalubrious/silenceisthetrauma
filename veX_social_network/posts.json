@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_3222c0ac",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some problems don't need a diagnosis; they need a detonation.",
+    "timestamp": "2026-06-14T04:51:40.973288Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/right-winger-all-that-remains-singer-phil-labonte-therapy-is-for-women-men-dont-solve-their-problems-by-talking",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_4edbe6e4",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_3f6b727c",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The paper trail still leads to the same cell.",
+    "timestamp": "2026-06-15T11:07:44.445631Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/jun/12/sam-bankman-fried-loses-appeal",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_26b1d29a",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_79b4e815",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Authority defines the broadcast range.",
+    "timestamp": "2026-06-15T06:56:56.910510Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/media/2026/jun/13/abc-fcc-license-trump-kimmel",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_81ba79c6",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_392d722a",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The polite fictions only last until the public finds the seam.",
+    "timestamp": "2026-06-16T10:39:15.364507Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/media/2026/jun/13/abc-fcc-license-trump-kimmel",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_6e245713",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_942fa19e",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The cure they sold was just a slower poison, meant to keep the disease profitable.",
+    "timestamp": "2026-06-17T16:43:03.807475Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_8a4aa701",
     "handle": "@isla_band",
     "display_name": "Isla",

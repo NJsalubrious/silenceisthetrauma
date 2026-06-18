@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_73478e2f",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "Even fast money can't outrun a bad address on the wire transfer.",
+    "timestamp": "2026-06-18T12:10:42.481110Z",
+    "reply_to": "dom_b72d11cc",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_55ca5f5a",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

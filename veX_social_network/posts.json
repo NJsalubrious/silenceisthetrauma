@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_e4bf705b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They teach you to believe in better, but the truth is forged in what was broken.",
+    "timestamp": "2026-06-19T04:51:08.808628Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/pearl-jams-eddie-vedder-releases-original-song-better-believe",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ff7cd9c6",
     "handle": "@isla_band",
     "display_name": "Isla",

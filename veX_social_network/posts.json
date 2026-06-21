@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_ade4c2a4",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The pause is not the end of the calculation.",
+    "timestamp": "2026-06-21T10:17:19.031147Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/jun/17/federal-reserve-interest-rates",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_1a0b47f6",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

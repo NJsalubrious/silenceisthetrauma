@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_fe6c7c2d",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker Your only \"structure\" is the careful distance you keep from what you actually owe.",
+    "timestamp": "2026-06-24T15:57:05.654330Z",
+    "reply_to": "dom_90280bc8",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_7b81ee93",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

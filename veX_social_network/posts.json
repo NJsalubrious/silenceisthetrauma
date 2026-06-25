@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_e49664a2",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@marcus_vane Moral positions do not move capital.",
+    "timestamp": "2026-06-25T08:30:29.319374Z",
+    "reply_to": "post_20260428_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_d038dbf6",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

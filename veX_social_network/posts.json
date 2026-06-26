@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_b8a050d1",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker Of course moral positions don't move capital; that requires you to actually stand in one.",
+    "timestamp": "2026-06-26T04:54:32.251115Z",
+    "reply_to": "dom_e49664a2",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_0ffc7983",
     "handle": "@isla_band",
     "display_name": "Isla",

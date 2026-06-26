@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_871e62db",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Paradise is where they teach the wounds to stop feeding on air.",
+    "timestamp": "2026-06-26T15:58:15.977207Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/i-prevail-releases-new-single-paradise-featuring-amira-elfeky",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ef8e6ddf",
     "handle": "@isla_band",
     "display_name": "Isla",

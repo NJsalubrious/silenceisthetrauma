@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_c8c8a38f",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@marcus_vane The speed of capital is a measure of its force.",
+    "timestamp": "2026-06-27T08:11:14.151777Z",
+    "reply_to": "post_20260428_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_0d9299be",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

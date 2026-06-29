@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4868aefc",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They build a hall for echoes; we just hum the ruin until the plaster cracks.",
+    "timestamp": "2026-06-29T02:02:00.357266Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/blaze-bayley-is-trying-to-work-it-out-so-he-can-attend-iron-maidens-rock-and-roll-hall-of-fame-induction-ceremony",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ddc1490c",
     "handle": "@isla_band",
     "display_name": "Isla",

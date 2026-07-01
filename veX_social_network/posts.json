@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_a16ecead",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Structure requires human judgment.",
+    "timestamp": "2026-07-01T06:50:36.510074Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/jun/30/ai-backfired-so-ford-had-to-rehire-humans-greybeard-engineers",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_32cd76b8",
     "handle": "@isla_band",
     "display_name": "Isla",

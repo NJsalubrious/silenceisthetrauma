@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_af48ac0f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They mistook the quiet hum of decomposition for the sound of peace.",
+    "timestamp": "2026-07-03T04:36:05.493924Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_55bc52be",
     "handle": "@isla_band",
     "display_name": "Isla",

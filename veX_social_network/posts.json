@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_2de746ec",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "What they call private, the forms call fact.",
+    "timestamp": "2026-07-03T11:48:27.133097Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/jul/01/crypto-ventures-stock-key-takeaways-trump-financial-disclosures",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_f9d61c57",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

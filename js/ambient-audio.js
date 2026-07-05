@@ -20,6 +20,7 @@
     let fadeInterval = null;
     let muteToggles = []; // one button in the desktop nav, one in the mobile burger row
     let isMuted = false;
+    let fadedByNarration = false; // true only while a story narration has ducked us
     const TARGET_VOLUME = 0.25; // Ambient, not dominant
 
     /**
@@ -140,8 +141,13 @@
         if (!audio) return;
         
         if (audio.paused) {
+            // Restore volume in case a narration fade left it at 0, and pause any
+            // story narration — the two are mutually exclusive.
+            audio.volume = TARGET_VOLUME;
+            fadedByNarration = false;
             audio.play().catch(e => console.log('Audio play failed:', e));
             isMuted = false;
+            if (typeof window.pauseStoryNarration === 'function') window.pauseStoryNarration();
         } else {
             audio.pause();
             isMuted = true;
@@ -167,6 +173,12 @@
             const savedPos = sessionStorage.getItem('ambient_position');
             if (savedPos) {
                 try { audio.currentTime = parseFloat(savedPos) || 0; } catch (e) {}
+            }
+            // If a story narration is already playing (e.g. both unlocked on the
+            // same first gesture), immediately duck back out.
+            if (typeof window.isStoryNarrationPlaying === 'function' && window.isStoryNarrationPlaying()) {
+                fadedByNarration = true;
+                fadeTo(0, 800, () => { audio.pause(); refreshToggleUI(); });
             }
             refreshToggleUI();
         });
@@ -201,6 +213,15 @@
      * Called by barba-router when page changes
      */
     window.onBarbaPageChange = function (namespace) {
+        // Any navigation ends the current story's narration (its <audio> lives in
+        // the swapped container and could otherwise keep playing detached). Stop
+        // it, and lift the duck it placed on the ambient theme.
+        if (typeof window.pauseStoryNarration === 'function') {
+            try { window.pauseStoryNarration(); } catch (e) {}
+        }
+        if (fadedByNarration && namespace !== 'audio') {
+            window.resumeAmbientMusic(1200);
+        }
         if (namespace === 'audio') {
             // Entering Songs page — fade out ambient
             if (!isFadedOut && audio && !audio.paused) {
@@ -285,6 +306,26 @@
                 isMuted = true;
                 refreshToggleUI();
             }
+        };
+
+        // Story narration ducks the ambient theme: fade out while narration plays,
+        // fade back in when it stops. Only auto-resumes a fade WE caused (so a
+        // manual mute is respected). The theme is a loop, so resume position
+        // doesn't matter — it just fades back up wherever it is.
+        window.fadeOutAmbientMusic = function (ms) {
+            if (!audio || audio.paused) return;
+            fadedByNarration = true;
+            fadeTo(0, ms || 1200, () => { audio.pause(); refreshToggleUI(); });
+        };
+        window.resumeAmbientMusic = function (ms) {
+            if (!audio || !fadedByNarration) return;
+            fadedByNarration = false;
+            if (isMuted) return; // user muted separately — leave it off
+            audio.volume = 0;
+            audio.play().then(() => {
+                fadeTo(TARGET_VOLUME, ms || 1500);
+                refreshToggleUI();
+            }).catch(() => {});
         };
     }
 

@@ -56,6 +56,124 @@
     <link rel="stylesheet" href="../master-hub.css">
 <style>
 /* Page specific overrides */
+
+/* --- Sticky narration player (fixed under the nav, theme-aware) --- */
+#narration-bar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--calc-color);
+    box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: background-color 2.5s ease, border-color 2s ease;
+}
+.nb-inner {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 9px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.nb-toggle {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--calc-color);
+    background: transparent;
+    color: var(--calc-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.nb-toggle:hover {
+    background: var(--calc-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 14px -2px var(--calc-color);
+}
+.nb-toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+.nb-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.nb-label {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-bottom: 6px;
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.nb-kicker {
+    flex: 0 0 auto;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--calc-color);
+}
+.nb-title {
+    min-width: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    color: var(--heavy-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nb-progress {
+    position: relative;
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(128, 128, 128, 0.25);
+    cursor: pointer;
+}
+.nb-progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    background: var(--calc-color);
+    pointer-events: none;
+}
+.nb-progress-fill::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--calc-color);
+    box-shadow: 0 0 6px -1px var(--calc-color);
+}
+.nb-time {
+    flex: 0 0 auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    color: var(--calc-color);
+    opacity: 0.85;
+}
+@media (max-width: 430px) {
+    .nb-kicker { display: none; }
+    .nb-time { display: none; }
+    .nb-inner { gap: 11px; padding: 8px 16px; }
+}
 </style>
     <link rel="canonical" href="https://pixelstortion.com/short_stories/pixelstortion_ISLA_4-7-2" />
 </head>
@@ -986,14 +1104,20 @@
     <div id="progress-bar"></div>
 
     <audio id="story-audio" src="../spokenWordStory/pixelstortion_ISLA_4-7-2.mp3" preload="metadata"></audio>
-    <button id="audio-toggle" class="audio-toggle" aria-label="Toggle Audio">
-        <svg id="icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 5v14l11-7z" />
-        </svg>
-        <svg id="icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-        </svg>
-    </button>
+
+    <div id="narration-bar">
+        <div class="nb-inner">
+            <button id="nb-toggle" class="nb-toggle" aria-label="Play narration">
+                <svg id="nb-icon-play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="nb-icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <div class="nb-main">
+                <div class="nb-label"><span class="nb-kicker">Narration</span><span class="nb-title">What's Behind the Study Door?</span></div>
+                <div class="nb-progress" id="nb-progress"><div class="nb-progress-fill" id="nb-fill"></div></div>
+            </div>
+            <div class="nb-time"><span id="nb-current">0:00</span> / <span id="nb-duration">0:00</span></div>
+        </div>
+    </div>
 
     <div class="container" id="story-container">
     </div>
@@ -1265,28 +1389,115 @@
                 window.dispatchEvent(new Event('scroll'));
             }, 100);
 
-            // Audio Player Logic
+            // ---- Narration Player (sticky bar: scrub, resume position, autoplay) ----
             const audioEl = document.getElementById('story-audio');
-            const audioToggle = document.getElementById('audio-toggle');
-            const iconPlay = document.getElementById('icon-play');
-            const iconPause = document.getElementById('icon-pause');
+            const nbToggle = document.getElementById('nb-toggle');
+            const nbIconPlay = document.getElementById('nb-icon-play');
+            const nbIconPause = document.getElementById('nb-icon-pause');
+            const nbProgress = document.getElementById('nb-progress');
+            const nbFill = document.getElementById('nb-fill');
+            const nbCurrent = document.getElementById('nb-current');
+            const nbDuration = document.getElementById('nb-duration');
 
-            if (audioEl && audioToggle) {
-                audioToggle.addEventListener('click', () => {
-                    if (audioEl.paused) {
-                        audioEl.play();
-                        iconPlay.style.display = 'none';
-                        iconPause.style.display = 'block';
-                    } else {
-                        audioEl.pause();
-                        iconPlay.style.display = 'block';
-                        iconPause.style.display = 'none';
+            if (audioEl && nbToggle) {
+                const POS_KEY = 'narration_pos:' + location.pathname;
+                let nbDragging = false;
+                let lastSave = 0;
+
+                const fmt = (s) => {
+                    if (!isFinite(s) || s < 0) s = 0;
+                    const m = Math.floor(s / 60);
+                    const ss = Math.floor(s % 60).toString().padStart(2, '0');
+                    return m + ':' + ss;
+                };
+                const setIcons = (playing) => {
+                    nbIconPlay.style.display = playing ? 'none' : 'block';
+                    nbIconPause.style.display = playing ? 'block' : 'none';
+                    nbToggle.setAttribute('aria-label', playing ? 'Pause narration' : 'Play narration');
+                };
+                const savePos = () => {
+                    try { localStorage.setItem(POS_KEY, String(audioEl.currentTime)); } catch (e) {}
+                };
+                const restorePos = () => {
+                    nbDuration.textContent = fmt(audioEl.duration);
+                    let saved = 0;
+                    try { saved = parseFloat(localStorage.getItem(POS_KEY)) || 0; } catch (e) {}
+                    if (saved > 1 && saved < audioEl.duration - 2) {
+                        try { audioEl.currentTime = saved; } catch (e) {}
+                        if (audioEl.duration) nbFill.style.width = (saved / audioEl.duration * 100) + '%';
+                        nbCurrent.textContent = fmt(saved);
                     }
+                };
+
+                audioEl.addEventListener('loadedmetadata', restorePos);
+                if (audioEl.readyState >= 1) restorePos();
+
+                audioEl.addEventListener('timeupdate', () => {
+                    if (nbDragging) return;
+                    const d = audioEl.duration || 0;
+                    if (d > 0) nbFill.style.width = (audioEl.currentTime / d * 100) + '%';
+                    nbCurrent.textContent = fmt(audioEl.currentTime);
+                    const now = Date.now();
+                    if (now - lastSave > 3000) { lastSave = now; savePos(); }
                 });
 
+                // Narration is the master: while it plays, the cross-page theme
+                // music fades out; when it stops, the theme fades back in.
+                audioEl.addEventListener('play', () => {
+                    setIcons(true);
+                    if (typeof window.fadeOutAmbientMusic === 'function') window.fadeOutAmbientMusic();
+                });
+                audioEl.addEventListener('pause', () => {
+                    setIcons(false);
+                    savePos();
+                    if (typeof window.resumeAmbientMusic === 'function') window.resumeAmbientMusic();
+                });
                 audioEl.addEventListener('ended', () => {
-                    iconPlay.style.display = 'block';
-                    iconPause.style.display = 'none';
+                    setIcons(false);
+                    nbFill.style.width = '100%';
+                    try { localStorage.removeItem(POS_KEY); } catch (e) {}
+                    if (typeof window.resumeAmbientMusic === 'function') window.resumeAmbientMusic();
+                });
+
+                nbToggle.addEventListener('click', () => {
+                    if (audioEl.paused) audioEl.play().catch(() => {});
+                    else audioEl.pause();
+                });
+
+                // Scrub: click, drag, and touch to seek (return-later friendly)
+                const seekTo = (clientX) => {
+                    const r = nbProgress.getBoundingClientRect();
+                    const ratio = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+                    nbFill.style.width = (ratio * 100) + '%';
+                    if (audioEl.duration) {
+                        audioEl.currentTime = ratio * audioEl.duration;
+                        nbCurrent.textContent = fmt(audioEl.currentTime);
+                    }
+                };
+                nbProgress.addEventListener('click', (e) => seekTo(e.clientX));
+                nbProgress.addEventListener('mousedown', (e) => { nbDragging = true; seekTo(e.clientX); });
+                document.addEventListener('mousemove', (e) => { if (nbDragging) seekTo(e.clientX); });
+                document.addEventListener('mouseup', () => { if (nbDragging) { nbDragging = false; savePos(); } });
+                nbProgress.addEventListener('touchstart', (e) => { nbDragging = true; seekTo(e.touches[0].clientX); }, { passive: true });
+                document.addEventListener('touchmove', (e) => { if (nbDragging) seekTo(e.touches[0].clientX); }, { passive: true });
+                document.addEventListener('touchend', () => { if (nbDragging) { nbDragging = false; savePos(); } });
+
+                // Let the ambient theme player see/stop narration (mutual exclusivity)
+                window.isStoryNarrationPlaying = () => !!audioEl && !audioEl.paused;
+                window.pauseStoryNarration = () => { try { audioEl.pause(); } catch (e) {} };
+
+                // Autoplay when the browser allows (reader arrived via a click, or
+                // has interacted). On a cold load it starts on the first gesture,
+                // ignoring taps on the bar itself so the toggle isn't double-fired.
+                audioEl.play().catch(() => {
+                    const gestures = ['pointerup', 'touchend', 'click', 'keydown'];
+                    const onGesture = (e) => {
+                        if (e.target && e.target.closest && e.target.closest('#narration-bar')) return;
+                        audioEl.play().then(() => {
+                            gestures.forEach(g => document.removeEventListener(g, onGesture, true));
+                        }).catch(() => {});
+                    };
+                    gestures.forEach(g => document.addEventListener(g, onGesture, true));
                 });
             }
         });

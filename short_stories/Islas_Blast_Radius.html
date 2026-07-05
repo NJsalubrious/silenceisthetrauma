@@ -56,6 +56,27 @@
     <link rel="stylesheet" href="../master-hub.css">
 <style>
 /* Page specific overrides */
+.beat-center { text-align: center; }
+.beat.voice-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--heavy-color);
+    margin-bottom: 1.2rem;
+}
+.beat.voice-label {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.4;
+    margin-bottom: 3rem;
+}
 </style>
     <link rel="canonical" href="https://pixelstortion.com/short_stories/Islas_Blast_Radius" />
 </head>
@@ -710,17 +731,12 @@
     </div>
 
     <script type="text/markdown" id="raw-story">
-# THE FERENCZI SPLIT
-[cold] Written by PixelStortion
-[cold] Narrated by Ethel Ryker
-[pause-medium]
+[title] BLAST RADIUS - THE FERENCZI SPLIT
+[label] Introduction
 
-## Introduction
-
-[heavy] You need to know three people before this starts.
-[pause-medium]
-[steady] My father, Dominic Ryker, and I don't usually call him father. So mark the fact that in this story I'm doing it for your benefit when I do.
+[heavy|center] You need to know three people before this starts.
 [pause]
+[steady] My father, Dominic Ryker, and I don't usually call him father. So mark the fact that in this story I'm doing it for your benefit when I do.
 [steady] Growing up I only knew of him, a name my grandmother kept at a distance, and she had her reasons; good ones.
 [pause]
 [steady] In public he built towers and shook the right hands, and behind that he ran something much larger, and he ran it one way, quietly and he never touched the crimes directly. Especially not the things that broke.
@@ -995,8 +1011,11 @@
 
                 const match = line.match(/^\[(.*?)\] (.*)$/);
                 if (match) {
-                    const tag = match[1];
+                    let tag = match[1];
                     const text = match[2];
+
+                    let extra = "";
+                    if (tag.includes("|center")) { extra = " beat-center"; tag = tag.replace("|center", ""); }
 
                     let cssClass = "voice-steady";
                     if (tag === "cold") cssClass = "voice-cold";
@@ -1005,9 +1024,11 @@
                     if (tag === "click") cssClass = "voice-click";
                     if (tag === "flat") cssClass = "voice-flat";
                     if (tag === "heavy") cssClass = "voice-heavy";
+                    if (tag === "title") cssClass = "voice-title";
+                    if (tag === "label") cssClass = "voice-label";
                     if (tag === "final") cssClass = "final-realization";
 
-                    htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
+                    htmlContent += `<p class="beat ${cssClass}${extra}">${text}</p>`;
                 }
             });
 

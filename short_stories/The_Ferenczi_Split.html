@@ -696,7 +696,7 @@
     <div class="vignette"></div>
     <div id="progress-bar"></div>
 
-    <audio id="story-audio" src="../spokenWordStory/pixelstortion_The_Ferenczi_Split.mp3" preload="metadata"></audio>
+    <audio id="story-audio" preload="metadata"></audio>
 
     <div id="narration-bar">
         <div class="nb-inner">
@@ -705,8 +705,8 @@
                 <svg id="nb-icon-pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
             </button>
             <div class="nb-main">
-                <div class="nb-label"><span class="nb-kicker">Narration</span><span class="nb-title">The Ferenczi Split</span></div>
-                <div class="nb-progress" id="nb-progress"><div class="nb-progress-fill" id="nb-fill"></div></div>
+                <div class="nb-label"><span class="nb-kicker">Narration</span><span class="nb-title" id="nb-title">Introduction</span></div>
+                <div class="nb-progress" id="nb-progress"><div class="nb-progress-fill" id="nb-fill"></div><div class="nb-segments" id="nb-segments"></div></div>
             </div>
             <div class="nb-time"><span id="nb-current">0:00</span> / <span id="nb-duration">0:00</span></div>
         </div>
@@ -1127,19 +1127,39 @@
                 window.dispatchEvent(new Event('scroll'));
             }, 100);
 
-            // ---- Narration Player (sticky bar: scrub, resume position, autoplay) ----
+            // ---- Narration Player (multi-part: plays as one, section-marked, resume) ----
             const audioEl = document.getElementById('story-audio');
             const nbToggle = document.getElementById('nb-toggle');
             const nbIconPlay = document.getElementById('nb-icon-play');
             const nbIconPause = document.getElementById('nb-icon-pause');
             const nbProgress = document.getElementById('nb-progress');
             const nbFill = document.getElementById('nb-fill');
+            const nbSegments = document.getElementById('nb-segments');
+            const nbTitle = document.getElementById('nb-title');
             const nbCurrent = document.getElementById('nb-current');
             const nbDuration = document.getElementById('nb-duration');
 
+            const NARRATION_BASE = '../spokenWordStory/';
+            const NARRATION_PARTS = [
+                { file: 'THE_FERENCZI_SPLIT_Introduction.mp3', label: 'Introduction' },
+                { file: 'THE_FERENCZI_SPLIT_Part_One.mp3',     label: 'Part One. Dead Girl.' },
+                { file: 'THE_FERENCZI_SPLIT_Part_Two.mp3',     label: 'Part Two. Something About Dinner.' },
+                { file: 'THE_FERENCZI_SPLIT_Part_Three.mp3',   label: 'Part Three. His Head' },
+                { file: 'THE_FERENCZI_SPLIT_Part_Four.mp3',    label: 'Part Four. Behind Glass.' },
+                { file: 'THE_FERENCZI_SPLIT_Part_Five.mp3',    label: 'Part Five. For the record' }
+            ];
+
             if (audioEl && nbToggle) {
+                const N = NARRATION_PARTS.length;
                 const POS_KEY = 'narration_pos:' + location.pathname;
+                const durs = new Array(N).fill(0);
+                const cum = new Array(N + 1).fill(0);
+                let total = 0;
+                let durationsReady = false;
+                let current = 0;
                 let nbDragging = false;
+                let advancing = false;   // true while auto-advancing / seeking across parts
+                let gestureBound = false;
                 let lastSave = 0;
 
                 const fmt = (s) => {
@@ -1153,48 +1173,108 @@
                     nbIconPause.style.display = playing ? 'block' : 'none';
                     nbToggle.setAttribute('aria-label', playing ? 'Pause narration' : 'Play narration');
                 };
+                const globalTime = () => (cum[current] || 0) + (audioEl.currentTime || 0);
                 const savePos = () => {
-                    try { localStorage.setItem(POS_KEY, String(audioEl.currentTime)); } catch (e) {}
+                    try { localStorage.setItem(POS_KEY, JSON.stringify({ p: current, t: audioEl.currentTime || 0 })); } catch (e) {}
                 };
-                const restorePos = () => {
-                    nbDuration.textContent = fmt(audioEl.duration);
-                    let saved = 0;
-                    try { saved = parseFloat(localStorage.getItem(POS_KEY)) || 0; } catch (e) {}
-                    if (saved > 1 && saved < audioEl.duration - 2) {
-                        try { audioEl.currentTime = saved; } catch (e) {}
-                        if (audioEl.duration) nbFill.style.width = (saved / audioEl.duration * 100) + '%';
-                        nbCurrent.textContent = fmt(saved);
+                const clearSaved = () => { try { localStorage.removeItem(POS_KEY); } catch (e) {} };
+
+                const render = () => {
+                    nbTitle.textContent = NARRATION_PARTS[current].label;
+                    if (durationsReady && total) {
+                        if (!nbDragging) nbFill.style.width = (globalTime() / total * 100) + '%';
+                        nbCurrent.textContent = fmt(globalTime());
+                        nbDuration.textContent = fmt(total);
+                    } else if (audioEl.duration) {
+                        // fallback until every part is measured: show current part's own progress
+                        if (!nbDragging) nbFill.style.width = (audioEl.currentTime / audioEl.duration * 100) + '%';
+                        nbCurrent.textContent = fmt(audioEl.currentTime);
+                        nbDuration.textContent = fmt(audioEl.duration);
                     }
                 };
+                const buildSegments = () => {
+                    if (!nbSegments || !total) return;
+                    let html = '';
+                    for (let i = 1; i < N; i++) html += '<span class="nb-seg-divider" style="left:' + (cum[i] / total * 100) + '%"></span>';
+                    nbSegments.innerHTML = html;
+                };
 
-                audioEl.addEventListener('loadedmetadata', restorePos);
-                if (audioEl.readyState >= 1) restorePos();
+                const attemptPlay = () => {
+                    audioEl.play().then(() => { advancing = false; }).catch(() => {
+                        advancing = false;
+                        if (gestureBound) return;
+                        gestureBound = true;
+                        const gestures = ['pointerup', 'touchend', 'click', 'keydown'];
+                        const onGesture = (e) => {
+                            if (e.target && e.target.closest && e.target.closest('#narration-bar')) return;
+                            audioEl.play().then(() => {
+                                gestures.forEach(g => document.removeEventListener(g, onGesture, true));
+                                gestureBound = false;
+                            }).catch(() => {});
+                        };
+                        gestures.forEach(g => document.addEventListener(g, onGesture, true));
+                    });
+                };
+
+                const loadPart = (i, play, seekWithin) => {
+                    current = Math.max(0, Math.min(N - 1, i));
+                    advancing = true;
+                    audioEl.src = NARRATION_BASE + NARRATION_PARTS[current].file;
+                    const onReady = () => {
+                        audioEl.removeEventListener('loadedmetadata', onReady);
+                        if (seekWithin && seekWithin > 0) {
+                            try { audioEl.currentTime = Math.min(seekWithin, (audioEl.duration || seekWithin)); } catch (e) {}
+                        }
+                        render();
+                        if (play) attemptPlay(); else advancing = false;
+                    };
+                    audioEl.addEventListener('loadedmetadata', onReady);
+                    audioEl.load();
+                    render();
+                };
+
+                // Preload each part's duration so the unified timeline + section marks are accurate
+                NARRATION_PARTS.forEach((part, i) => {
+                    const probe = new Audio();
+                    probe.preload = 'metadata';
+                    probe.src = NARRATION_BASE + part.file;
+                    probe.addEventListener('loadedmetadata', () => {
+                        durs[i] = probe.duration || 0;
+                        if (durs.every(d => d > 0)) {
+                            for (let k = 0; k < N; k++) cum[k + 1] = cum[k] + durs[k];
+                            total = cum[N];
+                            durationsReady = true;
+                            buildSegments();
+                            render();
+                        }
+                    });
+                });
 
                 audioEl.addEventListener('timeupdate', () => {
                     if (nbDragging) return;
-                    const d = audioEl.duration || 0;
-                    if (d > 0) nbFill.style.width = (audioEl.currentTime / d * 100) + '%';
-                    nbCurrent.textContent = fmt(audioEl.currentTime);
+                    render();
                     const now = Date.now();
                     if (now - lastSave > 3000) { lastSave = now; savePos(); }
                 });
-
-                // Narration is the master: while it plays, the cross-page theme
-                // music fades out; when it stops, the theme fades back in.
                 audioEl.addEventListener('play', () => {
                     setIcons(true);
                     if (typeof window.fadeOutAmbientMusic === 'function') window.fadeOutAmbientMusic();
                 });
                 audioEl.addEventListener('pause', () => {
+                    if (advancing) return;   // part swap, not a real stop
                     setIcons(false);
                     savePos();
                     if (typeof window.resumeAmbientMusic === 'function') window.resumeAmbientMusic();
                 });
                 audioEl.addEventListener('ended', () => {
-                    setIcons(false);
-                    nbFill.style.width = '100%';
-                    try { localStorage.removeItem(POS_KEY); } catch (e) {}
-                    if (typeof window.resumeAmbientMusic === 'function') window.resumeAmbientMusic();
+                    if (current < N - 1) {
+                        loadPart(current + 1, true, 0);   // seamless auto-advance to the next section
+                    } else {
+                        setIcons(false);
+                        nbFill.style.width = '100%';
+                        clearSaved();
+                        if (typeof window.resumeAmbientMusic === 'function') window.resumeAmbientMusic();
+                    }
                 });
 
                 nbToggle.addEventListener('click', () => {
@@ -1202,15 +1282,20 @@
                     else audioEl.pause();
                 });
 
-                // Scrub: click, drag, and touch to seek (return-later friendly)
+                // Seek across the WHOLE narration (click / drag / touch) -> lands in the right part
                 const seekTo = (clientX) => {
+                    if (!durationsReady || !total) return;
                     const r = nbProgress.getBoundingClientRect();
                     const ratio = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
                     nbFill.style.width = (ratio * 100) + '%';
-                    if (audioEl.duration) {
-                        audioEl.currentTime = ratio * audioEl.duration;
-                        nbCurrent.textContent = fmt(audioEl.currentTime);
-                    }
+                    const g = ratio * total;
+                    nbCurrent.textContent = fmt(g);
+                    let j = 0;
+                    while (j < N - 1 && g >= cum[j + 1]) j++;
+                    const within = g - cum[j];
+                    const wasPlaying = !audioEl.paused;
+                    if (j === current) { try { audioEl.currentTime = within; } catch (e) {} }
+                    else { loadPart(j, wasPlaying, within); }
                 };
                 nbProgress.addEventListener('click', (e) => seekTo(e.clientX));
                 nbProgress.addEventListener('mousedown', (e) => { nbDragging = true; seekTo(e.clientX); });
@@ -1220,23 +1305,17 @@
                 document.addEventListener('touchmove', (e) => { if (nbDragging) seekTo(e.touches[0].clientX); }, { passive: true });
                 document.addEventListener('touchend', () => { if (nbDragging) { nbDragging = false; savePos(); } });
 
-                // Let the ambient theme player see/stop narration (mutual exclusivity)
+                // Mutual exclusivity with the ambient theme
                 window.isStoryNarrationPlaying = () => !!audioEl && !audioEl.paused;
                 window.pauseStoryNarration = () => { try { audioEl.pause(); } catch (e) {} };
 
-                // Autoplay when the browser allows (reader arrived via a click, or
-                // has interacted). On a cold load it starts on the first gesture,
-                // ignoring taps on the bar itself so the toggle isn't double-fired.
-                audioEl.play().catch(() => {
-                    const gestures = ['pointerup', 'touchend', 'click', 'keydown'];
-                    const onGesture = (e) => {
-                        if (e.target && e.target.closest && e.target.closest('#narration-bar')) return;
-                        audioEl.play().then(() => {
-                            gestures.forEach(g => document.removeEventListener(g, onGesture, true));
-                        }).catch(() => {});
-                    };
-                    gestures.forEach(g => document.addEventListener(g, onGesture, true));
-                });
+                // Resume where the reader left off (part + position), else start at the top
+                let startPart = 0, startWithin = 0;
+                try {
+                    const saved = JSON.parse(localStorage.getItem(POS_KEY) || 'null');
+                    if (saved && typeof saved.p === 'number') { startPart = Math.max(0, Math.min(N - 1, saved.p)); startWithin = saved.t || 0; }
+                } catch (e) {}
+                loadPart(startPart, true, startWithin);   // load, seek, attempt autoplay (gesture fallback inside)
             }
         });
     </script>

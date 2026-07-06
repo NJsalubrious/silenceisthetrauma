@@ -2408,6 +2408,20 @@
     background: var(--calc-color);
     box-shadow: 0 0 6px -1px var(--calc-color);
 }
+.nb-segments {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.nb-seg-divider {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    width: 2px;
+    margin-left: -1px;
+    background: var(--bg-color);
+    opacity: 0.85;
+}
 .nb-time {
     flex: 0 0 auto;
     font-family: 'Roboto Mono', monospace;

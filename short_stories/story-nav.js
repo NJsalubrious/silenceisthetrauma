@@ -18,7 +18,7 @@
   const STORIES = [
     { slug: 'pixelstortion_The_Equation', title: 'The Equation' },
     { slug: 'pixelstortion_ISLA_4-7-2',   title: 'She Knew His Pins' },
-    { slug: 'Islas_Blast_Radius',          title: 'The Ferenczi Dissociation' },
+    { slug: 'The_Ferenczi_Split',          title: 'The Ferenczi Split' },
     { slug: 'Same_Breath',                 title: 'Same Breath' },
     { slug: 'the_evaluation',              title: 'The Evaluator' },
   ];

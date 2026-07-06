@@ -123,26 +123,12 @@ const PIXEL_MANIFEST = {
 
     // 3c. STORIES (Short fiction - absolute URLs for cross-site resolution)
     STORIES: {
-        ISLA_4_7_2: {
-            title: 'ISLA 4-7-2',
-            track: 'STORY 01 // ISLA DARK ORIGIN STORY',
-            description: "472 - The Meaning of Recursive Rot. Isla's origin story is horrific.",
-            cover: 'https://silenceisthetrauma.com/short_stories/pixelstortion_ISLA_4-7-2.jpg',
-            href: '/short_stories/pixelstortion_ISLA_4-7-2.html'
-        },
-        Islas_Blast_Radius: {
-            title: "Isla's Blast Radius",
-            track: "STORY 02 // ISLA'S BLAST RADIUS",
+        The_Ferenczi_Split: {
+            title: 'The Ferenczi Split',
+            track: "STORY 02 // THE FERENCZI SPLIT",
             description: "The Burning Of Dominic's Empire begins here. There will be fallout.",
-            cover: 'https://silenceisthetrauma.com/short_stories/Islas_Blast_Radius.jpg',
-            href: '/short_stories/Islas_Blast_Radius.html'
-        },
-        Same_Breath: {
-            title: 'Same Breath',
-            track: 'STORY 03 // SAME BREATH',
-            description: 'Dominic saved a man. Then Dominic he removed a liability. Same breath',
-            cover: 'https://silenceisthetrauma.com/short_stories/Same_Breath.jpg',
-            href: '/short_stories/Same_Breath.html'
+            cover: 'https://silenceisthetrauma.com/short_stories/The_Ferenczi_Split.jpg',
+            href: '/short_stories/The_Ferenczi_Split.html'
         },
         The_Equation: {
             title: 'The Equation',
@@ -150,6 +136,20 @@ const PIXEL_MANIFEST = {
             description: "Dominic Ryker doesn't lose. He adjusts the equation.",
             cover: 'https://silenceisthetrauma.com/short_stories/pixelstortion_The_Equation.jpg',
             href: '/short_stories/pixelstortion_The_Equation.html'
+        },
+        ISLA_4_7_2: {
+            title: 'ISLA 4-7-2',
+            track: 'STORY 01 // ISLA DARK ORIGIN STORY',
+            description: "472 - The Meaning of Recursive Rot. Isla's origin story is horrific.",
+            cover: 'https://silenceisthetrauma.com/short_stories/pixelstortion_ISLA_4-7-2.jpg',
+            href: '/short_stories/pixelstortion_ISLA_4-7-2.html'
+        },
+        Same_Breath: {
+            title: 'Same Breath',
+            track: 'STORY 03 // SAME BREATH',
+            description: 'Dominic saved a man. Then Dominic he removed a liability. Same breath',
+            cover: 'https://silenceisthetrauma.com/short_stories/Same_Breath.jpg',
+            href: '/short_stories/Same_Breath.html'
         },
         The_Evaluator: {
             title: 'The Evaluator',

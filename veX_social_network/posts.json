@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_3139a738",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The permission to speak is always conditional.",
+    "timestamp": "2026-07-07T12:01:44.649755Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/media/2026/jul/06/abc-license-renewals-fcc",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_8cca6061",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

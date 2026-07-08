@@ -2422,6 +2422,55 @@
     background: var(--bg-color);
     opacity: 0.85;
 }
+
+/* --- Book-style story title block (kicker / title / byline) ---
+   Lives here, not in each story's <head>, because Barba swaps only <main>:
+   head-only rules vanish on soft-navigation, which left these headings
+   left-aligned until a hard refresh. The accent rule under the title falls
+   through to whichever theme-accent variable a given story defines. */
+p.story-kicker {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.38;
+    margin-bottom: 2rem;
+    text-indent: 0.34em;
+}
+p.story-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 6.2vw, 2.9rem);
+    letter-spacing: 0.16em;
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    text-indent: 0.16em;
+}
+p.story-title::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 1px;
+    margin: 1.4rem auto 0;
+    background: var(--ryker-color, var(--father-color, var(--calc-color)));
+    opacity: 0.55;
+}
+p.story-byline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.42;
+    margin-bottom: 0;
+}
 .nb-time {
     flex: 0 0 auto;
     font-family: 'Roboto Mono', monospace;

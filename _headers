@@ -1,0 +1,13 @@
+# Cloudflare Pages custom headers.
+#
+# Story pages are loaded via Barba soft-navigation: clicking a link does a
+# background fetch() of the page HTML and swaps <main> in place. A background
+# fetch can be served from a stale browser/edge cache WITHOUT revalidating,
+# which is why clicking a story from stories.html could show an old version
+# while a direct reload showed the current one.
+#
+# no-cache still lets the file be cached, but forces a freshness check on every
+# request, so soft-navigation can never swap in a stale page. (Assets like the
+# narration mp3s live outside short_stories/ and keep normal caching.)
+/short_stories/*
+  Cache-Control: no-cache

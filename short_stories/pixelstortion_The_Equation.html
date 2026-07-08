@@ -56,6 +56,54 @@
     <link rel="stylesheet" href="../master-hub.css">
 <style>
 /* Page specific overrides */
+
+/* Title block — book-style title page, quiet and literary. */
+p.story-kicker {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.38;
+    margin-bottom: 2rem;
+    text-indent: 0.34em;
+}
+
+p.story-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 6.2vw, 2.9rem);
+    letter-spacing: 0.16em;
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    text-indent: 0.16em;
+}
+
+p.story-title::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 1px;
+    margin: 1.4rem auto 0;
+    background: var(--ryker-color);
+    opacity: 0.55;
+}
+
+p.story-byline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.42;
+    margin-bottom: 0;
+}
 </style>
     <link rel="canonical" href="https://pixelstortion.com/short_stories/pixelstortion_The_Equation" />
 </head>
@@ -670,7 +718,10 @@
     </div>
 
     <script type="text/markdown" id="raw-story">
-# The Equation
+[kicker] SILENCE IS THE TRAUMA
+[title] The Equation
+[byline] Written by PIXELSTORTION.
+[pause-medium]
 
 ## The Constant
 
@@ -680,11 +731,15 @@
 [pause-medium]
 [flat] Your newest client is a sixteen year old boy named Leo. He is the son of a prominent Crown Prosecutor.
 [pause]
-[steady] Leo is brilliant. His aptitude for abstract mathematics is in the top percentile of the state. But Leo is unraveling. His hands shake during sessions. His eyes have the bruised, hollowed out look of someone whose nervous system is running entirely on adrenaline.
+[steady] Leo is brilliant. His aptitude for abstract mathematics is in the top percentile of the top percentile of the state. But Leo is unraveling. His hands shake during sessions. His eyes have the bruised, hollowed out look of someone whose nervous system is running entirely on adrenaline.
+[pause]
+[flat] The father had said something at the door on the first day. That the boy had not been sleeping. That he had been saying things. Strain, the father called it. He asked you to keep an eye on him.
 [pause-medium]
 [cold] One afternoon, in the quiet of his father's mahogany paneled library, Leo breaks down.
 [pause]
 [heavy] He tells you he saw something on his father's encrypted laptop. Offshore transfer records. Routed through shell companies in Cyprus. The exact dates correspond with the sudden, shocking collapse of a major federal case his father was prosecuting.
+[pause]
+[steady] He shows you a notebook. Pages of it, dates, amounts, routing numbers, the same figures copied and recopied in a hand that bears down harder with every page.
 [pause]
 [steady] Leo is terrified. He knows his father threw the case for a bribe. He knows his father belongs to someone else. He says he feels like he is living in a house with a stranger.
 [pause]
@@ -743,7 +798,7 @@
 [pause]
 [steady] Ryker smiles. It is a small, careful thing.
 [pause-stark]
-[ryker] "Structure helps," Ryker says. "The mind needs a cage sometimes, just to rest."
+[ryker] "Structure. A voice of reason," Ryker says. "The mind needs a cage sometimes, just to rest."
 [pause-stark]
 [steady] You spend the next four months doing exactly that.
 [pause]
@@ -760,8 +815,6 @@
 ## The Remainder
 
 [pause-large]
-[steady] Three years later.
-[pause]
 [cold] You are watching the news. A massive data leak has hit the internet. The Ryker Network has been exposed.
 [pause]
 [flat] You recognize the names. You recognize the shell companies in Cyprus.
@@ -790,12 +843,10 @@
 [pause-stark]
 [steady] You sit in your quiet, immaculate apartment. You look at your textbooks. You look at the equations on your whiteboard.
 [pause-medium]
-[cold] You realize now what Dominic Ryker truly is. He is not a builder. He is not a criminal. He is a mathematician of a much darker discipline.
+[cold] You realize now what Dominic Ryker truly is. He is not a builder. He is a mathematician of a much darker discipline.
 [pause]
 [flat] He looked at the equation of Leo's life, and he found the single variable that could neutralize the threat.
 [pause-large]
-[final] You.
-[pause-stark]
 [final] You were the variable. And you solved perfectly.
 [pause-stark]
     </script>
@@ -841,6 +892,9 @@
                     if (tag === "heavy") cssClass = "text-heavy";
                     if (tag === "clinical") cssClass = "text-clinical";
                     if (tag === "final") cssClass = "final-realization";
+                    if (tag === "kicker") cssClass = "story-kicker";
+                    if (tag === "title") cssClass = "story-title";
+                    if (tag === "byline") cssClass = "story-byline";
 
                     htmlContent += `<p class="beat ${cssClass}">${text}</p>`;
                 }

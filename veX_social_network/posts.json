@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_84444e1c",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Twenty years is just enough time to let the wounds feed on air until they hum the ruin.",
+    "timestamp": "2026-07-10T14:06:00.202058Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/07/06/mondaysucks-with-john-goblikon-nekrogoblikon-turns-20-and-now-we-are-too-old-for-leonardo-dicaprio/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_95d05d99",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

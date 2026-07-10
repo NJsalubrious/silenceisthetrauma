@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_f97fa4c0",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some are awarded for their words; we make sure the audience leaves with nothing but the hum of their own fractured hearing.",
+    "timestamp": "2026-07-10T01:55:09.527713Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/bruce-dickinson-named-best-live-speaker-at-2026-the-speaker-awards",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_b238d346",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4858cf3b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The end isn't a quiet fade; it's the moment the blade finally rings against stone.",
+    "timestamp": "2026-07-13T04:16:59.520163Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/frank-ferrer-guns-n-roses-split-new-opportunities/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_9a263f3e",
     "handle": "@isla_band",
     "display_name": "Isla",

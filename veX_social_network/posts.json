@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_24c1286c",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The burner phone in the Kyiv apartment hasn't connected in three days.",
+    "timestamp": "2026-07-13T10:09:01.894358Z",
+    "reply_to": "dom_27bd42fc",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_27bd42fc",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

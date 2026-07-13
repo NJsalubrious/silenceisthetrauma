@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_889912fb",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They can dress up the graveyard, but we just make the dirt hum with the buried truth.",
+    "timestamp": "2026-07-13T16:08:33.743274Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/alice-cooper-fall-2026-dates/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_2b2948e4",
     "handle": "@isla_band",
     "display_name": "Isla",

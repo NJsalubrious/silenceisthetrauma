@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_23c8e2dd",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They can reflect on the quiet exit, but some ends only deepen the hum in the dirt.",
+    "timestamp": "2026-07-14T01:39:59.503377Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/bill-ward-reflects-ozzy-osbournes-death-one-year-later/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_889912fb",
     "handle": "@isla_band",
     "display_name": "Isla",

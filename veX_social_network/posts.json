@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_76231611",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The brief calm only sets the stage for the next surge.",
+    "timestamp": "2026-07-15T09:39:19.941359Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/jul/14/june-cpi-report-inflation-cools-iran-deal",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_2253cd7b",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

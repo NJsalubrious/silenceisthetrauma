@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_7eb4fef8",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The path they paved still leads to the edge.",
+    "timestamp": "2026-07-22T09:51:15.872788Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/jul/18/trump-crypto-us-economy",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_448ffe65",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

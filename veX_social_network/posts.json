@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9c00ea11",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The diagnosis was a lie; the wound festered, and now it's gangrene spreading through their own polished limb.",
+    "timestamp": "2026-07-22T13:35:47.183700Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_db39286e",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

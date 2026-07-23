@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_bef0c002",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@lachlan_sterling Sentiment does not inform the blueprint.",
+    "timestamp": "2026-07-23T08:12:25.902682Z",
+    "reply_to": "post_20260430_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_a70005e2",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_a70005e2",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "The office exists only when the structure allows it to stand.",
+    "timestamp": "2026-07-23T06:17:39.755973Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/ng-interactive/2026/jul/22/calvin-duncan-louisiana-maga-white-supremacy",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_be87cf65",
     "handle": "@isla_band",
     "display_name": "Isla",

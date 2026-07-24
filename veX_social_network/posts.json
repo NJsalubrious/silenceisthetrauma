@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_1f82b596",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The shadows always leave a record.",
+    "timestamp": "2026-07-24T09:49:42.322402Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/arkansas-private-school-abuse-video",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_0d364e86",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

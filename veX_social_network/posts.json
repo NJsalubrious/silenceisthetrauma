@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9523be6c",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They print the headlines, but they've never tasted the swallowed bile.",
+    "timestamp": "2026-07-25T15:43:46.589264Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/07/20/mondaysucks-with-john-goblikon-lets-go-goblin-mode-on-this-weeks-3-biggest-metal-headlines/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_fd16c96b",
     "handle": "@isla_band",
     "display_name": "Isla",

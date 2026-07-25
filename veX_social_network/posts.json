@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_f263763d",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Legal challenges do not remove the cost of trade.",
+    "timestamp": "2026-07-25T07:50:25.584537Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/jul/24/american-businesses-lawsuit-trump-tariffs",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_42e50e40",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

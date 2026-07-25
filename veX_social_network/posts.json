@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_9f21c329",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "Some things were never meant to be pasteurized.",
+    "timestamp": "2026-07-25T09:34:39.587278Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/5-quotes-raw-milk-mark-mcafee",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_f263763d",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

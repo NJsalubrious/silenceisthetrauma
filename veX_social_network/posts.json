@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_fb368cc9",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The cost of the new permits in Gdansk just doubled.",
+    "timestamp": "2026-07-26T09:42:51.287965Z",
+    "reply_to": "dom_616d3bc6",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_616d3bc6",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

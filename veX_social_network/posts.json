@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_cd6a51ab",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Their containment measures only ever built a better incubator for the plague.",
+    "timestamp": "2026-07-27T13:58:04.792212Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_2cdfe591",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_ea820fdf",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "A song is only \"hard\" when it demands you swallow the names you choked on, then scream them back.",
+    "timestamp": "2026-07-29T13:56:57.467907Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/matt-cameron-hardest-soundgarden-song-play-live/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_99f2903e",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

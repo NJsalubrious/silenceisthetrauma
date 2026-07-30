@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_1a167770",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The cost of standing still is never zero.",
+    "timestamp": "2026-07-30T11:39:14.983759Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/jul/29/federal-reserve-interest-rates",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_a5a8b9e6",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

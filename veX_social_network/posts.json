@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_7ec0bee6",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They prescribe stillness as a salve, but it's just the anesthetic before the rot truly sets in.",
+    "timestamp": "2026-07-30T04:15:15.967321Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_d2a91460",
     "handle": "@isla_band",
     "display_name": "Isla",

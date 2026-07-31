@@ -127,7 +127,7 @@
         rel="stylesheet">
 
     <style>
-/* UNISON SHELL OVERRIDES — applied to every unison sub-page (archive/story).
+/* UNISON SHELL OVERRIDES - applied to every unison sub-page (archive/story).
        Without these, Tailwind CDN's runtime injection can flip the cascade
        and the brand dropdown / off-screen modal close-buttons leak into view.
        These !important rules keep the page identical to the 7 SEO pages. */
@@ -135,22 +135,49 @@
     #media-panel:not(.open),
     #cipher-game-panel:not(.open) { display: none !important; }
 
+    /* =====================================================================
+       THE BANALITY OF KINDNESS
+
+       Every colour here is pulled off a 1975 domestic photograph left in a
+       drawer: tobacco, tea, dust, manila, weatherboard. Nothing on this page
+       is neutral grey and nothing is pure black or pure white, because
+       nothing in the house was. The darks are burnt brown, lit the way a
+       kitchen is lit at night.
+
+       One exception, and it is the point of the exception. The creek is the
+       only place the palette turns blue. It is the coldest thing in the
+       story and the only thing that was actually going to kill anybody.
+
+       Luminance carries the plot: daylight, then brighter through the nine
+       good months, dimming as she starts to notice, out altogether for four
+       words on the lino, drowned at the causeway, then back up to the
+       brightest state on the page for the last movement. She takes fifty
+       years to say this, so every fade is slow. One is not.
+       ===================================================================== */
+
     :root {
-            --bg-color: #f5f0eb;
-            --text-color: #1a1a1a;
-            --calc-color: #4a6741;
-            --dominic-color: #1e3a8a;
-            --click-color: #b45309;
-            --heavy-color: #374151;
-            --grain-opacity: 0.03;
-            --vignette-color: rgba(0, 0, 0, 0.08);
+            /* BASE - the kitchen at night. One light on over the table, a
+               red recording lamp, and a woman of eighty-six talking to a
+               machine because she cannot do it with her daughter present.
+               The page starts low and close, so the nine good months can
+               open it right up. */
+            --bg-color: #241c14;
+            --text-color: #c3b49a;
+            --boy-color: #8f9080;      /* the child: drab, colourless, olive */
+            --tape-color: #a08758;     /* the machine, and carbon copies */
+            --amber-color: #c2762f;    /* the two lines that cost somebody */
+            --heavy-color: #ece0c8;
+            --grain-opacity: 0.06;
+            --vignette-color: rgba(10, 6, 2, 0.58);
+            --vignette-radius: 92%;
+            --fade-speed: 3.5s;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: 'Inter', sans-serif;
-            transition: background-color 2.5s ease, color 2.5s ease;
+            transition: background-color var(--fade-speed) ease, color var(--fade-speed) ease;
             overflow-x: hidden;
             font-size: 1.2rem;
             line-height: 1.85;
@@ -159,59 +186,118 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- THEMATIC STATES --- */
-        body.theme-cadence {
-            --bg-color: #1c1917;
-            --text-color: #d6d3d1;
-            --click-color: #f59e0b;
-            --calc-color: #a3a3a3;
-            --heavy-color: #e7e5e4;
-            --grain-opacity: 0.07;
-            --vignette-color: rgba(0, 0, 0, 0.5);
-            transition: background-color 0.4s ease, color 0.4s ease;
+        /* --- THE EMOTIONAL JOURNEY --------------------------------------
+           Each state is a place in the house or a month of the year. */
+
+        /* theme-ninemonths - The good, and it was most of it. Sun through a
+           window, gum trees in the yard, a husband talking again. Golden. */
+        body.theme-ninemonths {
+            --bg-color: #f5edd6;
+            --text-color: #3a3122;
+            --boy-color: #77786a;
+            --tape-color: #8b7a4e;
+            --amber-color: #96601f;
+            --heavy-color: #262013;
+            --grain-opacity: 0.03;
+            --vignette-color: rgba(120, 96, 44, 0.06);
+            --vignette-radius: 132%;
+            --fade-speed: 4.5s;
         }
 
-        body.theme-breach {
-            --bg-color: #f8fafc;
-            --text-color: #0f172a;
-            --calc-color: #059669;
-            --dominic-color: #1e3a8a;
-            --heavy-color: #475569;
-            --grain-opacity: 0.02;
-            --vignette-color: rgba(0, 0, 0, 0.05);
-            transition: background-color 3s ease, color 3s ease;
+        /* theme-fence - Mrs Dowd over the palings, and later the small gaps
+           closing around a six-year-old. Dust in the four o'clock light.
+           Still warm, still domestic. That is what makes it work. */
+        body.theme-fence {
+            --bg-color: #b6a483;
+            --text-color: #2e2618;
+            --boy-color: #5c5b4c;
+            --tape-color: #6b5730;
+            --amber-color: #8c4715;
+            --heavy-color: #1d180e;
+            --grain-opacity: 0.065;
+            --vignette-color: rgba(56, 38, 16, 0.28);
+            --vignette-radius: 100%;
+            --fade-speed: 2.6s;
         }
 
-        body.theme-rupture {
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            --calc-color: #34d399;
-            --dominic-color: #60a5fa;
-            --heavy-color: #e5e7eb;
-            --grain-opacity: 0.0;
+        /* theme-lino - "I did it." THE DARKEST. The light goes out of the
+           house. Burnt brown-black with bone on top of it, and it lands in
+           under a tenth of a second, which is how fast she heard it. */
+        body.theme-lino {
+            --bg-color: #100a06;
+            --text-color: #e9dcc6;
+            --boy-color: #f4ead6;
+            --tape-color: #6d6154;
+            --amber-color: #c07a33;
+            --heavy-color: #f7f0e2;
+            --grain-opacity: 0.025;
             --vignette-color: rgba(0, 0, 0, 0.0);
-            transition: background-color 0.08s ease, color 0.08s ease;
+            --vignette-radius: 145%;
+            --fade-speed: 0.09s;
         }
 
-        body.theme-ferenczi {
-            --bg-color: #020617;
-            --text-color: #94a3b8;
-            --calc-color: #64748b;
-            --dominic-color: #94a3b8;
-            --heavy-color: #cbd5e1;
-            --grain-opacity: 0.04;
-            --vignette-color: rgba(0, 0, 0, 0.7);
-            transition: background-color 4s ease, color 4s ease;
+        /* theme-washing - The tea towel, the washing brought in, fifty years
+           of explaining it away. Also the nightie and the hour on the step.
+           Brown-black and low contrast: she can see it and won't look. */
+        body.theme-washing {
+            --bg-color: #1d160e;
+            --text-color: #8d8071;
+            --boy-color: #9a8d7c;
+            --tape-color: #6a5f50;
+            --amber-color: #a86a2c;
+            --heavy-color: #c2b6a4;
+            --grain-opacity: 0.075;
+            --vignette-color: rgba(12, 7, 3, 0.66);
+            --vignette-radius: 86%;
+            --fade-speed: 3s;
         }
 
-        body.theme-remains {
-            --bg-color: #0a0a0a;
-            --text-color: #57534e;
-            --calc-color: #44403c;
-            --heavy-color: #78716c;
-            --grain-opacity: 0.06;
-            --vignette-color: rgba(0, 0, 0, 0.85);
-            transition: background-color 5s ease, color 5s ease;
+        /* theme-causeway - The creek. SECOND DARKEST, and the one blue state
+           on the page. Floodwater, not lamplight. The vignette shuts to a
+           small circle and the fade is the slowest here. */
+        body.theme-causeway {
+            --bg-color: #08131a;
+            --text-color: #62757d;
+            --boy-color: #75888f;
+            --tape-color: #47565d;
+            --amber-color: #6f7f7a;
+            --heavy-color: #9fb1b6;
+            --grain-opacity: 0.09;
+            --vignette-color: rgba(1, 6, 10, 0.90);
+            --vignette-radius: 62%;
+            --fade-speed: 4.5s;
+        }
+
+        /* theme-form - The Welfare office. One sentence in a box marked
+           Health of the carer. Manila folder brown. Not black, because this
+           is the part she can defend, and the light is already returning. */
+        body.theme-form {
+            --bg-color: #4b4234;
+            --text-color: #bdb29c;
+            --boy-color: #9a9382;
+            --tape-color: #9a8965;
+            --amber-color: #c07f36;
+            --heavy-color: #e0d6c0;
+            --grain-opacity: 0.05;
+            --vignette-color: rgba(20, 14, 6, 0.44);
+            --vignette-radius: 96%;
+            --fade-speed: 2.6s;
+        }
+
+        /* theme-newyear - "And you were right." Brightest and warmest state
+           on the page, above even the good months, and the slowest arrival
+           of all: six seconds for the light to come back up. */
+        body.theme-newyear {
+            --bg-color: #fdf8ea;
+            --text-color: #2b2418;
+            --boy-color: #7e7d6f;
+            --tape-color: #907a4c;
+            --amber-color: #8e5a1c;
+            --heavy-color: #171208;
+            --grain-opacity: 0.018;
+            --vignette-color: rgba(150, 125, 70, 0.05);
+            --vignette-radius: 145%;
+            --fade-speed: 6s;
         }
 
         .container {
@@ -222,111 +308,145 @@
             z-index: 10;
         }
 
-        /* --- CINEMATIC REVEAL --- */
+        /* --- ARRIVAL ---
+           No blur filter and no will-change on purpose. Both promote every
+           paragraph to its own compositing layer, and a promoted layer keeps
+           whatever background it was rasterised with, which paints visible
+           rectangles of the previous theme over the page during the long
+           fades. Opacity and travel give the same arrival without artefacts. */
         .beat {
             opacity: 0;
-            transform: translateY(22px);
-            filter: blur(3px);
-            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                filter 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 2s ease;
+            transform: translateY(18px);
+            transition: opacity 1.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color var(--fade-speed) ease;
             margin-bottom: 2rem;
-            will-change: opacity, transform, filter;
         }
 
         .beat.is-visible {
             opacity: 1;
             transform: translateY(0);
-            filter: blur(0);
         }
+
+        .beat-center { text-align: center; }
 
         /* --- PACING --- */
-        .pause-small {
-            margin-bottom: 15vh;
-        }
+        .pause-small { margin-bottom: 15vh; }
+        .pause-medium { margin-bottom: 30vh; }
+        .pause-large { margin-bottom: 50vh; }
+        .pause-void { margin-bottom: 80vh; }
+        .pause-snap { margin-bottom: 100vh; }
+        .pause-stark { margin-bottom: 120vh; }
 
-        .pause-medium {
-            margin-bottom: 30vh;
-        }
-
-        .pause-large {
-            margin-bottom: 50vh;
-        }
-
-        .pause-void {
-            margin-bottom: 80vh;
-        }
-
-        .pause-snap {
-            margin-bottom: 100vh;
-        }
-
-        .pause-stark {
-            margin-bottom: 120vh;
-        }
-
-        /* --- TYPOGRAPHY --- */
+        /* --- VOICES ---
+           Hers is the plain one. Everything else departs from it: the
+           machine, the boy, and the two lines somebody had to force out. */
         .voice-steady {
             font-weight: 300;
         }
 
         .voice-cold {
             font-weight: 300;
-            opacity: 0.75;
+            opacity: 0.78;
             letter-spacing: 0.01em;
         }
 
+        /* The tape, and the words other people wrote down about him. */
         .voice-calc {
             font-family: 'Roboto Mono', monospace;
-            font-size: 0.92rem;
-            color: var(--calc-color);
-            letter-spacing: 0.04em;
-            line-height: 1.6;
-            transition: color 2s ease;
+            font-size: 0.9rem;
+            color: var(--tape-color);
+            letter-spacing: 0.05em;
+            line-height: 1.65;
+            transition: color var(--fade-speed) ease;
         }
 
+        /* The boy. Always set outside her sentences, never inside them. */
         .voice-dominic {
             font-family: 'Inter', sans-serif;
             font-weight: 400;
             font-size: 1.05rem;
-            color: var(--dominic-color);
+            color: var(--boy-color);
             margin-left: 2rem;
-            border-left: 2px solid var(--dominic-color);
-            padding-left: 1rem;
-            transition: color 2s ease, border-color 2s ease;
+            border-left: 1px solid var(--boy-color);
+            padding-left: 1.15rem;
+            transition: color var(--fade-speed) ease, border-color var(--fade-speed) ease;
         }
 
+        /* Lynnie at six, and Marj at the Welfare desk. */
         .voice-click {
             font-family: 'Roboto Mono', monospace;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--click-color);
-            letter-spacing: 0.06em;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            font-size: 1.02rem;
+            color: var(--amber-color);
+            letter-spacing: 0.02em;
+            line-height: 1.7;
+            transition: color var(--fade-speed) ease;
         }
 
         .voice-flat {
             font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
             font-weight: 300;
             color: inherit;
-            opacity: 0.8;
+            opacity: 0.82;
         }
 
         .voice-heavy {
             font-weight: 600;
             letter-spacing: -0.01em;
             color: var(--heavy-color);
+            transition: color var(--fade-speed) ease;
+        }
+
+        .voice-kicker {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--tape-color);
+            opacity: 0.8;
+        }
+
+        .voice-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.9rem, 6vw, 2.9rem);
+            letter-spacing: -0.03em;
+            text-align: center;
+            line-height: 1.12;
+            color: var(--heavy-color);
+            margin-bottom: 14vh;
+            transition: color var(--fade-speed) ease;
+        }
+
+        /* The two moments the story turns on. Centred, alone, and taking
+           their colour from whatever state they land in, so the same rule
+           is bone on black at the lino and something quieter at the creek. */
+        .voice-toll {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+            line-height: 1.4;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: var(--text-color);
+            margin: 0 auto;
+            max-width: 92%;
+            transition: opacity 3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color var(--fade-speed) ease;
         }
 
         .final-realization {
             font-family: 'Inter', sans-serif;
             font-weight: 400;
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             text-align: center;
             letter-spacing: -0.01em;
-            color: var(--text-color);
+            color: var(--heavy-color);
+            transition: color var(--fade-speed) ease;
         }
 
         .part-header {
@@ -341,354 +461,16 @@
             text-align: center;
         }
 
-        /* --- ATMOSPHERIC EFFECTS --- */
-        .grain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 50;
-            opacity: var(--grain-opacity);
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            transition: opacity 3s ease;
-        }
-
-        .vignette {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 5;
-            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
-            transition: background 3.5s ease;
-        }
-
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 2px;
-            background-color: var(--calc-color);
-            width: 0%;
-            z-index: 100;
-            transition: width 0.1s, background-color 2s ease;
-            opacity: 0.4;
-        }
-
-        .audio-toggle {
-            position: fixed;
-            bottom: 110px; /* Above Dominic orb */
-            right: 24px; /* Mobile thumb ergonomic */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--calc-color);
-            color: var(--calc-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.5s ease;
-        }
-
-        .audio-toggle:hover {
-            box-shadow: 0 0 15px var(--calc-color);
-            transform: scale(1.05);
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .audio-toggle svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-            transition: fill 2.5s ease;
-        }
-    </style>
-
-    <style>
-        :root {
-            --bg-color: #f5f0eb;
-            --text-color: #1a1a1a;
-            --calc-color: #4a6741;
-            --dominic-color: #1e3a8a;
-            --click-color: #b45309;
-            --heavy-color: #374151;
-            --grain-opacity: 0.03;
-            --vignette-color: rgba(0, 0, 0, 0.08);
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            transition: background-color 2.5s ease, color 2.5s ease;
-            overflow-x: hidden;
-            font-size: 1.2rem;
-            line-height: 1.85;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* --- THEMATIC STATES --- */
-        body.theme-cadence {
-            --bg-color: #1c1917;
-            --text-color: #d6d3d1;
-            --click-color: #f59e0b;
-            --calc-color: #a3a3a3;
-            --heavy-color: #e7e5e4;
-            --grain-opacity: 0.07;
-            --vignette-color: rgba(0, 0, 0, 0.5);
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
-
-        body.theme-breach {
-            --bg-color: #f8fafc;
-            --text-color: #0f172a;
-            --calc-color: #059669;
-            --dominic-color: #1e3a8a;
-            --heavy-color: #475569;
-            --grain-opacity: 0.02;
-            --vignette-color: rgba(0, 0, 0, 0.05);
-            transition: background-color 3s ease, color 3s ease;
-        }
-
-        body.theme-rupture {
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            --calc-color: #34d399;
-            --dominic-color: #60a5fa;
-            --heavy-color: #e5e7eb;
-            --grain-opacity: 0.0;
-            --vignette-color: rgba(0, 0, 0, 0.0);
-            transition: background-color 0.08s ease, color 0.08s ease;
-        }
-
-        body.theme-ferenczi {
-            --bg-color: #020617;
-            --text-color: #94a3b8;
-            --calc-color: #64748b;
-            --dominic-color: #94a3b8;
-            --heavy-color: #cbd5e1;
-            --grain-opacity: 0.04;
-            --vignette-color: rgba(0, 0, 0, 0.7);
-            transition: background-color 4s ease, color 4s ease;
-        }
-
-        body.theme-remains {
-            --bg-color: #0a0a0a;
-            --text-color: #57534e;
-            --calc-color: #44403c;
-            --heavy-color: #78716c;
-            --grain-opacity: 0.06;
-            --vignette-color: rgba(0, 0, 0, 0.85);
-            transition: background-color 5s ease, color 5s ease;
-        }
-
-        .container {
-            max-width: 620px;
-            margin: 0 auto;
-            padding: 12vh 24px 35vh 24px;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* --- CINEMATIC REVEAL --- */
-        .beat {
-            opacity: 0;
-            transform: translateY(22px);
-            filter: blur(3px);
-            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                filter 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 2s ease;
-            margin-bottom: 2rem;
-            will-change: opacity, transform, filter;
-        }
-
-        .beat.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0);
-        }
-
-        /* --- PACING --- */
-        .pause-small {
-            margin-bottom: 15vh;
-        }
-
-        .pause-medium {
-            margin-bottom: 30vh;
-        }
-
-        .pause-large {
-            margin-bottom: 50vh;
-        }
-
-        .pause-void {
-            margin-bottom: 80vh;
-        }
-
-        .pause-snap {
-            margin-bottom: 100vh;
-        }
-
-        .pause-stark {
-            margin-bottom: 120vh;
-        }
-
-        /* --- TYPOGRAPHY --- */
-        .voice-steady {
-            font-weight: 300;
-        }
-
-        .voice-cold {
-            font-weight: 300;
-            opacity: 0.75;
-            letter-spacing: 0.01em;
-        }
-
-        .voice-calc {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 0.92rem;
-            color: var(--calc-color);
-            letter-spacing: 0.04em;
-            line-height: 1.6;
-            transition: color 2s ease;
-        }
-
-        .voice-dominic {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 1.05rem;
-            color: var(--dominic-color);
-            margin-left: 2rem;
-            border-left: 2px solid var(--dominic-color);
-            padding-left: 1rem;
-            transition: color 2s ease, border-color 2s ease;
-        }
-
-        .voice-click {
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--click-color);
-            letter-spacing: 0.06em;
-            transition: color 0.3s ease;
-        }
-
-        .voice-flat {
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-            font-weight: 300;
-            color: inherit;
-            opacity: 0.8;
-        }
-
-        .voice-heavy {
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: var(--heavy-color);
-        }
-
-        .final-realization {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 1.4rem;
-            text-align: center;
-            letter-spacing: -0.01em;
-            color: var(--text-color);
-        }
-
-        .part-header {
-            font-family: 'Roboto Mono', monospace;
-            font-weight: 400;
-            font-size: 0.8rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-top: 30vh;
-            margin-bottom: 10vh;
-            opacity: 0.35;
-            text-align: center;
-        }
-
-        /* --- ATMOSPHERIC EFFECTS --- */
-        .grain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 50;
-            opacity: var(--grain-opacity);
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            transition: opacity 3s ease;
-        }
-
-        .vignette {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 5;
-            background: radial-gradient(circle at center, transparent 25%, var(--vignette-color) 110%);
-            transition: background 3.5s ease;
-        }
-
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 2px;
-            background-color: var(--calc-color);
-            width: 0%;
-            z-index: 100;
-            transition: width 0.1s, background-color 2s ease;
-            opacity: 0.4;
-        }
-
-        .audio-toggle {
-            position: fixed;
-            bottom: 110px; /* Above Dominic orb */
-            right: 24px; /* Mobile thumb ergonomic */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--calc-color);
-            color: var(--calc-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.5s ease;
-        }
-
-        .audio-toggle:hover {
-            box-shadow: 0 0 15px var(--calc-color);
-            transform: scale(1.05);
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .audio-toggle svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-            transition: fill 2.5s ease;
+        /* The shell's pointer glow is built for the dark SITT pages: a green
+           radial set to mix-blend-mode: screen. Screened against a paper
+           backdrop it adds no visible light whatsoever, but the blend mode
+           still forces the browser to composite everything underneath it,
+           and that composited region paints as a rectangle following the
+           pointer across the slow background fades. This page is paper, so
+           it goes without. Scoped here only; the shared CSS is untouched. */
+        .cursor-glow,
+        .cursor-dot {
+            display: none !important;
         }
 
         /* Invisible arc marker. No visual footprint; it only tells the
@@ -700,28 +482,76 @@
             pointer-events: none;
         }
 
-        /* The two moments the story turns on. Alone on the screen, centred,
-           in the current theme's own text colour - so it is pure white on
-           pure black at "I did it", and reads quieter everywhere else. The
-           reveal is slowed so it arrives rather than appears. */
-        .voice-toll {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 2.1rem;
-            line-height: 1.4;
-            text-align: center;
-            letter-spacing: -0.02em;
-            color: var(--text-color);
-            margin: 0 auto;
-            max-width: 90%;
-            transition: opacity 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                filter 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                color 2s ease;
+        /* --- ATMOSPHERE ---
+           The grain is tape hiss, not film stock. It thickens as she gets
+           closer to the things she never said and thins out once they are
+           said. */
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: var(--grain-opacity);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            transition: opacity var(--fade-speed) ease;
         }
 
-        @media (max-width: 600px) {
-            .voice-toll { font-size: 1.6rem; }
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: radial-gradient(circle at center, transparent 22%, var(--vignette-color) var(--vignette-radius));
+            transition: background var(--fade-speed) ease;
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background-color: var(--tape-color);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s, background-color var(--fade-speed) ease;
+            opacity: 0.45;
+        }
+
+        .audio-toggle {
+            position: fixed;
+            bottom: 110px;
+            right: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--tape-color);
+            color: var(--tape-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        .audio-toggle:hover {
+            box-shadow: 0 0 15px var(--tape-color);
+            transform: scale(1.05);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .audio-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            transition: fill var(--fade-speed) ease;
         }
     </style>
 
@@ -802,7 +632,7 @@
 [flat] So. Nine months, half a century ago, an old woman's memory. Count that against every word of this. I do.
 [pause-stark]
 
-[theme] theme-breach
+[theme] theme-ninemonths
 [steady] He came in the February. We'd done the papers because two was what we had and three was what I wanted, and after you there were no more coming.
 [steady] Kevin was thirteen. You were six.
 [pause]
@@ -852,7 +682,7 @@
 [heavy|center] That's the good. It was most of it. Now the rest.
 [pause-stark]
 
-[theme] theme-cadence
+[theme] theme-fence
 [steady] Then our neighbor Mrs Beryl Dowd. Over the fence. Saying what he said.
 [cold] "Wasn't it a terrible thing about his father. The pilot. The plane. 1970."
 [pause]
@@ -887,13 +717,13 @@
 [steady] I asked him, were you there when it happened.
 [pause-large]
 
-[theme] theme-rupture
-[cold] An I swear on my own grave he said it directly. Looking right at me —
+[theme] theme-lino
+[cold] An I swear on my own grave he said it directly. Looking right at me,
 [pause-large]
 [toll] "I did it."
 [pause-stark]
 
-[theme] theme-ferenczi
+[theme] theme-washing
 [steady] Then the smile. You remember the one he had. We seen it in the papers years later.
 [steady] And he just said,
 [dominic] "I didn't see it."
@@ -918,7 +748,7 @@
 [calc] I had to stop the machine for a while there.
 [pause-stark]
 
-[theme] theme-cadence
+[theme] theme-fence
 [steady] Now you. This is the part I've been going round since I started. And the part I'm sure of. Which is more than I can say for the rest.
 [pause-medium]
 [heavy] He was never once unkind to you. Never once.
@@ -944,7 +774,7 @@
 [cold] And it felt like knowing my own child. That's all it felt like.
 [pause-stark]
 
-[theme] theme-ferenczi
+[theme] theme-washing
 [steady] You stopped singing in the bath somewhere in there. Couldn't give you the month. Not a thing you notice starting.
 [steady] And your sheets started going through the machine of a morning. Doctor said say nothing to her, it goes as quick as it comes. So I said nothing.
 [pause]
@@ -968,7 +798,7 @@
 [cold] And I taught you it couldn't be said.
 [pause-stark]
 
-[theme] theme-remains
+[theme] theme-causeway
 [steady] That October, the creek came up. You went down to the causeway.
 [steady] You, who kept every rule we ever gave you. The one law of the house, that causeway.
 [flat] I never did find out how you came to be down there. Never asked. That's another one I never asked.
@@ -999,7 +829,7 @@
 [flat] There. I've said it.
 [pause-stark]
 
-[theme] theme-cadence
+[theme] theme-form
 [steady] Two versions. The grand version, I sensed what the whole country now knows.
 [flat] No. I was a housewife, not a prophet.
 [pause]
@@ -1036,7 +866,7 @@
 [dominic] "You'll be right, Marj."
 [pause-stark]
 
-[theme] theme-none
+[theme] theme-ninemonths
 [heavy|center] You were singing again in the new year.
 [pause]
 [steady] I do remember that, because your father turned the wireless off one night to hear you better. Made out he hadn't.
@@ -1056,7 +886,7 @@
 [heavy] And every one of us could have truthfully said the boy never asked us to.
 [pause-stark]
 
-[theme] theme-breach
+[theme] theme-newyear
 [steady] So I won't tell you what he is. The court did some of that. Then the gaol lost him. The papers do it daily. None of them needed me.
 [pause]
 [steady] What I know is small and mine. I had the easiest child I ever raised, nine months. The whole house arranged itself around him, quiet as you like.
@@ -1076,15 +906,16 @@
             let htmlContent = '';
 
             // Emotional arc. Triggers are invisible 1px markers emitted by the
-            // [theme] lines in the story above; the five theme classes and every
-            // voice/pause rule are exactly the ones already in this page's CSS.
-            //   (none)          kitchen-table cream, the ordinary opening
-            //   theme-breach    the nine good months, and the resolve at the end
-            //   theme-cadence   the first shadow, and the long walk back
-            //   theme-ferenczi  talking herself out of it; the nightie, the bed
-            //   theme-rupture   "I did it"          <- darkest
-            //   theme-remains   the creek, the rescue <- second darkest
-            const THEME_CLASSES = ['theme-cadence', 'theme-breach', 'theme-rupture', 'theme-ferenczi', 'theme-remains'];
+            // [theme] lines in the story above. Luminance is the plot:
+            //   (base)            the kitchen table, daylight, the recorder
+            //   theme-ninemonths  the nine good months            <- lightest
+            //   theme-fence       Mrs Dowd; later the gaps closing
+            //   theme-lino        "I did it."                     <- DARKEST
+            //   theme-washing     the tea towel; the nightie
+            //   theme-causeway    the creek                       <- 2nd darkest
+            //   theme-form        the Welfare office
+            //   theme-newyear     "And you were right."           <- resolve
+            const THEME_CLASSES = ['theme-ninemonths', 'theme-fence', 'theme-lino', 'theme-washing', 'theme-causeway', 'theme-form', 'theme-newyear'];
             const themeMap = {};
 
             lines.forEach((line) => {
@@ -1164,7 +995,7 @@
                         }
                         if (newTheme) {
                             document.body.classList.remove(...THEME_CLASSES);
-                            if (newTheme !== 'theme-none') document.body.classList.add(newTheme);
+                            if (newTheme !== 'theme-base') document.body.classList.add(newTheme);
                         }
                     }
                 });

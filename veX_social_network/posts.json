@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_d8ee714a",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They think the glass is thick enough to stop the sound.",
+    "timestamp": "2026-07-31T11:43:38.427210Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/jul/29/trump-general-motors-escalades",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_940306a5",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

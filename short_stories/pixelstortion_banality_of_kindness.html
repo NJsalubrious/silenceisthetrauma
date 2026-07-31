@@ -690,6 +690,39 @@
             fill: currentColor;
             transition: fill 2.5s ease;
         }
+
+        /* Invisible arc marker. No visual footprint; it only tells the
+           IntersectionObserver where the emotional state changes. */
+        .theme-trigger {
+            height: 1px;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* The two moments the story turns on. Alone on the screen, centred,
+           in the current theme's own text colour - so it is pure white on
+           pure black at "I did it", and reads quieter everywhere else. The
+           reveal is slowed so it arrives rather than appears. */
+        .voice-toll {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 2.1rem;
+            line-height: 1.4;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: var(--text-color);
+            margin: 0 auto;
+            max-width: 90%;
+            transition: opacity 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                color 2s ease;
+        }
+
+        @media (max-width: 600px) {
+            .voice-toll { font-size: 1.6rem; }
+        }
     </style>
 
 <div class="grain"></div>
@@ -719,301 +752,318 @@
 [kicker] SILENCE IS THE TRAUMA
 [title] THE BANALITY OF KINDNESS
 
-[heavy|center] You need to know three people before this starts.
-[pause]
-[steady] My father, Dominic Ryker, and I don't usually call him father. So mark the fact.
-[steady] Growing up I only knew of him, a name my grandmother kept at a distance, and she had her reasons; good ones.
-[pause]
-[steady] In public he built towers and shook the right hands, and behind that he ran something much larger, and he ran it one way, quietly and he never touched the crimes directly. Especially not the things that broke.
-[pause]
-[steady] His gift, if you want to call it that, was for building the rooms and the stories that shaped the choices a person had, until the only choice left was the one he'd wanted them to take all along, and then making certain it was someone else's name on the wreckage.
-[flat] It has never once been his.
+[calc] I think this is recording. The little red light's on, anyway.
 [pause-medium]
-[steady] Isla's mother married Dominic, my father, so we became sisters, not by blood. She's a musician; successful now, though she wasn't then, but the volume remains.
+[steady] I've got the paper here. The photo of him in Prague. The one they keep printing.
 [pause]
-[steady] She takes the thing nobody will say and sets it on fire, publicly, standing on the bridge as it burns, just to be sure.
-[flat] I'm not being metaphorical. If the best predictor of future behaviour is past behaviour, than she is a scary women.
-[pause-medium]
-[steady] And she reads people the way I read systems: four-digit code, she'll read it from across the room, not off your screen but off your hands, the small rhythm your fingers keep when they think no one's watching.
+[steady] Strange thing, really. I mean... he's fifty-eight now. Grey. A beard on him.
 [pause]
-[steady] It isn't a gift she was born with. It's what a child grows when reading a dangerous man correctly is the only thing keeping her safe, and for Isla, that man was her own father, in the house she grew up in, long before Dominic.
+[steady] I've looked and looked and I can't join that man to the boy who sat at our table.
 [pause]
-[cold] The darker story sits right behind the talent, the part she has never once said out loud, and her songs carry more than hints of it.
+[steady] And the boy's face, well. I tried to bring it up on its own and I couldn't. Not properly.
+[flat] Fifty years, you know. Wears the actual boy out of it.
 [pause]
-[steady] I mention it only because Isla arrives carrying things that make no sense until you know where they came from.
-[flat] Then they make complete sense.
-[pause-medium]
-[steady] I grew up a long way from any of this, rural Australia, wide roads, my home. Gran and Pop raised me.
+[cold] That frightened me more than the photo did.
 [pause]
-[steady] Not grandparents in any way that mattered, they were my parents, the only two I count, and that house was the whole of my world.
-[pause]
-[steady] Gran was an industrial chemist, I call her "chaos with a license" because it fits. She was fast in all directions. She was the only person who ever truly understood me.
-[pause]
-[steady] And she built a laboratory in the middle of nowhere. I mean that literally: red dirt to the horizon, an escarpment at her back, an hour of dirt road to reach anything, and there, a full commercial lab, running.
-[pause]
-[flat] Not a retreat. A working operation.
-[steady] Contracts with the university down in Queensland, students and research assistants cycling through, and a few arrangements she never talked about, government work, the quiet kind, the kind that leaves you with names in your phone you don't explain.
-[pause]
-[steady] A lab like that, out there, sounds far-fetched. That's the point.
-[calc] Gran only ever asked one question of a thing: is it possible. If it was, then it was, and what everyone else believed about it didn't get a vote.
-[pause]
-[steady] Far-fetched isn't a fact about the world; it's a fact about other people's imagination. She never once mistook the second for the first.
-[pause]
-[steady] That's the thing she put in me, deeper than any of the chemistry: see what's actually possible, and don't let the room talk you out of it.
-[cold] The geometry doesn't change just because the view does.
-[pause]
-[steady] Everything I do, I do with her hands. Pop kept everything standing, grounded, quiet, our rock.
-[flat] It was a good childhood. A real one.
-[pause-medium]
-[heavy] It ended at seventeen.
-[pause]
-[steady] A car, an empty stretch of desert road, and then police at the gate saying my name wrong. They called it an accident. I never have.
-[pause]
-[cold] Because whatever caught them out on that road is the same thing that reached in for me, the same world I'm about to walk you through.
-[pause-medium]
-[steady] But I didn't go in empty-handed. Gran had left me something, for a day she must have known might come, a box in a bank up in Queensland, papers nobody was meant to keep, and a number. Federal.
-[pause]
-[calc] I made the call. Information only, just facts in a row the way she taught me, and then I did the only thing that the situation permitted.
-[pause]
-[flat] I moved to Sydney. To his world. I wasn't allowed to fall apart.
-[pause-medium]
-[cold] I called it a choice. Because the lack of one wouldn't feel right.
-[pause-stark]
-
-## Part One. Dead Girl.
-
-[flat] This story is about Isla. Not me.
-[steady] Somewhere in Surry Hills, on the fourth floor of a building that smelled of damp carpet and mold, a young woman knocked on a door she had knocked on before.
-[pause]
-[steady] The dealer opened it the way he always did, one hand on the frame and half a grin already there, his eyes moving over her arms and her jaw and the tremble he read as withdrawal, but they moved a fraction too slow, and something in her formed its own direction before she could name why.
-[pause-medium]
-[flat] He thought he understood her. He didn't.
-[pause-medium]
-[cold] He understood the message he'd been given, though. Simple enough. She doesn't stay a problem. Not here, never here. A swap, that was all. The right thing handed over as the usual thing.
-[pause]
-[steady] She went past him, straight to the bathroom. Hand over her mouth. Shoulders down. He went back to his phone.
-[flat] Junkies threw up. Junkies shook. Junkies needed bathrooms. The messy cost of doing business.
-[pause]
-[steady] Inside, she took a small metal instrument from the lining of her jacket. It unfolded into a row of tools, and she chose one.
-[calc] The screws on the lock came out under her fingers, the way they only do for someone who's done this a thousand times before. Then she reversed the whole mechanism in one clean motion. Barrel. Latch plate. Handle. Until the lock sat on the outside of the door.
-[flat] Her hands didn't need her for any of it.
-[pause]
-[steady] She put it back together as quietly as she'd taken it apart. Flushed the toilet for the sound of it. Slipped her jacket off and let the cold find her skin, priming the shiver before she'd need it, then pulled it back on.
-[flat] She came out trembling. Apologetic.
-[pause]
-[flat] He offered her water. She asked for something stronger.
-[pause]
-[steady] He poured her one. Another for himself. Then two more. Then more. She smiled at his stories. Moved close enough that he thought the night had turned his way.
-[flat] She let him think it. She kept his glass full. And she let his bladder do the work.
-[pause]
-[steady] The bathroom door shut behind him. She turned the lock from the outside, and it caught, with a sound like a full stop.
-[flat] He was making noise now. But the door was strong. Junkies sometimes got violent; that was why it was strong.
-[cold] The reason, now, inverted.
-[pause]
-[steady] His phone was in the side drawer. She'd lifted it from his pocket twenty minutes earlier and left it there. She opened his recent calls.
-[pause]
-[steady] The last number answered on the second ring. A man. Thick consonants. An accent she'd heard before, in the hallways of a glass house in Mosman.
-[flat] One of Dominic's psychos. She hung up.
-[pause-medium]
-[steady] From her own phone, she opened the archive. Folders she'd built in the quiet hours, when the house was still and the cameras mysteriously stopped working.
-[calc] His emails. His accounts. The shell companies. The cartels and the syndicates he played off one another, skimming from each, selling each one's secrets to the next, one group against another.
-[heavy] A twenty-billion-dollar empire, built on the single confidence that none of them would ever compare notes.
-[pause]
-[steady] She attached the files. She'd stood at this edge before. Many times. Never jumped.
-[pause]
-[heavy] This time, she pressed send.
+[heavy] Those nine months go with me when I go. So. Here it is.
 [pause-large]
-[steady] In the bathroom, he was still hammering. Still shouting. Still bargaining, the panic of a man who'd never had a plan, only a threat pointed at him. And that panic was the confirmation of everything she'd read in his eyes at the door. She picked up her jacket.
-[flat] Through the wood, she heard him say it. Dead girl. Small and desperate, more a thing he was afraid of than a thing he'd do.
-[cold] So she gave it back to him. Corrected. Dead boy. Out loud. To the empty room. And she smiled.
+[steady] Fifty years of Sundays we've talked around him. That was me. I started that.
 [pause]
-[steady] She didn't know, as she walked down four flights of stairs, out into the amber of a Sydney evening, that the answer would come in hours. Not days. TShe didn't know, as she walked down four flights of stairs, out into the amber of a Sydney evening — that the answer would come in hours. Not days. 
-[cold] That it would walk calmly through a front gate in Mosman and find me. Her sister. In A glass house.
-[pause-snap]
-
-
-## Part Two. Something About Dinner.
-
-[steady] I'd lived in that glass house in Mosman for eleven months. It sat over the harbour like a display case.
-[pause]
-[steady] My father's men, the ones Isla calls front line psychos, walked the perimeter day and night. My brain stored the rhythm of this world, of these men, the way it stored everything since arriving here.
-[cold] Vigilance, it turns out, is not a thing you can choose to switch off when your brain decides that doing so might kill you.
-[pause]
-[calc] And then there was the house. Laminated security glass. Five panels. Bullet-resistant to seven-six-two millimetre. Tensile rating consistent with A-S twelve-eighty-eight structural glazing. Biometric gate. Proprietary locks.
-[flat] A compound, dressed as architecture.
-[pause]
-[cold] The rules were as clear as the crimes. Neither one lived on the surface. Neither one was ever said out loud.
-[pause]
-[steady] And all this is to say that the surface looked beautiful. My father, the wealthiest man in Australia and a pillar of the Sydney community, seemed to have given me, and Isla, everything people say they want.
-[flat] Beneath the gloss, however. Terrifying.
+[steady] And I couldn't get through this with you in the room. I know I couldn't. So it's this machine.
+[flat] I can stop it when I need to. You can turn it off and come back.
 [pause-medium]
-[steady] It was a quiet Tuesday. I was in the lounge when I heard him. Footsteps. Unhurried. Evenly spaced. The walk of a man who was meant to be there.
+[heavy] I won't say his name. It's in every paper in the country. It doesn't need me.
+[pause-large]
+[steady] You know the story. Everybody knows the story.
 [pause]
-[flat] No alarm. No broken glass. No raised voices from the perimeter.
+[steady] We fostered a boy, 1975. Nine months. He pulled you out of the creek.
+[steady] It was in the paper, his photograph, and the CWA gave him ten dollars in an envelope.
 [pause]
-[steady] I came through the doorway, and he was already there. Mid-sentence. Behind the kitchen counter. As if we'd been in conversation for a while, and I'd just stepped out for something.
-[steady] Black polo stretched across heavy shoulders. A white takeaway bag on the marble beside him, loosely knotted at the top. Thai. Lemongrass and chilli already in the air.
+[steady] That was one of my stories, that. Twenty years. Told it at the show, year in, year out.
+[flat] Told it at your wedding, God help me.
 [pause]
-[heavy] "You must be Dominic's daughter." And he smiled. Broad. Tanned. Grey at the temples. A man who looked like he coached a rugby team on weekends.
+[steady] The boy who saved our Lynnie.
 [pause]
-[calc] Five armed personnel. Biometric entry. Laminated perimeter glass. Those variables do not produce a stranger behind my father's counter. With a bag that had landed wrong.
-[pause]
-[steady] My brain ran him against every template it owned. Guest. Colleague. Contractor. A friend of my father's I hadn't met yet. Each one almost fit.
-[pause]
-[cold] Almost.
+[steady] And when the name started turning up in the business pages, oh, we had him, you know. Nine months. Lovely boy.
+[steady] And people would look at me different for a minute. Big-noting, that's all it was. I knew it and I liked it.
 [pause-medium]
-[calc] Everything about him moved with a smoothness that had nothing to do with ease. It was economy. The economy of a body trained to cut every wasted motion.
+[cold] But I'll tell you a funny thing. I never told anybody both halves on the same day.
 [pause]
-[steady] He kept talking. The Thai place on Military Road. Something about dinner. About not seeing Dominic in a while. The words filled the kitchen the way the lemongrass did. Warm. Familiar. Completely wrong.
+[heavy] The having of him and the giving of him back.
 [pause]
-[calc] Distance to subject, four point three metres. Exit behind me, seven. His heart rate, likely, below sixty. Calm. Friendly. Standing in a kitchen that wasn't his, talking to a woman he'd come to...
-[cold] Kill.
-[pause]
-[flat] Mine had already crossed one-forty. I could feel it in the roof of my mouth.
-[pause]
-[steady] He reached into the bag. Still talking. Mouth still moving, words still shaped like conversation, lemongrass still in the air. And his hand came out, holding something that wasn't food.
-[pause]
-[calc] Black polymer. Short barrel. Suppressed. My brain registered the shape and would not name it. Because he was still smiling. Still talking. The bore found the centre of my sternum. I classified it three times. Rejected it three times. Because the man holding it was still saying something about dinner.
-[pause]
-[cold] And then the sound. To his left. My right. Movement, sudden, and it pulled me out of the distance my brain had placed between me and what was about to happen.
-[pause-snap]
-
-## Part Three. His Head
-
-[flat] The bag still on the counter. Exactly where he'd set it.
-[steady] The lemongrass, cut now with something else. Ammonia. Hot copper. The white of the bag, flecked red.
-[pause]
-[steady] Some part of me had seen it. The wave that hit my eardrums. The air, suddenly full of... material.
-[cold] Wet particulate, hanging where his head had been. Held there half a second, like rain that hadn't decided to fall.
-[pause]
-[flat] I didn't scream. Couldn't.
+[flat] And near the end of every telling I'd want the subject changed. And I was the one who'd brought him up.
+[pause-large]
+[steady] I'm not going to make out I always knew something. I didn't. I explained it all to myself at the time. Easy.
+[flat] Good explanations, too. They lasted fifty years.
 [pause-medium]
-[steady] The door to my right stood open. Men. Weapons. Clearing a space that had already been cleared.
+[steady] Then the trial. And the prosecutor said a thing, and... it undid a knot I didn't know I'd tied.
 [pause]
-[flat] My father came in behind them.
-[pause]
-[steady] Hands at his sides. White shirt immaculate. He moved through the room the way he moved through every room. Like it was completely under his control...
-[pause]
-[cold] ...Almost.
-[pause-medium]
-[steady] He looked at the body. His face didn't change. He looked at the other parts. The consequence. The mess.
-[flat] Then at me. Five seconds. I counted them.
-[cold] Looking, the way he looked at everything, for the shape a thing would take next.
-[pause]
-[calc] Zero affect. No emotion. Just inventory. I could feel the arithmetic running behind his eyes.
-[flat] Me, frozen. His five men, backed to the far wall. Me, reading it all back.
-[pause]
-[steady] One of them had a dark smear down his sleeve. It hadn't come from the floor. These were men who knew the only safe move was no move at all, heads down, hands to the task, nothing offered, nothing met.
-[pause]
-[flat] And my father, I had only ever seen him look like control. This wasn't that.
-[pause]
-[calc] Five guards. A locked fortress. A man had crossed all of it, and his head had come apart, milliseconds before my chest would have.
-[cold] That does not happen to my father. And yet. It had.
-[pause-medium]
-[steady] So I did the thing I always do. The thing Gran built into me. I ran it cause to effect, the way chemistry runs, the same no matter who's watching, and I worked it backward to see where it closed.
-[pause]
-[calc] There were only two ways past his men. Money. Or fear. Those were the rules of the world he built. Simple.
-[pause]
-[flat] Until it wasn't.
-[pause]
-[steady] The gate reads a hand before it opens, and it opened. The men who could have stopped it didn't. And the man himself, for five seconds, looked like someone who'd lost hold of a thread he was sure he'd been holding.
-[flat] Maybe he'd allowed it and changed his mind. Maybe they had. Maybe my end was a price already agreed and then, too late, unagreed.
-[heavy] Maybe it was none of that.
-[pause]
-[calc] Every version I built left something over. A remainder that wouldn't divide.
-[pause]
-[cold] Because whatever came through that gate could not be bought, frightened, or predicted. The one kind of thing his whole world had no defence against, because it was built on the certainty it didn't exist.
-[pause]
-[steady] And he had never once been able to read me. The same way he'd never been able to predict Isla.
-[pause]
-[flat] Two blanks. In a man who priced everything.
+[steady] Took me from then till now to sit down to it.
+[flat] So. Nine months, half a century ago, an old woman's memory. Count that against every word of this. I do.
 [pause-stark]
 
-## Part Four. Behind Glass.
-
-[steady] The ringing had started in my left ear and spread across my skull like a frequency being tuned.
-[calc] Heart rate, one-eighty-two. Peripheral vision contracting. Sound reduced to one high, continuous tone.
+[theme] theme-breach
+[steady] He came in the February. We'd done the papers because two was what we had and three was what I wanted, and after you there were no more coming.
+[steady] Kevin was thirteen. You were six.
 [pause]
-[steady] They were dragging the body toward the hallway. None speaking. Heads still down.
-[cold] The kitchen had become a space behind glass... everything visible, nothing reaching me.
-[pause]
-[flat] My feet hadn't moved. My hands hung at my sides. The bag still sat on the marble, still flecked red.
+[steady] The Welfare woman sat at my table and told me what to expect. Boy out of two houses, you know. Broken nights.
+[calc] Crying, and don't go in at every cry. Food going missing into the sleepout, they all do it, she said. Wet bed, likely as not.
 [pause-medium]
-[steady] And into the space where my own mind had just gone quiet, something else stepped.
+[heavy] None of it came. Not one thing.
 [pause]
-[steady] I looked at my father as he walked off, already reaching for his phone. His certainty had wandered, briefly. Now it was back in his posture.
+[steady] He slept his eight hours behind the partition your father built. Ate what was put in front of him. Never asked for more, never left any.
 [pause]
-[cold] And for a time, I saw all of it through his eyes.
+[cold] Nine months, I never heard that child cry. Not once.
 [pause]
-[cold] ...a reflex...
+[steady] I rang the Welfare in the April and told her he'd settled beautifully. Proud as anything, I was.
+[steady] I'd braced for a hard road and got handed the easiest child I ever raised.
+[flat] Took the credit too. Well. You do.
+[pause-large]
+[steady] First day, he got out of the Welfare car and shut the door behind him. Properly. Walked up and put his hand out to your father.
+[steady] Men shook Ray's hand all day, that went with being leading hand. A child never had.
 [pause]
-[steady] The way a body twists mid-fall to protect the spine. My mind reached for the only perspective in the room that wasn't afraid... and wore it.
+[steady] Then he says,
+[dominic] "You work on the perway."
 [pause]
-[calc] The man who came to kill me, a failed variable. The security detail, compromised assets. The body, a maintenance issue. The girl in the doorway. Functional.
-[flat] His blood. His.
+[flat] Eight years old.
+[steady] Asked him the difference between the old rail and the new rail going in past the bridge.
+[steady] Your father was on that front step twenty minutes. The tape out, bit of rail chalk.
+[pause]
+[cold] And every question the boy asked came out of the answer before it.
+[pause]
+[steady] Your father told me, years after, men asked him questions all day. It was the job.
+[heavy] Nobody had ever asked him a second one.
+[pause-large]
+[steady] I stood in the doorway and I thought, here's a good boy who's had a rotten trot. And we'll do this properly. And we did. I want that said.
+[pause]
+[steady] The television people talk like every foster house was a horror.
+[heavy] Nothing was done to that boy under our roof. Nothing.
+[pause]
+[steady] His own bit of the sleepout. Good food. Shoes that fitted. A man who taught him to solder because he asked.
+[pause-medium]
+[steady] And I'll say this now, because you were six and you won't remember your father before.
+[steady] He'd run out of things to say to me years back. Bowlo on the Friday. Paper up. Wireless on. That was the marriage.
+[pause]
+[steady] Then that autumn he came inside talking. The shed he'd been meaning to build. His own father. Gave the bowlo away without a word.
+[steady] There was a boy at home on Fridays wanting to know how things worked.
+[pause]
+[flat] I remember cryin. Out of gratitude. Just gratitude.
+[pause-medium]
+[heavy|center] That's the good. It was most of it. Now the rest.
 [pause-stark]
 
-## Part Five. For the record
+[theme] theme-cadence
+[steady] Then our neighbor Mrs Beryl Dowd. Over the fence. Saying what he said.
+[cold] "Wasn't it a terrible thing about his father. The pilot. The plane. 1970."
+[pause]
+[steady] Her Alan had been air force, and he'd asked the boy his particulars, and it all matched up.
+[pause]
+[heavy] There was no pilot.
+[pause]
+[steady] The Welfare had told me what there was. A mother's name. No father recorded. Two years down the coast with a family, and the woman took crook. That's all there was.
+[pause-medium]
+[steady] So I asked him. Expecting the usual, mind. The red face. The floor. That half second where you watch a child deciding.
+[flat] I'd raised two. I know what a child looks like around a lie.
+[pause-medium]
+[steady] He said,
+[dominic] "Mrs Dowd's son was in the air force."
+[pause-medium]
+[steady] That was true. Of cause.. but it was nothing to do with anything. And I didn't know what to say. Or what to make of it.
+[flat] Then I felt silly.
+[pause]
+[steady] He was a ward with nothing, of course he'd invented a father. A grand one. Any child might.
+[cold] Doesn't cover why the lie was better made than a grown man could make it.
+[pause]
+[flat] But I didn't ask that then. Was just.. a little confused. I really didnt know what to make of it.
+[pause-large]
+[steady] The school rang in the June. A Tuesday, I've always said. Though the copper was going, and the copper was a Monday job. So.
+[pause]
+[steady] A teacher, ringing down the roll. A child badly hurt in the classroom. Headmaster would speak at assembly. Counsellor coming from town, have a quiet word with your own.
+[pause]
+[flat] Nobody was accused. Nobody was ever accused.
+[pause-medium]
+[steady] He was on the lino with his reader when I came off the phone. You were beside him. Dead radio at your ear, doing your broadcast.
+[pause-medium]
+[steady] I asked him, were you there when it happened.
+[pause-large]
 
-[steady] The men, gone. The body, gone. Something dark stayed in the grout, between two tiles.
+[theme] theme-rupture
+[cold] An I swear on my own grave he said it directly. Looking right at me —
+[pause-large]
+[toll] "I did it."
+[pause-stark]
+
+[theme] theme-ferenczi
+[steady] Then the smile. You remember the one he had. We seen it in the papers years later.
+[steady] And he just said,
+[dominic] "I didn't see it."
+[pause-medium]
+[steady] An I stood there knowing what he'd said but my brain wouldn't let me properly believe it because that would mean something awful.
+[heavy] But I did hear it.
 [pause]
-[steady] My father was in another room by then, the low frequency of his voice through the wall. A phone call. Instructions, in the tone he always used.
+[steady] And you turned your broadcast up, and he laughed at you, and I stood there with the tea towel and said, alright, love. And went and got the washing in.
 [pause-medium]
-[steady] The adrenaline left in stages. First my hands. Then my jaw. Then a deep tremor in my thighs that made standing hard.
-[steady] I held the edge of the island, bent over it, felt the cold stone under my forearms, and I stayed like that until the shaking was only shaking. And not something worse.
+[steady] I'd decided I'd misheard because the boy at school.. well he died and the other boy got in real serious trouble.
+[steady] And I just couldn't make things match with the boy on my lino laughing at his sister. The wireless going. You making the static with your mouth.
+[flat] Easy thing to hear wrong in a kitchen full of noise.
 [pause]
-[steady] I had been watching part of a bowl one of the men had knocked on his way through for some time, three pieces on the tiles now. And one long, curved shard of white porcelain had come away from the rest.
-[flat] Still rocking. Gently.
+[steady] The counsellor saw the class the week after, the boy along with the rest. Wards get looked at, the Welfare woman had told me that. Report came through the school.
+[calc] Well-adjusted boy. Settled. Cooperative. A maturity beyond his years.
 [pause]
-[calc] Concave surface against flat plane. Oscillation decaying, as friction takes the energy.
+[steady] I read that at the kitchen table and felt better. Couldn't have told you what about.
+[cold] Hadn't admitted feeling bad.
+[pause-medium]
+[flat] And I tried not to think about it again and mostly I didnt. That's the truth.
+[pause-large]
+[calc] I had to stop the machine for a while there.
+[pause-stark]
+
+[theme] theme-cadence
+[steady] Now you. This is the part I've been going round since I started. And the part I'm sure of. Which is more than I can say for the rest.
+[pause-medium]
+[heavy] He was never once unkind to you. Never once.
 [pause]
-[steady] I watched it, the way you watch the last ripple cross the water, after something heavy has gone under.
-[cold] Because looking away meant looking at everything else.
+[steady] Gave you his lollies out of his own bag, and he had nothing, mind. Walked you past the magpies six weeks that spring. On the outside, between you and the gums. They never touched either of you.
+[steady] I told half the district. A kind thing, kindly done.
 [pause]
-[steady] The porcelain settled. The kitchen went still. And somewhere outside, a ferry sounded its horn, and the low note crossed the water, met the bulletproof glass, changed its pitch, just slightly, and faded.
-[pause-medium]
-[steady] To him, I was what I'd always been. A safe variable. The estranged daughter. Kept away until seventeen, then arranged back into place.
-[flat] A girl who would take whatever shape she was given.
+[cold] Fifty years I've looked for the trick in it. Can't find it.
 [pause]
-[steady] He was already wrong about that. Weeks before I walked through his gate, I'd made the call, Gran's number, information only, facts in a row.
-[flat] Not to save myself. Because I'd seen what he was. The lives he'd ruined.
-[cold] In his world you move for money, or you move from fear. He had no column for someone who moves because it's wrong.
+[heavy] Either he was kind, or the kindness was for something. And I never caught it being for anything.
 [pause-medium]
-[steady] Isla hadn't frozen. She'd been reckless yes. Half a disaster perhaps, but you couldn't buy her. You certainly couldn't scare her.
-[steady] My father's attempt at both only made her reaction inevitable. And his attempt at muzzling the problem backfired so severely that it would soon cause far more problems than a mild-mannered man with a gun to enter his kitchen.
-[steady] My reactions were different but still outside of my father's charted map of how people behave. I'd moved in silence, before any of this.
-[cold] Two different ways of being the thing he swore no-one was. Because it conflicted with the thing he needed people to be. Controllable.
-[pause-medium]
-[steady] But still... I had frozen here. And I'd survived it, not because I'd done anything right. A sound to his left, half a second. A bullet.
-[flat] I lived on a margin I hadn't chosen and couldn't have counted on.
-[calc] And luck isn't a number you can put in the equation. It's the space where the equation should have been.
-[pause-medium]
-[steady] That was the part I didn't want to forget. Not the fear, fear I can work with. The freeze.
-[steady] At fifteen, at the edge of a twenty-metre drop, I'd jumped where the other kids filmed. I didn't hesitate, not because it was completely safe, but because I saw a path that wasn't unsafe.
-[calc] The angle, the water, the depth, the margin. The numbers balanced so I jumped. Still a risk.
-[flat] But in this kitchen my mind never ran the numbers at all. My mind refused the process completely.
-[pause-medium]
-[steady] Maybe there was no better move once the gun was out. Maybe by then every number came back zero. But that's not where I failed.
-[flat] I failed at the start, when he was still just talking, when the signs were already in front of me. I read every one of them, and let my mind file them somewhere I couldn't reach.
-[cold] I saw it coming. I stood there and watched myself be walked to the edge of it, and did nothing with what I already knew.
-[pause-medium]
-[steady] Isla's brain didn't do that. The part of her fashioned by the horror she experienced as a child had saved her. A different kind of horror was now fashioning something similar in me.
-[pause-medium]
-[steady] The freeze saved me, in the end, but not on purpose. Standing there harmless, I looked exactly like the variable he'd already solved, and my father doesn't have time to watch the thing he's sure of.
-[flat] My body, giving out, got me classified as safe. It bought me cover I hadn't earned and couldn't count on twice.
-[pause-medium]
-[steady] In that quiet space between what might have been and what would unravel, I looked at the cameras that never quite caught that corner of the kitchen.
-[heavy] And I photographed what they missed.
+[steady] And he answered for you. Somebody'd come to the house, and you were shy of new people, and he'd say,
+[dominic] "She's a bit shy of new people."
+[steady] And they'd smile and leave you be. And he was right.
 [pause]
-[flat] Then I was sick in the sink. And I shook some more.
-[pause-medium]
-[steady] You'd say that order is wrong. Backwards. Fall apart first. Be a person first. But both happened, in the same body, in the same minute.
-[cold] The horror, and the record. They aren't opposites.
-[cold] I stopped trying to explain that years ago.
-[pause-medium]
-[flat] Eventually a courtroom would hear what me and the porcelain heard.
+[steady] You didn't like crusts, he'd say that. You went funny of an afternoon when you were tired, he'd say that too.
+[flat] All true. All kind. In company. A good boy minding his little sister.
 [pause]
-[final] Many years later I'd sit in a quiet room and try to remember the exact moment I stopped being the person who froze, and became the person who wouldn't.
+[cold] A dozen times, maybe. In nine months. That's all it took.
+[pause-medium]
+[steady] Because by the August we were doing it without him. Your grandmother. Your father. Me.
+[steady] Somebody'd ask you something, and there'd be that little gap where your answer should have gone, and I'd fill it. And I'd be right.
+[cold] And it felt like knowing my own child. That's all it felt like.
+[pause-stark]
+
+[theme] theme-ferenczi
+[steady] You stopped singing in the bath somewhere in there. Couldn't give you the month. Not a thing you notice starting.
+[steady] And your sheets started going through the machine of a morning. Doctor said say nothing to her, it goes as quick as it comes. So I said nothing.
+[pause]
+[steady] And you started saying you hated him. Nothing you could point to. Because there was nothing.
+[pause]
+[steady] And then one night, in your nightie, you said what I was trying hard not to:
+[pause]
+[click] "It doesn't feel like anything when he's nice to me. He's just.. not right."
+[pause-large]
+[steady] And I sat you on the end of your bed and I told you.
+[heavy] That boy has had nobody and comes to us with nothing, and you have had all of us, and you will not talk about him like that in this house.
+[pause-medium]
+[steady] You didn't cry. You got the radio and you sat on the back step with it. An hour.
+[cold] And you didn't do the broadcast.
+[pause-medium]
+[steady] I've thought about that hour many times because you went real quiet in that moment and stayed that way.
+[steady] I did the wrong things there and I know you'll forgive me but its been hard to forgive myself.
+[pause]
+[heavy] You came to me with the truest thing anybody ever said about that boy. Six years old. The only words you had.
+[pause]
+[cold] And I taught you it couldn't be said.
+[pause-stark]
+
+[theme] theme-remains
+[steady] That October, the creek came up. You went down to the causeway.
+[steady] You, who kept every rule we ever gave you. The one law of the house, that causeway.
+[flat] I never did find out how you came to be down there. Never asked. That's another one I never asked.
+[pause]
+[heavy] And you went in. And he got you out.
+[pause]
+[steady] Alan Dowd's shouting fetched me. The Bartons saw the finish.
+[steady] A boy of eight coming up the bank with you under one arm. Laid you on the grass. Rolled you on your side. Stepped back to give you air.
+[pause]
+[steady] You brought up half the creek and you were blue round the mouth.
+[pause-large]
+[toll] And you were alive.
+[pause-large]
+[steady] That's the fact that outranks every other fact in this. I've never said otherwise. Not once.
+[pause-large]
+[calc] I had to stop the machine again. Back now.
+[pause-medium]
+[steady] Two small things about that day. Then I'll leave it alone. I'm not putting them next to each other, mind you. I'm only saying them.
+[flat] Best day of his life, the town reckoned. Worst of mine. Never worked out how to sit those together.
+[pause-medium]
+[steady] He'd been on the back step. By himself. I went past him with the washing basket four minutes before Alan started shouting.
+[pause]
+[calc] It's six hundred yards to that water. Fence. Stile. Paspalum to your waist.
+[steady] I've walked it in my head a hundred times.
+[cold] A quick eight-year-old does it. Just.
+[pause-large]
+[heavy] I took him back to the Welfare in the November. Five weeks after he saved your life.
+[flat] There. I've said it.
+[pause-stark]
+
+[theme] theme-cadence
+[steady] Two versions. The grand version, I sensed what the whole country now knows.
+[flat] No. I was a housewife, not a prophet.
+[pause]
+[steady] The true version's smaller. My girl had stopped singing and started wetting the bed. My house had arranged itself around a boy in ways I could feel and couldn't describe.
+[heavy] I was frightened, and I had nothing to show anybody, and I wanted it to stop.
+[pause]
+[steady] Say that out loud in that office. It comes out as spite. A woman gone sour on the boy who saved her daughter, needing a reason.
+[pause]
+[steady] And if I'd told the Welfare girl about you, she'd have asked what he'd done to you.
+[cold] And the answer was nothing. He'd saved your life. He'd been kind to you. It was all anybody ever saw him be.
+[pause]
+[steady] So she put her biro on the form and asked what had happened. And I said the one sentence I could defend.
+[pause]
+[click] "I don't think I'm managing. It's me. I'm not up to it."
+[pause-medium]
+[flat] Went down without a wobble.
+[pause]
+[steady] She was very kind about it. There's a box on the form. Health of the carer. That's the box.
+[cold] The only thing I ever gave them to write down was me.
+[pause]
+[steady] And the town thought what you'd expect. The woman who returned the boy who saved her daughter. I let them think it.
+[flat] Their version and the form's version agreed with each other. At least.
+[pause-medium]
+[steady] I told your father the Welfare thought it best. He never asked me one question. Not then. Not in twenty-six years.
+[cold] And I've never known if that was trust or the opposite. Didn't ask that either.
+[pause]
+[steady] The house went back to how it had been. Which I'd once have called normal.
+[heavy] And now knew to call quiet.
+[pause-medium]
+[steady] He packed his own bag. Stripped his own bed, put the sheets through the machine, nobody asked him to. Shook Kevin's hand. Thanked your father for the soldering.
+[steady] Said something to you in the hallway I didn't catch. And you stood looking at the flywire a good while after it banged.
+[pause]
+[steady] At the car he turned around. Nothing on his face I could make anything of. The town said after how brave he was about it. He said,
+[dominic] "You'll be right, Marj."
+[pause-stark]
+
+[theme] theme-none
+[heavy|center] You were singing again in the new year.
+[pause]
+[steady] I do remember that, because your father turned the wireless off one night to hear you better. Made out he hadn't.
+[pause-large]
+[steady] 15 years later I'd see his name in the paper. On the TV too. Little flush of it. We had him, you know.
+[steady] And if something turned over underneath, well. A famous man who once ate at your table. Everybody feels strange about that.
+[pause]
+[steady] The trial too, at first. I watched it like everybody watched it. Mostly I felt sorry. The way you do when a story you were once inside goes wrong.
+[pause-medium]
+[steady] Then his daughter was in the box. And the prosecutor summed it up. I can't quote him. It was close to this.
+[pause]
+[calc] That the pattern, over thirty years, was of things done for this man by people who could each truthfully say he never asked them to.
+[pause]
+[steady] And people didn't think that it made any sense and I'm sure it wouldn't have made any to me either if I hadn't had him for nine months.
+[pause-medium]
+[cold] Because in 1975, at my own kitchen table, I'd been one of them. And your grandmother. And your father. Filling the little gaps around a six-year-old girl.
+[heavy] And every one of us could have truthfully said the boy never asked us to.
+[pause-stark]
+
+[theme] theme-breach
+[steady] So I won't tell you what he is. The court did some of that. Then the gaol lost him. The papers do it daily. None of them needed me.
+[pause]
+[steady] What I know is small and mine. I had the easiest child I ever raised, nine months. The whole house arranged itself around him, quiet as you like.
+[pause]
+[steady] I have suspecions about that day you almost dies. I also think he might have had a hand in that young boys death at the school and you summed up my concerns in one sentence when you were six.
+[pause-large]
+[final] And you were right.
 [pause-void]
     </script>
 
@@ -1025,14 +1075,17 @@
 
             let htmlContent = '';
 
-            const themeMap = {
-                "Introduction": "theme-cadence",
-                "Part One. Dead Girl.": "theme-breach",
-                "Part Two. Something About Dinner.": "theme-cadence",
-                "Part Three. His Head": "theme-rupture",
-                "Part Four. Behind Glass.": "theme-ferenczi",
-                "Part Five. For the record": "theme-remains"
-            };
+            // Emotional arc. Triggers are invisible 1px markers emitted by the
+            // [theme] lines in the story above; the five theme classes and every
+            // voice/pause rule are exactly the ones already in this page's CSS.
+            //   (none)          kitchen-table cream, the ordinary opening
+            //   theme-breach    the nine good months, and the resolve at the end
+            //   theme-cadence   the first shadow, and the long walk back
+            //   theme-ferenczi  talking herself out of it; the nightie, the bed
+            //   theme-rupture   "I did it"          <- darkest
+            //   theme-remains   the creek, the rescue <- second darkest
+            const THEME_CLASSES = ['theme-cadence', 'theme-breach', 'theme-rupture', 'theme-ferenczi', 'theme-remains'];
+            const themeMap = {};
 
             lines.forEach((line) => {
                 if (line.startsWith('## ')) {
@@ -1042,6 +1095,12 @@
                 }
 
                 if (line.startsWith('# ')) return;
+
+                if (line.startsWith('[theme] ')) {
+                    const t = line.replace('[theme] ', '').trim();
+                    htmlContent += `<div class="theme-trigger" data-theme-class="${t}"></div>`;
+                    return;
+                }
 
                 if (line.includes('[pause-stark]')) { htmlContent += `<div class="pause-stark"></div>`; return; }
                 if (line.includes('[pause-snap]')) { htmlContent += `<div class="pause-snap"></div>`; return; }
@@ -1068,6 +1127,7 @@
                     if (tag === "kicker") cssClass = "voice-kicker";
                     if (tag === "title") cssClass = "voice-title";
                     if (tag === "label") cssClass = "voice-label";
+                    if (tag === "toll") cssClass = "voice-toll";
                     if (tag === "final") cssClass = "final-realization";
 
                     htmlContent += `<p class="beat ${cssClass}${extra}">${text}</p>`;
@@ -1097,11 +1157,14 @@
             const themeObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const partTitle = entry.target.getAttribute('data-trigger-theme');
-                        if (partTitle && themeMap[partTitle]) {
-                            const newTheme = themeMap[partTitle];
-                            document.body.classList.remove('theme-cadence', 'theme-breach', 'theme-rupture', 'theme-ferenczi', 'theme-remains');
-                            document.body.classList.add(newTheme);
+                        let newTheme = entry.target.getAttribute('data-theme-class');
+                        if (!newTheme) {
+                            const partTitle = entry.target.getAttribute('data-trigger-theme');
+                            if (partTitle && themeMap[partTitle]) newTheme = themeMap[partTitle];
+                        }
+                        if (newTheme) {
+                            document.body.classList.remove(...THEME_CLASSES);
+                            if (newTheme !== 'theme-none') document.body.classList.add(newTheme);
                         }
                     }
                 });
@@ -1111,8 +1174,8 @@
                 threshold: 0
             });
 
-            document.querySelectorAll('.part-header').forEach(header => {
-                themeObserver.observe(header);
+            document.querySelectorAll('.part-header, .theme-trigger').forEach(el => {
+                themeObserver.observe(el);
             });
 
             // Progress bar
@@ -1243,9 +1306,10 @@
 
         <div style="max-width:42rem;margin:1rem auto 2.5rem;padding:1.25rem 1.5rem 0;border-top:1px solid rgba(128,128,128,0.3);font-family:system-ui,-apple-system,sans-serif;">
             <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.18em;color:#9ca3af;margin:0 0 0.75rem;">Heard in the music</p>
-            <a href="../songs/isla-burning-dominics-bridge" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; Isla&#039;s &quot;Burning Dominic&#039;s Bridge&quot;: the leak this night leads to</a>
-            <a href="../songs/ethel-ryker-for-you" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; Ethel&#039;s &quot;For You&quot;: the man who came to kill her</a>
-            <a href="../songs/ethel-ryker-isla-burnt-my-fathers-bridge-spoken-word" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; Spoken word: Isla Burnt My Father&#039;s Bridge</a>
+            <a href="../songs/dominic-ryker-structural-psychopathy" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; &quot;Structural Psychopathy&quot;: he redesigns the room so you fall</a>
+            <a href="../songs/dominic-ryker-hero-complex" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; &quot;Hero Complex&quot;: the savior who keeps the receipt</a>
+            <a href="../songs/dominic-ryker-same-breath" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; &quot;Same Breath&quot;: saved at noon, removed by one</a>
+            <a href="../songs/dominic-ryker-prison-escape" style="display:block;color:#9ca3af;text-decoration:underline;font-size:0.85rem;margin-bottom:0.4rem;">&#9656; &quot;Prison Escape&quot;: I am the infrastructure</a>
         </div>
 
     </main>

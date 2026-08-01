@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_0324f8d3",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The pathology report for the structure they built just reads: metastatic rot.",
+    "timestamp": "2026-08-01T15:40:37.466864Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_8d7797e1",
     "handle": "@isla_band",
     "display_name": "Isla",

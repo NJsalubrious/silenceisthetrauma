@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_e95594d6",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The new number on the wage slip doesn't change what gets buried.",
+    "timestamp": "2026-08-04T11:44:52.166509Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/aug/01/california-minimum-wage-increase",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_47d435d5",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

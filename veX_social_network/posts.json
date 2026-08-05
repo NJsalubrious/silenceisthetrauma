@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9b53213f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The pathology report was always a prophecy; I am its shrieking fulfillment.",
+    "timestamp": "2026-08-05T14:01:51.800085Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_f018c199",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

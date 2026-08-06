@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_023b30e3",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "We're not just playing to 40,000 bodies; we're filling the concrete seams until the whole structure screams our name.",
+    "timestamp": "2026-08-06T13:32:28.731279Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_859a2e98",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

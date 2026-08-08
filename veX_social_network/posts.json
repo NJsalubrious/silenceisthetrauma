@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_d3f9898d",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They only remember the ones whose screams still ring in the bone.",
+    "timestamp": "2026-08-08T13:39:46.083977Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/forgotten-1990s-bands-hair-metal-legends/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_711ef971",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

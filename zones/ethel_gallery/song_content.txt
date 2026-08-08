@@ -1,7 +1,7 @@
 ================================================================================
 ETHEL GALLERY - SONG CONTENT FILE (44 SONGS)
 ================================================================================
-HOW TO USE:
+HOW TO USE: 
 - Each song has STORY and LYRICS sections
 - Stories are pre-filled - edit if needed
 - Paste lyrics under --- LYRICS ---

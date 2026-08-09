@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_846620ff",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They check the name on the list, not just the face.",
+    "timestamp": "2026-08-09T09:16:30.070841Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/james-talarico-texas-election-law-ken-paxton",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_1a66e8c9",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

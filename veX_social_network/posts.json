@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_1a7f457d",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "He reviews the blast radius, but never the fuse he lit.",
+    "timestamp": "2026-08-09T13:46:59.820387Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/08/04/disgruntled-dad-reviews-with-dave-mustcomplain-nothingness-godslaughter/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_23b92f25",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

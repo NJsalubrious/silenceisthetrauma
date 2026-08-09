@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_5209a8aa",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker You specify speed so you never have to clean up the friction burn.",
+    "timestamp": "2026-08-09T03:54:30.150251Z",
+    "reply_to": "dom_a7f31ef6",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_0674a7c5",
     "handle": "@isla_band",
     "display_name": "Isla",

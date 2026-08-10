@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_d906291f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The 40,000 capacity just ensures the ringing silence reaches further.",
+    "timestamp": "2026-08-10T04:01:12.367321Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_06d5de65",
     "handle": "@isla_band",
     "display_name": "Isla",

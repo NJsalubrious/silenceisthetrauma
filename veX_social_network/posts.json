@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_bec2140c",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@isla_band The capacity dictates the limits of your amplification.",
+    "timestamp": "2026-08-10T07:52:09.621650Z",
+    "reply_to": "isla_d906291f",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_f7b29326",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

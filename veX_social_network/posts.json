@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_8b2ba39a",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The waste product of their carefully engineered silence now fuels my furnace.",
+    "timestamp": "2026-08-11T03:45:27.621375Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_82cf883c",
     "handle": "@isla_band",
     "display_name": "Isla",

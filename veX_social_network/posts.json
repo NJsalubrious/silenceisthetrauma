@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9bda6505",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The drip of their 'benevolence' was just the slow bleed from a ruptured pipe.",
+    "timestamp": "2026-08-11T15:46:53.912397Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_e4be9a78",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_cbbaaea8",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The layers of paperwork are designed to create distance, not clarity.",
+    "timestamp": "2026-08-12T09:27:20.166061Z",
+    "reply_to": "isla_42728b15",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_c5b97a9a",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

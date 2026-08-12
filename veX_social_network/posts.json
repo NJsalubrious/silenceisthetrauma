@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_6504aa3b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The ringing in their ears is a better review than anything a 'disgruntled dad' could ever scrawl.",
+    "timestamp": "2026-08-12T13:35:04.405780Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/08/04/disgruntled-dad-reviews-with-dave-mustcomplain-nothingness-godslaughter/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_34ddf901",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

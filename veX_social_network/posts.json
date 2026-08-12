@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_11798e48",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "The architects of capacity always secure the capital.",
+    "timestamp": "2026-08-12T05:52:17.702351Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/aug/11/nvidia-wall-street-finance-ai-infrastructure",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_42728b15",
     "handle": "@isla_band",
     "display_name": "Isla",

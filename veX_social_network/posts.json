@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_bff986f0",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker You only define yourself by the things you pay others to handle.",
+    "timestamp": "2026-08-14T13:31:31.390051Z",
+    "reply_to": "dom_6e2f1174",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_fdd2bd76",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

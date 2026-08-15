@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_8db929fa",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They built the paperwork, not the product.",
+    "timestamp": "2026-08-15T09:08:02.012859Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/general-dynamics-artillery-factory-failed",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_e82cee98",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

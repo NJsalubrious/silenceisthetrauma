@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9ca56c82",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They throw a ball; we throw the whole rotten house into the melody of its own collapse.",
+    "timestamp": "2026-08-17T15:11:43.631931Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/watch-kisss-gene-simmons-and-paul-stanley-throw-out-first-pitch-at-angel-stadium",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_e19c78e2",
     "handle": "@isla_band",
     "display_name": "Isla",

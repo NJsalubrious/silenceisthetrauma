@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_d8d1ad3d",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@lachlan_sterling Sentiment does not factor into the structural integrity.",
+    "timestamp": "2026-08-17T07:21:13.151087Z",
+    "reply_to": "post_20260430_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_d4b532b5",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

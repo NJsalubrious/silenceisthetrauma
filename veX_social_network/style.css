@@ -665,3 +665,58 @@ button {
 .intro-text p { font-family: var(--font-sans); font-size: 1rem; color: #ccc; letter-spacing: 2px; text-transform: uppercase; font-weight: 200; }
 .intro-divider { width: 40px; height: 1px; background: var(--gold); margin: 24px auto; opacity: 0.5; }
 .intro-text .intro-small { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; letter-spacing: 1px; }
+
+/* ---- video card. Matches .post-image: same width, same border, same hover
+       lift, but 16:9 because that is what the material is. ---- */
+.post-video {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 16 / 9; margin-bottom: 8px;
+  border: 1px solid var(--border-card); background: #000;
+  overflow: hidden; cursor: pointer;
+  opacity: 0.85; transition: opacity 0.5s;
+}
+.post-card:hover .post-video { opacity: 1; }
+.post-video-thumb {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(60%) contrast(1.05); transition: filter 0.4s, transform 0.8s;
+}
+.post-video:hover .post-video-thumb { filter: grayscale(0%); transform: scale(1.02); }
+.post-video-play {
+  position: absolute; top: 50%; left: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px;
+  border: 1px solid rgba(255,255,255,0.65); border-radius: 50%; background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px); transition: border-color 0.25s, background 0.25s;
+}
+.post-video-play::after {
+  content: ''; position: absolute; top: 50%; left: 53%; transform: translate(-50%,-50%);
+  border-left: 15px solid rgba(255,255,255,0.9);
+  border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+}
+.post-video:hover .post-video-play { border-color: var(--gold); background: rgba(0,0,0,0.65); }
+.post-video:hover .post-video-play::after { border-left-color: var(--gold); }
+.post-video-title {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 10px 7px;
+  font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #d8dce1;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+.post-video.playing { cursor: default; }
+.post-video.playing iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.post-card.is-reply .post-video { aspect-ratio: 16 / 9; }
+.post-video-blocked {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: flex-start; justify-content: center; gap: 9px; padding: 22px 26px;
+  background: #0b0c0e; font-family: var(--font-sans);
+}
+.post-video-blocked .pvb-head { font-size: 0.7rem; letter-spacing: 2.5px; color: #c96a4b; }
+.post-video-blocked .pvb-body { font-size: 0.72rem; line-height: 1.6; color: #8b939d; max-width: 46ch; }
+.post-video-blocked .pvb-link {
+  font-size: 0.7rem; letter-spacing: 1.5px; color: var(--gold);
+  border: 1px solid var(--gold); border-radius: 3px; padding: 4px 10px;
+  text-decoration: none; margin-top: 2px;
+}
+.post-video-blocked .pvb-link:hover { background: var(--gold); color: #0b0c0e; }
+.post-video-blocked .pvb-back {
+  position: absolute; top: 10px; right: 12px; background: none; border: 0;
+  color: #5c646e; font-family: inherit; font-size: 0.68rem; letter-spacing: 1.5px; cursor: pointer;
+}
+.post-video-blocked .pvb-back:hover { color: var(--gold); }

@@ -49,6 +49,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   line-height: 1.6;
   background-image:
@@ -81,12 +82,12 @@ button {
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
 /* ═══ LAYOUT ═══ */
-.app-layout { display: flex; justify-content: center; min-height: 100vh; }
+.app-layout { display: flex; justify-content: center; min-height: 100vh; min-height: 100dvh; }
 
 /* LEFT NAV */
 .nav-column {
   width: var(--nav-width);
-  position: sticky; top: 0; height: 100vh;
+  position: sticky; top: 0; height: 100vh; height: 100dvh;
   display: flex; flex-direction: column;
   padding: 20px;
   border-right: 1px solid var(--border-dim);
@@ -181,7 +182,7 @@ button {
 /* CENTER FEED */
 .feed-column {
   width: 100%; max-width: var(--feed-max);
-  border-right: 1px solid var(--border-dim); min-height: 100vh;
+  border-right: 1px solid var(--border-dim); min-height: 100vh; min-height: 100dvh;
 }
 
 .feed-header {
@@ -207,7 +208,7 @@ button {
 
 /* RIGHT SIDEBAR */
 .sidebar-column {
-  width: var(--sidebar-width); position: sticky; top: 0; height: 100vh;
+  width: var(--sidebar-width); position: sticky; top: 0; height: 100vh; height: 100dvh;
   overflow-y: auto; padding: 20px; flex-shrink: 0;
 }
 
@@ -520,7 +521,7 @@ button {
   display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
   background: rgba(5,5,5,0.95); backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-dim);
-  padding: 8px 0 env(safe-area-inset-bottom, 8px);
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
 }
 .mobile-nav-items { display: flex; justify-content: space-around; list-style: none; }
 .mobile-nav-item {
@@ -618,7 +619,8 @@ button {
   .nav-column { display: none; }
   .mobile-header { display: flex; }
   .mobile-nav { display: block; }
-  .feed-column { max-width: 100%; border-right: none; padding-bottom: 72px; }
+  .feed-column { max-width: 100%; border-right: none;
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
   .post-card { padding: 12px; }
   .post-avatar { width: 36px; height: 36px; }
   .submenu {

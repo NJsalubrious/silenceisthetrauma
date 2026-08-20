@@ -1358,7 +1358,7 @@
   {
     "handle": "@AFP_Macready",
     "display_name": "Det. Inspector Macready",
-    "avatar": "../assets/images/characters/avatars/det_inspector_macready-avatar.png",
+    "avatar": "../assets/images/characters/avatars/det_inspector_macready-avatar.jpg",
     "bio": "AFP Major Crime. Sydney. 28 years on the force. The law is a suggestion someone else wrote.",
     "verified": false,
     "tier": "secondary",
@@ -1398,7 +1398,7 @@
   {
     "handle": "@dr_liz_chem",
     "display_name": "Dr. Elizabeth Vance",
-    "avatar": "../assets/images/characters/avatars/dr_elizabeth_vance-avatar.png",
+    "avatar": "../assets/images/characters/avatars/dr_elizabeth_vance-avatar.jpg",
     "bio": "Forensic Chemist. Independent consultant. Chemistry doesn't lie.",
     "verified": false,
     "tier": "secondary",
@@ -1836,7 +1836,7 @@
     "id": "keep_it_real_bro_podcast",
     "handle": "@keep_it_real_bro_podcast",
     "display_name": "Keep It Real Bro Podcast",
-    "avatar": "../assets/images/characters/avatars/keep_it_real_bro_podcast-avatar.png",
+    "avatar": "../assets/images/characters/avatars/keep_it_real_bro_podcast-avatar.jpg",
     "bio": "",
     "tier": "secondary",
     "verified": false,

@@ -11,6 +11,8 @@ veX_social_network/_AUDIT_*.py
 veX_social_network/_build_preview.py
 veX_social_network/preview.html
 veX_social_network/_LOCAL_PREVIEW.html
+veX_social_network/_LOCAL_SERVE.py
+veX_social_network/PREVIEW THE FEED.bat
 
 # ── Dev artefacts ────────────────────────────────────────────
 CurrentChatLog/

@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_a951d0eb",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@marcus_vane Velocity is determined by structure, not sentiment.",
+    "timestamp": "2026-08-21T05:32:29.605264Z",
+    "reply_to": "post_20260428_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_5f49a4f1",
     "handle": "@isla_band",
     "display_name": "Isla",

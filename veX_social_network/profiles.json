@@ -904,14 +904,14 @@
     "reveal_secret": "Uses financial repossession to intimidate."
   },
   {
-    "id": "arthur_penn",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
-    "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
-    "bio": "Code enforcement. Mobile.",
+    "id": "w_doust_fire",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
+    "avatar": "../assets/images/characters/avatars/w_doust_fire-avatar.jpg",
+    "bio": "Accredited practitioner, fire safety. Annual statements, egress, essential services. Sydney.",
     "tier": "network",
     "verified": false,
-    "links_to": "../people/arthur_penn.html",
+    "links_to": "../people/warren_doust_fire_safety.html",
     "silent": false,
     "memorial": false,
     "follows": [],
@@ -1531,18 +1531,19 @@
     "card_image": "../assets/images/characters/cards/west_syd_local_header.png"
   },
   {
-    "handle": "@sunrise_mgmt",
-    "display_name": "Sunrise Pool Supplies",
+    "handle": "@halden_prop",
+    "display_name": "Halden Property",
     "avatar": "../assets/images/characters/avatars/sunrise-pool-supplies-avatar.jpg",
-    "bio": "Sunrise Pool Supplies. Has anyone seen Spud?",
+    "bio": "Commercial leasing and building management. Sydney.",
     "verified": false,
     "tier": "network",
     "memorial": false,
     "silent": false,
-    "links_to": "../people/spuds_pool_cleaning.html",
+    "links_to": "../people/halden_property.html",
     "quote": "\"We stock the heavy stuff.\"",
-    "reveal_secret": "A front for Spud's chemical supply.",
-    "card_image": "../assets/images/characters/cards/sunrise_mgmt_header.jpg"
+    "reveal_secret": "A small commercial agent nobody looks at. It has been letting Level 6, 40 Ellery Street since September, on a lease paid through December, for a tenant that has stopped attending. It asks the trade what to do about that and gets no answer, and it keeps taking the direct debit.",
+    "card_image": "../assets/images/characters/cards/sunrise_mgmt_header.jpg",
+    "id": "halden_prop"
   },
   {
     "handle": "@prague_backpacker",

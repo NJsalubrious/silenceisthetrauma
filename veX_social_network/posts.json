@@ -1,19 +1,5 @@
 [
   {
-    "id": "dom_a951d0eb",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@marcus_vane Velocity is determined by structure, not sentiment.",
-    "timestamp": "2026-08-21T05:32:29.605264Z",
-    "reply_to": "post_20260428_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_5f49a4f1",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -10992,8 +10978,8 @@
   },
   {
     "id": "sched_w1_062",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "Property inspection complete. Three permit violations documented. One minor. Two significant. The fire exit is not a fire exit if it opens into a wall. Remediation timeline: 14 days.",
     "timestamp": "2026-05-08T20:15:00Z",
@@ -17069,8 +17055,8 @@
   },
   {
     "id": "pv_7b6810c177",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "Third visit to the June address. The door opens now, so I had a look at what is behind it. Storage cage, not on the plan. Fourteen days.\n\nOwner has my mobile if he would rather talk about it before then.",
     "timestamp": "2026-08-21T13:30:00Z",
@@ -19899,8 +19885,8 @@
   },
   {
     "id": "pv_e66778e699",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "First inspection of the day and the fire door to the stair is held open with a wheelie bin full of water. Somebody has thought about it. They have filled it so it is heavy enough not to move.\n\nThe manager said the door slams and the tenants complain. It slams because it is a fire door. Fourteen days.\n\nHe asked who he should get in. I gave him a name.",
     "timestamp": "2026-09-08T07:30:00Z",
@@ -19983,9 +19969,9 @@
   },
   {
     "id": "pv_af35e17703",
-    "handle": "@sunrise_mgmt",
-    "display_name": "Sunrise Pool Supplies",
-    "avatar": "../assets/images/characters/avatars/sunrise-pool-supplies-avatar.jpg",
+    "handle": "@halden_prop",
+    "display_name": "Halden Property",
+    "avatar": null,
     "content": "Question for the trade. We manage a building where a tenant on level six has stopped attending. Lease is paid through December, direct debit is live, and the fire warden training is booked for October in a name nobody answers to. What is the correct notice period when there is nobody to give notice to.",
     "timestamp": "2026-09-19T08:40:00Z",
     "reply_to": null,
@@ -20416,11 +20402,11 @@
     "pinned": false
   },
   {
-    "id": "pv_5d41def2be",
+    "id": "pv_c8df0e3cde",
     "handle": "@jack_shiv",
     "display_name": "Jack 'The Shiv'",
     "avatar": "../assets/images/characters/avatars/jack-shiv-avatar.jpg",
-    "content": "Four hundred messages, six weeks, and the answer is that there is no paper because there was never any paper. I have been wrong about a lot of things but I was right about that one and I take no pleasure in it. Moving on.",
+    "content": "Six weeks. Four hundred messages. I never found the paper and I have stopped looking for it, because the paper was never the story and I let myself be walked onto it.\n\nEleven people have told me they went to Dubai. Not one of the eleven can tell me which of the twelve they know.\n\nSo here is where I am now, and it is the only question I have ever been any good at. Three hundred and forty million dollars came from somewhere. The announcement said an investor we are not naming yet. That was a month ago. I have asked nine times and been given four different reasons why not naming them is normal, and every one of the four came from a different person.\n\nI have been doing this since 1986. Nobody with nothing to hide declines to say who paid.",
     "timestamp": "2026-09-22T09:50:00Z",
     "reply_to": null,
     "link": null,
@@ -20543,8 +20529,8 @@
   },
   {
     "id": "pv_6685c9ae0e",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "Reinspection at the Ellery Street building. Doors compliant, egress clear, extinguishers serviced in August. Passed.\n\nI did not go above four. The sheet says the building and the building is what the sheet says. Nobody there to sign it so I have posted it.",
     "timestamp": "2026-09-23T08:55:00Z",
@@ -21760,8 +21746,8 @@
   },
   {
     "id": "pv_260fa87d4e",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "Fourteen days expired on the storage cage. Attended. Cage is gone, the fire door swings correctly, and there is now a pushbike chained to the handrail in the stair. Fourteen days.\n\nI could do this address all year. Some weeks I think I might.",
     "timestamp": "2026-10-01T12:15:00Z",
@@ -22656,8 +22642,8 @@
   },
   {
     "id": "pv_12187dde82",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "avatar": "../assets/images/characters/avatars/arthur-penn-avatar.jpg",
     "content": "Nine buildings this week. Seven passed on the paperwork, two did not, and the two are the only two whose owners have my number now. Nobody rings you about a pass.",
     "timestamp": "2026-10-07T15:00:00Z",
@@ -24241,7 +24227,7 @@
     "handle": "@isla_band",
     "display_name": "Isla",
     "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "old photo from the tour of my neck.\n\nIt's not a pretty neck up close is it?", 
+    "content": "Four hours yesterday for a photograph of my neck.\n\nI am told it is the cover.",
     "timestamp": "2026-09-03T11:30:00Z",
     "reply_to": null,
     "link": null,
@@ -24438,8 +24424,8 @@
   },
   {
     "id": "pv_f101057ecd",
-    "handle": "@sunrise_mgmt",
-    "display_name": "Sunrise Pool Supplies",
+    "handle": "@halden_prop",
+    "display_name": "Halden Property",
     "content": "AVAILABLE JANUARY. Level 6, 40 Ellery Street. 840sqm, fully fitted, cabled, four meeting rooms, dedicated plant room, secure after-hours access.\n\nExisting tenant has met all obligations. Inspections by appointment.",
     "timestamp": "2026-09-10T08:30:00Z",
     "reply_to": null,
@@ -24447,7 +24433,8 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "avatar": null
   },
   {
     "id": "pv_6bfffd5cd1",
@@ -25011,8 +24998,8 @@
   },
   {
     "id": "pv_5bcd0455cf",
-    "handle": "@arthur_penn",
-    "display_name": "Arthur Penn",
+    "handle": "@w_doust_fire",
+    "display_name": "Warren Doust",
     "content": "Reinspection at the address from June. The storage cage has gone. So has the fire door.\n\nThere is now a wall. Good wall, properly framed and sheeted, not on the plan either.\n\nThey did not use the name I gave them. Fourteen days.",
     "timestamp": "2026-09-14T12:30:00Z",
     "reply_to": null,

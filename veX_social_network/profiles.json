@@ -2069,7 +2069,7 @@
     "handle": "@tellingpractice",
     "display_name": "The Telling Practice",
     "avatar": "../assets/images/characters/avatars/tellingpractice-avatar.jpg",
-    "bio": "Narrative practice. Adelaide. People are the experts of their own lives.",
+    "bio": "Narrative practice, research and a reading list. Adelaide. People are the experts of their own lives.",
     "tier": "secondary",
     "verified": false,
     "links_to": "",
@@ -2077,39 +2077,7 @@
     "memorial": false,
     "follows": [],
     "quote": "",
-    "reveal_secret": "Witness rather than treatment. The closest voice in the world to what the work is arguing, and it is Australian.",
-    "card_image": ""
-  },
-  {
-    "id": "betrayal_lab",
-    "handle": "@betrayal_lab",
-    "display_name": "Institutional Harm Group",
-    "avatar": "../assets/images/characters/avatars/betrayal_lab-avatar.jpg",
-    "bio": "Research. How organisations respond to being told.",
-    "tier": "secondary",
-    "verified": false,
-    "links_to": "",
-    "silent": false,
-    "memorial": false,
-    "follows": [],
-    "quote": "",
-    "reveal_secret": "States the four-move pattern in the abstract, days before the feed demonstrates it. The two posts never refer to each other.",
-    "card_image": ""
-  },
-  {
-    "id": "epistemic_harm",
-    "handle": "@epistemic_harm",
-    "display_name": "On Being Discounted",
-    "avatar": "../assets/images/characters/avatars/epistemic_harm-avatar.jpg",
-    "bio": "Testimonial injustice. Reading list in the replies.",
-    "tier": "secondary",
-    "verified": false,
-    "links_to": "",
-    "silent": false,
-    "memorial": false,
-    "follows": [],
-    "quote": "",
-    "reveal_secret": "The forty-one page file, stated as a concept, by somebody who has never heard of Isla.",
+    "reveal_secret": "Three practitioners and a part-time researcher. Workshops pay for it, there is no grant and no press office. Three strands of output: the method, the open-access papers, and the reading list. It has already published the mechanism of nearly everything that happens in this feed and is read by nobody it would help, and it teaches the one method that would have worked for either sister, eleven hundred kilometres away, without ever having heard of them.",
     "card_image": ""
   },
   {
@@ -2305,10 +2273,10 @@
     "card_image": ""
   },
   {
-    "id": "rob_orl",
-    "handle": "@rob_orl",
+    "id": "rob_dwyer",
+    "handle": "@rob_dwyer",
     "display_name": "Rob",
-    "avatar": "../assets/images/characters/avatars/rob_orl-avatar.jpg",
+    "avatar": "../assets/images/characters/avatars/rob_dwyer-avatar.jpg",
     "bio": "",
     "tier": "peripheral",
     "verified": false,
@@ -2317,7 +2285,7 @@
     "memorial": false,
     "follows": [],
     "quote": "",
-    "reveal_secret": "Nell's brother. Eleven followers, no history, replying to strangers under a tabloid story. He is the second family floor after Maureen and he is the one who carries the trackable phrase into a real person's inbox. He does not know a strata manager two suburbs away has his sister's dog and he must never find out.",
+    "reveal_secret": "Brother of one of the twelve, unnamed. Eleven followers, no history, replying to strangers under a tabloid story. He is the second family floor after Maureen and he is the one who carries the trackable phrase into a real person's inbox.",
     "card_image": ""
   }
 ]

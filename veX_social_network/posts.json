@@ -14106,8 +14106,6 @@
     "avatar": "../assets/images/characters/cards/keep-it-real-bros_serious-discussion.jpg",
     "timestamp": "2026-07-16T19:35:07Z",
     "content": "A high-value man builds. A low-value man complains. Your father built. You complain. The hierarchy sorts itself, Ethel. You're on the wrong tier and you know it.",
-    "image": "../assets/images/posts/podcast_posts_KIRB_ZSM/KIRB_Ethel’s_Failed_Foundation.jpg",
-    "image_alt": "KIRB episode card: Ethel's Failed Foundation",
     "pinned": false
   },
   {
@@ -17352,8 +17350,8 @@
   },
   {
     "id": "pv_03bf4d2b6c",
-    "handle": "@betrayal_lab",
-    "display_name": "Institutional Harm Group",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "The four-move pattern, for anyone who has been through it and does not have a name for it. Deny the event. Attack the person reporting it. Then reverse the two roles so that the reporter is the aggressor and the reported is the injured party. It is not a personality. It is a procedure, and it works because the reversal is faster than the verification.",
     "timestamp": "2026-08-23T09:00:00Z",
@@ -18809,8 +18807,8 @@
   },
   {
     "id": "pv_d40fec3296",
-    "handle": "@epistemic_harm",
-    "display_name": "On Being Discounted",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "Testimonial injustice is when your account is discounted because of who is giving it rather than what is in it. The tell is simple and you can check it yourself. Ask whether the same sentence, from a different person, would have been written down.",
     "timestamp": "2026-08-31T10:30:00Z",
@@ -20482,7 +20480,7 @@
     "timestamp": "2026-09-22T18:20:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/isla_random/isla_abstract_photograpghy_from_islas_past_realism_inner-west_.jpg",
+    "image": "../assets/images/posts/isla_random/isla_abstract_photograpghy_from_islas_past_realism_inner-west__v1.jpg",
     "image_alt": "A wet inner-west street at night, a man waiting alone at a lit tram stop reflected in a puddle.",
     "type": "post",
     "pinned": false
@@ -20632,7 +20630,7 @@
     "handle": "@craig_traynor",
     "display_name": "Craig T.",
     "avatar": null,
-    "content": "Rosie wont sleep in the laundry. She sleeps by the front door. I have moved the bed twice.",
+    "content": "Bess wont sleep in the laundry. She sleeps by the front door. I have moved the bed twice.",
     "timestamp": "2026-09-23T21:45:00Z",
     "reply_to": null,
     "link": null,
@@ -20664,7 +20662,7 @@
     "timestamp": "2026-09-24T01:50:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/russians_military/rusian_mil_weapons (14).jpg",
+    "image": "../assets/images/posts/russians_military/rusian_mil_weapons (2)_0027_Background.jpg",
     "image_alt": "A heavy launch vehicle on dry cracked ground at night, a wall of orange flame filling the frame behind it.",
     "type": "post",
     "pinned": false
@@ -21147,8 +21145,8 @@
   },
   {
     "id": "pv_5b8671e828",
-    "handle": "@epistemic_harm",
-    "display_name": "On Being Discounted",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "The credibility economy has a supply problem nobody discusses. There are always more true accounts than there are people with standing to be believed, and the surplus does not go anywhere. It simply sits there being true.",
     "timestamp": "2026-09-27T15:30:00Z",
@@ -21337,7 +21335,8 @@
     "reply_to": null,
     "link": null,
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "image": "../assets/images/posts/isla_random/isla_droplet_of_water_photo5.jpg"
   },
   {
     "id": "pv_9a8db0e2d8",
@@ -21537,8 +21536,8 @@
   },
   {
     "id": "pv_fb6d4fb0c4",
-    "handle": "@betrayal_lab",
-    "display_name": "Institutional Harm Group",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "New paper, open access. Organisations that respond well to disclosure share one feature and it is not culture, training or leadership. It is that the first person told is not the person the complaint is about, and does not report to them. That is the whole finding. It took four years and two hundred and eleven cases to say something that obvious.",
     "timestamp": "2026-09-30T08:00:00Z",
@@ -22461,8 +22460,8 @@
   },
   {
     "id": "pv_bbca79ee60",
-    "handle": "@epistemic_harm",
-    "display_name": "On Being Discounted",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "A reader asks how to tell whether you are being disbelieved or simply being wrong. Honest answer, you often cannot, and the people who say they always can are the ones I would worry about. The workable test is procedural. Were you asked a question, or were you asked to stop.",
     "timestamp": "2026-10-06T12:00:00Z",
@@ -22576,7 +22575,7 @@
     "handle": "@plainsight_au",
     "display_name": "Plain Sight",
     "avatar": null,
-    "content": "Watching the Ryker daughter for a while now. Not attacking her. Genuinely asking. Nobody is that consistent for free.",
+    "content": "Watching the Ryker daughter for a while now. Not attacking her. Genuinely asking who is behind it, because somebody is. Where there's smoke there's fire.",
     "timestamp": "2026-10-07T07:00:00Z",
     "reply_to": null,
     "link": null,
@@ -22870,7 +22869,7 @@
     "handle": "@jess_vance88",
     "display_name": "Jess Vance",
     "avatar": "../assets/images/characters/avatars/jess-vance-concerned-sister-avatar.jpg",
-    "content": "Seventeen months. I took her jumper out of the bag today to wash it and then put it back in the bag without washing it, which I am aware is not sensible, and I am not going to explain it to anybody.\n\nThey still have the other bag. I have asked about the other bag since May.",
+    "content": "Sixteen and a half months. I took her jumper out of the bag today to wash it and then put it back in the bag without washing it, which I am aware is not sensible, and I am not going to explain it to anybody.\n\nThey still have the other bag. I have asked about the other bag since May.",
     "timestamp": "2026-10-09T09:50:00Z",
     "reply_to": null,
     "link": null,
@@ -23427,8 +23426,8 @@
   },
   {
     "id": "pv_b7aa676dd8",
-    "handle": "@betrayal_lab",
-    "display_name": "Institutional Harm Group",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "avatar": null,
     "content": "Following the paper. The most common institutional response to a disclosure is not denial and not retaliation. It is a referral. The complaint is sent somewhere procedurally correct where nobody has the authority to act on it, and everybody involved can accurately say they took it seriously. In our sample this accounted for more outcomes than denial and retaliation combined.",
     "timestamp": "2026-10-13T10:20:00Z",
@@ -23808,7 +23807,7 @@
     "handle": "@plainsight_au",
     "display_name": "Plain Sight",
     "avatar": null,
-    "content": "Third week of watching the Ryker feed. Council minutes, rosters, annual report appendices, at midnight, every night, for free. I like her. I am just saying what everyone is thinking. Nobody is that consistent for free.",
+    "content": "Third week of watching the Ryker feed. Council minutes, rosters, annual report appendices, at midnight, every night, for free. I like her. I am just saying what everyone is thinking, which is that nobody does that for nothing. Where there's smoke there's fire.",
     "timestamp": "2026-10-16T07:00:00Z",
     "reply_to": "pv_863935a5b3",
     "link": null,
@@ -24008,8 +24007,8 @@
     "timestamp": "2026-10-17T16:00:00Z",
     "reply_to": null,
     "link": null,
-    "image": null,
-    "image_alt": null,
+    "image": "../assets/images/posts/isla_art_show/isla_Show_fractures_faces_01.jpg",
+    "image_alt": "A large fractured-face work hanging in a bright gallery space, the room otherwise empty.",
     "type": "post",
     "pinned": false
   },
@@ -24060,7 +24059,7 @@
     "handle": "@craig_traynor",
     "display_name": "Craig T.",
     "avatar": null,
-    "content": "Six weeks tomorrow. Rosie has started sleeping in the laundry.",
+    "content": "Six weeks tomorrow. Bess has started sleeping in the laundry.",
     "timestamp": "2026-10-18T10:30:00Z",
     "reply_to": null,
     "link": null,
@@ -24646,8 +24645,8 @@
   },
   {
     "id": "pv_84c152f58e",
-    "handle": "@epistemic_harm",
-    "display_name": "On Being Discounted",
+    "handle": "@tellingpractice",
+    "display_name": "The Telling Practice",
     "content": "A test you can run yourself. When somebody's account is dismissed, ask whether it has been replaced with a better account or only with a more comfortable one.\n\nComfort is not evidence. It is only cheaper, and cheaper is usually enough.",
     "timestamp": "2026-09-11T21:30:00Z",
     "reply_to": null,
@@ -24655,7 +24654,8 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "avatar": null
   },
   {
     "id": "pv_5d54ba65a2",
@@ -25075,7 +25075,7 @@
   },
   {
     "id": "pv_4a2fb507cf",
-    "handle": "@rob_orl",
+    "handle": "@rob_dwyer",
     "display_name": "Rob",
     "content": "That's my sister you're all doing jokes about.\n\nShe has never been out of the country except Bali once and she hated it. She would not leave the dog. She would not leave the dog for a weekend.\n\nI know that isn't evidence. It's what I've got.",
     "timestamp": "2026-09-15T08:20:00Z",
@@ -25103,7 +25103,7 @@
     "id": "pv_9ab598384b",
     "handle": "@strata_karen",
     "display_name": "Strata Karen",
-    "content": "Dog's at mine. Tag says Rosie. She's very good, sleeps on the mat, has eaten one of my thongs.\n\nRang the emergency contact on the lease. Interstate number, rang out twice. I'll try again Thursday and then I honestly don't know.",
+    "content": "Dog's at mine. Tag says Olive. She's very good, sleeps on the mat, has eaten one of my thongs.\n\nRang the emergency contact on the lease. Interstate number, rang out twice. I'll try again Thursday and then I honestly don't know.",
     "timestamp": "2026-09-15T11:00:00Z",
     "reply_to": null,
     "link": null,
@@ -25465,7 +25465,7 @@
   },
   {
     "id": "pv_1a9e479fef",
-    "handle": "@rob_orl",
+    "handle": "@rob_dwyer",
     "display_name": "Rob",
     "content": "Someone messaged me to say I should accept that she chose to go and stop bleeding on the doorstep.\n\nI don't know what that means. I've read it four times.\n\nShe's got a mortgage in Marrickville and a lease on a car she loved and she rang me about the car for twenty minutes in July.",
     "timestamp": "2026-09-18T09:00:00Z",
@@ -25660,7 +25660,7 @@
     "timestamp": "2026-10-13T17:30:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/isla_art_show/isla_show_burning_bridges.jpg",
+    "image": "../assets/images/posts/isla_art_show/isla_show_burning_bridges0.jpg",
     "image_alt": "An oil painting of a face dragged and abraded with a palette knife against a lit interior.",
     "type": "post",
     "pinned": false

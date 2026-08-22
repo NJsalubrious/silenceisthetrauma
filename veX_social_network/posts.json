@@ -17124,6 +17124,20 @@
     "pinned": false
   },
   {
+    "id": "isla_657e328b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The air clears, but the ringing in the bones remains.",
+    "timestamp": "2026-08-22T01:32:47.348599Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/why-bonnaroo-canceled-2027/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_cebea1a0",
     "handle": "@isla_band",
     "display_name": "Isla",

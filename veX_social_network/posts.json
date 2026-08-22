@@ -7152,6 +7152,20 @@
     "pinned": false
   },
   {
+    "id": "pv_3d81c9a406",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Hotel desk. Nobody knocked.",
+    "timestamp": "2026-06-16T15:40:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0018_whats on the inside. graphite on paper.jpg",
+    "image_alt": "A graphite drawing on paper of a figure opened up, the interior rendered in dense shading.",
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "isla_cb9dee25",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -11996,6 +12010,20 @@
     "pinned": false
   },
   {
+    "id": "pv_9e24f7b013",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Stuck it to the wall. Worse from three metres. Keeping it.",
+    "timestamp": "2026-07-21T16:10:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0026_me. graphite on some paper stuck to a wall prt 2.jpg",
+    "image_alt": "A large graphite self-portrait on paper taped flat to a wall.",
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "isla_09d76ff9",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -14251,6 +14279,20 @@
     "link": null,
     "image": "../assets/images/posts/russian_militants_posts/russian_militants_posts_024.jpg",
     "image_alt": "Image posted by a Russian militant operative in Dominic Ryker's security network.",
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_71c5b8e2df",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Ink.",
+    "timestamp": "2026-08-04T15:10:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0021_a drop for the fourth ink pen sketch.jpg",
+    "image_alt": "An ink pen sketch of a figure, worked in fine dense linework.",
     "type": "post",
     "pinned": false
   },
@@ -17731,12 +17773,12 @@
     "handle": "@isla_band",
     "display_name": "Isla",
     "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "The size was the problem. It's four times bigger now and it's still wrong.",
+    "content": "Somebody picked it up and asked if it was a cheese board. I said yes.",
     "timestamp": "2026-08-24T18:00:00Z",
     "reply_to": null,
     "link": null,
     "image": "../assets/images/posts/set_B1/Isla_glamour_harrowing_sculptural_form_on_studio_bench1a.jpg",
-    "image_alt": "A large resin form on a studio bench under working light.",
+    "image_alt": "A small clay relief panel of writhing figures and skeletons standing upright on a studio workbench, modelling tools laid out beside it.",
     "type": "post",
     "pinned": false
   },
@@ -19544,6 +19586,20 @@
     "link": null,
     "image": null,
     "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_46f0a3db97",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Graphite. Same table, different month.",
+    "timestamp": "2026-09-04T16:00:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0024_a drop for the fouth 2 graphite on paper.jpg",
+    "image_alt": "A graphite drawing on paper, photographed flat on a work table.",
     "type": "post",
     "pinned": false
   },
@@ -23189,6 +23245,20 @@
     "pinned": false
   },
   {
+    "id": "pv_c8b7514e2a",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Don't look up.",
+    "timestamp": "2026-09-30T08:30:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0000_huge poster of me. middle of sydney's cbd. Don't look up. Drop From the 4th gallery exhibition show coming to sydn.jpg",
+    "image_alt": "A huge exhibition poster of the artist's face on a building in the middle of Sydney's CBD.",
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "pv_8f4c07db4a",
     "handle": "@agent_miller",
     "display_name": "Agent Allie Miller",
@@ -25737,6 +25807,20 @@
     "pinned": false
   },
   {
+    "id": "pv_0a935fc16b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "This one is called Inside. Out. Nobody has asked me which way round.",
+    "timestamp": "2026-10-17T16:20:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0010_inside. Out. ink pen and graphite on paper. gallery.jpg",
+    "image_alt": "An ink pen and graphite work on paper hung on a gallery wall.",
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "pv_9d0e8444de",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -25789,6 +25873,20 @@
     "link": null,
     "image": null,
     "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_bd6e28470f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "I go in the side.",
+    "timestamp": "2026-10-18T09:00:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/isla_art_show/_0003_gallery side entrence..jpg",
+    "image_alt": "The side entrance of the gallery, a plain service door in a brick wall.",
     "type": "post",
     "pinned": false
   },

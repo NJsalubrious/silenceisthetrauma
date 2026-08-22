@@ -41,3 +41,7 @@ backupLarge_avatars/
 .env.local
 *.key
 *.pem
+
+# ── veX image audit working folder (large, local only) ──────
+preview_month1_reference/
+*.psd

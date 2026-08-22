@@ -44,10 +44,7 @@
 
 html { font-size: 14px; -webkit-font-smoothing: antialiased; }
 
-html { overscroll-behavior-y: none; }
-
 body {
-  overscroll-behavior-y: none;
   background-color: var(--void);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -190,9 +187,7 @@ button {
 
 .feed-header {
   position: sticky; top: 0; z-index: 50;
-  /* No backdrop-filter — see .mobile-header. Two stacked sticky blurs over a
-     long feed is what made Firefox Android crawl. */
-  background: rgba(5,5,5,0.97);
+  background: rgba(5,5,5,0.85); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-dim);
 }
 
@@ -510,10 +505,7 @@ button {
 /* ═══ MOBILE ═══ */
 .mobile-header {
   display: none; position: sticky; top: 0; z-index: 60;
-  /* No backdrop-filter: a sticky bar with a blur re-runs a 12px gaussian over
-     the scrolling feed every frame. Firefox Android has no fast path for it and
-     grinds. At 0.97 alpha the blur was not visible anyway. */
-  background: rgba(5,5,5,0.97);
+  background: rgba(5,5,5,0.92); backdrop-filter: blur(12px);
   padding: 40px 16px 12px; border-bottom: 1px solid var(--border-dim);
   align-items: center; justify-content: space-between;
 }
@@ -527,13 +519,9 @@ button {
 
 .mobile-nav {
   display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
-  /* No backdrop-filter here: at 0.97 alpha the blur is invisible, and blurring
-     a full-width bar that moves on scroll re-composites every frame (Firefox
-     Android in particular grinds). Solid is cheaper and looks the same. */
-  background: rgba(5,5,5,0.97);
+  background: rgba(5,5,5,0.95); backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-dim);
   padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
-  backface-visibility: hidden;
 }
 .mobile-nav-items { display: flex; justify-content: space-around; list-style: none; }
 .mobile-nav-item {

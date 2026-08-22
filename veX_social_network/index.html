@@ -922,17 +922,9 @@
       const vv = window.visualViewport;
       if (!nav || !vv) return;
 
-      let applied = 0;      // px of correction currently written to the element
+      let applied = 0;      // px of correction currently written
       let queued = false;
-      let everNeeded = false;
-      let probes = 0;
-
-      function measure() {
-        // rect is in visual-viewport coords once a transform is already applied,
-        // so compare against the visible height and keep the residual.
-        const rect = nav.getBoundingClientRect();
-        return rect.bottom - vv.height;
-      }
+      let corrects = null;  // null = not yet probed, true/false = engine verdict
 
       function write(px) {
         if (Math.abs(px - applied) < 0.5) return;   // no repaint if nothing moved
@@ -940,17 +932,25 @@
         nav.style.transform = px ? 'translate3d(0,' + -px + 'px,0)' : '';
       }
 
+      // ONE layout read, only at startup and on orientation change. Never during
+      // scroll: getBoundingClientRect() forces a synchronous reflow, and this DOM
+      // holds hundreds of post cards.
+      function probe() {
+        write(0);
+        const gap = document.documentElement.clientHeight - (vv.height + vv.offsetTop);
+        if (gap <= 0) return;                       // no chrome overlap to correct
+        const before = nav.getBoundingClientRect().bottom;
+        // Does the engine already place it at the visible bottom by itself?
+        corrects = Math.abs(before - (vv.offsetTop + vv.height)) > 1;
+        if (!corrects) detach();
+      }
+
       function apply() {
         queued = false;
-        const residual = measure();
-        if (Math.abs(residual) < 1) {
-          // Already flush. Give the engine a few chances before deciding it
-          // never needs us, so we don't detach during a transient state.
-          if (!everNeeded && ++probes > 8) detach();
-          return;
-        }
-        everNeeded = true;
-        write(applied + residual);
+        if (corrects === false) return;
+        // Cheap: arithmetic only, no layout read.
+        const gap = document.documentElement.clientHeight - (vv.height + vv.offsetTop);
+        write(gap > 0 ? gap : 0);
       }
 
       function update() {
@@ -959,17 +959,22 @@
         requestAnimationFrame(apply);
       }
 
+      function reprobe() {
+        corrects = null;
+        requestAnimationFrame(function () { probe(); update(); });
+      }
+
       function detach() {
         vv.removeEventListener('resize', update);
         vv.removeEventListener('scroll', update);
-        window.removeEventListener('orientationchange', update);
+        window.removeEventListener('orientationchange', reprobe);
         write(0);
       }
 
       vv.addEventListener('resize', update);
       vv.addEventListener('scroll', update);
-      window.addEventListener('orientationchange', update);
-      update();
+      window.addEventListener('orientationchange', reprobe);
+      reprobe();
     })();
   </script>
 

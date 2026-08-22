@@ -190,7 +190,9 @@ button {
 
 .feed-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(5,5,5,0.85); backdrop-filter: blur(12px);
+  /* No backdrop-filter — see .mobile-header. Two stacked sticky blurs over a
+     long feed is what made Firefox Android crawl. */
+  background: rgba(5,5,5,0.97);
   border-bottom: 1px solid var(--border-dim);
 }
 
@@ -508,7 +510,10 @@ button {
 /* ═══ MOBILE ═══ */
 .mobile-header {
   display: none; position: sticky; top: 0; z-index: 60;
-  background: rgba(5,5,5,0.92); backdrop-filter: blur(12px);
+  /* No backdrop-filter: a sticky bar with a blur re-runs a 12px gaussian over
+     the scrolling feed every frame. Firefox Android has no fast path for it and
+     grinds. At 0.97 alpha the blur was not visible anyway. */
+  background: rgba(5,5,5,0.97);
   padding: 40px 16px 12px; border-bottom: 1px solid var(--border-dim);
   align-items: center; justify-content: space-between;
 }

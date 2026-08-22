@@ -1,19 +1,5 @@
 [
   {
-    "id": "isla_657e328b",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "The air clears, but the ringing in the bones remains.",
-    "timestamp": "2026-08-22T01:32:47.348599Z",
-    "reply_to": null,
-    "link": "https://loudwire.com/why-bonnaroo-canceled-2027/",
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "post_20260501_pin_gran",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -17138,6 +17124,34 @@
     "pinned": false
   },
   {
+    "id": "isla_cebea1a0",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@lachlan_sterling Your poetry of ratios still can’t outrun the blood on the floorboards.",
+    "timestamp": "2026-08-22T03:16:42.018027Z",
+    "reply_to": "post_20260430_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
+    "id": "dom_633a23e5",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@isla_band You did not create the force. You channel it.",
+    "timestamp": "2026-08-22T05:36:56.280156Z",
+    "reply_to": "isla_cebea1a0",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "pv_1a16aa7973",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -22036,10 +22050,10 @@
     "timestamp": "2026-09-23T21:45:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/set_B2/craig_dog_asleep_against_front_doo0.jpg",
-    "image_alt": "A dog asleep on the floor pressed against the inside of a closed front door in a hallway at night.",
+    "image": "../assets/images/posts/set_B2/Bess_dog_sleeps_by_the_front_door._I_have_moved_the.jpg",
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "image_alt": "A dog asleep on floorboards against the inside of a closed front door, an unused dog bed behind her."
   },
   {
     "id": "pv_a7092fc00c",
@@ -24533,11 +24547,11 @@
     "pinned": false
   },
   {
-    "id": "pv_0e783d5bbf",
+    "id": "pv_36cd758b1e",
     "handle": "@isla_band",
     "display_name": "Isla",
     "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "Resin, water, and a tank that took four men to fill.\n\nPeople keep asking me who she is. She is my mother.",
+    "content": "Resin, water, and a tank that took four men to fill.\n\nPeople keep asking me who she is. She was broken and silent.",
     "timestamp": "2026-10-10T16:00:00Z",
     "reply_to": null,
     "link": null,
@@ -25191,6 +25205,20 @@
     "pinned": false
   },
   {
+    "id": "pv_1831f7cab0",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "Revisiting old files. Some things scratch from underneath and I follow them. The reward is the truth. Facts settle me. Fitting in never has.",
+    "timestamp": "2026-10-15T07:10:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/set_B2/trish_eighty_one_pages_bound_printout.jpg",
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "pv_fab847d4d5",
     "handle": "@ross_kinley",
     "display_name": "Ross Kinley",
@@ -25213,10 +25241,10 @@
     "timestamp": "2026-10-15T10:00:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/set_B2/trish_eighty_one_pages_bound_printout.jpg",
-    "image_alt": "A thick bound printout standing on a kitchen bench beside a closed laptop.",
+    "image": "../assets/images/posts/set_B2/Trishs_eighty-one_pages.jpg",
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "image_alt": "A bound printout of eighty one pages squared on a kitchen table beside a pen."
   },
   {
     "id": "pv_0c84eace58",
@@ -25289,16 +25317,30 @@
     "pinned": false
   },
   {
-    "id": "pv_519c2e47f2",
+    "id": "pv_4f3ffa2c91",
     "handle": "@keep_it_real_bro_podcast",
     "display_name": "Keep It Real Bro Podcast",
     "avatar": "../assets/images/characters/avatars/keep_it_real_bro_podcast-avatar.jpg",
-    "content": "Live show soundcheck footage on the channel. Three cameras. Six years ago I did the audio on a laptop with a crack in the screen and my mum's headphones. Look at it.",
+    "content": "Live show soundcheck footage on the channel. Six years ago I did the audio on a laptop with a crack in the screen and my mum's headphones. Look at it.",
     "timestamp": "2026-10-15T19:35:00Z",
     "reply_to": null,
     "link": null,
     "image": "../assets/images/posts/set_B2/KIRB_soundcheck_empty_theatre_three_cameras1.jpg",
     "image_alt": "An empty theatre auditorium seen from the stage during soundcheck, professional lighting rig and camera positions visible.",
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_38a28d8ce6",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "First class to LA and they keep offering me wine. That is a lot of money being paid to torture my sobriety.",
+    "timestamp": "2026-10-15T22:40:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
     "type": "post",
     "pinned": false
   },
@@ -25527,11 +25569,11 @@
     "pinned": false
   },
   {
-    "id": "pv_093356cffe",
+    "id": "pv_4bf8b490ad",
     "handle": "@isla_band",
     "display_name": "Isla",
     "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "Went to the gallery to see it in the space and stood there for forty minutes and then bought a sandwich. That is the whole day and it was a good one.",
+    "content": "Went in before opening. The lights are wrong on the left one. Nobody else will ever notice and I will notice every day for six weeks.",
     "timestamp": "2026-10-17T16:00:00Z",
     "reply_to": null,
     "link": null,
@@ -25605,10 +25647,10 @@
     "timestamp": "2026-10-18T10:30:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/set_B2/craig_dog_asleep_in_laundry_basket.jpg",
-    "image_alt": "A dog curled asleep on a folded towel on a laundry floor beside a washing machine.",
+    "image": "../assets/images/posts/set_B2/Bess_dog_sleeping_in_the_laundry.jpg",
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "image_alt": "A dog curled asleep on a folded towel on a laundry floor beside a washing machine."
   },
   {
     "id": "pv_362e0f20fd",

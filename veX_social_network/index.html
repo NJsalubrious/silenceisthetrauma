@@ -280,7 +280,7 @@
     let profileMap = {};
     let currentTab = 'feed';
     let currentFilter = null;
-    const BATCH_SIZE = 150;
+    const BATCH_SIZE = 40;   // thread groups per paint. 150 put 204 <img> in the DOM at once.
     let displayedThreadCount = 0;
     let cachedThreadGroups = [];
 

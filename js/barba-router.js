@@ -256,6 +256,10 @@
                 // Force hard cuts to specific mini-sites that require their native headers
                 const href = el.getAttribute('href') || '';
                 if (href.includes('ethel_gallery')) return true;
+                // veX has no data-barba container, so a soft swap finds nothing
+                // to replace, the transition never completes, and Barba stays
+                // 'running' -- after which every other link needs a second click.
+                if (href.includes('veX_social_network')) return true;
 
                 return false;
             },

@@ -910,6 +910,31 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeScanner();
     });
+
+    /* Pin the mobile bottom nav to the VISUAL viewport.
+       position:fixed anchors to the layout viewport, so on mobile the bar walks
+       up and down as the browser toolbar collapses and env(safe-area-inset-bottom)
+       flips. Re-anchoring on visualViewport keeps it flush with the visible bottom. */
+    (function pinMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      const vv = window.visualViewport;
+      if (!nav || !vv) return;
+      let queued = false;
+      function apply() {
+        queued = false;
+        const gap = document.documentElement.clientHeight - (vv.height + vv.offsetTop);
+        nav.style.transform = gap > 0 ? 'translate3d(0,' + (-gap) + 'px,0)' : 'translate3d(0,0,0)';
+      }
+      function update() {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(apply);
+      }
+      vv.addEventListener('resize', update);
+      vv.addEventListener('scroll', update);
+      window.addEventListener('orientationchange', update);
+      update();
+    })();
   </script>
 
 </body>

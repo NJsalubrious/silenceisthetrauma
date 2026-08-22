@@ -44,7 +44,10 @@
 
 html { font-size: 14px; -webkit-font-smoothing: antialiased; }
 
+html { overscroll-behavior-y: none; }
+
 body {
+  overscroll-behavior-y: none;
   background-color: var(--void);
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -522,6 +525,10 @@ button {
   background: rgba(5,5,5,0.95); backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-dim);
   padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
+  /* stop iOS rubber-band from detaching the bar mid-scroll */
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 .mobile-nav-items { display: flex; justify-content: space-around; list-style: none; }
 .mobile-nav-item {

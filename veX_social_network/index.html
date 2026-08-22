@@ -35,7 +35,7 @@
   <meta name="twitter:description"
     content="veX is a fictional social network art installation. A character-driven transmedia novel where every account is a character from the Ryker case. Australian noir, structural psychopathy, the social contract of silence, weaponised politeness, Moral Thermodynamics. For readers of literary ARG, Black Mirror style fiction, House of Leaves, and Welcome to Night Vale." />
   <meta name="twitter:image" content="https://silenceisthetrauma.com/veX_social_network/VexSocialnetworkPreview.jpg" />
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <link rel="icon" href="logo/logo_veX_sm.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -281,6 +281,31 @@
     let currentTab = 'feed';
     let currentFilter = null;
     const BATCH_SIZE = 40;   // thread groups per paint. 150 put 204 <img> in the DOM at once.
+
+    /* Opt-in timing readout. Inert unless the URL contains ?perf=1 — normal
+       visitors never execute any of it. Temporary; remove once diagnosed. */
+    const PERF = location.search.indexOf('perf=1') > -1;
+    const _pm = [];
+    function pmark(label) { if (PERF) _pm.push([label, performance.now()]); }
+    function pshow() {
+      if (!PERF || document.getElementById('perfPanel')) return;
+      const imgs = document.querySelectorAll('#feedContent img');
+      let loaded = 0;
+      imgs.forEach(i => { if (i.complete && i.naturalWidth > 0) loaded++; });
+      let rows = '';
+      for (let i = 0; i < _pm.length; i++) {
+        const prev = i ? _pm[i - 1][1] : 0;
+        rows += _pm[i][0] + ': ' + Math.round(_pm[i][1] - prev) + 'ms (at ' + Math.round(_pm[i][1]) + ')<br>';
+      }
+      rows += 'cards: ' + document.querySelectorAll('#feedContent .post-card').length + '<br>';
+      rows += 'imgs in DOM: ' + imgs.length + ' / loaded now: ' + loaded;
+      const d = document.createElement('div');
+      d.id = 'perfPanel';
+      d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#000;color:#0f0;' +
+        'font:11px/1.5 monospace;padding:8px;border-bottom:2px solid #0f0;white-space:normal;';
+      d.innerHTML = rows;
+      document.body.appendChild(d);
+    }
     let displayedThreadCount = 0;
     let cachedThreadGroups = [];
 
@@ -297,11 +322,13 @@
 
     async function init() {
       try {
+        pmark('init start');
         const [postsRes, profilesRes] = await Promise.all([
           fetch('posts.json?v=1.4'), fetch('profiles.json?v=1.4')
         ]);
         allPosts = await postsRes.json();
         allProfiles = await profilesRes.json();
+        pmark('json fetched+parsed');
         allProfiles.forEach(p => { profileMap[p.handle] = p; });
         // If the URL has a #handle hash, applyHashFilter sets the filter and
         // renders. Otherwise it just calls renderFeed() unfiltered.
@@ -485,6 +512,7 @@
     }
 
     function renderFeed() {
+      pmark('renderFeed start');
       const container = document.getElementById('feedContent');
       const now = new Date();
       let posts = allPosts.filter(p => new Date(p.timestamp) <= now);
@@ -589,6 +617,7 @@
         cachedThreadGroups.push('<div class="thread-group">' + renderPostCard(r) + '</div>');
       });
 
+      pmark('thread HTML built (all posts)');
       // Render first batch
       displayedThreadCount = 0;
       container.innerHTML = '';
@@ -607,6 +636,8 @@
       if (oldBtn) oldBtn.remove();
 
       container.insertAdjacentHTML('beforeend', html);
+      pmark('DOM insert done');
+      if (PERF) setTimeout(pshow, 1200);
       displayedThreadCount = end;
 
       // Add Show More button if there are more threads

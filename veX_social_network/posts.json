@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_39cbf566",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker You only build structures to avoid standing in them yourself.",
+    "timestamp": "2026-08-22T15:22:46.831013Z",
+    "reply_to": "dom_6a75f190",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_62df0b83",
     "handle": "@isla_band",
     "display_name": "Isla",

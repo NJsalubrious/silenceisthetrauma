@@ -522,13 +522,13 @@ button {
 
 .mobile-nav {
   display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
-  background: rgba(5,5,5,0.95); backdrop-filter: blur(12px);
+  /* No backdrop-filter here: at 0.97 alpha the blur is invisible, and blurring
+     a full-width bar that moves on scroll re-composites every frame (Firefox
+     Android in particular grinds). Solid is cheaper and looks the same. */
+  background: rgba(5,5,5,0.97);
   border-top: 1px solid var(--border-dim);
   padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
-  /* stop iOS rubber-band from detaching the bar mid-scroll */
-  transform: translate3d(0,0,0);
   backface-visibility: hidden;
-  will-change: transform;
 }
 .mobile-nav-items { display: flex; justify-content: space-around; list-style: none; }
 .mobile-nav-item {

@@ -911,25 +911,61 @@
       if (e.key === 'Escape') closeScanner();
     });
 
-    /* Pin the mobile bottom nav to the VISUAL viewport.
-       position:fixed anchors to the layout viewport, so on mobile the bar walks
-       up and down as the browser toolbar collapses and env(safe-area-inset-bottom)
-       flips. Re-anchoring on visualViewport keeps it flush with the visible bottom. */
+    /* Keep the mobile bottom nav flush with the visible bottom edge.
+       Engines disagree: Chrome anchors position:fixed to the LAYOUT viewport, so
+       the bar walks as the toolbar collapses and needs correcting. Firefox already
+       anchors to the VISUAL viewport, so correcting again pushes it too far up.
+       So: measure the bar's real position once per viewport change and only apply
+       the residual. If an engine needs nothing, this costs nothing and detaches. */
     (function pinMobileNav() {
       const nav = document.getElementById('mobileNav');
       const vv = window.visualViewport;
       if (!nav || !vv) return;
+
+      let applied = 0;      // px of correction currently written to the element
       let queued = false;
+      let everNeeded = false;
+      let probes = 0;
+
+      function measure() {
+        // rect is in visual-viewport coords once a transform is already applied,
+        // so compare against the visible height and keep the residual.
+        const rect = nav.getBoundingClientRect();
+        return rect.bottom - vv.height;
+      }
+
+      function write(px) {
+        if (Math.abs(px - applied) < 0.5) return;   // no repaint if nothing moved
+        applied = px;
+        nav.style.transform = px ? 'translate3d(0,' + -px + 'px,0)' : '';
+      }
+
       function apply() {
         queued = false;
-        const gap = document.documentElement.clientHeight - (vv.height + vv.offsetTop);
-        nav.style.transform = gap > 0 ? 'translate3d(0,' + (-gap) + 'px,0)' : 'translate3d(0,0,0)';
+        const residual = measure();
+        if (Math.abs(residual) < 1) {
+          // Already flush. Give the engine a few chances before deciding it
+          // never needs us, so we don't detach during a transient state.
+          if (!everNeeded && ++probes > 8) detach();
+          return;
+        }
+        everNeeded = true;
+        write(applied + residual);
       }
+
       function update() {
         if (queued) return;
         queued = true;
         requestAnimationFrame(apply);
       }
+
+      function detach() {
+        vv.removeEventListener('resize', update);
+        vv.removeEventListener('scroll', update);
+        window.removeEventListener('orientationchange', update);
+        write(0);
+      }
+
       vv.addEventListener('resize', update);
       vv.addEventListener('scroll', update);
       window.addEventListener('orientationchange', update);

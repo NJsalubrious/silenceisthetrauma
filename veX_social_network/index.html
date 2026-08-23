@@ -399,6 +399,7 @@
       html += '</div>';
 
       if (post.content) html += '<div class="post-content">' + escapeHtml(post.content) + '</div>';
+      if (post.image) html += '<img class="post-image" src="' + post.image + '" alt="' + (post.image_alt || '') + '" loading="lazy" onerror="this.style.display=\'none\'">';
       if (post.video) {
         html += '<div class="post-video" data-yt="' + post.video + '" onclick="vexPlayVideo(this, event)">';
         html += '<img class="post-video-thumb" src="https://i.ytimg.com/vi/' + post.video + '/hqdefault.jpg" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
@@ -406,7 +407,6 @@
         if (post.video_title) html += '<span class="post-video-title">' + escapeHtml(post.video_title) + '</span>';
         html += '</div>';
       }
-      if (post.image) html += '<img class="post-image" src="' + post.image + '" alt="' + (post.image_alt || '') + '" loading="lazy" onerror="this.style.display=\'none\'">';
       /* Audio track. preload="none" so nothing is fetched until the reader
          presses play -- an mp3 is several MB and must never load with the feed. */
       if (post.audio) {

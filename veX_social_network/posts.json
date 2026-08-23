@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_9fce08b4",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The only structure I acknowledge is the ringing silence that swallows 40,000.",
+    "timestamp": "2026-08-23T01:44:35.172104Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_39cbf566",
     "handle": "@isla_band",
     "display_name": "Isla",

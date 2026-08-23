@@ -298,6 +298,11 @@ button {
 }
 .post-card:hover .post-image { opacity: 1; }
 
+.post-audio {
+  width: 100%; display: block; margin-bottom: 8px;
+  border-radius: 4px; outline: none;
+}
+
 .post-link {
   display: inline-block; color: var(--gold); font-size: 0.8rem;
   margin-bottom: 8px; letter-spacing: 0.5px;

@@ -43,10 +43,16 @@ const PIXEL_MANIFEST = {
 
     // 3. GAMES (Structured game data with url, name, thumbnail, fullscreen)
     GAMES: {
+        Isla_Pinball: {
+            url: '/zones/games/Isla_pinball.html',
+            name: "ISLA's Pinball Game",
+            thumb: '/library/silence_games/Isla_pinball_game.jpg',
+            fullscreen: true
+        },
         Blast_Radius: {
             url: '/zones/games/Blast_Radius/',
-            name: "Isla's Invers Slot Machine",
-            thumb: '/library/silence_games/Isla_Slot_Machine_1.jpg',
+            name: "Isla's Inverse Slot Machine",
+            thumb: '/library/silence_games/isla_jokie_game.jpg',
             fullscreen: true
         },
         Dominic_4: {

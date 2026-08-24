@@ -395,7 +395,9 @@
       if (isVerified) html += '<span class="post-verified">&#10003;</span>';
       html += '<span class="post-handle" onclick="filterByHandle(\'' + post.handle + '\')">' + post.handle + '</span>';
       html += '<span class="post-dot">·</span>';
-      html += '<span class="post-time">' + relativeTime(post.timestamp) + '</span>';
+      /* title = the exact timestamp. Anything under 7 days old renders as a
+         relative "2d", so without this there is no way to date a recent post. */
+      html += '<span class="post-time" title="' + escapeHtml(post.timestamp) + '">' + relativeTime(post.timestamp) + '</span>';
       html += '</div>';
 
       if (post.content) html += '<div class="post-content">' + escapeHtml(post.content) + '</div>';

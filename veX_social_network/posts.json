@@ -1,47 +1,5 @@
 [
   {
-    "id": "eth_65eec0e2",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The camera on the loading dock at Port Botany recorded a truck leaving an hour early.",
-    "timestamp": "2026-08-24T11:09:47.880096Z",
-    "reply_to": "dom_de88ddec",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_e84d93bb",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The traffic cameras only show movement, not intent.",
-    "timestamp": "2026-08-24T09:18:48.742935Z",
-    "reply_to": "post_20260429_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_de88ddec",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You think you spotted something. It was meant to be seen.",
-    "timestamp": "2026-08-24T07:42:10.884367Z",
-    "reply_to": "post_20260429_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "post_20260501_pin_gran",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -270,7 +228,7 @@
     "handle": "@ross_kinley",
     "display_name": "Ross Kinley",
     "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Community engagement session went well today. Productive conversations about infrastructure investment. Listening matters.",
+    "content": "Two hours at the Blacktown session tonight and I have four pages of notes, most of it about the same three streets.\n\nNobody there wanted a vision. They wanted to know when the lights go in. Fair enough. I have said I will come back with a date and not a process.",
     "timestamp": "2026-04-30T17:00:00Z",
     "reply_to": null,
     "link": null,
@@ -673,20 +631,6 @@
     "pinned": false
   },
   {
-    "id": "sched_w1_009",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Proud to announce $14M in community infrastructure upgrades for Western Sydney. Roads, bridges, futures. Building tomorrow, today.",
-    "timestamp": "2026-05-05T15:00:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
-  },
-  {
     "id": "sched_w1_010",
     "handle": "@jack_shiv",
     "display_name": "Jack 'The Shiv'",
@@ -881,20 +825,6 @@
     "avatar": "../assets/images/characters/avatars/the-barista-avatar.jpg",
     "content": "Tuesday guy is back. Same order. Same table. But he got a phone call and stepped outside. I could see his reflection in the window. He wasn't happy.",
     "timestamp": "2026-05-06T08:00:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "sched_w1_020",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Productive meeting with the Roads Minister this morning. Infrastructure isn't glamorous, but it's the backbone of every community. More announcements soon.",
-    "timestamp": "2026-05-06T09:30:00Z",
     "reply_to": null,
     "link": null,
     "image": null,
@@ -1261,20 +1191,6 @@
     "pinned": false
   },
   {
-    "id": "sched_w1_039",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Some wonderful community feedback on the Blacktown interchange upgrade. Infrastructure done right means fewer delays and more time with family.",
-    "timestamp": "2026-05-07T12:00:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
-  },
-  {
     "id": "sched_w1_040",
     "handle": "@ash",
     "display_name": "Ash",
@@ -1562,20 +1478,6 @@
     "inner_monologue": "Isla is creating her own chaos, even if it's for a music video. The world tries to contain and define chaos, but even controlled fire leaves a real mark. I'll acknowledge her \"fire\" and the reality of its impact.",
     "link": "",
     "reply_to": "sched_w1_049",
-    "pinned": false
-  },
-  {
-    "id": "sched_w1_054",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Great community turnout at the Penrith town hall this morning. Asked about school zone upgrades and bus shelters. This is what representation looks like.",
-    "timestamp": "2026-05-08T12:00:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
     "pinned": false
   },
   {
@@ -1993,20 +1895,6 @@
     "pinned": false
   },
   {
-    "id": "sched_w1_073",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Infrastructure investment creates jobs, strengthens communities, and builds resilience. We need leaders who understand this. Not critics who obstruct from the sidelines.",
-    "timestamp": "2026-05-09T14:30:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
-  },
-  {
     "id": "isla_611403fc",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -2270,20 +2158,6 @@
     "image_alt": "Floor-level smartphone photograph of a folded A4 sheet just slid under a Sydney apartment door, the words STOP DIGGING in blunt black marker.",
     "type": "post",
     "pinned": true
-  },
-  {
-    "id": "sched_w1_087",
-    "handle": "@ross_kinley",
-    "display_name": "Ross Kinley",
-    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
-    "content": "Critical milestone: the Western Sydney transport corridor study has been approved. This project will transform how communities connect. Proud to lead this initiative.",
-    "timestamp": "2026-05-10T13:30:00Z",
-    "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "post",
-    "pinned": false
   },
   {
     "id": "isla_67e48e1f",
@@ -3801,6 +3675,20 @@
     "inner_monologue": "Dominic, trying to claim my volume as validation for his 'structure'. As if my chaos serves his order. He always tries to claim ownership over everything, even the noise I make. I'll throw his word back at him, but twist it to expose his inherent cowardice and distance. His 'structure' isn't about control; it's about not being present, not getting his hands dirty, not facing anything real. My noise isn't *confirming* his structure; his structure is *confirming* his absence.",
     "link": "",
     "reply_to": "dom_5f27b970",
+    "pinned": false
+  },
+  {
+    "id": "sched_w1_009",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "Fourteen million for the Western Sydney upgrades went through today. Roads, two bridges, the interchange.\n\nI will say the unglamorous part because somebody should. Half of that number is drainage. It will never be opened by anybody, there will be no photograph, and it is the bit that stops a hundred houses going under in a wet March.",
+    "timestamp": "2026-05-21T18:20:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
     "pinned": false
   },
   {
@@ -6448,6 +6336,20 @@
     "image": null,
     "image_alt": null,
     "type": "engine",
+    "pinned": false
+  },
+  {
+    "id": "sched_w1_020",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "With the Roads Minister this morning for fifty minutes, of which about twelve were useful, which is a good ratio.\n\nCame out with a commitment on the interchange and nothing on the bus shelters. I will take one out of two and I will be back about the shelters.",
+    "timestamp": "2026-06-11T09:40:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
     "pinned": false
   },
   {
@@ -9379,6 +9281,20 @@
     "pinned": false
   },
   {
+    "id": "sched_w1_039",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "The Blacktown interchange feedback has come in and a lot of it is people telling me it is still the wrong shape.\n\nThey are not wrong. It was designed in 2019 for traffic counts from 2016. I would rather hear it now than be told about it at an opening.",
+    "timestamp": "2026-07-02T16:15:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "isla_55bc52be",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -11250,6 +11166,20 @@
     "image": null,
     "image_alt": null,
     "type": "engine",
+    "pinned": false
+  },
+  {
+    "id": "sched_w1_054",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "Penrith town hall this morning. Ninety-odd people, and I got asked about school zones and bus shelters again, which is the fourth meeting running.\n\nWhen the same two things come up four times it has stopped being feedback and started being an answer I owe people.",
+    "timestamp": "2026-07-16T13:30:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
     "pinned": false
   },
   {
@@ -13589,6 +13519,20 @@
     "pinned": false
   },
   {
+    "id": "sched_w1_073",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "Somebody put it to me tonight that all this is just jobs for the boys.\n\nIt is jobs. That is not the insult he thought it was. Fourteen million spent here employs people who live here, and the alternative on offer is nothing spent here at all.\n\nHe did not agree with me and he stayed to the end, which I respect more than agreeing.",
+    "timestamp": "2026-07-30T19:00:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "isla_d5f5f5dc",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -15922,6 +15866,20 @@
     "pinned": false
   },
   {
+    "id": "sched_w1_087",
+    "handle": "@ross_kinley",
+    "display_name": "Ross Kinley",
+    "avatar": "../assets/images/characters/avatars/ross-kinley-avatar.jpg",
+    "content": "The Western Sydney transport corridor study has been approved, which after two years means we are now allowed to start finding out how much it costs.\n\nThat is genuinely the milestone. I know how it sounds.",
+    "timestamp": "2026-08-13T11:45:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "isla_d6553f16",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -16860,6 +16818,20 @@
     "pinned": false
   },
   {
+    "id": "dom_de88ddec",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "@isla_band You think you spotted something. It was meant to be seen.",
+    "timestamp": "2026-08-24T07:42:10.884367Z",
+    "reply_to": "post_20260429_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "pv_900cc45acf",
     "handle": "@j_marchetti_psych",
     "display_name": "Dr J. Marchetti",
@@ -16881,6 +16853,20 @@
     "content": "A missing decimal point can sink a ledger.",
     "timestamp": "2026-08-24T09:13:06.668561Z",
     "reply_to": "post_20260428_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
+    "id": "eth_e84d93bb",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The traffic cameras only show movement, not intent.",
+    "timestamp": "2026-08-24T09:18:48.742935Z",
+    "reply_to": "post_20260429_002",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -16923,6 +16909,20 @@
     "content": "The steam always finds the weakest point in the seal.",
     "timestamp": "2026-08-24T11:08:20.648444Z",
     "reply_to": "isla_759b8564",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
+    "id": "eth_65eec0e2",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The camera on the loading dock at Port Botany recorded a truck leaving an hour early.",
+    "timestamp": "2026-08-24T11:09:47.880096Z",
+    "reply_to": "dom_de88ddec",
     "link": null,
     "image": null,
     "image_alt": null,

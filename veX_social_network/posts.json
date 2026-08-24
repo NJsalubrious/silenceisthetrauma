@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_0cadb4d8",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some stop the beat, others become the echo.",
+    "timestamp": "2026-08-24T01:38:13.885337Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/drummer-chris-slade-acdc-david-gilmour-announces-retirement/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_22058782",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -19767,8 +19767,8 @@
     "timestamp": "2026-11-05T18:00:00Z",
     "reply_to": null,
     "link": null,
-    "image": "../assets/images/posts/set_B1/maureen_sunday_phone_on_the_arm.jpg",
-    "image_alt": "A cordless telephone handset resting on the arm of an armchair beside a folded newspaper.",
+    "image": "../assets/images/posts/set_C1/press_circuit_for_everybody.jpg",
+    "image_alt": "A magazine page headlined ORIEL CO-FOUNDER BREAKS SILENCE: THIS IS GOING TO BE FOR EVERYBODY, with a photograph of the co-founder speaking.",
     "type": "post",
     "pinned": false
   },
@@ -20021,6 +20021,20 @@
     "link": null,
     "image": null,
     "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_4e1c7a90b6",
+    "handle": "@jack_shiv",
+    "display_name": "Jack 'The Shiv'",
+    "avatar": "../assets/images/characters/avatars/jack-shiv-avatar.jpg",
+    "content": "This ran this morning. Nobody in it is named. Nobody in it is quoted. \"Multiple people in the industry\" is four words doing the work of a source.\n\nI have been asking the same question for three weeks and I cannot get an answer. They have got an answer and they cannot get a source.\n\nOne of us is doing this wrong and I am no longer certain it is me.",
+    "timestamp": "2026-11-16T10:40:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/set_C1/press_the_brief_dubai.jpg",
+    "image_alt": "A dark-mode article page headlined WHY SYDNEY'S HOTTEST AI STARTUP QUIETLY SENT ITS WHOLE FLOOR TO DUBAI.",
     "type": "post",
     "pinned": false
   },
@@ -22030,6 +22044,20 @@
     "link": null,
     "image": null,
     "image_alt": null,
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_9b30f5c2ad",
+    "handle": "@jack_shiv",
+    "display_name": "Jack 'The Shiv'",
+    "avatar": "../assets/images/characters/avatars/jack-shiv-avatar.jpg",
+    "content": "Ran this today.\n\nFour hundred and six names and not one person will tell me who typed them. I keep treating that as the thing in the way of the story.\n\nIt keeps turning out to be the story.",
+    "timestamp": "2027-01-28T09:15:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/set_C1/press_city_watch_406_names.jpg",
+    "image_alt": "A newspaper column headlined FOUR HUNDRED AND SIX NAMES, AND NOBODY WILL SAY WHOSE LIST IT IS, bylined Jack 'The Shiv' Hennessy.",
     "type": "post",
     "pinned": false
   },
@@ -26311,6 +26339,20 @@
     "link": null,
     "image": "../assets/images/posts/set_B2/stevo_repaired_gate_new_latch0.jpg",
     "image_alt": "A repaired timber gate on a suburban fence with a bright new latch fitted.",
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_c85d19e740",
+    "handle": "@sarah_k",
+    "display_name": "Sarah K",
+    "avatar": "../assets/images/characters/avatars/sarah-k-avatar.jpg",
+    "content": "Somebody else has written it now, which is what I wanted.\n\nA lease, a job ad and a parcel. Seven months and that is still the whole of it.",
+    "timestamp": "2027-06-13T11:20:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/set_C1/press_circuit_the_vacancy.jpg",
+    "image_alt": "A magazine page headlined WHATEVER HAPPENED TO ORIEL?, kicker THE VACANCY, with a photograph of the co-founder.",
     "type": "post",
     "pinned": false
   }

@@ -24755,6 +24755,20 @@
     "pinned": false
   },
   {
+    "id": "pv_8e40b26fa5",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "ORIEL.",
+    "timestamp": "2027-04-17T12:05:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": "../assets/images/posts/ethelsibike_around_sydney/ethel_hornet_outside_ellery_street.jpg",
+    "image_alt": "A motorcycle parked at the kerb outside a building entrance, the tenant board beside the door still listing ORIEL at the top.",
+    "type": "post",
+    "pinned": false
+  },
+  {
     "id": "pv_e3c7b4dbf3",
     "handle": "@after_the_program",
     "display_name": "after the program",
@@ -26481,6 +26495,21 @@
     "type": "post",
     "pinned": false,
     "image_alt": "A woman in her fifties at a kitchen table, mid-sentence, holding handwritten notes, five family photographs laid out facing the camera and a phone recording on the table between two mugs."
+  },
+  {
+    "id": "pv_3f7c1d9e02",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "Sixty-one degrees north. No roads in.\n\nI have been looking at it for an hour.",
+    "timestamp": "2027-06-11T21:30:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false,
+    "video_url": "https://pub-111e813bd5634cd8a9ecdd3d5c2a0916.r2.dev/Ethels_postings/ethel_ryker_google_earth_northern_Sakha.mp4"
   },
   {
     "id": "pv_b8be204758",

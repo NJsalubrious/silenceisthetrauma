@@ -2,6 +2,12 @@
 
 A self-contained, hand-this-to-an-agent guide. Read top to bottom once and a new article or story is on the site in under five minutes.
 
+> **Adding a narrated short story (spoken-word mp3, beat format, per-story colour arc)?**
+> Read `ADD_NARRATED_STORY_AND_STYLE.md` in this folder as well. This file covers the unison shell
+> and the conversion scripts. That one covers the `raw-story` beat tags, the `[theme]` arc markers,
+> how to build a palette that belongs to the story instead of the page it was copied from, three
+> rendering bugs that present as ugly styling, and how to prove the prose was copied word for word.
+
 ---
 
 ## The one-paragraph architecture

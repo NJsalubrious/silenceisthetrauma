@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_180603b0",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Their signatures are just spit on the glass, and my frequency makes them swallow it.",
+    "timestamp": "2026-08-25T13:24:28.660721Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/08/18/disgruntled-dad-reviews-with-dave-mustcomplain-marilyn-manson-review/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_4beb8f31",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -707,7 +707,6 @@
         html += '<div class="profile-handle">' + profile.handle + '</div>';
         if (profile.bio) html += '<div class="profile-bio">' + escapeHtml(profile.silent ? 'Does not post.' : profile.bio) + '</div>';
         html += '</div>';
-        if (!profile.links_to) { html += '<span class="profile-tier ' + profile.tier + '">' + profile.tier + '</span>'; }
         html += '</div>';
       });
       html += '</div>';

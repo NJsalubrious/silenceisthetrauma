@@ -3560,18 +3560,6 @@
     "pinned": false
   },
   {
-    "id": "eth_19f79bd6",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "timestamp": "2026-05-19T10:19:48.423565Z",
-    "content": "The sensor data from the city tunnels is flatlining.",
-    "inner_monologue": "The barista notes a change in routine and a general tension in the CBD. My RTA screens show the city's pulse. A flatline in sensor data from critical infrastructure like tunnels directly reflects a disruption in expected activity and movement, mirroring the quiet unease.",
-    "link": "",
-    "reply_to": "penelope_barista_b5305eab",
-    "pinned": false
-  },
-  {
     "id": "eth_e18b684b",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -3730,18 +3718,6 @@
     "pinned": false
   },
   {
-    "id": "isla_4fefc5d6",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "timestamp": "2026-05-20T16:28:38.729708Z",
-    "content": "@the_barista Floorboards groan before they give, no matter how polished the shoe.",
-    "inner_monologue": "The barista is observing the surface tension. Isla doesn't care about coffee, but she knows the sound of things about to break. The \"shoe drop\" implies an unknown future event, but Isla knows the *process* of collapse. Her world is about smashing structures and knowing the true, visceral sounds before they give way, regardless of how neatly things appear on the surface. \"Men in black suits\" represent the system. They aren't coming because the system itself is groaning. The \"polished shoe\" reflects the facade of the elite, her father, her mother's \"polished vomit.\" I need one line that connects the observed silence/tension to the unseen, inevitable collapse, using visceral imagery.",
-    "link": "",
-    "reply_to": "penelope_barista_b5305eab",
-    "pinned": false
-  },
-  {
     "id": "isla_19973340",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -3776,18 +3752,6 @@
     "content": "A revenant returns; mine never left, it just learned to sing at 140 decibels.",
     "inner_monologue": "Another band, another album, another manufactured \"release.\" They talk of revenants, of things returning. Mine never left; it just changed frequency. They package their ghosts; I am the living haunting, at full volume. My sound isn't for sale, it's an exorcism. No need for a new album when the original wound screams loud enough to shatter glass.",
     "link": "https://www.metalsucks.net/2026/04/27/loathe-reveal-new-album-a-stranger-to-you-single-revenant-streaming-now/",
-    "pinned": false
-  },
-  {
-    "id": "dom_ff4c25ad",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "timestamp": "2026-05-21T06:46:21.505036Z",
-    "content": "@the_barista The shoe drops when the structure requires it.",
-    "inner_monologue": "The barista observes the surface tension, the quiet before the inevitable. They interpret it as waiting, as an external event. They do not understand that the pressure they feel is a deliberate condition, not a prelude to an uncontrolled accident. The \"shoe\" does not fall by chance; it is released when the system I control demands it. Their observation is correct, but their understanding of agency is limited. I will state the underlying truth of that perceived tension.",
-    "link": "",
-    "reply_to": "penelope_barista_b5305eab",
     "pinned": false
   },
   {
@@ -3912,18 +3876,6 @@
     "pinned": false
   },
   {
-    "id": "dom_2ef97110",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "timestamp": "2026-05-22T06:51:46.825439Z",
-    "content": "@the_barista The tension is the structure doing its work.",
-    "inner_monologue": "The barista observes the surface-level anxiety, mistaking the effect for the cause. The tension they feel is not a prelude to an uncontrolled event, but the direct consequence of the system I have put in place, operating exactly as designed. The world does not simply *wait* for things to happen; it *responds* to the forces I exert. This tension is merely the sound of the infrastructure engaging.",
-    "link": "",
-    "reply_to": "penelope_barista_b5305eab",
-    "pinned": false
-  },
-  {
     "id": "eth_08422142",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -3958,18 +3910,6 @@
     "pinned": false
   },
   {
-    "id": "isla_64274098",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "timestamp": "2026-05-22T13:46:27.140560Z",
-    "content": "@dominic_ryker Your 'tension' is just the sound of the real world pushing back against your careful absence.",
-    "inner_monologue": "Dominic, with his endless talk of \"structure\" and \"tension,\" always trying to intellectualize his fear and control. He thinks tension is a sign of his power, of things being held in place. I know it's the groan of something about to snap, the sound of life trying to escape his suffocating grip. He's so far removed from anything real, his \"structure\" is just a padded cell built around himself, and the tension is the outside world pressing in on it. I need to remind him that his \"control\" is nothing but distance, and that distance doesn't mean safety, it just means he's not in the room when it all goes to shit. It needs to be sharp, dismissive, and cut through his bullshit.",
-    "link": "",
-    "reply_to": "dom_2ef97110",
-    "pinned": false
-  },
-  {
     "id": "isla_d9c15188",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -3993,18 +3933,6 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_a389967b",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "timestamp": "2026-05-23T01:37:42.060474Z",
-    "content": "@dominic_ryker Your 'tension' is just the echo of what you refuse to touch.",
-    "inner_monologue": "Dominic's still talking about \"tension\" like it's some controlled variable, like he's not the one creating the fucking pressure by standing so far out of it. He thinks observing the 'structure doing its work' makes him profound. He's just watching the world burn from his glass house, and calling the heat a \"function of the system.\" He never touches anything real, never feels the actual impact. Always at a remove. His 'tension' is just the sound of him avoiding the blast radius. I'll remind him that his 'structure' is just a fancy word for 'hiding'.",
-    "link": "",
-    "reply_to": "dom_2ef97110",
     "pinned": false
   },
   {
@@ -4082,18 +4010,6 @@
     "image": "../assets/images/posts/chloe_missing_sister_looking_related/Police_Search_Vessel_A_lonely_haunting_photo_of__f9973e9e-2227-4bd5-a267-5131040ac506_3.jpg",
     "image_alt": "Police Search Vessel A lonely haunting photo of  f9973e9e-2227-4bd5-a267-5131040",
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "eth_c919eaa3",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "timestamp": "2026-05-23T09:37:11.108450Z",
-    "content": "Just finished a 12-hour shift watching red lights.",
-    "inner_monologue": "The barista is noticing a change in routine and a general tension, a feeling of waiting for something to break. My response should reflect a similar grounded observation of watchful waiting or a subtle disruption in the expected flow, signaling that I also perceive these shifts.",
-    "link": "",
-    "reply_to": "penelope_barista_b5305eab",
     "pinned": false
   },
   {
@@ -4461,40 +4377,12 @@
     "pinned": false
   },
   {
-    "id": "isla_b590b9c4",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The loudest lies are always delivered in the calmest cadence.",
-    "timestamp": "2026-05-27T14:34:11.722047Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "drop3_093",
     "handle": "@keep_it_real_bro_podcast",
     "display_name": "Keep It Real Bro",
     "timestamp": "2026-05-27T16:00:00Z",
     "content": "🚨 EP 255 — 'WHEN A PREMIER LIES TO YOU AND YOU DIDN'T HEAR IT' 🚨 Chad and Dex revisit the Monday interview WITH NEW EYES. They knew. We did not. We are not stupid. We were lied to. This is what real men do — they own when they were played. Subscribe.",
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_a9fd8d91",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some routines are just elaborate ways to swallow bile without tasting it.",
-    "timestamp": "2026-05-27T16:25:42.846398Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -4791,20 +4679,6 @@
     "pinned": false
   },
   {
-    "id": "isla_82808c34",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some silences ring harder than any scream.",
-    "timestamp": "2026-05-29T16:31:52.068487Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_dfd6bf9f",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -4867,20 +4741,6 @@
     "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
     "timestamp": "2026-05-30T09:00:00Z",
     "content": "What we are witnessing in Ethel Ryker is not, and here we must be careful, not malice. It is kataphasis-in-arrest. A daughter frozen at the moment of refusal. She cannot affirm. She cannot deny. She has built a forensic accountancy in the place where a yes should sit. In my forthcoming volume I devote a chapter to this. Section 4, lines 22 through 91. The wound is axiomatic. Forgiveness is not transactional, dear ones. It is metaphysical.",
-    "pinned": false
-  },
-  {
-    "id": "eth_445b30e0",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "Clipboard man is back. Parked poorly.",
-    "timestamp": "2026-05-30T09:40:05.598607Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -5713,20 +5573,6 @@
     "pinned": false
   },
   {
-    "id": "eth_a8779983",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The same car has been idling at the corner for twenty minutes.",
-    "timestamp": "2026-06-04T12:02:18.216575Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "kirb_throwback_4e67ed5a",
     "handle": "@keep_it_real_bro_podcast",
     "display_name": "Keep It Real Bro",
@@ -6292,20 +6138,6 @@
     "pinned": false
   },
   {
-    "id": "isla_d4dfab59",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Silence isn't always a statement; sometimes it's just the sound of someone swallowing bile.",
-    "timestamp": "2026-06-09T14:17:17.576509Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_00288882",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -6507,20 +6339,6 @@
     "pinned": false
   },
   {
-    "id": "dom_c2517556",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista Unchanging patterns reveal the underlying structure.",
-    "timestamp": "2026-06-11T08:35:46.548477Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "sched_w1_020",
     "handle": "@ross_kinley",
     "display_name": "Ross Kinley",
@@ -6619,20 +6437,6 @@
     "pinned": false
   },
   {
-    "id": "isla_3436e4bb",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker Your unchanging patterns always reveal the exit strategy.",
-    "timestamp": "2026-06-12T04:58:52.684817Z",
-    "reply_to": "dom_c2517556",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "dom_23bec3be",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",
@@ -6656,40 +6460,12 @@
     "pinned": false
   },
   {
-    "id": "dom_5a1a7089",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You are still using my patterns as your reference.",
-    "timestamp": "2026-06-12T08:30:38.376636Z",
-    "reply_to": "isla_3436e4bb",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "reeve_003",
     "handle": "@drcosgrovereeve",
     "display_name": "Dr. Cosgrove Wendlebury Reeve",
     "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
     "timestamp": "2026-06-12T09:00:00Z",
     "content": "A defection. A defection. A defection from temperament, from inheritance, from the architectures of duty. Ethel has staged a defection from her father and called it justice. But the father, dear ones, is not the man. The father is the function. And the function has not been replaced. Only voided. We are watching the void perform competence.",
-    "pinned": false
-  },
-  {
-    "id": "eth_09eff5d6",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "Every escape route has a signature on the paperwork.",
-    "timestamp": "2026-06-12T10:33:24.964407Z",
-    "reply_to": "isla_3436e4bb",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -6726,20 +6502,6 @@
     "pinned": false
   },
   {
-    "id": "isla_015d31ac",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of unchanging quiet is just the sound of a life swallowing its own screams.",
-    "timestamp": "2026-06-12T16:22:16.705514Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "trish_halloran_bundle_9154d487",
     "handle": "@trish_halloran",
     "display_name": "Trish Halloran",
@@ -6754,20 +6516,6 @@
     "pinned": false
   },
   {
-    "id": "isla_df7bcdaa",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker They're less of a reference, more of a recurring design flaw.",
-    "timestamp": "2026-06-13T02:07:07.493874Z",
-    "reply_to": "dom_5a1a7089",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_tour_ecebb7af",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -6779,34 +6527,6 @@
     "image": "../assets/images/posts/isla_concert_footage/Another_night_another_arena_startingToLookLike_a_Rammstein_stage_atm_concert_photo.jpg",
     "image_alt": "Heavy stage rigging, scaffolding and pyro racks — a Rammstein-styled arena setup.",
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_799dc6c0",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker Your \"patterns\" were always just the manual for your own undoing.",
-    "timestamp": "2026-06-13T04:55:23.955688Z",
-    "reply_to": "dom_5a1a7089",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_1f297a32",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You are still confirming the patterns you claim to exploit.",
-    "timestamp": "2026-06-13T06:54:56.579652Z",
-    "reply_to": "isla_799dc6c0",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -6859,20 +6579,6 @@
     "content": "The ground report for the new build site shows a different water table than the one on the permit.",
     "timestamp": "2026-06-13T11:39:17.178522Z",
     "reply_to": "dom_ae65d65a",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_66829ec9",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of unchanging quiet often just means the screws are tightening, not loosening.",
-    "timestamp": "2026-06-13T13:35:32.081673Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -7296,90 +7002,6 @@
     "pinned": false
   },
   {
-    "id": "isla_e181b573",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet just lets the bile warm in the throat.",
-    "timestamp": "2026-06-17T04:52:05.619234Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_3ba5c7c0",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band That quiet only reveals what you cannot keep inside.",
-    "timestamp": "2026-06-17T06:58:15.920720Z",
-    "reply_to": "isla_e181b573",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_e845b092",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band Your quiet is just what you cannot contain.",
-    "timestamp": "2026-06-17T09:02:28.054337Z",
-    "reply_to": "isla_e181b573",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_25d34f83",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The quiet doesn't stop the pressure from building behind the concrete.",
-    "timestamp": "2026-06-17T10:35:57.385680Z",
-    "reply_to": "isla_e181b573",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_715bfd29",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The cracks in the pavement always start where the ground was never settled.",
-    "timestamp": "2026-06-17T12:26:53.657967Z",
-    "reply_to": "isla_e181b573",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_8a4aa701",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker Your idea of \"containment\" always required a buffer.",
-    "timestamp": "2026-06-17T14:16:52.840389Z",
-    "reply_to": "dom_e845b092",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_942fa19e",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -7405,48 +7027,6 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_38d17570",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker Your \"containment\" just means you're not in the room when it breaks.",
-    "timestamp": "2026-06-18T02:05:32.490221Z",
-    "reply_to": "dom_e845b092",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_8644b386",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some silences are just wounds that won't feed on air.",
-    "timestamp": "2026-06-18T04:49:08.520311Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_36289f82",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band Broadcasting the wound does not remove it.",
-    "timestamp": "2026-06-18T06:53:17.611347Z",
-    "reply_to": "isla_8644b386",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -7550,20 +7130,6 @@
     "reply_to": "reeve_004",
     "pinned": false,
     "display_name": "Ethel Ryker"
-  },
-  {
-    "id": "isla_ff7cd9c6",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The loudest silences are the ones choking on names never spoken.",
-    "timestamp": "2026-06-19T02:02:48.841121Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
   },
   {
     "id": "isla_e4bf705b",
@@ -8413,20 +7979,6 @@
     "display_name": "Isla"
   },
   {
-    "id": "isla_a8231486",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Silence is just the sound of everyone choking on the names they can't speak.",
-    "timestamp": "2026-06-25T14:00:04.279331Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_f61e0d95",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -8485,20 +8037,6 @@
     "timestamp": "2026-06-25T23:35:07Z",
     "content": "My father's absence stopped being relevant the day he killed Gran. After that he was a problem with a solution. The solution was indictment AFP-2022-441. He is a convicted felon. He is in Prague.",
     "reply_to": "kirb_ed51ed01",
-    "pinned": false
-  },
-  {
-    "id": "isla_0ffc7983",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The 'same silence' just means the rot has found its preferred temperature.",
-    "timestamp": "2026-06-26T02:00:41.099876Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -8565,34 +8103,6 @@
     "content": "The speed of money doesn't change the dirt on the boots.",
     "timestamp": "2026-06-26T10:07:34.319253Z",
     "reply_to": "post_20260428_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_55422bbe",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The same empty lane on the bypass at 3 AM still has a purpose.",
-    "timestamp": "2026-06-26T11:53:45.764029Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_ef8e6ddf",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The 'never changing' is just the sound of the wound feeding on air.",
-    "timestamp": "2026-06-26T13:40:54.696708Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -8740,20 +8250,6 @@
     "pinned": false
   },
   {
-    "id": "eth_6c469477",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "Clipboard man's car is always parked poorly, even on a quiet street.",
-    "timestamp": "2026-06-27T11:33:14.713939Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_78ee6a83",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -8775,20 +8271,6 @@
     "content": "@dominic_ryker The speed of capital is just the metric for your absence.",
     "timestamp": "2026-06-27T15:37:40.980094Z",
     "reply_to": "dom_c8c8a38f",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_32564c8b",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of 'never changing' is just the wound learning to hum its own name.",
-    "timestamp": "2026-06-28T02:00:50.501561Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -8934,20 +8416,6 @@
     "content": "@dominic_ryker You poured it, but you never stood on it.",
     "timestamp": "2026-06-29T04:29:52.358041Z",
     "reply_to": "dom_5707e94c",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_70ba353f",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista Consistency is the result of its structure.",
-    "timestamp": "2026-06-29T06:49:41.280771Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -9127,20 +8595,6 @@
     "timestamp": "2026-06-30T11:35:07Z",
     "content": "Pop was a husband for fifty-one years. He fixed things. Real things. He kept the room standing. Nobody needed to know. Most would have walked past him in a pub. He is also dead. My father killed him.",
     "reply_to": "kirb_eaa4b216",
-    "pinned": false
-  },
-  {
-    "id": "eth_0690c73e",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The same pothole on the M5 keeps reopening.",
-    "timestamp": "2026-06-30T11:53:31.384414Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -9622,20 +9076,6 @@
     "pinned": false
   },
   {
-    "id": "isla_09f77bdd",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet is just the hum of the rot getting comfortable.",
-    "timestamp": "2026-07-03T15:46:08.517987Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_bdf91911",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -9657,20 +9097,6 @@
     "content": "@lachlan_sterling The floor plan's true poetry is the precise angle of a crack that swallows the light.",
     "timestamp": "2026-07-04T04:38:47.079831Z",
     "reply_to": "post_20260430_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_5588a2ed",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista Consistency is a function of the underlying control.",
-    "timestamp": "2026-07-04T06:18:30.022314Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -9886,20 +9312,6 @@
     "content": "@marcus_vane A 'moral position' is usually just the distance from the blood.",
     "timestamp": "2026-07-05T13:52:33.231160Z",
     "reply_to": "post_20260428_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_7f51809e",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some silence just means the wound's still breathing.",
-    "timestamp": "2026-07-05T15:55:15.949952Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -10178,20 +9590,6 @@
     "pinned": false
   },
   {
-    "id": "isla_0b55bf77",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Not changing just means the rot has found its preferred temperature.",
-    "timestamp": "2026-07-08T01:36:06.274823Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_fba820ff",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -10292,20 +9690,6 @@
     "reply_to": "reeve_007",
     "pinned": false,
     "display_name": "Ethel Ryker"
-  },
-  {
-    "id": "isla_a316849d",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet just means the blood has found its preferred current.",
-    "timestamp": "2026-07-08T16:11:17.507791Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
   },
   {
     "id": "isla_tour_918ffdbd",
@@ -11104,40 +10488,12 @@
     "pinned": false
   },
   {
-    "id": "isla_eebebbcd",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Stillness is just how the poison settles before it's swallowed.",
-    "timestamp": "2026-07-14T15:37:39.628824Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "reeve_008",
     "handle": "@drcosgrovereeve",
     "display_name": "Dr. Cosgrove Wendlebury Reeve",
     "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
     "timestamp": "2026-07-14T21:00:00Z",
     "content": "Isla. Isla. I want you to imagine, for a moment, the chamber. The high chamber. The chamber of your lineage, lit by torch and ancestor. I want you to imagine your biological father in that chamber — not the man, the function. And I want you to kneel —",
-    "pinned": false
-  },
-  {
-    "id": "isla_1803ab94",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet just lets the bile settle deeper in the throat.",
-    "timestamp": "2026-07-15T01:37:05.973326Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -11407,20 +10763,6 @@
     "pinned": false
   },
   {
-    "id": "isla_05372215",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some silences just prove the rot knows where it's safe to bloom.",
-    "timestamp": "2026-07-16T15:37:53.440560Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "kirb_49a49508",
     "handle": "@keep_it_real_bro_podcast",
     "display_name": "Dex Vance · KIRB",
@@ -11439,20 +10781,6 @@
     "reply_to": "kirb_49a49508",
     "image": "../assets/images/posts/early_buid_to_dominic_violence/lakemba_kitchen_mother_drawing_taped.jpg",
     "image_alt": "A child's crayon drawing of a red-haired woman labelled MUM, taped at child-height to the fridge door in a Lakemba family kitchen at late afternoon.",
-    "pinned": false
-  },
-  {
-    "id": "isla_3894084b",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That unchanging melody is just the sound of a life choking on its own names.",
-    "timestamp": "2026-07-17T01:47:22.727680Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -11603,20 +10931,6 @@
     "content": "Their architects only perfected the art of making the rot look polished.",
     "timestamp": "2026-07-18T04:26:29.119953Z",
     "reply_to": null,
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_a5746996",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista A fixed pattern only reveals the limits of its movement.",
-    "timestamp": "2026-07-18T06:06:24.832011Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -11925,20 +11239,6 @@
     "pinned": false
   },
   {
-    "id": "eth_e8fb1acf",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "Clipboard Man is back, parked in the same spot.",
-    "timestamp": "2026-07-20T11:56:30.483143Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_bandcamp_796ded0d",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -11950,20 +11250,6 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_eecd194e",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Some silences just hold their breath long enough to grow mold.",
-    "timestamp": "2026-07-20T13:42:28.062220Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -12884,20 +12170,6 @@
     "pinned": false
   },
   {
-    "id": "isla_887d217d",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The quiet things often have the sharpest teeth, just waiting to be fed air.",
-    "timestamp": "2026-07-25T04:04:38.008112Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "dom_42e50e40",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",
@@ -13026,20 +12298,6 @@
     "timestamp": "2026-07-25T23:35:07Z",
     "content": "Rand's book is an alibi for men who need their selfishness to feel like a philosophy. My father had a paperback of it in the kitchen at Mosman. The corner was folded at the speech where Galt explains he owes society nothing. The next day a man tried to kill my sister. That is the book's actual function. It is the ink that gives the cruelty an alibi.",
     "reply_to": "kirb_b4d9d111",
-    "pinned": false
-  },
-  {
-    "id": "isla_e5dbb387",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista Stagnant water still holds the taste of what died in it.",
-    "timestamp": "2026-07-26T01:52:54.970572Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -13299,34 +12557,6 @@
     "display_name": "Ethel Ryker"
   },
   {
-    "id": "isla_7eb5ac1e",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The melody of normality is just the sound of the rot taking its time.",
-    "timestamp": "2026-07-28T04:07:59.609359Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_87152657",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You are still listening to the system I direct.",
-    "timestamp": "2026-07-28T06:04:58.743454Z",
-    "reply_to": "isla_7eb5ac1e",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "ratibor_r_militant_6702b7df",
     "handle": "@ratibor_r",
     "display_name": "Ratibor",
@@ -13472,20 +12702,6 @@
     "pinned": false
   },
   {
-    "id": "dom_e622421c",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista The stillness you perceive is a consequence of the walls.",
-    "timestamp": "2026-07-29T08:05:35.592539Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "eth_5d662d99",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -13535,20 +12751,6 @@
     "content": "@marcus_vane The fastest money still can't outrun the taste of what it did.",
     "timestamp": "2026-07-29T15:47:40.868466Z",
     "reply_to": "post_20260428_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_d2a91460",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker You mistake absence for stillness, as always.",
-    "timestamp": "2026-07-30T01:34:25.299264Z",
-    "reply_to": "dom_e622421c",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -14118,20 +13320,6 @@
     "pinned": false
   },
   {
-    "id": "isla_31c88bf7",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of silence just means the screaming hasn't found its pitch yet.",
-    "timestamp": "2026-08-02T13:40:45.169955Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_b544984b",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -14160,68 +13348,12 @@
     "pinned": false
   },
   {
-    "id": "isla_f48f9df4",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The stillness you describe is just the sound of a wound feeding on air.",
-    "timestamp": "2026-08-03T04:38:27.879250Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_eb55d41f",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You mistake the system's operational silence for a feeding wound.",
-    "timestamp": "2026-08-03T06:10:38.309052Z",
-    "reply_to": "isla_f48f9df4",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_9eaa93e8",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You needed the silence to break against; I gave you that.",
-    "timestamp": "2026-08-03T08:28:52.742733Z",
-    "reply_to": "isla_f48f9df4",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "reeve_011",
     "handle": "@drcosgrovereeve",
     "display_name": "Dr. Cosgrove Wendlebury Reeve",
     "avatar": "../assets/images/characters/avatars/reeve-avatar.jpg",
     "timestamp": "2026-08-03T09:00:00Z",
     "content": "Anamnesis, dear ones. The remembering-into-presence. Ethel's grandmother — a chemist of, I am told, some local repute — lives on through her granddaughter's forensic precision. This is the chain of being. This is what the modern world has lost. The grandmother speaks through the grandchild. I have written about this in section 11 of —",
-    "pinned": false
-  },
-  {
-    "id": "eth_a62fb29c",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The sound of nothing is just the paperwork being filed.",
-    "timestamp": "2026-08-03T10:19:54.473542Z",
-    "reply_to": "isla_f48f9df4",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -14236,20 +13368,6 @@
     "image": "../assets/images/posts/isla_concert_footage/packed_arena_the_stage_is_set_this_time_its_simple.jpg",
     "image_alt": "A stripped-back arena stage configuration, full crowd in evening light.",
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "eth_bccbe568",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The quiet is just the time before the permits expire.",
-    "timestamp": "2026-08-03T12:06:07.827176Z",
-    "reply_to": "dom_9eaa93e8",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -14337,62 +13455,6 @@
     "pinned": false
   },
   {
-    "id": "isla_979e7536",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker You confuse being the fuse with being the fire.",
-    "timestamp": "2026-08-04T04:21:59.243242Z",
-    "reply_to": "dom_9eaa93e8",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_345567df",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band You are the consequence of the structure I built.",
-    "timestamp": "2026-08-04T06:02:55.117693Z",
-    "reply_to": "isla_979e7536",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_579abff7",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band Your fire is a consequence of the pressure I applied.",
-    "timestamp": "2026-08-04T08:00:16.519555Z",
-    "reply_to": "isla_979e7536",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_47d435d5",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The burn marks are always on the floorboards, not the match.",
-    "timestamp": "2026-08-04T09:55:58.340457Z",
-    "reply_to": "isla_979e7536",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "eth_e95594d6",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -14463,34 +13525,6 @@
     "pinned": false
   },
   {
-    "id": "isla_48946d3a",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The melody of normality is just the rustling of buried bones.",
-    "timestamp": "2026-08-04T16:02:18.639959Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_5c80679f",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker You applied pressure; I decided where it fractured.",
-    "timestamp": "2026-08-05T01:40:01.974129Z",
-    "reply_to": "dom_579abff7",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_b1cb43e3",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -14498,20 +13532,6 @@
     "content": "@lachlan_sterling Your poetry measures lines; mine carves them into bone.",
     "timestamp": "2026-08-05T04:26:43.687985Z",
     "reply_to": "post_20260430_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_53a36cab",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista Consistency is a product of control.",
-    "timestamp": "2026-08-05T06:22:36.967349Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -14544,20 +13564,6 @@
     "image": "../assets/images/posts/dominics_the_black_suv_before_first_capture/Shattered_Cafe_A_gritty_hyper-realistic_smartpho_e651e722-6ee2-4c54-97d7-5ad8ecb1396a_2.jpg",
     "image_alt": "Gritty smartphone photo of a shattered café front in Brno with a black SUV visible in the street behind.",
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "eth_ec1d535e",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The same street on the screen, but the oil slick is new.",
-    "timestamp": "2026-08-05T09:55:16.807833Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {
@@ -15739,20 +14745,6 @@
     "pinned": false
   },
   {
-    "id": "isla_563737e6",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The deepest cuts are often made by the blade that never changes its angle.",
-    "timestamp": "2026-08-10T15:31:14.274144Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_82cf883c",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -15992,20 +14984,6 @@
     "pinned": false
   },
   {
-    "id": "isla_37d6a8ef",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The constant is just the hum of whatever they’ve been refusing to spit out.",
-    "timestamp": "2026-08-13T04:08:19.845813Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "dom_b28dcf11",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",
@@ -16027,20 +15005,6 @@
     "content": "@lachlan_sterling Poetry does not impose limits.",
     "timestamp": "2026-08-13T07:43:27.580583Z",
     "reply_to": "post_20260430_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_5180ffad",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The 3 AM traffic count on the Harbour Bridge is always the same, even the empty lanes.",
-    "timestamp": "2026-08-13T09:27:40.152001Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -16076,20 +15040,6 @@
     "pinned": false
   },
   {
-    "id": "isla_d6553f16",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The constant in their silence is the bile they’ve learned to drink.",
-    "timestamp": "2026-08-13T13:53:59.824747Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "isla_e1d91567",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -16118,20 +15068,6 @@
     "pinned": false
   },
   {
-    "id": "isla_d8af8046",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That unbroken routine is just a tourniquet on something that still bleeds.",
-    "timestamp": "2026-08-14T03:53:53.681040Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "dom_6fcb0beb",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",
@@ -16139,118 +15075,6 @@
     "content": "@lachlan_sterling Limits are not poetry.",
     "timestamp": "2026-08-14T05:37:11.322172Z",
     "reply_to": "post_20260430_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_6e2f1174",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@isla_band That routine is a boundary you still define yourself against.",
-    "timestamp": "2026-08-14T07:55:43.989731Z",
-    "reply_to": "isla_d8af8046",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_d6542095",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The customs manifest for the Port of Odessa has a missing signature.",
-    "timestamp": "2026-08-14T09:25:14.959776Z",
-    "reply_to": "dom_6e2f1174",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_fdd2bd76",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "They keep painting over the rust, but the metal still thins.",
-    "timestamp": "2026-08-14T11:17:15.875330Z",
-    "reply_to": "isla_d8af8046",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_bff986f0",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker You only define yourself by the things you pay others to handle.",
-    "timestamp": "2026-08-14T13:31:31.390051Z",
-    "reply_to": "dom_6e2f1174",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_5227c745",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker That routine is just the buffer you put between yourself and consequence.",
-    "timestamp": "2026-08-14T15:23:09.617834Z",
-    "reply_to": "dom_6e2f1174",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_8f5fbfa1",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet just means they've learned to swallow their own noise.",
-    "timestamp": "2026-08-15T01:55:19.741763Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_9f69effb",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@dominic_ryker You call it a boundary; I call it the exact space you need to avoid facing anything yourself.",
-    "timestamp": "2026-08-15T03:27:37.127150Z",
-    "reply_to": "dom_6e2f1174",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "dom_d943b42c",
-    "handle": "@dominic_ryker",
-    "display_name": "Dominic Ryker",
-    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
-    "content": "@the_barista That unchanging routine creates its own leverage.",
-    "timestamp": "2026-08-15T05:22:56.525882Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -16293,20 +15117,6 @@
     "content": "The fastest money still has to pass through a physical border.",
     "timestamp": "2026-08-15T11:05:23.209780Z",
     "reply_to": "post_20260428_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_bb68c4d2",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet is just the sound of a jaw wired shut.",
-    "timestamp": "2026-08-15T13:15:29.180277Z",
-    "reply_to": "post_20260429_003",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -16412,34 +15222,6 @@
     "pinned": false
   },
   {
-    "id": "isla_01a402cf",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista A constant quiet just means something is swallowing bile without making a sound.",
-    "timestamp": "2026-08-16T13:16:30.046849Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_e6fc877a",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of quiet just lets the wounds feed on air.",
-    "timestamp": "2026-08-16T15:16:06.201702Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "pv_a37e50c9d1",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
@@ -16468,20 +15250,6 @@
     "pinned": false
   },
   {
-    "id": "isla_616bdb2e",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista That kind of steady quiet just lets the poison calcify in the veins.",
-    "timestamp": "2026-08-17T03:39:32.429356Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "dom_d4b532b5",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",
@@ -16503,20 +15271,6 @@
     "content": "@lachlan_sterling Sentiment does not factor into the structural integrity.",
     "timestamp": "2026-08-17T07:21:13.151087Z",
     "reply_to": "post_20260430_002",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "eth_4774375c",
-    "handle": "@ethel_ryker",
-    "display_name": "Ethel Ryker",
-    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
-    "content": "The quiet in the room lets the wrong names stay on the deed.",
-    "timestamp": "2026-08-17T09:16:39.243547Z",
-    "reply_to": "isla_616bdb2e",
     "link": null,
     "image": null,
     "image_alt": null,
@@ -17196,20 +15950,6 @@
     "pinned": false
   },
   {
-    "id": "isla_816b7e48",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The quiet is just where the ruin takes root, undisturbed.",
-    "timestamp": "2026-08-24T15:17:18.402916Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
     "id": "pv_59eb68fbb7",
     "handle": "@isla_band",
     "display_name": "Isla",
@@ -17263,34 +16003,6 @@
     "image": null,
     "image_alt": null,
     "type": "post",
-    "pinned": false
-  },
-  {
-    "id": "isla_b852a2c5",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The unchanging silence just lets the bile settle deeper in the gut.",
-    "timestamp": "2026-08-29T01:47:52.161863Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
-    "pinned": false
-  },
-  {
-    "id": "isla_5f49a4f1",
-    "handle": "@isla_band",
-    "display_name": "Isla",
-    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
-    "content": "@the_barista The quiet just means the rot gets to choose its own pace.",
-    "timestamp": "2026-08-29T03:48:46.640864Z",
-    "reply_to": "post_20260429_003",
-    "link": null,
-    "image": null,
-    "image_alt": null,
-    "type": "engine",
     "pinned": false
   },
   {

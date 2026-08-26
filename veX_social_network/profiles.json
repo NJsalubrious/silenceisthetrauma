@@ -1228,22 +1228,6 @@
     "card_image": "../assets/images/characters/cards/aris_thorne-card.jpg"
   },
   {
-    "id": "the_liability",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
-    "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
-    "bio": "Logistics. The warehouse.",
-    "tier": "network",
-    "verified": false,
-    "links_to": "../people/spuds_pool_cleaning.html",
-    "silent": false,
-    "memorial": false,
-    "follows": [],
-    "quote": "\"I didn't touch it!\"",
-    "reveal_secret": "An alias for Spud.",
-    "card_image": "../assets/images/characters/cards/the_liability_header.jpg"
-  },
-  {
     "id": "sarah_lin",
     "handle": "@sarah_lin",
     "display_name": "Sarah Lin",
@@ -1613,7 +1597,7 @@
     "silent": false,
     "memorial": false,
     "follows": [
-      "@the_liability"
+      "@spud"
     ],
     "quote": "\"Professional pool maintenance.\"",
     "reveal_secret": "A front for Spud.",

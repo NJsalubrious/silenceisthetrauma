@@ -41,7 +41,6 @@
     "type": "engine",
     "pinned": false
   },
-
   {
     "id": "isla_1fb04c10",
     "handle": "@isla_band",
@@ -773,7 +772,7 @@
   },
   {
     "id": "sched_w1_007",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Great news. Registered the business with SafeWork NSW. We are now officially Sunrise Pool Supplies Pty Ltd. Inspector comes Tuesday. Should probably move the... equipment.",
@@ -1122,7 +1121,7 @@
   },
   {
     "id": "sched_w1_027",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Boss asked me to clean up the office. I cleaned up the office. Mopped, swept, put the chemicals in the proper storage cabinet. Even labelled them. Now he's angry about the labels. Can't win.",
@@ -1441,7 +1440,7 @@
   },
   {
     "id": "sched_w1_044",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "The SafeWork inspector called to confirm Tuesday. She asked if we have a Material Safety Data Sheet for our chemicals. I said of course. We don't. Does anyone know what a Material Safety Data Sheet is?",
@@ -1758,7 +1757,7 @@
   },
   {
     "id": "sched_w1_061",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Created a Workplace Health and Safety folder on the shared drive. Put all our documents in it. Boss said why is that on the SHARED drive. I said for transparency. He went very quiet.",
@@ -2077,7 +2076,7 @@
   },
   {
     "id": "sched_w1_074",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "SafeWork inspector came today. She was very impressed by the fire blanket. Less impressed by the ventilation system. I said it was under renovation. She said what ventilation system. We are having follow-up discussions.",
@@ -2355,7 +2354,7 @@
   },
   {
     "id": "sched_w1_089",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Follow-up with SafeWork went well. She said we need a Chemical Management Plan. I said absolutely. Does anyone know what a Chemical Management Plan is? Asking for a friend.",
@@ -2690,7 +2689,7 @@
   },
   {
     "id": "the_liability_9a9916bf",
-    "handle": "@the_liability",
+    "handle": "@spud",
     "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Mate, you wouldn't believe it. The table in the breakroom is so warped my iced coffee keeps tipping over. Absolute OH&S hazard. Boss won't fix it. So I took some initiative! Found this chunky old flight log in his office, shoved it under the table leg, and boom—perfectly level. Problem solved. I’m telling ya, I’m a born problem solver. 🧋",
@@ -16611,8 +16610,8 @@
   },
   {
     "id": "pv_44313071aa",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "New job. Warehouse. Got the drums in and put them down the back behind the cartons, which was my idea, because from the aisle you would walk straight past them.\n\nPool chemicals. Bruce says don't put the bay number on here so I won't.",
     "timestamp": "2026-09-08T14:00:00Z",
@@ -19005,8 +19004,8 @@
   },
   {
     "id": "pv_10ce4d6f2c",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "In on a Sunday because Sundays there's nobody about, which is better for the loading.\n\nTurned the labels round to face the wall. That was me. Nobody asked me to do that.\n\nAlso if anyone wants a pool clean I've got Tuesdays free.",
     "timestamp": "2026-11-16T11:15:00Z",
@@ -19832,8 +19831,8 @@
   },
   {
     "id": "pv_81acc62305",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "content": "Old stock's gone out and the new pallets are in the same bay with every label facing the aisle, which is how a normal business does it, so that's how we do it.\n\nI said to Bruce that's clever because nobody looks twice at a thing that isn't hiding. He said stop typing.",
     "timestamp": "2026-12-15T10:40:00Z",
     "reply_to": null,
@@ -19841,7 +19840,8 @@
     "image": null,
     "image_alt": "Fresh shrink-wrapped pallets in a warehouse racking bay, every label turned to face the aisle.",
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg"
   },
   {
     "id": "pv_483d940fc3",
@@ -20696,8 +20696,8 @@
   },
   {
     "id": "pv_9344dba5e0",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "content": "There's a form wants signing to say the bay was inspected on the fourth. I wasn't there on the fourth. I was at my nan's.\n\nBruce says put the fourth. I've put today, because I'm not a liar, and now nobody's happy and the pen is still sitting on the pallet where he left it.",
     "timestamp": "2027-01-14T12:00:00Z",
     "reply_to": null,
@@ -20705,7 +20705,8 @@
     "image": null,
     "image_alt": "An unsigned inspection form resting on a shrink-wrapped pallet with a pen on top of it.",
     "type": "post",
-    "pinned": false
+    "pinned": false,
+    "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg"
   },
   {
     "id": "pv_2355b7c8d6",
@@ -21448,8 +21449,8 @@
   },
   {
     "id": "pv_f4dbdb0865",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Emailed the office about the drums. Full description, batch numbers, the lot, so it's all documented and I'm covered.\n\nGot a thumbs up back. That's the whole reply.\n\nI've printed it and pinned it up on the board, because a thumbs up is basically approval and now I've got approval in writing.",
     "timestamp": "2027-02-07T14:20:00Z",
@@ -23455,8 +23456,8 @@
   },
   {
     "id": "pv_2091b77a37",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Safety bloke came. Looked at the drums. Said they're fine where they are as long as the bunding's in place. There is no bunding. He wrote bunding in place.\n\nI've took a photo of where the bunding isn't, for my records. And people say I'm not organised.",
     "timestamp": "2027-04-07T14:00:00Z",
@@ -24662,8 +24663,8 @@
   },
   {
     "id": "pv_e9f6af093a",
-    "handle": "@the_liability",
-    "display_name": "The Liability",
+    "handle": "@spud",
+    "display_name": "Spud",
     "avatar": "../assets/images/characters/avatars/the-liability-avatar.jpg",
     "content": "Bunding's turned up. Four pallets of it, unannounced, and the safety bloke came back and looked pleased with himself.\n\nI never ordered it. I do the ordering for Bruce and Bruce does the ordering for me. I've had a think about that one and I'm going to leave it. We're compliant now anyway.",
     "timestamp": "2027-05-17T16:45:00Z",

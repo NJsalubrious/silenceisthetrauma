@@ -257,7 +257,7 @@ That is what gives Ethel the brief.
 
 - **Sarah K** (`@sarah_k`) — Investigative journalist, Sydney. Broke the *Vltavské Noviny* front-page sighting.
 - **Mara Quinn** (`@mara_quinn`) — Senior journalist. Splits between *The Public Record* and *Southern Objective*. Filed the certifier deposition (*The Public Record*) and the *Freight Forwarders Who Weren't There* (*Southern Objective*).
-- **Kate Jennings** (`@kate_jennings`) — Journalist at *The Public Record*. Author of *The Balcony That Fell: Apex Holdings, A Widow, and the Paper Trail Nobody Wanted*.
+- **Kate Hallings** (`@kate_hallings`) — Journalist at *The Public Record*. Author of *The Balcony That Fell: Apex Holdings, A Widow, and the Paper Trail Nobody Wanted*.
 - **Jack 'The Shiv' Hennessy** (`@jack_shiv`) — Veteran Sydney muckraker. Long memory. Tier 4 Resistance.
 - **Elena Rostova** (`@frontline_journo`) — Field journalist covering the Czech end (riots, Pankrác assault, airport).
 
@@ -314,7 +314,7 @@ All fictional or fictionalised.
 - **Long Bay** — NSW maximum-security prison. Dominic's incarceration 2020 – Feb 2024.
 - **The Force Not Therapy tour** — Isla's 2026 arena tour. US → Europe → Australia. Sydney finals.
 - **The Phaedrus Initiative** — Dr Reeve's in-universe parody fellowship.
-- **The Public Record** — Quality broadsheet. Mara Quinn and Kate Jennings file there.
+- **The Public Record** — Quality broadsheet. Mara Quinn and Kate Hallings file there.
 - **Southern Objective** — Another quality broadsheet. Mara Quinn also files there.
 - **Vltavské Noviny** — Czech tabloid. Printed the front-page Ryker sighting 14 November 2025 that opens the present feed.
 
@@ -1286,9 +1286,9 @@ _Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/jan_ramp_
 - **2026-08-06T09:15:00Z**: still under the bowser at stand 12. firing hasn't stopped. josef. lukáš. petr. answer your phones.
 - **2026-08-06T09:35:00Z**: under the bowser still. cargo plane at 14 has the rear ramp down. men in tactical gear loading. one civilian walking up the ramp.
 
-### Kate Jennings (@kate_jennings)
+### Kate Hallings (@kate_hallings)
 > Investigative journalist.
-_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings](https://silenceisthetrauma.com/veX_social_network/feed/kate_jennings). 2 public posts._
+_Profile page: [https://silenceisthetrauma.com/veX_social_network/feed/kate_hallings](https://silenceisthetrauma.com/veX_social_network/feed/kate_hallings). 2 public posts._
 
 - **2026-05-02T15:12:00Z**: Day 3. The witness box. She didn't flinch once.
 - **2026-05-17T08:00:00Z**: Front page today. Two years on the paper trail. Apex Holdings, the 'two rods offset the load' email, and the installer's widow no investigator ever called back. Six pages. The lawyers cleared every line.

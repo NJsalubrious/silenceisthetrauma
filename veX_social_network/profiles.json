@@ -41,7 +41,7 @@
       "@gran_ryker",
       "@pop_ryker",
       "@mara_quinn",
-      "@kate_jennings"
+      "@kate_hallings"
     ],
     "quote": "\"I document what others don't see.\"",
     "reveal_secret": "Fights the system from the inside by documenting its flaws.",
@@ -387,7 +387,7 @@
       "@m_harren",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ],
@@ -411,7 +411,7 @@
       "@m_harren",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ],
@@ -435,7 +435,7 @@
       "@julia_renn",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ],
@@ -459,7 +459,7 @@
       "@julia_renn",
       "@m_harren",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ],
@@ -483,7 +483,7 @@
       "@julia_renn",
       "@m_harren",
       "@eli_ward",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ],
@@ -492,14 +492,14 @@
     "card_image": "../assets/images/characters/cards/eliza_trenholm_header.png"
   },
   {
-    "id": "kate_jennings",
-    "handle": "@kate_jennings",
-    "display_name": "Kate Jennings",
-    "avatar": "../assets/images/characters/avatars/kate_jennings_investigates-avatar.jpg",
+    "id": "kate_hallings",
+    "handle": "@kate_hallings",
+    "display_name": "Kate Hallings",
+    "avatar": "../assets/images/characters/avatars/kate_hallings_investigates-avatar.jpg",
     "bio": "Investigative journalist.",
     "tier": "secondary",
     "verified": false,
-    "links_to": "../people/kate_jennings_investigates.html",
+    "links_to": "../people/kate_hallings_investigates.html",
     "silent": false,
     "memorial": false,
     "follows": [
@@ -513,7 +513,7 @@
     ],
     "quote": "\"Follow the freight.\"",
     "reveal_secret": "Tracks logistics and corruption via OSINT.",
-    "card_image": "../assets/images/characters/cards/kate_jennings_header.png"
+    "card_image": "../assets/images/characters/cards/kate_hallings_header.png"
   },
   {
     "id": "the_barista",

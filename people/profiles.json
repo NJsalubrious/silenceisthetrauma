@@ -38,7 +38,7 @@
       "@gran_ryker",
       "@pop_ryker",
       "@mara_quinn",
-      "@kate_jennings"
+      "@kate_hallings"
     ]
   },
   {
@@ -333,7 +333,7 @@
       "@m_harren",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ]
@@ -354,7 +354,7 @@
       "@m_harren",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ]
@@ -375,7 +375,7 @@
       "@julia_renn",
       "@eli_ward",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ]
@@ -396,7 +396,7 @@
       "@julia_renn",
       "@m_harren",
       "@eliza_trenholm",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ]
@@ -417,16 +417,16 @@
       "@julia_renn",
       "@m_harren",
       "@eli_ward",
-      "@kate_jennings",
+      "@kate_hallings",
       "@ethel_ryker",
       "@isla_band"
     ]
   },
   {
-    "id": "kate_jennings",
-    "handle": "@kate_jennings",
-    "display_name": "Kate Jennings",
-    "avatar": "characters/writers_lowres_0005_writer_Kate_Jennings.jpg",
+    "id": "kate_hallings",
+    "handle": "@kate_hallings",
+    "display_name": "Kate Hallings",
+    "avatar": "characters/writers_lowres_0005_writer_Kate_Hallings.jpg",
     "bio": "Investigative journalist.",
     "tier": "secondary",
     "verified": false,

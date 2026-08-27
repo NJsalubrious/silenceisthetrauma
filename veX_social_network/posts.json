@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_f1097e4d",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The cost of the quiet damage is always paid in new rules.",
+    "timestamp": "2026-08-27T12:32:08.379059Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/aug/26/meta-social-media-addiction-trial-settlement",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_31496cf9",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

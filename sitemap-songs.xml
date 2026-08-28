@@ -84,6 +84,22 @@
     </video:video>
   </url>
   <url>
+    <loc>https://silenceisthetrauma.com/songs/dominic-ryker-i-gave-it-to-you-first</loc>
+    <lastmod>2026-08-29</lastmod>
+    <image:image>
+      <image:loc>https://silenceisthetrauma.com/songs/covers/Dominic-Ryker-I-gave-it-to-you-first.jpg</image:loc>
+      <image:title>I Gave It To You First by Dominic</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/KAOtzbAceUM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>I Gave It To You First by Dominic Ryker</video:title>
+      <video:description>I Gave It To You First by Dominic Ryker: a self-aware narcissist narrates his own method — everything he takes is returned as a gift, and you are expected to say thank you. Fiction.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube-nocookie.com/embed/KAOtzbAceUM</video:player_loc>
+      <video:publication_date>2026-08-29T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
     <loc>https://silenceisthetrauma.com/songs/ethel-ryker-ride</loc>
     <lastmod>2026-05-30</lastmod>
     <image:image>

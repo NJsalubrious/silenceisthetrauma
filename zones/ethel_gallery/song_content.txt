@@ -1129,7 +1129,87 @@ Vomit blaaaa.
 
 
 
-=== SONG 6: Ride ===
+=== SONG 6: I Gave It To You First ===
+ARTIST: Dominic
+DATE: EARLY 2000s (PROFILE)
+
+--- STORY ---
+A story about a rare individual. A self-aware manipulative narcissist. These are his internal thoughts about himself and how he moves through the world.
+
+He is not confused about what he is. He knows the charm is a surface and he knows there is nothing underneath it, and neither fact troubles him. He has simply worked out that a life lived entirely on the surface is easier, and that most people will never check.
+
+The trick in it is the giving. Everything he takes, he either claims he gave first or hands back as a gift, and then waits to be thanked for it. Dominic is never angry, never loud, never caught swinging. He keeps the same pace and the same smile, and by the time you understand what has happened it is too late. You've been walked to nothing and it's all been arranged with style.
+
+--- LYRICS ---
+Step to the glass go on look at the view
+World's only deep as the shine coming through
+Don't go knocking round rooms that there's no getting to
+Learned it young wore it well and it looks good on you too
+Light on the surface look that's where I live
+Take what reflects never ask what's beneath
+
+Mine All mine
+I gave it to you first
+Mine All mine
+I gave it to you first
+So say thank you thank you
+Say thank you thank you
+I gave it I gave it
+I gave it to you first
+
+Won every prize for a thing I'm without
+Stood in the picture and smiled it about
+Year they all moved in and the move was mine
+Held the frame held the light looked a million times fine
+You can live a whole life in one beautiful pose
+If you hold the smile up and you never let it close
+
+Mine All mine
+I gave it to you first
+Mine All mine
+I gave it to you first
+So say thank you thank you
+Say thank you thank you
+I gave it I gave it
+I gave it to you first
+
+Read you in a blink read the use read the room
+The title the reason the door and I move
+Don't go deeper than that 'cause there's nothing down there
+What you're calling a soul is a shine in the air
+Stand right where I want you look lovely be worth
+And whatever I take why I gave it to you first
+
+You start to notice You start to complain
+I said it of you friend same words same day
+The danger's whoever gets up to point
+Reasonable fella like me runs the joint
+Calm charming easy I keep the same pace
+So what do we say thank you to my face
+
+I'm not angry please there's nothing to spend
+Nobody home to go breaking to mend
+You braced for a swing Oh I never swing wide
+Walked you to nothing and pinned it with pride
+It's all been arranged and arranged it with style
+Same step same step same pace same smile
+
+Mine All mine
+He gave it you first
+Mine All mine
+He gave it you first
+So say thank you THANK YOU
+Say thank you THANK YOU
+He gave it he gave it
+He gave it you first
+
+Say it one more time go on thank you
+Course you do
+I gave it to you first
+Ha
+
+
+=== SONG 7: Ride ===
 ARTIST: Ethel
 DATE: JAN 20, 2019 (AGE 17)
 
@@ -1288,7 +1368,7 @@ I just knew where the road was hiding
 
 
 
-=== SONG 7: Grief ===
+=== SONG 8: Grief ===
 ARTIST: Ethel
 DATE: FEB 28, 2019 (THE CRASH)
 
@@ -1360,7 +1440,7 @@ I use that jolt to see what’s true.
 
 
 
-=== SONG 8: Gotta Move ===
+=== SONG 9: Gotta Move ===
 ARTIST: Ethel
 DATE: MAR 02, 2019 (LEAVING HOME)
 
@@ -1518,7 +1598,7 @@ Because you don't see it.
 Too clean.
 
 
-=== SONG 9: Won't Break ===
+=== SONG 10: Won't Break ===
 ARTIST: Ethel
 DATE: MAR 05, 2019 (MOSMAN)
 
@@ -1745,7 +1825,7 @@ Because the lack of one
 Just wouldn't feel right
 
 
-=== SONG 10: Peek-A-Boo ===
+=== SONG 11: Peek-A-Boo ===
 ARTIST: Isla
 DATE: MAR 10, 2019
 
@@ -1911,7 +1991,7 @@ She’s kinda cool.
 xxxx her.
 
 
-=== SONG 11: I Built A Box ===
+=== SONG 12: I Built A Box ===
 ARTIST: Ethel
 DATE: JUN 2019 (THE SAFE HOUSE)
 
@@ -2088,7 +2168,7 @@ Buying time
 But I see my mind a little blind now
 
 
-=== SONG 12: Same Breath ===
+=== SONG 13: Same Breath ===
 ARTIST: Dominic
 DATE: JUL 2019 (NORTHERN ROAD, ITALY)
 
@@ -2275,7 +2355,7 @@ Killer.
 Same step.
 
 
-=== SONG 13: Burning Dominic's Bridge ===
+=== SONG 14: Burning Dominic's Bridge ===
 ARTIST: Isla
 DATE: FEB 2020 (THE LEAK)
 
@@ -2381,7 +2461,7 @@ Breath gone.
 Bridge burned!
 
 
-=== SONG 14: For You ===
+=== SONG 15: For You ===
 ARTIST: Ethel
 DATE: SEP 2019
 
@@ -2597,7 +2677,7 @@ You made a cage
 For you!!
 
 
-=== SONG 15: Broken Edge ===
+=== SONG 16: Broken Edge ===
 ARTIST: Isla
 DATE: OCT 2019
 
@@ -2725,7 +2805,7 @@ I'm the fracture in perfect lies
 A broken edge that won't disguise
 
 
-=== SONG 16: Hero Killer ===
+=== SONG 17: Hero Killer ===
 ARTIST: Ethel
 DATE: MAR 2021 (TRIAL OPENING)
 
@@ -2889,7 +2969,7 @@ Hero!
 
 Killer!
 
-=== SONG 17: Hero Complex ===
+=== SONG 18: Hero Complex ===
 ARTIST: Dominic
 DATE: MAR 2021 (THE TRIAL START)
 
@@ -3025,7 +3105,7 @@ For not asking.
 
 
 
-=== SONG 18: Nothing True ===
+=== SONG 19: Nothing True ===
 ARTIST: Ethel
 DATE: JUN 2021 (THE TESTIMONY)
 
@@ -3170,7 +3250,7 @@ Lies don’t just serve you,   
 they serve him too.
 
 
-=== SONG 19: You Will Thank Me Later ===
+=== SONG 20: You Will Thank Me Later ===
 ARTIST: Dominic
 DATE: MAY 2022 (PRISON)
 
@@ -3382,7 +3462,7 @@ But that's why
 you'll thank me later.
 
 
-=== SONG 20: This Isn't Therapy ===
+=== SONG 21: This Isn't Therapy ===
 ARTIST: Isla
 DATE: AUG 2020 (POST-TRIAL RESET)
 
@@ -3577,7 +3657,7 @@ Just say so.
 Isla's here now.
 
 
-=== SONG 21: Intro to Shiny Headed Man ===
+=== SONG 22: Intro to Shiny Headed Man ===
 ARTIST: Isla
 DATE: SEP 2020
 
@@ -3662,7 +3742,7 @@ Still concerning  
 Just make noise Isla
 
 
-=== SONG 22: Shiny Headed Radio Man ===
+=== SONG 23: Shiny Headed Radio Man ===
 ARTIST: Isla
 DATE: SEP 2020
 
@@ -3831,7 +3911,7 @@ They need my vocal sledge
 I’m not biting the head off your ---- bat
 
 
-=== SONG 23: Stanmore Farewell ===
+=== SONG 24: Stanmore Farewell ===
 ARTIST: Isla
 DATE: DEC 2020 (INNER-WEST EXIT)
 
@@ -4012,7 +4092,7 @@ Best friend, she already knew
 Might not work, but can’t have the question
 
 
-=== SONG 24: Harm's Ghost ===
+=== SONG 25: Harm's Ghost ===
 ARTIST: Ethel
 DATE: FEB 2021 (POST-TRIAL AFTERMATH)
 
@@ -4344,7 +4424,7 @@ I'm still on
 
 
 
-=== SONG 25: No Sparrow Caught Mid Flight ===
+=== SONG 26: No Sparrow Caught Mid Flight ===
 ARTIST: Ethel
 DATE: DEC 2021 (POST-TRIAL)
 
@@ -4474,7 +4554,7 @@ And when it hums when it cuts clean
 I keep the thread outside unseen
 
 
-=== SONG 26: Dominic's Escape ===
+=== SONG 27: Dominic's Escape ===
 ARTIST: Dominic
 DATE: MAR 2024 (THE ESCAPE)
 
@@ -4761,7 +4841,7 @@ They won't find me
 Not yet
 
 
-=== SONG 27: Kinley (Guilt Money) ===
+=== SONG 28: Kinley (Guilt Money) ===
 ARTIST: Kinley
 DATE: FEB 2024 (EMERGENCE)
 
@@ -4882,7 +4962,7 @@ Guilt money Guilt money
 Let the first word burn
 
 
-=== SONG 28: Ants On The Vine ===
+=== SONG 29: Ants On The Vine ===
 ARTIST: Ethel
 DATE: MAR 2024 (FIRST SIGNAL)
 
@@ -5154,7 +5234,7 @@ I built this bite from a heavier sound
 
 
 
-=== SONG 29: Clipboard Man ===
+=== SONG 30: Clipboard Man ===
 ARTIST: Ethel
 DATE: APR 2024 (SURVEILLANCE LOOP)
 
@@ -5470,7 +5550,7 @@ Clipboard Man
 
 
 
-=== SONG 30: Rattled ===
+=== SONG 31: Rattled ===
 ARTIST: Ethel
 DATE: MAY 2024 (DETECTIVE INTERVENTION)
 
@@ -5785,7 +5865,7 @@ She might just turn.
 
 
 
-=== SONG 31: Red Stick ===
+=== SONG 32: Red Stick ===
 ARTIST: Ethel
 DATE: JUN 2024 (FIRST TEST)
 
@@ -6161,7 +6241,7 @@ But I’ll introduce them.
 
 
 
-=== SONG 32: Can You Make A Mistake On Purpose? ===
+=== SONG 33: Can You Make A Mistake On Purpose? ===
 ARTIST: Ethel
 DATE: JUL 2024
 
@@ -6427,7 +6507,7 @@ Purpose?
 Yes!
 
 
-=== SONG 33: Intro to Normal?! ===
+=== SONG 34: Intro to Normal?! ===
 ARTIST: Ethel
 DATE: AUG 2025
 
@@ -6521,7 +6601,7 @@ This
 Normal.
 
 
-=== SONG 34: Normal?! ===
+=== SONG 35: Normal?! ===
 ARTIST: Ethel
 DATE: AUG 2025
 
@@ -6735,7 +6815,7 @@ Yeah hindsight
 
 It all makes sense in hindsight.
 
-=== SONG 35: Normal?! (Special Version) ===
+=== SONG 36: Normal?! (Special Version) ===
 ARTIST: Ethel
 DATE: AUG 2025
 
@@ -6950,7 +7030,7 @@ Yeah hindsight
 It all makes sense in hindsight.
 
 
-=== SONG 36: Memory Under Water ===
+=== SONG 37: Memory Under Water ===
 ARTIST: Isla
 DATE: RETROSPECT (2022)
 
@@ -7111,7 +7191,7 @@ A final silence beneath her stage
 
 
 
-=== SONG 37: The Porcelain Lie (Raise The Fourth) ===
+=== SONG 38: The Porcelain Lie (Raise The Fourth) ===
 ARTIST: Isla
 DATE: RETROSPECT (2024)
 
@@ -7200,7 +7280,7 @@ Raise the fourth, cut the room, leave the hinge singing  
 Leave the hinge singing, let the hinge sing me open
 
 
-=== SONG 38: Raise The Fourth ===
+=== SONG 39: Raise The Fourth ===
 ARTIST: Isla
 DATE: RETROSPECT (2024)
 
@@ -7377,7 +7457,7 @@ Raise the fourth, cut the room, leave the hinge singing
 Let the hinge sing, let the hinge sing me open
 
 
-=== SONG 39: What You Don't See ===
+=== SONG 40: What You Don't See ===
 ARTIST: Isla
 DATE: RETROSPECT (2024)
 
@@ -7629,7 +7709,7 @@ I would’ve been
 
 
 
-=== SONG 40: What You Don't See (Symphony) ===
+=== SONG 41: What You Don't See (Symphony) ===
 ARTIST: Isla
 DATE: RETROSPECT (OCT 21, 2025 EVENT)
 
@@ -7885,7 +7965,7 @@ Just sharpened the girl
 I would’ve been
 
 
-=== SONG 41: Raise The Fourth (With Symphony) ===
+=== SONG 42: Raise The Fourth (With Symphony) ===
 ARTIST: Isla
 DATE: RETROSPECT (OCT 21, 2025 EVENT)
 
@@ -8070,7 +8150,7 @@ Hinge keeps singing
 After we’re gone
 
 
-=== SONG 42: Give It Back ===
+=== SONG 43: Give It Back ===
 ARTIST: Isla
 DATE: RETROSPECT (2024)
 
@@ -8205,7 +8285,7 @@ Lights cut
 We don’t patch
 
 
-=== SONG 43: Don't Wake Him Yet ===
+=== SONG 44: Don't Wake Him Yet ===
 ARTIST: Isla
 DATE: RETROSPECT (2022 · remembering AGE 15, 2016)
 
@@ -8411,7 +8491,7 @@ Night gone
 Noise wins
 
 
-=== SONG 44: Melody of Normality ===
+=== SONG 45: Melody of Normality ===
 ARTIST: Isla
 DATE: RETROSPECT (RECORDED 2024)
 
@@ -8500,7 +8580,7 @@ Still…
 undone.
 
 
-=== SONG 45: What This Was Always For ===
+=== SONG 46: What This Was Always For ===
 ARTIST: Isla
 DATE: RETROSPECT (RECORDED 2024)
 

@@ -89,6 +89,21 @@ This is manic Isla. But, even at her most unstable, her mind works like a cipher
     },
     {
         id: 6,
+        title: "I Gave It To You First",
+        artist: "Dominic",
+        date: "EARLY 2000s (PROFILE)",
+        subtitle: "Self-aware narcissism · ownership as generosity · the smile that never closes",
+        videoId: "KAOtzbAceUM",
+        img: "DOMINIC_I_Gave_It_To_You_First.jpg",
+        story: `A story about a rare individual. A self-aware manipulative narcissist. These are his internal thoughts about himself and how he moves through the world.
+
+He is not confused about what he is. He knows the charm is a surface and he knows there is nothing underneath it, and neither fact troubles him. He has simply worked out that a life lived entirely on the surface is easier, and that most people will never check.
+
+The trick in it is the giving. Everything he takes, he either claims he gave first or hands back as a gift, and then waits to be thanked for it. <a href="https://dominicryker.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Dominic</a> is never angry, never loud, never caught swinging. He keeps the same pace and the same smile, and by the time you understand what has happened it is too late. You've been walked to nothing and it's all been arranged with style.`,
+        lyrics: ``
+    },
+    {
+        id: 7,
         title: "Ride",
         artist: "Ethel",
         date: "JAN 20, 2019 (AGE 17)",
@@ -103,7 +118,7 @@ When she logged into her teacher's computer and uncovered proof of his fraud, th
         lyrics: ``
     },
     {
-        id: 7,
+        id: 8,
         title: "Grief",
         artist: "Ethel",
         date: "FEB 28, 2019 (THE CRASH)",
@@ -120,7 +135,7 @@ Then there was a second wall. The one that ended everything. Gran and Pop were g
         lyrics: ``
     },
     {
-        id: 8,
+        id: 9,
         title: "Gotta Move",
         artist: "Ethel",
         date: "MAR 02, 2019 (LEAVING HOME)",
@@ -135,7 +150,7 @@ So she made one. A mental trick in essence. She decided that this was her own de
         lyrics: ``
     },
     {
-        id: 9,
+        id: 10,
         title: "Won't Break Where Others End",
         artist: "Ethel",
         date: "MAR 05, 2019 (MOVE TO MOSMAN)",
@@ -148,7 +163,7 @@ She didn't get a real choice. So she made one. A mental trick. She decided that 
         lyrics: ``
     },
     {
-        id: 10,
+        id: 11,
         title: "Peek-A-Boo",
         artist: "Isla",
         date: "MAR 10, 2019",
@@ -161,7 +176,7 @@ Peek-A-Boo catches that first spark between them. Rivalry, recognition, and a ch
         lyrics: ``
     },
     {
-        id: 11,
+        id: 12,
         title: "I Built A Box",
         artist: "Ethel",
         date: "JUN 2019 (MOSMAN)",
@@ -176,7 +191,7 @@ So she reframed survival as a decision, a way to stay intact and eventually turn
         lyrics: ``
     },
     {
-        id: 12,
+        id: 13,
         title: "Same Breath",
         artist: "Dominic",
         date: "JUL 2019 (NORTHERN ROAD, ITALY)",
@@ -191,7 +206,7 @@ During a convoy ambush, his men froze. Dominic ran a "Straight line", dragged th
         lyrics: ``
     },
     {
-        id: 13,
+        id: 14,
         title: "Burning Dominic's Bridge",
         artist: "Isla",
         date: "FEB 2020 (THE LEAK)",
@@ -204,7 +219,7 @@ Mara Quinn, Senior Reporter at "The Southern objective" would later write: "Star
         lyrics: ``
     },
     {
-        id: 14,
+        id: 15,
         title: "For You",
         artist: "Ethel",
         date: "SEP 2019",
@@ -219,7 +234,7 @@ Silence isn't free and so this track is loud. It's Heavy Metal.`,
         lyrics: ``
     },
     {
-        id: 15,
+        id: 16,
         title: "Broken Edge",
         artist: "Isla",
         date: "OCT 2019",
@@ -234,7 +249,7 @@ Bet she won't? You lose.`,
         lyrics: ``
     },
     {
-        id: 16,
+        id: 17,
         title: "Hero / Killer",
         artist: "Ethel",
         date: "MAR 2021 (TRIAL OPENING)",
@@ -247,7 +262,7 @@ Dominic's myth is crumbling in real time and Ethel's not here to mourn it.`,
         lyrics: ``
     },
     {
-        id: 17,
+        id: 18,
         title: "Hero Complex",
         artist: "Dominic",
         date: "MAR 2021 (THE TRIAL START)",
@@ -260,7 +275,7 @@ Rescue buys loyalty. Favors turn into a tab.`,
         lyrics: ``
     },
     {
-        id: 18,
+        id: 19,
         title: "Nothing True",
         artist: "Ethel",
         date: "JUN 2021 (THE TESTIMONY)",
@@ -273,7 +288,7 @@ She answers carefully. Leaves nothing that can be twisted later. It looks cautio
         lyrics: ``
     },
     {
-        id: 19,
+        id: 20,
         title: "You Will Thank Me Later",
         artist: "Dominic",
         date: "MAY 2022 (PRISON)",
@@ -286,7 +301,7 @@ This is Dominic's song: A calm, rhythmic guide to turning trust into currency, a
         lyrics: ``
     },
     {
-        id: 20,
+        id: 21,
         title: "This Isn't Therapy",
         artist: "Isla",
         date: "AUG 2020 (POST-TRIAL RESET)",
@@ -301,7 +316,7 @@ The song is her reset. A refusal to apologise for intensity.`,
         lyrics: ``
     },
     {
-        id: 21,
+        id: 22,
         title: "Intro to Shiny Headed Radio Man",
         artist: "Isla",
         date: "SEP 2020",
@@ -316,7 +331,7 @@ If the bridge burns, so be it. She'll build her own stage from the ashes and mak
         lyrics: ``
     },
     {
-        id: 22,
+        id: 23,
         title: "Shiny Headed Radio Man",
         artist: "Isla",
         date: "SEP 2020",
@@ -329,7 +344,7 @@ The song spirals between humor and confrontation, performance and real anger. It
         lyrics: ``
     },
     {
-        id: 23,
+        id: 24,
         title: "Stanmore Farewell",
         artist: "Isla",
         date: "DEC 2020 (INNER-WEST EXIT)",
@@ -342,7 +357,7 @@ The song captures the push and pull between gratitude and restlessness. It's not
         lyrics: ``
     },
     {
-        id: 24,
+        id: 25,
         title: "Harm's Ghost",
         artist: "Ethel",
         date: "FEB 2021 (POST-TRIAL AFTERMATH)",
@@ -357,7 +372,7 @@ It isn't about fear or control. It's about the moment people see harm coming, kn
         lyrics: ``
     },
     {
-        id: 25,
+        id: 26,
         title: "No Sparrow Caught Mid Flight",
         artist: "Ethel",
         date: "DEC 2021 (POST-TRIAL)",
@@ -370,7 +385,7 @@ Ethel's name is still in the headlines. Her face is still tied to his. Work's me
         lyrics: ``
     },
     {
-        id: 26,
+        id: 27,
         title: "Prison Escape",
         artist: "Dominic",
         date: "MAR 2024 (THE ESCAPE)",
@@ -383,7 +398,7 @@ Dominic notices the needs, the mistakes, the misplaced trust, the small openings
         lyrics: ``
     },
     {
-        id: 27,
+        id: 28,
         title: "Guilt Money (Origin)",
         artist: "Kinley",
         date: "FEB 2024 (EMERGENCE)",
@@ -396,7 +411,7 @@ Kinley is the handler archetype, polished, professional, polite on the surface, 
         lyrics: ``
     },
     {
-        id: 28,
+        id: 29,
         title: "Ants on the Vine",
         artist: "Ethel",
         date: "MAR 2024 (FIRST SIGNAL)",
@@ -409,7 +424,7 @@ Kinley is the handler archetype, polished, professional, polite on the surface, 
         lyrics: ``
     },
     {
-        id: 29,
+        id: 30,
         title: "Clipboard Man",
         artist: "Ethel",
         date: "APR 2024 (SURVEILLANCE LOOP)",
@@ -422,7 +437,7 @@ When surveillance starts to fold back on itself, she sets her own decoy in motio
         lyrics: ``
     },
     {
-        id: 30,
+        id: 31,
         title: "Rattled",
         artist: "Ethel",
         date: "MAY 2024 (DETECTIVE INTERVENTION)",
@@ -435,7 +450,7 @@ When Ethel crosses his path, he recognises the type. Too bright. Too direct. Too
         lyrics: ``
     },
     {
-        id: 31,
+        id: 32,
         title: "Red Stick",
         artist: "Ethel",
         date: "JUN 2024 (FIRST TEST)",
@@ -450,7 +465,7 @@ The song follows Ethel as she reads it the way others read handwriting.`,
         lyrics: ``
     },
     {
-        id: 32,
+        id: 33,
         title: "Can You Make A Mistake On Purpose?",
         artist: "Ethel",
         date: "JUL 2024",
@@ -465,7 +480,7 @@ This chapter sets the question: "Can you make a mistake on purpose?"`,
         lyrics: ``
     },
     {
-        id: 33,
+        id: 34,
         title: "Intro to Normal?!",
         artist: "Ethel",
         date: "AUG 2025",
@@ -478,7 +493,7 @@ The intro sets up a situation with real harm and consequences. Avoidable but not
         lyrics: ``
     },
     {
-        id: 34,
+        id: 35,
         title: "Normal?!",
         artist: "Ethel",
         date: "AUG 2025",
@@ -491,7 +506,7 @@ Her reactions aren't late-stage blowups. They're early interventions. Which make
         lyrics: ``
     },
     {
-        id: 35,
+        id: 36,
         title: "Normal?! (Special Version)",
         artist: "Ethel",
         date: "AUG 2025",
@@ -502,7 +517,7 @@ Her reactions aren't late-stage blowups. They're early interventions. Which make
         lyrics: ``
     },
     {
-        id: 36,
+        id: 37,
         title: "Memory Under Water",
         artist: "Isla",
         date: "RETROSPECT (2022)",
@@ -515,7 +530,7 @@ What she is describing is her mother's final walk. Quiet, deliberate, unseen. Is
         lyrics: ``
     },
     {
-        id: 37,
+        id: 38,
         title: "The Porcelain Lie (Raise The Fourth)",
         artist: "Isla",
         date: "RETROSPECT (2024)",
@@ -528,7 +543,7 @@ For Isla, survival means seeing every possible ending and choosing to keep the h
         lyrics: ``
     },
     {
-        id: 38,
+        id: 39,
         title: "Raise The Fourth",
         artist: "Isla",
         date: "RETROSPECT (2024)",
@@ -541,7 +556,7 @@ In another version, the ending floods. Here, it freezes. A still surface. Porcel
         lyrics: ``
     },
     {
-        id: 39,
+        id: 40,
         title: "What You Don't See",
         artist: "Isla",
         date: "RETROSPECT (2024)",
@@ -554,7 +569,7 @@ The song carries the pain of what was done to her, yet it isn't about despair. I
         lyrics: ``
     },
     {
-        id: 40,
+        id: 41,
         title: "What You Don't See (Symphony)",
         artist: "Isla",
         date: "RETROSPECT (OCT 21, 2025 EVENT)",
@@ -567,7 +582,7 @@ Same meaning, grander scale. The orchestra amplifies every fracture, every momen
         lyrics: ``
     },
     {
-        id: 41,
+        id: 42,
         title: "Raise The Fourth (With Symphony)",
         artist: "Isla",
         date: "RETROSPECT (OCT 21, 2025 EVENT)",
@@ -582,7 +597,7 @@ It isn't a song about death, but about recognizing what could have been.`,
         lyrics: ``
     },
     {
-        id: 42,
+        id: 43,
         title: "Give It Back",
         artist: "Isla",
         date: "RETROSPECT (2024)",
@@ -595,7 +610,7 @@ What she's really doing is promising to return everything taken from her, only l
         lyrics: ``
     },
     {
-        id: 43,
+        id: 44,
         title: "Don't Wake Him Yet",
         artist: "Isla",
         date: "RETROSPECT (2022 · remembering AGE 15, 2016)",
@@ -610,7 +625,7 @@ A trip that starts in rebellion ends in loss.`,
         lyrics: ``
     },
     {
-        id: 44,
+        id: 45,
         title: "Melody of Normality",
         artist: "Isla",
         date: "RETROSPECT (2024)",
@@ -680,7 +695,7 @@ Still dressed.
 Still… undone.`
     },
     {
-        id: 45,
+        id: 46,
         title: "What This Was Always For",
         artist: "Isla",
         date: "RETROSPECT (RECORDED 2024)",

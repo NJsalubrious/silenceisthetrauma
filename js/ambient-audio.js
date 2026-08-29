@@ -157,6 +157,33 @@
     }
 
     /**
+     * Bind the first-gesture starter. Named and idempotent so it can be re-armed
+     * after a bfcache restore, where the original binding has already unbound.
+     */
+    let interactionArmed = false;
+    function armFirstInteraction() {
+        if (interactionArmed) return;
+        interactionArmed = true;
+        // Mobile (esp. iOS) is fussy: touchstart often does NOT unlock audio, but
+        // touchend / click / pointerup do. Run in the CAPTURE phase so an inner
+        // stopPropagation() (brand dropdown, mute button) cannot swallow the
+        // gesture, and only unbind once play() actually RESOLVES, so a blocked
+        // first tap retries on the next interaction instead of giving up.
+        const interactionEvents = ['pointerup', 'touchend', 'click', 'keydown'];
+        const onFirstInteraction = () => {
+            startPlayback().then(() => {
+                interactionArmed = false;
+                interactionEvents.forEach(evt =>
+                    document.removeEventListener(evt, onFirstInteraction, true));
+            }).catch(() => {
+                // Still blocked — keep the listeners attached to retry.
+            });
+        };
+        interactionEvents.forEach(evt =>
+            document.addEventListener(evt, onFirstInteraction, true));
+    }
+
+    /**
      * Start playback after first user interaction
      */
     function startPlayback() {
@@ -280,18 +307,22 @@
             //     dropdown, mute button) can't swallow the gesture,
             //   - only unbind once play() actually RESOLVES, so a blocked first
             //     tap retries on the next interaction instead of giving up.
-            const interactionEvents = ['pointerup', 'touchend', 'click', 'keydown'];
-            const onFirstInteraction = () => {
-                startPlayback().then(() => {
-                    interactionEvents.forEach(evt =>
-                        document.removeEventListener(evt, onFirstInteraction, true));
-                }).catch(() => {
-                    // Still blocked — keep the listeners attached to retry.
-                });
-            };
-            interactionEvents.forEach(evt =>
-                document.addEventListener(evt, onFirstInteraction, true));
+            armFirstInteraction();
         }
+
+        // A page restored from the back/forward cache does not re-run init():
+        // no scripts execute, DOMContentLoaded never fires, and the browser has
+        // paused the <audio>. The starter above has already unbound itself, so
+        // nothing is left that can start the theme and the toggle shows a state
+        // that is no longer true. Poetry and veX are deliberate hard cuts, so
+        // coming back from them is exactly this case. Re-sync and re-arm.
+        window.addEventListener('pageshow', function (e) {
+            if (!e.persisted) return;
+            if (audio && audio.paused && !isMuted && !isFadedOut) {
+                armFirstInteraction();
+            }
+            refreshToggleUI();
+        });
 
         // Save state before unload
         window.addEventListener('beforeunload', saveState);

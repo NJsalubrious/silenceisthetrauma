@@ -170,6 +170,10 @@
             --clinic-color: #8b9c94;   /* the staff: trained, gentle, lit soft */
             --file-color: #7f8a80;     /* the file, and everything typed into it */
             --isla-color: #77c3ac;     /* Isla, and Tam: the two telling the truth */
+            /* The narration bar fill and its knob read this. Pointing it at
+               the Isla accent means the progress bar changes colour with the
+               room the story is in, and every theme already sets that. */
+            --calc-color: var(--isla-color);
             --heavy-color: #e4eae7;
             --grain-opacity: 0.055;
             --vignette-color: rgba(4, 8, 9, 0.55);
@@ -1332,12 +1336,16 @@
             const nbDuration = document.getElementById('nb-duration');
 
             const NARRATION_BASE = '../spokenWordStory/';
+            // secs are the real measured lengths (128kbps CBR, read off the frame
+            // headers). Seeding them means the whole-story timeline exists before a
+            // single byte of audio loads, so scrubbing works immediately and does not
+            // depend on five metadata probes all succeeding.
             const NARRATION_PARTS = [
-                { file: 'PixelStortion_Prognosis_Good_part_1.mp3', label: 'Part One' },
-                { file: 'PixelStortion_Prognosis_Good_part_2.mp3', label: 'Part Two' },
-                { file: 'PixelStortion_Prognosis_Good_part_3.mp3', label: 'Part Three' },
-                { file: 'PixelStortion_Prognosis_Good_part_4.mp3', label: 'Part Four' },
-                { file: 'PixelStortion_Prognosis_Good_part_5.mp3', label: 'Part Five' }
+                { file: 'PixelStortion_Prognosis_Good_part_1.mp3', label: 'Part One',   secs: 391.2 },
+                { file: 'PixelStortion_Prognosis_Good_part_2.mp3', label: 'Part Two',   secs: 384.2 },
+                { file: 'PixelStortion_Prognosis_Good_part_3.mp3', label: 'Part Three', secs: 381.4 },
+                { file: 'PixelStortion_Prognosis_Good_part_4.mp3', label: 'Part Four',  secs: 379.0 },
+                { file: 'PixelStortion_Prognosis_Good_part_5.mp3', label: 'Part Five',  secs: 471.6 }
             ];
 
             if (audioEl && nbToggle) {
@@ -1424,21 +1432,25 @@
                     render();
                 };
 
-                // Preload each part's duration so the unified timeline + section marks are accurate
-                NARRATION_PARTS.forEach((part, i) => {
-                    const probe = new Audio();
-                    probe.preload = 'metadata';
-                    probe.src = NARRATION_BASE + part.file;
-                    probe.addEventListener('loadedmetadata', () => {
-                        durs[i] = probe.duration || 0;
-                        if (durs.every(d => d > 0)) {
-                            for (let k = 0; k < N; k++) cum[k + 1] = cum[k] + durs[k];
-                            total = cum[N];
-                            durationsReady = true;
-                            buildSegments();
-                            render();
-                        }
-                    });
+                // Build the unified timeline from the known lengths, immediately.
+                const finalise = () => {
+                    for (let k = 0; k < N; k++) cum[k + 1] = cum[k] + durs[k];
+                    total = cum[N];
+                    durationsReady = total > 0;
+                    if (durationsReady) buildSegments();
+                    render();
+                };
+                for (let k = 0; k < N; k++) durs[k] = NARRATION_PARTS[k].secs || 0;
+                finalise();
+
+                // If a real length differs from the seeded one, correct it once that
+                // part is actually loaded. Keeps the bar honest without depending on it.
+                audioEl.addEventListener('durationchange', () => {
+                    const d = audioEl.duration;
+                    if (isFinite(d) && d > 0 && Math.abs(d - durs[current]) > 0.75) {
+                        durs[current] = d;
+                        finalise();
+                    }
                 });
 
                 audioEl.addEventListener('timeupdate', () => {
@@ -1473,28 +1485,44 @@
                     else audioEl.pause();
                 });
 
-                // Seek across the WHOLE narration (click / drag / touch) -> lands in the right part
-                const seekTo = (clientX) => {
-                    if (!durationsReady || !total) return;
+                // Seek across the WHOLE narration (click / drag / touch) -> lands in the right part.
+                // Dragging only paints; the audio is moved once, on release. Seeking on every
+                // mousemove would call loadPart across a part boundary dozens of times a second.
+                let dragRatio = 0;
+                const ratioAt = (clientX) => {
                     const r = nbProgress.getBoundingClientRect();
-                    const ratio = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+                    return Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+                };
+                const previewAt = (ratio) => {
+                    dragRatio = ratio;
                     nbFill.style.width = (ratio * 100) + '%';
+                    if (durationsReady && total) nbCurrent.textContent = fmt(ratio * total);
+                };
+                const commitAt = (ratio) => {
+                    if (!durationsReady || !total) return;
                     const g = ratio * total;
-                    nbCurrent.textContent = fmt(g);
                     let j = 0;
                     while (j < N - 1 && g >= cum[j + 1]) j++;
                     const within = g - cum[j];
                     const wasPlaying = !audioEl.paused;
-                    if (j === current) { try { audioEl.currentTime = within; } catch (e) {} }
+                    if (j === current) { try { audioEl.currentTime = within; } catch (e) {} render(); }
                     else { loadPart(j, wasPlaying, within); }
+                    savePos();
                 };
-                nbProgress.addEventListener('click', (e) => seekTo(e.clientX));
-                nbProgress.addEventListener('mousedown', (e) => { nbDragging = true; seekTo(e.clientX); });
-                document.addEventListener('mousemove', (e) => { if (nbDragging) seekTo(e.clientX); });
-                document.addEventListener('mouseup', () => { if (nbDragging) { nbDragging = false; savePos(); } });
-                nbProgress.addEventListener('touchstart', (e) => { nbDragging = true; seekTo(e.touches[0].clientX); }, { passive: true });
-                document.addEventListener('touchmove', (e) => { if (nbDragging) seekTo(e.touches[0].clientX); }, { passive: true });
-                document.addEventListener('touchend', () => { if (nbDragging) { nbDragging = false; savePos(); } });
+                const endDrag = () => {
+                    if (!nbDragging) return;
+                    nbDragging = false;
+                    commitAt(dragRatio);
+                };
+
+                nbProgress.addEventListener('click', (e) => { if (!nbDragging) commitAt(ratioAt(e.clientX)); });
+                nbProgress.addEventListener('mousedown', (e) => { e.preventDefault(); nbDragging = true; previewAt(ratioAt(e.clientX)); });
+                document.addEventListener('mousemove', (e) => { if (nbDragging) previewAt(ratioAt(e.clientX)); });
+                document.addEventListener('mouseup', endDrag);
+                nbProgress.addEventListener('touchstart', (e) => { nbDragging = true; previewAt(ratioAt(e.touches[0].clientX)); }, { passive: true });
+                document.addEventListener('touchmove', (e) => { if (nbDragging) previewAt(ratioAt(e.touches[0].clientX)); }, { passive: true });
+                document.addEventListener('touchend', endDrag);
+                document.addEventListener('touchcancel', endDrag);
 
                 // Mutual exclusivity with the ambient theme
                 window.isStoryNarrationPlaying = () => !!audioEl && !audioEl.paused;

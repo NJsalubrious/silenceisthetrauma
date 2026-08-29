@@ -2386,6 +2386,18 @@
     background: rgba(128, 128, 128, 0.25);
     cursor: pointer;
 }
+/* The scrub knob is 11px tall on a 5px track, so its top and bottom edges
+   hang outside the only element that receives pointer events. This invisible
+   overlay makes the whole knob, and a comfortable margin around it, grabbable
+   without changing how the bar looks. */
+.nb-progress::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9px;
+    bottom: -9px;
+}
 .nb-progress-fill {
     position: absolute;
     top: 0;

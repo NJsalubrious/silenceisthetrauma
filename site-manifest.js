@@ -129,6 +129,13 @@ const PIXEL_MANIFEST = {
 
     // 3c. STORIES (Short fiction - absolute URLs for cross-site resolution)
     STORIES: {
+        Prognosis_Good: {
+            title: 'Prognosis Good',
+            track: 'STORY 07 // PROGNOSIS GOOD',
+            description: 'Eleven weeks of DBT for a girl whose fear fits the facts. She tells them what they want to hear.',
+            cover: '/short_stories/pixelstortion_Prognosis_Good.jpg',
+            href: '/short_stories/pixelstortion_Prognosis_Good.html'
+        },
         The_Ferenczi_Split: {
             title: 'The Ferenczi Split',
             track: "STORY 01 // THE FERENCZI SPLIT",

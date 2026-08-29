@@ -1234,22 +1234,36 @@
                     render();
                 };
 
-                // Preload each part's duration so the unified timeline + section marks are accurate
-                NARRATION_PARTS.forEach((part, i) => {
+                // Preload each part's duration so the unified timeline + section marks are
+                // accurate. Two things matter here. The probes are kept in an array because an
+                // unreferenced `new Audio()` can be garbage collected before loadedmetadata
+                // fires, and one lost probe leaves durationsReady false forever, which disables
+                // seeking across parts in complete silence. An errored probe also has to count
+                // as settled, for the same reason.
+                let settled = 0;
+                const finalise = () => {
+                    for (let k = 0; k < N; k++) cum[k + 1] = cum[k] + durs[k];
+                    total = cum[N];
+                    durationsReady = total > 0 && durs.every(d => d > 0);
+                    if (durationsReady) buildSegments();
+                    render();
+                };
+                const probes = NARRATION_PARTS.map((part, i) => {
                     const probe = new Audio();
                     probe.preload = 'metadata';
+                    const settle = (d) => {
+                        if (durs[i]) return;
+                        durs[i] = d;
+                        if (++settled === N) finalise();
+                    };
+                    probe.addEventListener('loadedmetadata', () => settle(probe.duration || 0));
+                    probe.addEventListener('error', () => settle(0));
                     probe.src = NARRATION_BASE + part.file;
-                    probe.addEventListener('loadedmetadata', () => {
-                        durs[i] = probe.duration || 0;
-                        if (durs.every(d => d > 0)) {
-                            for (let k = 0; k < N; k++) cum[k + 1] = cum[k] + durs[k];
-                            total = cum[N];
-                            durationsReady = true;
-                            buildSegments();
-                            render();
-                        }
-                    });
+                    probe.load();
+                    return probe;
                 });
+                // Anchor them so they survive until they have answered.
+                window.__ferencziProbes = probes;
 
                 audioEl.addEventListener('timeupdate', () => {
                     if (nbDragging) return;

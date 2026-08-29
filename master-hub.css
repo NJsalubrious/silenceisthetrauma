@@ -2276,7 +2276,7 @@
     width: 46px;
     height: 2px;
     margin: 1.3rem auto 0;
-    background: var(--calc-color);
+    background: var(--calc-color, currentColor);
     opacity: 0.75;
 }
 .beat.voice-label {
@@ -2342,7 +2342,7 @@
     transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 .nb-toggle:hover {
-    background: var(--calc-color);
+    background: var(--calc-color, currentColor);
     color: var(--bg-color);
     box-shadow: 0 0 14px -2px var(--calc-color);
 }
@@ -2405,7 +2405,7 @@
     height: 100%;
     width: 0%;
     border-radius: 3px;
-    background: var(--calc-color);
+    background: var(--calc-color, currentColor);
     pointer-events: none;
 }
 .nb-progress-fill::after {
@@ -2417,8 +2417,8 @@
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background: var(--calc-color);
-    box-shadow: 0 0 6px -1px var(--calc-color);
+    background: var(--calc-color, currentColor);
+    box-shadow: 0 0 6px -1px var(--calc-color, currentColor);
 }
 .nb-segments {
     position: absolute;

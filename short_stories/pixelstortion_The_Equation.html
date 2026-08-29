@@ -141,6 +141,10 @@
             --text-color: #b5ada5;
             --ryker-color: #7d7266;
             --accent-color: #c9b49b;
+            /* The narration bar fill and its knob read this. Pointing it at the
+               page's own accent means the progress bar shifts with the story.
+               Without it the fill has no colour and the bar looks dead. */
+            --calc-color: var(--accent-color);
             --cipher-color: #8c8173;
             --grain-opacity: 0.05;
             --vignette-color: rgba(0, 0, 0, 0.4);

@@ -166,6 +166,10 @@
             --boy-color: #8f9080;      /* the child: drab, colourless, olive */
             --tape-color: #a08758;     /* the machine, and carbon copies */
             --amber-color: #c2762f;    /* the two lines that cost somebody */
+            /* The narration bar fill and its knob read this. Pointing it at the
+               page's own accent means the progress bar shifts with the story.
+               Without it the fill has no colour and the bar looks dead. */
+            --calc-color: var(--amber-color);
             --heavy-color: #ece0c8;
             --grain-opacity: 0.06;
             --vignette-color: rgba(10, 6, 2, 0.58);

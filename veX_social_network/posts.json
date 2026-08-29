@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_dc310ab2",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "The framework determines the distribution of its components.",
+    "timestamp": "2026-08-29T07:17:47.411948Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/aug/27/ceo-worker-pay-ratio-us-analysis",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_de9caa5b",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

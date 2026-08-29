@@ -1341,9 +1341,15 @@ if(!container) return;
 if(!container) return;
             if (!container || !PIXEL_MANIFEST || !PIXEL_MANIFEST.STORIES) return;
 
-            const storyList = Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
-                id: key, ...s
-            }));
+            // Hidden on this page only. Both stories still exist and their
+            // pages are untouched; they are simply not listed here.
+            const HIDDEN_ON_STORIES_PAGE = ['The_Evaluator', 'Same_Breath'];
+
+            const storyList = Object.entries(PIXEL_MANIFEST.STORIES)
+                .filter(([key]) => !HIDDEN_ON_STORIES_PAGE.includes(key))
+                .map(([key, s]) => ({
+                    id: key, ...s
+                }));
 
             container.innerHTML = storyList.map((story, index) => {
                 const descSpans = story.description ? story.description.split('').map((char, i) => {

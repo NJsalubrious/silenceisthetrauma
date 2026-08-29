@@ -1317,7 +1317,7 @@ if(!container) return;
 if(!container) return;
             if (!container || !PIXEL_MANIFEST || !PIXEL_MANIFEST.STORIES) return;
 
-            const storyList = Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
+            const storyList = Object.entries(PIXEL_MANIFEST.STORIES).filter(([, s]) => !s.hidden).map(([key, s]) => ({
                 id: key, ...s
             }));
 

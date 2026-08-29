@@ -169,14 +169,19 @@ const PIXEL_MANIFEST = {
             track: 'STORY 05 // SAME BREATH',
             description: 'Dominic saved a man. Then Dominic he removed a liability. Same breath',
             cover: 'https://silenceisthetrauma.com/short_stories/Same_Breath.jpg',
-            href: '/short_stories/Same_Breath.html'
+            href: '/short_stories/Same_Breath.html',
+            // Hidden from the stories listing. The page itself still exists and
+            // is reachable; it is only kept out of the grid. Lives here, not in
+            // a page-level array, so every renderer agrees.
+            hidden: true
         },
         The_Evaluator: {
             title: 'The Evaluator',
             track: 'STORY 06 // THE EVALUATOR',
             description: 'The Evaluator. The fall out from the "POLISHED VOMIT" wedding incident',
             cover: 'https://silenceisthetrauma.com/short_stories/the_evaluation.jpg',
-            href: '/short_stories/the_evaluation.html'
+            href: '/short_stories/the_evaluation.html',
+            hidden: true
         }
     },
 

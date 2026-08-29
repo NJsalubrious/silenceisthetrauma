@@ -1341,12 +1341,10 @@ if(!container) return;
 if(!container) return;
             if (!container || !PIXEL_MANIFEST || !PIXEL_MANIFEST.STORIES) return;
 
-            // Hidden on this page only. Both stories still exist and their
-            // pages are untouched; they are simply not listed here.
-            const HIDDEN_ON_STORIES_PAGE = ['The_Evaluator', 'Same_Breath'];
-
+            // Stories flagged hidden in the manifest are left out of the grid.
+            // Their pages still exist and remain reachable.
             const storyList = Object.entries(PIXEL_MANIFEST.STORIES)
-                .filter(([key]) => !HIDDEN_ON_STORIES_PAGE.includes(key))
+                .filter(([, s]) => !s.hidden)
                 .map(([key, s]) => ({
                     id: key, ...s
                 }));

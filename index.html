@@ -248,15 +248,24 @@
 
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                    <!-- A real anchor, not a scripted location change: Barba only
+                         intercepts <a> clicks, and stories.html is not in its prevent
+                         list, so this gets a soft swap and the ambient music keeps
+                         playing. window.location.href would force a full reload and
+                         cut the audio. -->
+                    <a href="stories.html"
+                       class="px-8 py-4 bg-white text-black font-bold text-lg hover:bg-gray-200 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2 no-underline">
+                        STORIES
+                    </a>
                     <button
                         class="px-8 py-4 bg-white text-black font-bold text-lg hover:bg-gray-200 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2"
-                        onclick="if(ytPlayer && ytPlayer.pauseVideo) ytPlayer.pauseVideo(); window.location.href = resolveManifestPath(PIXEL_MANIFEST.CINEMA);">
-                        CINEMA ACCESS
+                        onclick="window.location.href = resolveManifestPath(PIXEL_MANIFEST.ZONES.GALLERY);">
+                        POETRY
                     </button>
                     <button
-                        class="px-8 py-4 border border-white/30 text-white font-bold text-lg hover:bg-white/10 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2"
-                        onclick="window.location.href = resolveManifestPath(PIXEL_MANIFEST.ZONES.GALLERY);">
-                        <span class="material-symbols-outlined text-xl">play_circle</span> POETRY
+                        class="px-8 py-4 border-2 border-white/70 text-white font-bold text-lg hover:bg-white/10 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2"
+                        onclick="if(ytPlayer && ytPlayer.pauseVideo) ytPlayer.pauseVideo(); window.location.href = resolveManifestPath(PIXEL_MANIFEST.CINEMA);">
+                        CINEMA
                     </button>
                 </div>
             </div>
@@ -1394,9 +1403,15 @@ if(!container) return;
 if(!container) return;
             if (!container || !PIXEL_MANIFEST || !PIXEL_MANIFEST.STORIES) return;
 
-            const storyList = Object.entries(PIXEL_MANIFEST.STORIES).map(([key, s]) => ({
-                id: key, ...s
-            }));
+            // Same filter as the stories page. This function shares its name and
+            // its target element with the one in stories.html, and after a Barba
+            // soft swap both definitions exist, so whichever wins must produce
+            // the same list or hidden stories reappear at random.
+            const storyList = Object.entries(PIXEL_MANIFEST.STORIES)
+                .filter(([, s]) => !s.hidden)
+                .map(([key, s]) => ({
+                    id: key, ...s
+                }));
 
             container.innerHTML = storyList.map((story, index) => {
                 const descSpans = story.description ? story.description.split('').map((char, i) => {

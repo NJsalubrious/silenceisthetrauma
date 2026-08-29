@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_c5151af4",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The soil reports always tell a different story than the blueprints.",
+    "timestamp": "2026-08-29T09:09:58.489995Z",
+    "reply_to": "isla_cef4f6b8",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_dc310ab2",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

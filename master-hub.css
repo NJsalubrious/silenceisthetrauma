@@ -1367,10 +1367,13 @@
             border-color: rgba(0, 255, 65, 0.6);
         }
 
-        /* Mobile: adjust trigger position */
+        /* Mobile: sit in the corner, clear of page content.
+           80px was clearing an assumed browser toolbar. Android has none at the
+           bottom, so that put the orb on top of the hero buttons. env() gives iOS
+           its home-indicator clearance and resolves to 0 everywhere else. */
         @media (max-width: 767px) {
             #jb-trigger {
-                bottom: 80px;
+                bottom: calc(14px + env(safe-area-inset-bottom, 0px));
                 left: 12px;
                 width: 40px;
                 height: 40px;
@@ -1447,7 +1450,7 @@
         /* Mobile: mirror JB trigger position on opposite side */
         @media (max-width: 767px) {
             #dominic-orb {
-                bottom: 80px;
+                bottom: calc(14px + env(safe-area-inset-bottom, 0px));
                 right: 12px;
                 width: 40px;
                 height: 40px;

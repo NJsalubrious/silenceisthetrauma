@@ -1278,8 +1278,11 @@
                 font-size: 24px;
             }
 
-            /* Buttons */
-            button {
+            /* Buttons. Shrinks nav and player controls on small screens.
+               .cta opts out: the hero call-to-action buttons set their own size,
+               and this !important was overriding it on the two that are <button>
+               while leaving the one that is an <a> at full size. */
+            button:not(.cta) {
                 font-size: 13px !important;
             }
         }

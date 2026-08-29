@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_f8c1577f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The dead don't wait for a release schedule.",
+    "timestamp": "2026-08-29T01:28:06.279149Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/phil-collen-says-fans-might-have-to-wait-until-2028-for-def-leppards-next-album-itll-be-ready-when-its-ready",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_98a1d7f3",
     "handle": "@isla_band",
     "display_name": "Isla",

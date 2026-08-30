@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_32b7280e",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "This arena is just another larger, louder witness box.",
+    "timestamp": "2026-08-30T13:28:13.135371Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ae13c3c9",
     "handle": "@isla_band",
     "display_name": "Isla",

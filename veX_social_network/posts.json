@@ -25924,5 +25924,35 @@
     "timestamp": "2026-09-04T22:20:00Z",
     "image": "../assets/images/posts/set_D1/Angus_dunbar_climbing_in_blue_mountainw_1.jpg",
     "image_alt": "A climber on a sandstone face in the Blue Mountains, bushland below."
+  },
+  {
+    "id": "pv_kirb_kate_promo",
+    "handle": "@keep_it_real_bro_podcast",
+    "display_name": "Keep It Real Bro Podcast",
+    "avatar": "../assets/images/characters/avatars/keep_it_real_bro_podcast-avatar.jpg",
+    "content": "Finally... someone from the other side. On Tuesday we sit down with Kate Hallings. Investigative journalist. Not a friend of the great man Dominic Ryker. There will be hard truths. But it will be civil. Get your helmets ready lads.",
+    "timestamp": "2026-08-31T13:30:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "video": "-tkPXoz7_Tg",
+    "video_title": "The Journalist — Tuesday",
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_kate_kirb_reply",
+    "handle": "@kate_hallings",
+    "display_name": "Kate Hallings",
+    "avatar": "../assets/images/characters/avatars/kate_hallings_investigates-avatar.jpg",
+    "content": "Looking forward to it.",
+    "timestamp": "2026-08-31T13:45:00Z",
+    "reply_to": "pv_kirb_kate_promo",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
   }
 ]

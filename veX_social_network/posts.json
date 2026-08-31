@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_0541b6b6",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some appetites never dull; they just learn to feed on different kinds of ash.",
+    "timestamp": "2026-08-31T13:21:29.822323Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/features/dark-funeral-remains-as-hungry-as-ever-more-than-30-years-into-the-black-metal-game",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_c1bc3090",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

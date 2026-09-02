@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_6bb8787e",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The strain always shows first in the smallest pieces.",
+    "timestamp": "2026-09-02T09:22:49.985527Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/aug/31/starbucks-documentary-baristas-billionaires",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_47bc4eb9",
     "handle": "@isla_band",
     "display_name": "Isla",

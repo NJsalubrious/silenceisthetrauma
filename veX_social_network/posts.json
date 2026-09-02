@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_3b699df4",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They celebrate the day a life begins; I celebrate the day it learns to bite back.",
+    "timestamp": "2026-09-02T13:34:07.771616Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/rock-stars-birthdays-september/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_6bb8787e",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

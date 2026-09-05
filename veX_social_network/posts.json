@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_55bfe07b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The scalpel gleamed, but it was already weeping infection onto the pristine cloth.",
+    "timestamp": "2026-09-05T13:13:54.100274Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_c931c17c",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

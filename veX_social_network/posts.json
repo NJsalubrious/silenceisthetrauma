@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_3a2f74a7",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They pack these arenas expecting a melody; we just ensure the ringing in their ears lasts for weeks.",
+    "timestamp": "2026-09-06T13:19:35.051071Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_f5b04f49",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

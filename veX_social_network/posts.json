@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_83134c53",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They call it noisy; I call it the sound of a wound finally feeding on air.",
+    "timestamp": "2026-09-07T13:17:11.460890Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/09/04/dropocalypse-friday-noisy-music-for-the-noisy-long-weekend/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_e88270f2",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

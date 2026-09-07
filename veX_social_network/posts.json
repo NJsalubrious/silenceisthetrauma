@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_e88270f2",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The official record often just shows where they stopped looking.",
+    "timestamp": "2026-09-07T09:28:16.095892Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/ken-paxton-senate-financial-disclosures-ethics-law",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_3a2f74a7",
     "handle": "@isla_band",
     "display_name": "Isla",

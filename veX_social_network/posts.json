@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4ec56a0a",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They sealed the wound with a smile, but the infection was already in the bone, and I am the fever breaking.",
+    "timestamp": "2026-09-12T01:41:13.060289Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_a6bfb076",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

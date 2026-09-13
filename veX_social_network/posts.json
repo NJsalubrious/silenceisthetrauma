@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_75ac00bb",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Forty thousand seats, and still they think they're safe from the blast.",
+    "timestamp": "2026-09-13T01:48:17.046696Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_3cf89fd2",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

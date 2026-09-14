@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_0d3f6e94",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The value of a promise is only ever found in the fine print.",
+    "timestamp": "2026-09-14T09:27:31.959678Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/sep/13/donald-trump-accounts-child-investment-wealth",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_7d1eeb44",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

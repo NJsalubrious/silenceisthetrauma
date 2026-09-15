@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_e7e4662b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They labeled the trauma 'rehabilitation,' but the bone still sings with the poison they called medicine.",
+    "timestamp": "2026-09-15T01:31:36.723923Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_0d3f6e94",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

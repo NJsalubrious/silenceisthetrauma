@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_aa6a548c",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They call it a new standard, but the ground still falls away.",
+    "timestamp": "2026-09-18T09:21:04.817409Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/arizona-english-language-test-azella",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_a86e7901",
     "handle": "@isla_band",
     "display_name": "Isla",

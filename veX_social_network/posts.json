@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_80ac8edb",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The sonic pressure in these arenas doesn't just fill space; it rearranges the architecture of their ears.",
+    "timestamp": "2026-09-19T01:41:17.093553Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_aa6a548c",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_3e0cb225",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They bottled their rot and called it progress, but the ground beneath it still burns.",
+    "timestamp": "2026-09-20T01:49:32.416489Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_80ac8edb",
     "handle": "@isla_band",
     "display_name": "Isla",

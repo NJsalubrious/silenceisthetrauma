@@ -2503,3 +2503,41 @@ p.story-byline {
     #narration-bar .nb-inner { gap: 11px; padding: 8px 16px; }
 }
     
+
+/* Shared Glass palette for the seven main pages. Player status colours remain distinct. */
+body:has(main:is([data-barba-namespace="home"],[data-barba-namespace="files"],[data-barba-namespace="subjects"],[data-barba-namespace="games"],[data-barba-namespace="podcast"],[data-barba-namespace="stories"],[data-barba-namespace="audio"])) {
+    --bg-dark:#10191b;
+    --site-paper:#eee9df;
+    --site-muted:#b1b8b6;
+    --site-accent:#d9aa77;
+    color:var(--site-paper);
+}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav,
+body:has(main[data-barba-namespace]):has(#nav-home) #mobile-menu {
+    background:#10191bf5!important;
+    border-color:#ffffff26!important;
+}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .active-tab {
+    color:#e1b889!important;
+    border-color:#e1b889!important;
+}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .max-w-7xl {max-width:none;padding-inline:4%}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .space-x-8>:not([hidden])~:not([hidden]) {margin-left:10px}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .font-mono-custom {font-size:11px;letter-spacing:.06em}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .brand-title {font-size:18px;letter-spacing:-.04em}
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .glitch-text::before,
+body:has(main[data-barba-namespace]):has(#nav-home) > nav .glitch-text::after,
+body:has(main[data-barba-namespace]):has(#nav-home) > .scanlines,
+body:has(main[data-barba-namespace]):has(#nav-home) > .cursor-dot,
+body:has(main[data-barba-namespace]):has(#nav-home) > .cursor-glow {display:none!important}
+main:is([data-barba-namespace="files"],[data-barba-namespace="subjects"],[data-barba-namespace="games"],[data-barba-namespace="podcast"],[data-barba-namespace="stories"],[data-barba-namespace="audio"]) {
+    background:#10191b;
+    color:#eee9df;
+}
+main[data-barba-namespace] > section:is(.bg-zinc-950,.bg-black,.bg-gray-950) {background-color:#10191b}
+main[data-barba-namespace] :is(.text-green-400,.text-green-500) {color:#d9aa77}
+main[data-barba-namespace] :is(.text-gray-400,.text-zinc-400) {color:#b1b8b6}
+main[data-barba-namespace] .border-gray-800 {border-color:#eee9df26}
+main[data-barba-namespace] :is(a,button):focus-visible {outline:2px solid #d9aa77;outline-offset:4px}
+main[data-barba-namespace] .silence-story-card .s-cta {color:#d9aa77}
+main[data-barba-namespace] .silence-story-card .s-card-title {color:#eee9df}

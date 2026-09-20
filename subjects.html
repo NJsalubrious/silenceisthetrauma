@@ -129,7 +129,7 @@
 
     <!-- Centralized URL Manifest - MUST be loaded before other scripts -->
     <script src="site-manifest.js"></script>
-    <link rel="stylesheet" href="master-hub.css?v=4">
+    <link rel="stylesheet" href="master-hub.css?v=5">
 <style>
 /* Page specific overrides */
 </style>
@@ -827,6 +827,8 @@ if(!visualizer) return;
         // Initialize Audio Player with robust Event Listeners
 
         function selectTrack(id) {
+            // Saved Songs state can restore before the Songs UI is mounted.
+            if (!document.getElementById("current-track-title")) return;
             // Don't restart if same track is already playing
             if (currentTrackId === id) {
                 console.log(`Track ${id} already playing - skipping restart`);

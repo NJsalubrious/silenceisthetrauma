@@ -143,7 +143,7 @@
 
     <!-- Centralized URL Manifest - MUST be loaded before other scripts -->
     <script src="site-manifest.js"></script>
-    <link rel="stylesheet" href="master-hub.css?v=4">
+    <link rel="stylesheet" href="master-hub.css?v=5">
 <style>
 /* Page specific overrides */
 </style>
@@ -152,6 +152,7 @@
 
 <body class="selection:bg-green-900 selection:text-white" data-barba="wrapper">
 
+    <a class="alternative-skip" href="#alternative-main">Skip to content</a>
     <div class="cursor-glow" id="cursor-glow"></div>
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="scanlines"></div>
@@ -223,37 +224,22 @@
         </div>
     </div>
 
-    <main class="h-screen relative overflow-hidden" data-barba="container" data-barba-namespace="home">
-        <h1 class="sr-only">Silence Is The Trauma</h1>
-
-        <section class="relative w-full h-full flex flex-col items-center justify-center overflow-"
-            id="home-section">
-            <canvas class="absolute top-0 left-0 w-full h-full z-0 opacity-20" id="noiseCanvas"></canvas>
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-8 pb-24 sm:pb-0">
-                <a href="veX_social_network/"
-                    class="inline-block border border-green-500/30 bg-black/50 px-4 py-1 rounded-full backdrop-blur-sm mb-4">
-                    <span
-                        class="text-green-500 font-mono-custom text-xs tracking-widest uppercase flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        VEX Social // Where Silence talks
-                    </span>
-                </a>
-                <h2
-                    class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none mb-6 mix-blend-difference">
-                    SILENCE IS<br />THE TRAUMA
-                </h2>
-                <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                    An immersive original music crime series<br />
-                    <span class="text-white font-medium">Three lives. One storm.</span>
-
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-8">
-                    <!-- A real anchor, not a scripted location change: Barba only
-                         intercepts <a> clicks, and stories.html is not in its prevent
-                         list, so this gets a soft swap and the ambient music keeps
-                         playing. window.location.href would force a full reload and
-                         cut the audio. -->
-                    <a href="stories.html"
+    <main id="alternative-main" class="alternative alternative-glass glass-home" data-barba="container" data-barba-namespace="home" tabindex="-1">
+    <!-- Container styles load on a Barba return from any existing main page. -->
+    <link rel="stylesheet" href="assets/home-alternatives/home-alternatives.css">
+    <link rel="stylesheet" href="assets/home-alternatives/glass-home.css">
+    <section id="home-section" class="glass-hero" aria-labelledby="home-title">
+        <div class="glass-art" aria-hidden="true">
+            <img class="glass-portrait" src="library/images/Ethel_behind_glass.jpg" alt="" fetchpriority="high">
+            <img class="glass-house" src="library/images/glass-house.jpg" alt="">
+            <div class="glass-panes"></div>
+        </div>
+        <div class="glass-content">
+            <p class="eyebrow">Sydney / A family / A system of silence</p>
+            <h1 id="home-title" class="glass-title">SILENCE IS<span>THE TRAUMA</span></h1>
+            <p class="glass-line">Everything visible.<br>Nothing seen.</p>
+            <p class="hero-description">A crime story about a global criminal empire protected by a hero’s reputation. Two stepsisters follow the evidence everyone else explains away.</p>
+            <div class="home-actions"><a href="stories.html"
                        class="cta px-6 py-3 sm:px-8 sm:py-4 bg-white text-black font-bold text-base sm:text-lg hover:bg-gray-200 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2 no-underline">
                         STORIES
                     </a>
@@ -266,24 +252,17 @@
                         class="cta px-6 py-3 sm:px-8 sm:py-4 border-2 border-white/70 text-white font-bold text-base sm:text-lg hover:bg-white/10 transition-colors uppercase tracking-widest font-mono-custom flex items-center justify-center gap-2"
                         onclick="if(ytPlayer && ytPlayer.pauseVideo) ytPlayer.pauseVideo(); window.location.href = resolveManifestPath(PIXEL_MANIFEST.CINEMA);">
                         CINEMA
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Removed for Weight -->
-
-        <!-- Section Removed for Weight -->
-
-        <!-- Section Removed for Weight -->
-
-        <!-- Section Removed for Weight -->
-
-        <!-- Section Removed for Weight -->
-
-        <!-- Section Removed for Weight -->
-
-    </main>
+                    </button></div>
+        </div>
+        <div class="glass-bottom">
+            <a href="veX_social_network/" class="vex-entry" aria-label="Enter veX, the story's living social network">
+                <span class="vex-wordmark" aria-hidden="true">veX</span>
+                <span class="vex-invitation">Enter the social network</span>
+                <span class="vex-arrow" aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
+</main>
 
     <!-- Global Podcast Audio Player (persists across all tabs) -->
     <div id="podcast-player"
@@ -781,6 +760,7 @@ if(!visualizer) return;
         // Initialize Audio Player with robust Event Listeners
 
         function selectTrack(id) {
+            if (!document.getElementById("current-track-title")) return;
             // Don't restart if same track is already playing
             if (currentTrackId === id) {
                 console.log(`Track ${id} already playing - skipping restart`);
@@ -1921,10 +1901,10 @@ if(!container) return;
     <!-- Dominic Tour Re-engage Button (subtle, appears after tour rejection) -->
     <div id="tour-overlay"></div>
     <button id="dominic-reengage-btn" title="...">D</button>
-    <button id="dominic-orb" title="Wake Dominic">D</button>
+    <button id="dominic-orb" title="Talk to Dominic Ryker" aria-label="Talk to Dominic Ryker" aria-controls="dominic-chat-panel">D</button>
 
     <!-- JB (Jukebox) Trigger -->
-    <button id="jb-trigger" title="Jukebox" onclick="toggleJBPopup()">JB</button>
+    <button id="jb-trigger" title="Open jukebox" aria-label="Open jukebox" onclick="toggleJBPopup()">JB</button>
 
     <script>
         // --- JUKEBOX POPUP WINDOW LOGIC ---

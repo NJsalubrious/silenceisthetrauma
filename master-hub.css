@@ -2532,7 +2532,7 @@ body:has(main[data-barba-namespace]):has(#nav-home) > .scanlines,
 body:has(main[data-barba-namespace]):has(#nav-home) > .cursor-dot,
 body:has(main[data-barba-namespace]):has(#nav-home) > .cursor-glow {display:none!important}
 main:is([data-barba-namespace="files"],[data-barba-namespace="subjects"],[data-barba-namespace="games"],[data-barba-namespace="podcast"],[data-barba-namespace="stories"],[data-barba-namespace="audio"]) {
-    background:#10191b;
+    background:#050505;
     color:#eee9df;
 }
 body:has(main[data-barba-namespace="home"]) {--bg-dark:#10191b;--site-nav:#10191bf5}

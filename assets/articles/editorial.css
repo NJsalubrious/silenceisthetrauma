@@ -1,0 +1,21 @@
+/* Files page only. Kept inside the Barba container on navigation. */
+#files-section .editorial-archive{max-width:1440px;margin:auto;padding:100px 5% 100px;color:#eee9df}
+.editorial-archive *{box-sizing:border-box}
+.editorial-archive a{color:inherit;text-decoration:none}
+.editorial-archive a:focus-visible{outline:2px solid #d9aa77;outline-offset:6px}
+.editorial-header{padding:0 0 32px;margin-bottom:32px;border-bottom:1px solid #ffffff24}
+.editorial-header .editorial-label{font:11px/1.6 'Courier Prime',monospace;letter-spacing:.1em;text-transform:uppercase;color:#a8a8a8;margin:0 0 14px}
+.editorial-header h1{font:clamp(44px,6vw,80px)/1.05 Georgia,serif;letter-spacing:-.045em;margin:0 0 18px}
+.editorial-header>p:last-child{font-size:15px;line-height:1.65;max-width:540px;color:#aaa;margin:0}
+.editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px 28px}
+.editorial-card{min-width:0;border-bottom:1px solid #ffffff24;padding-bottom:28px}
+.editorial-card:first-child{grid-column:span 3;display:grid;grid-template-columns:1.45fr 1fr;gap:42px;align-items:center;padding-bottom:36px}
+.editorial-image{display:block;aspect-ratio:16/10;overflow:hidden;background:#111}
+.editorial-image img{width:100%;height:100%;object-fit:cover;display:block}
+.editorial-copy .editorial-meta{font:11px/1.6 'Courier Prime',monospace;color:#999;margin:18px 0 12px}
+.editorial-copy h2{font:27px/1.16 Georgia,serif;letter-spacing:-.025em;margin:0 0 16px;color:#eee9df}
+.editorial-card:first-child h2{font-size:clamp(35px,4vw,56px)}
+.editorial-copy .editorial-excerpt{color:#aaa;font-size:15px;line-height:1.65;margin:0 0 12px;max-width:55ch}
+.editorial-copy .editorial-read{display:inline-block;font:12px/1.5 'Courier Prime',monospace;color:#d9aa77;padding:10px 0 5px;border-bottom:1px solid #d9aa7766}
+.editorial-copy h2 a:hover,.editorial-copy .editorial-read:hover{color:#d9aa77}
+@media(max-width:767px){#files-section .editorial-archive{padding:90px 6% 90px}.editorial-grid{grid-template-columns:1fr;gap:30px}.editorial-card:first-child{display:block;grid-column:auto;padding-bottom:28px}.editorial-card:first-child h2{font-size:34px}.editorial-header{margin-bottom:25px;padding-bottom:25px}}

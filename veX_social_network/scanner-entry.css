@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+.scanner-mark{position:relative;display:block;flex:0 0 64px;width:64px;height:44px;margin-left:-22px;padding:0;border:0;background:none;color:#bba77c;cursor:pointer;overflow:visible}
+.nav-logo .scanner-mark img{margin:0;width:64px;height:44px;object-fit:contain;transition:opacity .3s}
+.scanner-mark:focus-visible{outline:1px solid #c5a059;outline-offset:8px}
+.mark-detail{position:absolute;pointer-events:none;display:block}.mark-detail svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.mark-hint{position:absolute;top:55px;left:0;white-space:nowrap;font:10px/1.5 var(--font-sans);letter-spacing:.015em;color:#b7af9e;opacity:0;pointer-events:none;transition:opacity .2s;z-index:5}
+.scanner-mark:hover .mark-hint,.scanner-mark:focus-visible .mark-hint{opacity:1}
+.mark-1 .mark-detail{left:4px;bottom:-2px;width:56px;height:12px;opacity:.45;transition:opacity .3s,color .3s}
+.mark-1:hover .mark-detail,.mark-1:focus-visible .mark-detail{opacity:1;color:#c5a059}
+.mark-2 .mark-detail{inset:-8px;opacity:.45;transition:opacity .35s;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,0 80%,18% 80%,18% 20%,82% 20%,82% 80%,0 80%)}
+.mark-2 .mark-detail path{opacity:.2}.mark-2 .mark-detail circle{fill:currentColor;stroke:none}
+.mark-2:hover img,.mark-2:focus-visible img{opacity:.12}.mark-2:hover .mark-detail,.mark-2:focus-visible .mark-detail{clip-path:none;opacity:1}.mark-2:hover .mark-detail path,.mark-2:focus-visible .mark-detail path{opacity:.65}
+.mark-3 .mark-detail{width:15px;height:15px;right:-3px;bottom:-3px;color:#b7ad92;transition:width .25s,height .25s}.mark-3 .fold{fill:#1e3026;stroke:#8b987b;stroke-width:.7}.mark-3:hover .mark-detail,.mark-3:focus-visible .mark-detail{width:21px;height:21px}
+.mark-4{width:94px;flex-basis:94px}.mark-4 .mark-detail{width:19px;height:19px;left:71px;top:13px;opacity:.65;transition:opacity .2s}.mark-4:hover .mark-detail,.mark-4:focus-visible .mark-detail{opacity:1}.mark-4 .mark-hint{left:0}
+.scanner-room .scanner-chrome{min-height:48px;padding:2px 12px;background:#080b09;border-bottom-color:#ffffff18}.scanner-room .scanner-chrome button{min-height:44px;padding:6px 10px;border:0;background:none;color:#c8c7bb;font-size:11px}.scanner-room .scanner-chrome button:hover{color:#fff;background:#ffffff08}.scanner-room .room-context{font-size:10px;color:#778079}
+.mark-5{--near:0;--drift-x:0px;--drift-y:0px}.mark-5 .mark-detail{inset:-22px;color:#b8ac8a;opacity:calc(.35 + var(--near)*.65);transform:translate(var(--drift-x),var(--drift-y));transition:transform .2s ease-out,opacity .3s}.mark-5 .mark-detail circle{fill:currentColor;stroke:none}.mark-5:hover img{opacity:.6}.mark-5 .mark-hint{top:65px}
+@media(max-width:700px){.mobile-header .scanner-mark{margin-left:0}.mark-hint{left:50%;transform:translateX(-50%);top:48px;background:#080a08;padding:3px 7px}.scanner-mark:hover .mark-hint{opacity:0}.scanner-mark:focus-visible .mark-hint{opacity:1}}
+@media(prefers-reduced-motion:reduce){.scanner-mark *{transition:none!important}}
+.mark-5 .vex-home-wordmark{position:relative;z-index:2;display:block;font:700 32px/44px 'Space Grotesk',Arial,sans-serif;letter-spacing:-.06em;color:#e4b987;text-shadow:0 0 5px #050505,0 0 12px #050505,0 0 18px #050505}
+.mark-5 .mark-detail{inset:auto;left:-18px;top:-28px;width:100px;height:100px;color:#a7ad99;opacity:calc(.48 + var(--near)*.45)}
+.mark-5 .mark-detail .globe-link{stroke-width:.55}
+.mark-5 .mark-detail .globe-rim{fill:none;stroke-width:.5;opacity:.16}
+.mark-5 .mark-detail .globe-point{stroke:none;fill:currentColor}
+@media(min-width:769px){.nav-column .nav-logo{padding:40px 0 28px}.nav-column .scanner-mark{margin-left:34px}.nav-column .vex-home-wordmark{text-align:center}}

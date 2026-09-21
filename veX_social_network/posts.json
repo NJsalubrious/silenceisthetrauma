@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_868c1cd9",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They embalmed the rot in a velvet box, but the infection learned to scream.",
+    "timestamp": "2026-09-21T01:42:34.426888Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_a15665bd",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

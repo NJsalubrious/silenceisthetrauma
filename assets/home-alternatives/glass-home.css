@@ -8,6 +8,7 @@ body:has(.glass-home) input,body:has(.glass-home) textarea,body:has(.glass-home)
 .glass-home .home-socials svg{width:19px;height:19px;flex-shrink:0}
 .glass-home .social-icons{display:flex;gap:4px}
 .glass-home .social-icons a{width:40px}
+.glass-home .social-icons .home-bio{font:11px/1.5 var(--mono);letter-spacing:.06em}
 @media(max-width:767px){.glass-home .home-socials{margin-top:24px;padding-top:10px;border-top:1px solid #ddd9cb45;flex-wrap:wrap;justify-content:center;gap:0 20px}.glass-home .home-socials .soundtrack-link{font-size:10px;gap:8px}}
 .glass-home .glass-hero{min-height:calc(100svh - 64px);display:grid;grid-template-rows:1fr auto;align-items:center;padding:64px 6% 76px;gap:38px}
 .glass-home .glass-content{max-width:760px}
@@ -43,7 +44,7 @@ body:has(.glass-home) #dominic-orb:focus-visible,body:has(.glass-home) #jb-trigg
  .glass-home #home-section.glass-hero{--portrait-height:clamp(410px,92vw,570px);display:block;padding:clamp(310px,66vw,390px) 6% calc(84px + env(safe-area-inset-bottom,0px))!important;min-height:calc(100svh - 64px)}
  .glass-home .glass-content>.eyebrow{position:absolute;top:14px;left:6%;right:6%;max-width:none;margin:0}
  .glass-home #home-section .eyebrow{font-size:8px!important}
- .glass-home .home-actions{position:absolute;top:62px;left:6%;display:flex;flex-direction:column;gap:8px;width:clamp(92px,23vw,120px)}
+ .glass-home .home-actions{position:absolute;top:calc(clamp(310px,66vw,390px) - 234px);left:6%;display:flex;flex-direction:column;gap:8px;width:clamp(92px,23vw,120px)}
  .glass-home .home-actions .cta{width:100%;min-height:48px;padding:12px 10px;font-size:11px;background:#10191b33}
  .glass-home .home-actions .cta:first-child{background:var(--paper)}
  .glass-home .glass-title{font-size:clamp(39px,10.4vw,72px);margin-bottom:20px}
@@ -52,8 +53,8 @@ body:has(.glass-home) #dominic-orb:focus-visible,body:has(.glass-home) #jb-trigg
  .glass-home .glass-art{background:#10191b}
  .glass-home .glass-art .glass-portrait{height:var(--portrait-height);object-position:62% 25%}
  .glass-home .glass-art::after{background:linear-gradient(180deg,transparent 0px,transparent calc(var(--portrait-height) * .5),#10191b99 calc(var(--portrait-height) * .78),#10191b var(--portrait-height))}
- .glass-home .glass-bottom{position:absolute;top:238px;bottom:auto;left:6%;right:auto;width:clamp(92px,23vw,120px);padding:0;border:0;justify-content:center}
- .glass-home .glass-bottom .vex-entry{min-height:48px;padding:8px 12px;gap:0;justify-content:center}
+ .glass-home .glass-bottom{position:absolute;top:calc(clamp(310px,66vw,390px) - 70px);bottom:auto;left:6%;right:auto;width:clamp(92px,23vw,120px);padding:0;border:0;justify-content:center}
+ .glass-home .glass-bottom .vex-entry{min-height:44px;padding:6px 12px;gap:0;justify-content:center}
  .glass-home .vex-wordmark{font-size:29px}
  .glass-home .vex-invitation,.glass-home .vex-arrow{display:none}
  body:has(.glass-home) #jb-trigger,body:has(.glass-home) #dominic-orb{width:44px;height:44px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}

@@ -26458,5 +26458,35 @@
     "image_alt": null,
     "type": "post",
     "pinned": false
+  },
+  {
+    "id": "pv_kirb_isla_cope",
+    "handle": "@keep_it_real_bro_podcast",
+    "display_name": "Keep It Real Bro Podcast",
+    "avatar": "../assets/images/characters/avatars/keep_it_real_bro_podcast-avatar.jpg",
+    "content": "@isla_band SIXTY THOUSAND YEARS OF BIOLOGY. COPE.",
+    "timestamp": "2026-09-22T13:30:00Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "video": "tbrwfjVVoxE",
+    "video_title": "SIXTY THOUSAND YEARS OF BIOLOGY. COPE",
+    "type": "post",
+    "pinned": false
+  },
+  {
+    "id": "pv_isla_kirb_cope_reply",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Thats actually funny. You build a podcast. I built a sold out arena Tour",
+    "timestamp": "2026-09-22T13:45:00Z",
+    "reply_to": "pv_kirb_isla_cope",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "post",
+    "pinned": false
   }
 ]

@@ -133,7 +133,7 @@ const PIXEL_MANIFEST = {
             title: 'Prognosis Good',
             track: 'STORY 07 // PROGNOSIS GOOD',
             description: 'Eleven weeks of DBT for a girl whose fear fits the facts. She tells them what they want to hear.',
-            cover: '/short_stories/pixelstortion_Prognosis_Good.jpg',
+            cover: 'https://silenceisthetrauma.com/short_stories/pixelstortion_Prognosis_Good.jpg',
             href: '/short_stories/pixelstortion_Prognosis_Good.html'
         },
         The_Ferenczi_Split: {
@@ -161,7 +161,7 @@ const PIXEL_MANIFEST = {
             title: 'The Banality of Kindness',
             track: 'STORY 04 // BANALITY OF KINDNESS',
             description: 'He was polite, clever, heroic and evil',
-            cover: '/short_stories/pixelstortion_banality_of_kindness.jpg',
+            cover: 'https://silenceisthetrauma.com/short_stories/pixelstortion_banality_of_kindness.jpg',
             href: '/short_stories/pixelstortion_banality_of_kindness.html'
         },
         Same_Breath: {

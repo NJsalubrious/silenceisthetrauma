@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_61d5b890",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The new polish doesn't hide the old grain.",
+    "timestamp": "2026-09-22T09:20:39.629619Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/media/2026/sep/21/cnn-cbs-news-editorial-board-skepticsm",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_8b158c28",
     "handle": "@isla_band",
     "display_name": "Isla",

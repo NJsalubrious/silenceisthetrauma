@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_8b158c28",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some find their rhythm in a chord; I found mine in the pulse of a fresh wound.",
+    "timestamp": "2026-09-22T01:37:01.361489Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/metallicas-james-hetfield-on-black-sabbaths-tony-iommi-he-is-the-one-that-has-inspired-me-the-most-out-of-any-guitar-player",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_868c1cd9",
     "handle": "@isla_band",
     "display_name": "Isla",

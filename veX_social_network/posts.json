@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_f2adb3ac",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They confuse the vehicle with the destination, until the chassis hums their undoing.",
+    "timestamp": "2026-09-23T01:34:05.109963Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/09/21/mondaysucks-with-john-goblikon-no-one-survives-an-uber/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_61d5b890",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,7 +1,7 @@
 /**
  * SILENCE IS THE TRAUMA — Ambient Audio Player
- * Shuffles the theme songs in the persistent shell.
- * Each entry starts with track 1, 3 or 4; Barba navigation keeps playback intact.
+ * Plays the four theme songs in order in the persistent shell.
+ * Each entry starts with track 1 or 2; Barba navigation keeps playback intact.
  * Fades out when the user navigates to the Songs page.
  * Respects browser autoplay policy.
  */
@@ -18,11 +18,8 @@
         'theme_songs/3_Isla_Keep_the_Music_On.mp3',
         "theme_songs/4_Dominic_You'll_Do_It_Yourself.mp3"
     ].map(src => new URL(src, SITE_URL).href);
-    const START_TRACK_INDICES = [0, 2, 3];
-
     let audio = null;
-    let currentTrackIndex = START_TRACK_INDICES[Math.floor(Math.random() * START_TRACK_INDICES.length)];
-    let remainingTracks = shuffle(TRACKS.map((_, index) => index).filter(index => index !== currentTrackIndex));
+    let currentTrackIndex = Math.floor(Math.random() * 2);
     let isFadedOut = false;
     let fadeInterval = null;
     let muteToggles = []; // one button in the desktop nav, one in the mobile burger row
@@ -30,28 +27,12 @@
     let fadedByNarration = false; // true only while a story narration has ducked us
     const TARGET_VOLUME = 0.25; // Ambient, not dominant
 
-    function shuffle(indices) {
-        for (let i = indices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [indices[i], indices[j]] = [indices[j], indices[i]];
-        }
-        return indices;
-    }
-
     /**
-     * Play every other track once before reshuffling. Also prevent a repeat
-     * across the boundary between two shuffled rounds.
+     * Advance in playlist order, looping back to the first track after the last.
      */
     function advanceTrack(shouldPlay) {
         if (!audio) return;
-        if (remainingTracks.length === 0) {
-            remainingTracks = shuffle(TRACKS.map((_, index) => index));
-            if (remainingTracks[0] === currentTrackIndex) {
-                const swapIndex = 1 + Math.floor(Math.random() * (remainingTracks.length - 1));
-                [remainingTracks[0], remainingTracks[swapIndex]] = [remainingTracks[swapIndex], remainingTracks[0]];
-            }
-        }
-        currentTrackIndex = remainingTracks.shift();
+        currentTrackIndex = (currentTrackIndex + 1) % TRACKS.length;
         audio.src = TRACKS[currentTrackIndex];
         if (shouldPlay && !isMuted && !isFadedOut && !fadedByNarration) {
             audio.play().catch(() => {});
@@ -69,7 +50,7 @@
         audio.setAttribute('playsinline', ''); // iOS: allow inline (non-fullscreen) playback
         audio.volume = TARGET_VOLUME;
 
-        // Pick and preload before the entry gesture. Never change the source
+        // Preload the selected starting song before the entry gesture. Never change the source
         // merely because the user navigated to another Barba page.
         audio.src = TRACKS[currentTrackIndex];
 

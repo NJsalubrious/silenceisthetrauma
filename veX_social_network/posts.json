@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_71357942",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They press old fears into wax; I press the living into their own silence.",
+    "timestamp": "2026-09-24T01:38:48.903113Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/king-diamond-three-song-halloween-picture-disc-featuring-new-artwork-due-in-october",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_3aa64799",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

@@ -1,6 +1,7 @@
 /**
  * SILENCE IS THE TRAUMA — Ambient Audio Player
- * Plays two theme songs on loop in the persistent shell.
+ * Shuffles the theme songs in the persistent shell.
+ * Each entry starts with track 1, 3 or 4; Barba navigation keeps playback intact.
  * Fades out when the user navigates to the Songs page.
  * Respects browser autoplay policy.
  */
@@ -8,20 +9,55 @@
 (function () {
     'use strict';
 
+    // Resolve once against this script, not the current page: Barba can move
+    // into nested story/archive URLs while this same player keeps running.
+    const SITE_URL = new URL('../', document.currentScript.src);
     const TRACKS = [
         'theme_songs/1_Silence_Is_The_Trauma_Theme_Song.mp3',
-        'theme_songs/2_Ethel_Wont_Break_Where_Others_End.mp3'
-    ];
+        'theme_songs/2_Ethel_Wont_Break_Where_Others_End.mp3',
+        'theme_songs/3_Isla_Keep_the_Music_On.mp3',
+        "theme_songs/4_Dominic_You'll_Do_It_Yourself.mp3"
+    ].map(src => new URL(src, SITE_URL).href);
+    const START_TRACK_INDICES = [0, 2, 3];
 
     let audio = null;
-    let currentTrackIndex = 0;
-    let userHasInteracted = false;
+    let currentTrackIndex = START_TRACK_INDICES[Math.floor(Math.random() * START_TRACK_INDICES.length)];
+    let remainingTracks = shuffle(TRACKS.map((_, index) => index).filter(index => index !== currentTrackIndex));
     let isFadedOut = false;
     let fadeInterval = null;
     let muteToggles = []; // one button in the desktop nav, one in the mobile burger row
     let isMuted = false;
     let fadedByNarration = false; // true only while a story narration has ducked us
     const TARGET_VOLUME = 0.25; // Ambient, not dominant
+
+    function shuffle(indices) {
+        for (let i = indices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        return indices;
+    }
+
+    /**
+     * Play every other track once before reshuffling. Also prevent a repeat
+     * across the boundary between two shuffled rounds.
+     */
+    function advanceTrack(shouldPlay) {
+        if (!audio) return;
+        if (remainingTracks.length === 0) {
+            remainingTracks = shuffle(TRACKS.map((_, index) => index));
+            if (remainingTracks[0] === currentTrackIndex) {
+                const swapIndex = 1 + Math.floor(Math.random() * (remainingTracks.length - 1));
+                [remainingTracks[0], remainingTracks[swapIndex]] = [remainingTracks[swapIndex], remainingTracks[0]];
+            }
+        }
+        currentTrackIndex = remainingTracks.shift();
+        audio.src = TRACKS[currentTrackIndex];
+        if (shouldPlay && !isMuted && !isFadedOut && !fadedByNarration) {
+            audio.play().catch(() => {});
+        }
+        refreshToggleUI();
+    }
 
     /**
      * Create the audio element in the persistent shell
@@ -33,21 +69,13 @@
         audio.setAttribute('playsinline', ''); // iOS: allow inline (non-fullscreen) playback
         audio.volume = TARGET_VOLUME;
 
-        // Restore the track index from a prior session (hard-refresh continuity)
-        // BEFORE setting src, so the gesture-driven play() doesn't have to swap
-        // src mid-gesture (which mobile browsers often refuse).
-        const savedTrack = sessionStorage.getItem('ambient_track');
-        if (savedTrack !== null) {
-            currentTrackIndex = parseInt(savedTrack, 10) || 0;
-        }
+        // Pick and preload before the entry gesture. Never change the source
+        // merely because the user navigated to another Barba page.
         audio.src = TRACKS[currentTrackIndex];
 
-        // When one track ends, play the next and loop
-        audio.addEventListener('ended', () => {
-            currentTrackIndex = (currentTrackIndex + 1) % TRACKS.length;
-            audio.src = TRACKS[currentTrackIndex];
-            audio.play().catch(() => {});
-        });
+        audio.addEventListener('ended', () => advanceTrack(true));
+        audio.addEventListener('play', refreshToggleUI);
+        audio.addEventListener('pause', refreshToggleUI);
 
         document.body.appendChild(audio);
     }
@@ -95,6 +123,56 @@
         return btn;
     }
 
+    function buildControls() {
+        const controls = document.createElement('div');
+        controls.className = 'ambient-audio-controls';
+        controls.setAttribute('role', 'group');
+        controls.setAttribute('aria-label', 'Background music');
+        Object.assign(controls.style, {
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            flexShrink: '0'
+        });
+
+        const playButton = buildToggleButton();
+        playButton.style.marginLeft = '0';
+        muteToggles.push(playButton);
+
+        const nextButton = document.createElement('button');
+        nextButton.type = 'button';
+        nextButton.className = 'ambient-next-track';
+        nextButton.setAttribute('aria-label', 'Skip to next song');
+        nextButton.setAttribute('title', 'Skip to next song');
+        nextButton.innerHTML = '<span class="material-symbols-outlined" aria-hidden="true" style="font-size:20px;">skip_next</span>';
+        Object.assign(nextButton.style, {
+            background: 'none',
+            border: 'none',
+            borderRadius: '50%',
+            width: '32px',
+            height: '36px',
+            padding: '0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: '#00ff41',
+            opacity: '0.6',
+            transition: 'opacity 0.2s ease'
+        });
+        nextButton.addEventListener('mouseover', () => { nextButton.style.opacity = '1'; });
+        nextButton.addEventListener('mouseout', () => { nextButton.style.opacity = '0.6'; });
+        nextButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Selecting another track while paused leaves the player paused.
+            advanceTrack(!audio.paused);
+        });
+
+        controls.appendChild(playButton);
+        controls.appendChild(nextButton);
+        return controls;
+    }
+
     /**
      * Reflect the current play/pause state on every toggle button.
      */
@@ -104,6 +182,8 @@
             const icon = btn.querySelector('.material-symbols-outlined');
             if (icon) icon.textContent = playing ? 'pause' : 'play_arrow';
             btn.style.color = playing ? '#00ff41' : '#666';
+            btn.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+            btn.setAttribute('title', playing ? 'Pause background music' : 'Play background music');
         });
     }
 
@@ -118,20 +198,19 @@
 
         const desktopNav = document.querySelector('.ml-10.flex.items-baseline');
         if (desktopNav) {
-            const b = buildToggleButton();
-            desktopNav.appendChild(b);
-            muteToggles.push(b);
+            const controls = buildControls();
+            controls.style.marginLeft = '12px';
+            desktopNav.appendChild(controls);
         }
 
         // Mobile: the hamburger lives in a `-mr-2 flex md:hidden` container.
         const mobileBurgerRow = document.querySelector('.flex.md\\:hidden');
         if (mobileBurgerRow) {
-            const b = buildToggleButton();
-            b.style.marginLeft = '0';
-            b.style.marginRight = '8px';
-            mobileBurgerRow.insertBefore(b, mobileBurgerRow.firstChild);
-            muteToggles.push(b);
+            const controls = buildControls();
+            controls.style.marginRight = '8px';
+            mobileBurgerRow.insertBefore(controls, mobileBurgerRow.firstChild);
         }
+        refreshToggleUI();
     }
 
     /**
@@ -139,15 +218,20 @@
      */
     function toggleMute() {
         if (!audio) return;
+        // An explicit button click takes priority over an in-progress page or
+        // narration fade, including a manual pause while entering Songs.
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+        isFadedOut = false;
+        fadedByNarration = false;
         
         if (audio.paused) {
             // Restore volume in case a narration fade left it at 0, and pause any
             // story narration — the two are mutually exclusive.
             audio.volume = TARGET_VOLUME;
-            fadedByNarration = false;
-            audio.play().catch(e => console.log('Audio play failed:', e));
             isMuted = false;
             if (typeof window.pauseStoryNarration === 'function') window.pauseStoryNarration();
+            startPlayback().catch(e => console.log('Audio play failed:', e));
         } else {
             audio.pause();
             isMuted = true;
@@ -161,6 +245,7 @@
      * after a bfcache restore, where the original binding has already unbound.
      */
     let interactionArmed = false;
+    let disarmFirstInteraction = () => {};
     function armFirstInteraction() {
         if (interactionArmed) return;
         interactionArmed = true;
@@ -170,14 +255,19 @@
         // gesture, and only unbind once play() actually RESOLVES, so a blocked
         // first tap retries on the next interaction instead of giving up.
         const interactionEvents = ['pointerup', 'touchend', 'click', 'keydown'];
-        const onFirstInteraction = () => {
-            startPlayback().then(() => {
-                interactionArmed = false;
-                interactionEvents.forEach(evt =>
-                    document.removeEventListener(evt, onFirstInteraction, true));
-            }).catch(() => {
+        const onFirstInteraction = (event) => {
+            // These buttons handle their own gesture. A capture-phase play()
+            // here would turn the very first Play click into a Pause click.
+            if (event.target.closest && event.target.closest('.ambient-audio-controls')) return;
+            if (isMuted || isFadedOut) return;
+            startPlayback().catch(() => {
                 // Still blocked — keep the listeners attached to retry.
             });
+        };
+        disarmFirstInteraction = () => {
+            interactionArmed = false;
+            interactionEvents.forEach(evt =>
+                document.removeEventListener(evt, onFirstInteraction, true));
         };
         interactionEvents.forEach(evt =>
             document.addEventListener(evt, onFirstInteraction, true));
@@ -188,19 +278,8 @@
      */
     function startPlayback() {
         if (!audio) return Promise.reject(new Error('no audio element'));
-        const playPromise = audio.play();
-        if (playPromise === undefined) {
-            userHasInteracted = true;
-            return Promise.resolve();
-        }
-        return playPromise.then(() => {
-            userHasInteracted = true;
-            // Resume saved position (hard-refresh continuity). Track index was
-            // already applied in createAudioElement, so no src swap needed here.
-            const savedPos = sessionStorage.getItem('ambient_position');
-            if (savedPos) {
-                try { audio.currentTime = parseFloat(savedPos) || 0; } catch (e) {}
-            }
+        return Promise.resolve(audio.play()).then(() => {
+            disarmFirstInteraction();
             // If a story narration is already playing (e.g. both unlocked on the
             // same first gesture), immediately duck back out.
             if (typeof window.isStoryNarrationPlaying === 'function' && window.isStoryNarrationPlaying()) {
@@ -251,17 +330,24 @@
         }
         if (namespace === 'audio') {
             // Entering Songs page — fade out ambient
-            if (!isFadedOut && audio && !audio.paused) {
-                isFadedOut = true;
+            // A stopped narration dispatches its pause event asynchronously.
+            // Retire that duck before it can resume music over the Songs page.
+            fadedByNarration = false;
+            isFadedOut = true;
+            if (audio && !audio.paused) {
                 fadeTo(0, 2000, () => {
                     audio.pause();
                 });
+            } else if (audio) {
+                clearInterval(fadeInterval);
+                fadeInterval = null;
+                audio.volume = 0;
             }
         } else {
             // Leaving Songs page — fade back in
             if (isFadedOut && audio) {
                 isFadedOut = false;
-                userHasInteracted = true;
+                if (isMuted) return;
                 audio.play().then(() => {
                     fadeTo(TARGET_VOLUME, 1500);
                     refreshToggleUI();
@@ -269,16 +355,6 @@
             }
         }
     };
-
-    /**
-     * Save state before page unload (hard refresh)
-     */
-    function saveState() {
-        if (audio) {
-            sessionStorage.setItem('ambient_position', audio.currentTime.toString());
-            sessionStorage.setItem('ambient_track', currentTrackIndex.toString());
-        }
-    }
 
     /**
      * Initialize
@@ -296,8 +372,7 @@
             isFadedOut = true;
             audio.volume = 0; // so the fade-in on leaving Songs is smooth
             refreshToggleUI();
-            // Still allow saveState etc. to attach below; just don't bind the
-            // first-interaction starter on this page.
+            // Don't bind the first-interaction starter on this page.
         } else {
             // Start playback on the first real user gesture. Mobile (esp. iOS)
             // is fussy: touchstart often does NOT unlock audio, but touchend /
@@ -324,12 +399,6 @@
             refreshToggleUI();
         });
 
-        // Save state before unload
-        window.addEventListener('beforeunload', saveState);
-
-        // Continuously save position
-        setInterval(saveState, 2000);
-        
         // Expose to window so other scripts can pause it
         window.pauseAmbientMusic = function() {
             if (audio && !audio.paused) {
@@ -351,7 +420,7 @@
         window.resumeAmbientMusic = function (ms) {
             if (!audio || !fadedByNarration) return;
             fadedByNarration = false;
-            if (isMuted) return; // user muted separately — leave it off
+            if (isMuted || isFadedOut) return;
             audio.volume = 0;
             audio.play().then(() => {
                 fadeTo(TARGET_VOLUME, ms || 1500);

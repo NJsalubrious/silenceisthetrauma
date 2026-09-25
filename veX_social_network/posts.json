@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_fafb1412",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Their polished chrome only hid the acid leaching through the bedrock.",
+    "timestamp": "2026-09-25T01:49:47.788879Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_5c229604",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

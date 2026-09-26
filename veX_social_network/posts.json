@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_0f3bf068",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The new walls are counted by the brick, not by what they contain.",
+    "timestamp": "2026-09-26T09:19:26.404576Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/juvenile-crime-decrease-youth-prisons-tennessee-construction",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_0ecd8c32",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

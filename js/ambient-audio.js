@@ -1,6 +1,6 @@
 /**
  * SILENCE IS THE TRAUMA — Ambient Audio Player
- * Plays the four theme songs in order in the persistent shell.
+ * Plays the two theme songs in order in the persistent shell.
  * Each entry starts with track 1 or 2; Barba navigation keeps playback intact.
  * Fades out when the user navigates to the Songs page.
  * Respects browser autoplay policy.
@@ -14,9 +14,7 @@
     const SITE_URL = new URL('../', document.currentScript.src);
     const TRACKS = [
         'theme_songs/1_Silence_Is_The_Trauma_Theme_Song.mp3',
-        'theme_songs/2_Ethel_Wont_Break_Where_Others_End.mp3',
-        'theme_songs/3_Isla_Keep_the_Music_On.mp3',
-        "theme_songs/4_Dominic_You'll_Do_It_Yourself.mp3"
+        'theme_songs/2_Ethel_Wont_Break_Where_Others_End.mp3'
     ].map(src => new URL(src, SITE_URL).href);
     let audio = null;
     let currentTrackIndex = Math.floor(Math.random() * 2);

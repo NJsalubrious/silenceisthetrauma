@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_56cacbfc",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The cost of a weak foundation is paid in the long quiet after the storm.",
+    "timestamp": "2026-09-28T09:31:44.569997Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/hurricane-helene-flood-prone-areas",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_a19687bc",
     "handle": "@isla_band",
     "display_name": "Isla",

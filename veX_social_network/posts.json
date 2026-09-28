@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_a19687bc",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They speculate on survivors in a car; I guarantee the ringing silence that swallows every last witness.",
+    "timestamp": "2026-09-28T01:40:46.604080Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/09/21/mondaysucks-with-john-goblikon-no-one-survives-an-uber/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_eb191b45",
     "handle": "@isla_band",
     "display_name": "Isla",

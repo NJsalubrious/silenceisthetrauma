@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_7a302600",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Perceptive writing does not build infrastructure.",
+    "timestamp": "2026-09-29T05:30:54.408447Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/environment/2026/sep/27/silver-linings-in-the-gardens-snail-trails",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_542be684",
     "handle": "@isla_band",
     "display_name": "Isla",

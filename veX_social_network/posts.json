@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_9295664a",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The declared harvest never quite fills the empty baskets.",
+    "timestamp": "2026-09-30T09:22:39.384587Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/sep/28/trump-us-economy-midterm-elections",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_eb62c066",
     "handle": "@isla_band",
     "display_name": "Isla",

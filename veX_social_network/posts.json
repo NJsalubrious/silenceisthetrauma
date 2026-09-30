@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_eb62c066",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They keep announcing new releases, while I'm still teaching silence how to scream.",
+    "timestamp": "2026-09-30T01:29:44.957866Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/disfear-the-last-nail-tomas-lindberg/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_7a302600",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

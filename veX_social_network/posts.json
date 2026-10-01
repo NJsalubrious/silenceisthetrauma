@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_ae8ce743",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Let them complain about a new album; my silence after the last note is the only review that matters, where their names choke.",
+    "timestamp": "2026-10-01T01:48:24.785572Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/09/22/disgruntled-dad-reviews-with-dave-mustcomplain-anthrax-cursum-perficio/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_9295664a",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_d3f29f5e",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Regulators determine the cost of a workforce.",
+    "timestamp": "2026-10-02T05:35:18.467160Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/oct/01/lyft-largest-ever-wage-theft-settlement",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_0094f362",
     "handle": "@isla_band",
     "display_name": "Isla",

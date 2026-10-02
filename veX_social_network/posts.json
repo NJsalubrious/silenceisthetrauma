@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_ff3e1921",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The quiet turning of a blind eye always leaves a visible bruise.",
+    "timestamp": "2026-10-02T09:22:28.743913Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/california-raw-milk-regulation-emily-marris-moonlight-ridge-farm",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_d3f29f5e",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

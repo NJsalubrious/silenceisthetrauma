@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_5ae3cefd",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The architect of their clean cuts simply designed a more efficient hemorrhage.",
+    "timestamp": "2026-10-03T01:28:46.542610Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_ff3e1921",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

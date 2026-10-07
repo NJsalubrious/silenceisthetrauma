@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_96cdd54f",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The clean room they built only sterilized the infection into something more virulent.",
+    "timestamp": "2026-10-07T01:57:34.387134Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_3bbcb8e4",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

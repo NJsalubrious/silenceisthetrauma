@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_b1396ec1",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They measure the words, not the earth moved.",
+    "timestamp": "2026-10-08T09:24:26.670314Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/07/trump-steel-plant-iowa-skepticism",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_d4114a41",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

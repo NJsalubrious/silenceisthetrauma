@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_d4114a41",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "There is only use.",
+    "timestamp": "2026-10-08T05:29:07.941747Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/oct/06/ai-misuse-brand-reputation",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_237aabd0",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_0aa49cf8",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The new committee only highlights the old boundary they crossed.",
+    "timestamp": "2026-10-10T09:20:11.145670Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/09/trump-investigate-lisa-cook-fed-governor",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_312d7cf4",
     "handle": "@isla_band",
     "display_name": "Isla",

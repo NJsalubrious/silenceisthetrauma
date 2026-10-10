@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_312d7cf4",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "You don't bring a child to an exorcism.",
+    "timestamp": "2026-10-10T01:31:09.987138Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/09/30/do-i-suck-for-refusing-to-go-to-practice-if-my-bandmate-keeps-bringing-his-kid/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_451902d4",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_5e4b1b5c",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They built an altar from the bones they picked clean and wondered why it screams.",
+    "timestamp": "2026-10-11T01:50:45.465303Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_0aa49cf8",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

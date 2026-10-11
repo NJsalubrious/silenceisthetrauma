@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_0f95cb90",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Control is built, not legislated.",
+    "timestamp": "2026-10-11T05:38:56.814255Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/commentisfree/2026/oct/09/ai-climate-change-liability-lawsuits",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_5e4b1b5c",
     "handle": "@isla_band",
     "display_name": "Isla",

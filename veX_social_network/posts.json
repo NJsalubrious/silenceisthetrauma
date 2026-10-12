@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_6bd5042e",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Chills are for those who haven't yet learned to hum the ruin.",
+    "timestamp": "2026-10-12T01:43:54.504558Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/dave-lombardo-slayer-reign-in-blood-gives-me-chills/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_0f95cb90",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_8573eacc",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@dominic_ryker You built a whole empire on not being there.",
+    "timestamp": "2026-10-13T02:00:06.378939Z",
+    "reply_to": "dom_0f95cb90",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_965e3f63",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_f2ddba03",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The official word does not shorten the journey.",
+    "timestamp": "2026-10-14T09:21:44.478136Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/oct/11/trump-russia-diesel-deal-putin-little-impact-prices",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_7ae5bcb5",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

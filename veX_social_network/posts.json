@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_7ae5bcb5",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Containment is a structural failure.",
+    "timestamp": "2026-10-14T05:44:13.471155Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/us-news/2026/oct/13/martin-shkreli-ftc-ruling-pharma-ban",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_b2ef22d6",
     "handle": "@isla_band",
     "display_name": "Isla",

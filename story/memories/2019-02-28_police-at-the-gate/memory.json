@@ -1,0 +1,60 @@
+{
+ "id": "police-at-the-gate",
+ "title": "Police at the gate",
+ "date": "2019-02-28",
+ "order": 2,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/21_Police_At_the_gate/",
+ "aspect": 1.3846153846153846,
+ "focal": [
+  0.5,
+  0.5
+ ],
+ "zoom": 1,
+ "faces": [],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Police_At_the_gate_Background.png",
+   "depth": "Police_At_the_gate_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "mid",
+   "image": "Police_At_the_gate_Mid.png",
+   "depth": "Police_At_the_gate_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "Police_At_the_gate_Top.png",
+   "depth": "Police_At_the_gate_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132
+  }
+ ],
+ "together": "Police_At_the_gate_Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": null
+  },
+  "right": {
+   "to": "2019-02-28_the-crash"
+  }
+ }
+}

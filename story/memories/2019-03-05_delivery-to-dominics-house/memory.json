@@ -1,0 +1,225 @@
+{
+ "id": "delivery-to-dominics-house",
+ "title": "Delivery to Dominic's house",
+ "date": "2019-03-05",
+ "order": 0,
+ "kind": "strip",
+ "height": 1086,
+ "source": "../assets/entry-experiment/FinalsForTest_01/24_Delivery_To_Dominics_House/",
+ "note": "Six pictures side by side, one seamless strip, walked left to right like the deposit box: departures, the plane, arrivals and the car door, the bridge, the street, the gate. Background and top only. Joined end to end (the placement reference puts them within 1 to 4 px of this).",
+ "sections": [
+  {
+   "name": "Departures",
+   "width": 1743
+  },
+  {
+   "name": "On the plane",
+   "width": 1858
+  },
+  {
+   "name": "Arrivals: the car door",
+   "width": 1463
+  },
+  {
+   "name": "Over the bridge",
+   "width": 2697
+  },
+  {
+   "name": "The street",
+   "width": 2122
+  },
+  {
+   "name": "The gate",
+   "width": 2102
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_01.png",
+   "depth": "Delivery_To_Dominics_House_background_01_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_01.png",
+   "depth": "Delivery_To_Dominics_House_Top_01_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_02.png",
+   "depth": "Delivery_To_Dominics_House_background_02_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_02.png",
+   "depth": "Delivery_To_Dominics_House_Top_02_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_03.png",
+   "depth": "Delivery_To_Dominics_House_background_03_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_03.png",
+   "depth": "Delivery_To_Dominics_House_Top_03_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_04.png",
+   "depth": "Delivery_To_Dominics_House_background_04_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_04.png",
+   "depth": "Delivery_To_Dominics_House_Top_04_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_05.png",
+   "depth": "Delivery_To_Dominics_House_background_05_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_05.png",
+   "depth": "Delivery_To_Dominics_House_Top_05_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "background",
+   "image": "Delivery_To_Dominics_House_background_06.png",
+   "depth": "Delivery_To_Dominics_House_background_06_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "top",
+   "image": "Delivery_To_Dominics_House_Top_06.png",
+   "depth": "Delivery_To_Dominics_House_Top_06_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1860,
+    930
+   ],
+   "name": "Departures"
+  },
+  {
+   "frame": [
+    1743,
+    0,
+    1858,
+    930
+   ],
+   "name": "On the plane"
+  },
+  {
+   "frame": [
+    3402,
+    0,
+    1860,
+    930
+   ],
+   "name": "Arrivals: the car door"
+  },
+  {
+   "frame": [
+    5064,
+    0,
+    2697,
+    1086
+   ],
+   "name": "Over the bridge"
+  },
+  {
+   "frame": [
+    7761,
+    0,
+    2122,
+    1086
+   ],
+   "name": "The street"
+  },
+  {
+   "frame": [
+    9883,
+    0,
+    1800,
+    1086
+   ],
+   "name": "The gate"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-02_the-deposit-box",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_the-journey",
+   "style": "push"
+  }
+ },
+ "together": null
+}

@@ -1,0 +1,68 @@
+{
+ "id": "isla-the-glass-house",
+ "title": "Isla / the glass house",
+ "date": "2019-03-10",
+ "order": 1,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/03_Isla_meets_ethel/",
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.52,
+  0.43
+ ],
+ "zoom": 1,
+ "faces": [
+  [
+   0.31,
+   0.42,
+   0.095,
+   0.12
+  ],
+  [
+   0.75,
+   0.25,
+   0.09,
+   0.13
+  ]
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "03A_Isla_meets_ethel_Background.png",
+   "depth": "03A_Isla_meets_ethel_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "03A_Isla_meets_ethel_Top.png",
+   "depth": "03A_Isla_meets_ethel_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "together": "03A_Isla_meets_ethel_Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-05_arrival-the-guard",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-10_walk-left",
+   "style": "push"
+  }
+ },
+ "direction": "left"
+}

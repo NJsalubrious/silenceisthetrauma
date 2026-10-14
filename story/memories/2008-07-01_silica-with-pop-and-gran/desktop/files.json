@@ -1,0 +1,55 @@
+{
+"files": {
+"Ethel_POP_Gran_in_Silica_Background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "cf214e6994",
+"px": 362760,
+"low": "_low/Ethel_POP_Gran_in_Silica_Background.webp"
+},
+"Ethel_POP_Gran_in_Silica_Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "175f1cc5af",
+"px": 114377,
+"box": [
+0,
+561,
+2000,
+939
+],
+"low": "_low/Ethel_POP_Gran_in_Silica_Top.webp"
+},
+"Ethel_POP_Gran_in_Silica_Top_depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "81bd3b03e9",
+"px": 343407
+},
+"Ethel_POP_Gran_in_Silica_background_depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "af7bb4f057",
+"px": 386088
+},
+"Ethel_POP_Gran_in_Silica_mid.webp": {
+"w": 2000,
+"h": 1500,
+"v": "925b9124dd",
+"px": 359301,
+"box": [
+0,
+215,
+2000,
+1285
+],
+"low": "_low/Ethel_POP_Gran_in_Silica_mid.webp"
+},
+"Ethel_POP_Gran_in_Silica_mid_depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "fbf8c60581",
+"px": 347957
+}
+}
+}

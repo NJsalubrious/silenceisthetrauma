@@ -1,0 +1,113 @@
+{
+"files": {
+"Young_Ethel_Riding_A_Mid.webp": {
+"w": 1448,
+"h": 1086,
+"v": "a1e22d0449",
+"px": 275420,
+"box": [
+0,
+120,
+889,
+966
+],
+"low": "_low/Young_Ethel_Riding_A_Mid.webp"
+},
+"Young_Ethel_Riding_A_Mid_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "445695862c",
+"px": 256487
+},
+"Young_Ethel_Riding_A_Top.webp": {
+"w": 1448,
+"h": 1086,
+"v": "e6007a58f7",
+"px": 478588,
+"low": "_low/Young_Ethel_Riding_A_Top.webp"
+},
+"Young_Ethel_Riding_A_Top_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "fda0539666",
+"px": 261115
+},
+"Young_Ethel_Riding_B_Background.webp": {
+"w": 1672,
+"h": 941,
+"v": "d3b8445ad7",
+"px": 684724,
+"low": "_low/Young_Ethel_Riding_B_Background.webp"
+},
+"Young_Ethel_Riding_B_Background_Depth.webp": {
+"w": 1672,
+"h": 941,
+"v": "f21a83d2a7",
+"px": 250567
+},
+"Young_Ethel_Riding_B_Top.webp": {
+"w": 1672,
+"h": 941,
+"v": "3e05d3cd9a",
+"px": 333597,
+"box": [
+0,
+290,
+1005,
+651
+],
+"low": "_low/Young_Ethel_Riding_B_Top.webp"
+},
+"Young_Ethel_Riding_B_Top_Depth.webp": {
+"w": 1672,
+"h": 941,
+"v": "8fc82934df",
+"px": 90918
+},
+"Young_Ethel_Riding_C_Background.webp": {
+"w": 1448,
+"h": 1086,
+"v": "83ddcc5c9d",
+"px": 561516,
+"low": "_low/Young_Ethel_Riding_C_Background.webp"
+},
+"Young_Ethel_Riding_C_Background_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "a4b78b11b9",
+"px": 253232
+},
+"Young_Ethel_Riding_C_Mid.webp": {
+"w": 1448,
+"h": 1086,
+"v": "0a9c93a0fd",
+"px": 396161,
+"box": [
+0,
+274,
+1437,
+812
+],
+"low": "_low/Young_Ethel_Riding_C_Mid.webp"
+},
+"Young_Ethel_Riding_C_Mid_depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "ac172cf6a9",
+"px": 224392
+},
+"Young_Ethel_Riding_C_Top.webp": {
+"w": 1448,
+"h": 1086,
+"v": "68138a5ce9",
+"px": 64015,
+"box": [
+0,
+651,
+506,
+435
+],
+"low": "_low/Young_Ethel_Riding_C_Top.webp"
+}
+}
+}

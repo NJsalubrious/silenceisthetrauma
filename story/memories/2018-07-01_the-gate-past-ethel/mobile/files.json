@@ -1,0 +1,58 @@
+{
+"files": {
+"Drive_Through_Gate_Past_Ethel_Background.webp": {
+"w": 1000,
+"h": 543,
+"v": "de6e50b733",
+"px": 180914,
+"path": "_auto/Drive_Through_Gate_Past_Ethel_Background.webp",
+"from": "Drive_Through_Gate_Past_Ethel_Background.webp",
+"fromV": "acaaad0ce7",
+"low": "../desktop/_low/Drive_Through_Gate_Past_Ethel_Background.webp"
+},
+"Drive_Through_Gate_Past_Ethel_Background_Depth.webp": {
+"w": 1000,
+"h": 543,
+"v": "768b603c34",
+"px": 116423,
+"path": "_auto/Drive_Through_Gate_Past_Ethel_Background_Depth.webp",
+"from": "Drive_Through_Gate_Past_Ethel_Background_Depth.webp",
+"fromV": "570fd81d56"
+},
+"Drive_Through_Gate_Past_Ethel_Mid.webp": {
+"w": 1000,
+"h": 543,
+"v": "4a06d63793",
+"px": 122810,
+"path": "_auto/Drive_Through_Gate_Past_Ethel_Mid.webp",
+"from": "Drive_Through_Gate_Past_Ethel_Mid.webp",
+"fromV": "f7456c451b",
+"low": "../desktop/_low/Drive_Through_Gate_Past_Ethel_Mid.webp"
+},
+"Drive_Through_Gate_Past_Ethel_Mid_Depth.webp": {
+"w": 1000,
+"h": 543,
+"v": "e2284fc0bb",
+"px": 132288,
+"path": "_auto/Drive_Through_Gate_Past_Ethel_Mid_Depth.webp",
+"from": "Drive_Through_Gate_Past_Ethel_Mid_Depth.webp",
+"fromV": "00e5fc8f00"
+},
+"Drive_Through_Gate_Past_Ethel_Top.webp": {
+"w": 1000,
+"h": 543,
+"v": "d3f33007f0",
+"px": 15243,
+"path": "_auto/Drive_Through_Gate_Past_Ethel_Top.webp",
+"from": "Drive_Through_Gate_Past_Ethel_Top.webp",
+"fromV": "9da704fba3",
+"box": [
+760,
+0,
+240,
+543
+],
+"low": "../desktop/_low/Drive_Through_Gate_Past_Ethel_Top.webp"
+}
+}
+}

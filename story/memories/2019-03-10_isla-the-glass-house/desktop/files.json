@@ -1,0 +1,43 @@
+{
+"files": {
+"03A_Isla_meets_ethel_Background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "06de42d16e",
+"px": 192508,
+"low": "_low/03A_Isla_meets_ethel_Background.webp"
+},
+"03A_Isla_meets_ethel_Background_Depth.webp": {
+"w": 2000,
+"h": 1496,
+"v": "324c101693",
+"px": 240491
+},
+"03A_Isla_meets_ethel_Together.webp": {
+"w": 2000,
+"h": 1500,
+"v": "46c3527701",
+"px": 221470,
+"low": "_low/03A_Isla_meets_ethel_Together.webp"
+},
+"03A_Isla_meets_ethel_Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "74d0fed827",
+"px": 233035,
+"box": [
+0,
+223,
+1771,
+1277
+],
+"low": "_low/03A_Isla_meets_ethel_Top.webp"
+},
+"03A_Isla_meets_ethel_Top_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "9d496cd47d",
+"px": 229353
+}
+}
+}

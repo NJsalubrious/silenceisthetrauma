@@ -1,0 +1,273 @@
+{
+ "id": "dominics-world",
+ "title": "Dominic's world: the house, the docklands, offshore",
+ "date": "2019-03-05",
+ "order": 0.75,
+ "kind": "strip",
+ "height": 1500,
+ "note": "Plays by itself, once per visit, between Isla on the balcony and the flaming towel. Short sharp cuts through his house, the docklands (calm authority, violence behind) and offshore, then it erodes to darkness and Ethel is at the towel. The visitor cannot drag; moving the mouse still steers the depth. Six house pictures and offshore are stand-ins.",
+ "sections": [
+  {
+   "name": "The house 1",
+   "width": 2000
+  },
+  {
+   "name": "The house 2",
+   "width": 2000
+  },
+  {
+   "name": "The house 3",
+   "width": 2000
+  },
+  {
+   "name": "The house 4",
+   "width": 2000
+  },
+  {
+   "name": "The house 5",
+   "width": 2000
+  },
+  {
+   "name": "The house 6",
+   "width": 2000
+  },
+  {
+   "name": "Docklands: calm authority",
+   "width": 2000
+  },
+  {
+   "name": "Offshore",
+   "width": 2000
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 900,
+  "travel": 0.0
+ },
+ "auto": {
+  "hold": [
+   650,
+   600,
+   600,
+   550,
+   550,
+   500,
+   2800,
+   1100
+  ],
+  "flash": 70,
+  "dark": 2200,
+  "reveal": 1600,
+  "note": "hold: how long each picture stays, in ms, in order. flash: the blink of black between. dark: the erosion into darkness. reveal: the towel coming up out of it."
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-05_the-journey",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_the-glass-house",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Dominics_world_House_01.png",
+   "depth": "Dominics_world_House_01_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_01.png (and Dominics_world_House_01_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "Dominics_world_House_02.png",
+   "depth": "Dominics_world_House_02_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_02.png (and Dominics_world_House_02_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "Dominics_world_House_03.png",
+   "depth": "Dominics_world_House_03_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_03.png (and Dominics_world_House_03_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 3,
+   "role": "background",
+   "image": "Dominics_world_House_04.png",
+   "depth": "Dominics_world_House_04_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_04.png (and Dominics_world_House_04_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 4,
+   "role": "background",
+   "image": "Dominics_world_House_05.png",
+   "depth": "Dominics_world_House_05_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_05.png (and Dominics_world_House_05_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 5,
+   "role": "background",
+   "image": "Dominics_world_House_06.png",
+   "depth": "Dominics_world_House_06_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_House_06.png (and Dominics_world_House_06_Depth.png); add _Mid / _Top layers as in the other sequences."
+  },
+  {
+   "section": 6,
+   "role": "background",
+   "image": "Dominics_calm_authority_background.png",
+   "depth": "Dominics_calm_authority_background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/"
+  },
+  {
+   "section": 6,
+   "role": "mid",
+   "image": "Dominics_calm_authority_Mid.png",
+   "depth": "Dominics_calm_authority_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/"
+  },
+  {
+   "section": 6,
+   "role": "top",
+   "image": "Dominics_calm_authority_Top.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/",
+   "note": "No Top_Depth.png in the folder yet: drawn flat at its distance."
+  },
+  {
+   "section": 7,
+   "role": "background",
+   "image": "Dominics_world_Offshore_01.png",
+   "depth": "Dominics_world_Offshore_01_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "placeholder": true,
+   "note": "Stand-in. Save the painting as Dominics_world_Offshore_01.png (and Dominics_world_Offshore_01_Depth.png); add _Mid / _Top layers as in the other sequences."
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 1",
+   "fit": 1
+  },
+  {
+   "frame": [
+    2000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 2",
+   "fit": 1
+  },
+  {
+   "frame": [
+    4000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 3",
+   "fit": 1
+  },
+  {
+   "frame": [
+    6000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 4",
+   "fit": 1
+  },
+  {
+   "frame": [
+    8000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 5",
+   "fit": 1
+  },
+  {
+   "frame": [
+    10000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "The house 6",
+   "fit": 1
+  },
+  {
+   "frame": [
+    12000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "Docklands: calm authority",
+   "fit": 1
+  },
+  {
+   "frame": [
+    14000,
+    0,
+    2000,
+    1500
+   ],
+   "name": "Offshore",
+   "fit": 1
+  }
+ ]
+}

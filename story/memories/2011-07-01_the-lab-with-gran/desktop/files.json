@@ -1,0 +1,49 @@
+{
+"files": {
+"Ethel_and_Gran_in_Lab_Background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "3d0d5d8c78",
+"px": 289604,
+"low": "_low/Ethel_and_Gran_in_Lab_Background.webp"
+},
+"Ethel_and_Gran_in_Lab_Background_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "275a36ffaa",
+"px": 516222
+},
+"Ethel_and_Gran_in_Lab_Mid.webp": {
+"w": 2000,
+"h": 1500,
+"v": "c40b959ce9",
+"px": 269113,
+"box": [
+0,
+281,
+2000,
+1219
+],
+"low": "_low/Ethel_and_Gran_in_Lab_Mid.webp"
+},
+"Ethel_and_Gran_in_Lab_Mid_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "724463dc42",
+"px": 315928
+},
+"Ethel_and_Gran_in_Lab_Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "2f7118224d",
+"px": 151423,
+"low": "_low/Ethel_and_Gran_in_Lab_Top.webp"
+},
+"Ethel_and_Gran_in_Lab_Top_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "e70f2a1f3e",
+"px": 372275
+}
+}
+}

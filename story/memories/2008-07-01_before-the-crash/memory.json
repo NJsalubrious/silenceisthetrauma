@@ -1,0 +1,336 @@
+{
+ "id": "before-the-crash",
+ "title": "Before the crash",
+ "date": "2008-07-01",
+ "order": 0,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "note": "The silica with Pop and Gran, the lab with Gran, young Ethel riding (three shots): one film strip, the shots side by side and sliding under the finger, each opening on the whole picture (its neighbours fill the sides), with a slight zoom in where there is one. The four memories it is made from are kept, hidden. Placeholder date. The drive through the gate past Ethel is not here: the crash sequence already opens on that moment (Leaving the gate). Its own memory is kept, hidden.",
+ "layers": [
+  {
+   "name": "Ethel, Pop and Gran in the silica: In the silica: background",
+   "role": "background",
+   "folder": "2008-07-01_silica-with-pop-and-gran",
+   "image": "Ethel_POP_Gran_in_Silica_Background.png",
+   "depth": "Ethel_POP_Gran_in_Silica_background_depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Ethel, Pop and Gran in the silica: In the silica: mid",
+   "role": "mid",
+   "folder": "2008-07-01_silica-with-pop-and-gran",
+   "image": "Ethel_POP_Gran_in_Silica_mid.png",
+   "depth": "Ethel_POP_Gran_in_Silica_mid_depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Ethel, Pop and Gran in the silica: In the silica: top",
+   "role": "top",
+   "folder": "2008-07-01_silica-with-pop-and-gran",
+   "image": "Ethel_POP_Gran_in_Silica_Top.png",
+   "depth": "Ethel_POP_Gran_in_Silica_Top_depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Ethel and Gran in the lab: In the lab: background",
+   "role": "background",
+   "folder": "2011-07-01_the-lab-with-gran",
+   "image": "Ethel_and_Gran_in_Lab_Background.png",
+   "depth": "Ethel_and_Gran_in_Lab_Background_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Ethel and Gran in the lab: In the lab: mid",
+   "role": "mid",
+   "folder": "2011-07-01_the-lab-with-gran",
+   "image": "Ethel_and_Gran_in_Lab_Mid.png",
+   "depth": "Ethel_and_Gran_in_Lab_Mid_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Ethel and Gran in the lab: In the lab: top",
+   "role": "top",
+   "folder": "2011-07-01_the-lab-with-gran",
+   "image": "Ethel_and_Gran_in_Lab_Top.png",
+   "depth": "Ethel_and_Gran_in_Lab_Top_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Young Ethel riding: Riding: past the lab: background",
+   "role": "background",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_A_Top.png",
+   "depth": "Young_Ethel_Riding_A_Top_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Young Ethel riding: Riding: past the lab: top",
+   "role": "top",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_A_Mid.png",
+   "depth": "Young_Ethel_Riding_A_Mid_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Young Ethel riding: Riding: across the plain: background",
+   "role": "background",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_B_Background.png",
+   "depth": "Young_Ethel_Riding_B_Background_Depth.png",
+   "rect": [
+    4344,
+    0,
+    1930,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Young Ethel riding: Riding: across the plain: top",
+   "role": "top",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_B_Top.png",
+   "depth": "Young_Ethel_Riding_B_Top_Depth.png",
+   "rect": [
+    4344,
+    0,
+    1930,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Young Ethel riding: Riding: down the gully: background",
+   "role": "background",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_C_Background.png",
+   "depth": "Young_Ethel_Riding_C_Background_Depth.png",
+   "rect": [
+    6274,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Young Ethel riding: Riding: down the gully: mid",
+   "role": "mid",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_C_Mid.png",
+   "depth": "Young_Ethel_Riding_C_Mid_depth.png",
+   "rect": [
+    6274,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "Young Ethel riding: Riding: down the gully: top",
+   "role": "top",
+   "folder": "2013-07-01_young-ethel-riding",
+   "image": "Young_Ethel_Riding_C_Top.png",
+   "depth": null,
+   "rect": [
+    6274,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    250,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Ethel, Pop and Gran in the silica · In the silica",
+   "fit": 1
+  },
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    800
+   ],
+   "name": "Ethel, Pop and Gran in the silica · In the silica: closer",
+   "fit": 0
+  },
+  {
+   "frame": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Ethel and Gran in the lab · In the lab",
+   "fit": 1
+  },
+  {
+   "frame": [
+    1448,
+    40,
+    1448,
+    960
+   ],
+   "name": "Ethel and Gran in the lab · In the lab: closer",
+   "fit": 0
+  },
+  {
+   "frame": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Young Ethel riding · Riding: past the lab",
+   "fit": 1
+  },
+  {
+   "frame": [
+    4344,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Young Ethel riding · Riding: across the plain",
+   "fit": 1
+  },
+  {
+   "frame": [
+    6274,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Young Ethel riding · Riding: down the gully",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "right": {
+   "to": "01-the-crash-sequence",
+   "style": "push"
+  }
+ },
+ "together": null
+}

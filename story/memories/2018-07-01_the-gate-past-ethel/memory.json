@@ -1,0 +1,90 @@
+{
+ "id": "the-gate-past-ethel",
+ "title": "The drive through the gate, past Ethel",
+ "date": "2018-07-01",
+ "order": 0,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "source": "../assets/entry-experiment/FinalsForTest_01/17_Drive_Through_Gate_Past_Ethel/",
+ "note": "Before the crash. Placeholder date (the canon timeline has none for this yet): change it in the studio under this memory's details. A top layer here has no depth map, so it sits at one distance.",
+ "sections": [
+  {
+   "name": "Through the gate, past Ethel",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Drive_Through_Gate_Past_Ethel_Background.png",
+   "depth": "Drive_Through_Gate_Past_Ethel_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "Drive_Through_Gate_Past_Ethel_Mid.png",
+   "depth": "Drive_Through_Gate_Past_Ethel_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Drive_Through_Gate_Past_Ethel_Top.png",
+   "depth": null,
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1086
+   ],
+   "name": "Through the gate, past Ethel",
+   "fit": 1
+  },
+  {
+   "frame": [
+    120,
+    32,
+    1880,
+    1021
+   ],
+   "name": "Past Ethel: closer"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2013-07-01_young-ethel-riding",
+   "style": "push"
+  },
+  "right": {
+   "to": "01-the-crash-sequence",
+   "style": "push"
+  }
+ },
+ "together": null
+}

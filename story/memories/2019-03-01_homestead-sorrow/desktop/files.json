@@ -1,0 +1,49 @@
+{
+"files": {
+"Homestead_Sorrow_Background.webp": {
+"w": 1448,
+"h": 1086,
+"v": "972cfff06e",
+"px": 162402,
+"low": "_low/Homestead_Sorrow_Background.webp"
+},
+"Homestead_Sorrow_Background_Depth.webp": {
+"w": 1448,
+"h": 1085,
+"v": "737468901f",
+"px": 128638
+},
+"Homestead_Sorrow_MidTop.webp": {
+"w": 1448,
+"h": 1086,
+"v": "c5205df77b",
+"px": 161459,
+"box": [
+0,
+213,
+1448,
+873
+],
+"low": "_low/Homestead_Sorrow_MidTop.webp"
+},
+"Homestead_Sorrow_MidTop_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "78da1d65ea",
+"px": 96619
+},
+"Homestead_Sorrow_Top.webp": {
+"w": 1448,
+"h": 1086,
+"v": "ce1d9c60cd",
+"px": 165570,
+"low": "_low/Homestead_Sorrow_Top.webp"
+},
+"Homestead_Sorrow_Top_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "206164da85",
+"px": 62578
+}
+}
+}

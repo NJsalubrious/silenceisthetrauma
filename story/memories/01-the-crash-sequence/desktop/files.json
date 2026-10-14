@@ -1,0 +1,311 @@
+{
+"files": {
+"Background1.webp": {
+"w": 2790,
+"h": 1500,
+"v": "bf3f193948",
+"px": 1185664,
+"low": "_low/Background1.webp"
+},
+"Background1_Depth.webp": {
+"w": 2790,
+"h": 1500,
+"v": "823eec38f2",
+"px": 545698
+},
+"Background2.webp": {
+"w": 2687,
+"h": 1500,
+"v": "75e8716a72",
+"px": 786744,
+"low": "_low/Background2.webp"
+},
+"Background2_Depth.webp": {
+"w": 2687,
+"h": 1500,
+"v": "f308cc99a6",
+"px": 584172
+},
+"Background3.webp": {
+"w": 2240,
+"h": 1500,
+"v": "4d9bad585c",
+"px": 314710,
+"low": "_low/Background3.webp"
+},
+"Background3_Depth.webp": {
+"w": 2423,
+"h": 1500,
+"v": "98b1535ebf",
+"px": 401520
+},
+"Background4.webp": {
+"w": 2423,
+"h": 1500,
+"v": "5c4ed32801",
+"px": 422341,
+"low": "_low/Background4.webp"
+},
+"Background4_Depth.webp": {
+"w": 2423,
+"h": 1500,
+"v": "98b1535ebf",
+"px": 401520
+},
+"Background5.webp": {
+"w": 3837,
+"h": 1500,
+"v": "80d4d9b5b8",
+"px": 381355,
+"low": "_low/Background5.webp"
+},
+"Background5_Depth.webp": {
+"w": 3837,
+"h": 1500,
+"v": "a004edcd4b",
+"px": 663044
+},
+"Background6.webp": {
+"w": 4023,
+"h": 1500,
+"v": "0bb4f24b90",
+"px": 705940,
+"low": "_low/Background6.webp"
+},
+"Background6_Depth.webp": {
+"w": 4023,
+"h": 1500,
+"v": "2e864d2ad2",
+"px": 517563
+},
+"Mid1.webp": {
+"w": 2790,
+"h": 1500,
+"v": "d41670fcec",
+"px": 705946,
+"low": "_low/Mid1.webp"
+},
+"Mid1_Depth.webp": {
+"w": 2790,
+"h": 1500,
+"v": "4dee93b2b8",
+"px": 285287
+},
+"Mid2.webp": {
+"w": 2687,
+"h": 1500,
+"v": "478e21099c",
+"px": 895733,
+"box": [
+0,
+405,
+2687,
+1095
+],
+"low": "_low/Mid2.webp"
+},
+"Mid2_Depth.webp": {
+"w": 2687,
+"h": 1500,
+"v": "80548c6724",
+"px": 344505
+},
+"Mid3.webp": {
+"w": 2240,
+"h": 1500,
+"v": "d496484d61",
+"px": 287560,
+"box": [
+0,
+321,
+2240,
+1179
+],
+"low": "_low/Mid3.webp"
+},
+"Mid3_Depth.webp": {
+"w": 2240,
+"h": 1500,
+"v": "33e28fd308",
+"px": 150745
+},
+"Mid4.webp": {
+"w": 2423,
+"h": 1500,
+"v": "e6bf832424",
+"px": 463333,
+"box": [
+0,
+279,
+2423,
+1221
+],
+"low": "_low/Mid4.webp"
+},
+"Mid4_Depth.webp": {
+"w": 2423,
+"h": 1500,
+"v": "4f74405197",
+"px": 196137
+},
+"Mid5.webp": {
+"w": 3837,
+"h": 1500,
+"v": "d25c53bf04",
+"px": 684999,
+"low": "_low/Mid5.webp"
+},
+"Mid5_depth.webp": {
+"w": 3837,
+"h": 1500,
+"v": "59c5afb21c",
+"px": 250163
+},
+"Mid6.webp": {
+"w": 4023,
+"h": 1500,
+"v": "19a615cfb6",
+"px": 861769,
+"box": [
+0,
+269,
+4023,
+1231
+],
+"low": "_low/Mid6.webp"
+},
+"Mid6_Depth.webp": {
+"w": 4023,
+"h": 1500,
+"v": "ce900784b8",
+"px": 268119
+},
+"Mid_Background1.webp": {
+"w": 2790,
+"h": 1500,
+"v": "30dd3fff05",
+"px": 660241,
+"box": [
+0,
+408,
+2148,
+1092
+],
+"low": "_low/Mid_Background1.webp"
+},
+"Mid_Background1_Depth.webp": {
+"w": 2784,
+"h": 1496,
+"v": "0b1001d872",
+"px": 321975
+},
+"Top1.webp": {
+"w": 2790,
+"h": 1500,
+"v": "4ae7010727",
+"px": 415763,
+"low": "_low/Top1.webp"
+},
+"Top1_Depth.webp": {
+"w": 2790,
+"h": 1500,
+"v": "97475a9fc9",
+"px": 397605
+},
+"Top2.webp": {
+"w": 2687,
+"h": 1500,
+"v": "4206052aca",
+"px": 106674,
+"box": [
+0,
+1043,
+956,
+457
+],
+"low": "_low/Top2.webp"
+},
+"Top2_Depth.webp": {
+"w": 2687,
+"h": 1500,
+"v": "14d099efac",
+"px": 73883
+},
+"Top3.webp": {
+"w": 2240,
+"h": 1500,
+"v": "bbcb87fc8f",
+"px": 323474,
+"box": [
+170,
+96,
+2055,
+1404
+],
+"low": "_low/Top3.webp"
+},
+"Top3_Depth.webp": {
+"w": 2240,
+"h": 1500,
+"v": "c9f4d076f3",
+"px": 272449
+},
+"Top4.webp": {
+"w": 2423,
+"h": 1500,
+"v": "5dae99ecbf",
+"px": 361483,
+"box": [
+17,
+226,
+1740,
+1274
+],
+"low": "_low/Top4.webp"
+},
+"Top4_Depth.webp": {
+"w": 2423,
+"h": 1500,
+"v": "d3f58e4e08",
+"px": 275058
+},
+"Top5.webp": {
+"w": 3837,
+"h": 1500,
+"v": "30c2ac3cd8",
+"px": 249873,
+"box": [
+520,
+76,
+1015,
+1424
+],
+"low": "_low/Top5.webp"
+},
+"Top5_Depth.webp": {
+"w": 3837,
+"h": 1500,
+"v": "913150bdd7",
+"px": 210894
+},
+"Top6_extended_left.webp": {
+"w": 5537,
+"h": 1500,
+"v": "e8afcbfb01",
+"px": 603945,
+"box": [
+287,
+0,
+3475,
+1500
+],
+"low": "_low/Top6_extended_left.webp"
+},
+"Top6_extended_left_Depth.webp": {
+"w": 5045,
+"h": 1500,
+"v": "b95c86c8bc",
+"px": 503471
+}
+}
+}

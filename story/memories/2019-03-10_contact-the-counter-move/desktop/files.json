@@ -1,0 +1,43 @@
+{
+"files": {
+"A_Ethel_Steals_Islas_phone_wallet_Background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "add64fef23",
+"px": 228026,
+"low": "_low/A_Ethel_Steals_Islas_phone_wallet_Background.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp": {
+"w": 2000,
+"h": 1496,
+"v": "db1790811a",
+"px": 128677
+},
+"A_Ethel_Steals_Islas_phone_wallet_Together.webp": {
+"w": 2000,
+"h": 1500,
+"v": "e5565e3887",
+"px": 286114,
+"low": "_low/A_Ethel_Steals_Islas_phone_wallet_Together.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "fe4acfd9d9",
+"px": 290947,
+"box": [
+177,
+70,
+1589,
+1430
+],
+"low": "_low/A_Ethel_Steals_Islas_phone_wallet_Top.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "7faaf06960",
+"px": 303340
+}
+}
+}

@@ -1,0 +1,75 @@
+{
+ "id": "nightlife-the-trip",
+ "title": "Nightlife / the trip",
+ "date": "2019-03-10",
+ "order": 7,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/04_Isla_Is_Ethel_night_life_trips_her/",
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.51,
+  0.51
+ ],
+ "zoom": 1,
+ "faces": [
+  [
+   0.35,
+   0.23,
+   0.09,
+   0.13
+  ],
+  [
+   0.71,
+   0.58,
+   0.105,
+   0.11
+  ]
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Background.png",
+   "depth": "Isla_Is_Ethel_night_life_trips_her_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "mid",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Mid.png",
+   "depth": "Isla_Is_Ethel_night_life_trips_her_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Top.png",
+   "depth": null,
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "together": "Isla_Is_Ethel_night_life_trips_her_Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-10_the-wallet-recognition",
+   "style": "push"
+  },
+  "right": {
+   "to": null
+  }
+ },
+ "direction": "left"
+}

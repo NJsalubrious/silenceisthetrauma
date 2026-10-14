@@ -1,0 +1,67 @@
+{
+"files": {
+"Ethel_and_Gran_in_Lab_Background.webp": {
+"w": 1000,
+"h": 750,
+"v": "5db3ac0757",
+"px": 99834,
+"path": "_auto/Ethel_and_Gran_in_Lab_Background.webp",
+"from": "Ethel_and_Gran_in_Lab_Background.webp",
+"fromV": "3d0d5d8c78",
+"low": "../desktop/_low/Ethel_and_Gran_in_Lab_Background.webp"
+},
+"Ethel_and_Gran_in_Lab_Background_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "de054f9674",
+"px": 147270,
+"path": "_auto/Ethel_and_Gran_in_Lab_Background_Depth.webp",
+"from": "Ethel_and_Gran_in_Lab_Background_Depth.webp",
+"fromV": "275a36ffaa"
+},
+"Ethel_and_Gran_in_Lab_Mid.webp": {
+"w": 1000,
+"h": 750,
+"v": "a6eb428d40",
+"px": 82131,
+"path": "_auto/Ethel_and_Gran_in_Lab_Mid.webp",
+"from": "Ethel_and_Gran_in_Lab_Mid.webp",
+"fromV": "c40b959ce9",
+"box": [
+0,
+138,
+1000,
+612
+],
+"low": "../desktop/_low/Ethel_and_Gran_in_Lab_Mid.webp"
+},
+"Ethel_and_Gran_in_Lab_Mid_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "c7a52e167d",
+"px": 109300,
+"path": "_auto/Ethel_and_Gran_in_Lab_Mid_Depth.webp",
+"from": "Ethel_and_Gran_in_Lab_Mid_Depth.webp",
+"fromV": "724463dc42"
+},
+"Ethel_and_Gran_in_Lab_Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "4cc00c42f7",
+"px": 53505,
+"path": "_auto/Ethel_and_Gran_in_Lab_Top.webp",
+"from": "Ethel_and_Gran_in_Lab_Top.webp",
+"fromV": "2f7118224d",
+"low": "../desktop/_low/Ethel_and_Gran_in_Lab_Top.webp"
+},
+"Ethel_and_Gran_in_Lab_Top_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "b5fb87028c",
+"px": 125293,
+"path": "_auto/Ethel_and_Gran_in_Lab_Top_Depth.webp",
+"from": "Ethel_and_Gran_in_Lab_Top_Depth.webp",
+"fromV": "e70f2a1f3e"
+}
+}
+}

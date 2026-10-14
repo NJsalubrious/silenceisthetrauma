@@ -1,0 +1,58 @@
+{
+"files": {
+"Ethels_Arrival_Gifted_Trap_Background.webp": {
+"w": 724,
+"h": 543,
+"v": "6d7b44f832",
+"px": 52244,
+"path": "_auto/Ethels_Arrival_Gifted_Trap_Background.webp",
+"from": "Ethels_Arrival_Gifted_Trap_Background.webp",
+"fromV": "64e757d3b5",
+"low": "../desktop/_low/Ethels_Arrival_Gifted_Trap_Background.webp"
+},
+"Ethels_Arrival_Gifted_Trap_Background_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "ef94e4ef10",
+"px": 61568,
+"path": "_auto/Ethels_Arrival_Gifted_Trap_Background_Depth.webp",
+"from": "Ethels_Arrival_Gifted_Trap_Background_Depth.webp",
+"fromV": "b72c26a96c"
+},
+"Ethels_Arrival_Gifted_Trap_Top.webp": {
+"w": 724,
+"h": 543,
+"v": "ba53064873",
+"px": 51826,
+"path": "_auto/Ethels_Arrival_Gifted_Trap_Top.webp",
+"from": "Ethels_Arrival_Gifted_Trap_Top.webp",
+"fromV": "8110ac3003",
+"box": [
+144,
+36,
+546,
+507
+],
+"low": "../desktop/_low/Ethels_Arrival_Gifted_Trap_Top.webp"
+},
+"Ethels_Arrival_Gifted_Trap_Top_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "c7498b9c1e",
+"px": 76198,
+"path": "_auto/Ethels_Arrival_Gifted_Trap_Top_Depth.webp",
+"from": "Ethels_Arrival_Gifted_Trap_Top_Depth.webp",
+"fromV": "fdc742d0b1"
+},
+"Ethels_Arrival_Gifted_Trap_together.webp": {
+"w": 724,
+"h": 543,
+"v": "e606cbcd25",
+"px": 67678,
+"path": "_auto/Ethels_Arrival_Gifted_Trap_together.webp",
+"from": "Ethels_Arrival_Gifted_Trap_together.webp",
+"fromV": "5616dbd4bd",
+"low": "../desktop/_low/Ethels_Arrival_Gifted_Trap_together.webp"
+}
+}
+}

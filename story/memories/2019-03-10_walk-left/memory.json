@@ -1,0 +1,387 @@
+{
+ "id": "walk-left",
+ "title": "Walk Left (the glass house)",
+ "date": "2019-03-10",
+ "order": 2,
+ "kind": "strip",
+ "direction": "left",
+ "height": 1086,
+ "note": "Walk Left from testArtisticTransition, every move as it was: the lounge frames crossfade in place while the room slides, the run is its own angle, warm inside and cool on the street.",
+ "sections": [
+  {
+   "name": "the street",
+   "x": 0,
+   "width": 2900
+  },
+  {
+   "name": "the terrace",
+   "x": 2834,
+   "width": 2900
+  },
+  {
+   "name": "the lounge",
+   "x": 5667,
+   "width": 2900
+  }
+ ],
+ "layers": [
+  {
+   "name": "panorama 1",
+   "role": "background",
+   "section": 0,
+   "image": "pano_0.webp",
+   "depth": "pano_0_depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "name": "panorama 2",
+   "role": "background",
+   "section": 1,
+   "image": "pano_1.webp",
+   "depth": "pano_1_depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "name": "panorama 3",
+   "role": "background",
+   "section": 2,
+   "image": "pano_2.webp",
+   "depth": "pano_2_depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "name": "lounge: the cloth",
+   "role": "top",
+   "image": "A_Top.webp",
+   "depth": "A_Top_Depth.webp",
+   "rect": [
+    7119,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0
+   ],
+   "follow": {
+    "from": 0,
+    "to": 2,
+    "k": 0.85
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "lounge: the swing",
+   "role": "top",
+   "image": "B_Top.webp",
+   "depth": "B_Top_Depth.webp",
+   "rect": [
+    7119,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    1
+   ],
+   "follow": {
+    "from": 0,
+    "to": 2,
+    "k": 0.85
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "lounge: the wrist",
+   "role": "top",
+   "image": "C_Top.webp",
+   "depth": "C_Top_Depth.webp",
+   "rect": [
+    7043,
+    -57,
+    1600,
+    1200
+   ],
+   "stops": [
+    2,
+    3
+   ],
+   "follow": {
+    "from": 0,
+    "to": 2,
+    "k": 0.85
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "terrace: the bike",
+   "role": "top",
+   "image": "E_Top.webp",
+   "depth": "E_Top_Depth.webp",
+   "rect": [
+    4473,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "the run (its own angle)",
+   "role": "mid",
+   "image": "D_Together.webp",
+   "depth": "D_Mid_Depth.webp",
+   "insert": {
+    "stop": 3,
+    "hold": 80,
+    "fade": 480,
+    "drift": 0.35,
+    "spread": 0.7,
+    "grow": 1.04,
+    "aspect": 1.3333333333333333
+   },
+   "plane": 0.9,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "name": "the run: Isla and Ethel",
+   "role": "top",
+   "image": "D_Top.webp",
+   "depth": "D_Top_Depth.webp",
+   "insert": {
+    "stop": 3,
+    "hold": 80,
+    "fade": 480,
+    "drift": 0.35,
+    "spread": 0.7,
+    "grow": 1.04,
+    "aspect": 1.3333333333333333
+   },
+   "plane": 0.92,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "the ride: under his name",
+   "role": "top",
+   "image": "F_Top.webp",
+   "depth": "F_Top_Depth.webp",
+   "rect": [
+    2267,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "North Sydney: the bike",
+   "role": "top",
+   "image": "G_Police_A_Ethel_Isla_Bike.webp",
+   "depth": "G_Police_A_Ethel_Isla_Bike_Depth.webp",
+   "rect": [
+    7,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "the officer: waves them down",
+   "role": "top",
+   "image": "G_Police_B_DirectsToStop.webp",
+   "depth": "G_Police_B_DirectsToStop_Depth.webp",
+   "rect": [
+    7,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "fade": [
+    0.143,
+    0.857
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "name": "the officer: steps back",
+   "role": "top",
+   "image": "G_Police_A_BacksAway.webp",
+   "depth": "G_Police_A_BacksAway_Depth.webp",
+   "rect": [
+    7,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    7
+   ],
+   "fade": [
+    0.143,
+    0.857
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    6213,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.35,
+    "cold": 0.0
+   }
+  },
+  {
+   "frame": [
+    5793,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.35,
+    "cold": 0.0
+   }
+  },
+  {
+   "frame": [
+    5373,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.35,
+    "cold": 0.0
+   }
+  },
+  {
+   "frame": [
+    4470,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.35,
+    "cold": 0.0
+   }
+  },
+  {
+   "frame": [
+    3567,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.313,
+    "cold": 0.032
+   }
+  },
+  {
+   "frame": [
+    1361,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.0,
+    "cold": 0.3
+   }
+  },
+  {
+   "frame": [
+    -504,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.0,
+    "cold": 0.3
+   }
+  },
+  {
+   "frame": [
+    -1630,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.0,
+    "cold": 0.3
+   }
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {
+  "blur": 1,
+  "trail": 1,
+  "vignette": 0,
+  "deepVignette": 0.5,
+  "grain": 0.03
+ },
+ "together": "A_Together.webp",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-05_arrival",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-10_after-the-keys",
+   "style": "push"
+  }
+ }
+}

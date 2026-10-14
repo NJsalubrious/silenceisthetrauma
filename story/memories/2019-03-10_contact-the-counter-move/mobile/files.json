@@ -1,0 +1,58 @@
+{
+"files": {
+"A_Ethel_Steals_Islas_phone_wallet_Background.webp": {
+"w": 1000,
+"h": 750,
+"v": "82255bc270",
+"px": 76598,
+"path": "_auto/A_Ethel_Steals_Islas_phone_wallet_Background.webp",
+"from": "A_Ethel_Steals_Islas_phone_wallet_Background.webp",
+"fromV": "add64fef23",
+"low": "../desktop/_low/A_Ethel_Steals_Islas_phone_wallet_Background.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp": {
+"w": 1000,
+"h": 748,
+"v": "94f7efe1b9",
+"px": 45505,
+"path": "_auto/A_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp",
+"from": "A_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp",
+"fromV": "db1790811a"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Together.webp": {
+"w": 1000,
+"h": 750,
+"v": "529ed023d5",
+"px": 89238,
+"path": "_auto/A_Ethel_Steals_Islas_phone_wallet_Together.webp",
+"from": "A_Ethel_Steals_Islas_phone_wallet_Together.webp",
+"fromV": "e5565e3887",
+"low": "../desktop/_low/A_Ethel_Steals_Islas_phone_wallet_Together.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "fe529bf728",
+"px": 94063,
+"path": "_auto/A_Ethel_Steals_Islas_phone_wallet_Top.webp",
+"from": "A_Ethel_Steals_Islas_phone_wallet_Top.webp",
+"fromV": "fe4acfd9d9",
+"box": [
+86,
+31,
+797,
+719
+],
+"low": "../desktop/_low/A_Ethel_Steals_Islas_phone_wallet_Top.webp"
+},
+"A_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "c7732f60a4",
+"px": 105224,
+"path": "_auto/A_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp",
+"from": "A_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp",
+"fromV": "7faaf06960"
+}
+}
+}

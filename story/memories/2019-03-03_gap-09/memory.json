@@ -1,0 +1,54 @@
+{
+ "id": "gap-09",
+ "title": "Gap 09 (placeholder)",
+ "date": "2019-03-03",
+ "order": 3,
+ "kind": "scene",
+ "placeholder": true,
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.5,
+  0.5
+ ],
+ "zoom": 1,
+ "faces": [],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132
+  }
+ ],
+ "together": "Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-03_gap-08",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-04_gap-10",
+   "style": "push"
+  }
+ }
+}

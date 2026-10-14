@@ -1,0 +1,90 @@
+{
+ "id": "the-lab-with-gran",
+ "title": "Ethel and Gran in the lab",
+ "date": "2011-07-01",
+ "order": 0,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "source": "../assets/entry-experiment/FinalsForTest_01/14_Ethel_and_Gran_in_Lab/",
+ "note": "Before the crash. Placeholder date (the canon timeline has none for this yet): change it in the studio under this memory's details.",
+ "sections": [
+  {
+   "name": "In the lab",
+   "width": 1448
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Ethel_and_Gran_in_Lab_Background.png",
+   "depth": "Ethel_and_Gran_in_Lab_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "Ethel_and_Gran_in_Lab_Mid.png",
+   "depth": "Ethel_and_Gran_in_Lab_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Ethel_and_Gran_in_Lab_Top.png",
+   "depth": "Ethel_and_Gran_in_Lab_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "name": "In the lab",
+   "fit": 1
+  },
+  {
+   "frame": [
+    0,
+    40,
+    1448,
+    960
+   ],
+   "name": "In the lab: closer"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_silica-with-pop-and-gran",
+   "style": "push"
+  },
+  "right": {
+   "to": "2013-07-01_young-ethel-riding",
+   "style": "push"
+  }
+ },
+ "together": null
+}

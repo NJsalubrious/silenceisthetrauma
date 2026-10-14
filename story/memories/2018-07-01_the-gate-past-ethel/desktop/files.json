@@ -1,0 +1,43 @@
+{
+"files": {
+"Drive_Through_Gate_Past_Ethel_Background.webp": {
+"w": 2000,
+"h": 1086,
+"v": "acaaad0ce7",
+"px": 654312,
+"low": "_low/Drive_Through_Gate_Past_Ethel_Background.webp"
+},
+"Drive_Through_Gate_Past_Ethel_Background_Depth.webp": {
+"w": 2000,
+"h": 1086,
+"v": "570fd81d56",
+"px": 347289
+},
+"Drive_Through_Gate_Past_Ethel_Mid.webp": {
+"w": 2000,
+"h": 1086,
+"v": "f7456c451b",
+"px": 418055,
+"low": "_low/Drive_Through_Gate_Past_Ethel_Mid.webp"
+},
+"Drive_Through_Gate_Past_Ethel_Mid_Depth.webp": {
+"w": 2000,
+"h": 1086,
+"v": "00e5fc8f00",
+"px": 383450
+},
+"Drive_Through_Gate_Past_Ethel_Top.webp": {
+"w": 2000,
+"h": 1086,
+"v": "9da704fba3",
+"px": 45203,
+"box": [
+1527,
+0,
+473,
+1086
+],
+"low": "_low/Drive_Through_Gate_Past_Ethel_Top.webp"
+}
+}
+}

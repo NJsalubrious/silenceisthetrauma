@@ -1,0 +1,530 @@
+{
+ "id": "the-deposit-box",
+ "title": "Ethel in safety: the deposit box sequence",
+ "date": "2019-03-02",
+ "order": 1,
+ "kind": "strip",
+ "height": 1086,
+ "source": "../assets/entry-experiment/FinalsForTest_01/23_Ethel_in_saftey_Dep_Box_Sequence/",
+ "note": "Twelve pictures side by side, one seamless strip, walked left to right like the crash sequence: the garage, the ride into the city, the bank, the box, the call, the office.",
+ "sections": [
+  {
+   "name": "The garage",
+   "width": 1507
+  },
+  {
+   "name": "Leaving on the bike",
+   "width": 1998
+  },
+  {
+   "name": "The road out",
+   "width": 1495
+  },
+  {
+   "name": "Into the city",
+   "width": 1732
+  },
+  {
+   "name": "Along the river",
+   "width": 1533
+  },
+  {
+   "name": "The corner",
+   "width": 1767
+  },
+  {
+   "name": "The city view",
+   "width": 1486
+  },
+  {
+   "name": "Waiting",
+   "width": 1919
+  },
+  {
+   "name": "The bank",
+   "width": 1781
+  },
+  {
+   "name": "The box",
+   "width": 2081
+  },
+  {
+   "name": "The call",
+   "width": 1731
+  },
+  {
+   "name": "The office",
+   "width": 2970
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_01.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_01_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_01.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_01_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_01.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_01_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_02.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_02_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_02.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_02_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_02.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_02_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_03.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_03_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_03.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_03_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_03.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_03_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "note": "Stand-in: empty. Top_03.png was saved without transparency. Save it again with transparency."
+  },
+  {
+   "section": 3,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_04.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_04_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_04.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_04_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_04.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_04_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_05.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_05_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_05.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_05_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_05.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_05_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_06.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_06_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_06.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_06_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_06.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_06_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 6,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_07.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_07_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 6,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_07.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_07_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 6,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_07.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_07_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 7,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_08.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_08_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "note": "Background_08_Depth.png is a copy of 07's map (1486 wide, picture 1919): drawn flat until a matching map is saved."
+  },
+  {
+   "section": 7,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_08.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_08_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 7,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_08.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_08_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_09.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_09_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_09.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_09_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_09.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_09_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_10.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_10_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_10.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_10_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_10.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_10_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_11.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_11_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_11.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_11_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_11.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_11_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 11,
+   "role": "background",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_12.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_12_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 11,
+   "role": "mid",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_12.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_12_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 11,
+   "role": "top",
+   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_12.png",
+   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_12_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1843,
+    900
+   ],
+   "name": "The garage"
+  },
+  {
+   "frame": [
+    1507,
+    0,
+    1998,
+    1086
+   ],
+   "name": "Leaving on the bike"
+  },
+  {
+   "frame": [
+    3505,
+    0,
+    1495,
+    1086
+   ],
+   "name": "The road out"
+  },
+  {
+   "frame": [
+    5000,
+    0,
+    1732,
+    1086
+   ],
+   "name": "Into the city"
+  },
+  {
+   "frame": [
+    6732,
+    0,
+    1533,
+    1086
+   ],
+   "name": "Along the river"
+  },
+  {
+   "frame": [
+    8218,
+    0,
+    1860,
+    930
+   ],
+   "name": "The corner"
+  },
+  {
+   "frame": [
+    9854,
+    0,
+    1843,
+    900
+   ],
+   "name": "The city view"
+  },
+  {
+   "frame": [
+    11518,
+    0,
+    1919,
+    1086
+   ],
+   "name": "Waiting"
+  },
+  {
+   "frame": [
+    13437,
+    0,
+    1781,
+    1086
+   ],
+   "name": "The bank"
+  },
+  {
+   "frame": [
+    15328,
+    0,
+    1860,
+    930
+   ],
+   "name": "The box"
+  },
+  {
+   "frame": [
+    17234,
+    0,
+    1860,
+    930
+   ],
+   "name": "The call"
+  },
+  {
+   "frame": [
+    19030,
+    0,
+    1700,
+    1086
+   ],
+   "name": "The office: Ethel"
+  },
+  {
+   "frame": [
+    19130,
+    0,
+    2050,
+    1086
+   ],
+   "name": "The office: Ethel and the lawyers"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-01_homestead-sorrow",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_delivery-to-dominics-house",
+   "style": "push"
+  }
+ },
+ "together": null
+}

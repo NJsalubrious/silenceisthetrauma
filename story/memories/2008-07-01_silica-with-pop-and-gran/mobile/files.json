@@ -1,0 +1,73 @@
+{
+"files": {
+"Ethel_POP_Gran_in_Silica_Background.webp": {
+"w": 1000,
+"h": 750,
+"v": "51d05188d3",
+"px": 122890,
+"path": "_auto/Ethel_POP_Gran_in_Silica_Background.webp",
+"from": "Ethel_POP_Gran_in_Silica_Background.webp",
+"fromV": "cf214e6994",
+"low": "../desktop/_low/Ethel_POP_Gran_in_Silica_Background.webp"
+},
+"Ethel_POP_Gran_in_Silica_Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "090492dbd1",
+"px": 28597,
+"path": "_auto/Ethel_POP_Gran_in_Silica_Top.webp",
+"from": "Ethel_POP_Gran_in_Silica_Top.webp",
+"fromV": "175f1cc5af",
+"box": [
+0,
+277,
+1000,
+473
+],
+"low": "../desktop/_low/Ethel_POP_Gran_in_Silica_Top.webp"
+},
+"Ethel_POP_Gran_in_Silica_Top_depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "eed8ccb92d",
+"px": 118962,
+"path": "_auto/Ethel_POP_Gran_in_Silica_Top_depth.webp",
+"from": "Ethel_POP_Gran_in_Silica_Top_depth.webp",
+"fromV": "81bd3b03e9"
+},
+"Ethel_POP_Gran_in_Silica_background_depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "e9c98184b0",
+"px": 118277,
+"path": "_auto/Ethel_POP_Gran_in_Silica_background_depth.webp",
+"from": "Ethel_POP_Gran_in_Silica_background_depth.webp",
+"fromV": "af7bb4f057"
+},
+"Ethel_POP_Gran_in_Silica_mid.webp": {
+"w": 1000,
+"h": 750,
+"v": "1a95748f0f",
+"px": 105457,
+"path": "_auto/Ethel_POP_Gran_in_Silica_mid.webp",
+"from": "Ethel_POP_Gran_in_Silica_mid.webp",
+"fromV": "925b9124dd",
+"box": [
+0,
+106,
+1000,
+644
+],
+"low": "../desktop/_low/Ethel_POP_Gran_in_Silica_mid.webp"
+},
+"Ethel_POP_Gran_in_Silica_mid_depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "942482b200",
+"px": 124514,
+"path": "_auto/Ethel_POP_Gran_in_Silica_mid_depth.webp",
+"from": "Ethel_POP_Gran_in_Silica_mid_depth.webp",
+"fromV": "fbf8c60581"
+}
+}
+}

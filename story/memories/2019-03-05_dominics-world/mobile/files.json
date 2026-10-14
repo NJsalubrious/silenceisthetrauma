@@ -1,0 +1,191 @@
+{
+"files": {
+"Dominics_calm_authority_Mid.webp": {
+"w": 1000,
+"h": 750,
+"v": "4ddd7f2834",
+"px": 77668,
+"path": "_auto/Dominics_calm_authority_Mid.webp",
+"from": "Dominics_calm_authority_Mid.webp",
+"fromV": "246b65e5b0",
+"low": "../desktop/_low/Dominics_calm_authority_Mid.webp"
+},
+"Dominics_calm_authority_Mid_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "81b9740439",
+"px": 132566,
+"path": "_auto/Dominics_calm_authority_Mid_Depth.webp",
+"from": "Dominics_calm_authority_Mid_Depth.webp",
+"fromV": "c1f8cacf28"
+},
+"Dominics_calm_authority_Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "1dc5b778d9",
+"px": 114141,
+"path": "_auto/Dominics_calm_authority_Top.webp",
+"from": "Dominics_calm_authority_Top.webp",
+"fromV": "5cd2e2d59c",
+"box": [
+282,
+0,
+718,
+750
+],
+"low": "../desktop/_low/Dominics_calm_authority_Top.webp"
+},
+"Dominics_calm_authority_background.webp": {
+"w": 1000,
+"h": 750,
+"v": "8795f25686",
+"px": 101838,
+"path": "_auto/Dominics_calm_authority_background.webp",
+"from": "Dominics_calm_authority_background.webp",
+"fromV": "6d59b53c0b",
+"low": "../desktop/_low/Dominics_calm_authority_background.webp"
+},
+"Dominics_calm_authority_background_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "a2e3210f86",
+"px": 82005,
+"path": "_auto/Dominics_calm_authority_background_Depth.webp",
+"from": "Dominics_calm_authority_background_Depth.webp",
+"fromV": "d71d9ab0cb"
+},
+"Dominics_world_House_01.webp": {
+"w": 1000,
+"h": 750,
+"v": "5e0a9aa25c",
+"px": 4804,
+"path": "_auto/Dominics_world_House_01.webp",
+"from": "Dominics_world_House_01.webp",
+"fromV": "7d4328fe9b",
+"low": "../desktop/_low/Dominics_world_House_01.webp"
+},
+"Dominics_world_House_01_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_01_Depth.webp",
+"from": "Dominics_world_House_01_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_House_02.webp": {
+"w": 1000,
+"h": 750,
+"v": "dee24c2ec0",
+"px": 4910,
+"path": "_auto/Dominics_world_House_02.webp",
+"from": "Dominics_world_House_02.webp",
+"fromV": "44c912603f",
+"low": "../desktop/_low/Dominics_world_House_02.webp"
+},
+"Dominics_world_House_02_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_02_Depth.webp",
+"from": "Dominics_world_House_02_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_House_03.webp": {
+"w": 1000,
+"h": 750,
+"v": "2dbfaffa55",
+"px": 4914,
+"path": "_auto/Dominics_world_House_03.webp",
+"from": "Dominics_world_House_03.webp",
+"fromV": "c36c67bff1",
+"low": "../desktop/_low/Dominics_world_House_03.webp"
+},
+"Dominics_world_House_03_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_03_Depth.webp",
+"from": "Dominics_world_House_03_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_House_04.webp": {
+"w": 1000,
+"h": 750,
+"v": "15d79c6bb0",
+"px": 4796,
+"path": "_auto/Dominics_world_House_04.webp",
+"from": "Dominics_world_House_04.webp",
+"fromV": "f9fec29493",
+"low": "../desktop/_low/Dominics_world_House_04.webp"
+},
+"Dominics_world_House_04_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_04_Depth.webp",
+"from": "Dominics_world_House_04_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_House_05.webp": {
+"w": 1000,
+"h": 750,
+"v": "e38ff03e93",
+"px": 4798,
+"path": "_auto/Dominics_world_House_05.webp",
+"from": "Dominics_world_House_05.webp",
+"fromV": "eca1f0b532",
+"low": "../desktop/_low/Dominics_world_House_05.webp"
+},
+"Dominics_world_House_05_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_05_Depth.webp",
+"from": "Dominics_world_House_05_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_House_06.webp": {
+"w": 1000,
+"h": 750,
+"v": "d10326c922",
+"px": 4820,
+"path": "_auto/Dominics_world_House_06.webp",
+"from": "Dominics_world_House_06.webp",
+"fromV": "fdf83390b7",
+"low": "../desktop/_low/Dominics_world_House_06.webp"
+},
+"Dominics_world_House_06_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_House_06_Depth.webp",
+"from": "Dominics_world_House_06_Depth.webp",
+"fromV": "4266930558"
+},
+"Dominics_world_Offshore_01.webp": {
+"w": 1000,
+"h": 750,
+"v": "8204d85a0b",
+"px": 4996,
+"path": "_auto/Dominics_world_Offshore_01.webp",
+"from": "Dominics_world_Offshore_01.webp",
+"fromV": "56c2aa941d",
+"low": "../desktop/_low/Dominics_world_Offshore_01.webp"
+},
+"Dominics_world_Offshore_01_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "1ef444a151",
+"px": 519,
+"path": "_auto/Dominics_world_Offshore_01_Depth.webp",
+"from": "Dominics_world_Offshore_01_Depth.webp",
+"fromV": "4266930558"
+}
+}
+}

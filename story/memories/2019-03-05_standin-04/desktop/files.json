@@ -1,0 +1,24 @@
+{
+"files": {
+"Background.webp": {
+"w": 1448,
+"h": 1086,
+"v": "9b7fb43791",
+"px": 56624,
+"low": "_low/Background.webp"
+},
+"Background_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "def2ee725e",
+"px": 812
+},
+"Together.webp": {
+"w": 1448,
+"h": 1086,
+"v": "eb8581698c",
+"px": 46224,
+"low": "_low/Together.webp"
+}
+}
+}

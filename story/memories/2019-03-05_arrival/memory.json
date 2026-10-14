@@ -1,0 +1,287 @@
+{
+ "id": "arrival",
+ "title": "Arrival: the bike, the guard, Isla",
+ "date": "2019-03-05",
+ "order": 1,
+ "kind": "strip",
+ "direction": "left",
+ "height": 1086,
+ "note": "The bike and its note, the guard at the door, Isla. Each picture glides and dissolves into the next, as the lounge does in Walk Left.",
+ "sections": [],
+ "layers": [
+  {
+   "name": "Ethel / the gifted trap: background",
+   "role": "background",
+   "folder": "2019-03-05_the-gifted-trap",
+   "image": "Ethels_Arrival_Gifted_Trap_Background.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Background_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Ethel / the gifted trap: top",
+   "role": "top",
+   "folder": "2019-03-05_the-gifted-trap",
+   "image": "Ethels_Arrival_Gifted_Trap_Top.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Top_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Ethel / arrival, the guard: background",
+   "role": "background",
+   "folder": "2019-03-05_arrival-the-guard",
+   "image": "Ethels_arrival_Psycho_Background.png",
+   "depth": "Ethels_arrival_Psycho_Background_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Ethel / arrival, the guard: top",
+   "role": "top",
+   "folder": "2019-03-05_arrival-the-guard",
+   "image": "Ethels_arrival_Psycho_Top.png",
+   "depth": "Ethels_arrival_Psycho_Top_depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Isla / the glass house: background",
+   "role": "background",
+   "folder": "2019-03-10_isla-the-glass-house",
+   "image": "03A_Isla_meets_ethel_Background.png",
+   "depth": "03A_Isla_meets_ethel_Background_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Isla / the glass house: top",
+   "role": "top",
+   "folder": "2019-03-10_isla-the-glass-house",
+   "image": "03A_Isla_meets_ethel_Top.png",
+   "depth": "03A_Isla_meets_ethel_Top_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    2896,
+    4344
+   ],
+   "name": "Ethel / the gifted trap"
+  },
+  {
+   "frame": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    1448,
+    2896
+   ],
+   "name": "Ethel / arrival, the guard"
+  },
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    0,
+    1448
+   ],
+   "name": "Isla / the glass house"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {
+  "blur": 1,
+  "trail": 1,
+  "vignette": 0,
+  "deepVignette": 0.5,
+  "grain": 0.03
+ },
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-01_the-gap",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-10_walk-left",
+   "style": "push"
+  }
+ },
+ "together": null
+}

@@ -1,0 +1,152 @@
+{
+"files": {
+"Young_Ethel_Riding_A_Mid.webp": {
+"w": 724,
+"h": 543,
+"v": "c7be76c1a0",
+"px": 70909,
+"path": "_auto/Young_Ethel_Riding_A_Mid.webp",
+"from": "Young_Ethel_Riding_A_Mid.webp",
+"fromV": "a1e22d0449",
+"box": [
+0,
+56,
+449,
+487
+],
+"low": "../desktop/_low/Young_Ethel_Riding_A_Mid.webp"
+},
+"Young_Ethel_Riding_A_Mid_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "507acb37a0",
+"px": 89023,
+"path": "_auto/Young_Ethel_Riding_A_Mid_Depth.webp",
+"from": "Young_Ethel_Riding_A_Mid_Depth.webp",
+"fromV": "445695862c"
+},
+"Young_Ethel_Riding_A_Top.webp": {
+"w": 724,
+"h": 543,
+"v": "164497bfd3",
+"px": 134468,
+"path": "_auto/Young_Ethel_Riding_A_Top.webp",
+"from": "Young_Ethel_Riding_A_Top.webp",
+"fromV": "e6007a58f7",
+"low": "../desktop/_low/Young_Ethel_Riding_A_Top.webp"
+},
+"Young_Ethel_Riding_A_Top_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "3dfc1eed55",
+"px": 85675,
+"path": "_auto/Young_Ethel_Riding_A_Top_Depth.webp",
+"from": "Young_Ethel_Riding_A_Top_Depth.webp",
+"fromV": "fda0539666"
+},
+"Young_Ethel_Riding_B_Background.webp": {
+"w": 836,
+"h": 470,
+"v": "8302645e5c",
+"px": 172852,
+"path": "_auto/Young_Ethel_Riding_B_Background.webp",
+"from": "Young_Ethel_Riding_B_Background.webp",
+"fromV": "d3b8445ad7",
+"low": "../desktop/_low/Young_Ethel_Riding_B_Background.webp"
+},
+"Young_Ethel_Riding_B_Background_Depth.webp": {
+"w": 836,
+"h": 470,
+"v": "198cc3e656",
+"px": 86948,
+"path": "_auto/Young_Ethel_Riding_B_Background_Depth.webp",
+"from": "Young_Ethel_Riding_B_Background_Depth.webp",
+"fromV": "f21a83d2a7"
+},
+"Young_Ethel_Riding_B_Top.webp": {
+"w": 836,
+"h": 470,
+"v": "d0baa8bf15",
+"px": 49911,
+"path": "_auto/Young_Ethel_Riding_B_Top.webp",
+"from": "Young_Ethel_Riding_B_Top.webp",
+"fromV": "3e05d3cd9a",
+"box": [
+0,
+144,
+505,
+326
+],
+"low": "../desktop/_low/Young_Ethel_Riding_B_Top.webp"
+},
+"Young_Ethel_Riding_B_Top_Depth.webp": {
+"w": 836,
+"h": 470,
+"v": "b63035f1c6",
+"px": 31997,
+"path": "_auto/Young_Ethel_Riding_B_Top_Depth.webp",
+"from": "Young_Ethel_Riding_B_Top_Depth.webp",
+"fromV": "8fc82934df"
+},
+"Young_Ethel_Riding_C_Background.webp": {
+"w": 724,
+"h": 543,
+"v": "207abb4d7d",
+"px": 141640,
+"path": "_auto/Young_Ethel_Riding_C_Background.webp",
+"from": "Young_Ethel_Riding_C_Background.webp",
+"fromV": "83ddcc5c9d",
+"low": "../desktop/_low/Young_Ethel_Riding_C_Background.webp"
+},
+"Young_Ethel_Riding_C_Background_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "5e7192fadc",
+"px": 88815,
+"path": "_auto/Young_Ethel_Riding_C_Background_Depth.webp",
+"from": "Young_Ethel_Riding_C_Background_Depth.webp",
+"fromV": "a4b78b11b9"
+},
+"Young_Ethel_Riding_C_Mid.webp": {
+"w": 724,
+"h": 543,
+"v": "8a2a1a9fdf",
+"px": 90739,
+"path": "_auto/Young_Ethel_Riding_C_Mid.webp",
+"from": "Young_Ethel_Riding_C_Mid.webp",
+"fromV": "0a9c93a0fd",
+"box": [
+0,
+144,
+720,
+399
+],
+"low": "../desktop/_low/Young_Ethel_Riding_C_Mid.webp"
+},
+"Young_Ethel_Riding_C_Mid_depth.webp": {
+"w": 724,
+"h": 543,
+"v": "0c3a2c35d9",
+"px": 76515,
+"path": "_auto/Young_Ethel_Riding_C_Mid_depth.webp",
+"from": "Young_Ethel_Riding_C_Mid_depth.webp",
+"fromV": "ac172cf6a9"
+},
+"Young_Ethel_Riding_C_Top.webp": {
+"w": 724,
+"h": 543,
+"v": "395687e6c8",
+"px": 9154,
+"path": "_auto/Young_Ethel_Riding_C_Top.webp",
+"from": "Young_Ethel_Riding_C_Top.webp",
+"fromV": "68138a5ce9",
+"box": [
+0,
+322,
+257,
+221
+],
+"low": "../desktop/_low/Young_Ethel_Riding_C_Top.webp"
+}
+}
+}

@@ -1,0 +1,118 @@
+/* SITT memory world */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#080e0f;color:#e9e4da;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.world{position:fixed;inset:0;isolation:isolate;overflow:hidden;background:#080e0f}
+.world canvas,.world .poster{position:absolute;inset:0;width:100%;height:100%}
+.world .poster{object-fit:cover;z-index:-1;transition:opacity .8s}
+.world canvas{opacity:0;transition:opacity 1.2s}
+.world.ready canvas{opacity:1}.world.ready .poster{opacity:0}
+.caption{position:absolute;left:50%;bottom:9vh;transform:translateX(-50%);width:min(760px,88vw);text-align:center;pointer-events:none}
+.caption p{margin:0;font-size:clamp(18px,2.1vw,26px);line-height:1.35;color:#f4efe6;text-shadow:0 1px 18px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.9);opacity:0;transform:translateY(6px);transition:opacity .7s,transform .9s}
+.caption.on p{opacity:1;transform:none}
+.caption.echo p{font-style:italic;letter-spacing:.06em;opacity:0;color:#e6dccb}
+.caption.echo.on p{opacity:.62;filter:blur(.3px)}
+.note{position:absolute;left:50%;top:9vh;transform:translateX(-50%);margin:0;font-size:13px;letter-spacing:.06em;opacity:0;transition:opacity .5s;text-shadow:0 1px 10px #000}
+.note.on{opacity:.85}
+/* the veil: the title on dark until the first click; then the title goes and the dark thins away as Ethel speaks */
+.veil{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.4vh;
+ background:rgba(3,5,6,.9);cursor:pointer;transition:background 8.5s cubic-bezier(.35,0,.55,1)}
+.veil img{width:min(62vw,820px);height:auto;opacity:.96;transition:opacity 1.6s ease,transform 2.4s ease}
+.veil p{margin:0;font-size:12px;letter-spacing:.32em;text-transform:lowercase;color:#e9e2d6;opacity:.5;animation:breathe 3.6s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.16}}
+.veil.lifting{background:rgba(3,5,6,0);cursor:default;pointer-events:none}
+.veil.lifting img{opacity:0;transform:scale(1.015)}
+.veil.lifting p{opacity:0;animation:none;transition:opacity .6s}
+.veil:focus-visible{outline:none}.veil:focus-visible p{opacity:.9;animation:none}
+/* the one control allowed over a memory: small, quiet, bottom right */
+.skip{position:absolute;right:18px;bottom:14px;z-index:4;background:none;border:0;color:#efe7da;font:inherit;font-size:11px;letter-spacing:.18em;text-transform:lowercase;
+ padding:8px 10px;cursor:pointer;text-shadow:0 1px 8px #000;opacity:.32;transition:opacity .6s}
+.skip:hover,.skip:focus-visible{opacity:.85}
+.skip:not(.on){opacity:0;pointer-events:none}
+/* once handed over, the hand says what to do */
+.world.free{cursor:grab}.world.free.held{cursor:grabbing}
+/* doors: the hand becomes a magnifier over a spot that leads in */
+.world.free.door{cursor:zoom-in}
+/* the timeline: a thin line of dates that shows itself near the bottom edge */
+.timeline{position:absolute;left:8vw;right:8vw;bottom:22px;height:34px;z-index:4;opacity:0;transition:opacity .6s;pointer-events:none}
+.world.free .timeline.near,.world.free .timeline.dragging{opacity:1;pointer-events:auto}
+.timeline .track{position:absolute;left:0;right:0;top:16px;height:14px;cursor:pointer}
+.timeline .track::before{content:"";position:absolute;left:0;right:0;top:6px;height:1px;
+ background:linear-gradient(90deg,rgba(239,231,218,.55) 0,rgba(239,231,218,.55) var(--known,80%),rgba(239,231,218,0) 100%)}
+.timeline .marks i{position:absolute;top:3px;width:1px;height:7px;background:rgba(239,231,218,.7)}
+.timeline .marks i.key{top:0;height:13px;width:2px;background:#efe7da}
+.timeline .knob{position:absolute;top:15px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#efe7da;box-shadow:0 0 12px rgba(0,0,0,.8);cursor:grab;touch-action:none}
+.timeline.dragging .knob{cursor:grabbing}
+.timeline .date{position:absolute;left:50%;top:-4px;transform:translateX(-50%);font-size:12px;letter-spacing:.12em;color:#efe7da;text-shadow:0 1px 8px #000;white-space:nowrap}
+/* the studio (?tune=1), laid out like depth-map-test */
+html.tuning .world{right:340px;transition:right .45s cubic-bezier(.3,0,.2,1)}
+html.tuning.folded .world{right:0}
+.studio{position:fixed;top:0;right:0;bottom:0;width:340px;overflow:auto;padding:20px;background:#0d1516;color:#d4d6ce;border-left:1px solid #2a3734;font-size:13px;z-index:5}
+.studio h1{font-size:18px;margin:0 0 12px}
+.studio p{color:#a5b3aa}
+.studio label{display:block;margin:16px 0 7px}
+.studio label.check{margin:8px 0;display:flex;gap:8px;align-items:center;color:#c5ccc4}
+.studio select,.studio button{font:inherit;background:#172222;color:#d4d6ce;border:1px solid #48554f;border-radius:2px;padding:9px;cursor:pointer}
+.studio select{width:100%;margin-top:7px}
+.studio input[type=range]{width:100%}
+.studio output{float:right;color:#bca58b}
+.studio .row{display:flex;gap:8px;margin-top:14px}.studio .row button{flex:1}
+.studio button.primary{background:#bca58b;color:#111;border-color:#bca58b}
+.studio details{border-top:1px solid #23302d;margin-top:14px;padding-top:8px}
+.studio summary{cursor:pointer;color:#e3e6de}
+.studio .st{color:#c8af83;min-height:1.4em}
+.studio .files{font-size:10px;overflow-wrap:anywhere}.studio .files strong{display:block;font-size:12px;color:#bbcaba;margin-top:10px}
+.studio .lines{padding-left:18px}.studio .lines li{margin:6px 0;color:#c5ccc4}
+.studio .lines input{width:64px;font:inherit;background:#172222;color:#d4d6ce;border:1px solid #48554f;padding:3px 5px;margin-right:6px}
+@media (max-width:700px){html.tuning .world{right:0;bottom:45vh}.studio{top:auto;height:45vh;width:100%;border-left:0;border-top:1px solid #2a3734}.veil img{width:84vw}}
+@media (prefers-reduced-motion: reduce){.caption p,.world canvas,.veil,.veil img{transition:none}.veil p{animation:none}}
+.studio-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-events:none}
+.studio-overlay.on{pointer-events:auto;cursor:crosshair}
+.studio label.inline{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.studio input[type=text],.studio input[type=number]{font:inherit;background:#172222;color:#d4d6ce;border:1px solid #48554f;padding:6px 7px;width:100%;margin-top:6px}
+.studio label.inline input{width:96px;margin:0}
+.studio .lines label.inline{display:inline-flex}.studio .lines label.inline input{width:70px}
+.studio .item{border-left:2px solid #2a3734;padding-left:10px;margin:12px 0}
+.studio .source-note{color:#c8af83}
+.studio button{margin-top:0}
+.studio summary{font-size:14px;font-weight:600;padding:6px 0;color:#efe9df}
+.studio details[open]>summary{color:#d8b98f}
+
+/* the fold: a slim tab on the studio's edge */
+.studio{transition:transform .45s cubic-bezier(.3,0,.2,1)}
+html.folded .studio{transform:translateX(100%)}
+html.folded .studio-overlay{opacity:0}
+.studio-fold{position:fixed;top:50%;right:340px;z-index:7;width:18px;height:64px;margin-top:-32px;padding:0;border:1px solid #2a3734;border-right:0;border-radius:3px 0 0 3px;background:rgba(13,21,22,.72);color:#a5b3aa;font:16px/1 system-ui,sans-serif;cursor:pointer;opacity:.55;transition:right .45s cubic-bezier(.3,0,.2,1),opacity .3s}
+.studio-fold:hover{opacity:1;color:#e3e6de}
+html.folded .studio-fold{right:0;opacity:.3}
+html.folded .studio-fold:hover{opacity:.9}
+@media (max-width:700px){html.tuning.folded .world{bottom:0}html.folded .studio{transform:translateY(100%)}.studio-fold{right:12px;top:auto;bottom:45vh;margin:0;width:64px;height:18px;border:1px solid #2a3734;border-bottom:0;border-radius:3px 3px 0 0}html.folded .studio-fold{right:12px;bottom:0}}
+
+/* the way on: the next memory, blurred to a colour, breathing at the forward edge; it brightens and reaches in as the visitor pushes */
+.ahead{position:absolute;top:0;bottom:0;width:22vw;pointer-events:none;z-index:2;opacity:0;transition:opacity 1.4s ease;--push:0}
+.ahead.right{right:0;-webkit-mask-image:linear-gradient(to left,#000,rgba(0,0,0,.35) 45%,transparent);mask-image:linear-gradient(to left,#000,rgba(0,0,0,.35) 45%,transparent)}
+.ahead.left{left:0;-webkit-mask-image:linear-gradient(to right,#000,rgba(0,0,0,.35) 45%,transparent);mask-image:linear-gradient(to right,#000,rgba(0,0,0,.35) 45%,transparent)}
+.ahead i{position:absolute;inset:-8% -30%;background-size:cover;background-position:center;filter:blur(22px) saturate(.75) brightness(.95);
+ opacity:calc(.24 + var(--push)*.5);transform:translateX(calc(var(--push)*-6%));transition:opacity .25s,transform .25s;animation:ahead-breathe 5.2s ease-in-out infinite}
+.ahead.left i{transform:translateX(calc(var(--push)*6%))}
+.ahead.on{opacity:1}
+@keyframes ahead-breathe{0%,100%{filter:blur(22px) saturate(.75) brightness(.8)}50%{filter:blur(16px) saturate(.85) brightness(1.15)}}
+@media (prefers-reduced-motion:reduce){.ahead i{animation:none}}
+
+/* and when the visitor pauses, a glint runs along the bottom edge the way the story goes */
+.way{position:absolute;left:8vw;right:8vw;bottom:7vh;height:1px;pointer-events:none;z-index:2;opacity:0;transition:opacity 1.6s ease;
+ background:linear-gradient(90deg,transparent,rgba(244,236,224,.10) 20%,rgba(244,236,224,.10) 80%,transparent)}
+.way.on{opacity:1}
+.way i{position:absolute;top:-1px;height:3px;width:16vw;left:0;border-radius:2px;opacity:0;
+ background:radial-gradient(ellipse at center,rgba(255,226,186,.85),rgba(255,206,150,.25) 40%,transparent 70%);filter:blur(.6px)}
+.way.on i{animation:way-run 6.5s cubic-bezier(.45,.05,.55,.95) infinite}
+.way.left.on i{animation-name:way-run-left}
+@keyframes way-run{0%{transform:translateX(-16vw);opacity:0}12%{opacity:1}55%{opacity:.9}70%,100%{transform:translateX(84vw);opacity:0}}
+@keyframes way-run-left{0%{transform:translateX(84vw);opacity:0}12%{opacity:1}55%{opacity:.9}70%,100%{transform:translateX(-16vw);opacity:0}}
+@media (prefers-reduced-motion:reduce){.way.on i{animation:none;opacity:.6;left:auto;right:0}.way.left.on i{left:0;right:auto}}
+html.tuning .way{bottom:8vh}
+/* local only: pictures changed since the last publish */
+.publish-due{position:fixed;left:12px;bottom:12px;z-index:60;max-width:min(420px,calc(100vw - 24px));padding:8px 12px;border-radius:6px;background:rgba(120,60,20,.92);color:#fff;font:13px/1.35 system-ui,sans-serif;pointer-events:none}
+
+/* a sequence that plays by itself: no hand while it runs, and the dark it erodes into (and the blink between pictures) */
+.world.free.auto,.world.auto{cursor:default}
+.dark{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;z-index:3}

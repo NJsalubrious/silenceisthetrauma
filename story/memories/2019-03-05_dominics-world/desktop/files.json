@@ -1,0 +1,134 @@
+{
+"files": {
+"Dominics_calm_authority_Mid.webp": {
+"w": 2000,
+"h": 1500,
+"v": "246b65e5b0",
+"px": 238877,
+"low": "_low/Dominics_calm_authority_Mid.webp"
+},
+"Dominics_calm_authority_Mid_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "c1f8cacf28",
+"px": 433527
+},
+"Dominics_calm_authority_Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "5cd2e2d59c",
+"px": 327506,
+"box": [
+572,
+0,
+1428,
+1500
+],
+"low": "_low/Dominics_calm_authority_Top.webp"
+},
+"Dominics_calm_authority_background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "6d59b53c0b",
+"px": 316502,
+"low": "_low/Dominics_calm_authority_background.webp"
+},
+"Dominics_calm_authority_background_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "d71d9ab0cb",
+"px": 238008
+},
+"Dominics_world_House_01.webp": {
+"w": 2000,
+"h": 1500,
+"v": "7d4328fe9b",
+"px": 247142,
+"low": "_low/Dominics_world_House_01.webp"
+},
+"Dominics_world_House_01_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_House_02.webp": {
+"w": 2000,
+"h": 1500,
+"v": "44c912603f",
+"px": 247066,
+"low": "_low/Dominics_world_House_02.webp"
+},
+"Dominics_world_House_02_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_House_03.webp": {
+"w": 2000,
+"h": 1500,
+"v": "c36c67bff1",
+"px": 247096,
+"low": "_low/Dominics_world_House_03.webp"
+},
+"Dominics_world_House_03_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_House_04.webp": {
+"w": 2000,
+"h": 1500,
+"v": "f9fec29493",
+"px": 246394,
+"low": "_low/Dominics_world_House_04.webp"
+},
+"Dominics_world_House_04_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_House_05.webp": {
+"w": 2000,
+"h": 1500,
+"v": "eca1f0b532",
+"px": 246440,
+"low": "_low/Dominics_world_House_05.webp"
+},
+"Dominics_world_House_05_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_House_06.webp": {
+"w": 2000,
+"h": 1500,
+"v": "fdf83390b7",
+"px": 247286,
+"low": "_low/Dominics_world_House_06.webp"
+},
+"Dominics_world_House_06_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+},
+"Dominics_world_Offshore_01.webp": {
+"w": 2000,
+"h": 1500,
+"v": "56c2aa941d",
+"px": 247414,
+"low": "_low/Dominics_world_Offshore_01.webp"
+},
+"Dominics_world_Offshore_01_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "4266930558",
+"px": 1252
+}
+}
+}

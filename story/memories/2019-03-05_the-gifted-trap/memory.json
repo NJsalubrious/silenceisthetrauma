@@ -1,0 +1,68 @@
+{
+ "id": "the-gifted-trap",
+ "title": "Ethel / the gifted trap",
+ "date": "2019-03-05",
+ "order": 1,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/13_Ethels_Arrival_Gifted_Trap/",
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.5,
+  0.47
+ ],
+ "zoom": 1,
+ "faces": [
+  [
+   0.375,
+   0.215,
+   0.08,
+   0.105
+  ],
+  [
+   0.885,
+   0.29,
+   0.025,
+   0.035
+  ]
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Ethels_Arrival_Gifted_Trap_Background.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "Ethels_Arrival_Gifted_Trap_Top.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "together": "Ethels_Arrival_Gifted_Trap_together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-04_gap-11",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_arrival-the-guard",
+   "style": "push"
+  }
+ },
+ "direction": "left"
+}

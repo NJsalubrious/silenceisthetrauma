@@ -1,0 +1,142 @@
+{
+ "id": "young-ethel-riding",
+ "title": "Young Ethel riding",
+ "date": "2013-07-01",
+ "order": 0,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "source": "../assets/entry-experiment/FinalsForTest_01/19_Young_Ethel_Riding/",
+ "note": "Before the crash. Placeholder date (the canon timeline has none for this yet): change it in the studio under this memory's details. Shot A: its \"Top\" picture is fully opaque, so it is used as the background and its \"Mid\" (the rider) sits in front. A top layer here has no depth map, so it sits at one distance.",
+ "sections": [
+  {
+   "name": "Riding: past the lab",
+   "width": 1448
+  },
+  {
+   "name": "Riding: across the plain",
+   "width": 1930
+  },
+  {
+   "name": "Riding: down the gully",
+   "width": 1448
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Young_Ethel_Riding_A_Top.png",
+   "depth": "Young_Ethel_Riding_A_Top_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Young_Ethel_Riding_A_Mid.png",
+   "depth": "Young_Ethel_Riding_A_Mid_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "Young_Ethel_Riding_B_Background.png",
+   "depth": "Young_Ethel_Riding_B_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "Young_Ethel_Riding_B_Top.png",
+   "depth": "Young_Ethel_Riding_B_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "Young_Ethel_Riding_C_Background.png",
+   "depth": "Young_Ethel_Riding_C_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "mid",
+   "image": "Young_Ethel_Riding_C_Mid.png",
+   "depth": "Young_Ethel_Riding_C_Mid_depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "Young_Ethel_Riding_C_Top.png",
+   "depth": null,
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Riding: past the lab"
+  },
+  {
+   "frame": [
+    1448,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Riding: across the plain"
+  },
+  {
+   "frame": [
+    3378,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Riding: down the gully"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2011-07-01_the-lab-with-gran",
+   "style": "push"
+  },
+  "right": {
+   "to": "2018-07-01_the-gate-past-ethel",
+   "style": "push"
+  }
+ },
+ "together": null
+}

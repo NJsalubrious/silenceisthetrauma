@@ -1,0 +1,463 @@
+{
+"files": {
+"A_Bakckground.webp": {
+"w": 724,
+"h": 543,
+"v": "ac00d8cfe2",
+"px": 36064,
+"path": "_auto/A_Bakckground.webp",
+"from": "A_Bakckground.webp",
+"fromV": "6363680f9a",
+"low": "../desktop/_low/A_Bakckground.webp"
+},
+"A_Together.webp": {
+"w": 724,
+"h": 543,
+"v": "33ae8d3210",
+"px": 48998,
+"path": "_auto/A_Together.webp",
+"from": "A_Together.webp",
+"fromV": "b168c3a7d6",
+"low": "../desktop/_low/A_Together.webp"
+},
+"A_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "234251dc23",
+"px": 64658,
+"path": "_auto/A_Top.webp",
+"from": "A_Top.webp",
+"fromV": "0ba343aa9a",
+"box": [
+130,
+31,
+638,
+569
+],
+"low": "../desktop/_low/A_Top.webp"
+},
+"A_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "ebac98965c",
+"px": 82280,
+"path": "_auto/A_Top_Depth.webp",
+"from": "A_Top_Depth.webp",
+"fromV": "a833c5c1d0"
+},
+"B_Background.webp": {
+"w": 724,
+"h": 543,
+"v": "01dc07bdbc",
+"px": 37098,
+"path": "_auto/B_Background.webp",
+"from": "B_Background.webp",
+"fromV": "c5e53e540e",
+"low": "../desktop/_low/B_Background.webp"
+},
+"B_Bakckground.webp": {
+"w": 800,
+"h": 600,
+"v": "7dd302ff5a",
+"px": 43078,
+"path": "_auto/B_Bakckground.webp",
+"from": "B_Bakckground.webp",
+"fromV": "ae7d9cc112",
+"low": "../desktop/_low/B_Bakckground.webp"
+},
+"B_Bakckground_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "a67d4a7d64",
+"px": 38370,
+"path": "_auto/B_Bakckground_Depth.webp",
+"from": "B_Bakckground_Depth.webp",
+"fromV": "cbbf482874"
+},
+"B_Together.webp": {
+"w": 724,
+"h": 543,
+"v": "c8960363b1",
+"px": 48774,
+"path": "_auto/B_Together.webp",
+"from": "B_Together.webp",
+"fromV": "eecccdc620",
+"low": "../desktop/_low/B_Together.webp"
+},
+"B_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "908ac0270f",
+"px": 63333,
+"path": "_auto/B_Top.webp",
+"from": "B_Top.webp",
+"fromV": "b3e125c313",
+"low": "../desktop/_low/B_Top.webp"
+},
+"B_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "19fcfe7b59",
+"px": 90389,
+"path": "_auto/B_Top_Depth.webp",
+"from": "B_Top_Depth.webp",
+"fromV": "2a6db47bc9"
+},
+"C_Bakckground.webp": {
+"w": 800,
+"h": 600,
+"v": "80891df30b",
+"px": 71636,
+"path": "_auto/C_Bakckground.webp",
+"from": "C_Bakckground.webp",
+"fromV": "e7ab9c7b74",
+"low": "../desktop/_low/C_Bakckground.webp"
+},
+"C_Together.webp": {
+"w": 724,
+"h": 543,
+"v": "b60fbfc867",
+"px": 42622,
+"path": "_auto/C_Together.webp",
+"from": "C_Together.webp",
+"fromV": "56c1fb6d69",
+"low": "../desktop/_low/C_Together.webp"
+},
+"C_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "0ad1ed0002",
+"px": 69008,
+"path": "_auto/C_Top.webp",
+"from": "C_Top.webp",
+"fromV": "0239d6af40",
+"low": "../desktop/_low/C_Top.webp"
+},
+"C_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "54cbc9b853",
+"px": 82753,
+"path": "_auto/C_Top_Depth.webp",
+"from": "C_Top_Depth.webp",
+"fromV": "17b5f588b2"
+},
+"D_Mid.webp": {
+"w": 800,
+"h": 600,
+"v": "e83fe84cd9",
+"px": 103425,
+"path": "_auto/D_Mid.webp",
+"from": "D_Mid.webp",
+"fromV": "d86be6e6ce",
+"low": "../desktop/_low/D_Mid.webp"
+},
+"D_Mid_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "6278fecd9e",
+"px": 25990,
+"path": "_auto/D_Mid_Depth.webp",
+"from": "D_Mid_Depth.webp",
+"fromV": "8abcd3c5c8"
+},
+"D_Together.webp": {
+"w": 800,
+"h": 600,
+"v": "1eab9e7671",
+"px": 89424,
+"path": "_auto/D_Together.webp",
+"from": "D_Together.webp",
+"fromV": "905e88174b",
+"low": "../desktop/_low/D_Together.webp"
+},
+"D_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "8efd31bc9f",
+"px": 83372,
+"path": "_auto/D_Top.webp",
+"from": "D_Top.webp",
+"fromV": "268ec13060",
+"box": [
+0,
+91,
+800,
+509
+],
+"low": "../desktop/_low/D_Top.webp"
+},
+"D_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "a4da2d99df",
+"px": 75754,
+"path": "_auto/D_Top_Depth.webp",
+"from": "D_Top_Depth.webp",
+"fromV": "4cc2ff541a"
+},
+"E_Background.webp": {
+"w": 800,
+"h": 600,
+"v": "af98695e23",
+"px": 69754,
+"path": "_auto/E_Background.webp",
+"from": "E_Background.webp",
+"fromV": "dcce0469fc",
+"low": "../desktop/_low/E_Background.webp"
+},
+"E_Together.webp": {
+"w": 800,
+"h": 600,
+"v": "311aced506",
+"px": 88426,
+"path": "_auto/E_Together.webp",
+"from": "E_Together.webp",
+"fromV": "691c0c6343",
+"low": "../desktop/_low/E_Together.webp"
+},
+"E_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "dc938aeba1",
+"px": 100470,
+"path": "_auto/E_Top.webp",
+"from": "E_Top.webp",
+"fromV": "5d77af861f",
+"low": "../desktop/_low/E_Top.webp"
+},
+"E_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "4619c3c1c2",
+"px": 91046,
+"path": "_auto/E_Top_Depth.webp",
+"from": "E_Top_Depth.webp",
+"fromV": "459a03cbae"
+},
+"E_backgrund_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "b0de79d35f",
+"px": 32175,
+"path": "_auto/E_backgrund_Depth.webp",
+"from": "E_backgrund_Depth.webp",
+"fromV": "9f95e76e20"
+},
+"F_Background.webp": {
+"w": 800,
+"h": 600,
+"v": "6039044dc7",
+"px": 105416,
+"path": "_auto/F_Background.webp",
+"from": "F_Background.webp",
+"fromV": "3bd1f89a77",
+"low": "../desktop/_low/F_Background.webp"
+},
+"F_Background_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "e16a931c86",
+"px": 43565,
+"path": "_auto/F_Background_Depth.webp",
+"from": "F_Background_Depth.webp",
+"fromV": "d10d0f8c10"
+},
+"F_Top.webp": {
+"w": 800,
+"h": 600,
+"v": "2c703bcca8",
+"px": 59960,
+"path": "_auto/F_Top.webp",
+"from": "F_Top.webp",
+"fromV": "7bbb882e66",
+"box": [
+0,
+131,
+800,
+469
+],
+"low": "../desktop/_low/F_Top.webp"
+},
+"F_Top_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "9150c4ff1d",
+"px": 69898,
+"path": "_auto/F_Top_Depth.webp",
+"from": "F_Top_Depth.webp",
+"fromV": "05ed484b91"
+},
+"G_Background.webp": {
+"w": 800,
+"h": 600,
+"v": "73f1dacd78",
+"px": 115674,
+"path": "_auto/G_Background.webp",
+"from": "G_Background.webp",
+"fromV": "6abb92bc0a",
+"low": "../desktop/_low/G_Background.webp"
+},
+"G_Background_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "4de8b11a61",
+"px": 44825,
+"path": "_auto/G_Background_Depth.webp",
+"from": "G_Background_Depth.webp",
+"fromV": "4c45b12047"
+},
+"G_Police_A_BacksAway.webp": {
+"w": 800,
+"h": 600,
+"v": "1604acd791",
+"px": 24366,
+"path": "_auto/G_Police_A_BacksAway.webp",
+"from": "G_Police_A_BacksAway.webp",
+"fromV": "4a3431d39e",
+"box": [
+546,
+40,
+238,
+560
+],
+"low": "../desktop/_low/G_Police_A_BacksAway.webp"
+},
+"G_Police_A_BacksAway_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "6ee7537310",
+"px": 22613,
+"path": "_auto/G_Police_A_BacksAway_Depth.webp",
+"from": "G_Police_A_BacksAway_Depth.webp",
+"fromV": "a6768aaf35"
+},
+"G_Police_A_BacksAway_Together.webp": {
+"w": 724,
+"h": 543,
+"v": "f1c61c757c",
+"px": 88700,
+"path": "_auto/G_Police_A_BacksAway_Together.webp",
+"from": "G_Police_A_BacksAway_Together.webp",
+"fromV": "e3e1082b90",
+"low": "../desktop/_low/G_Police_A_BacksAway_Together.webp"
+},
+"G_Police_A_Ethel_Isla_Bike.webp": {
+"w": 800,
+"h": 600,
+"v": "792074e257",
+"px": 53244,
+"path": "_auto/G_Police_A_Ethel_Isla_Bike.webp",
+"from": "G_Police_A_Ethel_Isla_Bike.webp",
+"fromV": "d371ccaeb7",
+"box": [
+95,
+43,
+379,
+557
+],
+"low": "../desktop/_low/G_Police_A_Ethel_Isla_Bike.webp"
+},
+"G_Police_A_Ethel_Isla_Bike_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "675cd91140",
+"px": 60857,
+"path": "_auto/G_Police_A_Ethel_Isla_Bike_Depth.webp",
+"from": "G_Police_A_Ethel_Isla_Bike_Depth.webp",
+"fromV": "c40bf6cf8f"
+},
+"G_Police_B_DirectsToStop.webp": {
+"w": 800,
+"h": 600,
+"v": "d0d47536ec",
+"px": 25025,
+"path": "_auto/G_Police_B_DirectsToStop.webp",
+"from": "G_Police_B_DirectsToStop.webp",
+"fromV": "8a80bdeca0",
+"box": [
+486,
+61,
+285,
+539
+],
+"low": "../desktop/_low/G_Police_B_DirectsToStop.webp"
+},
+"G_Police_B_DirectsToStop_Depth.webp": {
+"w": 800,
+"h": 600,
+"v": "4a30bfe143",
+"px": 37505,
+"path": "_auto/G_Police_B_DirectsToStop_Depth.webp",
+"from": "G_Police_B_DirectsToStop_Depth.webp",
+"fromV": "5cbf283f91"
+},
+"G_Police_B_DirectsToStop_Together.webp": {
+"w": 724,
+"h": 543,
+"v": "8f746fb271",
+"px": 86836,
+"path": "_auto/G_Police_B_DirectsToStop_Together.webp",
+"from": "G_Police_B_DirectsToStop_Together.webp",
+"fromV": "94a7cd2764",
+"low": "../desktop/_low/G_Police_B_DirectsToStop_Together.webp"
+},
+"pano_0.webp": {
+"w": 1450,
+"h": 543,
+"v": "4e886b602e",
+"px": 197062,
+"path": "_auto/pano_0.webp",
+"from": "pano_0.webp",
+"fromV": "9832b81ac1",
+"low": "../desktop/_low/pano_0.webp"
+},
+"pano_0_depth.webp": {
+"w": 1450,
+"h": 543,
+"v": "6e289ab5d9",
+"px": 116024,
+"path": "_auto/pano_0_depth.webp",
+"from": "pano_0_depth.webp",
+"fromV": "609f6bc74c"
+},
+"pano_1.webp": {
+"w": 1450,
+"h": 543,
+"v": "1db2d928ce",
+"px": 160116,
+"path": "_auto/pano_1.webp",
+"from": "pano_1.webp",
+"fromV": "9d4277e604",
+"low": "../desktop/_low/pano_1.webp"
+},
+"pano_1_depth.webp": {
+"w": 1450,
+"h": 543,
+"v": "da3d203f41",
+"px": 110499,
+"path": "_auto/pano_1_depth.webp",
+"from": "pano_1_depth.webp",
+"fromV": "a9f0d3144a"
+},
+"pano_2.webp": {
+"w": 1450,
+"h": 543,
+"v": "d04ff06849",
+"px": 113236,
+"path": "_auto/pano_2.webp",
+"from": "pano_2.webp",
+"fromV": "ddbbd5eff0",
+"low": "../desktop/_low/pano_2.webp"
+},
+"pano_2_depth.webp": {
+"w": 1450,
+"h": 543,
+"v": "b8744fa659",
+"px": 78544,
+"path": "_auto/pano_2_depth.webp",
+"from": "pano_2_depth.webp",
+"fromV": "93fea79c3e"
+}
+}
+}

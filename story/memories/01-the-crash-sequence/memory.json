@@ -1,0 +1,353 @@
+{
+ "id": "the-crash-sequence",
+ "title": "The crash sequence",
+ "date": "2019-02-28",
+ "order": 0,
+ "kind": "strip",
+ "height": 1500,
+ "sections": [
+  {
+   "name": "Leaving the gate",
+   "width": 2790
+  },
+  {
+   "name": "The crash",
+   "width": 2687
+  },
+  {
+   "name": "Police at the gate",
+   "width": 2240
+  },
+  {
+   "name": "Through the gate",
+   "width": 2423
+  },
+  {
+   "name": "The road",
+   "width": 3837
+  },
+  {
+   "name": "At the wreck",
+   "width": 4023
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Background1.png",
+   "depth": "Background1_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid-background",
+   "image": "Mid_Background1.png",
+   "depth": "Mid_Background1_Depth.png",
+   "plane": 0.4,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "Mid1.png",
+   "depth": "Mid1_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Top1.png",
+   "depth": "Top1_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "Background2.png",
+   "depth": "Background2_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "mid",
+   "image": "Mid2.png",
+   "depth": "Mid2_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "Top2.png",
+   "depth": "Top2_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "Background3.png",
+   "depth": "Background3_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "mid",
+   "image": "Mid3.png",
+   "depth": "Mid3_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "Top3.png",
+   "depth": "Top3_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "background",
+   "image": "Background4.png",
+   "depth": "Background4_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "mid",
+   "image": "Mid4.png",
+   "depth": "Mid4_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "top",
+   "image": "Top4.png",
+   "depth": "Top4_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "background",
+   "image": "Background5.png",
+   "depth": "Background5_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "mid",
+   "image": "Mid5.png",
+   "depth": "Mid5_depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "top",
+   "image": "Top5.png",
+   "depth": "Top5_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "background",
+   "image": "Background6.png",
+   "depth": "Background6_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "mid",
+   "image": "Mid6.png",
+   "depth": "Mid6_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "top",
+   "image": "Top6_extended_left.png",
+   "depth": "Top6_extended_left_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2790,
+    1500
+   ]
+  },
+  {
+   "frame": [
+    2998,
+    0,
+    2000,
+    1500
+   ]
+  },
+  {
+   "moment": "gate",
+   "frame": [
+    5477,
+    0,
+    2240,
+    1500
+   ]
+  },
+  {
+   "moment": "gate",
+   "frame": [
+    7717,
+    0,
+    2423,
+    1500
+   ]
+  },
+  {
+   "frame": [
+    9720,
+    0,
+    3300,
+    1500
+   ]
+  },
+  {
+   "frame": [
+    13977,
+    0,
+    4023,
+    1500
+   ]
+  }
+ ],
+ "startStop": 1,
+ "momentDrift": 0.12,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "together": "Background2.png",
+ "voice": {
+  "audio": "assets/Audio/Ethel_This_Is_Where_my_Red_Dirt_Ends.mp3",
+  "lines": [
+   {
+    "t": 2.55,
+    "end": 5.2,
+    "text": "This is where my red dirt ends."
+   },
+   {
+    "t": 6.55,
+    "end": 8.6,
+    "text": "Right here."
+   },
+   {
+    "t": 11.15,
+    "end": 14.8,
+    "text": "You can do what I always do"
+   },
+   {
+    "t": 16.75,
+    "end": 19.2,
+    "text": "and keep moving forward."
+   },
+   {
+    "t": 20.25,
+    "end": 23.2,
+    "text": "Or you can do what I can't do"
+   },
+   {
+    "t": 24.05,
+    "end": 26.3,
+    "text": "and go back to where it all began."
+   },
+   {
+    "t": 26.95,
+    "end": 29.0,
+    "text": "To Gran and Pop."
+   },
+   {
+    "t": 30.45,
+    "end": 32.0,
+    "text": "It's up to you."
+   },
+   {
+    "t": 32.45,
+    "end": 33.9,
+    "text": "By the way,"
+   },
+   {
+    "t": 34.05,
+    "end": 37.2,
+    "text": "forward is sometimes left of field."
+   },
+   {
+    "t": 42.75,
+    "end": 45.9,
+    "text": "Forward is left of field.",
+    "echo": true
+   }
+  ],
+  "handover": 42.75,
+  "reveal": 6
+ },
+ "sound": {
+  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
+  "startBeforeEnd": 1.5,
+  "fadeIn": 2.5,
+  "overlap": 2.5,
+  "volume": 1
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_before-the-crash",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-01_homestead-sorrow",
+   "style": "push"
+  }
+ },
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ }
+}

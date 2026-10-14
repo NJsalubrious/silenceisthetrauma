@@ -1,0 +1,56 @@
+{
+"files": {
+"Police_At_the_gate_Background.webp": {
+"w": 1000,
+"h": 722,
+"v": "388455baea",
+"px": 76276,
+"low": "_low/Police_At_the_gate_Background.webp"
+},
+"Police_At_the_gate_Background_Depth.webp": {
+"w": 1000,
+"h": 722,
+"v": "579c4446e1",
+"px": 5944
+},
+"Police_At_the_gate_Mid.webp": {
+"w": 1000,
+"h": 722,
+"v": "ccf8f3410c",
+"px": 55095,
+"box": [
+0,
+121,
+1000,
+601
+],
+"low": "_low/Police_At_the_gate_Mid.webp"
+},
+"Police_At_the_gate_Mid_Depth.webp": {
+"w": 1000,
+"h": 722,
+"v": "7df30ef60e",
+"px": 172711
+},
+"Police_At_the_gate_Together.webp": {
+"w": 1000,
+"h": 722,
+"v": "44fb826fef",
+"px": 79756,
+"low": "_low/Police_At_the_gate_Together.webp"
+},
+"Police_At_the_gate_Top.webp": {
+"w": 1000,
+"h": 722,
+"v": "fe458e9333",
+"px": 83185,
+"low": "_low/Police_At_the_gate_Top.webp"
+},
+"Police_At_the_gate_Top_Depth.webp": {
+"w": 1000,
+"h": 722,
+"v": "7a2489eb1d",
+"px": 9468
+}
+}
+}

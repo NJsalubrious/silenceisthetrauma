@@ -1,0 +1,196 @@
+{
+ "id": "the-journey",
+ "title": "Arrival: the bike, the guard, Isla on the balcony",
+ "date": "2019-03-05",
+ "order": 0.5,
+ "kind": "strip",
+ "height": 1086,
+ "note": "The bike in the driveway, the guard and Isla on the balcony (the same pictures the glass house uses), walked left to right. Comes after Delivery to Dominic's house; the glass house takes over at the flaming towel. The eight stand-ins that were in front of these are kept in their own folders (hidden).",
+ "sections": [],
+ "layers": [
+  {
+   "name": "Ethel / the gifted trap: background",
+   "role": "background",
+   "folder": "2019-03-05_the-gifted-trap",
+   "source": "../assets/entry-experiment/FinalsForTest_01/13_Ethels_Arrival_Gifted_Trap/",
+   "image": "Ethels_Arrival_Gifted_Trap_Background.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Background_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Ethel / the gifted trap: top",
+   "role": "top",
+   "folder": "2019-03-05_the-gifted-trap",
+   "source": "../assets/entry-experiment/FinalsForTest_01/13_Ethels_Arrival_Gifted_Trap/",
+   "image": "Ethels_Arrival_Gifted_Trap_Top.png",
+   "depth": "Ethels_Arrival_Gifted_Trap_Top_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Ethel / arrival, the guard: background",
+   "role": "background",
+   "folder": "2019-03-05_arrival-the-guard",
+   "source": "../assets/entry-experiment/FinalsForTest_01/12_Ethels_arrival_psycho/",
+   "image": "Ethels_arrival_Psycho_Background.png",
+   "depth": "Ethels_arrival_Psycho_Background_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Ethel / arrival, the guard: top",
+   "role": "top",
+   "folder": "2019-03-05_arrival-the-guard",
+   "source": "../assets/entry-experiment/FinalsForTest_01/12_Ethels_arrival_psycho/",
+   "image": "Ethels_arrival_Psycho_Top.png",
+   "depth": "Ethels_arrival_Psycho_Top_depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Isla / the glass house: background",
+   "role": "background",
+   "folder": "2019-03-10_isla-the-glass-house",
+   "source": "../assets/entry-experiment/FinalsForTest_01/03_Isla_meets_ethel/",
+   "image": "03A_Isla_meets_ethel_Background.png",
+   "depth": "03A_Isla_meets_ethel_Background_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Isla / the glass house: top",
+   "role": "top",
+   "folder": "2019-03-10_isla-the-glass-house",
+   "source": "../assets/entry-experiment/FinalsForTest_01/03_Isla_meets_ethel/",
+   "image": "03A_Isla_meets_ethel_Top.png",
+   "depth": "03A_Isla_meets_ethel_Top_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    30,
+    110,
+    1448,
+    820
+   ],
+   "name": "Ethel / the gifted trap",
+   "fit": 1
+  },
+  {
+   "frame": [
+    1448,
+    20,
+    1448,
+    790
+   ],
+   "name": "Ethel / arrival, the guard",
+   "fit": 1
+  },
+  {
+   "frame": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Isla / the glass house"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-05_delivery-to-dominics-house",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_dominics-world",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "filmStrip": "Prototype, 13 October: the bike, the guard and the balcony slide side by side under the finger like a film strip. The version before this is kept as journey.before-filmstrip.json."
+}

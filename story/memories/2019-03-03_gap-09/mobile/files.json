@@ -1,0 +1,58 @@
+{
+"files": {
+"Background.webp": {
+"w": 1000,
+"h": 750,
+"v": "dabc0bf1fe",
+"px": 3312,
+"path": "_auto/Background.webp",
+"from": "Background.webp",
+"fromV": "88b339b894",
+"low": "../desktop/_low/Background.webp"
+},
+"Background_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "a5c4bc2f7a",
+"px": 25715,
+"path": "_auto/Background_Depth.webp",
+"from": "Background_Depth.webp",
+"fromV": "804618bcad"
+},
+"Together.webp": {
+"w": 1000,
+"h": 750,
+"v": "a53793cd7f",
+"px": 3984,
+"path": "_auto/Together.webp",
+"from": "Together.webp",
+"fromV": "bb006531b4",
+"low": "../desktop/_low/Together.webp"
+},
+"Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "d3934d8d91",
+"px": 7583,
+"path": "_auto/Top.webp",
+"from": "Top.webp",
+"fromV": "d9c06b5517",
+"box": [
+408,
+292,
+183,
+126
+],
+"low": "../desktop/_low/Top.webp"
+},
+"Top_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "2751840c4a",
+"px": 5555,
+"path": "_auto/Top_Depth.webp",
+"from": "Top_Depth.webp",
+"fromV": "63bc983c29"
+}
+}
+}

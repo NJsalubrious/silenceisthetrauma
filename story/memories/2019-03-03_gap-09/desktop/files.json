@@ -1,0 +1,43 @@
+{
+"files": {
+"Background.webp": {
+"w": 2000,
+"h": 1500,
+"v": "88b339b894",
+"px": 11444,
+"low": "_low/Background.webp"
+},
+"Background_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "804618bcad",
+"px": 57696
+},
+"Together.webp": {
+"w": 2000,
+"h": 1500,
+"v": "bb006531b4",
+"px": 13104,
+"low": "_low/Together.webp"
+},
+"Top.webp": {
+"w": 2000,
+"h": 1500,
+"v": "d9c06b5517",
+"px": 15845,
+"box": [
+824,
+592,
+351,
+235
+],
+"low": "_low/Top.webp"
+},
+"Top_Depth.webp": {
+"w": 2000,
+"h": 1500,
+"v": "63bc983c29",
+"px": 12870
+}
+}
+}

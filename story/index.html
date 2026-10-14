@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Silence Is The Trauma · the story</title>
+<meta name="description" content="Ethel Ryker's memories, from the red dirt onward.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preload" as="image" href="assets/brand/Text_Silence_Is_The_trauma.png">
+<link rel="stylesheet" href="engine/site.css?v=af851c6046">
+</head><body>
+<main class="world" aria-label="Ethel's memories. Drag, scroll or use the arrow keys to move through them.">
+ <img class="poster" alt="">
+ <canvas id="stage" aria-hidden="true"></canvas>
+ <div class="caption" aria-live="polite"><p></p></div>
+ <div class="veil" role="button" tabindex="0" aria-label="Silence Is The Trauma. Click to listen.">
+  <img src="assets/brand/Text_Silence_Is_The_trauma.png" alt="Silence Is The Trauma">
+  <p>click to listen</p>
+ </div>
+ <button class="skip" type="button">skip intro</button>
+ <div class="timeline" aria-label="Timeline"><div class="track"><div class="marks"></div></div><span class="knob" role="slider" aria-label="Date"></span><span class="date"></span></div>
+ <p class="note" aria-live="polite"></p>
+</main>
+<script>if(matchMedia('(pointer: coarse)').matches)document.querySelector('.veil p').textContent='tap to listen';</script>
+<script src="engine/depth-settings.js?v=1f505545bf"></script>
+<script src="engine/scene.js?v=57f9ed7a11"></script>
+<script src="engine/sound.js?v=2996d8b349"></script>
+<script src="engine/voice.js?v=245621a44a"></script>
+<script src="engine/world.js?v=8d5ece2388"></script>
+<script>
+// on your own computer: say when pictures have changed since the last publish (run publish before pushing)
+if(/^(127\.0\.0\.1|localhost)$/.test(location.hostname))fetch('/__story/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(s=>{if(!s||!s.changed)return;
+ const d=document.createElement('div');d.className='publish-due';d.textContent=s.changed+' picture'+(s.changed>1?'s':'')+' changed since the last publish. Run publish before you push.';document.body.appendChild(d);}).catch(()=>{});
+</script>
+</body></html>

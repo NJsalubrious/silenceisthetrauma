@@ -1,0 +1,88 @@
+{
+ "id": "homestead-sorrow",
+ "title": "Homestead: sorrow",
+ "date": "2019-03-01",
+ "order": 1,
+ "kind": "strip",
+ "height": 1086,
+ "source": "../assets/entry-experiment/FinalsForTest_01/22_Homestead_sorrow/",
+ "note": "The night after the crash, at the homestead. One picture; it comes straight after the crash sequence and leads into the deposit box sequence.",
+ "sections": [
+  {
+   "name": "The homestead",
+   "width": 1448
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "Homestead_Sorrow_Background.png",
+   "depth": "Homestead_Sorrow_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "Homestead_Sorrow_MidTop.png",
+   "depth": "Homestead_Sorrow_MidTop_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "Homestead_Sorrow_Top.png",
+   "depth": "Homestead_Sorrow_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "name": "Homestead: sorrow"
+  },
+  {
+   "frame": [
+    160,
+    60,
+    1288,
+    966
+   ],
+   "name": "Homestead: closer"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "01-the-crash-sequence",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-02_the-deposit-box",
+   "style": "push"
+  }
+ },
+ "together": null
+}

@@ -1,0 +1,43 @@
+{
+"files": {
+"Ethels_Arrival_Gifted_Trap_Background.webp": {
+"w": 1448,
+"h": 1086,
+"v": "64e757d3b5",
+"px": 157176,
+"low": "_low/Ethels_Arrival_Gifted_Trap_Background.webp"
+},
+"Ethels_Arrival_Gifted_Trap_Background_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "b72c26a96c",
+"px": 189647
+},
+"Ethels_Arrival_Gifted_Trap_Top.webp": {
+"w": 1448,
+"h": 1086,
+"v": "8110ac3003",
+"px": 204875,
+"box": [
+292,
+78,
+1080,
+1008
+],
+"low": "_low/Ethels_Arrival_Gifted_Trap_Top.webp"
+},
+"Ethels_Arrival_Gifted_Trap_Top_Depth.webp": {
+"w": 1448,
+"h": 1086,
+"v": "fdc742d0b1",
+"px": 207787
+},
+"Ethels_Arrival_Gifted_Trap_together.webp": {
+"w": 1448,
+"h": 1086,
+"v": "5616dbd4bd",
+"px": 230306,
+"low": "_low/Ethels_Arrival_Gifted_Trap_together.webp"
+}
+}
+}

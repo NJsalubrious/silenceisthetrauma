@@ -1,0 +1,38 @@
+{
+ "id": "standin-03",
+ "title": "Stand-in 3: Arrivals",
+ "date": "2019-03-05",
+ "order": 0,
+ "kind": "scene",
+ "placeholder": true,
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.5,
+  0.5
+ ],
+ "zoom": 1,
+ "faces": [],
+ "note": "A stand-in from the work-in-progress picture. Replace Background (and add Mid, Top and their depth maps) when the final is ready.",
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  }
+ ],
+ "together": "Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {}
+}

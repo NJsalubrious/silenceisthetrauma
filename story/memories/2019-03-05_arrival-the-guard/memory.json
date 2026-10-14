@@ -1,0 +1,74 @@
+{
+ "id": "arrival-the-guard",
+ "title": "Ethel / arrival, the guard",
+ "date": "2019-03-05",
+ "order": 2,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/12_Ethels_arrival_psycho/",
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.5,
+  0.45
+ ],
+ "zoom": 1,
+ "faces": [
+  [
+   0.325,
+   0.3,
+   0.055,
+   0.085
+  ],
+  [
+   0.73,
+   0.18,
+   0.07,
+   0.11
+  ],
+  [
+   0.665,
+   0.3,
+   0.025,
+   0.035
+  ]
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "Ethels_arrival_Psycho_Background.png",
+   "depth": "Ethels_arrival_Psycho_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "Ethels_arrival_Psycho_Top.png",
+   "depth": "Ethels_arrival_Psycho_Top_depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "together": "Ethels_arrival_Psycho_Together.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-05_the-gifted-trap",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-10_isla-the-glass-house",
+   "style": "push"
+  }
+ },
+ "direction": "left"
+}

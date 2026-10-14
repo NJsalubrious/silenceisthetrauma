@@ -1,0 +1,68 @@
+{
+ "id": "north-sydney-the-keys",
+ "title": "North Sydney / the keys",
+ "date": "2019-03-10",
+ "order": 3,
+ "kind": "scene",
+ "source": "../assets/entry-experiment/FinalsForTest_01/08_Ethel_Isla_North_Syd_lights_keys_Yanked/",
+ "aspect": 1.3333333333333333,
+ "focal": [
+  0.55,
+  0.44
+ ],
+ "zoom": 1,
+ "faces": [
+  [
+   0.45,
+   0.25,
+   0.09,
+   0.13
+  ],
+  [
+   0.87,
+   0.35,
+   0.085,
+   0.13
+  ]
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "North_Syd_lights_keys_Yanked_Background.png",
+   "depth": "North_Syd_lights_keys_Yanked_Background_depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "North_Syd_lights_keys_Yanked_Top.png",
+   "depth": "North_Syd_lights_keys_Yanked_Top_Depth.png",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "together": "North_Syd_lights_keys_Yanked_proper_bg.png",
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-10_walk-left",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-10_isla-station-exit",
+   "style": "push"
+  }
+ },
+ "direction": "left"
+}

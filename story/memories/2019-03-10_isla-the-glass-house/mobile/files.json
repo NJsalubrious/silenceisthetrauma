@@ -1,0 +1,58 @@
+{
+"files": {
+"03A_Isla_meets_ethel_Background.webp": {
+"w": 1000,
+"h": 750,
+"v": "95868b76cd",
+"px": 57014,
+"path": "_auto/03A_Isla_meets_ethel_Background.webp",
+"from": "03A_Isla_meets_ethel_Background.webp",
+"fromV": "06de42d16e",
+"low": "../desktop/_low/03A_Isla_meets_ethel_Background.webp"
+},
+"03A_Isla_meets_ethel_Background_Depth.webp": {
+"w": 1000,
+"h": 748,
+"v": "19360dfe88",
+"px": 83782,
+"path": "_auto/03A_Isla_meets_ethel_Background_Depth.webp",
+"from": "03A_Isla_meets_ethel_Background_Depth.webp",
+"fromV": "324c101693"
+},
+"03A_Isla_meets_ethel_Together.webp": {
+"w": 1000,
+"h": 750,
+"v": "f96e092f45",
+"px": 70206,
+"path": "_auto/03A_Isla_meets_ethel_Together.webp",
+"from": "03A_Isla_meets_ethel_Together.webp",
+"fromV": "46c3527701",
+"low": "../desktop/_low/03A_Isla_meets_ethel_Together.webp"
+},
+"03A_Isla_meets_ethel_Top.webp": {
+"w": 1000,
+"h": 750,
+"v": "cc33e98346",
+"px": 67179,
+"path": "_auto/03A_Isla_meets_ethel_Top.webp",
+"from": "03A_Isla_meets_ethel_Top.webp",
+"fromV": "74d0fed827",
+"box": [
+0,
+109,
+888,
+641
+],
+"low": "../desktop/_low/03A_Isla_meets_ethel_Top.webp"
+},
+"03A_Isla_meets_ethel_Top_Depth.webp": {
+"w": 1000,
+"h": 750,
+"v": "7c4b945cb1",
+"px": 77292,
+"path": "_auto/03A_Isla_meets_ethel_Top_Depth.webp",
+"from": "03A_Isla_meets_ethel_Top_Depth.webp",
+"fromV": "9d496cd47d"
+}
+}
+}

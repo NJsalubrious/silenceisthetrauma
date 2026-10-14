@@ -1,0 +1,131 @@
+{
+ "id": "the-crash",
+ "title": "The crash",
+ "date": "2019-02-28",
+ "order": 1,
+ "kind": "scene",
+ "start": true,
+ "source": "../assets/entry-experiment/FinalsForTest_01/10_Gran_Pop_Car_Crushed/",
+ "aspect": 1.3333333,
+ "focal": [
+  0.5,
+  0.5
+ ],
+ "zoom": 1,
+ "faces": [],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "layers": [
+  {
+   "role": "background",
+   "image": "10_Gran_Pop_Car_Crushed_Background.png",
+   "depth": "10_Gran_Pop_Car_Crushed_Background_Depth.png",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "role": "mid",
+   "image": "10_Gran_Pop_Car_Crushed_Mid.png",
+   "depth": "10_Gran_Pop_Car_Crushed_Mid_Depth.png",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "role": "top",
+   "image": "10_Gran_Pop_Car_Crushed_Top.png",
+   "depth": null,
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132
+  }
+ ],
+ "together": "10_Gran_Pop_Car_Crushed_Together.png",
+ "voice": {
+  "audio": "assets/Audio/Ethel_This_Is_Where_my_Red_Dirt_Ends.mp3",
+  "lines": [
+   {
+    "t": 2.55,
+    "end": 5.2,
+    "text": "This is where my red dirt ends."
+   },
+   {
+    "t": 6.55,
+    "end": 8.6,
+    "text": "Right here."
+   },
+   {
+    "t": 11.15,
+    "end": 14.8,
+    "text": "You can do what I always do"
+   },
+   {
+    "t": 16.75,
+    "end": 19.2,
+    "text": "and keep moving forward."
+   },
+   {
+    "t": 20.25,
+    "end": 23.2,
+    "text": "Or you can do what I can't do"
+   },
+   {
+    "t": 24.05,
+    "end": 26.3,
+    "text": "and go back to where it all began."
+   },
+   {
+    "t": 26.95,
+    "end": 29.0,
+    "text": "To Gran and Pop."
+   },
+   {
+    "t": 30.45,
+    "end": 32.0,
+    "text": "It's up to you."
+   },
+   {
+    "t": 32.45,
+    "end": 33.9,
+    "text": "By the way,"
+   },
+   {
+    "t": 34.05,
+    "end": 37.2,
+    "text": "forward is sometimes left of field."
+   },
+   {
+    "t": 42.75,
+    "end": 45.9,
+    "text": "Forward is left of field.",
+    "echo": true
+   }
+  ],
+  "handover": 42.75,
+  "reveal": 6
+ },
+ "exits": {
+  "left": {
+   "to": "2019-02-28_police-at-the-gate"
+  },
+  "right": {
+   "to": null
+  }
+ },
+ "sound": {
+  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
+  "startBeforeEnd": 1.5,
+  "fadeIn": 2.5,
+  "overlap": 2.5,
+  "volume": 1
+ },
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ }
+}

@@ -1,0 +1,939 @@
+{
+ "id": "the-gap",
+ "title": "The gap (eleven placeholders)",
+ "date": "2019-03-01",
+ "order": 1,
+ "kind": "strip",
+ "height": 1500,
+ "placeholder": true,
+ "note": "Eleven memories between the wreck and the glass house. Each picture glides and dissolves into the next, as the lounge does in Walk Left. Replace a placeholder by changing the pictures in its own gap folder.",
+ "sections": [],
+ "layers": [
+  {
+   "name": "Gap 01 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-01_gap-01",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    0,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    0,
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 01 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-01_gap-01",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    0,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    0
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 02 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-01_gap-02",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    2000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    1,
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 02 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-01_gap-02",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    2000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 03 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-01_gap-03",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    4000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    2,
+    3
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 03 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-01_gap-03",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    4000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 04 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-02_gap-04",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    6000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    3,
+    4
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 3,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 04 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-02_gap-04",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    6000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    3
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 3,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 05 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-02_gap-05",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    8000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    4,
+    5
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 4,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 05 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-02_gap-05",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    8000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    4
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 4,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 06 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-02_gap-06",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    10000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    5,
+    6
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 5,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 06 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-02_gap-06",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    10000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    5
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 5,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 07 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-03_gap-07",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    12000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    6,
+    7
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 6,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 07 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-03_gap-07",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    12000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    6
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 6,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 08 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-03_gap-08",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    14000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    7,
+    8
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 7,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 08 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-03_gap-08",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    14000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    7
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 7,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 09 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-03_gap-09",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    16000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    8,
+    9
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 8,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 09 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-03_gap-09",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    16000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    8
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 8,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 10 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-04_gap-10",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    18000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    9,
+    10
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 9,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 10 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-04_gap-10",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    18000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    9
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 9,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 11 (placeholder): background",
+   "role": "background",
+   "folder": "2019-03-04_gap-11",
+   "image": "Background.png",
+   "depth": "Background_Depth.png",
+   "rect": [
+    20000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    10
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 10,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Gap 11 (placeholder): top",
+   "role": "top",
+   "folder": "2019-03-04_gap-11",
+   "image": "Top.png",
+   "depth": "Top_Depth.png",
+   "rect": [
+    20000,
+    0,
+    2000,
+    1500
+   ],
+   "stops": [
+    10
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 10,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0132,
+   "feather": [
+    0.05,
+    0
+   ]
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    0,
+    2000
+   ],
+   "name": "Gap 01 (placeholder)"
+  },
+  {
+   "frame": [
+    2000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    2000,
+    4000
+   ],
+   "name": "Gap 02 (placeholder)"
+  },
+  {
+   "frame": [
+    4000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    4000,
+    6000
+   ],
+   "name": "Gap 03 (placeholder)"
+  },
+  {
+   "frame": [
+    6000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    6000,
+    8000
+   ],
+   "name": "Gap 04 (placeholder)"
+  },
+  {
+   "frame": [
+    8000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    8000,
+    10000
+   ],
+   "name": "Gap 05 (placeholder)"
+  },
+  {
+   "frame": [
+    10000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    10000,
+    12000
+   ],
+   "name": "Gap 06 (placeholder)"
+  },
+  {
+   "frame": [
+    12000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    12000,
+    14000
+   ],
+   "name": "Gap 07 (placeholder)"
+  },
+  {
+   "frame": [
+    14000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    14000,
+    16000
+   ],
+   "name": "Gap 08 (placeholder)"
+  },
+  {
+   "frame": [
+    16000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    16000,
+    18000
+   ],
+   "name": "Gap 09 (placeholder)"
+  },
+  {
+   "frame": [
+    18000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    18000,
+    20000
+   ],
+   "name": "Gap 10 (placeholder)"
+  },
+  {
+   "frame": [
+    20000,
+    0,
+    2000,
+    1500
+   ],
+   "keep": [
+    20000,
+    22000
+   ],
+   "name": "Gap 11 (placeholder)"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "01-the-crash-sequence",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_the-glass-house",
+   "style": "push"
+  }
+ },
+ "together": null
+}

@@ -1,0 +1,482 @@
+{
+ "id": "after-the-keys",
+ "title": "After: the keys to the nightlife trip",
+ "date": "2019-03-10",
+ "order": 3,
+ "kind": "strip",
+ "direction": "left",
+ "height": 1086,
+ "note": "The keys at the lights, the station exit, the counter-move, the wallet, the nightlife trip, gliding one into the next.",
+ "sections": [],
+ "layers": [
+  {
+   "name": "North Sydney / the keys: background",
+   "role": "background",
+   "folder": "2019-03-10_north-sydney-the-keys",
+   "image": "North_Syd_lights_keys_Yanked_Background.png",
+   "depth": "North_Syd_lights_keys_Yanked_Background_depth.png",
+   "rect": [
+    5792,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "North Sydney / the keys: top",
+   "role": "top",
+   "folder": "2019-03-10_north-sydney-the-keys",
+   "image": "North_Syd_lights_keys_Yanked_Top.png",
+   "depth": "North_Syd_lights_keys_Yanked_Top_Depth.png",
+   "rect": [
+    5792,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    0
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 0,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Isla / station exit: background",
+   "role": "background",
+   "folder": "2019-03-10_isla-station-exit",
+   "image": "Isla_Running_Up_Station_Exit_Background.png",
+   "depth": "Isla_Running_Up_Station_Exit_Background_Depth.png",
+   "rect": [
+    4344,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": 0.0026,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Isla / station exit: top",
+   "role": "top",
+   "folder": "2019-03-10_isla-station-exit",
+   "image": "Isla_Running_Up_Station_Exit_Top.png",
+   "depth": "Isla_Running_Up_Station_Exit_Top_Depth.png",
+   "rect": [
+    4344,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    1
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 1,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0143,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Contact / the counter-move: background",
+   "role": "background",
+   "folder": "2019-03-10_contact-the-counter-move",
+   "image": "A_Ethel_Steals_Islas_phone_wallet_Background.png",
+   "depth": "A_Ethel_Steals_Islas_phone_wallet_Background_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Contact / the counter-move: top",
+   "role": "top",
+   "folder": "2019-03-10_contact-the-counter-move",
+   "image": "A_Ethel_Steals_Islas_phone_wallet_Top.png",
+   "depth": "A_Ethel_Steals_Islas_phone_wallet_Top_Depth.png",
+   "rect": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "The wallet / recognition: background",
+   "role": "background",
+   "folder": "2019-03-10_the-wallet-recognition",
+   "image": "Ethel_Steals_Islas_phone_wallet_Background.png",
+   "depth": "Ethel_Steals_Islas_phone_wallet_Background_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    3
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 3,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "The wallet / recognition: top",
+   "role": "top",
+   "folder": "2019-03-10_the-wallet-recognition",
+   "image": "Ethel_Steals_Islas_phone_wallet_Top.png",
+   "depth": "Ethel_Steals_Islas_phone_wallet_Top_Depth.png",
+   "rect": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    3
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 3,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Nightlife / the trip: background",
+   "role": "background",
+   "folder": "2019-03-10_nightlife-the-trip",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Background.png",
+   "depth": "Isla_Is_Ethel_night_life_trips_her_Background_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    4
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 4,
+    "k": [
+     0.9,
+     0.9
+    ]
+   },
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Nightlife / the trip: mid",
+   "role": "mid",
+   "folder": "2019-03-10_nightlife-the-trip",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Mid.png",
+   "depth": "Isla_Is_Ethel_night_life_trips_her_Mid_Depth.png",
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    4
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 4,
+    "k": [
+     0.92,
+     0.92
+    ]
+   },
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
+   "name": "Nightlife / the trip: top",
+   "role": "top",
+   "folder": "2019-03-10_nightlife-the-trip",
+   "image": "Isla_Is_Ethel_night_life_trips_her_Top.png",
+   "depth": null,
+   "rect": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "stops": [
+    4
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 4,
+    "k": [
+     0.94,
+     0.94
+    ]
+   },
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    5792,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    5792,
+    7240
+   ],
+   "name": "North Sydney / the keys"
+  },
+  {
+   "frame": [
+    4344,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    4344,
+    5792
+   ],
+   "name": "Isla / station exit"
+  },
+  {
+   "frame": [
+    2896,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    2896,
+    4344
+   ],
+   "name": "Contact / the counter-move"
+  },
+  {
+   "frame": [
+    1448,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    1448,
+    2896
+   ],
+   "name": "The wallet / recognition"
+  },
+  {
+   "frame": [
+    0,
+    0,
+    1448,
+    1086
+   ],
+   "keep": [
+    0,
+    1448
+   ],
+   "name": "Nightlife / the trip"
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {
+  "blur": 1,
+  "trail": 1,
+  "vignette": 0,
+  "deepVignette": 0.5,
+  "grain": 0.03
+ },
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-10_walk-left",
+   "style": "push"
+  },
+  "right": {
+   "to": null
+  }
+ },
+ "together": null
+}

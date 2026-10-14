@@ -1,0 +1,67 @@
+{
+"files": {
+"Homestead_Sorrow_Background.webp": {
+"w": 724,
+"h": 543,
+"v": "038d35e6f0",
+"px": 49242,
+"path": "_auto/Homestead_Sorrow_Background.webp",
+"from": "Homestead_Sorrow_Background.webp",
+"fromV": "972cfff06e",
+"low": "../desktop/_low/Homestead_Sorrow_Background.webp"
+},
+"Homestead_Sorrow_Background_Depth.webp": {
+"w": 724,
+"h": 542,
+"v": "6908575149",
+"px": 45667,
+"path": "_auto/Homestead_Sorrow_Background_Depth.webp",
+"from": "Homestead_Sorrow_Background_Depth.webp",
+"fromV": "737468901f"
+},
+"Homestead_Sorrow_MidTop.webp": {
+"w": 724,
+"h": 543,
+"v": "718a279401",
+"px": 42785,
+"path": "_auto/Homestead_Sorrow_MidTop.webp",
+"from": "Homestead_Sorrow_MidTop.webp",
+"fromV": "c5205df77b",
+"box": [
+0,
+103,
+724,
+440
+],
+"low": "../desktop/_low/Homestead_Sorrow_MidTop.webp"
+},
+"Homestead_Sorrow_MidTop_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "cd802e6750",
+"px": 32783,
+"path": "_auto/Homestead_Sorrow_MidTop_Depth.webp",
+"from": "Homestead_Sorrow_MidTop_Depth.webp",
+"fromV": "78da1d65ea"
+},
+"Homestead_Sorrow_Top.webp": {
+"w": 724,
+"h": 543,
+"v": "0f52ea15c8",
+"px": 14055,
+"path": "_auto/Homestead_Sorrow_Top.webp",
+"from": "Homestead_Sorrow_Top.webp",
+"fromV": "ce1d9c60cd",
+"low": "../desktop/_low/Homestead_Sorrow_Top.webp"
+},
+"Homestead_Sorrow_Top_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "d6c38a44c8",
+"px": 20810,
+"path": "_auto/Homestead_Sorrow_Top_Depth.webp",
+"from": "Homestead_Sorrow_Top_Depth.webp",
+"fromV": "206164da85"
+}
+}
+}

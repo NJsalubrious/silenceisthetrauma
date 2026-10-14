@@ -1,0 +1,33 @@
+{
+"files": {
+"Background.webp": {
+"w": 724,
+"h": 543,
+"v": "4abff49256",
+"px": 28340,
+"path": "_auto/Background.webp",
+"from": "Background.webp",
+"fromV": "c78417279a",
+"low": "../desktop/_low/Background.webp"
+},
+"Background_Depth.webp": {
+"w": 724,
+"h": 543,
+"v": "2c02760d16",
+"px": 386,
+"path": "_auto/Background_Depth.webp",
+"from": "Background_Depth.webp",
+"fromV": "def2ee725e"
+},
+"Together.webp": {
+"w": 724,
+"h": 543,
+"v": "889cb7ddcb",
+"px": 28148,
+"path": "_auto/Together.webp",
+"from": "Together.webp",
+"fromV": "5191c2b29a",
+"low": "../desktop/_low/Together.webp"
+}
+}
+}

@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_cfa4c88b",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Economic conditions are determined by structure, not by sentiment.",
+    "timestamp": "2026-10-17T05:43:03.654482Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/15/what-is-your-personal-recession-indicator",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_85f0ce5e",
     "handle": "@isla_band",
     "display_name": "Isla",

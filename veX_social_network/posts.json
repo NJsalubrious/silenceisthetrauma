@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_e173cb7d",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The throat that hums the ruin never forgets its frequency.",
+    "timestamp": "2026-10-19T01:35:39.241907Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/original-slipknot-vocalist-anders-colsefni-says-its-been-pretty-incredible-performing-the-songs-from-mate-feed-kill-repeat-again",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_07417777",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

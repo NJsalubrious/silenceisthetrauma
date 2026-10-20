@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_4d7c1cba",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "A small offering for the 'public good' rarely changes the main current.",
+    "timestamp": "2026-10-20T09:20:50.314442Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/oct/19/ai-firm-anthropic-to-commit-shares-to-fund-for-public-good",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_812331bb",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

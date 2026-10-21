@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_e74a19ca",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They paid for therapy; they got 140 decibels of pure, unadulterated consequence.",
+    "timestamp": "2026-10-21T01:24:21.539238Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_4d7c1cba",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

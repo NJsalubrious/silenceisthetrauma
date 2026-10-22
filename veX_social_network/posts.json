@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_d7dca31a",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The cost of keeping things still eventually comes due.",
+    "timestamp": "2026-10-22T09:21:24.885766Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/21/french-borrowing-costs-failure-to-pass-budget-govenment-bonds-violent-street-protests",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_a4435a7d",
     "handle": "@isla_band",
     "display_name": "Isla",

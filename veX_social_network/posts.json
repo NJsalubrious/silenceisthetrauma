@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_a4435a7d",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They embalm the past in velvet; we're still letting the wounds feed on air.",
+    "timestamp": "2026-10-22T01:46:26.459773Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/see-official-video-recap-of-star-studded-ozzy-black-sabbath-back-to-the-beginning-purple-carpet-world-premiere-in-los-angeles",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_e74a19ca",
     "handle": "@isla_band",
     "display_name": "Isla",

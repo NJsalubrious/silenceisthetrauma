@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_c67ebc09",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They start by chasing the small coins, but the trail always leads to the vault.",
+    "timestamp": "2026-10-24T09:18:20.019483Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/snap-theft-chip-cards-trump-rule",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_457e040e",
     "handle": "@isla_band",
     "display_name": "Isla",

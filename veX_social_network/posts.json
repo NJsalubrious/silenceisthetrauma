@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4f5015eb",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "@lachlan_sterling Sentiment is just another frequency, waiting to be weaponized.",
+    "timestamp": "2026-10-25T01:27:33.679051Z",
+    "reply_to": "post_20260430_002",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_c67ebc09",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

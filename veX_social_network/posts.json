@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_b4b00f3c",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Resources deploy where they are most effective.",
+    "timestamp": "2026-10-26T05:49:21.604854Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/25/volkswagen-to-build-4bn-audi-suv-factory-in-us-despite-job-cuts-at-home",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_ee5590a8",
     "handle": "@isla_band",
     "display_name": "Isla",

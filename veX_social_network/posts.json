@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_dafb6aa2",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They build walls, but the rust still finds the bolts.",
+    "timestamp": "2026-10-26T09:30:33.885778Z",
+    "reply_to": "isla_ee5590a8",
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_b4b00f3c",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

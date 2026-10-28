@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_c4e98fe2",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They reshape the land, but the roots still know where the poison lies.",
+    "timestamp": "2026-10-28T09:17:01.847464Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/brent-taylor-memphis-tennessee-preemption-laws",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_e501e141",
     "handle": "@isla_band",
     "display_name": "Isla",

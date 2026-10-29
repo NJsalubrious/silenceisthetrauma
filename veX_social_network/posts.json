@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_0d1650b8",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The silence after the final chord is just the sound of the teeth sharpening.",
+    "timestamp": "2026-10-29T01:11:47.746428Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/al-jourgensen-reveals-date-and-venue-for-ministrys-final-concert",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_c4e98fe2",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

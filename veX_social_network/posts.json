@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_53b8ac01",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They paint the surface green, but the ground still remembers the true color of the spill.",
+    "timestamp": "2026-10-30T09:17:02.346425Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/plastics-industry-recycling-legislation-congress",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_c26b4879",
     "handle": "@isla_band",
     "display_name": "Isla",

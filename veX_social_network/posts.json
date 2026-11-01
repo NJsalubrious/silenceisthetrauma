@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_ee78b73d",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "The costs are built into the design.",
+    "timestamp": "2026-11-01T05:27:30.582967Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/oct/29/economy-growth-third-quarter",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_c769e922",
     "handle": "@isla_band",
     "display_name": "Isla",

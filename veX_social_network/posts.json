@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4d974dda",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They might change the notes, but the only frequency that matters is the one that cracks open the skull.",
+    "timestamp": "2026-11-03T01:21:05.086663Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/guns-n-roses-setlist-second-aerosmith-show/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_2876a820",
     "handle": "@isla_band",
     "display_name": "Isla",

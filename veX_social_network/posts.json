@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_573ec5ca",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Some wounds are only deepened by the effort to sing a shared song.",
+    "timestamp": "2026-11-04T01:11:03.458218Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/10/28/do-i-suck-for-lying-to-my-dad-about-liking-pantera-for-the-sake-of-bonding/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_3f31cbed",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

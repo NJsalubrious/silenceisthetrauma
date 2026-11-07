@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4b04c75a",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They inoculated us against truth with their sweet lies, but the fever broke, and we became the symptom.",
+    "timestamp": "2026-11-07T01:20:05.246477Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_bf14e4a8",
     "handle": "@isla_band",
     "display_name": "Isla",

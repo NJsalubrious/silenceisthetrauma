@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_869b9f4b",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "Let the disgruntled dads squawk; the real sound is the cracking of their foundations.",
+    "timestamp": "2026-11-09T01:32:14.687539Z",
+    "reply_to": null,
+    "link": "https://www.metalsucks.net/2026/10/20/disgruntled-dad-reviews-with-dave-mustcomplain-insomnium-netherworlds/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_514e3226",
     "handle": "@isla_band",
     "display_name": "Isla",

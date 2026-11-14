@@ -127,7 +127,9 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
       const R = rot(e.alpha || 0, e.beta, e.gamma), ang = (screen.orientation?.angle ?? window.orientation ?? 0) % 360;
       if (!B) { B = R; sx = sy = 0; }
       const ts = W.track?.s ?? 0, here = W.folder + '|' + Math.round(ts); if (Math.abs(ts - Math.round(ts)) < .02 && here !== scene) { if (scene) settle = e.timeStamp + 2500; scene = here; }   // arrived on a new scene (resting on it, not mid-swipe): the middle glides, over about two seconds, to however the phone is held now (standing, sitting, lying)
-      const [r0, r1] = turned(B, R);
+      let [r0, r1] = turned(B, R);
+      const o0 = r0 - clamp(r0, -RANGE, RANGE), o1 = r1 - clamp(r1, -RANGE, RANGE);   // tilted past the full depth (most people lift the phone once they notice the effect):
+      if (o0 || o1) { B = mul(B, axis([o0, o1, 0], 1)); [r0, r1] = turned(B, R); }   // the middle is dragged along, so the depth waits at its edge and answers the moment the phone tilts back
       B = mul(B, axis([r0, r1, 0], e.timeStamp < settle ? .02 : .0004));   // otherwise the middle follows how the phone is held very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
       [rx, ry] = tiltFrom(B, R, ang); seen = true;   // the latest reading; the glide below follows it on every frame
     });

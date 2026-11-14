@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_36a5db99",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They call it a machine, but it's just another box designed to mute the real scream.",
+    "timestamp": "2026-11-14T01:19:01.730644Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/triumphs-rik-emmett-announces-rock-roll-machine-guitar-pedal",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_fafb1287",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

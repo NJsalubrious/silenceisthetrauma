@@ -96,6 +96,7 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
   function tilt() {
     let b0 = null, g0 = null;
     const RANGE = 16;   // degrees of tilt from the middle to the full depth
+    W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 1.5));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
     addEventListener('deviceorientation', e => {
       if (e.beta == null || e.gamma == null || !W?.scene?.tilt) return;
       const ang = (screen.orientation?.angle ?? window.orientation ?? 0) % 360;

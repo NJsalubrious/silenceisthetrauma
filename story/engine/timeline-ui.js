@@ -119,16 +119,16 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
   window.SITTTiltMath = { rot, turned, tiltFrom };   // (for testing)
   function tilt() {
     const RANGE = Math.max(1, +(Q.get('tiltrange') ?? 3));   // degrees of tilt from the middle to the full depth (?tiltrange= to try others)
-    const SMOOTH = Math.max(0, +(Q.get('tiltsmooth') ?? 70));   // ms: how much the sensor's jitter is evened out (0 = raw)
+    const SMOOTH = Math.max(0, +(Q.get('tiltsmooth') ?? 120));   // ms: how much the sensor's jitter is evened out (0 = raw)
     W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 1.5));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
     let B = null, sx = 0, sy = 0, last = 0, scene = '', settle = 0;
     addEventListener('deviceorientation', e => {
       if (e.beta == null || e.gamma == null || !W?.scene?.tilt) return;
       const R = rot(e.alpha || 0, e.beta, e.gamma), ang = (screen.orientation?.angle ?? window.orientation ?? 0) % 360;
       if (!B) { B = R; sx = sy = 0; last = e.timeStamp; }
-      const here = W.folder + '|' + Math.round(W.track?.s ?? 0); if (here !== scene) { scene = here; settle = e.timeStamp + 600; }   // a new scene: the middle becomes however the phone is held now (standing, sitting, lying), eased over the move
+      const ts = W.track?.s ?? 0, here = W.folder + '|' + Math.round(ts); if (Math.abs(ts - Math.round(ts)) < .02 && here !== scene) { if (scene) settle = e.timeStamp + 2500; scene = here; }   // arrived on a new scene (resting on it, not mid-swipe): the middle glides, over about two seconds, to however the phone is held now (standing, sitting, lying)
       const [r0, r1] = turned(B, R);
-      B = mul(B, axis([r0, r1, 0], e.timeStamp < settle ? .1 : .0004));   // otherwise the middle follows how the phone is held very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
+      B = mul(B, axis([r0, r1, 0], e.timeStamp < settle ? .02 : .0004));   // otherwise the middle follows how the phone is held very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
       const [x, y] = tiltFrom(B, R, ang), dt = Math.max(0, e.timeStamp - last), k = SMOOTH > 0 ? 1 - Math.exp(-dt / SMOOTH) : 1; last = e.timeStamp;
       sx += (x - sx) * k; sy += (y - sy) * k;
       W.scene.tilt(clamp(sx / RANGE, -1, 1), clamp(-sy / RANGE, -1, 1));

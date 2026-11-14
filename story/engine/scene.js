@@ -33,6 +33,8 @@
  vec4 col(vec2 q){vec2 t=(q-trim.xy)/trim.zw;if(t.x<0.||t.x>1.||t.y<0.||t.y>1.)return vec4(0.);return texture2D(colorMap,t);}
  bool occupied(vec2 q){return q.x>=0.&&q.x<=1.&&q.y>=0.&&q.y<=1.&&col(q).a>.01;}
  bool inside(vec2 q){return q.x>=0.&&q.x<=1.&&q.y>=0.&&q.y<=1.;}
+ // a background picture (not a cut-out) carries on past its own sides at the side's depth: a depth search reaching past the side lands there (left to the neighbour) instead of striking the cut-off edge like a cliff wall, which smeared the last column across a band under strong depth (the seams between strip tiles)
+ vec2 tileIn(vec2 s){return edgeM<=0.&&rigid<.5&&plane<.3&&early<.5?vec2(clamp(s.x,0.,1.),s.y):s;}
  // edges: a cut-out's soft (faded) edge pixel takes the depth of the solid part beside it, so the edge moves with its object and never peels off
  float cutDepth(vec2 q,float a){float d=mappedDepth(q);if(rigid>.5&&a<.98){float m=-1.;for(int k=0;k<16;k++){float an=float(k)*.785398;vec2 o=vec2(cos(an),sin(an))*(k<8?.0012:.0026);if(col(q+o).a>.5)m=max(m,mappedDepth(q+o));}if(m>=0.)d=max(d,m);}return d;}
  // edges: each spot of the picture starts its search at a slightly different step, so no bands line up; tied to the picture (not the screen), so it slides with it
@@ -55,12 +57,12 @@
    float lower=0.,upper=1.;hit=false;
    if(edges>.5){float jit=early>.5?fract(sin(dot(uv,vec2(12.9898,78.233)))*43758.5453):jitAt(q);   // ERA: earlier: the jitter is tied to the screen. edges:32 steps (not 16), each spot offset, then 6 halvings (not 4); a faded pixel counts, with its object's depth
     for(int i=0;i<33;i++){
-     float z=max(0.,1.-(float(i)+jit)/32.);vec2 sampleUV=origin+travel*z;float a=inside(sampleUV)?col(sampleUV).a:0.;
+     float z=max(0.,1.-(float(i)+jit)/32.);vec2 sampleUV=tileIn(origin+travel*z);float a=inside(sampleUV)?col(sampleUV).a:0.;
      if(a>.01&&cutDepth(sampleUV,a)>=z){lower=z;upper=min(1.,z+1./32.);hit=true;break;}
     }
     if(hit){
      for(int i=0;i<6;i++){
-      float z=(lower+upper)*.5;vec2 sampleUV=origin+travel*z;float a=inside(sampleUV)?col(sampleUV).a:0.;
+      float z=(lower+upper)*.5;vec2 sampleUV=tileIn(origin+travel*z);float a=inside(sampleUV)?col(sampleUV).a:0.;
       if(a>.01&&cutDepth(sampleUV,a)>=z)lower=z;else upper=z;
      }
      q=origin+travel*lower;
@@ -68,12 +70,12 @@
    }
    else{
    for(int i=0;i<17;i++){
-    float z=1.-float(i)/16.;vec2 sampleUV=origin+travel*z;
+    float z=1.-float(i)/16.;vec2 sampleUV=tileIn(origin+travel*z);
     if(occupied(sampleUV)&&mappedDepth(sampleUV)>=z){lower=z;upper=min(1.,z+1./16.);hit=true;break;}
    }
    if(hit){
     for(int i=0;i<4;i++){
-     float z=(lower+upper)*.5;vec2 sampleUV=origin+travel*z;
+     float z=(lower+upper)*.5;vec2 sampleUV=tileIn(origin+travel*z);
      if(occupied(sampleUV)&&mappedDepth(sampleUV)>=z)lower=z;else upper=z;
     }
     q=origin+travel*lower;

@@ -92,21 +92,47 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
     s.addEventListener('click', go);
   });
 
-  /* ---------- the phone's tilt moves the depth (as depthy): the way it is held when the story starts is the middle ---------- */
+  /* ---------- the phone's tilt moves the depth (as depthy): the way it is held when the story starts is the middle ----------
+     The phone's three angles (alpha, beta, gamma) wrap: held near upright, gamma jumps from +90 to -90 and beta by 180, which
+     flicked the depth. So the whole orientation is used instead (a rotation, which never wraps), measured against the one the
+     phone had at the start, and smoothed a little so the sensor's own jitter doesn't shake the picture. */
+  const D2R = Math.PI / 180;
+  function rot(a, b, g) {   // the device's orientation as a matrix (W3C: Rz(alpha) Rx(beta) Ry(gamma))
+    const ca = Math.cos(a * D2R), sa = Math.sin(a * D2R), cb = Math.cos(b * D2R), sb = Math.sin(b * D2R), cg = Math.cos(g * D2R), sg = Math.sin(g * D2R);
+    return [[ca * cg - sa * sb * sg, -sa * cb, ca * sg + sa * sb * cg], [sa * cg + ca * sb * sg, ca * cb, sa * sg - ca * sb * cg], [-cb * sg, sb, cb * cg]];
+  }
+  const mul = (A, B) => A.map(r => [0, 1, 2].map(j => r[0] * B[0][j] + r[1] * B[1][j] + r[2] * B[2][j]));
+  const tr = A => [0, 1, 2].map(i => [A[0][i], A[1][i], A[2][i]]);
+  function turned(B, R) {   // how far the phone has turned since B, about its own x and y axes, in degrees
+    const M = mul(tr(B), R), c = clamp((M[0][0] + M[1][1] + M[2][2] - 1) / 2, -1, 1), th = Math.acos(c), k = th < 1e-6 ? .5 : th / (2 * Math.sin(th));
+    return [(M[2][1] - M[1][2]) * k / D2R, (M[0][2] - M[2][0]) * k / D2R];
+  }
+  function axis(w, deg) {   // a small rotation about an axis in the phone's frame (Rodrigues)
+    const t = Math.hypot(...w) * deg * D2R; if (t < 1e-9) return [[1, 0, 0], [0, 1, 0], [0, 0, 1]];
+    const n = Math.hypot(...w), [x, y, z] = w.map(v => v / n), c = Math.cos(t), s = Math.sin(t), C = 1 - c;
+    return [[c + x * x * C, x * y * C - z * s, x * z * C + y * s], [y * x * C + z * s, c + y * y * C, y * z * C - x * s], [z * x * C - y * s, z * y * C + x * s, c + z * z * C]];
+  }
+  function tiltFrom(B, R, ang) {   // the depth's x, y (right, up) in degrees, for the way the screen is turned
+    const [rx, ry] = turned(B, R);
+    return ang === 90 ? [rx, -ry] : ang === 270 || ang === -90 ? [-rx, ry] : ang === 180 ? [-ry, -rx] : [ry, rx];
+  }
+  window.SITTTiltMath = { rot, turned, tiltFrom };   // (for testing)
   function tilt() {
-    let b0 = null, g0 = null;
-    const RANGE = Math.max(3, +(Q.get('tiltrange') ?? 10));   // degrees of tilt from the middle to the full depth (?tiltrange= to try others)
+    const RANGE = Math.max(1, +(Q.get('tiltrange') ?? 3));   // degrees of tilt from the middle to the full depth (?tiltrange= to try others)
+    const SMOOTH = Math.max(0, +(Q.get('tiltsmooth') ?? 70));   // ms: how much the sensor's jitter is evened out (0 = raw)
     W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 1.5));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
+    let B = null, sx = 0, sy = 0, last = 0;
     addEventListener('deviceorientation', e => {
       if (e.beta == null || e.gamma == null || !W?.scene?.tilt) return;
-      const ang = (screen.orientation?.angle ?? window.orientation ?? 0) % 360;
-      let x, y; const a = e.beta, g = e.gamma;
-      if (ang === 90) { x = a; y = -g; } else if (ang === 270 || ang === -90) { x = -a; y = g; } else if (ang === 180) { x = -g; y = -a; } else { x = g; y = a; }
-      if (b0 == null) { b0 = y; g0 = x; }
-      g0 += (x - g0) * .0004; b0 += (y - b0) * .0004;   // the middle follows how the phone is held, very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
-      W.scene.tilt(clamp((x - g0) / RANGE, -1, 1), clamp(-(y - b0) / RANGE, -1, 1));
+      const R = rot(e.alpha || 0, e.beta, e.gamma), ang = (screen.orientation?.angle ?? window.orientation ?? 0) % 360;
+      if (!B) { B = R; sx = sy = 0; last = e.timeStamp; }
+      const [r0, r1] = turned(B, R);
+      B = mul(B, axis([r0, r1, 0], .0004));   // the middle follows how the phone is held, very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
+      const [x, y] = tiltFrom(B, R, ang), dt = Math.max(0, e.timeStamp - last), k = SMOOTH > 0 ? 1 - Math.exp(-dt / SMOOTH) : 1; last = e.timeStamp;
+      sx += (x - sx) * k; sy += (y - sy) * k;
+      W.scene.tilt(clamp(sx / RANGE, -1, 1), clamp(-sy / RANGE, -1, 1));
     });
-    addEventListener('orientationchange', () => { b0 = g0 = null; });
+    addEventListener('orientationchange', () => { B = null; });
   }
 
   /* ---------- where a picture is on its memory's strip: the stop that shows it ---------- */

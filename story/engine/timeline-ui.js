@@ -120,7 +120,7 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
   function tilt() {
     const RANGE = Math.max(1, +(Q.get('tiltrange') ?? 8));   // degrees of tilt from the middle to the full depth (?tiltrange= to try others)
     const SMOOTH = Math.max(0, +(Q.get('tiltsmooth') ?? 70));   // ms: how much the sensor's jitter is evened out (0 = raw)
-    W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 2.4));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
+    W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 2));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
     let B = null, sx = 0, sy = 0, rx = 0, ry = 0, seen = false, last = 0, scene = '', settle = 0;
     addEventListener('deviceorientation', e => {
       if (e.beta == null || e.gamma == null || !W?.scene?.tilt) return;

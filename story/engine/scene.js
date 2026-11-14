@@ -340,9 +340,7 @@
    for(const t of targets){gl.deleteTexture(t.texture);gl.deleteFramebuffer(t.framebuffer);}targets=Array.from({length:6},()=>makeTarget(canvas.width,canvas.height));}
   const profile=(st=S)=>DS.presets[st.profile]||DS.presets[DS.defaultProfile];
   // during a cut each memory keeps its own settings; otherwise the live (studio) settings apply
-  const settingsFor0=data=>transition&&data?.scene?.depth?{...S,...data.scene.depth,view:S.view}:S;
-  // a phone's tilt (settings.tiltGain): more depth, given as the depth's own strength, so the margins that keep edges and tile joins hidden (the guard, the reach) grow with it
-  const settingsFor=data=>{const st=settingsFor0(data);return tilting&&S.tiltGain>0&&S.tiltGain!==1?{...st,strength:(st.strength??1)*S.tiltGain}:st;};
+  const settingsFor=data=>transition&&data?.scene?.depth?{...S,...data.scene.depth,view:S.view}:S;
   // depth-map-test's movement: depth travel and whole-layer travel, scaled by "opening depth"
   function motion(scene,st=S){const p=profile(st),o=st.opening??1;
    return {enhanced:p.enhanced,travel:(p.depthTravel||0)*o,layer:Math.max(p.layerParallax||0,...(scene.layers||[]).map(l=>Math.abs(l.travel||0)))*o,o};}
@@ -368,7 +366,7 @@
    bind(layerProgram,'foregroundMask',data.layers.at(-1).colorTexture,2);
    const showDepth=depthPass||view.includes('depth');
    gl.uniform4fv(uniform(layerProgram,'crop'),cover(data.scene,st,data.pan,data.cam));
-   gl.uniform2f(uniform(layerProgram,'pointer'),px*st.strength,py*st.strength*st.vertical);gl.uniform1f(uniform(layerProgram,'light'),st.light??2);gl.uniform1f(uniform(layerProgram,'depthPass'),showDepth?1:0);
+   const TG=tilting?(S.tiltGain||1):1;gl.uniform2f(uniform(layerProgram,'pointer'),px*st.strength*TG,py*st.strength*st.vertical*TG);   // TG: a phone's tilt can reach further than the mouse (settings.tiltGain)gl.uniform1f(uniform(layerProgram,'light'),st.light??2);gl.uniform1f(uniform(layerProgram,'depthPass'),showDepth?1:0);
    data.layers.forEach((l,i)=>{
     if(l.hidden)return;
     const travel=(Number.isFinite(l.travel)?l.travel:l.plane*(profile(st).layerParallax||0))*m.o;
@@ -464,8 +462,8 @@
     gl.uniform1f(uniform(layerProgram,'blurR'),FE?Math.min(.02,(FE.blur??.005)*vw/g.W):MP.focus==null?0:Math.min(.02,(MP.blur??.006)*vw/g.W/LK));gl.uniform1f(uniform(layerProgram,'focusD'),MP.focus??.5);
     const HZ=MP.haze;gl.uniform4f(uniform(layerProgram,'haze'),HZ?HZ[0]:0,HZ?HZ[1]:0,HZ?HZ[2]:0,HZ?HZ[3]:0);
     const hx=E&&!sw.x?px:clamp(px+sw.x,-1,1),hy=E&&!sw.y?py:clamp(py+sw.y,-1,1);   // ERA: earlier: the hand alone, unclamped (as it was) unless a sway is on
-    gl.uniform2f(uniform(layerProgram,'pointer'),hx*st.strength*vw/g.W,hy*st.strength*st.vertical*vh/g.Hh);   // sway (a beat's slow tilt) adds to the hand's
-    gl.uniform1f(uniform(layerProgram,'perspX'),(PV?.depth||0)*st.strength*vw/g.W);gl.uniform1f(uniform(layerProgram,'plim'),st.strength*vw/g.W);
+    const TG=tilting?(S.tiltGain||1):1;gl.uniform2f(uniform(layerProgram,'pointer'),hx*st.strength*vw/g.W*TG,hy*st.strength*st.vertical*vh/g.Hh*TG);   // sway (a beat's slow tilt) adds to the hand's
+    gl.uniform1f(uniform(layerProgram,'perspX'),(PV?.depth||0)*st.strength*vw/g.W);gl.uniform1f(uniform(layerProgram,'plim'),st.strength*vw/g.W*TG);
     gl.uniform3f(uniform(layerProgram,'xform'),l.x||0,l.y||0,l.scale||1);gl.uniform2f(uniform(layerProgram,'lsize'),1,1);
     gl.uniform1f(uniform(layerProgram,'plane'),l.plane);gl.uniform1f(uniform(layerProgram,'rigid'),l.rigid?1:0);
     gl.uniform1f(uniform(layerProgram,'passage'),l.rigid?passage:0);gl.uniform1f(uniform(layerProgram,'edgeM'),pass===0?250/g.W:0);

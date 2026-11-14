@@ -95,7 +95,7 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
   /* ---------- the phone's tilt moves the depth (as depthy): the way it is held when the story starts is the middle ---------- */
   function tilt() {
     let b0 = null, g0 = null;
-    const RANGE = 16;   // degrees of tilt from the middle to the full depth
+    const RANGE = Math.max(3, +(Q.get('tiltrange') ?? 10));   // degrees of tilt from the middle to the full depth (?tiltrange= to try others)
     W.scene.settings.tiltGain = Math.max(.2, +(Q.get('tiltgain') ?? 1.5));   // the depth a full tilt gives, against the mouse at the screen's edge (1 = the same); ?tiltgain= to try others
     addEventListener('deviceorientation', e => {
       if (e.beta == null || e.gamma == null || !W?.scene?.tilt) return;
@@ -103,7 +103,7 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
       let x, y; const a = e.beta, g = e.gamma;
       if (ang === 90) { x = a; y = -g; } else if (ang === 270 || ang === -90) { x = -a; y = g; } else if (ang === 180) { x = -g; y = -a; } else { x = g; y = a; }
       if (b0 == null) { b0 = y; g0 = x; }
-      g0 += (x - g0) * .004; b0 += (y - b0) * .004;   // the middle follows slowly how the phone is held, so the view never sticks at an edge
+      g0 += (x - g0) * .0004; b0 += (y - b0) * .0004;   // the middle follows how the phone is held, very slowly (about half a minute), so a held tilt keeps its depth but the view never sticks at an edge for good
       W.scene.tilt(clamp((x - g0) / RANGE, -1, 1), clamp(-(y - b0) / RANGE, -1, 1));
     });
     addEventListener('orientationchange', () => { b0 = g0 = null; });

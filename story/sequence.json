@@ -1,0 +1,59 @@
+{
+ "note": "POOL SEQUENCE TEST (only with &seq=1). The swipe on from 'from' is the first blow; the shots then come down by themselves, each one a sledgehammer. Per shot: 'hold' = ms until the next blow lands; 'weight' = how hard (1 = normal); 'side' = which way the window twists (1 or -1); 'dir' = which way it is knocked [x, y]. Every blow: 'strike' = px the window is knocked; 'twist' = degrees it is twisted; 'drive' = how hard the near things are punched at the viewer through the depth; 'shudder' = how hard they jar sideways; 'blowout' = how far the picture blows out (0 = not at all); 'thud' = the impact sound on or off; 'thudVolume' 0 to 1; 'thudFile' = a sound file in the SoundScape folder to use instead of the made one (null = the made one). 'firstCut' = ms of the cut from 013 into 014; 'firstPush' = how far 013 pushes in as it goes.",
+ "from": "x-013",
+ "firstCut": 110,
+ "firstPush": 1.2,
+ "shots": [
+  {
+   "room": "x-014",
+   "hold": 520,
+   "weight": 1.0,
+   "side": 1
+  },
+  {
+   "room": "x-014b",
+   "hold": 1150,
+   "weight": 1.4,
+   "side": -1
+  },
+  {
+   "room": "x-015",
+   "hold": 420,
+   "weight": 1.0,
+   "side": 1
+  },
+  {
+   "room": "x-015b",
+   "hold": 360,
+   "weight": 1.1,
+   "side": -1,
+   "dir": [
+    -0.8,
+    0.6
+   ]
+  },
+  {
+   "room": "x-015c",
+   "hold": 480,
+   "weight": 1.0,
+   "side": 1,
+   "dir": [
+    0.3,
+    1
+   ]
+  },
+  {
+   "room": "x-016",
+   "weight": 1.3,
+   "side": -1
+  }
+ ],
+ "strike": 26,
+ "twist": 1.1,
+ "drive": 0.45,
+ "shudder": 0.08,
+ "blowout": 0.7,
+ "thud": true,
+ "thudVolume": 0.8,
+ "thudFile": null
+}

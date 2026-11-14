@@ -1,0 +1,96 @@
+{
+ "id": "pop-was-the-same",
+ "title": "Pop was the same, just with people",
+ "date": "2008-07-01",
+ "order": -1,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "note": "FLOW: one of the new opening scenes. Placeholder date. Pictures and audio live with this memory in lab/flow/memories; run lab/flow/_tools/publish-flow.cmd after saving new pictures here.",
+ "sections": [
+  {
+   "name": "Pop and the boys",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/26_pop_corrections/26_pop_corrections_Background.webp",
+   "depth": "2_Later_Story/26_pop_corrections/26_pop_corrections_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "2_Later_Story/26_pop_corrections/26_pop_corrections_Mid.webp",
+   "depth": "2_Later_Story/26_pop_corrections/26_pop_corrections_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/26_pop_corrections/26_pop_corrections_Top.webp",
+   "depth": "2_Later_Story/26_pop_corrections/26_pop_corrections_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1086
+   ],
+   "name": "Pop in the circle",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_everyone-said-it-couldnt",
+   "style": "push"
+  },
+  "right": {
+   "to": "2008-07-01_inquiry-johan",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "voice": {
+  "audio": "memories/2008-07-01_pop-was-the-same/pop_was_the_same.mp3?v=b5ab83f56c",
+  "lines": [
+   {
+    "t": 0.25,
+    "end": 2.4,
+    "text": "Pop was the same."
+   },
+   {
+    "t": 2.85,
+    "end": 5.5,
+    "text": "Just with people."
+   }
+  ]
+ },
+ "era": "later"
+}

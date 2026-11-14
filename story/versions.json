@@ -1,0 +1,471 @@
+{
+ "_how": "The six ways of telling 001 to 006. Each picture is its image and its depth map from pre_lab_hostory/images, played by the story's own depth engine. The director (story/engine/director.js) reads this: how each picture arrives, how long it holds, where the camera goes, how it leaves. Times are in milliseconds. 'weight' lengthens the holds of the heavy pictures. Edit and reload.",
+ "pictures": {
+  "001": {
+   "focus": [
+    0.36,
+    0.3
+   ],
+   "note": "arrival: she looks up at her father",
+   "light": {
+    "from": [
+     0.1,
+     0.25
+    ],
+    "to": [
+     0.62,
+     0.38
+    ]
+   },
+   "far": 0.13,
+   "subject": 0.92
+  },
+  "002": {
+   "focus": [
+    0.38,
+    0.26
+   ],
+   "note": "father and daughter understand each other",
+   "light": {
+    "from": [
+     0.2,
+     0.2
+    ],
+    "to": [
+     0.55,
+     0.35
+    ]
+   },
+   "far": 0.11,
+   "subject": 0.53
+  },
+  "003": {
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "note": "the cinema: the family whole and happy",
+   "light": {
+    "from": [
+     0.85,
+     0.35
+    ],
+    "to": [
+     0.25,
+     0.45
+    ]
+   },
+   "far": 0.31,
+   "subject": 0.84
+  },
+  "004": {
+   "focus": [
+    0.48,
+    0.42
+   ],
+   "note": "a meal out: still whole",
+   "light": {
+    "from": [
+     0.2,
+     0.5
+    ],
+    "to": [
+     0.75,
+     0.4
+    ]
+   },
+   "far": 0.12,
+   "subject": 0.41
+  },
+  "005": {
+   "focus": [
+    0.25,
+    0.44
+   ],
+   "weight": 1.4,
+   "note": "the first unwell day: he coughs while the children play",
+   "light": {
+    "from": [
+     0.05,
+     0.4
+    ],
+    "to": [
+     0.45,
+     0.5
+    ]
+   },
+   "far": 0.05,
+   "subject": 0.53
+  },
+  "006": {
+   "focus": [
+    0.66,
+    0.4
+   ],
+   "weight": 1.6,
+   "note": "the doctor",
+   "light": {
+    "from": [
+     0.9,
+     0.3
+    ],
+    "to": [
+     0.55,
+     0.45
+    ]
+   },
+   "far": 0.09,
+   "subject": 0.45
+  }
+ },
+ "versions": {
+  "s1": {
+   "name": "Stills film",
+   "about": "Each picture holds like a photograph in a documentary: a slow push toward the person who matters, then the plain depth dissolve. A breath of black before the first unwell day.",
+   "cut": {
+    "style": "depth",
+    "duration": 2400
+   },
+   "exit": "slide",
+   "camera": {
+    "from": 1.0,
+    "to": 1.12,
+    "start": 900
+   },
+   "hold": 7000,
+   "look": {
+    "grain": 0.02,
+    "vignette": 0.2
+   },
+   "blackBefore": [
+    "005"
+   ]
+  },
+  "s2": {
+   "name": "The drift",
+   "about": "The story's own drift, never stopping: each picture is always moving in, and the next comes through the motion of the last. Her life carrying her on.",
+   "cut": {
+    "style": "drift",
+    "duration": 2600
+   },
+   "exit": "push",
+   "camera": {
+    "from": 1.0,
+    "to": 1.2,
+    "start": 0,
+    "linear": true
+   },
+   "hold": 5200,
+   "look": {
+    "grain": 0.015,
+    "vignette": 0.16
+   }
+  },
+  "s3": {
+   "name": "Double exposure",
+   "about": "Each picture begins close on a face and widens to the room, and the next memory's light arrives before its shadows, so two moments sit in one frame.",
+   "cut": {
+    "style": "double",
+    "duration": 3600
+   },
+   "exit": "slide",
+   "camera": {
+    "from": 1.22,
+    "to": 1.0,
+    "start": 600
+   },
+   "hold": 6800,
+   "look": {
+    "grain": 0.018,
+    "vignette": 0.18,
+    "warm": 0.06
+   }
+  },
+  "s4": {
+   "name": "Out of the dark",
+   "about": "Each picture surfaces out of black, is held, and sinks back into it. Silence between them. As if she is telling it in a dark room, one memory at a time.",
+   "cut": {
+    "style": "depth",
+    "duration": 1200
+   },
+   "enter": "black",
+   "exit": "black",
+   "camera": {
+    "from": 1.03,
+    "to": 1.13,
+    "start": 0
+   },
+   "hold": 7400,
+   "dark": {
+    "rise": 2600,
+    "sink": 2600,
+    "between": 900
+   },
+   "look": {
+    "grain": 0.026,
+    "vignette": 0.24,
+    "deepVignette": 0.32
+   }
+  },
+  "s5": {
+   "name": "Developing",
+   "about": "Each picture comes up out of white paper the way a print develops, holds, then burns out to white and the next one develops from it. The photographs being brought back into the light.",
+   "cut": {
+    "style": "flare",
+    "duration": 2200
+   },
+   "enter": "white",
+   "exit": "white",
+   "camera": {
+    "from": 1.0,
+    "to": 1.1,
+    "start": 1200
+   },
+   "hold": 7000,
+   "develop": {
+    "rise": 3800,
+    "sink": 2000,
+    "between": 300
+   },
+   "look": {
+    "grain": 0.02,
+    "vignette": 0.14
+   }
+  },
+  "s6": {
+   "name": "Drawn to them",
+   "about": "The camera is drawn in close to the person each time, and the next picture opens out of that face. Intimate, and tighter as the father weakens.",
+   "cut": {
+    "style": "pull",
+    "duration": 2300
+   },
+   "exit": "slide",
+   "camera": {
+    "from": 1.0,
+    "to": 1.34,
+    "start": 500
+   },
+   "hold": 6400,
+   "look": {
+    "grain": 0.018,
+    "vignette": 0.22,
+    "deepVignette": 0.18
+   }
+  },
+  "s7": {
+   "name": "The pull",
+   "about": "One unbroken move forward. The camera never settles; it gathers speed into each picture and comes out of it already inside the next. Nothing lets her stop.",
+   "cut": {
+    "style": "pull",
+    "duration": 1500,
+    "settle": 0
+   },
+   "exit": "push",
+   "camera": {
+    "from": 1.0,
+    "to": 1.5,
+    "curve": "in"
+   },
+   "hold": 5600,
+   "look": {
+    "grain": 0.013,
+    "vignette": 0.2,
+    "deepVignette": 0.25
+   }
+  },
+  "s8": {
+   "name": "The witness",
+   "about": "We pass by, the way someone walking past a window would. Each scene slides by from left to right and the next is already there behind it. Nobody notices us; nobody helped.",
+   "cut": {
+    "style": "drift",
+    "duration": 3400
+   },
+   "exit": "push",
+   "camera": {
+    "curve": "linear"
+   },
+   "lateral": true,
+   "hold": 7600,
+   "look": {
+    "grain": 0.012,
+    "vignette": 0.12
+   }
+  },
+  "s9": {
+   "name": "The photograph opens",
+   "about": "Each picture starts as a print lying in the dark, flat. As we come close it fills the frame and its depth opens into the room. Then it closes, becomes a photograph again, and is put down.",
+   "exit": "print",
+   "print": {
+    "scale": 0.58,
+    "border": 18,
+    "tilt": -1.2,
+    "dim": 0.72,
+    "lie": 1600,
+    "open": 3200,
+    "close": 2400
+   },
+   "camera": {
+    "from": 1.0,
+    "to": 1.1
+   },
+   "hold": 6000,
+   "look": {
+    "grain": 0.016,
+    "vignette": 0.18,
+    "warm": 0.15
+   }
+  },
+  "s10": {
+   "name": "Light moves through the room",
+   "about": "The camera barely moves. A pool of light crosses each scene, falling on the real surfaces the depth map gives it: faces, the table, the bed. Between pictures the light goes out and comes back somewhere else.",
+   "exit": "light",
+   "relight": {
+    "k": 0.95,
+    "soft": 0.4,
+    "rise": 2000,
+    "sink": 2200,
+    "between": 600
+   },
+   "camera": {
+    "from": 1.0,
+    "to": 1.04,
+    "curve": "linear"
+   },
+   "hold": 8000,
+   "look": {
+    "grain": 0.012,
+    "vignette": 0.1
+   }
+  },
+  "s11": {
+   "name": "Force",
+   "about": "Fast and hard. Short holds, a hard push in, higher contrast, and each picture smeared into the next. Things happen to her faster than she can take them in.",
+   "cut": {
+    "style": "pull",
+    "duration": 650,
+    "settle": 0
+   },
+   "exit": "push",
+   "camera": {
+    "from": 1.0,
+    "to": 1.32,
+    "curve": "in"
+   },
+   "hold": 2700,
+   "filter": "contrast(1.24) saturate(.82)",
+   "look": {
+    "grain": 0.022,
+    "vignette": 0.22
+   }
+  },
+  "s12": {
+   "name": "Held breath",
+   "about": "Almost no camera at all. Each picture is held long enough to look at properly, and one goes into the next slowly, like water. You have time to see what is going to happen before it does.",
+   "cut": {
+    "style": "underwater",
+    "duration": 5200
+   },
+   "exit": "push",
+   "camera": {
+    "from": 1.0,
+    "to": 1.03,
+    "curve": "linear"
+   },
+   "hold": 11000,
+   "look": {
+    "grain": 0.01,
+    "vignette": 0.14
+   }
+  },
+  "s13": {
+   "name": "The lens finds them",
+   "about": "Snapshots. Each picture opens on the background, out of focus around the people, and the lens pulls through the picture's own depth until it lands on them. Then the next one.",
+   "cut": {
+    "style": "double",
+    "duration": 1600
+   },
+   "exit": "push",
+   "lens": {
+    "keys": [
+     [
+      0,
+      "far"
+     ],
+     [
+      0.55,
+      "subject"
+     ],
+     [
+      1,
+      "subject"
+     ]
+    ],
+    "blur": 0.008,
+    "haze": [
+     0.86,
+     0.84,
+     0.8,
+     0.1
+    ]
+   },
+   "camera": {
+    "from": 1.0,
+    "to": 1.08
+   },
+   "hold": 6500,
+   "look": {
+    "grain": 0.013,
+    "vignette": 0.16
+   }
+  },
+  "s14": {
+   "name": "A moment surfaces",
+   "about": "Snapshots that come up out of a blur, sharpen on the people for a moment, and go soft again as the next one surfaces. Like someone remembering a photograph they were told about.",
+   "cut": {
+    "style": "flare",
+    "duration": 1500
+   },
+   "exit": "push",
+   "lens": {
+    "keys": [
+     [
+      0,
+      "near"
+     ],
+     [
+      0.3,
+      "subject"
+     ],
+     [
+      0.75,
+      "subject"
+     ],
+     [
+      1,
+      "far"
+     ]
+    ],
+    "blur": 0.011,
+    "haze": [
+     0.9,
+     0.88,
+     0.84,
+     0.16
+    ]
+   },
+   "camera": {
+    "from": 1.04,
+    "to": 1.12
+   },
+   "hold": 7000,
+   "look": {
+    "grain": 0.016,
+    "vignette": 0.2
+   }
+  }
+ },
+ "arc": {
+  "_": "applied to every version: the heavy pictures hold longer and the frame closes in a little more on them",
+  "tighter": 0.06
+ }
+}

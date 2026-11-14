@@ -1,0 +1,130 @@
+{
+ "id": "old-mans-photos",
+ "title": "The old man's photos",
+ "date": "2008-07-01",
+ "order": -0.1,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "note": "FLOW: two pictures with seamless backgrounds, one strip. Each stop carries its own voice.",
+ "sections": [
+  {
+   "name": "The old man's photos: by the rocks",
+   "width": 1926
+  },
+  {
+   "name": "The old man's photos: on the bikes",
+   "width": 2074
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Background.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Mid.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Top.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Background.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "mid",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Mid.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Top.webp",
+   "depth": "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    1926,
+    1086
+   ],
+   "name": "The old man's photos: by the rocks",
+   "fit": 1,
+   "voice": {
+    "audio": "memories/2008-07-01_old-mans-photos/The_School_Psych_Once_Wrote.mp3?v=1ba4766b92",
+    "lines": []
+   }
+  },
+  {
+   "frame": [
+    1926,
+    0,
+    2074,
+    1086
+   ],
+   "name": "The old man's photos: on the bikes",
+   "fit": 1,
+   "voice": {
+    "audio": "memories/2008-07-01_old-mans-photos/Just_A_Box.mp3?v=5cf2ac72e4",
+    "lines": []
+   }
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_ethel-at-school",
+   "style": "push"
+  },
+  "right": {
+   "to": "2008-07-01_before-the-crash",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "era": "later"
+}

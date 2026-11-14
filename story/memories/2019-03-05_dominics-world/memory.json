@@ -1,42 +1,30 @@
 {
  "id": "dominics-world",
- "title": "Dominic's world: the house, the docklands, offshore",
+ "title": "Dominic's world: the wrong turn, the docklands",
  "date": "2019-03-05",
  "order": 0.75,
  "kind": "strip",
  "height": 1500,
- "note": "Plays by itself, once per visit, between Isla on the balcony and the flaming towel. Short sharp cuts through his house, the docklands (calm authority, violence behind) and offshore, then it erodes to darkness and Ethel is at the towel. The visitor cannot drag; moving the mouse still steers the depth. Six house pictures and offshore are stand-ins.",
+ "note": "Plays by itself, once per visit, between Isla on the balcony and the flaming towel. The towel blends into the wrong turn (a double exposure): four pictures that join edge to edge (11b_Dominics_Wrong_Turn_Calm_Authority), which the camera pans across as one room in 3D; then a cut to the docklands (calm authority, violence behind), then it flicks back to Ethel at the towel. The visitor cannot drag; moving the mouse still steers the depth. The six house stand-ins and the offshore stand-in were taken out.",
  "sections": [
   {
-   "name": "The house 1",
-   "width": 2000
+   "name": "The wrong turn 1",
+   "width": 2130
   },
   {
-   "name": "The house 2",
-   "width": 2000
+   "name": "The wrong turn 2",
+   "width": 2130
   },
   {
-   "name": "The house 3",
-   "width": 2000
+   "name": "The wrong turn 3",
+   "width": 2130
   },
   {
-   "name": "The house 4",
-   "width": 2000
-  },
-  {
-   "name": "The house 5",
-   "width": 2000
-  },
-  {
-   "name": "The house 6",
-   "width": 2000
+   "name": "The wrong turn 4",
+   "width": 2729
   },
   {
    "name": "Docklands: calm authority",
-   "width": 2000
-  },
-  {
-   "name": "Offshore",
    "width": 2000
   }
  ],
@@ -47,26 +35,165 @@
   "vertical": 0.8,
   "framing": "cover"
  },
- "look": {},
+ "look": {
+  "echo": 0.45,
+  "blur": 2,
+  "trail": 2,
+  "vignette": 0.22,
+  "deepVignette": 0.6,
+  "grain": 0.04,
+  "cold": 0.25
+ },
  "cut": {
+  "style": "flare",
   "duration": 900,
-  "travel": 0.0
+  "travel": 0,
+  "still": 450,
+  "stillNote": "still: ms where everything stops after the push at the towel, before the way in (its cue: on push)."
  },
  "auto": {
   "hold": [
-   650,
-   600,
-   600,
-   550,
-   550,
-   500,
-   2800,
-   1100
+   1100,
+   0,
+   0,
+   1400,
+   2800
   ],
   "flash": 70,
   "dark": 2200,
   "reveal": 1600,
-  "note": "hold: how long each picture stays, in ms, in order. flash: the blink of black between. dark: the erosion into darkness. reveal: the towel coming up out of it."
+  "note": "beats: a glimpse, played instead of the stops in order. Each beat is a framing of the room ({at:[x,y], w}: its middle and width in the strip's pixels; or {stop}: that stop's picture, filling the screen), arriving by in: cut, black or white (a flick inMs long), whip (a fast blurred whip pan), smear (a slower gliding sweep that smears; blur: how much) or dissolve (the last framing melts into this one as a double exposure, still drifting), then held (hold ms) while it floats in (push: how much closer by the end; close: true makes it gather pace) and drifts ([x,y] pixels over the hold). shake (pixels) is an unsteady hand, unused now. sway (0 to 1): the depth tilts slowly that far over the hold, the way of the drift, then eases back in the next move (it adds to the hand's tilt). name is only a label. hold/pan below are used only without beats. sharp (TESTING): at the end it flicks straight back to the towel.",
+  "sharp": true,
+  "pan": {
+   "from": 0,
+   "to": 3,
+   "ms": 7000
+  },
+  "beats": [
+   {
+    "name": "1 the room (frame 1, whole)",
+    "at": [
+     1065,
+     750
+    ],
+    "w": 2130,
+    "hold": 1200,
+    "push": 0.03,
+    "drift": [
+     40,
+     0
+    ],
+    "sway": 0.2
+   },
+   {
+    "name": "2 the young man, pleading (frame 2)",
+    "in": "dissolve",
+    "inMs": 800,
+    "at": [
+     3060,
+     760
+    ],
+    "w": 1300,
+    "hold": 1000,
+    "push": 0.03,
+    "drift": [
+     -30,
+     0
+    ],
+    "sway": 0.25
+   },
+   {
+    "name": "3 the heavy (frame 3)",
+    "in": "smear",
+    "inMs": 600,
+    "blur": 2.5,
+    "at": [
+     4960,
+     330
+    ],
+    "w": 1050,
+    "hold": 900,
+    "push": 0.03,
+    "drift": [
+     0,
+     15
+    ],
+    "sway": 0.2
+   },
+   {
+    "name": "4 the hand on his head (frame 3)",
+    "in": "white",
+    "inMs": 80,
+    "at": [
+     5050,
+     700
+    ],
+    "w": 1150,
+    "hold": 1500,
+    "push": 0.05,
+    "drift": [
+     -10,
+     10
+    ],
+    "sway": 0.2
+   },
+   {
+    "name": "5 Dominic, calm, hand at his chin (frame 3)",
+    "in": "dissolve",
+    "inMs": 900,
+    "at": [
+     5850,
+     650
+    ],
+    "w": 1250,
+    "hold": 1400,
+    "push": 0.02,
+    "drift": [
+     25,
+     0
+    ],
+    "sway": 0.3
+   },
+   {
+    "name": "6 the floor, the grip (frame 4)",
+    "in": "smear",
+    "inMs": 700,
+    "blur": 3,
+    "at": [
+     7300,
+     800
+    ],
+    "w": 1500,
+    "hold": 1000,
+    "push": 0.04,
+    "drift": [
+     -30,
+     0
+    ],
+    "sway": 0.25
+   },
+   {
+    "name": "7 all of it (frame 4, whole)",
+    "in": "dissolve",
+    "inMs": 450,
+    "stop": 3,
+    "hold": 1000,
+    "push": 0.02,
+    "drift": [
+     30,
+     0
+    ],
+    "sway": 0.35
+   },
+   {
+    "name": "8 calm authority",
+    "in": "white",
+    "inMs": 50,
+    "stop": 4,
+    "hold": 2800,
+    "push": 0.03
+   }
+  ]
  },
  "exits": {
   "left": {
@@ -83,109 +210,202 @@
   {
    "section": 0,
    "role": "background",
-   "image": "Dominics_world_House_01.png",
-   "depth": "Dominics_world_House_01_Depth.png",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Background.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_01.png (and Dominics_world_House_01_Depth.png); add _Mid / _Top layers as in the other sequences."
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Mid.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Top.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 0,
+   "role": "over",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Over.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Over_Depth.webp",
+   "plane": 0.94,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 0,
+   "role": "extra",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Extra.webp",
+   "plane": 0.97,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/",
+   "note": "No depth map: drawn flat at its distance."
   },
   {
    "section": 1,
    "role": "background",
-   "image": "Dominics_world_House_02.png",
-   "depth": "Dominics_world_House_02_Depth.png",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Background.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_02.png (and Dominics_world_House_02_Depth.png); add _Mid / _Top layers as in the other sequences."
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 1,
+   "role": "top",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Top.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 1,
+   "role": "over",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Over.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Over_Depth.webp",
+   "plane": 0.94,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
   },
   {
    "section": 2,
    "role": "background",
-   "image": "Dominics_world_House_03.png",
-   "depth": "Dominics_world_House_03_Depth.png",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Background.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_03.png (and Dominics_world_House_03_Depth.png); add _Mid / _Top layers as in the other sequences."
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Top.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 2,
+   "role": "over",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Over.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Over_Depth.webp",
+   "plane": 0.94,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 2,
+   "role": "extra",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Extra.webp",
+   "plane": 0.97,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/",
+   "note": "No depth map: drawn flat at its distance."
   },
   {
    "section": 3,
    "role": "background",
-   "image": "Dominics_world_House_04.png",
-   "depth": "Dominics_world_House_04_Depth.png",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Background.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_04.png (and Dominics_world_House_04_Depth.png); add _Mid / _Top layers as in the other sequences."
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 3,
+   "role": "mid",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Mid.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 3,
+   "role": "top",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Top.webp",
+   "depth": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/"
+  },
+  {
+   "section": 3,
+   "role": "over",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Over.webp",
+   "plane": 0.94,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/",
+   "note": "No depth map: drawn flat at its distance."
+  },
+  {
+   "section": 3,
+   "role": "extra",
+   "image": "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Extra.webp",
+   "plane": 0.97,
+   "rigid": true,
+   "travel": null,
+   "source": "FinalPNGsForTesting/11b_Dominics_Wrong_Turn_Calm_Authority/",
+   "note": "No depth map: drawn flat at its distance."
   },
   {
    "section": 4,
    "role": "background",
-   "image": "Dominics_world_House_05.png",
-   "depth": "Dominics_world_House_05_Depth.png",
-   "plane": 0.16,
-   "rigid": false,
-   "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_05.png (and Dominics_world_House_05_Depth.png); add _Mid / _Top layers as in the other sequences."
-  },
-  {
-   "section": 5,
-   "role": "background",
-   "image": "Dominics_world_House_06.png",
-   "depth": "Dominics_world_House_06_Depth.png",
-   "plane": 0.16,
-   "rigid": false,
-   "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_House_06.png (and Dominics_world_House_06_Depth.png); add _Mid / _Top layers as in the other sequences."
-  },
-  {
-   "section": 6,
-   "role": "background",
-   "image": "Dominics_calm_authority_background.png",
-   "depth": "Dominics_calm_authority_background_Depth.png",
+   "image": "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Background.webp",
+   "depth": "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
    "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/"
   },
   {
-   "section": 6,
+   "section": 4,
    "role": "mid",
-   "image": "Dominics_calm_authority_Mid.png",
-   "depth": "Dominics_calm_authority_Mid_Depth.png",
+   "image": "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Mid.webp",
+   "depth": "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null,
    "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/"
   },
   {
-   "section": 6,
+   "section": 4,
    "role": "top",
-   "image": "Dominics_calm_authority_Top.png",
+   "image": "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Top.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null,
    "source": "../assets/entry-experiment/FinalsForTest_01/11_Dominics_calm_authority/",
    "note": "No Top_Depth.png in the folder yet: drawn flat at its distance."
-  },
-  {
-   "section": 7,
-   "role": "background",
-   "image": "Dominics_world_Offshore_01.png",
-   "depth": "Dominics_world_Offshore_01_Depth.png",
-   "plane": 0.16,
-   "rigid": false,
-   "travel": null,
-   "placeholder": true,
-   "note": "Stand-in. Save the painting as Dominics_world_Offshore_01.png (and Dominics_world_Offshore_01_Depth.png); add _Mid / _Top layers as in the other sequences."
   }
  ],
  "stops": [
@@ -193,81 +413,200 @@
    "frame": [
     0,
     0,
-    2000,
+    2129.83,
     1500
    ],
-   "name": "The house 1",
+   "name": "The wrong turn 1",
    "fit": 1
   },
   {
    "frame": [
-    2000,
+    2129.83,
     0,
-    2000,
+    2129.83,
     1500
    ],
-   "name": "The house 2",
+   "name": "The wrong turn 2",
    "fit": 1
   },
   {
    "frame": [
-    4000,
+    4259.67,
     0,
-    2000,
+    2129.83,
     1500
    ],
-   "name": "The house 3",
+   "name": "The wrong turn 3",
    "fit": 1
   },
   {
    "frame": [
-    6000,
+    6389.5,
     0,
-    2000,
+    2729.28,
     1500
    ],
-   "name": "The house 4",
+   "name": "The wrong turn 4",
    "fit": 1
   },
   {
    "frame": [
-    8000,
-    0,
-    2000,
-    1500
-   ],
-   "name": "The house 5",
-   "fit": 1
-  },
-  {
-   "frame": [
-    10000,
-    0,
-    2000,
-    1500
-   ],
-   "name": "The house 6",
-   "fit": 1
-  },
-  {
-   "frame": [
-    12000,
+    9118.78,
     0,
     2000,
     1500
    ],
    "name": "Docklands: calm authority",
    "fit": 1
-  },
-  {
-   "frame": [
-    14000,
-    0,
-    2000,
-    1500
-   ],
-   "name": "Offshore",
-   "fit": 1
   }
- ]
+ ],
+ "perspective": {
+  "layers": 0.08,
+  "depth": 0.5
+ },
+ "cutNote": "The way in from the towel: a dream cut (style: drift, ink, flare, double, fracture, pull, flicker, underwater; or remove style for the old way, through the depth under the dark). duration in ms.",
+ "perspectiveNote": "A camera in the room: layers (each layer drawn as a camera at the middle of the view would see it at its distance, the near a little larger, so the pan carries the near across the screen faster than the far) and depth (the depth maps do the same per pixel). 0 turns either off. The visitor's tilt adds on top, never past its own reach.",
+ "lookNote": "echo: an afterimage that never leaves while here, so every movement (the camera, the hand's tilt) trails: a mind a beat behind. blur, trail: how much movement smears. cold, vignette, deepVignette, grain: the shocked, drained look.",
+ "cues": {
+  "library": "audio/",
+  "note": "Sounds from the library, SITT_STORY_TESTING/Audio (mp3 only), each on a moment. on: push (the push at the towel), enter (the way in), exit (the way out), beat (with beat: its number in the beats, from 1, as it arrives). offset: seconds into the file to start from, so its peak lands on the moment. gain: how loud (1 as it is). duration: the most seconds it sounds, fading over fadeOut at the end. At the way out every cue still sounding fades out; only the way out's own (the snap back) plays on. until: exit marks the long ones (beds, voice). The voice: rate (slower is lower), double (a second voice a little lower and late), reverb (a dark room), lowpass/highpass (Hz) make it unsettling. Swap a file by changing its path; the extras are in SoundFX/Extras.",
+  "list": [
+   {
+    "name": "the push: the world goes still",
+    "on": "push",
+    "file": "SoundFX/Pressure/A_sudden,_loud_sucti_#3-1794141151461.mp3",
+    "offset": 0.1,
+    "gain": 3,
+    "duration": 1.5,
+    "fadeOut": 0.4
+   },
+   {
+    "name": "the flare in",
+    "on": "enter",
+    "file": "SoundFX/Swells/A_reversed_cymbal_an_#3-1794141187317.mp3",
+    "offset": 1.42,
+    "gain": 0.6,
+    "duration": 2.5,
+    "fadeOut": 0.6
+   },
+   {
+    "name": "the dissociated bed",
+    "on": "enter",
+    "file": "SoundFX/Ambience/Dissociated_shock_am_#1-1794141210345.mp3",
+    "delay": 0.2,
+    "fadeIn": 1.5,
+    "gain": 0.5,
+    "until": "exit",
+    "fadeOut": 0.4
+   },
+   {
+    "name": "Dominic speaks",
+    "on": "enter",
+    "file": "Dominic_Speaks/Dominic_Wrong_Turns.mp3",
+    "delay": 0.3,
+    "offset": 0.35,
+    "gain": 1.1,
+    "rate": 0.955,
+    "double": 0.4,
+    "doubleDetune": -60,
+    "doubleDelay": 0.045,
+    "reverb": 0.45,
+    "roomSec": 2.8,
+    "lowpass": 3400,
+    "highpass": 140,
+    "until": "exit",
+    "fadeOut": 0.5
+   },
+   {
+    "name": "2 dissolve: the young man",
+    "on": "beat",
+    "beat": 2,
+    "file": "SoundFX/Transitions/A_soft_ghostly_rever_#4-1794141261195.mp3",
+    "offset": 1.5,
+    "gain": 2.5,
+    "duration": 2,
+    "fadeOut": 0.6
+   },
+   {
+    "name": "3 smear: the heavy",
+    "on": "beat",
+    "beat": 3,
+    "file": "SoundFX/Transitions/A_muffled_heavy_whoo_#3-1794141285719.mp3",
+    "offset": 0.8,
+    "gain": 0.55,
+    "duration": 1.5,
+    "fadeOut": 0.4
+   },
+   {
+    "name": "4 white flash: the hand on his head",
+    "on": "beat",
+    "beat": 4,
+    "file": "SoundFX/Hits/A_sharp_sudden_flash_#2-1794141319773.mp3",
+    "offset": 0.14,
+    "gain": 0.8,
+    "duration": 2.2,
+    "fadeOut": 0.8
+   },
+   {
+    "name": "5 dissolve: Dominic, calm",
+    "on": "beat",
+    "beat": 5,
+    "file": "SoundFX/Transitions/A_soft_ghostly_rever_#4-1794141261195.mp3",
+    "offset": 1.4,
+    "gain": 2.5,
+    "duration": 2,
+    "fadeOut": 0.6
+   },
+   {
+    "name": "6 smear: the floor",
+    "on": "beat",
+    "beat": 6,
+    "file": "SoundFX/Transitions/A_muffled_heavy_whoo_#3-1794141285719.mp3",
+    "offset": 0.8,
+    "gain": 0.55,
+    "duration": 1.5,
+    "fadeOut": 0.4
+   },
+   {
+    "name": "7 quick dissolve: all of it",
+    "on": "beat",
+    "beat": 7,
+    "file": "SoundFX/Transitions/A_soft_ghostly_rever_#4-1794141261195.mp3",
+    "offset": 1.86,
+    "gain": 2.5,
+    "duration": 1.5,
+    "fadeOut": 0.5
+   },
+   {
+    "name": "8 white flash: calm authority",
+    "on": "beat",
+    "beat": 8,
+    "file": "SoundFX/Hits/A_harder,_colder_fla_#2-1794141343887.mp3",
+    "offset": 0,
+    "gain": 0.55,
+    "duration": 1.6,
+    "fadeOut": 0.5
+   },
+   {
+    "name": "8 the docklands",
+    "on": "beat",
+    "beat": 8,
+    "file": "SoundFX/Ambience/Industrial_docklands_#3-1794141375628.mp3",
+    "fadeIn": 0.15,
+    "gain": 2,
+    "until": "exit",
+    "fadeOut": 0.3
+   },
+   {
+    "name": "snap back to the towel",
+    "on": "exit",
+    "file": "SoundFX/Breath_And_Body/A_sharp_gasp-like_in_#1-1794141404954.mp3",
+    "offset": 0.1,
+    "gain": 3,
+    "duration": 2,
+    "fadeOut": 0.6
+   }
+  ]
+ },
+ "era": "later"
 }

@@ -1,0 +1,90 @@
+{
+ "id": "x-042",
+ "title": "Explore · Last Contact Before Separation 1967 BW",
+ "date": "1958-06-01",
+ "order": 125,
+ "placeholderDate": true,
+ "kind": "strip",
+ "height": 1024,
+ "note": "EXPLORE picture 042 (LAYERED, from images/Final_Images; parts by distance: background, top, over). Each part uses its own _Depth map. depth.response = weight of the hand in ms, depth.strength = how much depth opens.",
+ "sections": [
+  {
+   "name": "Last Contact Before Separation 1967 BW",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Background.webp",
+   "depth": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": 0.001
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Top.webp",
+   "depth": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0035
+  },
+  {
+   "section": 0,
+   "role": "over",
+   "image": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Over.webp",
+   "depth": "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Over_Depth.webp",
+   "plane": 0.96,
+   "rigid": true,
+   "travel": 0.0045
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1024
+   ],
+   "name": "the room",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "focal": [
+  0.5,
+  0.4
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.45,
+  "framing": "cover",
+  "response": 320
+ },
+ "look": {
+  "grain": 0.012,
+  "vignette": 0.14
+ },
+ "cut": {
+  "duration": 1800,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "x-041",
+   "style": "push"
+  },
+  "right": {
+   "to": "x-043",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "feel": {},
+ "era": "earlier"
+}

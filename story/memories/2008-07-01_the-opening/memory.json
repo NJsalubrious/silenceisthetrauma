@@ -1,0 +1,36 @@
+{
+ "id": "the-opening",
+ "title": "The opening",
+ "date": "2008-07-01",
+ "order": -3,
+ "placeholderDate": true,
+ "note": "TESTING: a joined strip. The opening scenes (Gran built the lab to Old man's photos) side by side in one strip, so the view slides from one to the next like Ethel at school, instead of cutting. Its pictures, shots and voices are read from the memories in \"join\" each time it opens (their real picture sizes place them, so a PNG saved at a new size just works); change those in the memories themselves. Reorder, add or take out a scene by editing \"join\". Its height is the tallest scene's unless \"height\" is set here. The crash sequence is joined on at the end, so old man's photos slides straight into the crash. Before the crash (and the silica, lab and riding scenes in it) is hidden until it is replaced. Homestead sorrow, the deposit box, Delivery to Dominic's house and the journey are joined on after the crash; the strip then goes on to the glass house (the towel), as the journey did. It opens in the crash (\"startAt\"), with Ethel's crash voice; the visitor can go forward, or back to where it all began.",
+ "join": [
+  "2008-07-01_gran-built-the-lab",
+  "2008-07-01_everyone-said-it-couldnt",
+  "2008-07-01_pop-was-the-same",
+  "2008-07-01_inquiry-johan",
+  "2008-07-01_Dinner_Pop_Gran",
+  "2008-07-01_my-grandmothers-man",
+  "2008-07-01_that-was-my-home",
+  "2008-07-01_ethel-at-school",
+  "2008-07-01_old-mans-photos",
+  "01-the-crash-sequence",
+  "2019-03-01_homestead-sorrow",
+  "2019-03-02_the-deposit-box",
+  "2019-03-05_delivery-to-dominics-house",
+  "2019-03-05_the-journey"
+ ],
+ "exits": {
+  "left": {
+   "to": "x-062",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-05_dominics-world",
+   "style": "push"
+  }
+ },
+ "startAt": "01-the-crash-sequence",
+ "era": "later"
+}

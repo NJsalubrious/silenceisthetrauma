@@ -1,0 +1,87 @@
+{
+ "id": "everyone-said-it-couldnt",
+ "title": "Everyone said it could not be done",
+ "date": "2008-07-01",
+ "order": -2,
+ "kind": "strip",
+ "height": 1200,
+ "placeholderDate": true,
+ "note": "FLOW: one of the new opening scenes. Placeholder date. Pictures and audio live with this memory in lab/flow/memories; run lab/flow/_tools/publish-flow.cmd after saving new pictures here.",
+ "sections": [
+  {
+   "name": "The lab from above",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/00_lab_construction/00_lab_construction_02_Background.webp",
+   "depth": "2_Later_Story/00_lab_construction/00_lab_construction_02_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/00_lab_construction/00_lab_construction_02_Top.webp",
+   "depth": "2_Later_Story/00_lab_construction/00_lab_construction_02_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1200
+   ],
+   "name": "The site from above",
+   "fit": 0
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_gran-built-the-lab",
+   "style": "push"
+  },
+  "right": {
+   "to": "2008-07-01_pop-was-the-same",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "voice": {
+  "audio": "memories/2008-07-01_everyone-said-it-couldnt/everyone_said.mp3?v=30179d0b86",
+  "lines": [
+   {
+    "t": 0.85,
+    "end": 2.6,
+    "text": "Everyone said it couldn't be done."
+   },
+   {
+    "t": 3.25,
+    "end": 4.8,
+    "text": "She did it anyway."
+   }
+  ]
+ },
+ "era": "later"
+}

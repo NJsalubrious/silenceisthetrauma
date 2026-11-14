@@ -1,0 +1,81 @@
+{
+ "id": "inquiry-johan",
+ "title": "The inquiry: Johan",
+ "date": "2008-07-01",
+ "order": -0.75,
+ "kind": "strip",
+ "height": 1400,
+ "placeholderDate": true,
+ "note": "FLOW: one of the new opening scenes. Placeholder date and title. Sits between pop-was-the-same and Dinner_Pop_Gran. Pictures come from FinalPNGsForTesting/28_Inquiry_Johan; VOICE TO COME: audio will be added later; when it is, put the mp3 in this folder and add a \"voice\" block (audio + timed lines) like the neighbouring scenes.",
+ "sections": [
+  {
+   "name": "Johan",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Background.webp",
+   "depth": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Mid.webp",
+   "depth": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Top.webp",
+   "depth": "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1400
+   ],
+   "name": "Johan",
+   "fit": 0
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_pop-was-the-same",
+   "style": "push"
+  },
+  "right": {
+   "to": "2008-07-01_Dinner_Pop_Gran",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "era": "later"
+}

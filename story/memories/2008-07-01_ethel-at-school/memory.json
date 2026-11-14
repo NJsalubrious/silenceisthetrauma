@@ -1,0 +1,166 @@
+{
+ "id": "ethel-at-school",
+ "title": "Ethel at school",
+ "date": "2008-07-01",
+ "order": -0.2,
+ "kind": "strip",
+ "height": 1086,
+ "placeholderDate": true,
+ "note": "FLOW: three pictures with seamless backgrounds, one strip: the view slides between them. Each stop can carry its own voice (stops[i].voice).",
+ "sections": [
+  {
+   "name": "The classroom",
+   "width": 2021
+  },
+  {
+   "name": "On the verandah with Gran",
+   "width": 2021
+  },
+  {
+   "name": "In the office",
+   "width": 1868
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Background.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "mid",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Mid.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Top.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Background.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "mid",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Mid.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Background.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "mid",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Mid.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "top",
+   "image": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Top.webp",
+   "depth": "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2021,
+    1086
+   ],
+   "name": "The classroom",
+   "fit": 1,
+   "voice": {
+    "audio": "memories/2008-07-01_ethel-at-school/but_at_school.mp3?v=8d89beed82",
+    "lines": []
+   }
+  },
+  {
+   "frame": [
+    2021,
+    0,
+    2021,
+    1086
+   ],
+   "name": "On the verandah with Gran",
+   "fit": 1,
+   "voice": {
+    "audio": "memories/2008-07-01_ethel-at-school/gran_though_that_was_funny.mp3?v=b6db1daafe",
+    "lines": []
+   }
+  },
+  {
+   "frame": [
+    4042,
+    0,
+    1868,
+    1086
+   ],
+   "name": "In the office",
+   "fit": 1,
+   "voice": {
+    "audio": "memories/2008-07-01_ethel-at-school/that_what_people_think_of_me.mp3?v=0133837853",
+    "lines": []
+   }
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_that-was-my-home",
+   "style": "push"
+  },
+  "right": {
+   "to": "2008-07-01_old-mans-photos",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "era": "later"
+}

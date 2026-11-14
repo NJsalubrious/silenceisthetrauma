@@ -1,0 +1,90 @@
+{
+ "id": "x-033",
+ "title": "Explore · Elizabeth and Dominics Father Nepal 1966",
+ "date": "1957-09-01",
+ "order": 116,
+ "placeholderDate": true,
+ "kind": "strip",
+ "height": 939,
+ "note": "EXPLORE picture 033 (LAYERED, from images/Final_Images; parts by distance: background, top, over). Each part uses its own depth map.",
+ "sections": [
+  {
+   "name": "Elizabeth and Dominics Father Nepal 1966",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Background.webp",
+   "depth": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": 0.001
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Top.webp",
+   "depth": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0035
+  },
+  {
+   "section": 0,
+   "role": "over",
+   "image": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Over.webp",
+   "depth": "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Over_Depth.webp",
+   "plane": 0.96,
+   "rigid": true,
+   "travel": 0.0045
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    939
+   ],
+   "name": "the room",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "focal": [
+  0.5,
+  0.4
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.45,
+  "framing": "cover",
+  "response": 320
+ },
+ "look": {
+  "grain": 0.012,
+  "vignette": 0.14
+ },
+ "cut": {
+  "duration": 1800,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "x-032",
+   "style": "push"
+  },
+  "right": {
+   "to": "x-034",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "feel": {},
+ "era": "earlier"
+}

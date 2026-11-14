@@ -1,334 +1,485 @@
 {
- "note": "Every memory, by date then order. To fit one between two others, give it an in-between order (2.5).",
+ "note": "The one timeline: the earlier story (x-001 to x-062), then the later. It opens on the crash (the opening, stop 12: 10_Gran_Pop_Car_Crushed_Full_Sequence_01). Order and dates live in story/timeline.json.",
+ "start": "2008-07-01_the-opening",
  "memories": [
   {
-   "folder": "2008-07-01_silica-with-pop-and-gran",
-   "date": "2008-07-01",
+   "folder": "x-001",
    "order": 0,
-   "placeholderDate": true,
-   "hidden": true,
-   "partOf": "2008-07-01_before-the-crash"
+   "era": "earlier"
   },
   {
-   "folder": "2008-07-01_before-the-crash",
-   "date": "2008-07-01",
-   "order": 0,
-   "placeholderDate": true
+   "folder": "x-002",
+   "order": 1,
+   "hidden": true,
+   "era": "earlier"
   },
   {
-   "folder": "2011-07-01_the-lab-with-gran",
-   "date": "2011-07-01",
-   "order": 0,
-   "placeholderDate": true,
+   "folder": "x-003",
+   "order": 2,
    "hidden": true,
-   "partOf": "2008-07-01_before-the-crash"
+   "era": "earlier"
   },
   {
-   "folder": "2013-07-01_young-ethel-riding",
-   "date": "2013-07-01",
-   "order": 0,
-   "placeholderDate": true,
+   "folder": "x-004",
+   "order": 3,
    "hidden": true,
-   "partOf": "2008-07-01_before-the-crash"
+   "era": "earlier"
   },
   {
-   "folder": "2018-07-01_the-gate-past-ethel",
-   "date": "2018-07-01",
-   "order": 0,
-   "placeholderDate": true,
+   "folder": "x-005",
+   "order": 4,
    "hidden": true,
-   "partOf": "2008-07-01_before-the-crash"
+   "era": "earlier"
+  },
+  {
+   "folder": "x-006",
+   "order": 5,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-007",
+   "order": 6,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-008",
+   "order": 7,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-009",
+   "order": 8,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-010",
+   "order": 9,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-011",
+   "order": 10,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-012",
+   "order": 11,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-013",
+   "order": 12,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-014",
+   "order": 13,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-014b",
+   "order": 14,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-015",
+   "order": 15,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-015b",
+   "order": 16,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-015c",
+   "order": 17,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-015d",
+   "order": 18,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-016",
+   "order": 19,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-017",
+   "order": 20,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-018",
+   "order": 21,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-019",
+   "order": 22,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-020",
+   "order": 23,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-021",
+   "order": 24,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-022",
+   "order": 25,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-023",
+   "order": 26,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-024",
+   "order": 27,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-025",
+   "order": 28,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-026",
+   "order": 29,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-027",
+   "order": 30,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-028",
+   "order": 31,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-029",
+   "order": 32,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-030",
+   "order": 33,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-031",
+   "order": 34,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-032",
+   "order": 35,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-033",
+   "order": 36,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-034",
+   "order": 37,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-035",
+   "order": 38,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-036",
+   "order": 39,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-037",
+   "order": 40,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-038",
+   "order": 41,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-039",
+   "order": 42,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-040",
+   "order": 43,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-041",
+   "order": 44,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-042",
+   "order": 45,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-043",
+   "order": 46,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-044",
+   "order": 47,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-047",
+   "order": 48,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-048",
+   "order": 49,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-048b",
+   "order": 50,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-049",
+   "order": 51,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-049b",
+   "order": 52,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-050",
+   "order": 53,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-050b",
+   "order": 54,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-053",
+   "order": 55,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-054",
+   "order": 56,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-055",
+   "order": 57,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-057",
+   "order": 58,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-058",
+   "order": 59,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-059a",
+   "order": 60,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-060",
+   "order": 61,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "x-062",
+   "order": 62,
+   "hidden": true,
+   "era": "earlier"
+  },
+  {
+   "folder": "2008-07-01_the-opening",
+   "order": 63,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_gran-built-the-lab",
+   "order": 64,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_everyone-said-it-couldnt",
+   "order": 65,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_pop-was-the-same",
+   "order": 66,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_inquiry-johan",
+   "order": 67,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_Dinner_Pop_Gran",
+   "order": 68,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_my-grandmothers-man",
+   "order": 69,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_that-was-my-home",
+   "order": 70,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_ethel-at-school",
+   "order": 71,
+   "hidden": true,
+   "era": "later"
+  },
+  {
+   "folder": "2008-07-01_old-mans-photos",
+   "order": 72,
+   "hidden": true,
+   "era": "later"
   },
   {
    "folder": "01-the-crash-sequence",
-   "date": "2019-02-28",
-   "order": 0,
-   "key": true
-  },
-  {
-   "folder": "2019-02-28_the-crash",
-   "date": "2019-02-28",
-   "order": 1,
-   "hidden": true
-  },
-  {
-   "folder": "2019-02-28_police-at-the-gate",
-   "date": "2019-02-28",
-   "order": 2,
-   "hidden": true
-  },
-  {
-   "folder": "2019-03-01_gap-01",
-   "date": "2019-03-01",
-   "order": 1,
-   "placeholder": true,
+   "order": 73,
+   "key": true,
    "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-01_the-gap",
-   "date": "2019-03-01",
-   "order": 1,
-   "hidden": true,
-   "note": "Set aside: the homestead, the deposit box and the journey now fill the days between the crash and the glass house. Unhide to bring it back."
+   "era": "later"
   },
   {
    "folder": "2019-03-01_homestead-sorrow",
-   "date": "2019-03-01",
-   "order": 1
-  },
-  {
-   "folder": "2019-03-01_gap-02",
-   "date": "2019-03-01",
-   "order": 2,
-   "placeholder": true,
+   "order": 74,
    "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-01_gap-03",
-   "date": "2019-03-01",
-   "order": 3,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-02_gap-04",
-   "date": "2019-03-02",
-   "order": 1,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
+   "era": "later"
   },
   {
    "folder": "2019-03-02_the-deposit-box",
-   "date": "2019-03-02",
-   "order": 1
-  },
-  {
-   "folder": "2019-03-02_gap-05",
-   "date": "2019-03-02",
-   "order": 2,
-   "placeholder": true,
+   "order": 75,
    "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-02_gap-06",
-   "date": "2019-03-02",
-   "order": 3,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-03_gap-07",
-   "date": "2019-03-03",
-   "order": 1,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-03_gap-08",
-   "date": "2019-03-03",
-   "order": 2,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-03_gap-09",
-   "date": "2019-03-03",
-   "order": 3,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-04_gap-10",
-   "date": "2019-03-04",
-   "order": 1,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-04_gap-11",
-   "date": "2019-03-04",
-   "order": 2,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-01_the-gap"
-  },
-  {
-   "folder": "2019-03-05_standin-01",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-02",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-03",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-04",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-05",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-06",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-07",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
-  },
-  {
-   "folder": "2019-03-05_standin-08",
-   "date": "2019-03-05",
-   "order": 0,
-   "placeholder": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-journey"
+   "era": "later"
   },
   {
    "folder": "2019-03-05_delivery-to-dominics-house",
-   "date": "2019-03-05",
-   "order": 0
+   "order": 76,
+   "hidden": true,
+   "era": "later"
   },
   {
    "folder": "2019-03-05_the-journey",
-   "date": "2019-03-05",
-   "order": 0.5
+   "order": 77,
+   "hidden": true,
+   "era": "later"
   },
   {
    "folder": "2019-03-05_dominics-world",
-   "date": "2019-03-05",
-   "order": 0.75
-  },
-  {
-   "folder": "2019-03-05_the-gifted-trap",
-   "date": "2019-03-05",
-   "order": 1,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-05_arrival",
-   "date": "2019-03-05",
-   "order": 1,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
+   "order": 78,
+   "era": "later"
   },
   {
    "folder": "2019-03-05_the-glass-house",
-   "date": "2019-03-05",
-   "order": 1,
-   "key": true
-  },
-  {
-   "folder": "2019-03-05_arrival-the-guard",
-   "date": "2019-03-05",
-   "order": 2,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_isla-the-glass-house",
-   "date": "2019-03-10",
-   "order": 1,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_walk-left",
-   "date": "2019-03-10",
-   "order": 2,
+   "order": 79,
    "key": true,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_north-sydney-the-keys",
-   "date": "2019-03-10",
-   "order": 3,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_after-the-keys",
-   "date": "2019-03-10",
-   "order": 3,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_isla-station-exit",
-   "date": "2019-03-10",
-   "order": 4,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_contact-the-counter-move",
-   "date": "2019-03-10",
-   "order": 5,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_the-wallet-recognition",
-   "date": "2019-03-10",
-   "order": 6,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
-  },
-  {
-   "folder": "2019-03-10_nightlife-the-trip",
-   "date": "2019-03-10",
-   "order": 7,
-   "hidden": true,
-   "partOf": "2019-03-05_the-glass-house"
+   "era": "later"
   }
  ],
- "start": "01-the-crash-sequence",
- "timeline": {
-  "from": "2001-11-14",
-  "to": "2027-12-31"
- }
+ "startStop": 12
 }

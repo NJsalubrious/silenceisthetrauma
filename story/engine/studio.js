@@ -9,7 +9,7 @@
  'use strict';
  const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
  const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- let dir=null;   // the RND_NEW_SITT folder, picked once per session for saving
+ let dir=null;   // only used if the testing server cannot save (it normally saves into SITT_STORY_TESTING/story)
  function start(W){
   W.studio=true;
   const S=W.scene.settings,DS=window.SITT_DEPTH_SETTINGS;
@@ -25,11 +25,30 @@
   const st={layer:0,stop:0,mode:'none',open:new Set(['scene','look','layers','stops','ways','doors','eggs','sound','details','new'])};   // every group open to begin with
   let C=[],dirty=false;
   const M=()=>W.memory;
+  // TESTING: where each picture is really loaded from, as the testing server resolves it (shown under every Image and Depth line)
+  let src={folder:null,at:0,map:null,busy:false};
+  async function loadSrc(){if(src.busy)return;src.busy=true;const f=W.folder;
+   try{const d=await (await fetch('/__test/uses?folder='+encodeURIComponent(f),{cache:'no-store'})).json(),sig=JSON.stringify(d.files.map(x=>[x.name,x.from,x.path])),same=src.folder===f&&src.sig===sig;
+    src={folder:f,at:Date.now(),sig,map:new Map(d.files.map(x=>[(x.folder+'|'+x.name).toLowerCase(),x])),busy:false};if(!same)render();}catch{src.busy=false;}}   // redrawn only when a source changed
+  // TESTING: only the layers the shot on screen uses: in view at its frame, and not switched off for it ("stops")
+  const shotHere=()=>Math.round(W.track?.s??0);
+  function shotTitle(){const m=M(),s=shotHere(),p=W.stops(m)[s];return m.stops?.length?' '+(s+1)+(p?.name?' · '+esc(p.name):''):'';}
+  const shotLayers=()=>W.shotLayers(shotHere());   // the engine's own answer (world.js)
+  function filesHTML(){const m=M(),ls=shotLayers(),mine=new Set(ls.map(([l])=>l));
+   return ls.map(([l,i])=>`<strong>${esc(layerName(l,i))}</strong><div>Image: ${esc(l.image)}</div>${from(l,l.image)}<div class="${l.depth?'':'source-note'}">Depth: ${esc(l.depth||(!l.rigid&&m.depthMap?m.depthMap+' (combined map fallback; covered foreground regions filled as distant background)':'No separate map; constant distance'))}</div>${l.depth?from(l,l.depth):''}`).join('')
+    +(W.scene.current()?.layers||[]).filter(l=>l.note&&mine.has(l.layer)).map(l=>`<div class="source-note">${esc(l.layer.image)}: ${esc(l.note)}</div>`).join('');}
+  let shotSeen=-1;setInterval(()=>{const T=W.track;if(!T||Math.abs(T.s-Math.round(T.s))>.01||Math.abs((T.goal??T.s)-T.s)>.01||W.scene.busy?.())return;   // never while the view is moving
+   const s=shotHere(),k=W.folder+'|'+s;if(k===shotSeen)return;shotSeen=k;const d=document.querySelector('details[data-g=files]');if(!d)return;const f=d.querySelector('.files'),t=d.querySelector('.shot-title');if(f)f.innerHTML=filesHTML();if(t)t.innerHTML=shotTitle();},300);
+  function from(l,n){if(src.folder!==W.folder||Date.now()-src.at>3000)loadSrc();if(src.folder!==W.folder)return '<div class="source-note">From: checking…</div>';
+   const x=src.map.get(((l.folder||W.folder)+'|'+n).toLowerCase());if(!x)return '<div class="source-note">From: unknown</div>';
+   if(x.from==='png')return '<div>From: '+esc(x.path)+'</div>';
+   if(x.from==='copy')return '<div class="source-note">NOT A PNG: old web copy '+esc(x.path)+'</div>';
+   return '<div class="source-note">MISSING: no PNG in '+(M()?.era==='earlier'?'PNG_Masters/Earlier':'FinalPNGsForTesting')+(x.ambiguous?' (name in several folders: '+esc(x.ambiguous.join(' | '))+')':'')+'</div>';}   // ERA: the earlier story's PNGs are in PNG_Masters/Earlier, the later's in FinalPNGsForTesting
   // ---- the story's shots, in the order a visitor meets them: from the first memory, each way on (exits.right) in turn.
   //      Hidden memories (old pieces, stand-in pictures) are not in it. A memory's "firstStop" is where it begins.
   let story=[];
   const shortName=f=>f.replace(/^\d{4}-\d\d-\d\d_/,'').replace(/^\d+-/,'').replace(/-/g,' ');
-  async function buildStory(){const vis=W.list.memories.filter(x=>!x.hidden),get=f=>fetch('memories/'+f+'/memory.json?r='+Date.now(),{cache:'no-store'}).then(r=>r.json());
+  async function buildStory(){const vis=W.list.memories.filter(x=>!x.hidden),get=f=>W.load?W.load(f):fetch('memories/'+f+'/memory.json?r='+Date.now(),{cache:'no-store'}).then(r=>r.json());   // TESTING: a joined strip as the story shows it
    const ms={};await Promise.all(vis.map(async x=>{try{ms[x.folder]=await get(x.folder);}catch{}}));
    const order=[],seen=new Set();let f=vis.find(x=>ms[x.folder]&&!ms[x.folder].exits?.left?.to)?.folder||vis[0]?.folder;
    while(f&&ms[f]&&!seen.has(f)){seen.add(f);order.push(f);f=ms[f].exits?.right?.to;}
@@ -56,6 +75,8 @@
   function text(label,get,set){const i=C.push({get,set,text:true})-1;return `<label>${label}<input type="text" data-c="${i}" value="${esc(get())}"></label>`;}
   function check(label,get,set){const i=C.push({get,set,check:true})-1;return `<label class="check"><input type="checkbox" data-c="${i}" ${get()?'checked':''}> ${label}</label>`;}
   function select(label,opts,get,set){const i=C.push({get,set,select:true})-1;return `<label>${label}<select data-c="${i}">${opts.map(([v,n])=>`<option value="${esc(v)}" ${String(get())===String(v)?'selected':''}>${esc(n)}</option>`).join('')}</select></label>`;}
+  // edges of Mid and Top layers: new (the working version) or old, kept permanently to compare on the same shot; not saved into the memory (this browser remembers it)
+  const edges=v=>{S.edges=v;try{localStorage.setItem('sitt-edges',v);}catch{}W.scene.changed();render();say('Edges: '+(v==='new'?'new (finer)':'old'));};
   const btn=(b,t,cls='')=>`<button data-b="${b}" class="${cls}">${t}</button>`;
   const group=(id,title,body)=>`<details data-g="${id}" ${st.open.has(id)?'open':''}><summary>${title}</summary>${body}</details>`;
   const memOpts=(none='None')=>[['',none],...W.list.memories.map(x=>[x.folder,x.date+' · '+x.folder.replace(/^\d{4}-\d\d-\d\d_/,'')])];
@@ -81,8 +102,9 @@
    ${slider('Opening depth',.5,1.5,.1,()=>S.opening??1,v=>{S.opening=+v;changed();},pct)}
    ${slider('Vertical movement',0,1,.05,()=>S.vertical,v=>{S.vertical=+v;changed();},pct)}
    <div class="row">${btn('resetDepth','Reset treatment')}${btn('reload','Reload image &amp; maps')}</div>
+   ${select('Edges of cut-outs (E flips, to compare)',[['new','New: the working version (finer, edges keep their object\'s depth)'],['old','Old: the engine before, to compare']],()=>S.edges,v=>edges(v))}
    <p class="st" aria-live="polite">${dirty?'Unsaved changes.':''}</p><p>Shortcuts: ← / → previous or next shot; R reloads the files; \ tucks the studio away.</p>
-   <details data-g="files" ${st.open.has('files')?'open':''}><summary>Files used for this memory</summary><div class="files">${m.layers.map((l,i)=>`<strong>${esc(layerName(l,i))}</strong><div>Image: ${esc(l.image)}</div><div class="${l.depth?'':'source-note'}">Depth: ${esc(l.depth||(!l.rigid&&m.depthMap?m.depthMap+' (combined map fallback; covered foreground regions filled as distant background)':'No separate map; constant distance'))}</div>`).join('')}<div>Folder: memories/${esc(W.folder)}/${esc(m.desktopFolder||'desktop')}/</div>${(W.scene.current()?.layers||[]).filter(l=>l.note).map(l=>`<div class="source-note">${esc(l.layer.image)}: ${esc(l.note)}</div>`).join('')}<div>Originals: ${esc(m.source||'not set')}</div></div></details>
+   <details data-g="files" ${st.open.has('files')?'open':''}><summary>Files used in this shot<span class="shot-title">${shotTitle()}</span></summary><div class="files">${filesHTML()}</div></details>
    <div class="row">${btn('save','Save this memory','primary')}</div>
    ${group('scene','Scene: framing and depth',`
     ${m.kind==='strip'?'':slider('Zoom into the canvas',1,2,.01,()=>m.zoom||1,v=>{m.zoom=+v;changed();})}
@@ -253,7 +275,7 @@
   // Previous and Next walk the memories visitors see; hidden ones (old pieces, stand-ins) are only in the list above
   function step(d){const L=W.list.memories.filter(x=>!x.hidden);if(!L.length)return;let i=L.findIndex(x=>x.folder===W.folder);if(i<0){const A=W.list.memories,j=A.findIndex(x=>x.folder===W.folder);i=L.findIndex(x=>A.indexOf(x)>j);i=i<0?(d>0?-1:L.length):(d>0?i-1:i);}openMem(L[(i+d+L.length)%L.length].folder);}
   async function pictures(v){if(v==='originals')W.source='originals';else{W.source='copies';W.set=v;}say('Loading pictures…');await reload();}
-  async function reload(){say('Reloading…');try{await W.scene.reload(M(),{folder:W.folder,set:W.set,source:W.source});W.refresh();say('Reloaded '+new Date().toLocaleTimeString());}catch(e){say('Could not load: '+e.message);}}
+  async function reload(){say('Reloading…');try{if(await W.rejoin?.()){W.refresh();say('Reloaded '+new Date().toLocaleTimeString());return;}await W.scene.reload(M(),{folder:W.folder,set:W.set,source:W.source});W.refresh();say('Reloaded '+new Date().toLocaleTimeString());}catch(e){say('Could not load: '+e.message);}}
   W.studioReload=reload;
   // ---- buttons ----
   let timing=null;
@@ -310,7 +332,8 @@
    if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)||e.ctrlKey||e.metaKey||e.altKey)return;
    if(e.key==='\\'){e.preventDefault();fold.click();return;}
    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();stepShot(e.key==='ArrowLeft'?-1:1);}
-   else if(e.key.toLowerCase()==='r'){e.preventDefault();reload();}});
+   else if(e.key.toLowerCase()==='r'){e.preventDefault();reload();}
+   else if(e.key.toLowerCase()==='e'){e.preventDefault();edges(S.edges==='new'?'old':'new');}});
   // ---- drawing and dragging on the picture ----
   function mode(m){st.mode=m;ov.classList.toggle('on',m!=='none');W.lock=m!=='none';render();}
   let drag=null;
@@ -345,10 +368,14 @@
   async function folder(){if(!window.showDirectoryPicker)throw Error('This browser cannot save files directly. Use Chrome or Edge.');
    if(!dir)dir=await showDirectoryPicker({id:'sitt-story',mode:'readwrite'});
    try{await dir.getDirectoryHandle('memories');}catch{dir=null;throw Error('Pick the story folder (the one with memories inside).');}return dir;}
-  async function write(path,data){const d=await folder();const parts=path.split('/');let h=d;for(const p of parts.slice(0,-1))h=await h.getDirectoryHandle(p,{create:true});
+  // TESTING: the testing server saves straight into SITT_STORY_TESTING/story (no folder picker). The picker is only the fallback.
+  async function write(path,data){try{const r=await fetch('/__test/write?path='+encodeURIComponent(path),{method:'PUT',body:data});if(r.ok)return;if(r.status!==404)throw Error(await r.text());}catch(e){if(!/Failed to fetch|NetworkError/.test(e.message))throw e;}
+   const d=await folder();const parts=path.split('/');let h=d;for(const p of parts.slice(0,-1))h=await h.getDirectoryHandle(p,{create:true});
    const w=await (await h.getFileHandle(parts.at(-1),{create:true})).createWritable();await w.write(data);await w.close();}
   const clean=m=>JSON.stringify(m,(k,v)=>k==='colorTexture'||k==='depthTexture'?undefined:v,1);
-  async function save(){try{await write('memories/'+W.folder+'/memory.json',clean(M()));await write('memories/list.json',JSON.stringify(W.list,null,1));dirty=false;buildStory();say('Saved memories/'+W.folder+'/memory.json and the memory list.');}
+  // TESTING: a joined strip saves only what is its own; its pictures, shots and voices belong to the memories it joins (tune those there)
+  const own=m=>{if(!m.joinSpec)return m;const o={};for(const [k,v] of Object.entries(m))if(!['sections','layers','stops','extent','kind'].includes(k)&&(k!=='voice'||m.joinSpec.voice)&&(k!=='exits'||m.joinSpec.exits)&&(k!=='height'||m.joinSpec.height)&&(k!=='startStop'||'startStop' in m.joinSpec)&&(k!=='sound'||m.joinSpec.sound))o[k]=v;return o;};
+  async function save(){try{await write('memories/'+W.folder+'/memory.json',clean(own(M())));await write('memories/list.json',JSON.stringify(W.list,null,1));dirty=false;buildStory();say('Saved memories/'+W.folder+'/memory.json and the memory list.'+(M().joinSpec?' (A joined strip: its shots, pictures and voices are saved in the memories it joins, so open those to change them.)':''));}
    catch(err){say('Not saved: '+err.message);}}
   const files=m=>[...new Set(m.layers.flatMap(l=>[l.image,l.depth]).concat([m.together,m.depthMap]).filter(Boolean))];
   async function copyIn(){const m=M();if(!m.source){say('Set the Photoshop originals folder first.');return;}let n=0;

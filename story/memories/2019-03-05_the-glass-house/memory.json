@@ -10,31 +10,31 @@
  "sections": [
   {
    "name": "the street",
-   "x": 7240,
+   "x": 13120,
    "width": 2900
   },
   {
    "name": "the terrace",
-   "x": 10074,
+   "x": 15954,
    "width": 2900
   },
   {
    "name": "the lounge",
-   "x": 12907,
+   "x": 18787,
    "width": 2900
   }
  ],
- "extent": 20151,
+ "extent": 26916,
  "layers": [
   {
    "name": "Ethel / the gifted trap: background",
    "role": "background",
    "folder": "2019-03-05_the-gifted-trap",
    "source": "../assets/entry-experiment/FinalsForTest_01/13_Ethels_Arrival_Gifted_Trap/",
-   "image": "Ethels_Arrival_Gifted_Trap_Background.png",
-   "depth": "Ethels_Arrival_Gifted_Trap_Background_Depth.png",
+   "image": "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Background.webp",
+   "depth": "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Background_Depth.webp",
    "rect": [
-    18703,
+    25468,
     0,
     1448,
     1086
@@ -67,10 +67,10 @@
    "role": "top",
    "folder": "2019-03-05_the-gifted-trap",
    "source": "../assets/entry-experiment/FinalsForTest_01/13_Ethels_Arrival_Gifted_Trap/",
-   "image": "Ethels_Arrival_Gifted_Trap_Top.png",
-   "depth": "Ethels_Arrival_Gifted_Trap_Top_Depth.png",
+   "image": "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Top.webp",
+   "depth": "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Top_Depth.webp",
    "rect": [
-    18703,
+    25468,
     0,
     1448,
     1086
@@ -102,10 +102,10 @@
    "role": "background",
    "folder": "2019-03-05_arrival-the-guard",
    "source": "../assets/entry-experiment/FinalsForTest_01/12_Ethels_arrival_psycho/",
-   "image": "Ethels_arrival_Psycho_Background.png",
-   "depth": "Ethels_arrival_Psycho_Background_Depth.png",
+   "image": "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Background.webp",
+   "depth": "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Background_Depth.webp",
    "rect": [
-    17255,
+    24020,
     0,
     1448,
     1086
@@ -138,10 +138,10 @@
    "role": "top",
    "folder": "2019-03-05_arrival-the-guard",
    "source": "../assets/entry-experiment/FinalsForTest_01/12_Ethels_arrival_psycho/",
-   "image": "Ethels_arrival_Psycho_Top.png",
-   "depth": "Ethels_arrival_Psycho_Top_depth.png",
+   "image": "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Top.webp",
+   "depth": "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Top_Depth.webp",
    "rect": [
-    17255,
+    24020,
     0,
     1448,
     1086
@@ -172,13 +172,13 @@
    "name": "Isla / the glass house: background",
    "role": "background",
    "folder": "2019-03-10_isla-the-glass-house",
-   "source": "../assets/entry-experiment/FinalsForTest_01/03_Isla_meets_ethel/",
-   "image": "03A_Isla_meets_ethel_Background.png",
-   "depth": "03A_Isla_meets_ethel_Background_Depth.png",
+   "source": "FinalPNGsForTesting/03_Isla_meets_ethel/",
+   "image": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Background.webp",
+   "depth": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Background_Depth.webp",
    "rect": [
-    15807,
+    21687,
     0,
-    1448,
+    2333,
     1086
    ],
    "stops": [
@@ -205,16 +205,51 @@
    ]
   },
   {
+   "name": "Isla / the glass house: mid",
+   "role": "mid",
+   "folder": "2019-03-10_isla-the-glass-house",
+   "source": "FinalPNGsForTesting/03_Isla_meets_ethel/",
+   "image": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Mid.webp",
+   "depth": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Mid_Depth.webp",
+   "rect": [
+    21687,
+    0,
+    2333,
+    1086
+   ],
+   "stops": [
+    2
+   ],
+   "fade": [
+    0.15,
+    0.85
+   ],
+   "follow": {
+    "at": 2,
+    "k": [
+     1,
+     0.94
+    ]
+   },
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ]
+  },
+  {
    "name": "Isla / the glass house: top",
    "role": "top",
    "folder": "2019-03-10_isla-the-glass-house",
-   "source": "../assets/entry-experiment/FinalsForTest_01/03_Isla_meets_ethel/",
-   "image": "03A_Isla_meets_ethel_Top.png",
-   "depth": "03A_Isla_meets_ethel_Top_Depth.png",
+   "source": "FinalPNGsForTesting/03_Isla_meets_ethel/",
+   "image": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Top.webp",
+   "depth": "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Top_Depth.webp",
    "rect": [
-    15807,
+    21687,
     0,
-    1448,
+    2333,
     1086
    ],
    "stops": [
@@ -243,18 +278,12 @@
    "name": "panorama 1",
    "role": "background",
    "section": 0,
-   "image": "pano_0.webp",
-   "depth": "pano_0_depth.webp",
-   "plane": 0.16,
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_pano_0.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_pano_0_Depth.webp",
+   "plane": 0.158,
    "rigid": false,
    "travel": null,
    "folder": "2019-03-10_walk-left",
-   "feather": [
-    0.05,
-    0,
-    0,
-    0
-   ],
    "stops": [
     0,
     1,
@@ -274,8 +303,8 @@
    "name": "panorama 2",
    "role": "background",
    "section": 1,
-   "image": "pano_1.webp",
-   "depth": "pano_1_depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_pano_1.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_pano_1_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
@@ -296,8 +325,8 @@
    "name": "panorama 3",
    "role": "background",
    "section": 2,
-   "image": "pano_2.webp",
-   "depth": "pano_2_depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_pano_2.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_pano_2_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
@@ -321,16 +350,19 @@
     12,
     13,
     14,
-    15
+    15,
+    16,
+    17,
+    18
    ]
   },
   {
    "name": "lounge: the cloth",
    "role": "top",
-   "image": "A_Top.webp",
-   "depth": "A_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_Top_Depth.webp",
    "rect": [
-    14359,
+    20239,
     0,
     1448,
     1086
@@ -351,10 +383,10 @@
   {
    "name": "lounge: the swing",
    "role": "top",
-   "image": "B_Top.webp",
-   "depth": "B_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_B_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_B_Top_Depth.webp",
    "rect": [
-    14359,
+    20239,
     0,
     1448,
     1086
@@ -375,10 +407,10 @@
   {
    "name": "lounge: the wrist",
    "role": "top",
-   "image": "C_Top.webp",
-   "depth": "C_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_C_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_C_Top_Depth.webp",
    "rect": [
-    14283,
+    20163,
     -57,
     1600,
     1200
@@ -400,10 +432,10 @@
   {
    "name": "terrace: the bike",
    "role": "top",
-   "image": "E_Top.webp",
-   "depth": "E_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_E_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_E_Top_Depth.webp",
    "rect": [
-    11713,
+    17593,
     0,
     1448,
     1086
@@ -427,8 +459,8 @@
   {
    "name": "the run (its own angle)",
    "role": "mid",
-   "image": "D_Together.webp",
-   "depth": "D_Mid_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Together.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Mid_Depth.webp",
    "insert": {
     "stop": 6,
     "hold": 80,
@@ -446,8 +478,8 @@
   {
    "name": "the run: Isla and Ethel",
    "role": "top",
-   "image": "D_Top.webp",
-   "depth": "D_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Top_Depth.webp",
    "insert": {
     "stop": 6,
     "hold": 80,
@@ -465,10 +497,10 @@
   {
    "name": "the ride: under his name",
    "role": "top",
-   "image": "F_Top.webp",
-   "depth": "F_Top_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_Top.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_Top_Depth.webp",
    "rect": [
-    9507,
+    15387,
     0,
     1448,
     1086
@@ -492,10 +524,10 @@
   {
    "name": "North Sydney: the bike",
    "role": "top",
-   "image": "G_Police_A_Ethel_Isla_Bike.webp",
-   "depth": "G_Police_A_Ethel_Isla_Bike_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_Ethel_Isla_Bike.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_Ethel_Isla_Bike_Depth.webp",
    "rect": [
-    7247,
+    13127,
     0,
     1448,
     1086
@@ -519,10 +551,10 @@
   {
    "name": "the officer: waves them down",
    "role": "top",
-   "image": "G_Police_B_DirectsToStop.webp",
-   "depth": "G_Police_B_DirectsToStop_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_B_DirectsToStop.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_B_DirectsToStop_Depth.webp",
    "rect": [
-    7247,
+    13127,
     0,
     1448,
     1086
@@ -551,10 +583,10 @@
   {
    "name": "the officer: steps back",
    "role": "top",
-   "image": "G_Police_A_BacksAway.webp",
-   "depth": "G_Police_A_BacksAway_Depth.webp",
+   "image": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_BacksAway.webp",
+   "depth": "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_BacksAway_Depth.webp",
    "rect": [
-    7247,
+    13127,
     0,
     1448,
     1086
@@ -565,7 +597,10 @@
     12,
     13,
     14,
-    15
+    15,
+    16,
+    17,
+    18
    ],
    "fade": [
     0.143,
@@ -581,12 +616,207 @@
    "role": "background",
    "folder": "2019-03-10_north-sydney-the-keys",
    "source": "../assets/entry-experiment/FinalsForTest_01/08_Ethel_Isla_North_Syd_lights_keys_Yanked/",
-   "image": "North_Syd_lights_keys_Yanked_Background.png",
-   "depth": "North_Syd_lights_keys_Yanked_Background_depth.png",
+   "image": "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Background.webp",
+   "depth": "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Background_Depth.webp",
    "rect": [
-    5792,
+    10948,
     0,
-    1448,
+    2179,
+    1086
+   ],
+   "plane": 0.159,
+   "rigid": false,
+   "travel": null,
+   "underlay": true
+  },
+  {
+   "name": "North Sydney / the keys: top",
+   "role": "top",
+   "folder": "2019-03-10_north-sydney-the-keys",
+   "source": "../assets/entry-experiment/FinalsForTest_01/08_Ethel_Isla_North_Syd_lights_keys_Yanked/",
+   "image": "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Top.webp",
+   "depth": "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Top_Depth.webp",
+   "rect": [
+    10948,
+    0,
+    2179,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Isla bolts for the station: background (also the background of Ethel follows Isla)",
+   "role": "background",
+   "folder": "2019-03-10_isla-bolts-for-station",
+   "source": "../../FinalPNGsForTesting/Isla_Bolts_For_Station/",
+   "image": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Background.webp",
+   "depth": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Background_Depth.webp",
+   "rect": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "plane": 0.159,
+   "rigid": false,
+   "travel": null,
+   "feather": [
+    0.05,
+    0,
+    0,
+    0
+   ],
+   "underlay": true
+  },
+  {
+   "name": "Isla bolts for the station: mid",
+   "role": "mid",
+   "folder": "2019-03-10_isla-bolts-for-station",
+   "source": "../../FinalPNGsForTesting/Isla_Bolts_For_Station/",
+   "image": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Mid.webp",
+   "depth": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Mid_Depth.webp",
+   "rect": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "stops": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Isla bolts for the station: top",
+   "role": "top",
+   "folder": "2019-03-10_isla-bolts-for-station",
+   "source": "../../FinalPNGsForTesting/Isla_Bolts_For_Station/",
+   "image": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Top.webp",
+   "depth": "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Top_Depth.webp",
+   "rect": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "stops": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Ethel follows Isla to the station: mid (over the Bolts background: time passing in the same shot)",
+   "role": "mid",
+   "folder": "2019-03-10_ethel-follows-isla",
+   "source": "../../FinalPNGsForTesting/Isla_Ethel_follows_Isla_Station/",
+   "image": "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Mid.webp",
+   "depth": "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Mid_Depth.webp",
+   "rect": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "stops": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  },
+  {
+   "name": "Ethel follows Isla to the station: top (over the Bolts background: time passing in the same shot)",
+   "role": "top",
+   "folder": "2019-03-10_ethel-follows-isla",
+   "source": "../../FinalPNGsForTesting/Isla_Ethel_follows_Isla_Station/",
+   "image": "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Top.webp",
+   "depth": "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Top_Depth.webp",
+   "rect": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "feather": [
+    0.05,
+    0
+   ],
+   "stops": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ]
+  },
+  {
+   "name": "Ethel waits as Isla runs up the exit: background",
+   "role": "background",
+   "folder": "2019-03-10_ethel-waits-for-isla-running",
+   "source": "../../FinalPNGsForTesting/ethel_waits_for_isla_running/",
+   "image": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Background.webp",
+   "depth": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Background_Depth.webp",
+   "rect": [
+    5068,
+    0,
+    3759,
     1086
    ],
    "plane": 0.159,
@@ -599,19 +829,19 @@
    "underlay": true
   },
   {
-   "name": "North Sydney / the keys: top",
-   "role": "top",
-   "folder": "2019-03-10_north-sydney-the-keys",
-   "source": "../assets/entry-experiment/FinalsForTest_01/08_Ethel_Isla_North_Syd_lights_keys_Yanked/",
-   "image": "North_Syd_lights_keys_Yanked_Top.png",
-   "depth": "North_Syd_lights_keys_Yanked_Top_Depth.png",
+   "name": "Ethel waits as Isla runs up the exit: mid",
+   "role": "mid",
+   "folder": "2019-03-10_ethel-waits-for-isla-running",
+   "source": "../../FinalPNGsForTesting/ethel_waits_for_isla_running/",
+   "image": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Mid.webp",
+   "depth": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Mid_Depth.webp",
    "rect": [
-    5792,
+    5068,
     0,
-    1448,
+    3759,
     1086
    ],
-   "plane": 0.88,
+   "plane": 0.64,
    "rigid": true,
    "travel": null,
    "feather": [
@@ -620,43 +850,21 @@
    ]
   },
   {
-   "name": "Isla / station exit: background",
-   "role": "background",
-   "folder": "2019-03-10_isla-station-exit",
-   "source": "../assets/entry-experiment/FinalsForTest_01/05_Isla_Running_Up_Station_Exit/",
-   "image": "Isla_Running_Up_Station_Exit_Background.png",
-   "depth": "Isla_Running_Up_Station_Exit_Background_Depth.png",
-   "rect": [
-    4344,
-    0,
-    1448,
-    1086
-   ],
-   "plane": 0.159,
-   "rigid": false,
-   "travel": 0.0026,
-   "feather": [
-    0.05,
-    0
-   ],
-   "underlay": true
-  },
-  {
-   "name": "Isla / station exit: top",
+   "name": "Ethel waits as Isla runs up the exit: top",
    "role": "top",
-   "folder": "2019-03-10_isla-station-exit",
-   "source": "../assets/entry-experiment/FinalsForTest_01/05_Isla_Running_Up_Station_Exit/",
-   "image": "Isla_Running_Up_Station_Exit_Top.png",
-   "depth": "Isla_Running_Up_Station_Exit_Top_Depth.png",
+   "folder": "2019-03-10_ethel-waits-for-isla-running",
+   "source": "../../FinalPNGsForTesting/ethel_waits_for_isla_running/",
+   "image": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Top.webp",
+   "depth": "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Top_Depth.webp",
    "rect": [
-    4344,
+    5068,
     0,
-    1448,
+    3759,
     1086
    ],
    "plane": 0.88,
    "rigid": true,
-   "travel": 0.0143,
+   "travel": null,
    "feather": [
     0.05,
     0
@@ -667,12 +875,12 @@
    "role": "background",
    "folder": "2019-03-10_contact-the-counter-move",
    "source": "../assets/entry-experiment/FinalsForTest_01/06A_Ethel_Steals_Islas_phone_wallet/",
-   "image": "A_Ethel_Steals_Islas_phone_wallet_Background.png",
-   "depth": "A_Ethel_Steals_Islas_phone_wallet_Background_Depth.png",
+   "image": "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Background.webp",
+   "depth": "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp",
    "rect": [
     2896,
     0,
-    1448,
+    2172,
     1086
    ],
    "plane": 0.159,
@@ -689,10 +897,10 @@
    "role": "top",
    "folder": "2019-03-10_contact-the-counter-move",
    "source": "../assets/entry-experiment/FinalsForTest_01/06A_Ethel_Steals_Islas_phone_wallet/",
-   "image": "A_Ethel_Steals_Islas_phone_wallet_Top.png",
-   "depth": "A_Ethel_Steals_Islas_phone_wallet_Top_Depth.png",
+   "image": "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Top.webp",
+   "depth": "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp",
    "rect": [
-    2896,
+    3258,
     0,
     1448,
     1086
@@ -710,8 +918,8 @@
    "role": "background",
    "folder": "2019-03-10_the-wallet-recognition",
    "source": "../assets/entry-experiment/FinalsForTest_01/06B_Ethel_Steals_Islas_phone_wallet/",
-   "image": "Ethel_Steals_Islas_phone_wallet_Background.png",
-   "depth": "Ethel_Steals_Islas_phone_wallet_Background_Depth.png",
+   "image": "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Background.webp",
+   "depth": "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Background_Depth.webp",
    "rect": [
     1448,
     0,
@@ -732,8 +940,8 @@
    "role": "top",
    "folder": "2019-03-10_the-wallet-recognition",
    "source": "../assets/entry-experiment/FinalsForTest_01/06B_Ethel_Steals_Islas_phone_wallet/",
-   "image": "Ethel_Steals_Islas_phone_wallet_Top.png",
-   "depth": "Ethel_Steals_Islas_phone_wallet_Top_Depth.png",
+   "image": "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Top.webp",
+   "depth": "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Top_Depth.webp",
    "rect": [
     1448,
     0,
@@ -753,8 +961,8 @@
    "role": "background",
    "folder": "2019-03-10_nightlife-the-trip",
    "source": "../assets/entry-experiment/FinalsForTest_01/04_Isla_Is_Ethel_night_life_trips_her/",
-   "image": "Isla_Is_Ethel_night_life_trips_her_Background.png",
-   "depth": "Isla_Is_Ethel_night_life_trips_her_Background_Depth.png",
+   "image": "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Background.webp",
+   "depth": "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Background_Depth.webp",
    "rect": [
     0,
     0,
@@ -775,8 +983,8 @@
    "role": "mid",
    "folder": "2019-03-10_nightlife-the-trip",
    "source": "../assets/entry-experiment/FinalsForTest_01/04_Isla_Is_Ethel_night_life_trips_her/",
-   "image": "Isla_Is_Ethel_night_life_trips_her_Mid.png",
-   "depth": "Isla_Is_Ethel_night_life_trips_her_Mid_Depth.png",
+   "image": "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Mid.webp",
+   "depth": "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Mid_Depth.webp",
    "rect": [
     0,
     0,
@@ -796,7 +1004,7 @@
    "role": "top",
    "folder": "2019-03-10_nightlife-the-trip",
    "source": "../assets/entry-experiment/FinalsForTest_01/04_Isla_Is_Ethel_night_life_trips_her/",
-   "image": "Isla_Is_Ethel_night_life_trips_her_Top.png",
+   "image": "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Top.webp",
    "depth": null,
    "rect": [
     0,
@@ -816,110 +1024,161 @@
  "stops": [
   {
    "frame": [
-    18703,
+    25468,
     0,
     1448,
     1086
    ],
    "keep": [
-    18703,
-    20151
+    25468,
+    26916
    ],
    "name": "Ethel / the gifted trap"
   },
   {
    "frame": [
-    17255,
+    24020,
     0,
     1448,
     1086
    ],
    "keep": [
-    17255,
-    18703
+    24020,
+    25468
    ],
    "name": "Ethel / arrival, the guard"
   },
   {
    "frame": [
-    15807,
+    21687,
     0,
-    1448,
+    2333,
     1086
    ],
    "keep": [
-    15807,
-    17255
+    21687,
+    24020
    ],
-   "name": "Isla / the glass house"
+   "name": "Isla / the glass house",
+   "fit": 1
   },
   {
    "frame": [
-    13453,
-    0,
-    3260,
-    1086
-   ],
-   "look": {
-    "warm": 0.35,
-    "cold": 0.0
-   },
-   "keep": [
-    7240,
-    15807
-   ]
-  },
-  {
-   "frame": [
-    13033,
+    19333,
     0,
     3260,
     1086
    ],
    "look": {
     "warm": 0.35,
-    "cold": 0.0
+    "cold": 0
    },
    "keep": [
-    7240,
-    15807
-   ]
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/what_world_have_I_Just_Entered.mp3"
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/psycho_laughing_whist_a_crazy_Girl_burns_A_towel.mp3",
+      "gap": 0.45
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Does_She_Want_Met_To_React_Im_not_Reacting.mp3",
+      "gap": 1.9
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    12613,
+    18913,
     0,
     3260,
     1086
    ],
    "look": {
     "warm": 0.35,
-    "cold": 0.0
+    "cold": 0
    },
    "keep": [
-    7240,
-    15807
-   ]
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/And_Theyre_Laughing_like_this_is_just_A_Thing_She_Does.mp3",
+      "gap": 0.8
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    11710,
+    18493,
     0,
     3260,
     1086
    ],
    "look": {
     "warm": 0.35,
-    "cold": 0.0
+    "cold": 0
    },
    "keep": [
-    7240,
-    15807
-   ]
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/that_One_Isnt_Laughing.mp3",
+      "gap": 1.4
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Note_That.mp3",
+      "gap": 0.35
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    10807,
+    17590,
+    0,
+    3260,
+    1086
+   ],
+   "look": {
+    "warm": 0.35,
+    "cold": 0
+   },
+   "keep": [
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Shes_Going_For_The_Bike.mp3"
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    16687,
     0,
     3260,
     1086
@@ -929,73 +1188,166 @@
     "cold": 0.032
    },
    "keep": [
-    7240,
-    15807
-   ]
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Shes_Going_For_The_Bike_No_You_Fucking_Dont.mp3",
+      "from": 2.06
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    8601,
+    14481,
     0,
     3260,
     1086
    ],
    "look": {
-    "warm": 0.0,
+    "warm": 0,
     "cold": 0.3
    },
    "keep": [
-    7240,
-    15807
-   ]
+    13120,
+    21687
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/And_Every_second_building_Has_My_family_Name_on_it_Ryker_Subtle.mp3",
+      "gap": 0.3
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    6736,
+    12616,
     0,
     3260,
     1086
    ],
    "look": {
-    "warm": 0.0,
+    "warm": 0,
     "cold": 0.3
    },
    "keep": [
-    7240,
-    15807
+    13120,
+    21687
    ]
   },
   {
    "frame": [
-    5610,
+    11490,
     0,
     3260,
     1086
    ],
    "look": {
-    "warm": 0.0,
+    "warm": 0,
     "cold": 0.3
    },
    "keep": [
-    7240,
-    15807
+    13120,
+    21687
    ]
   },
   {
    "frame": [
-    5792,
+    10948,
     0,
-    1448,
+    2179,
     1086
    ],
    "name": "North Sydney / the keys",
-   "fit": 1
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/oh_fuck_she_Has_my_Keys.mp3"
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    4344,
+    8827,
     0,
-    1448,
+    2121,
+    1086
+   ],
+   "name": "Isla bolts for the station",
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Straigh_for_The_Subway.mp3"
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    8827,
+    0,
+    2121,
+    1086
+   ],
+   "name": "Ethel follows Isla to the station",
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/staay_Calm_I_Tell_Myself_Shell_pop_Back_out_The_Exit.mp3",
+      "gap": 0.3
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "rest": true
+  },
+  {
+   "frame": [
+    6330,
+    0,
+    2068,
+    1086
+   ],
+   "name": "Ethel waits by the exit",
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Her_Game_But_I_Can_Play.mp3",
+      "gap": 0.4
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/_Ill_Wait_By_The_Exit.mp3",
+      "gap": 0.5
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    5239,
+    0,
+    2050,
     1086
    ],
    "name": "Isla / station exit",
@@ -1005,11 +1357,21 @@
    "frame": [
     2896,
     0,
-    1448,
+    2172,
     1086
    ],
    "name": "Contact / the counter-move",
-   "fit": 1
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Got_Her_Wallet_And_Her_Phone_1.mp3",
+      "gap": 0.5
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -1019,7 +1381,16 @@
     1086
    ],
    "name": "The wallet / recognition",
-   "fit": 1
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Now_Shes_Yelling.mp3"
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -1029,7 +1400,24 @@
     1086
    ],
    "name": "Nightlife / the trip",
-   "fit": 1
+   "fit": 1,
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/And_Some_Weekend_Warrior_Trips_Me.mp3"
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/That_Actually_Hurt.mp3",
+      "gap": 0.6
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/How_The_Fuck_Are_Your_Alive__I_want_To_Stay_Alive.mp3",
+      "gap": 2.5
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   }
  ],
  "startStop": 3,
@@ -1053,7 +1441,9 @@
  "exits": {
   "left": {
    "to": "2019-03-05_the-journey",
-   "style": "push"
+   "style": "push",
+   "until": "never",
+   "untilNote": "TESTING: no going back from the towel. The first push that way is still the wrong turn into Dominic's world; after that it is a stop. (Undecided: \"end\" would open the way back once the glass house has been seen to the end.)"
   },
   "right": {
    "to": null
@@ -1064,5 +1454,527 @@
  "arriveNote": "The visitor's glass house begins at the flaming towel (stop 3, \"firstStop\"); arriving from the journey lands there. From there the row runs right to left: the future is to the left, the past to the right. Going back past the towel returns to the journey (Isla on the balcony). Stops 0 to 2 stay here for the studio only; visitors see them at the end of the journey.",
  "firstStop": 3,
  "filmStrip": "Prototype, 13 October: the keys, the station, the counter-move, the wallet and the nightlife trip slide side by side under the finger like a film strip (no held view, no travelling with the view, no per-stop fades). Walk Left (stops 3 to 10) is unchanged. The version before this is kept as glasshouse.before-filmstrip.json.",
- "seamLock": 0
+ "seamLock": 0,
+ "voiceNote": "Ethel: her lines as separate clips (Audio/SoundFX/Narration/Ethel), played in turn per stop (voice.parts, gap = seconds before each). Isla: her lines (Narration/ISLA) layered as cues, panned with echo and reverb, timed into the gaps between Ethel's lines. Cops (9, 10) have no Ethel line yet. The end (I like you … stay alive) sits on the trip until the final shot exists.",
+ "cues": {
+  "library": "audio/",
+  "note": "Sounds on the shots (Audio/SoundFX; see _moves_2026-11-09.txt). stops: [first, last]. A bed (loop) sounds while the view is within half a stop of its stops, fading in (fadeIn s) and out (fadeOut s) as the visitor moves through; once: plays as the view arrives on its stop, delay s after (to sit with Ethel's words). gain: how loud (1 as it is; the ElevenLabs takes are quiet, so most are lifted). Her voice stays on top: beds sit low under her. The beds (loop) never dip and always overlap so the place is always there. duck: while Ethel speaks every one-off sound dips to depth (0.28 is about -11 dB) over attack s, and comes back over release s as her thought fades. loop plays offset to loopEnd (seconds), skipping a take's quiet start and fade-out so a loop never drops out. duck: false keeps a sound out of the dip. x (seconds, with loop): the looped stretch repeats as crossfaded copies, for a take that swells and fades.",
+  "list": [
+   {
+    "name": "the house: tense, expensive, still",
+    "stops": [
+     3,
+     6
+    ],
+    "file": "SoundFX/Ambience/Tense_luxury_house_i_#2-1794199615129.mp3",
+    "gain": 0.5,
+    "loop": true,
+    "fadeIn": 1.5,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "the towel goes up",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Fire/something_erupts_in__#2-1794199927240.mp3",
+    "gain": 2.8,
+    "fadeOut": 2,
+    "offset": 0.5,
+    "duck": false
+   },
+   {
+    "name": "the towel burning",
+    "stops": [
+     3,
+     7
+    ],
+    "file": "SoundFX/Fire/very_loud_fire_erupt_#2-1794199989690.mp3",
+    "gain": 1.4,
+    "loop": true,
+    "fadeIn": 0.6,
+    "fadeOut": 3,
+    "offset": 1,
+    "loopEnd": 7.4,
+    "duck": false
+   },
+   {
+    "name": "Isla: Everything burns",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Everything_burns.mp3",
+    "delay": 0,
+    "gain": 2.4,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": -0.55,
+    "double": 0.35,
+    "after": 1
+   },
+   {
+    "name": "Isla: Go on. React. You're no fun",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Go_On_React_Your_no_fun.mp3",
+    "delay": 0,
+    "gain": 2.2,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": 0.5,
+    "after": 2
+   },
+   {
+    "name": "the swing",
+    "stops": [
+     4
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/A_fast_heavy_arm_swi_#2-1794200152808.mp3",
+    "gain": 1.6,
+    "fadeOut": 1.5,
+    "delay": 0.2
+   },
+   {
+    "name": "they seem amused",
+    "stops": [
+     4
+    ],
+    "once": true,
+    "file": "SoundFX/Voices/Two_or_three_large_m_#1-1794200130512.mp3",
+    "gain": 2,
+    "fadeOut": 1.5,
+    "delay": 0.9
+   },
+   {
+    "name": "Isla: They always laugh",
+    "stops": [
+     4
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/They_Always_Laugh.mp3",
+    "delay": 0,
+    "gain": 2.2,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": -0.4,
+    "after": 0
+   },
+   {
+    "name": "the hand on her wrist",
+    "stops": [
+     5
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/A_big_man's_hand_cla_#3-1794200194021.mp3",
+    "gain": 3.5,
+    "fadeOut": 1.5,
+    "delay": 0.1
+   },
+   {
+    "name": "Isla: Ow!",
+    "stops": [
+     5
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/OW!.mp3",
+    "delay": 0.15,
+    "gain": 1.8,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.25,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.22,
+     "feedback": 0.25,
+     "wet": 0.3
+    },
+    "pan": 0.25
+   },
+   {
+    "name": "Isla: Let go",
+    "stops": [
+     5
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Let_Go.mp3",
+    "delay": 0.75,
+    "gain": 2.6,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.25,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": 0.35
+   },
+   {
+    "name": "Isla: Ooh. Strong",
+    "stops": [
+     5
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/OOO_Strong.mp3",
+    "delay": 0,
+    "gain": 2.4,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": -0.5,
+    "double": 0.3,
+    "after": 1
+   },
+   {
+    "name": "the run out of the house",
+    "stops": [
+     6
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/Two_women_running_fa_#4-1794200209825.mp3",
+    "gain": 0.7,
+    "fadeOut": 1.5
+   },
+   {
+    "name": "the terrace: the harbour at dusk",
+    "stops": [
+     6,
+     7
+    ],
+    "file": "SoundFX/Ambience/Outdoor_harbourside__#4-1794200249916.mp3",
+    "gain": 1.6,
+    "loop": true,
+    "fadeIn": 2,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "the bike starts",
+    "stops": [
+     7
+    ],
+    "once": true,
+    "file": "SoundFX/Vehicles/A_naked_sport_motorc_#4-1794200308578.mp3",
+    "gain": 0.5,
+    "fadeOut": 2.5,
+    "delay": 1.9
+   },
+   {
+    "name": "the ride, under his name",
+    "stops": [
+     8,
+     8
+    ],
+    "file": "SoundFX/Vehicles/Riding_on_the_back_o_#2-1794200428506.mp3",
+    "gain": 0.6,
+    "fadeOut": 3,
+    "fadeIn": 0.4,
+    "loop": true,
+    "lowpass": 4000,
+    "offset": 11,
+    "loopEnd": 16,
+    "x": 1.2,
+    "duck": false
+   },
+   {
+    "name": "Isla: Faster… don't let go",
+    "stops": [
+     8
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Fasterrrrrr_dont_let_Go.mp3",
+    "delay": 0,
+    "gain": 2.2,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.35,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.38,
+     "feedback": 0.38,
+     "wet": 0.4
+    },
+    "pan": 0.3,
+    "after": 0
+   },
+   {
+    "name": "the cop waves them down",
+    "stops": [
+     9
+    ],
+    "once": true,
+    "file": "SoundFX/Police/A_single_short_polic_#2-1794200481503.mp3",
+    "gain": 0.6,
+    "fadeOut": 1.5
+   },
+   {
+    "name": "the bike idling at the kerb",
+    "stops": [
+     9,
+     10
+    ],
+    "file": "SoundFX/Vehicles/A_sport_motorcycle_i_#3-1794200510163.mp3",
+    "gain": 0.5,
+    "loop": true,
+    "fadeIn": 1,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "Isla: Watch this",
+    "stops": [
+     9
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Watch_This.mp3",
+    "delay": 0.7,
+    "gain": 2,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.3,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": -0.35
+   },
+   {
+    "name": "his radio; he steps back",
+    "stops": [
+     10
+    ],
+    "once": true,
+    "file": "SoundFX/Police/A_police_radio_crack_#4-1794200547902.mp3",
+    "gain": 0.4,
+    "fadeOut": 1.5,
+    "delay": 0.3
+   },
+   {
+    "name": "Isla: He knows me",
+    "stops": [
+     10
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/He_Knows_Me.mp3",
+    "delay": 0.9,
+    "gain": 1.9,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": 0.4,
+    "double": 0.3
+   },
+   {
+    "name": "the intersection, red",
+    "stops": [
+     11,
+     13
+    ],
+    "file": "SoundFX/Ambience/Busy_city_intersecti_#1-1794200639349.mp3",
+    "gain": 0.75,
+    "loop": true,
+    "fadeIn": 1.5,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "she yanks the keys",
+    "stops": [
+     11
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/Motorcycle_keys_yank_#2-1794200627018.mp3",
+    "gain": 1.3,
+    "fadeOut": 1.5,
+    "delay": 2.3
+   },
+   {
+    "name": "Isla: Mine now",
+    "stops": [
+     11
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/My_Now.mp3",
+    "delay": 0,
+    "gain": 2.1,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.45,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.27,
+     "feedback": 0.3,
+     "wet": 0.32
+    },
+    "pan": -0.45,
+    "double": 0.3,
+    "after": 0
+   },
+   {
+    "name": "the station stairs",
+    "stops": [
+     14,
+     17
+    ],
+    "file": "SoundFX/Ambience/Concrete_city_train__#3-1794200676719.mp3",
+    "gain": 0.75,
+    "loop": true,
+    "fadeIn": 1.5,
+    "fadeOut": 3,
+    "duck": false,
+    "highpass": 120
+   },
+   {
+    "name": "the bump",
+    "stops": [
+     16
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/A_quick_bump_between_#3-1794200707687.mp3",
+    "gain": 1.8,
+    "fadeOut": 1.5,
+    "delay": 0.4
+   },
+   {
+    "name": "Isla: Thief!",
+    "stops": [
+     17
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Thief.mp3",
+    "delay": 0,
+    "gain": 1.1,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.3,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.3,
+     "feedback": 0.35,
+     "wet": 0.35
+    },
+    "pan": 0.2,
+    "after": 0
+   },
+   {
+    "name": "the pub, spilling out",
+    "stops": [
+     18,
+     18
+    ],
+    "file": "SoundFX/Ambience/Busy_pub_entrance_on_#4-1794200728604.mp3",
+    "gain": 0.8,
+    "loop": true,
+    "fadeIn": 2,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "tripped",
+    "stops": [
+     18
+    ],
+    "once": true,
+    "file": "SoundFX/Foley/A_woman_tripped_and__#1-1794200753187.mp3",
+    "gain": 0.7,
+    "fadeOut": 1.5,
+    "delay": 0,
+    "after": 0
+   },
+   {
+    "name": "Isla: Thief, she stole my shit (far off)",
+    "stops": [
+     18
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/Thief_She_Stole_My_shit.mp3",
+    "delay": 0.2,
+    "gain": 1,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.8,
+    "roomSec": 3,
+    "echo": {
+     "time": 0.41,
+     "feedback": 0.42,
+     "wet": 0.4
+    },
+    "pan": -0.6,
+    "highpass": 300,
+    "lowpass": 5000
+   },
+   {
+    "name": "Isla: I like you",
+    "stops": [
+     18
+    ],
+    "once": true,
+    "file": "SoundFX/Narration/ISLA/I_LIKE_YOU.mp3",
+    "delay": 1.2,
+    "gain": 1.7,
+    "fadeOut": 1.5,
+    "duck": false,
+    "reverb": 0.3,
+    "roomSec": 2.2,
+    "echo": {
+     "time": 0.35,
+     "feedback": 0.45,
+     "wet": 0.4
+    },
+    "pan": 0,
+    "double": 0.45,
+    "doubleDelay": 0.06,
+    "after": 1
+   }
+  ],
+  "duck": {
+   "depth": 0.28,
+   "attack": 0.25,
+   "release": 1.2
+  }
+ },
+ "restNote": "rest: true on a stop: one drag, scroll or flick never carries past it, so the change from Isla bolts to Ethel follows (the same street, Mid and Top dissolving) always lands on Ethel follows before the next shot.",
+ "era": "later"
 }

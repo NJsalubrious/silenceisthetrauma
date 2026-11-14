@@ -1,0 +1,6 @@
+{
+ "note": "THE POOL, QUIET (only with &seq=quiet). The visitor walks at their own pace. 'dark' = how dark each room's picture goes (0 = not at all, 1 = black); rooms not listed are not darkened. 'dimMs' = how slowly the darkness changes. 'flash' = the picture that is there only for a split second: 'room', 'ms' how long it shows, 'dark' how dark it is, 'before' / 'after' the rooms either side of it. There is no sound from 013 on (no soundscape plays there).",
+ "dimMs": 3500,
+ "dark": { "x-014": 0.08, "x-015": 0.14, "x-015b": 0.17, "x-015c": 0.2, "x-016": 0.24 },
+ "flash": { "room": "x-014b", "ms": 300, "dark": 0.3, "inMs": 40, "before": "x-014", "after": "x-015" }
+}

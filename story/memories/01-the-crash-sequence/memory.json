@@ -7,10 +7,6 @@
  "height": 1500,
  "sections": [
   {
-   "name": "Leaving the gate",
-   "width": 2790
-  },
-  {
    "name": "The crash",
    "width": 2687
   },
@@ -35,35 +31,50 @@
   {
    "section": 0,
    "role": "background",
-   "image": "Background1.png",
-   "depth": "Background1_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
-   "travel": null
+   "travel": null,
+   "name": "the crash: side fill (widened copy, only shows outside your original)"
   },
   {
+   "name": "the crash: background (10_Gran_Pop_Car_Crushed)",
    "section": 0,
-   "role": "mid-background",
-   "image": "Mid_Background1.png",
-   "depth": "Mid_Background1_Depth.png",
-   "plane": 0.4,
-   "rigid": true,
-   "travel": null
+   "role": "background",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null,
+   "rect": [
+    209,
+    -1,
+    2000,
+    1500
+   ]
   },
   {
    "section": 0,
    "role": "mid",
-   "image": "Mid1.png",
-   "depth": "Mid1_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Mid.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
-   "travel": null
+   "travel": null,
+   "name": "the crash: mid (10_Gran_Pop_Car_Crushed)",
+   "rect": [
+    210,
+    0,
+    2000,
+    1500
+   ]
   },
   {
    "section": 0,
    "role": "top",
-   "image": "Top1.png",
-   "depth": "Top1_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Top.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -71,8 +82,8 @@
   {
    "section": 1,
    "role": "background",
-   "image": "Background2.png",
-   "depth": "Background2_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -80,8 +91,8 @@
   {
    "section": 1,
    "role": "mid",
-   "image": "Mid2.png",
-   "depth": "Mid2_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Mid.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -89,8 +100,8 @@
   {
    "section": 1,
    "role": "top",
-   "image": "Top2.png",
-   "depth": "Top2_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Top.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -98,8 +109,8 @@
   {
    "section": 2,
    "role": "background",
-   "image": "Background3.png",
-   "depth": "Background3_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -107,8 +118,8 @@
   {
    "section": 2,
    "role": "mid",
-   "image": "Mid3.png",
-   "depth": "Mid3_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Mid.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -116,8 +127,8 @@
   {
    "section": 2,
    "role": "top",
-   "image": "Top3.png",
-   "depth": "Top3_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Top.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -125,8 +136,8 @@
   {
    "section": 3,
    "role": "background",
-   "image": "Background4.png",
-   "depth": "Background4_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -134,8 +145,8 @@
   {
    "section": 3,
    "role": "mid",
-   "image": "Mid4.png",
-   "depth": "Mid4_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Mid.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -143,8 +154,8 @@
   {
    "section": 3,
    "role": "top",
-   "image": "Top4.png",
-   "depth": "Top4_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Top.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -152,8 +163,8 @@
   {
    "section": 4,
    "role": "background",
-   "image": "Background5.png",
-   "depth": "Background5_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Background.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -161,8 +172,8 @@
   {
    "section": 4,
    "role": "mid",
-   "image": "Mid5.png",
-   "depth": "Mid5_depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Mid.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -170,52 +181,18 @@
   {
    "section": 4,
    "role": "top",
-   "image": "Top5.png",
-   "depth": "Top5_Depth.png",
+   "image": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Top.webp",
+   "depth": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
-   "travel": null
-  },
-  {
-   "section": 5,
-   "role": "background",
-   "image": "Background6.png",
-   "depth": "Background6_Depth.png",
-   "plane": 0.16,
-   "rigid": false,
-   "travel": null
-  },
-  {
-   "section": 5,
-   "role": "mid",
-   "image": "Mid6.png",
-   "depth": "Mid6_Depth.png",
-   "plane": 0.64,
-   "rigid": true,
-   "travel": null
-  },
-  {
-   "section": 5,
-   "role": "top",
-   "image": "Top6_extended_left.png",
-   "depth": "Top6_extended_left_Depth.png",
-   "plane": 0.88,
-   "rigid": true,
-   "travel": null
+   "travel": null,
+   "pin": "right"
   }
  ],
  "stops": [
   {
    "frame": [
-    0,
-    0,
-    2790,
-    1500
-   ]
-  },
-  {
-   "frame": [
-    2998,
+    208,
     0,
     2000,
     1500
@@ -224,7 +201,7 @@
   {
    "moment": "gate",
    "frame": [
-    5477,
+    2687,
     0,
     2240,
     1500
@@ -233,7 +210,7 @@
   {
    "moment": "gate",
    "frame": [
-    7717,
+    4927,
     0,
     2423,
     1500
@@ -241,7 +218,7 @@
   },
   {
    "frame": [
-    9720,
+    6930,
     0,
     3300,
     1500
@@ -249,14 +226,14 @@
   },
   {
    "frame": [
-    13977,
+    11187,
     0,
     4023,
     1500
    ]
   }
  ],
- "startStop": 1,
+ "startStop": 0,
  "momentDrift": 0.12,
  "depth": {
   "profile": "deeper",
@@ -265,7 +242,7 @@
   "framing": "cover"
  },
  "look": {},
- "together": "Background2.png",
+ "together": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background.webp",
  "voice": {
   "audio": "assets/Audio/Ethel_This_Is_Where_my_Red_Dirt_Ends.mp3",
   "lines": [
@@ -301,12 +278,12 @@
    },
    {
     "t": 26.95,
-    "end": 29.0,
+    "end": 29,
     "text": "To Gran and Pop."
    },
    {
     "t": 30.45,
-    "end": 32.0,
+    "end": 32,
     "text": "It's up to you."
    },
    {
@@ -338,7 +315,7 @@
  },
  "exits": {
   "left": {
-   "to": "2008-07-01_before-the-crash",
+   "to": "2008-07-01_the-opening",
    "style": "push"
   },
   "right": {
@@ -349,5 +326,6 @@
  "cut": {
   "duration": 1500,
   "travel": 0.07
- }
+ },
+ "era": "later"
 }

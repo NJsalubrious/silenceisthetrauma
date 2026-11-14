@@ -1,0 +1,81 @@
+{
+ "id": "x-020",
+ "title": "Explore · Mother Confined To Her Room",
+ "date": "1956-08-01",
+ "order": 103,
+ "placeholderDate": true,
+ "kind": "strip",
+ "height": 1024,
+ "note": "EXPLORE picture 020 (LAYERED, from images/Final_Images; parts by distance: background, top). Each part uses its own _Depth map. depth.response = weight of the hand in ms, depth.strength = how much depth opens.",
+ "sections": [
+  {
+   "name": "Mother Confined To Her Room",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Background.webp",
+   "depth": "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": 0.001
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Top.webp",
+   "depth": "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0035
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1024
+   ],
+   "name": "the room",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "focal": [
+  0.5,
+  0.4
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.45,
+  "framing": "cover",
+  "response": 320
+ },
+ "look": {
+  "grain": 0.012,
+  "vignette": 0.14
+ },
+ "cut": {
+  "duration": 1800,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "x-019",
+   "style": "push"
+  },
+  "right": {
+   "to": "x-021",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "feel": {},
+ "era": "earlier"
+}

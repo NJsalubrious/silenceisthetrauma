@@ -1,0 +1,90 @@
+{
+ "id": "x-050b",
+ "title": "Explore · Elizabeth In Her First University Classes",
+ "date": "1959-02-01",
+ "order": 133,
+ "placeholderDate": true,
+ "kind": "strip",
+ "height": 1001,
+ "note": "EXPLORE picture 050b (LAYERED, from images/Final_Images; parts by distance: background, top, over). Each part uses its own _Depth map.",
+ "sections": [
+  {
+   "name": "Elizabeth In Her First University Classes",
+   "width": 2000
+  }
+ ],
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Background.webp",
+   "depth": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": 0.001
+  },
+  {
+   "section": 0,
+   "role": "top",
+   "image": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Top.webp",
+   "depth": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": 0.0035
+  },
+  {
+   "section": 0,
+   "role": "over",
+   "image": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Over.webp",
+   "depth": "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Over_Depth.webp",
+   "plane": 0.96,
+   "rigid": true,
+   "travel": 0.0045
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    0,
+    0,
+    2000,
+    1001
+   ],
+   "name": "the room",
+   "fit": 1
+  }
+ ],
+ "startStop": 0,
+ "focal": [
+  0.5,
+  0.4
+ ],
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.45,
+  "framing": "cover",
+  "response": 320
+ },
+ "look": {
+  "grain": 0.012,
+  "vignette": 0.14
+ },
+ "cut": {
+  "duration": 1800,
+  "travel": 0.07
+ },
+ "exits": {
+  "left": {
+   "to": "x-050",
+   "style": "push"
+  },
+  "right": {
+   "to": "x-053",
+   "style": "push"
+  }
+ },
+ "together": null,
+ "feel": {},
+ "era": "earlier"
+}

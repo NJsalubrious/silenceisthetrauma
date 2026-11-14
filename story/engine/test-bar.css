@@ -1,0 +1,16 @@
+/* SITT_STORY_TESTING · the test bar (top left; the studio is on the right) */
+.test-bar{position:fixed;top:10px;left:10px;z-index:70;width:min(330px,calc(100vw - 20px));padding:10px 12px;border-radius:6px;background:rgba(10,18,18,.9);color:#d4d6ce;font:12px/1.4 system-ui,sans-serif;border:1px solid #2f3d39;box-shadow:0 4px 18px rgba(0,0,0,.4)}
+.test-bar:has(> button:only-child){width:auto;padding:4px}
+.test-bar .row{display:flex;gap:8px;align-items:center;margin:2px 0 6px}
+.test-bar .row strong{letter-spacing:.12em}
+.test-bar .row a{color:#9fd4c4;margin-left:auto}
+.test-bar label{display:block;margin:6px 0;color:#a5b3aa}
+.test-bar select{display:block;width:100%;margin-top:3px;font:inherit;background:#172222;color:#d4d6ce;border:1px solid #48554f;border-radius:2px;padding:5px}
+.test-bar button{font:inherit;background:#172222;color:#d4d6ce;border:1px solid #48554f;border-radius:2px;padding:5px 9px;cursor:pointer}
+.test-bar button:hover{border-color:#9fd4c4}
+.test-bar p{margin:6px 0 0;color:#c5ccc4}
+.test-bar p.small{color:#83908a;font-size:11px}
+.test-bar .warn{color:#f0c27a;cursor:help}
+.test-bar .off{color:#f08a7a}
+.test-bar .dot{width:8px;height:8px;border-radius:50%;background:#777;display:inline-block}
+.test-bar .dot.on{background:#5fd38d}.test-bar .dot.off{background:#e06a5a}

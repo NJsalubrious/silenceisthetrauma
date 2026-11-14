@@ -61,8 +61,8 @@
   {
    "section": 0,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_01.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_01_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -70,8 +70,8 @@
   {
    "section": 0,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_01.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_01_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -79,8 +79,8 @@
   {
    "section": 0,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_01.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_01_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -88,8 +88,8 @@
   {
    "section": 1,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_02.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_02_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -97,8 +97,8 @@
   {
    "section": 1,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_02.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_02_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -106,8 +106,8 @@
   {
    "section": 1,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_02.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_02_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -115,8 +115,8 @@
   {
    "section": 2,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_03.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_03_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -124,27 +124,17 @@
   {
    "section": 2,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_03.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_03_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
   },
   {
-   "section": 2,
-   "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_03.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_03_Depth.png",
-   "plane": 0.88,
-   "rigid": true,
-   "travel": null,
-   "note": "Stand-in: empty. Top_03.png was saved without transparency. Save it again with transparency."
-  },
-  {
    "section": 3,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_04.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_04_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -152,8 +142,8 @@
   {
    "section": 3,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_04.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_04_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -161,8 +151,8 @@
   {
    "section": 3,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_04.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_04_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -170,8 +160,8 @@
   {
    "section": 4,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_05.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_05_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -179,8 +169,8 @@
   {
    "section": 4,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_05.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_05_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -188,8 +178,8 @@
   {
    "section": 4,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_05.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_05_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -197,8 +187,8 @@
   {
    "section": 5,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_06.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_06_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -206,8 +196,8 @@
   {
    "section": 5,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_06.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_06_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -215,8 +205,8 @@
   {
    "section": 5,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_06.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_06_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -224,8 +214,8 @@
   {
    "section": 6,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_07.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_07_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -233,8 +223,8 @@
   {
    "section": 6,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_07.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_07_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -242,8 +232,8 @@
   {
    "section": 6,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_07.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_07_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -251,8 +241,8 @@
   {
    "section": 7,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_08.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_08_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null,
@@ -261,8 +251,8 @@
   {
    "section": 7,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_08.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_08_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -270,8 +260,8 @@
   {
    "section": 7,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_08.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_08_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -279,8 +269,8 @@
   {
    "section": 8,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_09.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_09_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -288,8 +278,8 @@
   {
    "section": 8,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_09.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_09_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -297,8 +287,8 @@
   {
    "section": 8,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_09.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_09_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -306,8 +296,8 @@
   {
    "section": 9,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_10.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_10_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -315,8 +305,8 @@
   {
    "section": 9,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_10.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_10_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -324,8 +314,8 @@
   {
    "section": 9,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_10.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_10_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -333,8 +323,8 @@
   {
    "section": 10,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_11.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_11_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -342,8 +332,8 @@
   {
    "section": 10,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_11.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_11_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -351,8 +341,8 @@
   {
    "section": 10,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_11.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_11_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -360,8 +350,8 @@
   {
    "section": 11,
    "role": "background",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Background_12.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Background_12_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -369,8 +359,8 @@
   {
    "section": 11,
    "role": "mid",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Mid_12.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Mid_12_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -378,8 +368,8 @@
   {
    "section": 11,
    "role": "top",
-   "image": "Ethel_in_saftey_Dep_Box_Sequence_Top_12.png",
-   "depth": "Ethel_in_saftey_Dep_Box_Sequence_Top_12_Depth.png",
+   "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top.webp",
+   "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -526,5 +516,6 @@
    "style": "push"
   }
  },
- "together": null
+ "together": null,
+ "era": "later"
 }

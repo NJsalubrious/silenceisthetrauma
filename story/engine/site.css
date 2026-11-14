@@ -116,3 +116,7 @@ html.tuning .way{bottom:8vh}
 /* a sequence that plays by itself: no hand while it runs, and the dark it erodes into (and the blink between pictures) */
 .world.free.auto,.world.auto{cursor:default}
 .dark{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;z-index:3}
+
+/* phones: the picture takes the finger (no browser scrolling, zooming or long-press menus over it) */
+.world{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html,body{overscroll-behavior:none}

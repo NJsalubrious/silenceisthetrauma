@@ -1,0 +1,618 @@
+{
+ "note": "THE POOL, FOUR WAYS (only with &seq=pool&opt=A, B, C or D). The swipe on from 'from' is the visitor's last act; the steps then play by themselves and control comes back after the last. Per step: 'in' = how the picture arrives: 'cut' (simply there), 'dissolve' (over 'ms'), or 'black' (the screen goes black for 'ms', then the picture comes up over 'up' ms); the first step's 'in' is the swipe itself. 'hold' = ms it stays. 'depth' = how much the picture answers the hand (1 = as normal, 0 = frozen flat); 'ease' = ms to get there (otherwise at once). 'soft' = the background falls out of focus, the near stays sharp. 'shade' = how dark (0 to 1). 'breath' = the one movement: after 'still' ms, the depth slowly returns and the view drifts once and rests ('breath' below: how far). 'restoreMs' = how long the hand's control takes to come fully back at the end. 'push' = [from, to]: how far the view is carried forward through the depth across the picture's hold, accelerating (near things grow, far ones barely). 'land' = ms for the push to run out and come to rest, slowly and heavily. 'drift' (per option) = the viewpoint moving on its own along one unbroken path through every picture, so the depth maps carry the motion: 'from' and 'to' = where it starts and ends [x, y] (-1 to 1, as far as the depth goes), 'sway' = how far it bows on the way, 'settle' = ms it takes to come to rest at 016, 'handBack' = ms for the visitor's hand to take over again. 'zoom' = [from, to] how many times closer the view is (1 = the whole picture), 'zoomAt' = the point it closes in on [x, y] (0 to 1 across the picture), 'zoomMs' = how long (otherwise the hold); with 'land' it opens out, slowing to rest. Per option: 'look' = the aged-print amounts for the whole passage (as the sliders: tone, fade, grain, specks, scratches, dust, foxing), 'lookIn' / 'lookOut' = ms to go in and to come back to the sliders; 'noLunge' = no zoom on the swipe out of 013. F/G/H: restrained studies without aged-print overlays or pushes. All rooms preload at 013. F removes an interval; G uses a small continuous lateral drift; H holds the central moment while surrounding events rush past. G-original preserves One photo set. depthMove: signed, gentle camera travel through the actual depth maps, in dolly units over the hold; reset on each restrained cut. Suppressed for reduced motion.",
+ "from": "x-013",
+ "restoreMs": 2500,
+ "softBlur": 0.0045,
+ "breath": {
+  "depth": 0.7,
+  "x": 0.22,
+  "y": 0.06
+ },
+ "options": {
+  "A": {
+   "name": "Witness",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 2400,
+     "depth": 0.15,
+     "ease": 700,
+     "soft": true,
+     "shade": 0.04
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 3600,
+     "depth": 0,
+     "shade": 0.08
+    },
+    {
+     "room": "x-015",
+     "in": "black",
+     "ms": 700,
+     "up": 60,
+     "hold": 1500,
+     "depth": 0.1,
+     "shade": 0.08
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 950,
+     "depth": 0.6,
+     "shade": 0.08
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 1700,
+     "depth": 0,
+     "shade": 0.1
+    },
+    {
+     "room": "x-016",
+     "in": "black",
+     "ms": 2600,
+     "up": 2200,
+     "hold": 8000,
+     "depth": 0,
+     "breath": true,
+     "still": 2000,
+     "shade": 0.12
+    }
+   ]
+  },
+  "B": {
+   "name": "Too fast",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 1000,
+     "depth": 0
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 550,
+     "depth": 0,
+     "shade": 0.06
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 700,
+     "depth": 0,
+     "shade": 0.06
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 480,
+     "depth": 0,
+     "shade": 0.06
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 800,
+     "depth": 0,
+     "shade": 0.08
+    },
+    {
+     "room": "x-016",
+     "in": "black",
+     "ms": 3200,
+     "up": 2600,
+     "hold": 9000,
+     "depth": 0,
+     "breath": true,
+     "still": 2500,
+     "shade": 0.12
+    }
+   ]
+  },
+  "C": {
+   "name": "Withheld",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 2600,
+     "depth": 0.15,
+     "ease": 700,
+     "soft": true,
+     "shade": 0.04
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 220,
+     "depth": 0,
+     "shade": 0.1
+    },
+    {
+     "room": "x-015",
+     "in": "black",
+     "ms": 3000,
+     "up": 300,
+     "hold": 1600,
+     "depth": 0.1,
+     "shade": 0.08
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 1000,
+     "depth": 0.5,
+     "shade": 0.08
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 1800,
+     "depth": 0,
+     "shade": 0.1
+    },
+    {
+     "room": "x-016",
+     "in": "black",
+     "ms": 2600,
+     "up": 2200,
+     "hold": 8000,
+     "depth": 0,
+     "breath": true,
+     "still": 2000,
+     "shade": 0.12
+    }
+   ]
+  },
+  "D": {
+   "name": "Remembered",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "dissolve",
+     "ms": 1600,
+     "hold": 2600,
+     "depth": 0.2,
+     "ease": 1500,
+     "shade": 0.06
+    },
+    {
+     "room": "x-014b",
+     "in": "dissolve",
+     "ms": 2200,
+     "hold": 4200,
+     "depth": 0,
+     "shade": 0.12
+    },
+    {
+     "room": "x-015",
+     "in": "dissolve",
+     "ms": 1800,
+     "hold": 2200,
+     "depth": 0.1,
+     "shade": 0.12
+    },
+    {
+     "room": "x-015b",
+     "in": "dissolve",
+     "ms": 1400,
+     "hold": 1800,
+     "depth": 0.1,
+     "shade": 0.14
+    },
+    {
+     "room": "x-015c",
+     "in": "dissolve",
+     "ms": 1600,
+     "hold": 2400,
+     "depth": 0,
+     "shade": 0.16
+    },
+    {
+     "room": "x-016",
+     "in": "dissolve",
+     "ms": 3200,
+     "hold": 8000,
+     "depth": 0,
+     "breath": true,
+     "still": 2000,
+     "shade": 0.18
+    }
+   ]
+  },
+  "E": {
+   "name": "Carried through",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 900,
+     "push": [
+      0,
+      0.16
+     ]
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 750,
+     "push": [
+      0.06,
+      0.22
+     ]
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 620,
+     "push": [
+      0.08,
+      0.22
+     ]
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 560,
+     "push": [
+      0.1,
+      0.24
+     ]
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 680,
+     "push": [
+      0.12,
+      0.27
+     ]
+    },
+    {
+     "room": "x-016",
+     "in": "cut",
+     "hold": 6000,
+     "land": 2600
+    }
+   ]
+  },
+  "G": {
+   "noLunge": true,
+   "restrained": true,
+   "name": "Out of reach",
+   "drift": {
+    "from": [
+     -0.22,
+     0.05
+    ],
+    "to": [
+     0.26,
+     -0.035
+    ],
+    "sway": 0,
+    "settle": 1800,
+    "handBack": 1800
+   },
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 1200,
+     "depth": 0.65
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 2100,
+     "depth": 0.65
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 700,
+     "depth": 0.65
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 550,
+     "depth": 0.65
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 1050,
+     "depth": 0.65
+    },
+    {
+     "room": "x-015d",
+     "in": "cut",
+     "hold": 950,
+     "depth": 0.65
+    },
+    {
+     "room": "x-016",
+     "in": "cut",
+     "hold": 7500,
+     "depth": 0.65
+    }
+   ]
+  },
+  "G-original": {
+   "name": "One photo set",
+   "noLunge": true,
+   "look": {
+    "tone": 2,
+    "fade": 2,
+    "grain": 2,
+    "specks": 3,
+    "scratches": 3,
+    "dust": 3,
+    "foxing": 3
+   },
+   "lookIn": 300,
+   "lookOut": 3000,
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 900,
+     "push": [
+      0,
+      0.16
+     ]
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 750,
+     "push": [
+      0.06,
+      0.22
+     ]
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 620,
+     "push": [
+      0.08,
+      0.22
+     ]
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 560,
+     "push": [
+      0.1,
+      0.24
+     ]
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 650,
+     "push": [
+      0.12,
+      0.24
+     ],
+     "zoom": [
+      1,
+      1.3
+     ],
+     "zoomAt": [
+      0.5,
+      0.55
+     ]
+    },
+    {
+     "room": "x-015d",
+     "in": "cut",
+     "hold": 600,
+     "push": [
+      0.24,
+      0.28
+     ],
+     "zoom": [
+      1,
+      1.08
+     ],
+     "zoomAt": [
+      0.55,
+      0.5
+     ]
+    },
+    {
+     "room": "x-016",
+     "in": "cut",
+     "hold": 6000,
+     "land": 2600,
+     "zoom": [
+      1.25,
+      1
+     ],
+     "zoomAt": [
+      0.42,
+      0.25
+     ]
+    }
+   ]
+  },
+  "F": {
+   "noLunge": true,
+   "restrained": true,
+   "name": "Missing time",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 1050,
+     "depth": 0.15,
+     "soft": true
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 1850,
+     "depth": 0
+    },
+    {
+     "room": "x-015",
+     "in": "black",
+     "hold": 650,
+     "depth": 0,
+     "ms": 650,
+     "up": 0
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 450,
+     "depth": 0
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 950,
+     "depth": 0
+    },
+    {
+     "room": "x-015d",
+     "in": "cut",
+     "hold": 850,
+     "depth": 0
+    },
+    {
+     "room": "x-016",
+     "in": "cut",
+     "hold": 7500,
+     "depth": 0
+    }
+   ]
+  },
+  "H": {
+   "noLunge": true,
+   "restrained": true,
+   "name": "The moment stays",
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 850,
+     "depth": 0
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 3200,
+     "depth": 0.45,
+     "depthMove": [
+      0,
+      -0.035
+     ]
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 550,
+     "depth": 0
+    },
+    {
+     "room": "x-015b",
+     "in": "cut",
+     "hold": 450,
+     "depth": 0
+    },
+    {
+     "room": "x-015c",
+     "in": "cut",
+     "hold": 700,
+     "depth": 0
+    },
+    {
+     "room": "x-015d",
+     "in": "cut",
+     "hold": 650,
+     "depth": 0
+    },
+    {
+     "room": "x-016",
+     "in": "black",
+     "hold": 8500,
+     "depth": 0,
+     "ms": 1100,
+     "up": 0
+    }
+   ]
+  },
+  "I": {
+   "name": "Dragged fragments",
+   "restrained": true,
+   "noLunge": true,
+   "flash": {
+    "hold": 900,
+    "blend": 220,
+    "secondHold": 650,
+    "edgeBlur": 0.006,
+    "truck": 0.045,
+    "depth": 1.25,
+    "aftermath": 4200,
+    "radialBlur": 0.12,
+    "focusFrom": [
+     0.46,
+     0.64
+    ],
+    "focusTo": [
+     0.57,
+     0.6
+    ],
+    "phoneFocus": [
+     0.47,
+     0.65
+    ],
+    "dolly": 0.18,
+    "shutter": 0.42
+   },
+   "steps": [
+    {
+     "room": "x-014",
+     "in": "cut",
+     "hold": 900,
+     "depth": 0
+    },
+    {
+     "room": "x-015",
+     "in": "cut",
+     "hold": 750,
+     "depth": 0
+    },
+    {
+     "room": "x-014b",
+     "in": "cut",
+     "hold": 900,
+     "depth": 1.25
+    },
+    {
+     "room": "x-015d",
+     "in": "dissolve",
+     "ms": 220,
+     "hold": 650,
+     "depth": 1.25
+    },
+    {
+     "room": "x-016",
+     "in": "cut",
+     "hold": 4200,
+     "depth": 0
+    }
+   ],
+   "about": "013 -> 014 (900ms) -> 015 (750ms) -> 014b (900ms) -> blend (220ms) -> 015d (650ms) -> 016. Shortened radial streaks; the mother and responders remain visible long enough to register, with one continuous left-to-right depth drag. The phone call (015) shares the same shorter radial nightmare blur, focused on Elizabeth. Motion trails now derive from camera velocity: they grow with acceleration and disappear at rest; the camera trajectory continues through the 014b/015d blend. Shared final camera transform keeps the complete image and depth buffer registered. Layer displacement is disabled during the nightmare."
+  }
+ }
+}

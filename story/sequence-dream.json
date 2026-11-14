@@ -1,0 +1,15 @@
+{
+ "note": "POOL SEQUENCE AS A DREAM (only with &seq=dream). Per shot: 'hold' = ms it stays; 'cut' = the dream crossing it arrives through (drift, ink, flare, double, fracture, pull, flicker, underwater, depth) and 'cutMs' its length; 'vertigo' = the world pulled away behind her (how far: 1.3 = the near grows 30% while the far recedes); 'tunnel' = tunnel vision (only the near stays sharp; 'focus' the depth kept sharp, 'blur', 'dark' how dark the rest goes); 'ring' = the thin ringing over it; 'intrude' = after this shot, another room flashes back for 'ms'. The last shot: the drone stops dead as it comes. 'sway': 'roll' = degrees the window rolls, 'lean' = how far the depth leans by itself. 'drone': 'volume', 'muffle' (lower = more muffled), 'rise' (seconds to come in), 'tones' [[Hz, level]...], 'ringHz', 'ringVolume', 'on' / 'ring' false to switch off.",
+ "from": "x-013",
+ "firstPush": 1.15,
+ "sway": { "roll": 0.7, "lean": 0.55 },
+ "drone": { "volume": 0.5, "muffle": 520, "rise": 1.6, "ringHz": 3150, "ringVolume": 0.025 },
+ "shots": [
+  { "room": "x-014",  "hold": 2600, "cut": "pull", "cutMs": 1100, "vertigo": 1.35 },
+  { "room": "x-014b", "hold": 4200, "cut": "flicker", "cutMs": 1500, "tunnel": true, "focus": 0.86, "blur": 0.007, "dark": 0.55, "ring": true },
+  { "room": "x-015",  "hold": 2200, "cut": "underwater", "cutMs": 1600, "intrude": { "room": "x-014b", "ms": 280, "focus": 0.86, "blur": 0.009, "dark": 0.7 } },
+  { "room": "x-015b", "hold": 1800, "cut": "fracture", "cutMs": 1100 },
+  { "room": "x-015c", "hold": 2200, "cut": "double", "cutMs": 1700 },
+  { "room": "x-016",  "hold": 2500, "cut": "underwater", "cutMs": 2600 }
+ ]
+}

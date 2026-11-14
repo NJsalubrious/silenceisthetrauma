@@ -1,0 +1,4280 @@
+{
+ "_settings": "pic q90 exact, depth lossless L",
+ "1_Earlier_Story/001_Irish_Family_Arrives_in_Sydney/001_Irish_Family_Arrives_in_Sydney_Background.png": {
+  "bytes": 2578799,
+  "mtime": 1793952541715000000,
+  "sha256": "7928ca8b864e2d39130d2f27d853399ab9ec33f717edb8f12eb44c626fc3e199",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/001_Irish_Family_Arrives_in_Sydney/001_Irish_Family_Arrives_in_Sydney_Background_Depth.png": {
+  "bytes": 171456,
+  "mtime": 1793952586749000000,
+  "sha256": "99f1499321c1e8379a449fd7125809db71f2e81c76f309339c8d866716589a2c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/001_Irish_Family_Arrives_in_Sydney/001_Irish_Family_Arrives_in_Sydney_Top.png": {
+  "bytes": 1771074,
+  "mtime": 1793437716337000000,
+  "sha256": "4028f36f8eb82538f17dba3f357dfcf337d0d35ff1d3bfdac6a645f7915cbd2f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/001_Irish_Family_Arrives_in_Sydney/001_Irish_Family_Arrives_in_Sydney_Top_Depth.png": {
+  "bytes": 405791,
+  "mtime": 1793952451665000000,
+  "sha256": "4fc0e664adccc0b4534a5603eeef353498045b0ba58d83ca1f07be0032366c3d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Background.png": {
+  "bytes": 2130142,
+  "mtime": 1793791385493000000,
+  "sha256": "243aa3a7c39ecdfb184d53913c87ed5ff9f8d37bd7b66c3cda60518c48a380d1",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Background_Depth.png": {
+  "bytes": 187080,
+  "mtime": 1793788093427000000,
+  "sha256": "0c4b23e3436dc5aba7894584a3324326ef41363f40148324d0c322fe68c790e9",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Over.png": {
+  "bytes": 1678746,
+  "mtime": 1793696862322000000,
+  "sha256": "dd231882c3a855b80cac516447396fcdff060f3b40cfaaef53bb3bec2ffd9b28",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Over_Depth.png": {
+  "bytes": 297709,
+  "mtime": 1793865546809000000,
+  "sha256": "d5c478fc6b6f2a3ec15ce3f4f136c02659b0451a3be27d5af9c2085831196180",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Top.png": {
+  "bytes": 438954,
+  "mtime": 1793695967926000000,
+  "sha256": "ba0d0dec1028398baf99023b85849b8b600f4374c37b1787bc32e125677f82f5",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/002_Father_Daughter_Understood_BW/002_Father_Daughter_Understood_BW_Top_Depth.png": {
+  "bytes": 229811,
+  "mtime": 1793788157807000000,
+  "sha256": "b3b96b4c1c58bdb3ab3f9931f0d785a970fde2e6f3f6610c6f5d2eb8b3a1458b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/003_Family_At_The_Cinema/003_Family_At_The_Cinema_Background.png": {
+  "bytes": 1942637,
+  "mtime": 1793692625126000000,
+  "sha256": "489889aa9bc5b71c7171b4774a20faca831b07194502d011083c446b73be896e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/003_Family_At_The_Cinema/003_Family_At_The_Cinema_Background_Depth.png": {
+  "bytes": 182285,
+  "mtime": 1793953022780000000,
+  "sha256": "fffc15a38c265c0fca77f4d4182a2cda7237dff88379a36844dbfa20a0e218bf",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/003_Family_At_The_Cinema/003_Family_At_The_Cinema_Top.png": {
+  "bytes": 1614617,
+  "mtime": 1793692571549000000,
+  "sha256": "601ad7edda7e808db4b9c884102232fbaf39b8358226c31703c6abab5190f607",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/003_Family_At_The_Cinema/003_Family_At_The_Cinema_Top_Depth.png": {
+  "bytes": 417559,
+  "mtime": 1793952823759000000,
+  "sha256": "1748a90df6bffd66790cf4ebc11053be5cdb7bf677b35d48f94fdfc5667bfc9c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/004_Family_Meal_Out/004_Family_Meal_Out_Background.png": {
+  "bytes": 1942089,
+  "mtime": 1793519331509000000,
+  "sha256": "214b4ba6090e207653eeb47382b579d7e2d70bcf019ff72bdfe548972a33cb3d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/004_Family_Meal_Out/004_Family_Meal_Out_Background_Depth.png": {
+  "bytes": 209774,
+  "mtime": 1793793476823000000,
+  "sha256": "24a8aa84ea87a68c74e6b56829dcdb70e330cc7e76c2a948abdb78724275fee2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/004_Family_Meal_Out/004_Family_Meal_Out_Top.png": {
+  "bytes": 1789337,
+  "mtime": 1793519238942000000,
+  "sha256": "0f86358fc32b56edff38f20640b469157d30ff855777ea2e83d56ceb3e3ebc3b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/004_Family_Meal_Out/004_Family_Meal_Out_Top_Depth.png": {
+  "bytes": 724546,
+  "mtime": 1793858921665000000,
+  "sha256": "482343150dc0408dcb61b9397ab0bd999221d75d0fe935d82f9895a4669a3529",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/005_Father_The_First_Unwell_Day/005_Father_The_First_Unwell_Day_Background.png": {
+  "bytes": 2420690,
+  "mtime": 1793866083213000000,
+  "sha256": "143305319f195def92327a4c05b7ff0a59710c8ee5409bbdd885a84258b763c4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/005_Father_The_First_Unwell_Day/005_Father_The_First_Unwell_Day_Background_Depth.png": {
+  "bytes": 262109,
+  "mtime": 1793865198642000000,
+  "sha256": "a7418c6b64ef194cc0faa262407fcc90fcc47624b54a4850ce303c6f3cd7bd56",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/005_Father_The_First_Unwell_Day/005_Father_The_First_Unwell_Day_Top.png": {
+  "bytes": 2399100,
+  "mtime": 1793693861231000000,
+  "sha256": "40566dfb5512226727df3cddca9cd7d9697061f2261f058db95afc727c79a934",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/005_Father_The_First_Unwell_Day/005_Father_The_First_Unwell_Day_Top_Depth.png": {
+  "bytes": 419239,
+  "mtime": 1793865148371000000,
+  "sha256": "25752da6dcf1f14ca61021a53f6d932aaaa12167dfe4c61b0ac0a6641caf875e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/006_Parents_At_The_Doctor/006_Parents_At_The_Doctor_Background.png": {
+  "bytes": 2124452,
+  "mtime": 1793868010513000000,
+  "sha256": "ba2667ea6ebd5f0f6a79bac31c08078ff3dabc0a728c9700cce13b9ef6ded611",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/006_Parents_At_The_Doctor/006_Parents_At_The_Doctor_Background_Depth.png": {
+  "bytes": 232780,
+  "mtime": 1793869035699000000,
+  "sha256": "8c5b192121a78335e83f01c3d28617b51aa31854e639ffb773333ce7d3375a59",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/006_Parents_At_The_Doctor/006_Parents_At_The_Doctor_Top.png": {
+  "bytes": 1911977,
+  "mtime": 1793868899847000000,
+  "sha256": "1bedcb3ed8f23a8005eb6bfa67d585f7d66132256925357ae72ba4f56888c189",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/006_Parents_At_The_Doctor/006_Parents_At_The_Doctor_Top_Depth.png": {
+  "bytes": 455311,
+  "mtime": 1793869218034000000,
+  "sha256": "04091055b04d6cc8d0c8dd3821e677088eea6eed3e45277935e3872e293c98ab",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Background.png": {
+  "bytes": 2116592,
+  "mtime": 1793523214938000000,
+  "sha256": "631f4db7851b0fe8e6569eeab308e0e6ad5b0708901e1e0140ef56442b5dd6a0",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Background_Depth.png": {
+  "bytes": 335609,
+  "mtime": 1793688612638000000,
+  "sha256": "e6ed5d3d8cb55c765e2c979d6666222f7d178b14ad39ff36e299ebde2bec00a3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Over.png": {
+  "bytes": 565269,
+  "mtime": 1793871037682000000,
+  "sha256": "a8819f92c885488b52def7253a9797dd4f5e71548976c5ad3dd6699e58b109ae",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Over_Depth.png": {
+  "bytes": 219234,
+  "mtime": 1793870902365000000,
+  "sha256": "f21f80f87087504f75835309dae3c503d9b67df9b5b062c67caee69ebdfd3dd5",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Top.png": {
+  "bytes": 2036879,
+  "mtime": 1793870608213000000,
+  "sha256": "28d56c507dd0032cf356891e05b634e348cb0fa60deacc13629fe1193be6f4c3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/007_Father_Decline_At_Home/007_Father_Decline_At_Home_Top_Depth.png": {
+  "bytes": 436834,
+  "mtime": 1793871576809000000,
+  "sha256": "e93cc633477076030829be37617351cedd4608162254171a5f8985889c42a238",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/008_Father_Needs_Her_Support/008_Father_Needs_Her_Support_Background.png": {
+  "bytes": 2180773,
+  "mtime": 1793524406115000000,
+  "sha256": "3e815964d4826011f251d27487fc08c2f0322e7db99b1f149f81a43c4900ac73",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/008_Father_Needs_Her_Support/008_Father_Needs_Her_Support_Background_Depth.png": {
+  "bytes": 368839,
+  "mtime": 1793688655266000000,
+  "sha256": "b32884505dfbda834ecfda8c896a5eb38d73baa5d2dfd39d648cae98e2aa85b4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/008_Father_Needs_Her_Support/008_Father_Needs_Her_Support_Top.png": {
+  "bytes": 1590167,
+  "mtime": 1793523741198000000,
+  "sha256": "2ca6270396379a8a877e4816b3dc75695f678e7a17e4aafe8fe1a6c0293a97e7",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/008_Father_Needs_Her_Support/008_Father_Needs_Her_Support_Top_Depth.png": {
+  "bytes": 403652,
+  "mtime": 1793872172598000000,
+  "sha256": "be86c98fa5bc303c77a5376a5cdb29e0fffcca11b4e502ce531b892fe7c0a348",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/009_Father_Last_Hospital_Decline/009_Father_Last_Hospital_Decline_Background.png": {
+  "bytes": 1954978,
+  "mtime": 1793525921241000000,
+  "sha256": "391fa681769ff9f8c00d51130175a72f5706801d643d5ea901163e8ca4360296",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/009_Father_Last_Hospital_Decline/009_Father_Last_Hospital_Decline_Background_Depth.png": {
+  "bytes": 272496,
+  "mtime": 1793872737203000000,
+  "sha256": "6965d757f14ea7ef5131d47e0d3133c2e2deb6d760a0d4e8d8083a2323a81ab0",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/009_Father_Last_Hospital_Decline/009_Father_Last_Hospital_Decline_Top.png": {
+  "bytes": 1866379,
+  "mtime": 1793526343963000000,
+  "sha256": "7c8ff624d1fb18bc4a4b51305e5b5c03ad2d6d6414e4a4092a048965e96debce",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/009_Father_Last_Hospital_Decline/009_Father_Last_Hospital_Decline_Top_Depth.png": {
+  "bytes": 374616,
+  "mtime": 1793872652382000000,
+  "sha256": "6cb9e150450a532b96e0bb11e8c1bd5c26f6b2981537ffa11aa16b5e4404fc9b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/010_Fathers_Funeral/010_Fathers_Funeral_Background.png": {
+  "bytes": 2021782,
+  "mtime": 1793530157881000000,
+  "sha256": "1cd2902608208e47f2daaca27519736256ce91fdccd72525f396e15ebc63b024",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/010_Fathers_Funeral/010_Fathers_Funeral_Background_Depth.png": {
+  "bytes": 200411,
+  "mtime": 1793955328543000000,
+  "sha256": "715a3f14ee6fbecd0fc5ef1ae59dbcc4a60bb19f3c9ba82186e958f75fc8be73",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/010_Fathers_Funeral/010_Fathers_Funeral_Top.png": {
+  "bytes": 2126912,
+  "mtime": 1793574740264000000,
+  "sha256": "a8547eab9866aa88585b414dbbcd334e9bcc2850a9019bb66b69b114da59184c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/010_Fathers_Funeral/010_Fathers_Funeral_Top_Depth.png": {
+  "bytes": 191301,
+  "mtime": 1793955263559000000,
+  "sha256": "fb8ad85d6977fc3002ef13fa7776adb350e0a27384b8ad7b2085215fadeb30cf",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/011_Family_Carrying_On/011_Family_Carrying_On_Background.png": {
+  "bytes": 1900659,
+  "mtime": 1793531057045000000,
+  "sha256": "8755e7fee226fca7ba7fafb85606e085bd07b5d10271ddf5bc6edf86d8d7ee9a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/011_Family_Carrying_On/011_Family_Carrying_On_Background_Depth.png": {
+  "bytes": 253800,
+  "mtime": 1793874663838000000,
+  "sha256": "47357ab363bafc3a496014b7c805678976bb8ac3960111c4b23e52ee60f8c0b8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/011_Family_Carrying_On/011_Family_Carrying_On_Top.png": {
+  "bytes": 2457874,
+  "mtime": 1793531116288000000,
+  "sha256": "eda1e7bdef1f4425cc9814af647d5b7a532a29f2d3f7ac2b19e52f6ffa3f2617",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/011_Family_Carrying_On/011_Family_Carrying_On_Top_Depth.png": {
+  "bytes": 420820,
+  "mtime": 1793875445435000000,
+  "sha256": "2be62831fcf70f1aff39b9d57565cfcfcad606015dcfc6f922cc7c2c1a3f6b5f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/012_Elizabeth_And_Brother_Living_Moment/012_Elizabeth_And_Brother_Living_Moment_Background.png": {
+  "bytes": 2418567,
+  "mtime": 1793535648756000000,
+  "sha256": "f5c0d117bd3addce00ab10c892f623fe338dbcccc8c4b50fab11175f8adce345",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/012_Elizabeth_And_Brother_Living_Moment/012_Elizabeth_And_Brother_Living_Moment_Background_Depth.png": {
+  "bytes": 296953,
+  "mtime": 1793876786116000000,
+  "sha256": "9fd902974fac8972b2c6d82f077600447973e4b5d43c289128f3128e261d2f67",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/012_Elizabeth_And_Brother_Living_Moment/012_Elizabeth_And_Brother_Living_Moment_Top.png": {
+  "bytes": 1522273,
+  "mtime": 1793535748163000000,
+  "sha256": "074f3c86d1fbf53fcb00b13fba3563f78ec3216000037e177671605d17b361ba",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/012_Elizabeth_And_Brother_Living_Moment/012_Elizabeth_And_Brother_Living_Moment_Top_Depth.png": {
+  "bytes": 370987,
+  "mtime": 1793956730808000000,
+  "sha256": "becd20468c95991c3b346d92f18a3728b07d29ffdc3eed0bbf0beef725544cf3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Background.png": {
+  "bytes": 2958332,
+  "mtime": 1793535123413000000,
+  "sha256": "e2f09342e8eb922182f443cac4a819c982f45697c8d076ad09d495df33e6efd2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Background_Depth.png": {
+  "bytes": 257100,
+  "mtime": 1793956900508000000,
+  "sha256": "b12c99a2c8a3e9fd1f8bfc6a507c3383a31ad0f066511c9c78cb800d98fbf4dd",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Over.png": {
+  "bytes": 588566,
+  "mtime": 1793535173191000000,
+  "sha256": "3ba34dbd9f4789045618857af004cb4c841a17994575650a3faae4e7dbc01743",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Over_Depth.png": {
+  "bytes": 83385,
+  "mtime": 1793957793088000000,
+  "sha256": "d112a8a04d31385b35a9f87a5805a8babc04d16ac48898da65ce7c96747f0449",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Top.png": {
+  "bytes": 2163735,
+  "mtime": 1793877121317000000,
+  "sha256": "6e529eb2f68617822344a897abd5029a927c223671f4ae5d2e6358f9c764d17f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/013_Brother_Alone_By_The_Pool/013_Brother_Alone_By_The_Pool_Top_Depth.png": {
+  "bytes": 125978,
+  "mtime": 1793956811320000000,
+  "sha256": "b8f4095611da569f044d121841984bb13242d39278eb5bf5074ff1df32bea4b1",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014B_Mothers_Agony/014B_Mothers_Agony_Background.png": {
+  "bytes": 2588306,
+  "mtime": 1794043042528000000,
+  "sha256": "e2bfa6410a059098a6a9756405f24917862ebac3493dd834908728ddbb0dae04",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014B_Mothers_Agony/014B_Mothers_Agony_Background_Depth.png": {
+  "bytes": 242107,
+  "mtime": 1794042527507000000,
+  "sha256": "32ec08e666d8b4b930218c0cb7330f72e961a05652cd43db28a6a7badf0662d6",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014B_Mothers_Agony/014B_Mothers_Agony_Top.png": {
+  "bytes": 1904716,
+  "mtime": 1794042991457000000,
+  "sha256": "32c5cb2c539de9dcfda45850fb38625f41bcde4eaec497f4a276837d993f59f3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014B_Mothers_Agony/014B_Mothers_Agony_Top_Depth.png": {
+  "bytes": 368513,
+  "mtime": 1794042692179000000,
+  "sha256": "b0b6534eb1372a953fb47ec967461a8b38a1b0b888accd99553301a2b82fdbbc",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014_Mother_Discovers_Something_Wrong_At_The_Pool/014_Mother_Discovers_Something_Wrong_At_The_Pool_Background.png": {
+  "bytes": 3036030,
+  "mtime": 1793535541369000000,
+  "sha256": "3107d08f42182aebbf672e434b45aad154c40b6c47b9cdae5897f420e51bc80c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014_Mother_Discovers_Something_Wrong_At_The_Pool/014_Mother_Discovers_Something_Wrong_At_The_Pool_Background_Depth.png": {
+  "bytes": 239808,
+  "mtime": 1793957668908000000,
+  "sha256": "983e93daf4b2ecf9af93b8ea4e4210f83a0b5c1487e7e59ec38defb4dc3fb8aa",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014_Mother_Discovers_Something_Wrong_At_The_Pool/014_Mother_Discovers_Something_Wrong_At_The_Pool_Top.png": {
+  "bytes": 1622939,
+  "mtime": 1793535414528000000,
+  "sha256": "68fdbc651cbdf3fd12c9c3db0d6dba15cf37f0e1f30467973e4242606e88c393",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/014_Mother_Discovers_Something_Wrong_At_The_Pool/014_Mother_Discovers_Something_Wrong_At_The_Pool_Top_Depth.png": {
+  "bytes": 250137,
+  "mtime": 1793957597278000000,
+  "sha256": "5aacc53c6b3890466a71296453f679f25c82b3204a604bed0f0054dbd7b1c34f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015B_First_Responders/015B_First_Responders_Background.png": {
+  "bytes": 2058747,
+  "mtime": 1794048388570000000,
+  "sha256": "aaa90a9f6c101a1e5e51c31ff77db9f06970a6b4ed38033a671fa9bc8c3f5400",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015B_First_Responders/015B_First_Responders_Over.png": {
+  "bytes": 576472,
+  "mtime": 1794048931083000000,
+  "sha256": "a7f1cb427313588affe90a8cf44e6cb8d2d1a25069cfe50a88edea2201e608f6",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015B_First_Responders/015B_First_Responders_Over_Depth.png": {
+  "bytes": 122881,
+  "mtime": 1794049561663000000,
+  "sha256": "a2a3212bef6429f00fb46b2d7870ffe5bf819819b067d67d85ff7a0fbdc96abb",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015B_First_Responders/015B_First_Responders_Top.png": {
+  "bytes": 2564589,
+  "mtime": 1794048674803000000,
+  "sha256": "c986a1bb502912c7d4fe85eaaa490385ddc224ae350220c9540af5717034ab85",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015B_First_Responders/015B_First_Responders_Top_Depth.png": {
+  "bytes": 299316,
+  "mtime": 1794049338027000000,
+  "sha256": "1681a77a84d2ada25da2b9b97189fa142d376d8ab5534f124a38e1dd7636f664",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015C_First_Responders_working/015C_First_Responders_working_Background.png": {
+  "bytes": 1600561,
+  "mtime": 1794092257805000000,
+  "sha256": "11421df967f881d3bb73c3cf51d2d0fab879264cca18c9dce9957fee4e4274bb",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015C_First_Responders_working/015C_First_Responders_working_Background_Depth.png": {
+  "bytes": 262750,
+  "mtime": 1794092667413000000,
+  "sha256": "c3aa677271bd0ec0e1d9b3fc27ad98c8af119efa5d9cb6f496e2c5f9d1a3e554",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015C_First_Responders_working/015C_First_Responders_working_Top.png": {
+  "bytes": 1305656,
+  "mtime": 1794092217080000000,
+  "sha256": "b32cf8945f5835ef4dbb0b64dbd67994183593432b25931376c7182c77dac8db",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015C_First_Responders_working/015C_First_Responders_working_Top_Depth.png": {
+  "bytes": 324914,
+  "mtime": 1794092617634000000,
+  "sha256": "e1363fc8349335ba216e0449785821e58d98ddd01ac055c37f3f1d2a98b2c62a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015D_First_Responders_working_zoomIn/015D_First_Responders_working_zoomIn_Background.png": {
+  "bytes": 1207240,
+  "mtime": 1794050919949000000,
+  "sha256": "f65362e65ff5bc4ee653aa4251e0bd2a85e65c1b61490130fb2301ae64fc3e4e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015D_First_Responders_working_zoomIn/015D_First_Responders_working_zoomIn_Background_Depth.png": {
+  "bytes": 209194,
+  "mtime": 1794051271536000000,
+  "sha256": "76a3789d94b6f81834fb940b74574e22a7e4563d264d50620be41ed3136e0fa5",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015D_First_Responders_working_zoomIn/015D_First_Responders_working_zoomIn_Top.png": {
+  "bytes": 1313196,
+  "mtime": 1794050985678000000,
+  "sha256": "1249c6ab2823575ee6a152b476aa6b76fba1da2739a2b40734a35909098f3c15",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015D_First_Responders_working_zoomIn/015D_First_Responders_working_zoomIn_Top_Depth.png": {
+  "bytes": 392924,
+  "mtime": 1794051340122000000,
+  "sha256": "26a16f23500a0e55137837ffe9dde52fe090c5654341ae88b28a7ed4ee788d76",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015_Elizabeth_Calls_For_An_Ambulance/015_Elizabeth_Calls_For_An_Ambulance_Background.png": {
+  "bytes": 2611817,
+  "mtime": 1793536320812000000,
+  "sha256": "9ffae7d9ed2c895064078ad4484adbc76e367de0638a994d162ab2f63e3e1a70",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015_Elizabeth_Calls_For_An_Ambulance/015_Elizabeth_Calls_For_An_Ambulance_Background_Depth.png": {
+  "bytes": 432367,
+  "mtime": 1793958475452000000,
+  "sha256": "ac56bbc4f607c6102c08e04d656e66880f94a297f91c20e6c1c8328dba474bef",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015_Elizabeth_Calls_For_An_Ambulance/015_Elizabeth_Calls_For_An_Ambulance_Top.png": {
+  "bytes": 1877737,
+  "mtime": 1793536405457000000,
+  "sha256": "6d98e3fc66c0e8a15a903ffb1bcc97093256c79c22d2acac966bc4897b13af81",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/015_Elizabeth_Calls_For_An_Ambulance/015_Elizabeth_Calls_For_An_Ambulance_Top_Depth.png": {
+  "bytes": 395732,
+  "mtime": 1793958626620000000,
+  "sha256": "97f234a555340ad8c8faec13ff683ad80e233dca46775cede9d59f226bb46524",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Background.png": {
+  "bytes": 2287561,
+  "mtime": 1794098272956000000,
+  "sha256": "e8bff879c934e95bb3112dca2254851e9e2ceeae37a6b4a10c4e3fc26f90f07b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Background_Depth.png": {
+  "bytes": 342457,
+  "mtime": 1794098297062000000,
+  "sha256": "882d5ce6ed511d9adffdcefe8042932924952f6f34d5c7aa7e3cf8280756556c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Over.png": {
+  "bytes": 814349,
+  "mtime": 1793537170294000000,
+  "sha256": "c069e381cd8ce283dd9b118a3a3efc378db6fcac43934283d946fd83bd5473c9",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Over_Depth.png": {
+  "bytes": 97696,
+  "mtime": 1793959521602000000,
+  "sha256": "3dce3e7a0e1fac0b332d2401a22e3e005af1a23c0b418e528eb4998d9659940c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Top.png": {
+  "bytes": 2216997,
+  "mtime": 1793537012943000000,
+  "sha256": "5c38484b9ace9c7807fdd41daedd6ff676dde2895971b609bab06fbceeb8135c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/016_Mother_And_Elizabeth_After_The_Hospital_News/016_Mother_And_Elizabeth_After_The_Hospital_News_Top_Depth.png": {
+  "bytes": 341398,
+  "mtime": 1793959255573000000,
+  "sha256": "f820f344963eb5264a9e83453a588ed09b9de358c1fabcecb1579aae6fc1e76a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/017_Mother_And_Young_Elizabeth_At_The_Service/017_Mother_And_Young_Elizabeth_At_The_Service_Background.png": {
+  "bytes": 2128763,
+  "mtime": 1793573324825000000,
+  "sha256": "4890cfb01df3856ac9ce4fc2be5cddc9e7288765b9bbb41e9ab59bc508f629bb",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/017_Mother_And_Young_Elizabeth_At_The_Service/017_Mother_And_Young_Elizabeth_At_The_Service_Background_Depth.png": {
+  "bytes": 383733,
+  "mtime": 1793688959294000000,
+  "sha256": "9e086254a51ac104e60757db147394ecc9b819728755645050d780d1350d838d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/017_Mother_And_Young_Elizabeth_At_The_Service/017_Mother_And_Young_Elizabeth_At_The_Service_Top.png": {
+  "bytes": 1335658,
+  "mtime": 1793573454807000000,
+  "sha256": "f64629e60451271be26695b7da0d6403ce97e0fa018322893f902b44e5056a73",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/017_Mother_And_Young_Elizabeth_At_The_Service/017_Mother_And_Young_Elizabeth_At_The_Service_Top_Depth.png": {
+  "bytes": 369472,
+  "mtime": 1793688970040000000,
+  "sha256": "4266d5f32c89009544a053433b047aa4597bf6b4fd807fadbeea6d7b6ef22916",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/018_Elizabeth_Mother_After_Losses_BW/018_Elizabeth_Mother_After_Losses_BW_Background.png": {
+  "bytes": 1810613,
+  "mtime": 1793574255050000000,
+  "sha256": "16c378187d622b1a967d2726e493398de6a5588d41a53e97187f66212b001601",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/018_Elizabeth_Mother_After_Losses_BW/018_Elizabeth_Mother_After_Losses_BW_Background_Depth.png": {
+  "bytes": 211151,
+  "mtime": 1793959668814000000,
+  "sha256": "466ce93981d6aaf64d671660a481123a271293b86f427ddc0432b847b51403e2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/018_Elizabeth_Mother_After_Losses_BW/018_Elizabeth_Mother_After_Losses_BW_Top.png": {
+  "bytes": 1439168,
+  "mtime": 1793574694351000000,
+  "sha256": "8d22d2cfbfb1d3971ac035adf4929aedb368cb7e077b3e6d808ddb3cd9529f13",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/018_Elizabeth_Mother_After_Losses_BW/018_Elizabeth_Mother_After_Losses_BW_Top_Depth.png": {
+  "bytes": 410110,
+  "mtime": 1793688990458000000,
+  "sha256": "877588812f551a937efbb264d3c9e8fe468d7ba82db15e5c99e179489fee820a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/019_Mother_At_A_Different_Doctor/019_Mother_At_A_Different_Doctor_Background.png": {
+  "bytes": 1893687,
+  "mtime": 1793586690168000000,
+  "sha256": "edb86232935f0014eeca0d98f72904c1cd3efe112fa768636aa340de7f815a03",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/019_Mother_At_A_Different_Doctor/019_Mother_At_A_Different_Doctor_Background_Depth.png": {
+  "bytes": 268640,
+  "mtime": 1793960057471000000,
+  "sha256": "f03ad917e6e3ee7c1fb23b2e4c931fd9228c140f29f8260d753f24c53561433f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/019_Mother_At_A_Different_Doctor/019_Mother_At_A_Different_Doctor_Top.png": {
+  "bytes": 2480491,
+  "mtime": 1793586664497000000,
+  "sha256": "8f63b200114946c910d6beeaa4f58f59d1fe47eb9f46c437abc5808448790e1d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/019_Mother_At_A_Different_Doctor/019_Mother_At_A_Different_Doctor_Top_Depth.png": {
+  "bytes": 450542,
+  "mtime": 1793689020710000000,
+  "sha256": "90bcce52b0fc09ce40259a8a4091b7ea3424802da895fc6cdf42b7a72acfa091",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Background.png": {
+  "bytes": 2334846,
+  "mtime": 1793588525396000000,
+  "sha256": "4b549005f7c72dd221705113479048c9afe8d9e2e8f67c774e7bbeb9cfe164b4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Background_Depth.png": {
+  "bytes": 348325,
+  "mtime": 1793689030887000000,
+  "sha256": "01a4171dd6d2c631e098631368f68be1f7d9fe308ff7b3fade706b75c29c8eb2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Top.png": {
+  "bytes": 1973836,
+  "mtime": 1793588493332000000,
+  "sha256": "c3c05229aca1061b04e2d7522b33475c5bb54643d5d6c7eaa5965867af7c1140",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/020_Mother_Confined_To_Her_Room/020_Mother_Confined_To_Her_Room_Top_Depth.png": {
+  "bytes": 453802,
+  "mtime": 1793689041199000000,
+  "sha256": "199e010dfeae9820eaa6cfc315e2661ca9d95d5826eb6b99b9a7103227c64b26",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/021_Mother_Later_Physical_Decline/021_Mother_Later_Physical_Decline_Background.png": {
+  "bytes": 2096602,
+  "mtime": 1793588875294000000,
+  "sha256": "80a9cd11a60895fd185113565e3c5fdc82e68349b52d9e280140d27cf2f2ea85",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/021_Mother_Later_Physical_Decline/021_Mother_Later_Physical_Decline_Background_Depth.png": {
+  "bytes": 333351,
+  "mtime": 1793689051143000000,
+  "sha256": "9ea5370775c1f794c1a808b262d13068bfb5b99da59d546fb1bba21743ef78e3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/021_Mother_Later_Physical_Decline/021_Mother_Later_Physical_Decline_Top.png": {
+  "bytes": 1968648,
+  "mtime": 1793588898743000000,
+  "sha256": "ed7628c7f5c7231afa96c8592fbd460e8caeb1d022a920dfba1c13870c08cbb8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/021_Mother_Later_Physical_Decline/021_Mother_Later_Physical_Decline_Top_Depth.png": {
+  "bytes": 438139,
+  "mtime": 1793689072259000000,
+  "sha256": "acec41830f98b44120d3633de0dbd152e2e28d7f9c2e4e7fa811bee26f7c5304",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/022_Elizabeth_Cannot_Get_A_Response/022_Elizabeth_Cannot_Get_A_Response_Background.png": {
+  "bytes": 2096602,
+  "mtime": 1793589392305000000,
+  "sha256": "ef37f8c9451b53eef32ab7703cb377f23e2f76ff7c3c006f29a6fbb37260bb9b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/022_Elizabeth_Cannot_Get_A_Response/022_Elizabeth_Cannot_Get_A_Response_Background_Depth.png": {
+  "bytes": 333351,
+  "mtime": 1793689083169000000,
+  "sha256": "9ea5370775c1f794c1a808b262d13068bfb5b99da59d546fb1bba21743ef78e3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/022_Elizabeth_Cannot_Get_A_Response/022_Elizabeth_Cannot_Get_A_Response_Top.png": {
+  "bytes": 2055648,
+  "mtime": 1793589357880000000,
+  "sha256": "90c4aa02c10577d9297ea06f45a03ede0d9f1634f09343ea2719ff0b149dc6e2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/022_Elizabeth_Cannot_Get_A_Response/022_Elizabeth_Cannot_Get_A_Response_Top_Depth.png": {
+  "bytes": 451880,
+  "mtime": 1793689134616000000,
+  "sha256": "0af0b597a87cfc8e5747312296ecaf353fb03b7880c5a0f2361c84dd6bb8887a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/023_Elizabeth_After_Mothers_Burial_BW/023_Elizabeth_After_Mothers_Burial_BW_Background.png": {
+  "bytes": 2508603,
+  "mtime": 1793589731270000000,
+  "sha256": "28400e102ef9c80b44d9765c9a00b01bbe63ff067031cf719c67c97257f3174f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/023_Elizabeth_After_Mothers_Burial_BW/023_Elizabeth_After_Mothers_Burial_BW_Background_Depth.png": {
+  "bytes": 210480,
+  "mtime": 1793960330032000000,
+  "sha256": "6a36cba22e8130522f7f40cce7999851a173fc6edf4c9ee816d43f7f95611598",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/023_Elizabeth_After_Mothers_Burial_BW/023_Elizabeth_After_Mothers_Burial_BW_Top.png": {
+  "bytes": 1358819,
+  "mtime": 1793589881707000000,
+  "sha256": "b277d40e0954a33640b77a9fa41122e39bc0b8ed0e35d36873a3b50702d6338b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/023_Elizabeth_After_Mothers_Burial_BW/023_Elizabeth_After_Mothers_Burial_BW_Top_Depth.png": {
+  "bytes": 413639,
+  "mtime": 1793689172883000000,
+  "sha256": "7072a5c0613be482ddca14e5809c43b6f3195aebf058635c9e8964d2d661730f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/024_Elizabeth_Alone_In_The_Family_House/024_Elizabeth_Alone_In_The_Family_House_Background.png": {
+  "bytes": 2248319,
+  "mtime": 1793596128579000000,
+  "sha256": "7aca72d8a8e91291e9d5917d8eab37f5050c96572f4630b0c89770887bb5ed65",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/024_Elizabeth_Alone_In_The_Family_House/024_Elizabeth_Alone_In_The_Family_House_Background_Depth.png": {
+  "bytes": 286691,
+  "mtime": 1793689184677000000,
+  "sha256": "3c92e6507ddfc7ea7ecb2e4250f16379903ca0f4834c283c39b59ec17cb035cb",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/024_Elizabeth_Alone_In_The_Family_House/024_Elizabeth_Alone_In_The_Family_House_Top.png": {
+  "bytes": 2694361,
+  "mtime": 1793596162011000000,
+  "sha256": "1e5e5a1ad5c845894cb0d04ff82a45c91fa696375f038f89f414fb8ea7b5c1b2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/024_Elizabeth_Alone_In_The_Family_House/024_Elizabeth_Alone_In_The_Family_House_Top_Depth.png": {
+  "bytes": 406425,
+  "mtime": 1793960653101000000,
+  "sha256": "1e976431e78a94cab7587fd17787903770b09d798a6b4bc61bbe1534e830eafc",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Background.png": {
+  "bytes": 2285370,
+  "mtime": 1793596826139000000,
+  "sha256": "642abc20a78f7197db1aae04fa79492246ef7552bbe00b6c192c201d7ba7c38c",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Background_Depth.png": {
+  "bytes": 183523,
+  "mtime": 1793961530855000000,
+  "sha256": "33cb619b8b435579e2b4a07063e16e27562dad65cdbb2aafd6ac0a27d9e3fb47",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Over.png": {
+  "bytes": 2478976,
+  "mtime": 1793596904271000000,
+  "sha256": "3694be2216a8cddd859948eeab3221b4e3fb22dde97920e20024c7fcf8d2539d",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Over_Depth.png": {
+  "bytes": 338333,
+  "mtime": 1793961490392000000,
+  "sha256": "3964b5f35876db05cd520266a10c72dfa8ad30bb1c14093b30843b8abe0046a8",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Top.png": {
+  "bytes": 1197199,
+  "mtime": 1793596794856000000,
+  "sha256": "440272fb438a43cda10cf44716aa454d9a4d728d7c8c481493c33c2469b6d1ae",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/025_Elizabeth_Working_Another_Evening/025_Elizabeth_Working_Another_Evening_Top_Depth.png": {
+  "bytes": 367350,
+  "mtime": 1793689246883000000,
+  "sha256": "30500d19514ec261e49a2fce901dac67d30fcc737dbd19d858499bdc8edfda33",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/026_After_Closing_With_The_Staff/026_After_Closing_With_The_Staff_Background.png": {
+  "bytes": 2291722,
+  "mtime": 1793598093127000000,
+  "sha256": "e9d488467e17e384496fd2ccca0fae51bfc3a0fcf787ffcbaa5c992448dd8e44",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/026_After_Closing_With_The_Staff/026_After_Closing_With_The_Staff_Background_Depth.png": {
+  "bytes": 288341,
+  "mtime": 1793961732523000000,
+  "sha256": "77537d506373876e5e4b036e3d7b556f2974c86f9283542228da876a59023ae6",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/026_After_Closing_With_The_Staff/026_After_Closing_With_The_Staff_Top.png": {
+  "bytes": 1440882,
+  "mtime": 1793598147622000000,
+  "sha256": "64c37c008c04787d8fa39c3eb4f9466089435fe8875faf5d9270f03338839f3c",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/026_After_Closing_With_The_Staff/026_After_Closing_With_The_Staff_Top_Depth.png": {
+  "bytes": 421950,
+  "mtime": 1793689277099000000,
+  "sha256": "23df829aa4c0b4df88f3b9ac1c69d7c6429158b3ab09b8bfe3f56a72aaec94b0",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/027_Elizabeth_Alone_After_Work/027_Elizabeth_Alone_After_Work_Background.png": {
+  "bytes": 2405902,
+  "mtime": 1793600310537000000,
+  "sha256": "118c09a464cdc57bf08d0b081d4acdc4ecfc437e2e937afeafa6b97877cbf618",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/027_Elizabeth_Alone_After_Work/027_Elizabeth_Alone_After_Work_Background_Depth.png": {
+  "bytes": 311910,
+  "mtime": 1793962617006000000,
+  "sha256": "8d1fb116c404a480405d560f704cda6bf580e5ee313eebdf48126d50d4a33f9b",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/027_Elizabeth_Alone_After_Work/027_Elizabeth_Alone_After_Work_Top.png": {
+  "bytes": 2230863,
+  "mtime": 1793602080760000000,
+  "sha256": "295bd5f24124328655d2e697811bf34b4344f9b5ca3c41298104986575e73276",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/027_Elizabeth_Alone_After_Work/027_Elizabeth_Alone_After_Work_Top_Depth.png": {
+  "bytes": 385265,
+  "mtime": 1793962683875000000,
+  "sha256": "d1bb7294f45c0cba0b41abdb6fafe654a1f421a57534ff6a21a3df22057d24e5",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Background.png": {
+  "bytes": 2213722,
+  "mtime": 1793694359015000000,
+  "sha256": "3d3148fca6e45336083bedece0addcf01b0c334c0cf3b0dfde89e096c48ff7c6",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Background_Depth.png": {
+  "bytes": 318853,
+  "mtime": 1794001530890000000,
+  "sha256": "c7a47c4d95e9bc485bea46e52167888fdf4be283c373d0e4cb542724cebf21fe",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Over.png": {
+  "bytes": 1147360,
+  "mtime": 1794007617671000000,
+  "sha256": "957d7c7510ae2ff21fb770e82a1edfcb91b831e6fc503452409b4c30b2b4c540",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Over_Depth.png": {
+  "bytes": 368531,
+  "mtime": 1794005852388000000,
+  "sha256": "4ca3e429129a2c3e2b90ff84cb4eed9dd5729eb89ce0c9b73154fa69f92679a5",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Top.png": {
+  "bytes": 1455448,
+  "mtime": 1793602939999000000,
+  "sha256": "d1e3964298a84815c23430a2b701f112143e429b551192976c09c56dd5f157d7",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/028_Traveller_Notices_Elizabeth_Before_Approaching/028_Traveller_Notices_Elizabeth_Before_Approaching_Top_Depth.png": {
+  "bytes": 399175,
+  "mtime": 1794006730112000000,
+  "sha256": "74c7dd7c13e16415cb54d62b488fdb5bd1bc36bbb847edf726f92b57d0075414",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Background.png": {
+  "bytes": 2455352,
+  "mtime": 1793604077716000000,
+  "sha256": "003f267de0c56b71f1e9201dea6d00015926ed67090b02753332929dad44a4db",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Background_Depth.png": {
+  "bytes": 1166584,
+  "mtime": 1794003677294000000,
+  "sha256": "1b7d4512a1531dafb8d4171f44476d3459c944dea4694316b22179bbc94c4066",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Over.png": {
+  "bytes": 2358696,
+  "mtime": 1793603679561000000,
+  "sha256": "3e24a0183c72e64107a429a938a83ca02d93159a9e80b556e626e13e2c33abf3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Over_Depth.png": {
+  "bytes": 706771,
+  "mtime": 1794003556295000000,
+  "sha256": "9572b37c44d7457716805516c6cc2eda5f88e38347ee304fc3b3067ca8ace2f9",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Top.png": {
+  "bytes": 2651554,
+  "mtime": 1793604047532000000,
+  "sha256": "01ed1124cfef868cd287bbe7e649785d81ca65589a00048d791c19ce9b85a2a3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/029_Elizabeth_First_Connection_With_Traveller_BW/029_Elizabeth_First_Connection_With_Traveller_BW_Top_Depth.png": {
+  "bytes": 494918,
+  "mtime": 1794004449431000000,
+  "sha256": "36ace81b7c7121c79fa5e4edc2606643f93e821de69dbf6c2570ccd11227ae9f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Background.png": {
+  "bytes": 2490214,
+  "mtime": 1793691176627000000,
+  "sha256": "808a06b9fc58c20d0d32d51975499853323cbfdb4be348085a1f41867c80b436",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Background_Depth.png": {
+  "bytes": 362458,
+  "mtime": 1793691334772000000,
+  "sha256": "c38dde4918226444b04f2814946d451fd58f6169cf3c388676df66ffbda92e0f",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Over.png": {
+  "bytes": 1811596,
+  "mtime": 1794005175419000000,
+  "sha256": "726549a135ed38e995ff0af66b2a4f7b664171f4cb16b4f815884f967506cb1e",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Over_Depth.png": {
+  "bytes": 196023,
+  "mtime": 1794005119394000000,
+  "sha256": "22f950add03a96f52040f6fd7d414c049d24df39ce1acc645c84f289b0b1ab7d",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Top.png": {
+  "bytes": 1271645,
+  "mtime": 1793606457208000000,
+  "sha256": "8ed238ac0603ffde4d9bbd9f765cfbffac4843ef4ec5e915e1cb39305a013914",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/030_Elizabeth_and_Dominics_Father_in_Sydney/030_Elizabeth_and_Dominics_Father_in_Sydney_Top_Depth.png": {
+  "bytes": 477335,
+  "mtime": 1794004921860000000,
+  "sha256": "1870f827567132527a6089e481de990376cbdd560f48b7ed01cfb4aca4afdec5",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Background.png": {
+  "bytes": 2129183,
+  "mtime": 1793608629764000000,
+  "sha256": "1a7302f340fab9144b7aa9f8663fc07c6aa102067ad25a80c9d19d64a77cf27c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Background_Depth.png": {
+  "bytes": 238560,
+  "mtime": 1794005340812000000,
+  "sha256": "64c67cc14c026841efa7bff9e10a2bd7d7717d7916680d13206a57bb7445225e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Over.png": {
+  "bytes": 1138090,
+  "mtime": 1794005406835000000,
+  "sha256": "16804cc2de98697c610f7b1fff3b1be131811e53ac0bbfbd891f96791adb0fac",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Over_Depth.png": {
+  "bytes": 98336,
+  "mtime": 1794005513706000000,
+  "sha256": "292bc1bf4b1584f74b902c616e7adccd7e7275ad129d437919c8e89b0673b38a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Top.png": {
+  "bytes": 1323006,
+  "mtime": 1793608679519000000,
+  "sha256": "0c6fd2fef4f44937de765c94b908def89a1cd8c713c7ac4d18a443489bd613f3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/031_Leaving_Sydney_Together_1966_BW/031_Leaving_Sydney_Together_1966_BW_Top_Depth.png": {
+  "bytes": 428051,
+  "mtime": 1794005324361000000,
+  "sha256": "c27ce93424c067055fb5e123aa79dfca69e726c7811ceb2bd05ee488a36c74b1",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Background.png": {
+  "bytes": 2748103,
+  "mtime": 1793609878755000000,
+  "sha256": "dc56c4c1da77810293dd78bccc0f8b2d572c9d87c06b3e191a65b8b19927d11d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Background_Depth.png": {
+  "bytes": 337677,
+  "mtime": 1793689468533000000,
+  "sha256": "58d265010dd221906ca4d5f80e819e0b7c98d6c81c981b364a9c7a7076a54848",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Over.png": {
+  "bytes": 1741521,
+  "mtime": 1793609998310000000,
+  "sha256": "bf1f87f3feaccd1088916d6d09742e90ab823fb7c9e55fbc002adcd3e9b15e18",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Over_Depth.png": {
+  "bytes": 328727,
+  "mtime": 1793689478444000000,
+  "sha256": "48910d817a173cdbfa91af1e52d06c152c81730289c320d01553303f847a69d2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Top.png": {
+  "bytes": 2254911,
+  "mtime": 1793609841738000000,
+  "sha256": "9526188183d5d08589aba910d96569b95279a83f7ecce5564b41786c6ab5efc8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/032_Travel_Closeness_On_The_Bus_1966_BW/032_Travel_Closeness_On_The_Bus_1966_BW_Top_Depth.png": {
+  "bytes": 434735,
+  "mtime": 1794005583124000000,
+  "sha256": "25f1bb621220fa0a9278e292dbd2e30047c2ecceac368dee70839d79e002fdf8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Background.png": {
+  "bytes": 2610956,
+  "mtime": 1793691204258000000,
+  "sha256": "912b951b115a628cffb3c12f70a1d44fc0e7f245d9b05a4dd6d7d8ec8e8e83c1",
+  "w": 2000,
+  "h": 939
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Background_Depth.png": {
+  "bytes": 358409,
+  "mtime": 1793691299559000000,
+  "sha256": "f51cbdae8f556c2ba9d192b05393bdc01124a139bbd56c06f834fcaceffe2cf0",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Over.png": {
+  "bytes": 603294,
+  "mtime": 1793610458556000000,
+  "sha256": "8e7ce3b77bb82b438a41b480bce60524ab6fac8d09aed59874d09185686fe0f6",
+  "w": 2000,
+  "h": 939
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Over_Depth.png": {
+  "bytes": 259138,
+  "mtime": 1794006483500000000,
+  "sha256": "c6f57756f2e9159ce8b8c74740099715db48c5b9f6a6bd781bd3e8fe120ee50c",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Top.png": {
+  "bytes": 1609299,
+  "mtime": 1793610485386000000,
+  "sha256": "dfb90229311de83652cedac7489cbeab7bb49afb426fc6d74ffa55a027ece6c0",
+  "w": 2000,
+  "h": 939
+ },
+ "1_Earlier_Story/033_Elizabeth_and_Dominics_Father_Nepal_1966/033_Elizabeth_and_Dominics_Father_Nepal_1966_Top_Depth.png": {
+  "bytes": 459852,
+  "mtime": 1794006375057000000,
+  "sha256": "269419019ef51bb81e8bef0964f0c7e1399d35dee81c1145d86ed1d5da5b730b",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Background.png": {
+  "bytes": 2703511,
+  "mtime": 1793610927278000000,
+  "sha256": "f06a2453218960d1090ef77582c2b754ef63374d3e0d3e748ea9886809f22a2b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Background_Depth.png": {
+  "bytes": 241635,
+  "mtime": 1794007889174000000,
+  "sha256": "13a1e656b9816752c8932f3a50832415736f121d98d9d07ec7bdba0ea0b61131",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Over.png": {
+  "bytes": 381807,
+  "mtime": 1793611060995000000,
+  "sha256": "0902df6f20ade49fe46d09913db86d79273c73b3549ca3c24a380575c7e6a045",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Over_Depth.png": {
+  "bytes": 140634,
+  "mtime": 1794008017726000000,
+  "sha256": "d5953ba4b517a0abc1868a04957542593d3a14f027a3eed2c9b78daccf6ee508",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Top.png": {
+  "bytes": 1623060,
+  "mtime": 1793611001470000000,
+  "sha256": "05320bf63426b339ff4fe7a26b6b65ba4d7eeb5ac3851e91f77cd60b6260da2d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/034_A_Quiet_Affection_While_Travelling/034_A_Quiet_Affection_While_Travelling_Top_Depth.png": {
+  "bytes": 445172,
+  "mtime": 1794007770083000000,
+  "sha256": "afac870a69078c784864799ccb871a23e006cf23077c2d3b5f00a027ce7a8910",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Background.png": {
+  "bytes": 2152122,
+  "mtime": 1793611724306000000,
+  "sha256": "8a7fc7b28e7d831101e00205a0632cd5930f8ab5c45272e1069af52fb95cb69a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Background_Depth.png": {
+  "bytes": 284592,
+  "mtime": 1793689557829000000,
+  "sha256": "dc848d7615499b3a8d3139f6195798d76529f233e6c3584242eb8e8f5d8b3b9e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Over.png": {
+  "bytes": 326540,
+  "mtime": 1793612103946000000,
+  "sha256": "b55fa28c7ec63852cd66924422f985a7324cd3b6a8f97edc210090ef256fa076",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Over_Depth.png": {
+  "bytes": 250254,
+  "mtime": 1794008577405000000,
+  "sha256": "f7920b6fe8b8a095880881f2811d81d975520edf3c2fc1422d1947ef07718066",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Top.png": {
+  "bytes": 2812120,
+  "mtime": 1793691461363000000,
+  "sha256": "321ea156b6fd2646014fb033b6089fe6684df766ccd3e625d63bd4399adc6336",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/035_Nausea_Abroad_Seeking_His_Attention_BW/035_Nausea_Abroad_Seeking_His_Attention_BW_Top_Depth.png": {
+  "bytes": 408808,
+  "mtime": 1794008360944000000,
+  "sha256": "8cde5e8d1e5cc62c28674ba158dc99180ea178a7cf8942a37bb415ebfa367450",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/036_Argument_And_Cruel_Rejection_Abroad/036_Argument_And_Cruel_Rejection_Abroad_Background.png": {
+  "bytes": 2034246,
+  "mtime": 1793612674247000000,
+  "sha256": "aa27190c7cadc03c7284dfc4b88cb87bc8792b13eec7e1ea93d51b31ef1b4840",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/036_Argument_And_Cruel_Rejection_Abroad/036_Argument_And_Cruel_Rejection_Abroad_Background_Depth.png": {
+  "bytes": 232124,
+  "mtime": 1794009144839000000,
+  "sha256": "3a81ca77aac89aedb266775fe12476bd5fa0ea47a7200b8377e18d5a8f772b8b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/036_Argument_And_Cruel_Rejection_Abroad/036_Argument_And_Cruel_Rejection_Abroad_Top.png": {
+  "bytes": 1651757,
+  "mtime": 1793612816619000000,
+  "sha256": "e7f5c6481dff0ffb368805ad6551ab466602e558af3d58926fe6dd59819b2057",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/036_Argument_And_Cruel_Rejection_Abroad/036_Argument_And_Cruel_Rejection_Abroad_Top_Depth.png": {
+  "bytes": 495984,
+  "mtime": 1793689585404000000,
+  "sha256": "464a2c9528674a8a92e320fdb18d46759117f78129ceb7384f6a3d760c43a67a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/037_Elizabeth_Alone_After_The_Argument/037_Elizabeth_Alone_After_The_Argument_Background.png": {
+  "bytes": 2090144,
+  "mtime": 1793613674511000000,
+  "sha256": "689c29a9146df8befb982ce4cc5a794fb9356b6947e2cefa0de1bcbdf923f5de",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/037_Elizabeth_Alone_After_The_Argument/037_Elizabeth_Alone_After_The_Argument_Background_Depth.png": {
+  "bytes": 224873,
+  "mtime": 1794009397412000000,
+  "sha256": "431fccfb6a0ce9ddfdff66e5a9b90adbf8e51c4002ba32f8c24548e331e2e1ff",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/037_Elizabeth_Alone_After_The_Argument/037_Elizabeth_Alone_After_The_Argument_Top.png": {
+  "bytes": 1861067,
+  "mtime": 1793613621820000000,
+  "sha256": "c87b6b72ea53bd5b95ac34bfe28dc0406d9c2b35366e009a39db1e66ba807fcd",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/037_Elizabeth_Alone_After_The_Argument/037_Elizabeth_Alone_After_The_Argument_Top_Depth.png": {
+  "bytes": 412878,
+  "mtime": 1793689605925000000,
+  "sha256": "f5556776095757271b5703457cf4540bea3ddd69f77407285ee076a6cdca17be",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/038_The_Journey_Home_Alone_BW/038_The_Journey_Home_Alone_BW_Background.png": {
+  "bytes": 1862990,
+  "mtime": 1793615267739000000,
+  "sha256": "e9d1f64cebd3f77430c5998f9a7513e2e22c37e08682e15299199362a1f9a9b4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/038_The_Journey_Home_Alone_BW/038_The_Journey_Home_Alone_BW_Background_Depth.png": {
+  "bytes": 114603,
+  "mtime": 1794009680566000000,
+  "sha256": "313d291b2d764c9f4a048aae00d2795e9ea06fbd999639bf8a8571cec9daf967",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/038_The_Journey_Home_Alone_BW/038_The_Journey_Home_Alone_BW_Top.png": {
+  "bytes": 2377906,
+  "mtime": 1793615376266000000,
+  "sha256": "4e18addb26faf1d175b0af5862b04885622a459763dfc801a8c411dfd9e2a22c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/038_The_Journey_Home_Alone_BW/038_The_Journey_Home_Alone_BW_Top_Depth.png": {
+  "bytes": 368545,
+  "mtime": 1794009954253000000,
+  "sha256": "fdad1b6f0caf0fa4e482bdc1c2bd16ce435471f8508c79c2921e893fc3a659b0",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Background.png": {
+  "bytes": 2398157,
+  "mtime": 1793616223692000000,
+  "sha256": "a288e486b0f1066d25e0575d484299663a86fd44b49ef1830879ab5dffd4d8f6",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Background_Depth.png": {
+  "bytes": 49878,
+  "mtime": 1794010721171000000,
+  "sha256": "9c6df4d33ebf4ed13f528f15534f55a1187e696a4f1559796cec228e3301a598",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Over.png": {
+  "bytes": 1644564,
+  "mtime": 1793616199095000000,
+  "sha256": "564195db17af51a7ab8cf261ddc615d1fb7eff921075eed2c5399f90241157ee",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Over_Depth.png": {
+  "bytes": 367534,
+  "mtime": 1794010807463000000,
+  "sha256": "64a4aa0a18406f8223cad3acf68806cc940e1937d4309cfbe5e5f7aabafd26b5",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Top.png": {
+  "bytes": 2138247,
+  "mtime": 1793616010063000000,
+  "sha256": "02d37fd4a1927c389ac463623402f6d04cfb17535434626eebb0e8de29612c84",
+  "w": 2000,
+  "h": 940
+ },
+ "1_Earlier_Story/039_Pregnant_And_Unwell_At_Work/039_Pregnant_And_Unwell_At_Work_Top_Depth.png": {
+  "bytes": 183289,
+  "mtime": 1794010609269000000,
+  "sha256": "44e0dbe884267fadcfd2db2352710f0112b135b40630e62c89f45011237a2f1a",
+  "w": 2000,
+  "h": 936
+ },
+ "1_Earlier_Story/040_Back_In_Sydney_Cannot_Cover_The_Room_BW/040_Back_In_Sydney_Cannot_Cover_The_Room_BW_Background.png": {
+  "bytes": 2081136,
+  "mtime": 1793616802339000000,
+  "sha256": "7058fd4aecfcf50ca2233a21897ab59ac81d7e20bab3ab1f88b7e70b578d62fb",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/040_Back_In_Sydney_Cannot_Cover_The_Room_BW/040_Back_In_Sydney_Cannot_Cover_The_Room_BW_Background_Depth.png": {
+  "bytes": 260533,
+  "mtime": 1794010977491000000,
+  "sha256": "5aaf4ff03f6c8853fb848e95af175f8335d73782d5eb5f23c1357bd346a7f82a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/040_Back_In_Sydney_Cannot_Cover_The_Room_BW/040_Back_In_Sydney_Cannot_Cover_The_Room_BW_Top.png": {
+  "bytes": 1961299,
+  "mtime": 1793616736708000000,
+  "sha256": "f2333f3b4798404956a177d49af19de661627724214b086a8211851b54786681",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/040_Back_In_Sydney_Cannot_Cover_The_Room_BW/040_Back_In_Sydney_Cannot_Cover_The_Room_BW_Top_Depth.png": {
+  "bytes": 386771,
+  "mtime": 1793689706736000000,
+  "sha256": "e39d90b19cca063865db4b6389dfe2bc6593580b081e9dbc15875fd669e7aacd",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/041_Adoption_Pressure_Distinct_Worker_BW/041_Adoption_Pressure_Distinct_Worker_BW_Background.png": {
+  "bytes": 1838976,
+  "mtime": 1793617587308000000,
+  "sha256": "17ae4927a97c97acd8d1a5cdd539ebdae2a08611d113609b472459b7a1d7f8db",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/041_Adoption_Pressure_Distinct_Worker_BW/041_Adoption_Pressure_Distinct_Worker_BW_Background_Depth.png": {
+  "bytes": 134706,
+  "mtime": 1794012167215000000,
+  "sha256": "de004e3a62ab6e2f9db810c224143a047ac1b1885f8c4801cb1d3576c8eba344",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/041_Adoption_Pressure_Distinct_Worker_BW/041_Adoption_Pressure_Distinct_Worker_BW_Top.png": {
+  "bytes": 1718872,
+  "mtime": 1793617556001000000,
+  "sha256": "45987f0135074a279e2c3188458398f549381fa60c1bbe84ce8eeac53abb6f52",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/041_Adoption_Pressure_Distinct_Worker_BW/041_Adoption_Pressure_Distinct_Worker_BW_Top_Depth.png": {
+  "bytes": 368409,
+  "mtime": 1794011128616000000,
+  "sha256": "eb63d2782ffd2755b1fe2621acd46ad130beff7d4f37290ff801676ec460bc1d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Background.png": {
+  "bytes": 1961474,
+  "mtime": 1793618410945000000,
+  "sha256": "5465d61ee26913bc78ddb406b13b195f4fd32202e0c916f8910d6f0f9f7ee87a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Background_Depth.png": {
+  "bytes": 178186,
+  "mtime": 1794012221613000000,
+  "sha256": "357419add93d08de01f996ed0a4cc74c8fd9af445f46e649c1b81fe8d2bee6b4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Over.png": {
+  "bytes": 287439,
+  "mtime": 1793618376451000000,
+  "sha256": "95506cdc8d20d13fd7a0492d5d92a5f3f22f35bcc46bdd6345b7435b4cca56e7",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Over_Depth.png": {
+  "bytes": 278493,
+  "mtime": 1793689744812000000,
+  "sha256": "22c0aadfdcb0533f66f0eef9ceb9ba7f6acf89ca0320a7a7a65d8812cd427071",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Top.png": {
+  "bytes": 1636420,
+  "mtime": 1793618643759000000,
+  "sha256": "465348ba0099ea1cc856fd558a88bbefd28146c46db8b528207d3dbc3e332653",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/042_Last_Contact_Before_Separation_1967_BW/042_Last_Contact_Before_Separation_1967_BW_Top_Depth.png": {
+  "bytes": 371444,
+  "mtime": 1794012337075000000,
+  "sha256": "a8e1fae1bac51de3fd8bd65f915bc470942182cf5f158873a0f10825c5ed37fd",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/043_After_The_Baby_Alone_In_The_Room_BW/043_After_The_Baby_Alone_In_The_Room_BW_Background.png": {
+  "bytes": 1776915,
+  "mtime": 1793619399408000000,
+  "sha256": "9166220f077e63d44489bef4e4c6056623ce2827d6a7b77906e7dc1e2c6929ae",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/043_After_The_Baby_Alone_In_The_Room_BW/043_After_The_Baby_Alone_In_The_Room_BW_Background_Depth.png": {
+  "bytes": 220680,
+  "mtime": 1794012580960000000,
+  "sha256": "a82b1ba3040ad99687421e097fb8b4bb8ca32bd03304d38a4647456243336c99",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/043_After_The_Baby_Alone_In_The_Room_BW/043_After_The_Baby_Alone_In_The_Room_BW_Top.png": {
+  "bytes": 1592716,
+  "mtime": 1794012676784000000,
+  "sha256": "34c2b6e1b5700df9511b244015e8fcd22aa734543be4721f48d69750415c7627",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/043_After_The_Baby_Alone_In_The_Room_BW/043_After_The_Baby_Alone_In_The_Room_BW_Top_Depth.png": {
+  "bytes": 387717,
+  "mtime": 1793689782985000000,
+  "sha256": "69b0bdab4584a5f6bd7cb4ff99a2176d30538f71bb5347351d25038cf4256faf",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Background.png": {
+  "bytes": 2074276,
+  "mtime": 1793620811049000000,
+  "sha256": "afa3e4e76b781820ad7c56983d49d270337e42a16ad8f15dff4146e41ea05750",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Background_Depth.png": {
+  "bytes": 160920,
+  "mtime": 1794023608417000000,
+  "sha256": "38e9a578e0adde7fe815ee756ed8584c7eb15d099e3c31ca1ddb961708bcc107",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Over.png": {
+  "bytes": 1740971,
+  "mtime": 1793620782064000000,
+  "sha256": "643daf235feb96649e0e56a80230f3462e48870fc133ee0698101c05bcff848f",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Over_Depth.png": {
+  "bytes": 379874,
+  "mtime": 1794024295196000000,
+  "sha256": "e84cfe288bc9d05f714e6247b1920f112fc1e49c46f3f0a4391dffef574016df",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Top.png": {
+  "bytes": 870752,
+  "mtime": 1793620644755000000,
+  "sha256": "8cb2ff6fb9e989f7c468b43754039ef848e8759ec0c1ce887f907c24251e6666",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/044_Back_At_Work_Late_1967_BW/044_Back_At_Work_Late_1967_BW_Top_Depth.png": {
+  "bytes": 218672,
+  "mtime": 1794023704441000000,
+  "sha256": "56c46e0506574ee1271335121027a96c2d5ace8dc733e101c86e5e3338454711",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Background.png": {
+  "bytes": 1965499,
+  "mtime": 1794029964467000000,
+  "sha256": "21aedaf7d71523f806f9ddaf82e9000efd83ca47c6a2072c4463ed86c698f822",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Background_Depth.png": {
+  "bytes": 163153,
+  "mtime": 1794032981698000000,
+  "sha256": "12712c1d9808b7fdea16b1e24c35cf4c89e934ae325022fb13578be2cc2be790",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Over.png": {
+  "bytes": 2356273,
+  "mtime": 1794030227717000000,
+  "sha256": "37524baaa2b8dac820f18b7cd5f25458f3cbd5898c6581c4250e8bf12d822471",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Over_Depth.png": {
+  "bytes": 382157,
+  "mtime": 1794033233803000000,
+  "sha256": "1d076fdeca83a0bda4a405923942b3522f60d0b2f69f265f25c280e61eb1b052",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Top.png": {
+  "bytes": 1444154,
+  "mtime": 1794033525663000000,
+  "sha256": "71d4885b104f610ce82ad81d218a61879aee245396ee61a218e8654c47c41961",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/047_Two_Separate_Journeys_Elizabeth_Likeness/047_Two_Separate_Journeys_Elizabeth_Likeness_Top_Depth.png": {
+  "bytes": 349570,
+  "mtime": 1794033320571000000,
+  "sha256": "74cd005c38fd940847cb6f64ed95ae760c6a2abbab1cf7552bb2ef5e7e34d34e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048B_Back_Behind_The_Bar/048B_Back_Behind_The_Bar_Background.png": {
+  "bytes": 2374526,
+  "mtime": 1793698322951000000,
+  "sha256": "38fcbd1bc62fa7fa3a583da42fb4dad3277868adbfd407450fea61a469876e2e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048B_Back_Behind_The_Bar/048B_Back_Behind_The_Bar_Background_Depth.png": {
+  "bytes": 382782,
+  "mtime": 1793785196300000000,
+  "sha256": "571bc88df8c050e2d695a99154c56ad54efc81b98680714469ec8715c5c57b27",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048B_Back_Behind_The_Bar/048B_Back_Behind_The_Bar_Top.png": {
+  "bytes": 2012362,
+  "mtime": 1793699404440000000,
+  "sha256": "b952bc0f292280acbaacfcc15d05b7721b1c36164c1d2f763c74d7237f823676",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048B_Back_Behind_The_Bar/048B_Back_Behind_The_Bar_Top_Depth.png": {
+  "bytes": 418385,
+  "mtime": 1793785235423000000,
+  "sha256": "caac41df285e283feab41b6c6a70455d9194140bc314f93772bde2934281d4c3",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Background.png": {
+  "bytes": 2244967,
+  "mtime": 1793698104731000000,
+  "sha256": "0e691758c2bc9f1c9376fe1a6c96263fa6155325594ef8df08965957b0f4228a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Background_Depth.png": {
+  "bytes": 338535,
+  "mtime": 1793785167835000000,
+  "sha256": "0ede082ed6faf3270d1f1b937455e2bdb6a677123d742ffb6ca9a8e02a2132ca",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Over.png": {
+  "bytes": 1570116,
+  "mtime": 1793699174217000000,
+  "sha256": "67bb91a3c004c446cf994033243a8d8d6cc13abb7b5476d0c50404dba5c799c4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Over_Depth.png": {
+  "bytes": 338904,
+  "mtime": 1793785176964000000,
+  "sha256": "d1967abd46670755bfe58e174bdfa00b415672a60efa1ea12e90bdca7fe75f4e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Top.png": {
+  "bytes": 1929710,
+  "mtime": 1793698073083000000,
+  "sha256": "a4f2002273bc8bd82e3fd11053c0430ee53e5067796c55044d06d66795517c02",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/048_The_Train_Exchange_Elizabeth_Likeness/048_The_Train_Exchange_Elizabeth_Likeness_Top_Depth.png": {
+  "bytes": 468266,
+  "mtime": 1793785187265000000,
+  "sha256": "41940878adc17a28970ed80e7613acd4e743a7b577bde54f90484192f680c4c1",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Background.png": {
+  "bytes": 1793506,
+  "mtime": 1793785021432000000,
+  "sha256": "b1f76e542ae37005b180f11cedc82a98ec130d410dd5bf0f4ad49bb4320e8388",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Background_Depth.png": {
+  "bytes": 365137,
+  "mtime": 1793785316782000000,
+  "sha256": "8b7aa3094e9eb837626cc3262026e3cb4c3fe33919f68fe72f4fef2b51d8eb58",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Over.png": {
+  "bytes": 1167490,
+  "mtime": 1793703794110000000,
+  "sha256": "5e27c8c5a8392a3d3155ca587bce6d295c955ee984149af3d0c20bd0fc01cb0b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Over_Depth.png": {
+  "bytes": 343755,
+  "mtime": 1793785325769000000,
+  "sha256": "0b76210763595782e87f5b93127454b9ac593b840fc46314ac854ce809fc7ebc",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Top.png": {
+  "bytes": 2094484,
+  "mtime": 1793703401131000000,
+  "sha256": "a27b69a983908919920825bcdb7376b21ee983766b54b6d8c5e3fee39fee501b",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049B_After_Work_Evening_Class/049B_After_Work_Evening_Class_Top_Depth.png": {
+  "bytes": 465645,
+  "mtime": 1793785335556000000,
+  "sha256": "0f164ab6f89f4dd1ef376a596c4beb270f35d4527a41236cdc4bf206ee7d6f6a",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Background.png": {
+  "bytes": 2205652,
+  "mtime": 1793699068303000000,
+  "sha256": "02bd58f8044e32d033a2d2a4ed16da5d216163029e809b3fdc31c70f8713f696",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Background_Depth.png": {
+  "bytes": 606938,
+  "mtime": 1793785245628000000,
+  "sha256": "8076d0ab5e4a2fd2467a44a5d97fc1087a1d0f4121f0aeac7b39bea390537e65",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Over.png": {
+  "bytes": 1697193,
+  "mtime": 1793699255668000000,
+  "sha256": "ef3f4247b8362a7c2002acbd683e05830bdd575d47b6234f4ea0b02a83f71958",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Over_Depth.png": {
+  "bytes": 383167,
+  "mtime": 1793785255399000000,
+  "sha256": "2ef9eaa8499ac19059976c44fe173372c291b918a9dc91bf247472e2e51e8b75",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Top.png": {
+  "bytes": 2265667,
+  "mtime": 1793699134912000000,
+  "sha256": "5ecbdc7634e1e3b53347d91957ea4e594157331dfe4bd6eb2ed8cfc5f6398713",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW/049_Elizabeth_And_Jonah_Early_Conversation_1968_BW_Top_Depth.png": {
+  "bytes": 485189,
+  "mtime": 1793785264864000000,
+  "sha256": "4e6cd9918f5744be95818b43be3715dc56ecb8f2452cafb99fef9fdb2dd6f1f4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Background.png": {
+  "bytes": 2167442,
+  "mtime": 1793704924769000000,
+  "sha256": "e4e8bbd5478034bb2b044cd65058877e3a0f379dfa5565d3142aecc351fb8c91",
+  "w": 2000,
+  "h": 1001
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Background_Depth.png": {
+  "bytes": 401547,
+  "mtime": 1793785373904000000,
+  "sha256": "35a6e3b273683a7ece2d2906cdc6d308a79b50d68c9ee8a9a1ef3d3123f85d35",
+  "w": 2000,
+  "h": 1000
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Over.png": {
+  "bytes": 1773378,
+  "mtime": 1793705217137000000,
+  "sha256": "559e4648f9b6cd5f271613b4881c39fc2d27dea507778521a2199f0cb365577e",
+  "w": 2000,
+  "h": 1001
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Over_Depth.png": {
+  "bytes": 407333,
+  "mtime": 1793785383022000000,
+  "sha256": "faa6c1253ee50f8676086512f602f8c1988f254eea828f032c1ca1a49c6bb411",
+  "w": 2000,
+  "h": 1000
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Top.png": {
+  "bytes": 2180131,
+  "mtime": 1793704965745000000,
+  "sha256": "d9bbd813703fc8c3bec66c11a87db0788acb1e6cf0f0dd0438ce005f0721b04a",
+  "w": 2000,
+  "h": 1001
+ },
+ "1_Earlier_Story/050B_Elizabeth_In_Her_First_University_Classes/050B_Elizabeth_In_Her_First_University_Classes_Top_Depth.png": {
+  "bytes": 419996,
+  "mtime": 1793785392039000000,
+  "sha256": "d14a4da0068e3e67fef40aad3fa1fe09a40292026e493e5e3667dbab2c44d2e3",
+  "w": 2000,
+  "h": 1000
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Background.png": {
+  "bytes": 2035231,
+  "mtime": 1793704111856000000,
+  "sha256": "529c3b4aa56d0fdecf0048e37bc1048e19e9ffc806df132ba53a03516e1324bd",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Background_Depth.png": {
+  "bytes": 362933,
+  "mtime": 1793785345408000000,
+  "sha256": "c5d141c776f68a506e0a49920086c7b0bf27ffb0a89e0bb1904a3808da2754c8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Over.png": {
+  "bytes": 912451,
+  "mtime": 1793704260850000000,
+  "sha256": "4e737966feffec2415e6e3095111e93e641f344a435b93e69d43be738eb36d7d",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Over_Depth.png": {
+  "bytes": 375752,
+  "mtime": 1793785355439000000,
+  "sha256": "92acf7c811da9c722a20b69fbb0adc66956f7aaff2a0ab575499874debc89458",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Top.png": {
+  "bytes": 1592496,
+  "mtime": 1793704166303000000,
+  "sha256": "cf40d0d0c9263eb6f338eddafc64a8f406380d1e854cd505240897052128de45",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/050_A_Playful_Moment_On_Their_Walk/050_A_Playful_Moment_On_Their_Walk_Top_Depth.png": {
+  "bytes": 408346,
+  "mtime": 1793785364522000000,
+  "sha256": "b150ce0ed4b1a0d8ba5000ccc51189664ce77fddc930428e66d31c7cff4ed666",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Background.png": {
+  "bytes": 1914558,
+  "mtime": 1793776084756000000,
+  "sha256": "9d04d3e550acc6216cc97391cee16df8f41df23b61de3d145c6ff4735e2240dc",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Background_Depth.png": {
+  "bytes": 437846,
+  "mtime": 1793785401171000000,
+  "sha256": "cc27589303ab9eccebf9c6c87c9ae16e75b8a488cf7b8b0358be73c6c9a5297e",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Over.png": {
+  "bytes": 1365105,
+  "mtime": 1793775362407000000,
+  "sha256": "df6c372b5aa674f35a28d2e8e1fa370c8d2aaa97ac79abd94a3c312c8976a36c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Over_Depth.png": {
+  "bytes": 401833,
+  "mtime": 1793785410205000000,
+  "sha256": "650be3b652a0b2e98da385bf00712d09e5c56dd74350727bd7d25c72d204c6b8",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Top.png": {
+  "bytes": 1475554,
+  "mtime": 1793775885798000000,
+  "sha256": "6e144d58106bc6c74241b672635895d3327981d8eee06b351899b941da719b22",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/053_Elizabeth_In_The_Teaching_Laboratory/053_Elizabeth_In_The_Teaching_Laboratory_Top_Depth.png": {
+  "bytes": 356247,
+  "mtime": 1793785419641000000,
+  "sha256": "a88b9acfccb274fbca307082f88a9bee79ebabb9dea5e0651a2674b621c5a58c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Background.png": {
+  "bytes": 2117651,
+  "mtime": 1793778509058000000,
+  "sha256": "49e10f57eea17fbd4abda29c46ff46f3e2b64b5859005228f87ad47c703c0218",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Background_Depth.png": {
+  "bytes": 308464,
+  "mtime": 1793785429117000000,
+  "sha256": "56a9c88e53772926fd72d83162d9c1daae13c71319c8b5908642c1bbeea8cc68",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Over.png": {
+  "bytes": 1283470,
+  "mtime": 1793778575228000000,
+  "sha256": "ca79d1b0ae8c233a1c1d9055e049776b86f4b8e6449d1c2649d81c0979fcac89",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Over_Depth.png": {
+  "bytes": 350772,
+  "mtime": 1793785437894000000,
+  "sha256": "c384c3b3b19d2a3ca879200906fdc15632ed3477d7d0e04b8de8f4c169aefdcd",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Top.png": {
+  "bytes": 2265683,
+  "mtime": 1793778545086000000,
+  "sha256": "cf073e7b07b6555ccbd047f9e4f2cf76b0a2b74d181a8c2c64447bc5466c4d50",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/054_Elizabeth_Research_Exchange/054_Elizabeth_Research_Exchange_Top_Depth.png": {
+  "bytes": 585064,
+  "mtime": 1793785447972000000,
+  "sha256": "3a3c435975897b27fcd4e0c53bc6b8ec77aac9126a44eb7b80411b0c1ddb67a9",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Background.png": {
+  "bytes": 2740581,
+  "mtime": 1793780854134000000,
+  "sha256": "bfb81908af65c6c3b58abf966fab1d98cb47bab4a6e4fc96c5a4879fc6ebd453",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Background_Depth.png": {
+  "bytes": 524472,
+  "mtime": 1793785457390000000,
+  "sha256": "eab0d50d807fd669ee9bc9ddde0bb462540dc90ca206645bab8886cc1e8a9c5c",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Over.png": {
+  "bytes": 1422627,
+  "mtime": 1793780918133000000,
+  "sha256": "0ada726f5e343d1885da4f11aa577c84685606aa2a24ad8ad2dd0ee880e5a8d4",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Over_Depth.png": {
+  "bytes": 532431,
+  "mtime": 1793785506773000000,
+  "sha256": "73e41651196196b864cac09c37a3f00381a6ff07eff05bb2a140a231ffdb4e67",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Top.png": {
+  "bytes": 2328635,
+  "mtime": 1793780886751000000,
+  "sha256": "8d5db8f21e130780fa2b6b49c10ec69d7d9ad6a527809f79145f6af8ef44ef37",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/055_The_Chemistry_Cohort/055_The_Chemistry_Cohort_Top_Depth.png": {
+  "bytes": 408407,
+  "mtime": 1793785516354000000,
+  "sha256": "0ee4958ebbbb12ae3901aa83f1ec969bbaa763606d11f80f904fc4553cd92dec",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Background.png": {
+  "bytes": 2366390,
+  "mtime": 1793781993552000000,
+  "sha256": "5a55f467478fe26e673935ee2b0e3da1f1603ccaf1806279f98bd4139d61eb81",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Background_Depth.png": {
+  "bytes": 461270,
+  "mtime": 1793785525523000000,
+  "sha256": "8c9705960fc331697d94e4ead9f2ae74dc988cbb07cb71b47fc81cbfa6451391",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Over.png": {
+  "bytes": 1775309,
+  "mtime": 1793781655800000000,
+  "sha256": "5b15c07a555a850cb314add1027ece0799edf2071b9acc110a6e162a66ed9783",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Over_Depth.png": {
+  "bytes": 328897,
+  "mtime": 1793785574758000000,
+  "sha256": "f9bb6b3fe7bd36abab7b0c2186cbb79526f235accbb4114a07ef4aa1fe18fe24",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Top.png": {
+  "bytes": 1405224,
+  "mtime": 1793781453551000000,
+  "sha256": "bca4f6893d8add8372bc5d3a7fe17117249f6173cde80d03c07019a1fd6d82c0",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/057_Jonah_And_Elizabeth_Wedding_Garden/057_Jonah_And_Elizabeth_Wedding_Garden_Top_Depth.png": {
+  "bytes": 437041,
+  "mtime": 1793785584457000000,
+  "sha256": "4e2553bd0a18943ba9860690a9263816a1cde495d164abfd81de90291c293fde",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Background.png": {
+  "bytes": 2271372,
+  "mtime": 1793783110056000000,
+  "sha256": "9ce928a51b453a6d04ca2470936f8097152c042a513447b4816b21c841393ed2",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Background_Depth.png": {
+  "bytes": 405541,
+  "mtime": 1793785594187000000,
+  "sha256": "7a6a59a88296ed8d3ffe36cfa8f6bf33c90bb8dabf6ba6448383d6ea192ade22",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Over.png": {
+  "bytes": 1774927,
+  "mtime": 1793783185593000000,
+  "sha256": "8f5ee6698ad5eff651313e8757f13081465b3b4c1e4ce111251a5c453c4244da",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Over_Depth.png": {
+  "bytes": 320030,
+  "mtime": 1793785604228000000,
+  "sha256": "4e4ebe9c03528f64453722f04b25b42215c39adf6a98397aaadabe5cb7e81681",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Top.png": {
+  "bytes": 1264253,
+  "mtime": 1793783133943000000,
+  "sha256": "01e59576deedd43f491565000646db817eba338cea606811f005980391f05614",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/058_A_Moment_Within_The_Wedding/058_A_Moment_Within_The_Wedding_Top_Depth.png": {
+  "bytes": 482493,
+  "mtime": 1793785612841000000,
+  "sha256": "81e551d3feb81130c73b685f3091463234b443bd023d1558e324d98cfac8d4ad",
+  "w": 2000,
+  "h": 1024
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Background.png": {
+  "bytes": 1866089,
+  "mtime": 1793784078572000000,
+  "sha256": "6cc314ed04ae50beb4934828ad88b20f7719e519e9e120f38fa380c4020c04ee",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Background_Depth.png": {
+  "bytes": 319721,
+  "mtime": 1793785623091000000,
+  "sha256": "70b860af8e7931aa8c0222ee3b589c63828bb05b6d3696d9d3050931538ed6a8",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Over.png": {
+  "bytes": 1041757,
+  "mtime": 1793784374664000000,
+  "sha256": "fcc073b5a33d270e4ddd3cc71803be15d7c4e3ace2c38599a792817aee8ad2ca",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Over_Depth.png": {
+  "bytes": 306350,
+  "mtime": 1793785631792000000,
+  "sha256": "e4eaa9d92b21315bf611364091877a4b8d5813ddd4e04c5264c8a1ed41ec4660",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Top.png": {
+  "bytes": 1485249,
+  "mtime": 1793784259165000000,
+  "sha256": "7310e72bed11a6cc4173771ade3038cc236dcdc0f074bfa531729c3ffd37344f",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/059A_Graduation/059A_Graduation_Top_Depth.png": {
+  "bytes": 427792,
+  "mtime": 1793785640640000000,
+  "sha256": "1525773ded91cb78aa0214bf5a187b9bd6212ee967f323d5a3e7a3757e9b8a1e",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/060_grandmothers_man/060_grandmothers_man_Background.png": {
+  "bytes": 2908233,
+  "mtime": 1792745028127000000,
+  "sha256": "2083bc9eaa1e3a7aedef2be95aa304f178c4e2d8feecfe8b4d8245db163fe3a4",
+  "w": 2000,
+  "h": 1200
+ },
+ "1_Earlier_Story/060_grandmothers_man/060_grandmothers_man_Background_Depth.png": {
+  "bytes": 558491,
+  "mtime": 1792917768421000000,
+  "sha256": "b6b5c90a9137c7d474fc1a763838b05256c0232d05e40998ebb1c8fe969b9569",
+  "w": 2000,
+  "h": 1200
+ },
+ "1_Earlier_Story/060_grandmothers_man/060_grandmothers_man_Top.png": {
+  "bytes": 1052424,
+  "mtime": 1792745028143000000,
+  "sha256": "93da40080e7ac0a392ca903eac469141845445a3bf14bc2c70e8800ea6595c5f",
+  "w": 2000,
+  "h": 1200
+ },
+ "1_Earlier_Story/060_grandmothers_man/060_grandmothers_man_Top_Depth.png": {
+  "bytes": 566351,
+  "mtime": 1792917543885000000,
+  "sha256": "5267f40563d50a8b63366711be132bb67b6a4de8b43e6a9d978b4e0407e09f8f",
+  "w": 2000,
+  "h": 1200
+ },
+ "1_Earlier_Story/062_Unannounced_Arrival/062_Unannounced_Arrival_Background.png": {
+  "bytes": 2479463,
+  "mtime": 1793506072732000000,
+  "sha256": "4ba01de9709c34082fba432bef3d6e5258a52951e81a0546bf67b527a8af7f4c",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/062_Unannounced_Arrival/062_Unannounced_Arrival_Background_Depth.png": {
+  "bytes": 361219,
+  "mtime": 1793689831385000000,
+  "sha256": "ae3b34a47a9c36a70a86ad22263fef4fc9d3582142af151a0bc10e349fe5def2",
+  "w": 2000,
+  "h": 1080
+ },
+ "1_Earlier_Story/062_Unannounced_Arrival/062_Unannounced_Arrival_Top.png": {
+  "bytes": 3239633,
+  "mtime": 1793506233168000000,
+  "sha256": "36676a8fb954259513b838bd260ec83a0bb281af3fb4764a0af6e82f1f2efec5",
+  "w": 2000,
+  "h": 1086
+ },
+ "1_Earlier_Story/062_Unannounced_Arrival/062_Unannounced_Arrival_Top_Depth.png": {
+  "bytes": 459408,
+  "mtime": 1793689841735000000,
+  "sha256": "143efdddda59a15bc9eed43213704b71eed8019e37d676af148353c84d67ed5b",
+  "w": 2000,
+  "h": 1080
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_01_Background.png": {
+  "bytes": 4015207,
+  "mtime": 1792753022570000000,
+  "sha256": "fc38fece448aa821f7656a3781d97dfacc8dc68fb42d689e2c958205b5d60ba6",
+  "w": 1717,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_01_Background_Depth.png": {
+  "bytes": 434574,
+  "mtime": 1792824083243000000,
+  "sha256": "bc5752c8cf81b31bbe0e17ab09c39e5e63b8b8c450871d9f5e6bb96e461468f4",
+  "w": 1717,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_01_Top.png": {
+  "bytes": 1673722,
+  "mtime": 1792802805140000000,
+  "sha256": "3656a11ac3d0a4211e83c7ed57e4c4240440e8ccc91337a731ffed1a5eac8893",
+  "w": 1717,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_01_Top_Depth.png": {
+  "bytes": 367397,
+  "mtime": 1792967698659000000,
+  "sha256": "5d77d0cab73a2d97bc91e93259874bdde0cc1ed9ce89a442afb501ccd4ea499f",
+  "w": 1717,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_02_Background.png": {
+  "bytes": 4622423,
+  "mtime": 1792833236077000000,
+  "sha256": "f00fa4ea35e10fbf1d888a3f171b088af07b2f37dac8c3541890f920a3dc1728",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_02_Background_Depth.png": {
+  "bytes": 546906,
+  "mtime": 1792834586596000000,
+  "sha256": "350d5bbd148b24505dd550aa6540e3904c577d74391efcbff45cee7a3b2b4c9c",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_02_Top.png": {
+  "bytes": 5331274,
+  "mtime": 1792833196144000000,
+  "sha256": "06ab3707053dca6e8ac7517ce8aa87ee9545dcd7485d1901ba4a836888b21bbe",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/00_lab_construction/00_lab_construction_02_Top_Depth.png": {
+  "bytes": 317700,
+  "mtime": 1792836926727000000,
+  "sha256": "e94be477bb1d24f31cae81e8768466cbc39e01355e0b843f4a5a89197f78ca8f",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Background.png": {
+  "bytes": 2330218,
+  "mtime": 1794566112795000000,
+  "sha256": "ced2a949fe46b57d64dbb879350723f9e77e81f44e7b3ade2e8ef9214507950d",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Background_Depth.png": {
+  "bytes": 98014,
+  "mtime": 1794564408099000000,
+  "sha256": "b72918259b56a2795f09db6d212d12917ab2bc6fbad8a4cb829244f42ba897fd",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Mid.png": {
+  "bytes": 1371336,
+  "mtime": 1794565806713000000,
+  "sha256": "f75ec809a6d8248a690b72829c6e06779a3470be1be5ee3ae4f70b128243d218",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Mid_Depth.png": {
+  "bytes": 294398,
+  "mtime": 1794565494934000000,
+  "sha256": "29293b6026e561417b7ea2d9e5941bbc7b08372ce239ad33f54910cc3ed5bf1c",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Top.png": {
+  "bytes": 1667560,
+  "mtime": 1794561119047000000,
+  "sha256": "4aca3c0cc70d1f498ad34dfe7932512a2afcc257bf199daa6bfc534920ede166",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/03_Isla_meets_ethel/03_Isla_meets_ethel_Top_Depth.png": {
+  "bytes": 484028,
+  "mtime": 1794563834241000000,
+  "sha256": "a4cb3a6520a725082841be7ae4ec8f264cf9791eb19bc8a6f06b647f3d45d6af",
+  "w": 2200,
+  "h": 1024
+ },
+ "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Background.png": {
+  "bytes": 3764589,
+  "mtime": 1792745024160000000,
+  "sha256": "b21542b99cde2c4b1f570e295839fd7766c9565a2d2481e7b2cc2e64af12ba1c",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Background_Depth.png": {
+  "bytes": 440093,
+  "mtime": 1792745024160000000,
+  "sha256": "1adb61e8d217110549d6e3f5a78aa733ee80c2fdd42fc1f3b8d016dd4d644e5e",
+  "w": 2000,
+  "h": 1496
+ },
+ "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Mid.png": {
+  "bytes": 2174845,
+  "mtime": 1792745024177000000,
+  "sha256": "3731000981c83454987765d5d1d2f124ad8cf15ff4afedfe648d66602ac07368",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Mid_Depth.png": {
+  "bytes": 412045,
+  "mtime": 1792745024177000000,
+  "sha256": "81068ecb22f386aebfc6ff98f75f6f0792640827e9c5299245f26aa7020ab337",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/04_Isla_Is_Ethel_night_life_trips_her/04_Isla_Is_Ethel_night_life_trips_her_Top.png": {
+  "bytes": 999430,
+  "mtime": 1792745024218000000,
+  "sha256": "4e132b99ef10fef5ebdea53ad8752743cba5159f41e756de25934b24d5798a24",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Background.png": {
+  "bytes": 4470289,
+  "mtime": 1794310821625000000,
+  "sha256": "6386ddc3325b022f8d1bea7d670d3d5acf77ecfcaba565e2504574df96474efc",
+  "w": 3000,
+  "h": 1500
+ },
+ "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Background_Depth.png": {
+  "bytes": 501680,
+  "mtime": 1794311181896000000,
+  "sha256": "f47217659f592c8fb88ad59eb47aead3286a7b97289891fbc15e0ace9436ae05",
+  "w": 3000,
+  "h": 1500
+ },
+ "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Top.png": {
+  "bytes": 2231694,
+  "mtime": 1792745024369000000,
+  "sha256": "0b18e407b23815611b85f6790f3b62687faad14e0d725197c58384a37177fef9",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06A_Ethel_Steals_Islas_phone_wallet/06A_Ethel_Steals_Islas_phone_wallet_Top_Depth.png": {
+  "bytes": 530285,
+  "mtime": 1792745024380000000,
+  "sha256": "c50094104c37f83ecf363e162c564afb449fc1a876bc154120dc30d23aab9391",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Background.png": {
+  "bytes": 3599348,
+  "mtime": 1792745024406000000,
+  "sha256": "fa72f767ce93bec359a75e08ca3a07486f2774cd1d2ffa43cbbc293a5483608c",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Background_Depth.png": {
+  "bytes": 908000,
+  "mtime": 1792745024412000000,
+  "sha256": "8bbdf13a10b1aed3dd05fe022858b5322297d7f51050ef4facd02679c06b176b",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Top.png": {
+  "bytes": 3134779,
+  "mtime": 1792745024469000000,
+  "sha256": "0e47568056409775a983f9c448e23feda1ec52741ff5ef0627fbd14925cb89d3",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/06B_Ethel_Steals_Islas_phone_wallet/06B_Ethel_Steals_Islas_phone_wallet_Top_Depth.png": {
+  "bytes": 630395,
+  "mtime": 1792745024473000000,
+  "sha256": "6f2efe4cb62b4731a68a3497a1119307210f30e80970f36fdd80c19ef02fbfc8",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Background.png": {
+  "bytes": 3106734,
+  "mtime": 1794382557155000000,
+  "sha256": "0cffe548e7f334f3899825fe14fdc972df32f139cb90fd551ad1e8c10a8df0e6",
+  "w": 2048,
+  "h": 1024
+ },
+ "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Background_Depth.png": {
+  "bytes": 394333,
+  "mtime": 1794293753401000000,
+  "sha256": "ee61b4df52a8a0d407122ed0b370185f5a761351c10e663e48a041e15c391bde",
+  "w": 3000,
+  "h": 1500
+ },
+ "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Top.png": {
+  "bytes": 3258429,
+  "mtime": 1794293157589000000,
+  "sha256": "a32aea6e759781eff8a82a691231a5897fd523d3cb23a1a6e716580e5ec41bc6",
+  "w": 3000,
+  "h": 1500
+ },
+ "2_Later_Story/08_Ethel_Isla_North_Syd_lights_keys_Yanked/08_Ethel_Isla_North_Syd_lights_keys_Yanked_Top_Depth.png": {
+  "bytes": 1391598,
+  "mtime": 1794295083659000000,
+  "sha256": "6913cbc74e35a94d4a069a640daa868fb34688367b501f683229daf57d24400c",
+  "w": 3000,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Background.png": {
+  "bytes": 4418334,
+  "mtime": 1792745024578000000,
+  "sha256": "91fb2f00e107be2707797cbe82db0b1cf4b8fa635086c66bfbb69b0903b9f915",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Background_Depth.png": {
+  "bytes": 604293,
+  "mtime": 1792751166185000000,
+  "sha256": "902da7327e663f71765f04658e6d19fcbd213570981dd9eb01af11defccda23a",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Mid.png": {
+  "bytes": 4553231,
+  "mtime": 1792745024610000000,
+  "sha256": "0a8f8a11cdbee7065218a9a31e1bb543b3eaafa250e6515d6c23c7c104754a96",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_01_Mid_Depth.png": {
+  "bytes": 830410,
+  "mtime": 1792751494745000000,
+  "sha256": "e604927df1642342a7af14917c540cd91f8df6301ac8182458b0ae694a3faaee",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background.png": {
+  "bytes": 6413556,
+  "mtime": 1792745024787000000,
+  "sha256": "681bbd9f06f8a0a24359367006eba7f33819af1853f7eca540a94add2c8448e8",
+  "w": 2687,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background_Depth.png": {
+  "bytes": 1374606,
+  "mtime": 1792745024800000000,
+  "sha256": "b5d25ced84656266acc3fcccb165d67a3bdc019dd20de0dff4409da5187240b5",
+  "w": 2687,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Top.png": {
+  "bytes": 576803,
+  "mtime": 1792745025427000000,
+  "sha256": "48ba10c0d6cb4575cf15cf09b7d721f298d11d243b92209db187e7d6e479853a",
+  "w": 2687,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Top_Depth.png": {
+  "bytes": 153065,
+  "mtime": 1792745025432000000,
+  "sha256": "f65e4246ceb4cb8ef8d2e784d0f972ff03d8958ee29cee7ca8caa255ce94e461",
+  "w": 2687,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Background.png": {
+  "bytes": 4011894,
+  "mtime": 1792745024830000000,
+  "sha256": "e0fd69954611f80f8a83342ecbdb54c56df0b5cc996f58a5956bb13c8558d737",
+  "w": 2240,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Background_Depth.png": {
+  "bytes": 997140,
+  "mtime": 1792745024902000000,
+  "sha256": "3330a2633c40c694cf0f76e4447ce5055a90272f5ed14303b520577fdb24afc4",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Mid.png": {
+  "bytes": 3219054,
+  "mtime": 1792745025191000000,
+  "sha256": "2bb947541c58a4df6b11f739cc73c2108552d8ec39e94292806f8b493eacc952",
+  "w": 2240,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Mid_Depth.png": {
+  "bytes": 296189,
+  "mtime": 1792745025194000000,
+  "sha256": "204e6b608f5041b6b291121b28bc1c6cb27114c8a71e099ea216710f5a2fb880",
+  "w": 2240,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Top.png": {
+  "bytes": 3529538,
+  "mtime": 1792745025460000000,
+  "sha256": "0c278ae3dd333bf58271881ce46e1edac279dbcf6190d0e3cecc5dfdd83ea59c",
+  "w": 2240,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_03_Top_Depth.png": {
+  "bytes": 522092,
+  "mtime": 1792745025476000000,
+  "sha256": "36cee01b330f546be88853f92f26b86fd34c95b82a8052c568444a2cd13a45bb",
+  "w": 2240,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Background.png": {
+  "bytes": 4768211,
+  "mtime": 1792745024934000000,
+  "sha256": "02c2757bb925ea6ca1c98bba6b7d5438768fb9604c8800f6410a8fcb45ca47f1",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Background_Depth.png": {
+  "bytes": 997140,
+  "mtime": 1792745024941000000,
+  "sha256": "3330a2633c40c694cf0f76e4447ce5055a90272f5ed14303b520577fdb24afc4",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Mid.png": {
+  "bytes": 4040651,
+  "mtime": 1792745025223000000,
+  "sha256": "8069f3f0c184e4588c0513162d565285ab108d47251ec27220206ff8e897dde2",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Mid_Depth.png": {
+  "bytes": 364390,
+  "mtime": 1792745025227000000,
+  "sha256": "312ea359baae95f37acffd3edf7411b8d15a7a8009ec818e174ef3309070aaa6",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Top.png": {
+  "bytes": 3251769,
+  "mtime": 1792745025515000000,
+  "sha256": "1f0611d827389a1306d473a5287010cf0196978c85b5f5d42b3258b54f1e72aa",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_04_Top_Depth.png": {
+  "bytes": 535179,
+  "mtime": 1792745025521000000,
+  "sha256": "31b20484b5dda968252e4f2420d3354b12bed330b1fd3b8ab35603d5b022e287",
+  "w": 2423,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Background.png": {
+  "bytes": 6283823,
+  "mtime": 1792745024977000000,
+  "sha256": "6a71bbf905880759f7fb1d7cb96da66900bae307cab2d681a706492d28308035",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Background_Depth.png": {
+  "bytes": 1694499,
+  "mtime": 1792745024994000000,
+  "sha256": "1fcd1dff7660dadb34ccc28e937ab7d76f41f1cd2051179cc26ac149211b15d6",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Mid.png": {
+  "bytes": 5802104,
+  "mtime": 1792745025261000000,
+  "sha256": "8c3356fb2e7287fbb762041776dd4a65b91a000e8c61a7845167ced1a004e1f8",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Mid_Depth.png": {
+  "bytes": 712715,
+  "mtime": 1792745025277000000,
+  "sha256": "aeb75cffdb434d67ffb73e462ce1ab007d0395d8d0cf67b11111d33001a352fe",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Top.png": {
+  "bytes": 2247886,
+  "mtime": 1792745025548000000,
+  "sha256": "d3f1c6463e069170023a3768755eedc78f0e243835c4eb59c6c23fb1e8a7c8a5",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_05_Top_Depth.png": {
+  "bytes": 427112,
+  "mtime": 1792745025554000000,
+  "sha256": "3ea4285c0f228350e0af4dfbe34860a02d64ce1cdf1b06df1ef579f7a8879963",
+  "w": 3837,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Background.png": {
+  "bytes": 7733286,
+  "mtime": 1792745025053000000,
+  "sha256": "b15e725e0b9a5d9983d294f17b5ed3ec0e1bd067e639e18d5556281514970b99",
+  "w": 4023,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Background_Depth.png": {
+  "bytes": 939986,
+  "mtime": 1792745025075000000,
+  "sha256": "1fb7c7c285e811a6f18a0e0a1c2abbce693011370884fed2934fb5a4ce48b0b6",
+  "w": 4023,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Mid.png": {
+  "bytes": 5854574,
+  "mtime": 1792745025346000000,
+  "sha256": "bdc3470170c5cc55a232d158d25539b1a6be8a7c34a3e77c375ea4b2fdd308ee",
+  "w": 4023,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Mid_Depth.png": {
+  "bytes": 533959,
+  "mtime": 1792745025352000000,
+  "sha256": "73a92962c9e6d7f73e50bc60262f8bca33a1a1257c9427b058bafcd46caf92ae",
+  "w": 4023,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Top.png": {
+  "bytes": 6347543,
+  "mtime": 1792745025631000000,
+  "sha256": "20f142e6658c5861c0a442f972f1af7724ed4028668abc6091a5cb04e110121d",
+  "w": 5537,
+  "h": 1500
+ },
+ "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_06_Top_Depth.png": {
+  "bytes": 903534,
+  "mtime": 1792745025653000000,
+  "sha256": "3ca313afbadc10fe8f1ad121b0d1c3fba23884405677a97d95a0ddb07182850a",
+  "w": 5045,
+  "h": 1500
+ },
+ "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Background.png": {
+  "bytes": 3521938,
+  "mtime": 1792745025728000000,
+  "sha256": "d12f2d00b18811f61e892da72b8a9daf2c1d620b1f1a3598a14ea16fefbb47a9",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Background_Depth.png": {
+  "bytes": 382968,
+  "mtime": 1792745025735000000,
+  "sha256": "262fc015dfb3705fe64d8affaf2d80dc75d64072ae55091b89c4ad395ee399b0",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Mid.png": {
+  "bytes": 2089840,
+  "mtime": 1792745025665000000,
+  "sha256": "50e7d30e8dabca58dbad17bc40599ff5140e00e3efe6b5722e7262b1794896b3",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Mid_Depth.png": {
+  "bytes": 817912,
+  "mtime": 1792745025678000000,
+  "sha256": "0568af03286c7ef625f22a53607c8add33a72b0674651152f36651b2e955c796",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/11_Dominics_calm_authority/11_Dominics_calm_authority_Top.png": {
+  "bytes": 2063249,
+  "mtime": 1792745025709000000,
+  "sha256": "4bff2559686601347b400f2be57a85ad61d371b5d1d00e2c19899d8d5524f7bf",
+  "w": 2000,
+  "h": 1500
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Background.png": {
+  "bytes": 1771173,
+  "mtime": 1794126687296000000,
+  "sha256": "f0c16c7f3ddb77ebc44df1e5c21ca939e8870903124ff057717bc834cc4ff138",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Background_Depth.png": {
+  "bytes": 133452,
+  "mtime": 1794130646093000000,
+  "sha256": "9c596c4957f3353a71ab16cda4e2abd5d4927f48333f11e57ea1f374630088b4",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Extra.png": {
+  "bytes": 188628,
+  "mtime": 1794126822445000000,
+  "sha256": "26788d7c622fa48d597dafaa2ea99f542a7bfa86f3a6fdef68373c7d03852f7b",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Mid.png": {
+  "bytes": 1447991,
+  "mtime": 1794126718952000000,
+  "sha256": "8645f658a48c531f0cee6b20bec9972c99a571d2f90e6d9bba90cd0320797179",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Mid_Depth.png": {
+  "bytes": 319681,
+  "mtime": 1794130756140000000,
+  "sha256": "18ea50206da1d4403961bb828c2bbdf0c84c2feb13c68e45d9e3ea9bf67fc43f",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Over.png": {
+  "bytes": 370443,
+  "mtime": 1794126785976000000,
+  "sha256": "dc46472a54662e3d45bdc462d1faef4a458dcb42790432e1cac81468751a4edf",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Over_Depth.png": {
+  "bytes": 381456,
+  "mtime": 1794130228749000000,
+  "sha256": "90c529f595b8724ca9b2118414ace60b7af99dbc695b0b022ee06d41a72c732b",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Top.png": {
+  "bytes": 635544,
+  "mtime": 1794126757316000000,
+  "sha256": "964888810dc38f145f273b48db997992029527a17397bc7c6eb4e3d3aabb2239",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_01_Top_Depth.png": {
+  "bytes": 324488,
+  "mtime": 1794130235065000000,
+  "sha256": "2da7564ba2c8a26a045793abec331c004f7cced688e236130f7df465f5c7411f",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Background.png": {
+  "bytes": 1666980,
+  "mtime": 1794126874922000000,
+  "sha256": "d39285f17d515ed2dffe4d58a915a09429c7c114f102efb7b13dd6f53bc1d015",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Background_Depth.png": {
+  "bytes": 132334,
+  "mtime": 1794130584361000000,
+  "sha256": "40efdd49d70dafc840ac925af6a56b603366fb24d913bf537da583b195451d51",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Over.png": {
+  "bytes": 834943,
+  "mtime": 1794126963769000000,
+  "sha256": "927ec7e210127ab5faa842a9e0949065e074a9ebd59f2ed7573f894b03860c87",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Over_Depth.png": {
+  "bytes": 323422,
+  "mtime": 1794130247701000000,
+  "sha256": "d3868a9670eac2d27beea0d61e2683808a92064e32bde170aee73425c7b79250",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Top.png": {
+  "bytes": 1473156,
+  "mtime": 1794126912261000000,
+  "sha256": "c743903e622f58db7f6c22342f404bc8d0106e886fb88f3440bc4c65140fe8eb",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_02_Top_Depth.png": {
+  "bytes": 423702,
+  "mtime": 1794130254173000000,
+  "sha256": "5ea6ddd060ee9d10735f1cbf5dad318b545cae1076afd17b4651a0a389398a4e",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Background.png": {
+  "bytes": 1634294,
+  "mtime": 1794127022674000000,
+  "sha256": "d8d0a53548a86d763e065446a64cc2bbefc20fd94dc081cee1c0d1a4aaa9ee8c",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Background_Depth.png": {
+  "bytes": 138164,
+  "mtime": 1794130603675000000,
+  "sha256": "b291e79d63bc62274dbbff5ec326e2cd13fe76484700a25eb3521bb9987f7c10",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Extra.png": {
+  "bytes": 221903,
+  "mtime": 1794127115729000000,
+  "sha256": "bea65ea90f8fd290ee4633cf5db999eb5fd0605e0dcbd622ce607ed39eede680",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Over.png": {
+  "bytes": 743157,
+  "mtime": 1794127088198000000,
+  "sha256": "b57788ee9f75f99a0fff69f3773948aa8ff9eb452915260bc4906b187a38116a",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Over_Depth.png": {
+  "bytes": 363540,
+  "mtime": 1794130266763000000,
+  "sha256": "750f1c39f3020dbd9a5edf926a01460b3d71510ae2faa4daca49dba5cfd8a6d9",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Top.png": {
+  "bytes": 1222690,
+  "mtime": 1794127058505000000,
+  "sha256": "fb37647d7e6a871d0aae8c815313bc1ff0e1820d802f73b3ef65ff346257cfb0",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_03_Top_Depth.png": {
+  "bytes": 536280,
+  "mtime": 1794130273115000000,
+  "sha256": "be55fae2f682864563fd1c8ef1e6abdc09c8191396137170590ecc545b45bf9b",
+  "w": 1542,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Background.png": {
+  "bytes": 2216300,
+  "mtime": 1794134194601000000,
+  "sha256": "26190834900a77f1f999fd2eb9a4f6683125574a807f310a795de4f9a68fce7a",
+  "w": 1976,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Background_Depth.png": {
+  "bytes": 149119,
+  "mtime": 1794134949505000000,
+  "sha256": "0d09d98de1de1282dcf944bc3e0b4e8b99ec9fed4db53498965e56f3d3c2390c",
+  "w": 1976,
+  "h": 1080
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Extra.png": {
+  "bytes": 265050,
+  "mtime": 1794134645583000000,
+  "sha256": "0c2e009feca2a85a7c5dbcc8549513bfa4ca24dec9da6a10f11a01a0389ad082",
+  "w": 1976,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Mid.png": {
+  "bytes": 1152010,
+  "mtime": 1794134231433000000,
+  "sha256": "e23c93ede0c0a47c5466c57d3cb02dd01a5ddf2c245107c187f52a77d90a6f32",
+  "w": 1976,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Mid_Depth.png": {
+  "bytes": 233669,
+  "mtime": 1794135392650000000,
+  "sha256": "b5dc7cad2cebfc90116eef24f3c5e8485e88b9bbc817d42ecb998f9b89412a14",
+  "w": 1976,
+  "h": 1080
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Over.png": {
+  "bytes": 909442,
+  "mtime": 1794134610933000000,
+  "sha256": "5f4e5faf969f8772d42620d426b56cffbf60ae58edb382bf60ce5042690bd8b4",
+  "w": 1976,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Top.png": {
+  "bytes": 1698138,
+  "mtime": 1794134277834000000,
+  "sha256": "7cdddbb885780fbab95408a1c9605ceddf30593b12c2bc2a946ddc480c9c9e9b",
+  "w": 1976,
+  "h": 1086
+ },
+ "2_Later_Story/11b_Dominics_Wrong_Turn_Calm_Authority/11b_Dominics_Wrong_Turn_Calm_Authority_04_Top_Depth.png": {
+  "bytes": 413054,
+  "mtime": 1794135073281000000,
+  "sha256": "593158455f18e28b7e0142c94741b31489392c69dd853b9bd280b1110c133091",
+  "w": 1976,
+  "h": 1080
+ },
+ "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Background.png": {
+  "bytes": 1824833,
+  "mtime": 1792745025744000000,
+  "sha256": "9be26be238cc65315baec8e7494c37a6fe4c4ac9e736e379c3ffc9d1c54be5c4",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Background_Depth.png": {
+  "bytes": 220516,
+  "mtime": 1792745025744000000,
+  "sha256": "4e00bdbfc3ecbe9b7bf41807aa8efbb28a709541520c1447cbea47a1b6850b40",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Top.png": {
+  "bytes": 2303996,
+  "mtime": 1792745025777000000,
+  "sha256": "6fac09131fc1f44da5c9bc5dbc60ebcf89090d040f74fdfb7125a3dc0f7eaae3",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/12_Ethels_arrival_psycho/12_Ethels_arrival_psycho_Top_Depth.png": {
+  "bytes": 437222,
+  "mtime": 1792745025777000000,
+  "sha256": "ea1ab9f907470ed6acd4ee7a8119acadfb9153b852066d28a08d5f94bc150755",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Background.png": {
+  "bytes": 1909840,
+  "mtime": 1792745025794000000,
+  "sha256": "d3477d4c5485ff5cdf47244cf3760c2e36fddf01a731493f08768f58b63ebce9",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Background_Depth.png": {
+  "bytes": 498267,
+  "mtime": 1792745025794000000,
+  "sha256": "06f6c251786eaef1b4695812bc6a1f29619d3b2e0e509d7193fb8344cae43f44",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Top.png": {
+  "bytes": 1824737,
+  "mtime": 1792745025811000000,
+  "sha256": "dbbcdcf6dee7c5b10ef89d386a4defe45104c743070d052ad896f9fa946d4450",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/13_Ethels_Arrival_Gifted_Trap/13_Ethels_Arrival_Gifted_Trap_Top_Depth.png": {
+  "bytes": 373786,
+  "mtime": 1792745025821000000,
+  "sha256": "067f6a747c7d3ecd5b86ce50ed181507c206543bd44cfea36b16c55ebecddc7c",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_Top.png": {
+  "bytes": 1567549,
+  "mtime": 1791677105096000000,
+  "sha256": "f90cf6b5d009071808fd5fd73c30d9477e611374275e6c20409d019f4723eb85",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_Top_Depth.png": {
+  "bytes": 595181,
+  "mtime": 1791677611051000000,
+  "sha256": "9aeae6f9f5894072b0c6ac83aec76ddf14b7ce5d2ee535f4ea17e522648fa472",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_pano_2.png": {
+  "bytes": 3827153,
+  "mtime": 1794573348772000000,
+  "sha256": "0c33ebdc2c83d45deb78b7d8d8f39264be81b6a8e0330ca96db93315d6c7d80c",
+  "w": 2900,
+  "h": 1076
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_A_pano_2_Depth.png": {
+  "bytes": 557396,
+  "mtime": 1794573469818000000,
+  "sha256": "83f3232718ba7a69e2798cdf8185bc361111ad6e2f240e056426b6282cd41b9e",
+  "w": 2900,
+  "h": 1076
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_B_Top.png": {
+  "bytes": 1375153,
+  "mtime": 1791676984499000000,
+  "sha256": "dfc448eb22176f097d345049a9d8e3866eb3cfc718d8d76673f9c90200518901",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_B_Top_Depth.png": {
+  "bytes": 645642,
+  "mtime": 1791677900656000000,
+  "sha256": "ad424e5c60c22dfe57f03fe83d1267328193e35df2751d771527baaa8fadd308",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_C_Top.png": {
+  "bytes": 2285932,
+  "mtime": 1791676338388000000,
+  "sha256": "a3e237a9cd301709cd9c2ce60fedabd98a38c22d66020084683e3d9a0b20405e",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_C_Top_Depth.png": {
+  "bytes": 550420,
+  "mtime": 1791678150737000000,
+  "sha256": "32c8a189d94427ace381a392d8cd2a9bd836a0b71ac54da89ee1d86f0fc7bb82",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Mid_Depth.png": {
+  "bytes": 263699,
+  "mtime": 1791679322737000000,
+  "sha256": "e343db5610a35b49b24d4f7d17db69ad45b1aa275d0e226c8612f2e7e1674588",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Together.png": {
+  "bytes": 2687889,
+  "mtime": 1791678370919000000,
+  "sha256": "17556cc2e5652af9490b217ef6dc00787be48628a96b34539c8461d0320170b4",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Top.png": {
+  "bytes": 1665987,
+  "mtime": 1791679116261000000,
+  "sha256": "480a42295584eb27ae143dad8111766ba2945668621b7341ecfa53bd89529407",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_D_Top_Depth.png": {
+  "bytes": 513623,
+  "mtime": 1791679603585000000,
+  "sha256": "1c6ccef10be2ce9a0c8718bc7cc268cce916206f5d76b6f16a8830e4f3c56876",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_E_Top.png": {
+  "bytes": 2518351,
+  "mtime": 1794312302282000000,
+  "sha256": "49afbb3f3b79cbbb4bedd01d46d08162f41960a10082c9c5773f796a1da0d263",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_E_Top_Depth.png": {
+  "bytes": 612635,
+  "mtime": 1791680435703000000,
+  "sha256": "37b2798594518406b660fb2ba99a6aacd999d4909df36eea8e82488d589d85eb",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_Top.png": {
+  "bytes": 1486288,
+  "mtime": 1794570073967000000,
+  "sha256": "7d266db08ad95aa1aefbfad2af4a4a70bf6801939fa9cfc0b2696868357cbc7e",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_Top_Depth.png": {
+  "bytes": 431298,
+  "mtime": 1791681127875000000,
+  "sha256": "5018bc4fffb7f016cd3d598644f339348cf070e7602de2be883079f473be14ca",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_pano_1.png": {
+  "bytes": 4600725,
+  "mtime": 1794573305945000000,
+  "sha256": "04e779f4f77c4b762b32e5d2d0c17bd2cf2b15d60ba8f4a07a3cbf9a755b808b",
+  "w": 2900,
+  "h": 1086
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_F_pano_1_Depth.png": {
+  "bytes": 725015,
+  "mtime": 1794573513253000000,
+  "sha256": "82ff0f3a46e85bc66a8536f5b354a07e73079211089e15ec5ea8ed3a50dad192",
+  "w": 2900,
+  "h": 1086
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_BacksAway.png": {
+  "bytes": 593547,
+  "mtime": 1791684035310000000,
+  "sha256": "e0f35ef2b843ed489b9baf7a4d1deb06bb38e7d12efa24a0dde1d624ebf55ee2",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_BacksAway_Depth.png": {
+  "bytes": 157917,
+  "mtime": 1791684652927000000,
+  "sha256": "c302e6aa06018728e16413f07733c9679b2a3e0408d3c0de8bc866b9496d711d",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_Ethel_Isla_Bike.png": {
+  "bytes": 1203838,
+  "mtime": 1791684065053000000,
+  "sha256": "50339fbc9db22be414823e9e45095fa12533bb184ff78eaad77d255f71aa993f",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_A_Ethel_Isla_Bike_Depth.png": {
+  "bytes": 376770,
+  "mtime": 1791684440854000000,
+  "sha256": "d9e9baaee9dd56b1bfe716c9cb214a5d729d095fe9601137aacf58c103b0ad87",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_B_DirectsToStop.png": {
+  "bytes": 500051,
+  "mtime": 1791684092544000000,
+  "sha256": "8fc7cca1c7fd434d804cb9fdb4a212d94ac471fb014ff296ef3bdd6df74bdd4f",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_B_DirectsToStop_Depth.png": {
+  "bytes": 356659,
+  "mtime": 1791684866121000000,
+  "sha256": "11b018df5c3a0c1b838d22e34501869934f00a4d73c49b70fd0b9986bf0acff9",
+  "w": 1600,
+  "h": 1200
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_pano_0.png": {
+  "bytes": 4694610,
+  "mtime": 1794573247898000000,
+  "sha256": "d2527d97c89719d73d8536b17dd4740025ce759b4b1d511fc801a0f1d53c6533",
+  "w": 2900,
+  "h": 1086
+ },
+ "2_Later_Story/18_glass_house_fire/18_glass_house_fire_G_Police_pano_0_Depth.png": {
+  "bytes": 775159,
+  "mtime": 1794573550651000000,
+  "sha256": "201555f862d0f28a0a79fb13ec5cc5846908fd868c2be1d1109891639fb2affd",
+  "w": 2900,
+  "h": 1086
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background.png": {
+  "bytes": 1823124,
+  "mtime": 1792745026436000000,
+  "sha256": "f61c09efa59d987a30c40f5f45cad4f73f345c1ad6c55f5a7f78ab3db17d23e1",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background_Depth.png": {
+  "bytes": 224435,
+  "mtime": 1792745026436000000,
+  "sha256": "331593cf57b0fe4c2a3082089f608f6a122dcea8d362c1e1a930d9196709bd02",
+  "w": 1448,
+  "h": 1085
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop.png": {
+  "bytes": 1530726,
+  "mtime": 1792745026478000000,
+  "sha256": "40ec46ef2172987f02ddfce2c48d45a414b4f469d98888c8264416f71880d2fb",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop_Depth.png": {
+  "bytes": 170382,
+  "mtime": 1792745026478000000,
+  "sha256": "abe043d90bfcf3e760a246b88c5d31b26ea46a2ec384a8cf9de58d503e76bf54",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top.png": {
+  "bytes": 2042304,
+  "mtime": 1792745026494000000,
+  "sha256": "8fa9198fe1b1ac3b00e432f29845c0860ab75c98711aee0c1301d3a573c602b7",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top_Depth.png": {
+  "bytes": 112230,
+  "mtime": 1792745026494000000,
+  "sha256": "bc266af84bfb9255c797533d43fbf17a4b5437742c5cd658d6475dc16676cb2b",
+  "w": 1448,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Background.png": {
+  "bytes": 1700729,
+  "mtime": 1792745026504000000,
+  "sha256": "0ceac5940b2ef139cc00344633b6051d43ed4a3db457e0cebebc7bd15b745a2c",
+  "w": 1507,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Background_Depth.png": {
+  "bytes": 272403,
+  "mtime": 1792745026510000000,
+  "sha256": "e8f298adb643c24e6821675d752e73ecaa6352dd6bdff501c39967a54c84317a",
+  "w": 1505,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Mid.png": {
+  "bytes": 863413,
+  "mtime": 1792745026794000000,
+  "sha256": "8290ff96b45a73d1238b1cb57844382623675127a85198c829a20ada476dfd90",
+  "w": 1507,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Mid_Depth.png": {
+  "bytes": 316215,
+  "mtime": 1792745026797000000,
+  "sha256": "696881686f8adfa4011537f357eaf38cee0f02a012c54a518bac4a275af92716",
+  "w": 1505,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Top.png": {
+  "bytes": 1667502,
+  "mtime": 1792745027010000000,
+  "sha256": "7cf52fa889fe5bb7dd8a4f2a4ae8f20f24742e365e6e9dd78c87451f0bd273fa",
+  "w": 1507,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_01_Top_Depth.png": {
+  "bytes": 458936,
+  "mtime": 1792745027010000000,
+  "sha256": "81295aca374c685255fc8d8042c59360bb8361a478813ea3365a65ac64a686ff",
+  "w": 1505,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Background.png": {
+  "bytes": 2489765,
+  "mtime": 1792745026527000000,
+  "sha256": "008d0ef8961fff5a970b75cf300a4fed38de2d769896d0d60a4db9ec2aeca74e",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Background_Depth.png": {
+  "bytes": 607783,
+  "mtime": 1792745026533000000,
+  "sha256": "26401fd9d924dc828d578403c0d6f03ce6f861ec1606c89a0ffbee23e1041126",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Mid.png": {
+  "bytes": 1584003,
+  "mtime": 1792745026809000000,
+  "sha256": "c9442f04cd8a91964e382f7075658becec8bc9daf39104490af99f758a81dc85",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Mid_Depth.png": {
+  "bytes": 402050,
+  "mtime": 1792745026813000000,
+  "sha256": "2bc93962283d79fad6fb1708f1b788cbc90c3959bf6fc9fd3b271d0393d9c194",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Top.png": {
+  "bytes": 1672659,
+  "mtime": 1792745027054000000,
+  "sha256": "c3ac6ff971b77eeb2eb6b6ecb6107cdb244279adbd751015ae5551d504ee9edc",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_02_Top_Depth.png": {
+  "bytes": 693681,
+  "mtime": 1792745027060000000,
+  "sha256": "5e23debd3324f5235c2d988070b7dfada54cbc03e9b6ca9c92282fee8d43de41",
+  "w": 1998,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Background.png": {
+  "bytes": 2131432,
+  "mtime": 1792745026544000000,
+  "sha256": "673b2ff6b61c1a4332d1039a408ee9bf87c81568b8b902a4d0f1df21b6f2f4a0",
+  "w": 1495,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Background_Depth.png": {
+  "bytes": 847579,
+  "mtime": 1792745026554000000,
+  "sha256": "89c7f03c3951baae7db98df0cf0052fc5e8a88871e41e172661b56f142f942e9",
+  "w": 1495,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Mid.png": {
+  "bytes": 373582,
+  "mtime": 1792745026817000000,
+  "sha256": "090ba52f45f35ba03516a017c6ee6e0229b0fdf89f473efd6c4bc9a3b078800f",
+  "w": 1495,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_03_Mid_Depth.png": {
+  "bytes": 947052,
+  "mtime": 1792745026823000000,
+  "sha256": "bc189b1c7346c46f8f30211f76ad1870980b1f7d53400bb6b6a9f2464d212eb6",
+  "w": 1495,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Background.png": {
+  "bytes": 2733008,
+  "mtime": 1792745026568000000,
+  "sha256": "056f6be6db38a3d5f65683c5fda354169acbe97e0b185c89ac9b4e669961092e",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Background_Depth.png": {
+  "bytes": 901074,
+  "mtime": 1792745026577000000,
+  "sha256": "134086e769456391398cfb04715602db0f8f60eb88f2a168d5dc5637c985f245",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Mid.png": {
+  "bytes": 1285887,
+  "mtime": 1792745026831000000,
+  "sha256": "6dc4becfdb687dfd3bddaf33f23fffb27197da1359f6d1721f9a6eac1bd5e354",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Mid_Depth.png": {
+  "bytes": 634850,
+  "mtime": 1792745026835000000,
+  "sha256": "596293d7d6fda52579e2ddc6ea796867811b9d3cad732e94ef6c71a2dbc7e689",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Top.png": {
+  "bytes": 605352,
+  "mtime": 1792745027077000000,
+  "sha256": "4b6b0886e8f0e15d8b306df69b43e079add2e33d4e821869ab81d7d4ede73982",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_04_Top_Depth.png": {
+  "bytes": 625913,
+  "mtime": 1792745027089000000,
+  "sha256": "9a14c71edb8e7a060a5c1e9e793429e7445fdf524ea1c72bd3c5cb72caf9edc9",
+  "w": 1732,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Background.png": {
+  "bytes": 2161841,
+  "mtime": 1792745026594000000,
+  "sha256": "851389b76d8f4edacfb5c4be304759de149e3f84de6c506742d2cbef86a23010",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Background_Depth.png": {
+  "bytes": 532323,
+  "mtime": 1792745026594000000,
+  "sha256": "1467c1e03f4394acb680ef9ecd77541469ce26b0197be4cc2f9b815323aafbf1",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Mid.png": {
+  "bytes": 882257,
+  "mtime": 1792745026845000000,
+  "sha256": "4c38f89eadb68d916adde5b249dab6e8f3b5ce65bd2e1ce15c30363647a4ab15",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Mid_Depth.png": {
+  "bytes": 420372,
+  "mtime": 1792745026848000000,
+  "sha256": "d1065c9d2a217ea4b99117ecbb24950523622f7af450856d447cd5f69210055b",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Top.png": {
+  "bytes": 725337,
+  "mtime": 1792745027095000000,
+  "sha256": "ce04d1c3b4507489dbdde85b6c0c3a0a50baa55f281ca814ef6cb14cb7338a91",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_05_Top_Depth.png": {
+  "bytes": 456615,
+  "mtime": 1792745027095000000,
+  "sha256": "1f0bd16fd68fbaa8413f6ea5f667883f8c4360b6584e5924c2796466ab0c5969",
+  "w": 1533,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Background.png": {
+  "bytes": 2657282,
+  "mtime": 1792745026618000000,
+  "sha256": "87884ae444e495353717bca0d7ec193268b5b2c0af5d0ea6e167be6852c29a64",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Background_Depth.png": {
+  "bytes": 596596,
+  "mtime": 1792745026627000000,
+  "sha256": "ab3601aedb61d68b8e07ca3a5fb0845b21f17819a2f286816a612737bb1342f3",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Mid.png": {
+  "bytes": 2330695,
+  "mtime": 1792745026864000000,
+  "sha256": "b7081cc44bf2386f2efa7036cd23f771effaa0816228f6b8076370a5355351cd",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Mid_Depth.png": {
+  "bytes": 604550,
+  "mtime": 1792745026865000000,
+  "sha256": "2692e9318b46c94327e9b28d1b2f41b7d1054c36b47062994dd0f356b91fe247",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Top.png": {
+  "bytes": 2137782,
+  "mtime": 1792745027110000000,
+  "sha256": "c26522cae2ffbc842e9c52c102431b8ee2db3a85735b6c47623b44c7d8f1ab46",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_06_Top_Depth.png": {
+  "bytes": 634296,
+  "mtime": 1792745027126000000,
+  "sha256": "2544c45e1c2a4a3a2f0bab1dc9664a637789015c4af02d284adef71a85baccbb",
+  "w": 1767,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Background.png": {
+  "bytes": 1876664,
+  "mtime": 1792745026637000000,
+  "sha256": "7c467ecac513860f4bc380eaed316a396a26b453459669ceb681248240a88327",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Background_Depth.png": {
+  "bytes": 329198,
+  "mtime": 1792745026643000000,
+  "sha256": "f5d8e4b675cefe8288ec565bc03b01fa9ed59d7cccc09b2dfd1c99f4b0aaf031",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Mid.png": {
+  "bytes": 268849,
+  "mtime": 1792745026871000000,
+  "sha256": "b7ce13f19ba39a23838d29c3e7cf5b00959908dfdfec6bb965972ab21db34541",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Mid_Depth.png": {
+  "bytes": 540098,
+  "mtime": 1792745026877000000,
+  "sha256": "beecbac20d0d10a7f630e5b1773abe2839fa0198c44cb92e93a813e8b21e73ea",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Top.png": {
+  "bytes": 2456964,
+  "mtime": 1792745027137000000,
+  "sha256": "709b2833389c2ab782e22d6fb61f9cf2018e6ea0e13066956e489979168367f6",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_07_Top_Depth.png": {
+  "bytes": 559401,
+  "mtime": 1792745027144000000,
+  "sha256": "a49348fcc654a007a209cc17028d37153384cdc215766ac6fa87a229ddb2263e",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background.png": {
+  "bytes": 3155066,
+  "mtime": 1792745026660000000,
+  "sha256": "928f391d72ede18a4296802a4d4496538bab1acb6887b625013c96a8cb9e5a6d",
+  "w": 1919,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background_Depth.png": {
+  "bytes": 329198,
+  "mtime": 1792745026660000000,
+  "sha256": "f5d8e4b675cefe8288ec565bc03b01fa9ed59d7cccc09b2dfd1c99f4b0aaf031",
+  "w": 1486,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid.png": {
+  "bytes": 1607952,
+  "mtime": 1792745026882000000,
+  "sha256": "3bfa7525927e6383325f03d9a3067b3857065fa396568c0f4a497d7fc3de1b85",
+  "w": 1919,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid_Depth.png": {
+  "bytes": 934401,
+  "mtime": 1792745026896000000,
+  "sha256": "137339d4082e3ba0a1bcea4714771745f50078c87df100c8e68848a8cef2d565",
+  "w": 1919,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top.png": {
+  "bytes": 3235943,
+  "mtime": 1792745027162000000,
+  "sha256": "8183c8f3317b6b9fb2383605552ed21019d8584b136f6654b2b5dc7df98c74d5",
+  "w": 1919,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top_Depth.png": {
+  "bytes": 864449,
+  "mtime": 1792745027176000000,
+  "sha256": "f4ca9d74f42864f44ec7883209f18390b4781077d351488e12943dc9766a0a4e",
+  "w": 1919,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background.png": {
+  "bytes": 3025427,
+  "mtime": 1792745026709000000,
+  "sha256": "e19c499e9d10cfcf7c7a051aa528c2d711cdaa44ef353fc7be2bcd8314059b76",
+  "w": 1781,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background_Depth.png": {
+  "bytes": 555133,
+  "mtime": 1792745026713000000,
+  "sha256": "1573c70ca61ef43f81fac236576ad0b8f556586e1a9f1b9c2ef90c529e9e5d65",
+  "w": 1779,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid.png": {
+  "bytes": 1983087,
+  "mtime": 1792745026913000000,
+  "sha256": "90cfa17f3397193efbed04d51d475df37ddfdb20fd1f3a3dd7ae3b05cbc86434",
+  "w": 1781,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid_Depth.png": {
+  "bytes": 484660,
+  "mtime": 1792745026927000000,
+  "sha256": "2572035cc66b04d5dfac67c546315cfa4d7e6989bae7719f5b226d1da751e052",
+  "w": 1781,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top.png": {
+  "bytes": 3555016,
+  "mtime": 1792745027194000000,
+  "sha256": "35442fea38c76c4f2cfd8563e40443276c8f821c99fb6b9c2aa14e2555a5331c",
+  "w": 1781,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top_Depth.png": {
+  "bytes": 118294,
+  "mtime": 1792745027194000000,
+  "sha256": "2484a026223d5c05196ff109b701c16f7703482c4fb86606c9a5082c6c857a28",
+  "w": 1781,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background.png": {
+  "bytes": 2497888,
+  "mtime": 1792745026732000000,
+  "sha256": "d3b7ea2f8259ac0037e5f508ab849b550ca25e053587558838ad6f1af26d1163",
+  "w": 2081,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background_Depth.png": {
+  "bytes": 589839,
+  "mtime": 1792745026736000000,
+  "sha256": "54da89bff6ece236dc87be0b06bdb54001e3301ebaa05f791902c97686309d7f",
+  "w": 2080,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid.png": {
+  "bytes": 2022404,
+  "mtime": 1792745026944000000,
+  "sha256": "835c6813a420537948a88c416c4f7169ae3dee13c5eeaa4d0d2ab0b4c16d7884",
+  "w": 2081,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid_Depth.png": {
+  "bytes": 915746,
+  "mtime": 1792745026961000000,
+  "sha256": "559842812fd3854239dc8727e61394a5313eb965fefae2523ed3c326492f292a",
+  "w": 2081,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top.png": {
+  "bytes": 3723103,
+  "mtime": 1792745027224000000,
+  "sha256": "9cf0ef64198b4058a95983838dd891ddb07d0e63244747b59d13a719c2b7a902",
+  "w": 2081,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top_Depth.png": {
+  "bytes": 603247,
+  "mtime": 1792745027227000000,
+  "sha256": "06dbd4ef128acf26e399715ef61b442aa2b36c5bc87202af2f67d312cf7061fc",
+  "w": 2081,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background.png": {
+  "bytes": 2499131,
+  "mtime": 1792745026755000000,
+  "sha256": "3603dd894582b27529ff5f7a11ac50c2741cc3809350305c2e002a2c6f05a442",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background_Depth.png": {
+  "bytes": 439990,
+  "mtime": 1792745026759000000,
+  "sha256": "eb4508e4016e8ea1e8495bb8072088935beec15059590d503282806270ded73a",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid.png": {
+  "bytes": 749186,
+  "mtime": 1792745026977000000,
+  "sha256": "7d59a214fdf6d177596aefc41361c5f345498b0365b6cad0af2d6b89eae946e9",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid_Depth.png": {
+  "bytes": 573825,
+  "mtime": 1792745026977000000,
+  "sha256": "09925106ef2e1a9c6b22551d1c0a0e759c9d34cf085803e349f0840d350453ab",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top.png": {
+  "bytes": 2173792,
+  "mtime": 1792745027244000000,
+  "sha256": "01172594518967233a49b51d5b6a447ea546303c93c5ef9291f0a1ffb485ede3",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top_Depth.png": {
+  "bytes": 387133,
+  "mtime": 1792745027244000000,
+  "sha256": "e6711b3f3b1881b8da43844f2bc0715053c9542dc93b3f8399b1b524bf36407b",
+  "w": 1731,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background.png": {
+  "bytes": 3157436,
+  "mtime": 1792745026781000000,
+  "sha256": "5f7db207389efc987a7a89309842335ad5e3a3b79cf5538683866bd405c6f5f1",
+  "w": 2971,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background_Depth.png": {
+  "bytes": 708324,
+  "mtime": 1792745026781000000,
+  "sha256": "badbd9d7d87cefbb81d098caef9459e3cc95024cef2a9f3992f9a86d5866ce34",
+  "w": 2970,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid.png": {
+  "bytes": 1256329,
+  "mtime": 1792745026994000000,
+  "sha256": "736941975b9a75bfb559de368bc213f6d74b466ae06cddd6ecaea3796b0380f9",
+  "w": 2970,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid_Depth.png": {
+  "bytes": 768804,
+  "mtime": 1792745026994000000,
+  "sha256": "4c42e9c788aa12f93f0ab27450bae930138c93b8205a10da69c6cd1df10d37fe",
+  "w": 2971,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top.png": {
+  "bytes": 3628517,
+  "mtime": 1792745027294000000,
+  "sha256": "95148f23dd1fba91c6f16861d9c683aba07c5e5284dd971c064d497837f32084",
+  "w": 2970,
+  "h": 1086
+ },
+ "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top_Depth.png": {
+  "bytes": 682199,
+  "mtime": 1792745027310000000,
+  "sha256": "2d6053850ef5790149d41e531beb51d28f4efc2e2222cf772ec65d8035368d76",
+  "w": 2971,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_01_Background.png": {
+  "bytes": 2622675,
+  "mtime": 1792745027535000000,
+  "sha256": "8213a7cb4f05ec9d3fd7086d5bf91940723fd6a5c5bbe98a6ae8ef86e5d3075c",
+  "w": 1743,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_01_Background_Depth.png": {
+  "bytes": 294392,
+  "mtime": 1792745027543000000,
+  "sha256": "d3cec1f84f291e4a21590312f7abf0e2127b59b0d1b3d67c0ac680fd42f3648a",
+  "w": 1739,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_01_Top.png": {
+  "bytes": 2295237,
+  "mtime": 1792745027327000000,
+  "sha256": "24bd9b07f67fef55677f2c9d6e923d7e625247811a3eac110dcc7b0888ae9739",
+  "w": 1743,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_01_Top_Depth.png": {
+  "bytes": 296764,
+  "mtime": 1792745027336000000,
+  "sha256": "59b3e818885955325e91714fd8e441cee1df91c219dfe1220d329793776ff802",
+  "w": 1743,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_02_Background.png": {
+  "bytes": 2199761,
+  "mtime": 1792745027544000000,
+  "sha256": "db9b9e11bdee890bf65055782538f85a39967846003dede2eb084037e88c6670",
+  "w": 1858,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_02_Background_Depth.png": {
+  "bytes": 418257,
+  "mtime": 1792745027563000000,
+  "sha256": "47ddf90616157aa3ac7f0cfe91414c1c458a3e0443ec187d05dde17d9a3e90c6",
+  "w": 1858,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_02_Top.png": {
+  "bytes": 2971919,
+  "mtime": 1792745027344000000,
+  "sha256": "6398c0cfc2bd71f48e752dc47aad08d9211b3901b97a36812049c5cc582856cb",
+  "w": 1858,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_02_Top_Depth.png": {
+  "bytes": 399824,
+  "mtime": 1792745027360000000,
+  "sha256": "bb7bdad5f57eb3d58853021c8be207dd428c67155d85f98841fd3a4a08f9a6de",
+  "w": 1858,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_03_Background.png": {
+  "bytes": 2279186,
+  "mtime": 1792745027594000000,
+  "sha256": "5a4468f873938362a552a258e4d603315821bc35bfa1c1daba973229b41b5b5d",
+  "w": 1463,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_03_Background_Depth.png": {
+  "bytes": 781108,
+  "mtime": 1792745027594000000,
+  "sha256": "ec273bea422023f5cf239bba33f7627d83feb5fcb81ca9d56bf99019cd593eb2",
+  "w": 1463,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_03_Top.png": {
+  "bytes": 1819995,
+  "mtime": 1792745027377000000,
+  "sha256": "231b61cf02ac266ac291243ac0c0b9f9b869ce53cc34866ac823f374c9e8bd68",
+  "w": 1463,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_03_Top_Depth.png": {
+  "bytes": 203392,
+  "mtime": 1792745027377000000,
+  "sha256": "03d2029ed77747dacc17614f8acd1575416262a5a6b22bf1d088a78da5ba40d0",
+  "w": 1463,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_04_Background.png": {
+  "bytes": 4484739,
+  "mtime": 1792745027629000000,
+  "sha256": "8acfcb0ba36fc267398493c45c9dd2b92a76e9be7ce4fa94e12ce78742628ebf",
+  "w": 2697,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_04_Background_Depth.png": {
+  "bytes": 792056,
+  "mtime": 1792745027639000000,
+  "sha256": "73e731c682606951b1f0c3db6bcc219114a40c68613f8ab4b7280c5ae5c26936",
+  "w": 2697,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_04_Top.png": {
+  "bytes": 3318062,
+  "mtime": 1792745027410000000,
+  "sha256": "3331a1425f026083ebc22ffa34f9d341e2be98e4981b927a6890ab55f0097969",
+  "w": 2697,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_04_Top_Depth.png": {
+  "bytes": 340629,
+  "mtime": 1792745027410000000,
+  "sha256": "1501a071590eefb9dcd9b8278df26c3b0a3bf432f73e23c92ed2f298a0635fcb",
+  "w": 2697,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_05_Background.png": {
+  "bytes": 3972981,
+  "mtime": 1792745027680000000,
+  "sha256": "771053f0a28847de29ea0813fd8adaa37e37ceb4fa9c327f8823ac1e0839873d",
+  "w": 2122,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_05_Background_Depth.png": {
+  "bytes": 941665,
+  "mtime": 1792745027694000000,
+  "sha256": "5863ed268c6ddacbc36260059f60fc2ec19c35bec6b1e65cfecd116e5fcd6b7f",
+  "w": 2122,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_05_Top.png": {
+  "bytes": 4345543,
+  "mtime": 1792745027444000000,
+  "sha256": "7e1622b5c53b7456863aefa28b3602e8db34a4d03b08220428788484f1c53f3f",
+  "w": 2122,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_05_Top_Depth.png": {
+  "bytes": 283058,
+  "mtime": 1792745027444000000,
+  "sha256": "a4ea5b98685452bb0cb30e277e04abe857db47d7e53a40976c0866ffbec2fa26",
+  "w": 2122,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_06_Background.png": {
+  "bytes": 2952633,
+  "mtime": 1794566484908000000,
+  "sha256": "3a78e555347d6dd488c8d183938a6e336fc0e4dac6a5dfcc43bd213308858be4",
+  "w": 2102,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_06_Background_Depth.png": {
+  "bytes": 512500,
+  "mtime": 1792745027730000000,
+  "sha256": "8137772149302ad3ad089c61f901f38ef9d97ddfe053c856853801c922258454",
+  "w": 2099,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_06_Top.png": {
+  "bytes": 3422737,
+  "mtime": 1792745027493000000,
+  "sha256": "0d45902d8613311d528aef8fb0336dbdcd7d7706e6e0ad38117dd67e8eac74b9",
+  "w": 2102,
+  "h": 1086
+ },
+ "2_Later_Story/24_Delivery_To_Dominics_House/24_Delivery_To_Dominics_House_06_Top_Depth.png": {
+  "bytes": 214106,
+  "mtime": 1792745027493000000,
+  "sha256": "e34ce4eb74d29885a4b210b9b4fd27dc93ffc1d5e4a38f3b7f57726c0f823949",
+  "w": 2102,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Background.png": {
+  "bytes": 2359831,
+  "mtime": 1792745027793000000,
+  "sha256": "e102af167062c978a73af670f7d0dd43bb6f0b6bd90f42c9eadc6596ecb30287",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Background_Depth.png": {
+  "bytes": 158547,
+  "mtime": 1792885014128000000,
+  "sha256": "b1fd038777551c886151de60a2f410f7e7bd7abbd6a07b99ee8775cf0e39fff4",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Mid.png": {
+  "bytes": 2139158,
+  "mtime": 1792878562556000000,
+  "sha256": "2ca83e06f6f873ab7034de1d4da6a7296755f174371b41b7a5c83b547c712045",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Mid_Depth.png": {
+  "bytes": 428947,
+  "mtime": 1792884554518000000,
+  "sha256": "5334ed3f60d54769d2e4d64f4bdc0be51cb4db59d76f649b05ec45f661089557",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Top.png": {
+  "bytes": 1215498,
+  "mtime": 1792745027763000000,
+  "sha256": "73dd8b14b32464c83cf9d11426a41e73c8209cb2a5577acd95bb324688a64cb6",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/26_pop_corrections/26_pop_corrections_Top_Depth.png": {
+  "bytes": 465496,
+  "mtime": 1792884680936000000,
+  "sha256": "c719e0a008d25519a2cb79b5f9c57b8a7314d7b20b227ee04df9f96dd230870f",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Background.png": {
+  "bytes": 2697186,
+  "mtime": 1792931357488000000,
+  "sha256": "a23daacfa35209166afeeb1e2774880c7ef1bc4133f0fb3f9ede44824ac7ef0c",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Background_Depth.png": {
+  "bytes": 329081,
+  "mtime": 1792932121448000000,
+  "sha256": "ddeade230db4a9b016425e1c1d5ca0781815c8282058c5a36b372404ffdbece2",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Mid.png": {
+  "bytes": 1398498,
+  "mtime": 1792930954369000000,
+  "sha256": "2e8d4ec17e73670bb4f3ad2fb1bfdb89b78b3626a1a387031498b1a2710566fd",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Mid_Depth.png": {
+  "bytes": 417932,
+  "mtime": 1792930728334000000,
+  "sha256": "a9fff3c5dd87d5c0fd3d8c9a978dc1e8308bd316a956ea7a163b1c465ac03329",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Top.png": {
+  "bytes": 1170295,
+  "mtime": 1792926873454000000,
+  "sha256": "c5d0b20cc3f7b6fcf79e21bfab9f49c08d35e41def87d6434f8bc631595824f7",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_01_Top_Depth.png": {
+  "bytes": 418715,
+  "mtime": 1792927251122000000,
+  "sha256": "d0512dcce0a8ab3a72cbe452d4ea172f90e4550f6237142e386035266f00eead",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Background.png": {
+  "bytes": 3680200,
+  "mtime": 1792745027921000000,
+  "sha256": "4e11ce512df32bfeb13e416871d2758e15ee63854e8a8636daeed12a5815669e",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Background_Depth.png": {
+  "bytes": 536364,
+  "mtime": 1792745027928000000,
+  "sha256": "6356cd14a2b96bf0cb21080c32a2461c7e4afe0e07b543629190e48574656ebf",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Mid.png": {
+  "bytes": 2490959,
+  "mtime": 1792921388549000000,
+  "sha256": "2f292221063ec067438eadcc82a6405d9f4e12428776856976707a0b76ee3d90",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_02_Mid_Depth.png": {
+  "bytes": 608199,
+  "mtime": 1792745027894000000,
+  "sha256": "323fd6450e524d31d1383754171a2173d05e50e9585ace96cf1cf75bee150315",
+  "w": 2021,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Background.png": {
+  "bytes": 1836375,
+  "mtime": 1792745027983000000,
+  "sha256": "410053d1fa3754a2a3cb45aba7726c2f0c487a82d985e562cb8219f2440d5165",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Background_Depth.png": {
+  "bytes": 246149,
+  "mtime": 1792745027995000000,
+  "sha256": "a6d90d5abe112cf8705a00fbc908c7b9b3c83bf524ff8427f71404a06087a4fc",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Mid.png": {
+  "bytes": 2058936,
+  "mtime": 1792745027950000000,
+  "sha256": "eca5fbb5b22abc147f400d05befa0f6c6d1f6c5fd43bfd474b4b8ee58808aab9",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Mid_Depth.png": {
+  "bytes": 476368,
+  "mtime": 1792745027952000000,
+  "sha256": "dd7010e23949024e26581bccd4d958f462ee6856d572b26082b68648fb7f6582",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Top.png": {
+  "bytes": 2898626,
+  "mtime": 1792745027969000000,
+  "sha256": "ccb634fe8ff72aafc4dac1780c876411b8d8dfb2a0209a50e290f6d5a85dad7c",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/27_Ethel_School/27_Ethel_School_03_Top_Depth.png": {
+  "bytes": 431471,
+  "mtime": 1792745027980000000,
+  "sha256": "063dd6eb71cb972e0863de5a7f40c12ec6bbc23646cedca47706b09453148614",
+  "w": 1868,
+  "h": 1086
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Background.png": {
+  "bytes": 2997876,
+  "mtime": 1792888288076000000,
+  "sha256": "21ae338b4693eb2757de146f024d007072f9410798c8b6e27905a74b13e24da2",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Background_Depth.png": {
+  "bytes": 330967,
+  "mtime": 1792901499596000000,
+  "sha256": "629f6edd1e8a653c402022aef8ceb184f25534f7ce6438f00872893882a322c3",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Mid.png": {
+  "bytes": 3122867,
+  "mtime": 1792901352033000000,
+  "sha256": "a044095656779c606079ba490a8f81bdfc3fa3cb4d9db3a57df857883f15cfef",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Mid_Depth.png": {
+  "bytes": 676344,
+  "mtime": 1792967587771000000,
+  "sha256": "187e0e8674f54cd1e487c07aaacbdf29ff4f19e64281d64a0c76c54ea379d326",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Top.png": {
+  "bytes": 885821,
+  "mtime": 1792887784759000000,
+  "sha256": "adc964a49ce7bb4c50c05876029f16874b18b5b5e618f633e6b1f7f3ced56139",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/28_Inquiry_Johan/28_Inquiry_Johan_Top_Depth.png": {
+  "bytes": 176235,
+  "mtime": 1792902558343000000,
+  "sha256": "70dd3d4a5e5d18151f71d21f553a15364c513676bf2343afd2028b1f38784152",
+  "w": 2000,
+  "h": 1400
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Background.png": {
+  "bytes": 2020921,
+  "mtime": 1792911488355000000,
+  "sha256": "04835226ae7d5915eaf0e5ca18d25a86f2a79ae06c590886ea98dddebada0b36",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Background_Depth.png": {
+  "bytes": 424899,
+  "mtime": 1792911966493000000,
+  "sha256": "095e1ded9d94a6866b3d0a4de7c1cd0d6b74f93da4ac7a11781963097097a67d",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Mid.png": {
+  "bytes": 2685362,
+  "mtime": 1792911528491000000,
+  "sha256": "76768d50b9b2f22e49299177fdeb003066132745097dfe9ec35bbda4865f0640",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Mid_Depth.png": {
+  "bytes": 339018,
+  "mtime": 1792916357222000000,
+  "sha256": "95938a5395d0ffc9be40d80b6689748b6010e497c77a3d7549667267dfb30b54",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Top.png": {
+  "bytes": 2559011,
+  "mtime": 1792914082461000000,
+  "sha256": "a2eb24e4b193eab1b4ad8995beff00c99ee62aac0df7399eed4201c98c8fc90a",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/29_Dinner_Pop_Gran/29_Dinner_Pop_Gran_Top_Depth.png": {
+  "bytes": 547034,
+  "mtime": 1792916252848000000,
+  "sha256": "b1f0a53d45eb0f7e419a04a4815122a48eddc39f144526ca1b35ba00b4dc6c6d",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/Grandmothers_man/Grandmothers_man_Background.png": {
+  "bytes": 2908233,
+  "mtime": 1792745028127000000,
+  "sha256": "2083bc9eaa1e3a7aedef2be95aa304f178c4e2d8feecfe8b4d8245db163fe3a4",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/Grandmothers_man/Grandmothers_man_Background_Depth.png": {
+  "bytes": 558491,
+  "mtime": 1792917768421000000,
+  "sha256": "b6b5c90a9137c7d474fc1a763838b05256c0232d05e40998ebb1c8fe969b9569",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/Grandmothers_man/Grandmothers_man_Top.png": {
+  "bytes": 1052424,
+  "mtime": 1792745028143000000,
+  "sha256": "93da40080e7ac0a392ca903eac469141845445a3bf14bc2c70e8800ea6595c5f",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/Grandmothers_man/Grandmothers_man_Top_Depth.png": {
+  "bytes": 566351,
+  "mtime": 1792917543885000000,
+  "sha256": "5267f40563d50a8b63366711be132bb67b6a4de8b43e6a9d978b4e0407e09f8f",
+  "w": 2000,
+  "h": 1200
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Background.png": {
+  "bytes": 3011378,
+  "mtime": 1794382498687000000,
+  "sha256": "8828c3ed7111e1a61b43393c48e024e8e9d6a0ec72a9f01b32004396a52ba5ae",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Background_Depth.png": {
+  "bytes": 159183,
+  "mtime": 1794205643315000000,
+  "sha256": "e2efbb57bf7e0e93b1df7e6cfbf9b819fff773aaae0a979097707c866971fe89",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Mid.png": {
+  "bytes": 2656462,
+  "mtime": 1794204651818000000,
+  "sha256": "20280601baf44ce1b50580eec974c6b16612a367015b213136692c9e31d3e013",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Mid_Depth.png": {
+  "bytes": 156965,
+  "mtime": 1794205572724000000,
+  "sha256": "97d25ae902eedf413be9ce1df9642ca24f82b6acae1e2555eb008fd0d9de724a",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Top.png": {
+  "bytes": 1681473,
+  "mtime": 1794204614694000000,
+  "sha256": "7b7ed44099584f4e8b39834a5685d9306506b734bc51224e3754526da187c27a",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Bolts_For_Station/Isla_Bolts_For_Station_Top_Depth.png": {
+  "bytes": 417559,
+  "mtime": 1794205511799000000,
+  "sha256": "63abd7152b70d4073fc29a02e8749daeddfcdf0878dfffeee4b5d08184ddbe57",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Mid.png": {
+  "bytes": 2787018,
+  "mtime": 1794552229852000000,
+  "sha256": "875ec3022a2e446be4925d446b086c24f4aa7e41191ec8cebb07ff0dd2e67253",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Mid_Depth.png": {
+  "bytes": 157427,
+  "mtime": 1794224326937000000,
+  "sha256": "e4f949ae905024066257233e1f47706f84a057cf97f7bf8fa42cffa53a198584",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Top.png": {
+  "bytes": 534223,
+  "mtime": 1794223551045000000,
+  "sha256": "7b1a065faf919e3d32fd48647fb8797e83a9d4f46d3019006d050e4cb9a98c4a",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Isla_Ethel_follows_Isla_Station/Isla_Ethel_follows_Isla_Station_Top_Depth.png": {
+  "bytes": 296015,
+  "mtime": 1794224091518000000,
+  "sha256": "828a060d1ed71b7143c848624bc0d72d37ad56e3f07bc0ee4b3216d3929a2790",
+  "w": 2000,
+  "h": 1024
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Background.png": {
+  "bytes": 2717651,
+  "mtime": 1792745028177000000,
+  "sha256": "99eb9e6ef1eb742340fabc651156d7fa995d0a9cd35ae647819ecc8ede02d8ef",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Background_Depth.png": {
+  "bytes": 333844,
+  "mtime": 1792745028177000000,
+  "sha256": "379942aa28d8999d649728b673d4c60716071c6c9effcd4a156ec024edfcb8d6",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Mid.png": {
+  "bytes": 2989194,
+  "mtime": 1792745028194000000,
+  "sha256": "2df081cc681ffa852e45d60bdfac0f756e0d908aac2d13666008d93bb23b009c",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Mid_Depth.png": {
+  "bytes": 549514,
+  "mtime": 1792745028194000000,
+  "sha256": "2ab240ac090705d4a367e0a6c65b7641b93b8409e45b13102b58187bc0c16146",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Top.png": {
+  "bytes": 2398462,
+  "mtime": 1792745028227000000,
+  "sha256": "624612da5b99c7011d82f7183e8eaf1d610c12842aec675b6320bb8d9456adcb",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_01_Top_Depth.png": {
+  "bytes": 497169,
+  "mtime": 1792745028230000000,
+  "sha256": "6e4852423067bb2335ea32c738de160b4316013b300e4403883b0d73b7710475",
+  "w": 1926,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Background.png": {
+  "bytes": 2797344,
+  "mtime": 1792745028252000000,
+  "sha256": "d640451820aa98291792b6abb39b09efc8fa92e73232bc9e60b4f543643c3ec9",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Background_Depth.png": {
+  "bytes": 405999,
+  "mtime": 1792745028252000000,
+  "sha256": "dec35ac4706f3b8dbabde70688c916da3b9fa5314a390346692c62334e780b27",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Mid.png": {
+  "bytes": 2858106,
+  "mtime": 1792745028277000000,
+  "sha256": "cd1c69add7deb827964b06515e9459fb709a54548b295d36cad715c2ecb12a97",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Mid_Depth.png": {
+  "bytes": 602057,
+  "mtime": 1792745028283000000,
+  "sha256": "b421ec41e0a0afdfb4de235100aa43dcd8c17f7015291c03d2fdf09f966ae5e1",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Top.png": {
+  "bytes": 1115486,
+  "mtime": 1792745028296000000,
+  "sha256": "25064893a611bcad9e852000ba5fcfdad0181530851ca74b90cf36a1b47dbffc",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/Old_Mans_photos/Old_Mans_photos_02_Top_Depth.png": {
+  "bytes": 435828,
+  "mtime": 1792745028301000000,
+  "sha256": "7db149d050d693f0be929850314d233ae0be749df3414a121300d94ac8ff0bc8",
+  "w": 2074,
+  "h": 1086
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Background.png": {
+  "bytes": 5318357,
+  "mtime": 1794302262042000000,
+  "sha256": "08c28ffbeed942b035fe54ec7f053ae3804e1dca4919dcff9d4c69ad10914e1b",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Background_Depth.png": {
+  "bytes": 564056,
+  "mtime": 1794302837463000000,
+  "sha256": "f39025259613c9997fb380c9c6e6e1c2754cf4f8bababc00e6c40f0838dce4a7",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Mid.png": {
+  "bytes": 5134454,
+  "mtime": 1794385620447000000,
+  "sha256": "74e935559cbf19192996f4c878ea0e57be6b8bb47ee9f3f2c5010cc715810294",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Mid_Depth.png": {
+  "bytes": 672416,
+  "mtime": 1794309509592000000,
+  "sha256": "46420c58dcfb7946b6deee8891146aa95a6a68ba459f96095c2a966210c60a14",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Top.png": {
+  "bytes": 2056698,
+  "mtime": 1794302399204000000,
+  "sha256": "06fd525d586aed4e92dabe2ae3887cf9fc63ea7c4adde551701907bd10725b1b",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/ethel_waits_for_isla_running/ethel_waits_for_isla_running_Top_Depth.png": {
+  "bytes": 1273095,
+  "mtime": 1794310074732000000,
+  "sha256": "ad608b91ed1b23045f70a3973decdd7b437d329d2259417d796ba0aef45e4e0e",
+  "w": 5192,
+  "h": 1500
+ },
+ "2_Later_Story/that_was_my_home/that_was_my_home_Background.png": {
+  "bytes": 3314491,
+  "mtime": 1792745028410000000,
+  "sha256": "2302f1f4bfa87902a3058c4cd4fb48c06a2e4dc9c14a7a4d2d93705d1ef872fc",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/that_was_my_home/that_was_my_home_Background_Depth.png": {
+  "bytes": 527274,
+  "mtime": 1792745028410000000,
+  "sha256": "553eaabf9454c827dd62d8a4e94c92c35c60df0eef1f10ca4549d70be5d2c1df",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/that_was_my_home/that_was_my_home_Top.png": {
+  "bytes": 1943705,
+  "mtime": 1792745028387000000,
+  "sha256": "9e914b1039372fc3813c46994a86b0afd2dd516d8856268bd7bf291326a13486",
+  "w": 2000,
+  "h": 1086
+ },
+ "2_Later_Story/that_was_my_home/that_was_my_home_Top_Depth.png": {
+  "bytes": 501474,
+  "mtime": 1792919231814000000,
+  "sha256": "95008a6f984899554e01365601e943444e794ce42be02940ffa0ef6d855ba6c0",
+  "w": 2000,
+  "h": 1086
+ }
+}

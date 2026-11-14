@@ -1,0 +1,44 @@
+{
+ "note": "AGED PRINT TEST (only with &age=1). 'lift' = the colour the blacks fade up towards. 'paper' = the warm tone the whites take on. Both are the full-age look; 'age' 0 to 1 scales them. 'grain' = grain strength at full age. 'amounts' = where the testing sliders start (tone, fade, grain, specks, scratches, dust, foxing; 0 = off, 1 = as set here, 2 = double). 'points' = how old the print is at a room; rooms between two points are in between. 'change' = seconds a change in age takes. 'marks' = how many of each blemish a print has (fewest, most; each print picks its own number in that range). The mark sliders only fade them.",
+ "lift": "rgb(30,24,17)",
+ "paper": "rgb(245,239,228)",
+ "grain": 0.035,
+ "change": 4,
+ "points": [
+  {
+   "room": "x-001",
+   "age": 1
+  },
+  {
+   "room": "x-062",
+   "age": 0.8
+  }
+ ],
+ "amounts": {
+  "tone": 1.05,
+  "fade": 0,
+  "grain": 2,
+  "specks": 1,
+  "scratches": 1,
+  "dust": 1,
+  "foxing": 1
+ },
+ "marks": {
+  "specks": [
+   5,
+   12
+  ],
+  "scratches": [
+   1,
+   2
+  ],
+  "dust": [
+   2,
+   6
+  ],
+  "foxing": [
+   0,
+   2
+  ]
+ }
+}

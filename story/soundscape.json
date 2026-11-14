@@ -1,0 +1,40 @@
+{
+ "note": "SOUNDSCAPE TEST (only with &sound=1). Each passage is a group of rooms that share one soundscape. Inside a passage the sound keeps running; crossing into another passage fades across over 'fade' seconds. Files are read from pre_lab_hostory/SoundScape by name. 'seam' = seconds each loop repeat crosses the last. 'volume' 0 to 1 (0.4 = background, under the voice and the sound effects). To try the other Weighted Silence, change its 'file' to the 'alternative'.",
+ "fade": 6,
+ "firstFade": 2,
+ "seam": 3,
+ "volume": 0.4,
+ "passages": [
+  {
+   "name": "arrival and family moments",
+   "rooms": [
+    "x-001",
+    "x-002",
+    "x-003",
+    "x-004"
+   ],
+   "file": "Wooden Room Resonance.mp3"
+  },
+  {
+   "name": "illness to loss",
+   "rooms": [
+    "x-005",
+    "x-006",
+    "x-007",
+    "x-008",
+    "x-009",
+    "x-010"
+   ],
+   "file": "Weighted Silence_1.mp3",
+   "alternative": "Weighted Silence_2.mp3"
+  },
+  {
+   "name": "carrying on",
+   "rooms": [
+    "x-011",
+    "x-012"
+   ],
+   "file": "Sustained Familiarity.mp3"
+  }
+ ]
+}

@@ -17,8 +17,8 @@
   {
    "section": 0,
    "role": "background",
-   "image": "Homestead_Sorrow_Background.png",
-   "depth": "Homestead_Sorrow_Background_Depth.png",
+   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background.webp",
+   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
    "travel": null
@@ -26,8 +26,8 @@
   {
    "section": 0,
    "role": "mid",
-   "image": "Homestead_Sorrow_MidTop.png",
-   "depth": "Homestead_Sorrow_MidTop_Depth.png",
+   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop.webp",
+   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -35,8 +35,8 @@
   {
    "section": 0,
    "role": "top",
-   "image": "Homestead_Sorrow_Top.png",
-   "depth": "Homestead_Sorrow_Top_Depth.png",
+   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top.webp",
+   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -84,5 +84,6 @@
    "style": "push"
   }
  },
- "together": null
+ "together": null,
+ "era": "later"
 }

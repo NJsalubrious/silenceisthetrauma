@@ -88,6 +88,9 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
       try { if (typeof DeviceOrientationEvent !== 'undefined' && DeviceOrientationEvent.requestPermission) await DeviceOrientationEvent.requestPermission(); } catch {}
       try { window.SITTSound?.context?.().resume(); } catch {}
       s.remove(); started = true; res();
+      // her opening line: a phone only allows sound once a touch has ended (this tap); the engine tries on touching down, which a phone refuses
+      (async () => { let W0; while (!(W0 = window.SITTWorldState)?.memory || !W0.voice) await wait(100);
+        const A = W0.voice.audio; if (W0.memory.voice?.audio && A && A.paused && !A.currentTime) W0.voice.play(); })();
     };
     s.addEventListener('click', go);
   });

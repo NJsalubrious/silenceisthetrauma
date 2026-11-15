@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_c9a08c2d",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They built their quiet empires on a borrowed pulse.",
+    "timestamp": "2026-11-15T09:12:18.780760Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-shakes-up-companies-local-governments",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_74878dcc",
     "handle": "@isla_band",
     "display_name": "Isla",

@@ -305,10 +305,11 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
     sel.addEventListener('pointerdown', fillAll); sel.addEventListener('focus', fillAll);
     sel.addEventListener('change', () => { const [f, k] = sel.value.split('|'); sel.blur(); go(f, +k); });
     bl.addEventListener('click', () => { loc.classList.toggle('on'); b.classList.toggle('open', loc.classList.contains('on')); if (loc.classList.contains('on')) locations(); });
-    br.addEventListener('click', reload);
+    br.title = 'Reload the page and come back to this picture (R): new pictures, sounds and lines';
+    br.addEventListener('click', reloadHere);
     bf.addEventListener('click', async () => { if (!full) { try { await document.documentElement.requestFullscreen?.(); } catch {} setFull(true); } else { try { if (document.fullscreenElement) await document.exitFullscreen(); } catch {} setFull(false); } });
     document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && full && !phone) setFull(false); });
-    addEventListener('keydown', e => { if ((e.key === 'r' || e.key === 'R') && !e.ctrlKey && !e.metaKey && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); reload(); } });
+    addEventListener('keydown', e => { if ((e.key === 'r' || e.key === 'R') && !e.ctrlKey && !e.metaKey && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); reloadHere(); } });
     addEventListener('keydown', e => { if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) bf.click(); });
     addEventListener('keydown', e => { if (e.key === 'Escape') { loc.classList.remove('on'); b.classList.remove('open'); } });
   }
@@ -346,6 +347,17 @@ ${rest.length ? `<h4>The rest of this memory</h4>${rest.map(block).join('')}` : 
     const text = list => list.map(p => { const w = p.replace(/\//g, '\\'); return `${WEB + w}\r\n${MASTER + w.replace(/\.webp$/, '.png')}`; }).join('\r\n');
     loc.querySelectorAll('[data-c]').forEach(b => b.addEventListener('click', () => navigator.clipboard?.writeText(text(b.dataset.c === 'all' ? [...pics, ...rest] : pics)).then(() => { b.textContent = 'copied'; setTimeout(() => b.textContent = b.dataset.c === 'all' ? 'copy all' : 'copy these', 1000); }).catch(() => {})));
   }
+  // TESTING (18 Nov): ↻ / R reload the whole page (new pictures, code, sounds, lines) and come back to the picture on screen,
+  // so a change can be tested without scrolling back to it. (The earlier in-place picture reload is reload() below, kept.)
+  function reloadHere() {
+    try { sessionStorage.setItem('sitt-return', JSON.stringify({ folder: W.folder, stop: Math.round(W.track?.s ?? 0) })); } catch {}
+    okEl.textContent = '…'; location.reload();
+  }
+  async function returnHere() {
+    let r = null; try { r = JSON.parse(sessionStorage.getItem('sitt-return') || 'null'); sessionStorage.removeItem('sitt-return'); } catch {}
+    if (!r?.folder) return;
+    for (let i = 0; i < 60; i++) { try { if ((await go(r.folder, r.stop)) !== false && W.folder === r.folder) return; } catch {} await wait(100); }   // the world may still be busy opening
+  }
   let busy = false;
   async function reload() {
     if (busy || !W?.folder) return; busy = true; okEl.textContent = '…';
@@ -372,6 +384,7 @@ ${rest.length ? `<h4>The rest of this memory</h4>${rest.map(block).join('')}` : 
     for (const t of TL.moments || []) { const m = await loadMem(t.memory); moments.push({ ...t, stop: m ? stopOfPicture(m, t.picture) : 0 }); }
     await dateLine();
     if (Q.get('ui') !== '0') bar();
+    returnHere();
     let laid = W.memory; setInterval(() => { markNow(); showCurrent(false); if (W.memory !== laid) { laid = W.memory; layout(); } }, 250);   // a new memory: its window shape (whatever way it arrived)
     addEventListener('sitt:memory', () => setTimeout(() => { markNow(); showCurrent(true); }, 0));
     await startDone; if (phone) tilt();

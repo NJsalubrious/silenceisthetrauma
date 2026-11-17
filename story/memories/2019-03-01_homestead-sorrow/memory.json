@@ -50,7 +50,60 @@
     1448,
     1086
    ],
-   "name": "Homestead: sorrow"
+   "name": "Homestead: sorrow",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/And_A_Social_Worker_Behaving_Like_A_Cop.mp3",
+      "gap": 1.2,
+      "lines": [
+       {
+        "t": 0.11,
+        "end": 2.48,
+        "text": "And a social worker behaving like a cop."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/watching.mp3",
+      "gap": 0.45,
+      "lines": [
+       {
+        "t": 0.19,
+        "end": 1.08,
+        "text": "Watching."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/behind_Me.mp3",
+      "gap": 0.35,
+      "lines": [
+       {
+        "t": 0.19,
+        "end": 1.14,
+        "text": "Behind me."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/This_Is_Really_Happening.mp3",
+      "gap": 1.3,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 1.58,
+        "text": "This is really happening."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "warm": 0.3
+   }
   },
   {
    "frame": [
@@ -59,7 +112,60 @@
     1288,
     966
    ],
-   "name": "Homestead: closer"
+   "name": "Homestead: closer",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_Have_To_Find_It.mp3",
+      "gap": 0.6,
+      "lines": [
+       {
+        "t": 0.15,
+        "end": 1.24,
+        "text": "I have to find it."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Grans_Key.mp3",
+      "gap": 0.45,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 1.28,
+        "text": "Gran's key."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/That_Social_Worker_Wont_Leave_Though.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0.07,
+        "end": 2.08,
+        "text": "That social worker won't leave, though."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_No_Social_Worker.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.07,
+        "end": 1.76,
+        "text": "She's no social worker."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "warm": 0.35
+   }
   }
  ],
  "startStop": 0,

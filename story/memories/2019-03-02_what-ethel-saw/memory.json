@@ -1,0 +1,2251 @@
+{
+ "id": "what-ethel-saw",
+ "title": "What Ethel saw in the safety deposit box",
+ "date": "2019-03-02",
+ "order": 1.5,
+ "kind": "strip",
+ "height": 1086,
+ "note": "Plays by itself, once per visit, like the wrong turn: the visitor swipes on from The box (23_Ethel_in_saftey_Dep_Box_Sequence_10) and it runs to the music, then lands on Ethel: the evidence remains. Made by WorkingFiles/_tools/make_what_ethel_saw.py from the After Effects comp heroKiller_ImageCut_Final (34 pictures; its switched-off layers left out). The cuts are the comp's, exactly, on the music's own clock; the camera follows the comp's scale and position.",
+ "sections": [
+  {
+   "name": "01 Ethel_Opening_The_Public_Photograph_v01",
+   "width": 1843
+  },
+  {
+   "name": "02 exec-596a654a-8404-443b-b5cf-22cfcb484603",
+   "width": 1930
+  },
+  {
+   "name": "03 Dominic_Private_Conversation_Observed_v01",
+   "width": 2013
+  },
+  {
+   "name": "04 exec-c5ed3769-7f03-4cd6-a8f7-913cc5ac939f",
+   "width": 1928
+  },
+  {
+   "name": "05 Dominic_Showing_Group_Sydney_v06",
+   "width": 1930
+  },
+  {
+   "name": "06 Dominic_Among_The_Seats_v01",
+   "width": 2002
+  },
+  {
+   "name": "07 Dominic_Leading_High_Sydney_Site_v04",
+   "width": 1930
+  },
+  {
+   "name": "08 exec-394a41a3-d286-4fd9-9613-db497c25e7d3",
+   "width": 1930
+  },
+  {
+   "name": "09 exec-80cf3990-5cea-4276-88e4-b23b7384a444",
+   "width": 1930
+  },
+  {
+   "name": "10 exec-50a92efd-347e-49e6-8ea1-9252f10d606a",
+   "width": 1930
+  },
+  {
+   "name": "11 intimidation0_Doorstep_Before_Visit_v01",
+   "width": 1930
+  },
+  {
+   "name": "12 intimidation1",
+   "width": 1930
+  },
+  {
+   "name": "13 intimidation2.png",
+   "width": 1930
+  },
+  {
+   "name": "14 exec-eb12004d-475e-421e-9f7f-de31b669960e",
+   "width": 1930
+  },
+  {
+   "name": "15 exec-3367df9e-7945-432c-88c8-b7913d994965",
+   "width": 1930
+  },
+  {
+   "name": "16 exec-5c6c5be5-3582-498e-98e7-5f48bdb11dde",
+   "width": 1930
+  },
+  {
+   "name": "17 Dominic_Bushfire_Crew_Coordination_v01",
+   "width": 1930
+  },
+  {
+   "name": "18 Dominic_Bushfire_Supplies_In_Action_v01",
+   "width": 1930
+  },
+  {
+   "name": "19 exec-a913884c-e4be-4292-8e85-17a043eaafa9",
+   "width": 1930
+  },
+  {
+   "name": "20 exec-c891c0c6-1326-49d9-851b-f8ce20564c8b",
+   "width": 1930
+  },
+  {
+   "name": "21 Scam_Floor_Coercion_v01",
+   "width": 1930
+  },
+  {
+   "name": "22 exec-b493398d-3c1e-4db4-99ff-5dcb3c71f947",
+   "width": 1629
+  },
+  {
+   "name": "23 Counterfeit_Consumer_Goods_And_Electronics_v01",
+   "width": 1930
+  },
+  {
+   "name": "24 exec-8728ff76-33db-4896-a849-af4a8350e518",
+   "width": 1629
+  },
+  {
+   "name": "25 Counterfeit_Pharmaceuticals_v01",
+   "width": 1930
+  },
+  {
+   "name": "26 exec-e84aa20d-ac3a-443b-981a-e90f143cfb14",
+   "width": 1930
+  },
+  {
+   "name": "27 Burial_Discovered_During_Demolition_v02",
+   "width": 1930
+  },
+  {
+   "name": "28 exec-ea85c0fe-29a7-4195-92cc-76daae40cd73",
+   "width": 1930
+  },
+  {
+   "name": "29 Dominic_Rehabilitation_Rebuilt_v05",
+   "width": 1930
+  },
+  {
+   "name": "30 Society_Carries_On_v01",
+   "width": 2000
+  },
+  {
+   "name": "31 Pokie_Cash_And_Indifference_v01",
+   "width": 1930
+  },
+  {
+   "name": "32 Dominic_Public_Applause_v03",
+   "width": 2000
+  },
+  {
+   "name": "33 Redacted_Annexure_Dominic_Financial_Control_v01",
+   "width": 1930
+  },
+  {
+   "name": "34 Suppression_Order_Annexure_C_v01",
+   "width": 1930
+  }
+ ],
+ "startStop": 0,
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.0,
+  "vertical": 0.8,
+  "framing": "cover"
+ },
+ "look": {
+  "vignette": 0.22,
+  "deepVignette": 0.6,
+  "grain": 0.04,
+  "cold": 0.2
+ },
+ "cut": {
+  "style": "flare",
+  "duration": 900,
+  "travel": 0
+ },
+ "auto": {
+  "sharp": true,
+  "film": {
+   "audio": "What_Ethel_Saw/heroKiller_What_Ethel_Saw_in_Saftey_Dep_Box_Snipet.mp3",
+   "gain": 1,
+   "end": 49.7851,
+   "lead": 0.0495,
+   "sync": 0,
+   "blur": 1,
+   "loop": {
+    "file": "What_Ethel_Saw/Subtle_loop.mp3",
+    "lead": 0.0495,
+    "length": 3.932,
+    "beat": 0.4915,
+    "switchBeats": 4,
+    "at": 45.957,
+    "gain": 1,
+    "fadeIn": 2.5,
+    "fadeOut": 1.5,
+    "switchFade": 0.03
+   },
+   "note": "film: the shots on the music's clock. Each shot: stop, t (seconds into the music it cuts in) and k (camera frames [t, x, y, w, h], t from its own cut; between them the camera moves in a straight line). lead: the silence the mp3 adds before the music (skipped). sync: seconds the pictures run late (+) or early (-) against the music, if the cuts ever feel off. blur: motion blur with the camera's speed. loop: Subtle_loop, playing on The bank and The box: the music comes in on its next bar line (beat x switchBeats seconds), and at the end the loop comes back in at the matching point (at: where in the music the loop begins again, measured: 42.016 and 45.957 s), held on The evidence remains until the visitor swipes on.",
+   "shots": [
+    {
+     "stop": 0,
+     "t": 0,
+     "k": [
+      [
+       0,
+       26.8,
+       57.3,
+       1789.0,
+       971.4
+      ],
+      [
+       0.0667,
+       27.5,
+       57.6,
+       1787.7,
+       970.7
+      ],
+      [
+       0.1,
+       28.4,
+       58.1,
+       1786.0,
+       969.8
+      ],
+      [
+       0.1333,
+       29.7,
+       58.8,
+       1783.4,
+       968.4
+      ],
+      [
+       0.1666,
+       31.4,
+       59.8,
+       1779.8,
+       966.5
+      ],
+      [
+       0.1999,
+       33.7,
+       61.0,
+       1775.3,
+       964.0
+      ],
+      [
+       0.2333,
+       36.6,
+       62.6,
+       1769.6,
+       960.9
+      ],
+      [
+       0.2666,
+       40.1,
+       64.5,
+       1762.6,
+       957.1
+      ],
+      [
+       0.2999,
+       44.3,
+       66.8,
+       1754.1,
+       952.5
+      ],
+      [
+       0.3332,
+       49.4,
+       69.5,
+       1743.9,
+       946.9
+      ],
+      [
+       0.3666,
+       55.4,
+       72.8,
+       1731.8,
+       940.4
+      ],
+      [
+       0.3999,
+       62.6,
+       76.7,
+       1717.5,
+       932.6
+      ],
+      [
+       0.4332,
+       71.0,
+       81.3,
+       1700.7,
+       923.5
+      ],
+      [
+       0.4665,
+       80.9,
+       86.6,
+       1681.0,
+       912.8
+      ],
+      [
+       0.4999,
+       92.4,
+       92.9,
+       1658.0,
+       900.3
+      ],
+      [
+       0.5332,
+       105.5,
+       100.0,
+       1631.7,
+       886.0
+      ],
+      [
+       0.5665,
+       120.2,
+       108.0,
+       1602.2,
+       870.0
+      ],
+      [
+       0.6331,
+       151.6,
+       125.0,
+       1539.5,
+       836.0
+      ],
+      [
+       0.6665,
+       166.1,
+       132.9,
+       1510.5,
+       820.2
+      ],
+      [
+       0.6998,
+       178.7,
+       139.7,
+       1485.3,
+       806.5
+      ],
+      [
+       0.7331,
+       189.3,
+       145.5,
+       1464.1,
+       795.0
+      ],
+      [
+       0.7664,
+       198.0,
+       150.2,
+       1446.6,
+       785.5
+      ],
+      [
+       0.7998,
+       205.2,
+       154.1,
+       1432.3,
+       777.8
+      ],
+      [
+       0.8331,
+       211.0,
+       157.3,
+       1420.6,
+       771.4
+      ],
+      [
+       0.8664,
+       215.9,
+       159.9,
+       1411.0,
+       766.2
+      ],
+      [
+       0.8997,
+       219.8,
+       162.1,
+       1403.1,
+       761.9
+      ],
+      [
+       0.9331,
+       223.1,
+       163.8,
+       1396.5,
+       758.3
+      ],
+      [
+       0.9664,
+       225.7,
+       165.3,
+       1391.2,
+       755.4
+      ],
+      [
+       0.9997,
+       227.9,
+       166.5,
+       1386.9,
+       753.1
+      ],
+      [
+       1.0663,
+       231.0,
+       168.2,
+       1380.6,
+       749.7
+      ],
+      [
+       1.133,
+       232.9,
+       169.2,
+       1377.0,
+       747.7
+      ],
+      [
+       1.1996,
+       233.7,
+       169.6,
+       1375.3,
+       746.8
+      ],
+      [
+       1.233,
+       233.8,
+       169.6,
+       1375.2,
+       746.7
+      ]
+     ]
+    },
+    {
+     "stop": 1,
+     "t": 1.233,
+     "k": [
+      [
+       0.0,
+       1884.3,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       1.8994,
+       1992.9,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 2,
+     "t": 3.0991,
+     "k": [
+      [
+       0.0,
+       3835.4,
+       30.7,
+       1886.8,
+       1024.5
+      ],
+      [
+       1.6995,
+       3916.7,
+       74.9,
+       1724.1,
+       936.2
+      ],
+      [
+       1.9994,
+       3916.7,
+       74.9,
+       1724.1,
+       936.2
+      ]
+     ]
+    },
+    {
+     "stop": 3,
+     "t": 5.0652,
+     "k": [
+      [
+       0.0,
+       5887.9,
+       113.8,
+       1580.8,
+       858.4
+      ],
+      [
+       0.2666,
+       5887.2,
+       112.9,
+       1584.1,
+       860.2
+      ],
+      [
+       0.4332,
+       5885.9,
+       111.3,
+       1590.0,
+       863.4
+      ],
+      [
+       0.5665,
+       5884.3,
+       109.2,
+       1597.7,
+       867.6
+      ],
+      [
+       0.6665,
+       5882.5,
+       106.9,
+       1606.1,
+       872.1
+      ],
+      [
+       0.7664,
+       5880.1,
+       103.9,
+       1617.4,
+       878.3
+      ],
+      [
+       0.8331,
+       5878.0,
+       101.2,
+       1627.2,
+       883.6
+      ],
+      [
+       0.8997,
+       5875.5,
+       98.0,
+       1639.1,
+       890.0
+      ],
+      [
+       0.9664,
+       5872.4,
+       94.0,
+       1653.6,
+       897.9
+      ],
+      [
+       1.033,
+       5868.8,
+       89.4,
+       1670.8,
+       907.3
+      ],
+      [
+       1.233,
+       5856.2,
+       73.2,
+       1730.2,
+       939.5
+      ],
+      [
+       1.2996,
+       5852.4,
+       68.5,
+       1747.8,
+       949.0
+      ],
+      [
+       1.3662,
+       5849.2,
+       64.4,
+       1762.9,
+       957.2
+      ],
+      [
+       1.4329,
+       5846.5,
+       60.9,
+       1775.6,
+       964.2
+      ],
+      [
+       1.4995,
+       5844.3,
+       58.0,
+       1786.3,
+       970.0
+      ],
+      [
+       1.5662,
+       5842.4,
+       55.6,
+       1795.2,
+       974.8
+      ],
+      [
+       1.6662,
+       5840.1,
+       52.7,
+       1805.7,
+       980.5
+      ],
+      [
+       1.7995,
+       5838.0,
+       50.0,
+       1815.8,
+       986.0
+      ],
+      [
+       1.9661,
+       5836.4,
+       47.9,
+       1823.4,
+       990.1
+      ],
+      [
+       2.1993,
+       5835.5,
+       46.8,
+       1827.8,
+       992.5
+      ],
+      [
+       2.4659,
+       5835.4,
+       46.7,
+       1827.9,
+       992.6
+      ]
+     ]
+    },
+    {
+     "stop": 4,
+     "t": 7.4977,
+     "k": [
+      [
+       0.0,
+       7866.9,
+       112.1,
+       1623.1,
+       881.4
+      ],
+      [
+       1.4662,
+       7793.5,
+       73.1,
+       1770.0,
+       961.1
+      ],
+      [
+       2.4659,
+       7735.3,
+       42.2,
+       1886.4,
+       1024.3
+      ]
+     ]
+    },
+    {
+     "stop": 5,
+     "t": 9.9304,
+     "k": [
+      [
+       0.0,
+       9803.7,
+       41.1,
+       1680.7,
+       912.6
+      ],
+      [
+       0.3999,
+       9801.9,
+       40.7,
+       1684.4,
+       914.6
+      ],
+      [
+       0.6331,
+       9798.8,
+       40.0,
+       1690.6,
+       918.0
+      ],
+      [
+       0.8331,
+       9794.3,
+       39.1,
+       1699.5,
+       922.8
+      ],
+      [
+       0.9997,
+       9788.8,
+       38.0,
+       1710.5,
+       928.8
+      ],
+      [
+       1.133,
+       9782.8,
+       36.8,
+       1722.6,
+       935.4
+      ],
+      [
+       1.233,
+       9776.9,
+       35.6,
+       1734.3,
+       941.7
+      ],
+      [
+       1.3329,
+       9769.8,
+       34.1,
+       1748.6,
+       949.5
+      ],
+      [
+       1.4329,
+       9761.0,
+       32.3,
+       1766.2,
+       959.0
+      ],
+      [
+       1.5329,
+       9750.6,
+       30.1,
+       1786.9,
+       970.3
+      ],
+      [
+       1.7661,
+       9723.9,
+       24.7,
+       1840.3,
+       999.3
+      ],
+      [
+       1.8661,
+       9713.7,
+       22.5,
+       1860.8,
+       1010.4
+      ],
+      [
+       1.9327,
+       9707.6,
+       21.3,
+       1872.9,
+       1017.0
+      ],
+      [
+       2.0327,
+       9699.8,
+       19.7,
+       1888.6,
+       1025.5
+      ],
+      [
+       2.1327,
+       9693.2,
+       18.3,
+       1901.7,
+       1032.6
+      ],
+      [
+       2.2327,
+       9687.8,
+       17.2,
+       1912.5,
+       1038.5
+      ],
+      [
+       2.3659,
+       9682.1,
+       16.0,
+       1924.0,
+       1044.7
+      ],
+      [
+       2.4992,
+       9677.7,
+       15.1,
+       1932.8,
+       1049.5
+      ]
+     ]
+    },
+    {
+     "stop": 6,
+     "t": 12.3963,
+     "k": [
+      [
+       0.0,
+       11726.7,
+       34.4,
+       1462.1,
+       793.9
+      ],
+      [
+       1.6328,
+       11780.1,
+       25.1,
+       1326.8,
+       720.5
+      ]
+     ]
+    },
+    {
+     "stop": 7,
+     "t": 14.0291,
+     "k": [
+      [
+       0.0,
+       13677.3,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       13676.5,
+       112.5,
+       1585.6,
+       861.0
+      ],
+      [
+       0.0666,
+       13673.1,
+       108.2,
+       1601.6,
+       869.7
+      ],
+      [
+       0.1,
+       13663.8,
+       96.3,
+       1645.2,
+       893.3
+      ],
+      [
+       0.1333,
+       13644.9,
+       72.2,
+       1734.2,
+       941.7
+      ],
+      [
+       0.1666,
+       13631.8,
+       55.4,
+       1795.9,
+       975.2
+      ],
+      [
+       0.1999,
+       13626.5,
+       48.5,
+       1821.2,
+       988.9
+      ],
+      [
+       0.2333,
+       13624.9,
+       46.5,
+       1828.9,
+       993.1
+      ],
+      [
+       1.0663,
+       13624.8,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 8,
+     "t": 15.0621,
+     "k": [
+      [
+       0.0,
+       15728.7,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       1.6662,
+       15545.7,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 9,
+     "t": 16.695,
+     "k": [
+      [
+       0.0,
+       17457.3,
+       31.9,
+       1882.6,
+       1022.2
+      ]
+     ]
+    },
+    {
+     "stop": 10,
+     "t": 18.1279,
+     "k": [
+      [
+       0.0,
+       19588.0,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       0.0333,
+       19588.0,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       1.3663,
+       19425.3,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 11,
+     "t": 19.4608,
+     "k": [
+      [
+       0.0,
+       21338.5,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       1.3996,
+       21502.1,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 12,
+     "t": 20.8271,
+     "k": [
+      [
+       0.0,
+       23246.2,
+       31.9,
+       1882.6,
+       1022.2
+      ]
+     ]
+    },
+    {
+     "stop": 13,
+     "t": 22.8597,
+     "k": [
+      [
+       0.0,
+       25255.2,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       25254.3,
+       112.5,
+       1585.6,
+       861.0
+      ],
+      [
+       0.0666,
+       25250.9,
+       108.2,
+       1601.6,
+       869.7
+      ],
+      [
+       0.1,
+       25241.7,
+       96.3,
+       1645.2,
+       893.3
+      ],
+      [
+       0.1333,
+       25222.8,
+       72.2,
+       1734.2,
+       941.7
+      ],
+      [
+       0.1666,
+       25209.7,
+       55.4,
+       1795.9,
+       975.2
+      ],
+      [
+       0.1999,
+       25204.3,
+       48.5,
+       1821.2,
+       988.9
+      ],
+      [
+       0.2333,
+       25202.7,
+       46.5,
+       1828.9,
+       993.1
+      ],
+      [
+       1.0997,
+       25202.6,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 14,
+     "t": 23.9594,
+     "k": [
+      [
+       0.0,
+       27306.6,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       0.7998,
+       27160.2,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 15,
+     "t": 24.7259,
+     "k": [
+      [
+       0.0,
+       29114.4,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       29102.7,
+       98.5,
+       1637.0,
+       888.9
+      ],
+      [
+       0.0666,
+       29090.1,
+       82.4,
+       1696.4,
+       921.1
+      ],
+      [
+       0.1,
+       29076.5,
+       65.1,
+       1760.2,
+       955.8
+      ],
+      [
+       0.1333,
+       29061.9,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       0.4665,
+       29061.9,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 16,
+     "t": 25.1591,
+     "k": [
+      [
+       0.0,
+       31044.1,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       31032.3,
+       98.5,
+       1637.0,
+       888.9
+      ],
+      [
+       0.0666,
+       31019.7,
+       82.4,
+       1696.4,
+       921.1
+      ],
+      [
+       0.1,
+       31006.2,
+       65.1,
+       1760.2,
+       955.8
+      ],
+      [
+       0.1333,
+       30991.6,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       0.4665,
+       30991.6,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 17,
+     "t": 25.5923,
+     "k": [
+      [
+       0.0,
+       32973.7,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       32962.0,
+       98.5,
+       1637.0,
+       888.9
+      ],
+      [
+       0.0666,
+       32949.4,
+       82.4,
+       1696.4,
+       921.1
+      ],
+      [
+       0.1,
+       32935.8,
+       65.1,
+       1760.2,
+       955.8
+      ],
+      [
+       0.1333,
+       32921.2,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       1.0663,
+       32921.2,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 18,
+     "t": 26.6254,
+     "k": [
+      [
+       0.0,
+       34974.5,
+       113.6,
+       1581.7,
+       858.8
+      ]
+     ]
+    },
+    {
+     "stop": 19,
+     "t": 27.1585,
+     "k": [
+      [
+       0.0,
+       36789.6,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 20,
+     "t": 27.6917,
+     "k": [
+      [
+       0.0,
+       38920.8,
+       113.6,
+       1581.7,
+       858.8
+      ]
+     ]
+    },
+    {
+     "stop": 21,
+     "t": 28.2249,
+     "k": [
+      [
+       0.0,
+       40643.8,
+       148.4,
+       1453.5,
+       789.2
+      ]
+     ]
+    },
+    {
+     "stop": 22,
+     "t": 28.758,
+     "k": [
+      [
+       0.0,
+       42218.5,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 23,
+     "t": 29.2912,
+     "k": [
+      [
+       0.0,
+       44235.9,
+       148.4,
+       1453.5,
+       789.2
+      ]
+     ]
+    },
+    {
+     "stop": 24,
+     "t": 29.6578,
+     "k": [
+      [
+       0.0,
+       46038.1,
+       113.6,
+       1581.7,
+       858.8
+      ]
+     ]
+    },
+    {
+     "stop": 25,
+     "t": 30.0908,
+     "k": [
+      [
+       0.0,
+       47879.3,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       47874.6,
+       109.4,
+       1596.9,
+       867.1
+      ],
+      [
+       0.0666,
+       47828.3,
+       82.5,
+       1696.0,
+       920.9
+      ],
+      [
+       0.1,
+       47775.6,
+       51.9,
+       1808.9,
+       982.2
+      ],
+      [
+       0.1333,
+       47769.0,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       0.4998,
+       47806.5,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       0.5332,
+       47807.4,
+       46.4,
+       1829.0,
+       993.2
+      ],
+      [
+       1.133,
+       47807.4,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 26,
+     "t": 31.1906,
+     "k": [
+      [
+       0.0,
+       49659.9,
+       31.9,
+       1882.6,
+       1022.2
+      ]
+     ]
+    },
+    {
+     "stop": 27,
+     "t": 32.5901,
+     "k": [
+      [
+       0.0,
+       51607.6,
+       91.4,
+       1663.5,
+       903.3
+      ],
+      [
+       1.7995,
+       51790.6,
+       91.4,
+       1663.5,
+       903.3
+      ]
+     ]
+    },
+    {
+     "stop": 28,
+     "t": 34.3895,
+     "k": [
+      [
+       0.0,
+       53598.5,
+       113.6,
+       1581.7,
+       858.8
+      ],
+      [
+       0.0333,
+       53597.7,
+       112.5,
+       1585.6,
+       861.0
+      ],
+      [
+       0.0667,
+       53594.3,
+       108.2,
+       1601.6,
+       869.7
+      ],
+      [
+       0.1,
+       53585.0,
+       96.3,
+       1645.2,
+       893.3
+      ],
+      [
+       0.1333,
+       53566.1,
+       72.2,
+       1734.2,
+       941.7
+      ],
+      [
+       0.1666,
+       53553.0,
+       55.4,
+       1795.9,
+       975.2
+      ],
+      [
+       0.1999,
+       53547.6,
+       48.5,
+       1821.2,
+       988.9
+      ],
+      [
+       0.2333,
+       53546.0,
+       46.5,
+       1828.9,
+       993.1
+      ],
+      [
+       1.133,
+       53546.0,
+       46.4,
+       1829.0,
+       993.2
+      ]
+     ]
+    },
+    {
+     "stop": 29,
+     "t": 35.4894,
+     "k": [
+      [
+       0.0,
+       55522.7,
+       37.9,
+       1860.5,
+       1010.2
+      ],
+      [
+       0.9997,
+       55595.6,
+       60.3,
+       1777.8,
+       965.3
+      ]
+     ]
+    },
+    {
+     "stop": 30,
+     "t": 36.4889,
+     "k": [
+      [
+       0.0,
+       57450.9,
+       83.4,
+       1693.0,
+       919.3
+      ],
+      [
+       0.0333,
+       57450.9,
+       83.4,
+       1693.0,
+       919.3
+      ],
+      [
+       1.6328,
+       57629.7,
+       83.4,
+       1693.0,
+       919.3
+      ]
+     ]
+    },
+    {
+     "stop": 31,
+     "t": 38.0886,
+     "k": [
+      [
+       0.0,
+       59588.3,
+       74.9,
+       1724.1,
+       936.2
+      ],
+      [
+       2.1327,
+       59434.7,
+       74.9,
+       1724.1,
+       936.2
+      ]
+     ]
+    },
+    {
+     "stop": 32,
+     "t": 40.1879,
+     "k": [
+      [
+       0.0,
+       61444.9,
+       67.5,
+       1751.3,
+       951.0
+      ],
+      [
+       0.9331,
+       61510.8,
+       103.3,
+       1619.5,
+       879.4
+      ],
+      [
+       2.0327,
+       61576.8,
+       139.1,
+       1487.6,
+       807.8
+      ],
+      [
+       3.2657,
+       61639.0,
+       172.9,
+       1363.1,
+       740.2
+      ],
+      [
+       4.1987,
+       61679.6,
+       195.0,
+       1282.0,
+       696.1
+      ],
+      [
+       4.2321,
+       61679.6,
+       195.0,
+       1281.9,
+       696.1
+      ]
+     ]
+    },
+    {
+     "stop": 33,
+     "t": 44.3867,
+     "k": [
+      [
+       0.0,
+       63384.6,
+       73.0,
+       1731.2,
+       940.0
+      ],
+      [
+       0.9331,
+       63449.1,
+       108.0,
+       1602.3,
+       870.1
+      ],
+      [
+       2.0994,
+       63517.3,
+       145.0,
+       1465.9,
+       796.0
+      ],
+      [
+       3.6656,
+       63592.5,
+       185.8,
+       1315.5,
+       714.3
+      ],
+      [
+       4.0654,
+       63609.3,
+       195.0,
+       1282.0,
+       696.1
+      ],
+      [
+       5.4317,
+       63609.3,
+       195.0,
+       1281.9,
+       696.1
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "exits": {
+  "left": {
+   "to": "2019-03-02_the-deposit-box",
+   "stop": "The box"
+  },
+  "right": {
+   "to": "2019-03-02_the-deposit-box",
+   "stop": "The evidence remains"
+  }
+ },
+ "layers": [
+  {
+   "section": 0,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_01_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_01_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 1,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_02_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_02_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 2,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_03_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_03_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 3,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_04_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_04_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 4,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_05_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_05_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 5,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_06_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_06_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 6,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_07_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_07_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 7,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_08_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_08_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_09_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_09_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_10_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_10_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_11_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_11_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 11,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_12_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_12_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 12,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_13_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_13_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 13,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_14_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_14_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 14,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_15_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_15_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 15,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_16_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_16_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 16,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_17_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_17_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 17,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_18_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_18_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 18,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_19_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_19_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 19,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_20_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_20_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 20,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_21_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_21_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 21,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_22_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_22_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 22,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_23_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_23_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 23,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_24_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_24_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 24,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_25_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_25_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 25,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_26_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_26_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 26,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_27_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_27_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 27,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_28_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_28_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 28,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_29_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_29_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 29,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_30_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_30_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 30,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_31_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_31_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 31,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_32_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_32_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 32,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_33_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_33_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 33,
+   "role": "background",
+   "image": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_34_Background.webp",
+   "depth": "2_Later_Story/What_Ethel_Saw_in_Saftey_Dep_Box/What_Ethel_Saw_in_Saftey_Dep_Box_34_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  }
+ ],
+ "stops": [
+  {
+   "frame": [
+    26.8,
+    57.3,
+    1789.0,
+    971.4
+   ],
+   "name": "01 Ethel_Opening_The_Public_Photograph_v01"
+  },
+  {
+   "frame": [
+    1884.3,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "02 exec-596a654a-8404-443b-b5cf-22cfcb484603"
+  },
+  {
+   "frame": [
+    3835.4,
+    30.7,
+    1886.8,
+    1024.5
+   ],
+   "name": "03 Dominic_Private_Conversation_Observed_v01"
+  },
+  {
+   "frame": [
+    5887.9,
+    113.8,
+    1580.8,
+    858.4
+   ],
+   "name": "04 exec-c5ed3769-7f03-4cd6-a8f7-913cc5ac939f"
+  },
+  {
+   "frame": [
+    7866.9,
+    112.1,
+    1623.1,
+    881.4
+   ],
+   "name": "05 Dominic_Showing_Group_Sydney_v06"
+  },
+  {
+   "frame": [
+    9803.7,
+    41.1,
+    1680.7,
+    912.6
+   ],
+   "name": "06 Dominic_Among_The_Seats_v01"
+  },
+  {
+   "frame": [
+    11726.7,
+    34.4,
+    1462.1,
+    793.9
+   ],
+   "name": "07 Dominic_Leading_High_Sydney_Site_v04"
+  },
+  {
+   "frame": [
+    13677.3,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "08 exec-394a41a3-d286-4fd9-9613-db497c25e7d3"
+  },
+  {
+   "frame": [
+    15728.7,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "09 exec-80cf3990-5cea-4276-88e4-b23b7384a444"
+  },
+  {
+   "frame": [
+    17457.3,
+    31.9,
+    1882.6,
+    1022.2
+   ],
+   "name": "10 exec-50a92efd-347e-49e6-8ea1-9252f10d606a"
+  },
+  {
+   "frame": [
+    19588.0,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "11 intimidation0_Doorstep_Before_Visit_v01"
+  },
+  {
+   "frame": [
+    21338.5,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "12 intimidation1"
+  },
+  {
+   "frame": [
+    23246.2,
+    31.9,
+    1882.6,
+    1022.2
+   ],
+   "name": "13 intimidation2.png"
+  },
+  {
+   "frame": [
+    25255.2,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "14 exec-eb12004d-475e-421e-9f7f-de31b669960e"
+  },
+  {
+   "frame": [
+    27306.6,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "15 exec-3367df9e-7945-432c-88c8-b7913d994965"
+  },
+  {
+   "frame": [
+    29114.4,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "16 exec-5c6c5be5-3582-498e-98e7-5f48bdb11dde"
+  },
+  {
+   "frame": [
+    31044.1,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "17 Dominic_Bushfire_Crew_Coordination_v01"
+  },
+  {
+   "frame": [
+    32973.7,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "18 Dominic_Bushfire_Supplies_In_Action_v01"
+  },
+  {
+   "frame": [
+    34974.5,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "19 exec-a913884c-e4be-4292-8e85-17a043eaafa9"
+  },
+  {
+   "frame": [
+    36789.6,
+    46.4,
+    1829.0,
+    993.2
+   ],
+   "name": "20 exec-c891c0c6-1326-49d9-851b-f8ce20564c8b"
+  },
+  {
+   "frame": [
+    38920.8,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "21 Scam_Floor_Coercion_v01"
+  },
+  {
+   "frame": [
+    40643.8,
+    148.4,
+    1453.5,
+    789.2
+   ],
+   "name": "22 exec-b493398d-3c1e-4db4-99ff-5dcb3c71f947"
+  },
+  {
+   "frame": [
+    42218.5,
+    46.4,
+    1829.0,
+    993.2
+   ],
+   "name": "23 Counterfeit_Consumer_Goods_And_Electronics_v01"
+  },
+  {
+   "frame": [
+    44235.9,
+    148.4,
+    1453.5,
+    789.2
+   ],
+   "name": "24 exec-8728ff76-33db-4896-a849-af4a8350e518"
+  },
+  {
+   "frame": [
+    46038.1,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "25 Counterfeit_Pharmaceuticals_v01"
+  },
+  {
+   "frame": [
+    47879.3,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "26 exec-e84aa20d-ac3a-443b-981a-e90f143cfb14"
+  },
+  {
+   "frame": [
+    49659.9,
+    31.9,
+    1882.6,
+    1022.2
+   ],
+   "name": "27 Burial_Discovered_During_Demolition_v02"
+  },
+  {
+   "frame": [
+    51607.6,
+    91.4,
+    1663.5,
+    903.3
+   ],
+   "name": "28 exec-ea85c0fe-29a7-4195-92cc-76daae40cd73"
+  },
+  {
+   "frame": [
+    53598.5,
+    113.6,
+    1581.7,
+    858.8
+   ],
+   "name": "29 Dominic_Rehabilitation_Rebuilt_v05"
+  },
+  {
+   "frame": [
+    55522.7,
+    37.9,
+    1860.5,
+    1010.2
+   ],
+   "name": "30 Society_Carries_On_v01"
+  },
+  {
+   "frame": [
+    57450.9,
+    83.4,
+    1693.0,
+    919.3
+   ],
+   "name": "31 Pokie_Cash_And_Indifference_v01"
+  },
+  {
+   "frame": [
+    59588.3,
+    74.9,
+    1724.1,
+    936.2
+   ],
+   "name": "32 Dominic_Public_Applause_v03"
+  },
+  {
+   "frame": [
+    61444.9,
+    67.5,
+    1751.3,
+    951.0
+   ],
+   "name": "33 Redacted_Annexure_Dominic_Financial_Control_v01"
+  },
+  {
+   "frame": [
+    63384.6,
+    73.0,
+    1731.2,
+    940.0
+   ],
+   "name": "34 Suppression_Order_Annexure_C_v01"
+  }
+ ],
+ "cues": {
+  "library": "audio/",
+  "list": []
+ },
+ "era": "later"
+}

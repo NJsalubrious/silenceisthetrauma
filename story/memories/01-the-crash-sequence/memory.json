@@ -205,7 +205,34 @@
     0,
     2240,
     1500
-   ]
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Gravel_Boots_A_Police_Officer_Saying_My_Name_Wrong.mp3",
+      "gap": 1.5,
+      "lines": [
+       {
+        "t": 0.41,
+        "end": 1.38,
+        "text": "Gravel."
+       },
+       {
+        "t": 1.55,
+        "end": 2.4,
+        "text": "Boots."
+       },
+       {
+        "t": 2.71,
+        "end": 5.42,
+        "text": "A police officer saying my name wrong."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "moment": "gate",
@@ -214,7 +241,100 @@
     0,
     2423,
     1500
-   ]
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Where_Is_The_Crash.mp3",
+      "gap": 2.5,
+      "text": "“Where is the crash?”"
+     },
+     {
+      "audio": "audio/SoundFX/Scenes/S03/S03_Officer_Theyre_Gone.mp3",
+      "gap": 0.8,
+      "from": 0.45,
+      "to": 1.5,
+      "text": "“They’re gone.”",
+      "echo": true,
+      "tone": {
+       "gain": 0.8,
+       "highpass": 250,
+       "lowpass": 2600,
+       "reverb": 0.45,
+       "room": 3.4,
+       "echo": {
+        "time": 0.38,
+        "feedback": 0.3,
+        "wet": 0.25
+       },
+       "drift": {
+        "from": 0.4,
+        "to": -0.3,
+        "sec": 3
+       }
+      }
+     },
+     {
+      "audio": "audio/SoundFX/Scenes/S03/S03_Officer_Ethel_I_Cant_Let_You_Leave.mp3",
+      "gap": 0.6,
+      "echo": true,
+      "lines": [
+       {
+        "t": 0.35,
+        "end": 1.3,
+        "text": "“Ethel…”"
+       },
+       {
+        "t": 2.25,
+        "end": 3.65,
+        "text": "“I can’t let you leave…”"
+       },
+       {
+        "t": 3.65,
+        "end": 4.6,
+        "text": "“Ethel.”"
+       }
+      ],
+      "tone": {
+       "gain": 2.2,
+       "lowpass": 1800,
+       "reverb": 0.5,
+       "room": 3.6,
+       "echo": {
+        "time": 0.48,
+        "feedback": 0.32,
+        "wet": 0.3
+       },
+       "pan": -0.3
+      }
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_Keep_Moving_Forward.mp3",
+      "gap": 3.7,
+      "lines": [
+       {
+        "t": 0.15,
+        "end": 1.84,
+        "text": "I keep moving forward."
+       }
+      ],
+      "echo": true,
+      "tone": {
+       "gain": 0.55,
+       "lowpass": 2600,
+       "reverb": 0.5,
+       "room": 4,
+       "echo": {
+        "time": 0.5,
+        "feedback": 0.4,
+        "wet": 0.4
+       }
+      }
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -222,7 +342,52 @@
     0,
     3300,
     1500
-   ]
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/There_is_only_One_Stretch_Of_Red_That_It_Could_Have_Happened_On.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.09,
+        "end": 3.46,
+        "text": "There's only one stretch of red it could have happened on."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_Have_To_See_I_Have_To_Know.mp3",
+      "gap": 0.9,
+      "lines": [
+       {
+        "t": 0.43,
+        "end": 1.68,
+        "text": "I have to see."
+       },
+       {
+        "t": 2.13,
+        "end": 3.32,
+        "text": "I have to know."
+       }
+      ],
+      "echo": true,
+      "tone": {
+       "gain": 0.75,
+       "lowpass": 2800,
+       "reverb": 0.5,
+       "room": 3.8,
+       "echo": {
+        "time": 0.48,
+        "feedback": 0.38,
+        "wet": 0.38
+       }
+      }
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -230,7 +395,132 @@
     0,
     4023,
     1500
-   ]
+   ],
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/What_Is_This-.mp3",
+      "gap": 0.9,
+      "lines": [
+       {
+        "t": 0.27,
+        "end": 2.82,
+        "text": "What is this?"
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Gran_And_pops_Car_Just_Left_Here.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.23,
+        "end": 0.67,
+        "text": "Gran and Pop's car."
+       },
+       {
+        "t": 0.62,
+        "end": 1.28,
+        "text": "Just left here."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Just_Rubble.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0.05,
+        "end": 1.34,
+        "text": "Just rubble."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/No_Tap_No_Police_No_Investigation.mp3",
+      "gap": 0.7,
+      "lines": [
+       {
+        "t": 0.05,
+        "end": 0.8,
+        "text": "No tape."
+       },
+       {
+        "t": 0.75,
+        "end": 1.68,
+        "text": "No police."
+       },
+       {
+        "t": 1.63,
+        "end": 3.48,
+        "text": "No investigation."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Open_Stretch_Of_Road_With_Not_Sign_Of_a_Collision.mp3",
+      "gap": 1.2,
+      "lines": [
+       {
+        "t": 0,
+        "end": 3.12,
+        "text": "Open stretch of road with no sign of a collision."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/And_A_Cop_Not_A_Normal_Cop.mp3",
+      "gap": 0.8,
+      "lines": [
+       {
+        "t": 0.01,
+        "end": 1.3,
+        "text": "And a cop…"
+       },
+       {
+        "t": 1.41,
+        "end": 2.78,
+        "text": "not a normal cop."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/How_Do_I_Know_That-.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.11,
+        "end": 1.38,
+        "text": "How do I know that?"
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Wrong_Intent.mp3",
+      "gap": 0.7,
+      "lines": [
+       {
+        "t": 0.07,
+        "end": 1.28,
+        "text": "Wrong intent."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Here_To_Abstruct.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.11,
+        "end": 1.48,
+        "text": "Here to obstruct."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   }
  ],
  "startStop": 0,
@@ -244,6 +534,110 @@
  "look": {},
  "together": "2_Later_Story/10_Gran_Pop_Car_Crushed_Full_Sequence/10_Gran_Pop_Car_Crushed_Full_Sequence_02_Background.webp",
  "voice": {
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/ThisIs_Where_My_Red_Dirt_Ends_Right_Here.mp3",
+    "gap": 2.4,
+    "lines": [
+     {
+      "t": 0.49,
+      "end": 2.66,
+      "text": "This is where my red dirt ends."
+     },
+     {
+      "t": 4.47,
+      "end": 5.38,
+      "text": "Right here."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/You_Cant_Do_andGoBackToWhereITAllBAgin_or__Forward.mp3",
+    "gap": 1.6,
+    "lines": [
+     {
+      "t": 0.25,
+      "end": 2.62,
+      "text": "You can do what I can't do,"
+     },
+     {
+      "t": 2.57,
+      "end": 5.12,
+      "text": "and go back to where it all began…"
+     },
+     {
+      "t": 5.07,
+      "end": 6.84,
+      "text": "or you can do what I always do,"
+     },
+     {
+      "t": 6.79,
+      "end": 8.48,
+      "text": "and keep moving forward."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Do_You_Think_This_Scene_Looks_Wrong-.mp3",
+    "gap": 3.5,
+    "lines": [
+     {
+      "t": 0.63,
+      "end": 2.64,
+      "text": "Do you think this scene looks wrong?"
+     },
+     {
+      "t": 4.19,
+      "end": 6.48,
+      "text": "It is wrong."
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 200,
+     "lowpass": 3800,
+     "reverb": 0.18,
+     "room": 2.2,
+     "drift": {
+      "from": -0.55,
+      "to": 0.45,
+      "sec": 7
+     }
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "The opening: her lines as clips, in turn (no captions). voiceBefore: the earlier opening; put it back as voice to undo."
+ },
+ "sound": {
+  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
+  "startBeforeEnd": 1.5,
+  "fadeIn": 2.5,
+  "overlap": 2.5,
+  "volume": 1,
+  "afterLine": 0,
+  "stops": [
+   0
+  ]
+ },
+ "exits": {
+  "left": {
+   "to": "2008-07-01_the-opening",
+   "style": "push"
+  },
+  "right": {
+   "to": "2019-03-01_homestead-sorrow",
+   "style": "push"
+  }
+ },
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "era": "later",
+ "voiceBefore": {
   "audio": "assets/Audio/Ethel_This_Is_Where_my_Red_Dirt_Ends.mp3",
   "lines": [
    {
@@ -306,26 +700,312 @@
   "handover": 42.75,
   "reveal": 6
  },
- "sound": {
-  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
-  "startBeforeEnd": 1.5,
-  "fadeIn": 2.5,
-  "overlap": 2.5,
-  "volume": 1
- },
- "exits": {
-  "left": {
-   "to": "2008-07-01_the-opening",
-   "style": "push"
-  },
-  "right": {
-   "to": "2019-03-01_homestead-sorrow",
-   "style": "push"
-  }
- },
- "cut": {
-  "duration": 1500,
-  "travel": 0.07
- },
- "era": "later"
+ "cues": {
+  "library": "audio/",
+  "note": "Sounds on the stops (see the glass house): a bed (loop) sounds while the view is within half a stop of its stops, fading in and out; once: as the view arrives on its stop, delay s after. In the opening (a joined strip) each memory's sounds play on its own stops. Ethel's lines are each stop's voice.parts. Written by WorkingFiles/_tools/add_crash_to_bank_voices.js.",
+  "list": [
+   {
+    "name": "swipe: the movement A (leaving the crash)",
+    "stops": [
+     0
+    ],
+    "leave": true,
+    "file": "SoundFX/Swipes/Swipe_Move_A.mp3",
+    "gain": 2.2,
+    "duck": false
+   },
+   {
+    "name": "swipe: the movement B (leaving the gate)",
+    "stops": [
+     1
+    ],
+    "leave": true,
+    "file": "SoundFX/Swipes/Swipe_Move_B.mp3",
+    "gain": 2.5,
+    "duck": false
+   },
+   {
+    "name": "swipe: low deep A (into the gate)",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Swipes/Swipe_Low_Deep_A.mp3",
+    "gain": 0.9,
+    "fadeOut": 0.6,
+    "duck": false
+   },
+   {
+    "name": "swipe: low deep B (through the gate)",
+    "stops": [
+     2
+    ],
+    "once": true,
+    "file": "SoundFX/Swipes/Swipe_Low_Deep_B.mp3",
+    "gain": 1,
+    "fadeOut": 0.6,
+    "duck": false
+   },
+   {
+    "name": "land: ground (still)",
+    "stops": [
+     0,
+     2
+    ],
+    "file": "SoundFX/Land/Land_Ground_A.mp3",
+    "gain": 0.47,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "2 the gate: background",
+    "stops": [
+     1,
+     1
+    ],
+    "file": "SoundFX/Scenes/S02/S02_BG_Near_Silence.mp3",
+    "gain": 2,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "echo: There's been an accident",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S02/S02_Echo_Theres_Been_An_Accident.mp3",
+    "gain": 0.55,
+    "fadeOut": 2,
+    "duck": false,
+    "lowpass": 1300,
+    "reverb": 0.55,
+    "roomSec": 3.4,
+    "rate": 0.95,
+    "double": 0.3,
+    "echo": {
+     "time": 0.42,
+     "feedback": 0.32,
+     "wet": 0.3
+    },
+    "after": 0,
+    "delay": 0.2,
+    "pan": -0.35,
+    "say": "“There’s been an accident.”",
+    "sayAt": 0.5,
+    "sayFor": 2.2,
+    "sayEcho": true
+   },
+   {
+    "name": "echo: Your grandparents, a woman saying it",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S02/S02_Female_Says_Your_Grandparents.mp3",
+    "gain": 0.45,
+    "fadeOut": 2,
+    "duck": false,
+    "lowpass": 1300,
+    "reverb": 0.55,
+    "roomSec": 3.4,
+    "rate": 0.95,
+    "double": 0.3,
+    "echo": {
+     "time": 0.42,
+     "feedback": 0.32,
+     "wet": 0.3
+    },
+    "after": 0,
+    "delay": 2.7,
+    "pan": 0.35,
+    "say": "“Your grandparents…”",
+    "sayAt": 0.2,
+    "sayFor": 2.2,
+    "sayEcho": true
+   },
+   {
+    "name": "the swell (under They've been killed)",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S02/S02_Swell.mp3",
+    "gain": 1,
+    "fadeOut": 2,
+    "after": 0,
+    "delay": 2,
+    "duck": false
+   },
+   {
+    "name": "echo: They've been killed",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S02/S02_Echo_Theyve_Been_Killed.mp3",
+    "gain": 1.8,
+    "fadeOut": 2,
+    "duck": false,
+    "lowpass": 1300,
+    "reverb": 0.55,
+    "roomSec": 3.4,
+    "rate": 0.95,
+    "double": 0.3,
+    "echo": {
+     "time": 0.42,
+     "feedback": 0.32,
+     "wet": 0.3
+    },
+    "after": 0,
+    "delay": 5,
+    "say": "“They’ve been killed.”",
+    "sayAt": 0.5,
+    "sayFor": 2,
+    "sayEcho": true
+   },
+   {
+    "name": "echo: Ethel, a woman saying it (last, fading into the hum)",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S02/S02_Female_Says_Ethel.mp3",
+    "gain": 1.6,
+    "fadeOut": 2,
+    "duck": false,
+    "lowpass": 1300,
+    "reverb": 0.55,
+    "roomSec": 3.4,
+    "rate": 0.95,
+    "double": 0.3,
+    "echo": {
+     "time": 0.42,
+     "feedback": 0.32,
+     "wet": 0.3
+    },
+    "after": 0,
+    "delay": 6.6,
+    "pan": -0.2,
+    "say": "“Ethel.”",
+    "sayAt": 0.4,
+    "sayFor": 1.6,
+    "sayEcho": true
+   },
+   {
+    "name": "3: low thunder",
+    "stops": [
+     2
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S03/S03_Thunder_Low.mp3",
+    "gain": 0.5,
+    "fadeOut": 3,
+    "duck": false,
+    "lowpass": 600
+   },
+   {
+    "name": "3: the dirt bike starts (echo over the desert)",
+    "stops": [
+     2
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S03/S03_Dirt_Bike_Starts.mp3",
+    "gain": 0.35,
+    "fadeOut": 2.5,
+    "duck": false,
+    "offset": 3.5,
+    "fadeIn": 2,
+    "lowpass": 3000,
+    "reverb": 0.5,
+    "roomSec": 4,
+    "echo": {
+     "time": 0.55,
+     "feedback": 0.35,
+     "wet": 0.35
+    },
+    "after": 1,
+    "delay": 2.5
+   },
+   {
+    "name": "land: ground (uneasy)",
+    "stops": [
+     3,
+     4
+    ],
+    "file": "SoundFX/Land/Land_Ground_B.mp3",
+    "gain": 0.86,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 2.5,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "4: her bike on the road",
+    "stops": [
+     3,
+     3
+    ],
+    "file": "SoundFX/Scenes/S04/S04_Bike_Running.mp3",
+    "gain": 0.8,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 1.5,
+    "fadeOut": 2,
+    "duck": false
+   },
+   {
+    "name": "4: her bike passing (doppler)",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S04/S04_Bike_Pass_Doppler.mp3",
+    "gain": 1.6,
+    "fadeOut": 2.5,
+    "duck": false,
+    "offset": 2.7,
+    "fadeIn": 0.5
+   },
+   {
+    "name": "4: the police car behind",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S04/S04_Police_Car_Behind.mp3",
+    "gain": 0.5,
+    "fadeOut": 2.5,
+    "duck": false,
+    "lowpass": 2500,
+    "pan": 0.25,
+    "fadeIn": 1,
+    "delay": 0.5
+   },
+   {
+    "name": "4: a siren far off",
+    "stops": [
+     3
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S04/S04_Siren_Distant.mp3",
+    "gain": 0.35,
+    "fadeOut": 2.5,
+    "duck": false,
+    "lowpass": 3000,
+    "reverb": 0.35,
+    "roomSec": 3.5,
+    "pan": 0.3,
+    "after": 1,
+    "delay": 0.3
+   }
+  ]
+ }
 }

@@ -28,6 +28,12 @@ html,body{margin:0;height:100%;background:#080e0f;color:#e9e4da;font:15px/1.5 sy
  padding:8px 10px;cursor:pointer;text-shadow:0 1px 8px #000;opacity:.32;transition:opacity .6s}
 .skip:hover,.skip:focus-visible{opacity:.85}
 .skip:not(.on){opacity:0;pointer-events:none}
+/* subtitles switch: top right beside [ full ], as faint; struck through when off */
+.cc{position:fixed;right:104px;top:16px;z-index:99999;background:none;border:0;padding:4px 0;cursor:pointer;font:12px/1 'Courier Prime',ui-monospace,monospace;letter-spacing:.08em;color:rgba(255,255,255,.3);transition:color .2s}
+.cc:hover,.cc:focus-visible{color:rgba(255,255,255,.85)}
+.cc[aria-pressed="false"]{text-decoration:line-through;color:rgba(255,255,255,.18)}
+@media (max-width:760px),(pointer:coarse){.cc{right:22px}}
+html.no-captions .caption{display:none}
 /* once handed over, the hand says what to do */
 .world.free{cursor:grab}.world.free.held{cursor:grabbing}
 /* doors: the hand becomes a magnifier over a spot that leads in */

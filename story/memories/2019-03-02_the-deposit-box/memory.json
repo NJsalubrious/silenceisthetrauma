@@ -6,7 +6,7 @@
  "kind": "strip",
  "height": 1086,
  "source": "../assets/entry-experiment/FinalsForTest_01/23_Ethel_in_saftey_Dep_Box_Sequence/",
- "note": "Twelve pictures side by side, one seamless strip, walked left to right like the crash sequence: the garage, the ride into the city, the bank, the box, the call, the office.",
+ "note": "Twelve pictures side by side, one seamless strip, walked left to right like the crash sequence: the garage, the ride into the city, the bank, the box, the call, the office. Chased (Ethel_chased_After_Crash, six seamless backgrounds) goes in after the city view: 01 and 05 have two scenes each, 06 two shots blending its lettered layers (06A, 06B, then 06C, 06D, 06E). What Ethel saw (2019-03-02_what-ethel-saw) plays by itself, once per visit, when the visitor goes on from The box (\"sequence\" on that stop; \"rest\" lands every gesture on it first), then it lands on The evidence remains (Ethel_The_Evidence_Remains), after which The call and The office follow as before. Subtle_loop (audio/What_Ethel_Saw) fades in on The bank and loops on the beat through The box; What Ethel saw takes over from it on a bar line, and hands back to it at its end, held on The evidence remains until the visitor swipes on (\"loop\" on those stops; see world.js, a beat loop).",
  "sections": [
   {
    "name": "The garage",
@@ -37,6 +37,30 @@
    "width": 1486
   },
   {
+   "name": "Chased 01",
+   "width": 5417
+  },
+  {
+   "name": "Chased 02",
+   "width": 2265
+  },
+  {
+   "name": "Chased 03",
+   "width": 2164
+  },
+  {
+   "name": "Chased 04",
+   "width": 2294
+  },
+  {
+   "name": "Chased 05",
+   "width": 4787
+  },
+  {
+   "name": "Chased 06",
+   "width": 3481
+  },
+  {
    "name": "Waiting",
    "width": 1919
   },
@@ -47,6 +71,10 @@
   {
    "name": "The box",
    "width": 2081
+  },
+  {
+   "name": "The evidence remains",
+   "width": 2000
   },
   {
    "name": "The call",
@@ -241,6 +269,147 @@
   {
    "section": 7,
    "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 7,
+   "role": "mid",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Mid.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 7,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_01_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_02_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_02_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 8,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_02_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_02_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_03_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_03_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 9,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_03_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_03_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 10,
+   "role": "mid",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Mid.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Mid_Depth.webp",
+   "plane": 0.64,
+   "rigid": true,
+   "travel": null,
+   "rect": [
+    21801,
+    0,
+    1422,
+    1086
+   ]
+  },
+  {
+   "section": 10,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_04_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "rect": [
+    21224,
+    0,
+    2576,
+    1086
+   ]
+  },
+  {
+   "section": 11,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_05_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_05_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 11,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_05_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_05_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 12,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_06_Background.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_06_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 12,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_06A_Top.webp",
+   "depth": "2_Later_Story/Ethel_chased_After_Crash/Ethel_chased_After_Crash_06A_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null,
+   "stops": [
+    14
+   ]
+  },
+  {
+   "section": 13,
+   "role": "background",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Background_Depth.webp",
    "plane": 0.16,
@@ -249,7 +418,7 @@
    "note": "Background_08_Depth.png is a copy of 07's map (1486 wide, picture 1919): drawn flat until a matching map is saved."
   },
   {
-   "section": 7,
+   "section": 13,
    "role": "mid",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Mid_Depth.webp",
@@ -258,7 +427,7 @@
    "travel": null
   },
   {
-   "section": 7,
+   "section": 13,
    "role": "top",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_08_Top_Depth.webp",
@@ -267,7 +436,7 @@
    "travel": null
   },
   {
-   "section": 8,
+   "section": 14,
    "role": "background",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Background_Depth.webp",
@@ -276,7 +445,7 @@
    "travel": null
   },
   {
-   "section": 8,
+   "section": 14,
    "role": "mid",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Mid_Depth.webp",
@@ -285,7 +454,7 @@
    "travel": null
   },
   {
-   "section": 8,
+   "section": 14,
    "role": "top",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_09_Top_Depth.webp",
@@ -294,7 +463,7 @@
    "travel": null
   },
   {
-   "section": 9,
+   "section": 15,
    "role": "background",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Background_Depth.webp",
@@ -303,7 +472,7 @@
    "travel": null
   },
   {
-   "section": 9,
+   "section": 15,
    "role": "mid",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Mid_Depth.webp",
@@ -312,7 +481,7 @@
    "travel": null
   },
   {
-   "section": 9,
+   "section": 15,
    "role": "top",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_10_Top_Depth.webp",
@@ -321,7 +490,25 @@
    "travel": null
   },
   {
-   "section": 10,
+   "section": 16,
+   "role": "background",
+   "image": "2_Later_Story/Ethel_The_Evidence_Remains/Ethel_The_Evidence_Remains_Background.webp",
+   "depth": "2_Later_Story/Ethel_The_Evidence_Remains/Ethel_The_Evidence_Remains_Background_Depth.webp",
+   "plane": 0.16,
+   "rigid": false,
+   "travel": null
+  },
+  {
+   "section": 16,
+   "role": "top",
+   "image": "2_Later_Story/Ethel_The_Evidence_Remains/Ethel_The_Evidence_Remains_Top.webp",
+   "depth": "2_Later_Story/Ethel_The_Evidence_Remains/Ethel_The_Evidence_Remains_Top_Depth.webp",
+   "plane": 0.88,
+   "rigid": true,
+   "travel": null
+  },
+  {
+   "section": 17,
    "role": "background",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Background_Depth.webp",
@@ -330,7 +517,7 @@
    "travel": null
   },
   {
-   "section": 10,
+   "section": 17,
    "role": "mid",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Mid_Depth.webp",
@@ -339,7 +526,7 @@
    "travel": null
   },
   {
-   "section": 10,
+   "section": 17,
    "role": "top",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_11_Top_Depth.webp",
@@ -348,7 +535,7 @@
    "travel": null
   },
   {
-   "section": 11,
+   "section": 18,
    "role": "background",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Background_Depth.webp",
@@ -357,7 +544,7 @@
    "travel": null
   },
   {
-   "section": 11,
+   "section": 18,
    "role": "mid",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Mid_Depth.webp",
@@ -366,7 +553,7 @@
    "travel": null
   },
   {
-   "section": 11,
+   "section": 18,
    "role": "top",
    "image": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top.webp",
    "depth": "2_Later_Story/23_Ethel_in_saftey_Dep_Box_Sequence/23_Ethel_in_saftey_Dep_Box_Sequence_12_Top_Depth.webp",
@@ -383,7 +570,62 @@
     1843,
     900
    ],
-   "name": "The garage"
+   "name": "The garage",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Grans_Deposit_Box_Key.mp3",
+      "gap": 0.6,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 2.06,
+        "text": "Gran's deposit box key."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/If_I_Die_You_Need_to_open_it_Gran_said.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 1.94,
+        "text": "“If I die, then you need to open it,”"
+       },
+       {
+        "t": 1.89,
+        "end": 2.72,
+        "text": "Gran said."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_busy.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0,
+        "end": 0.96,
+        "text": "She's busy."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_Need_To_Move.mp3",
+      "gap": 0.7,
+      "lines": [
+       {
+        "t": 0.07,
+        "end": 1.1,
+        "text": "I need to move."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -401,7 +643,24 @@
     1495,
     1086
    ],
-   "name": "The road out"
+   "name": "The road out",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/How_Do_I_Loose_Her.mp3",
+      "gap": 0.8,
+      "lines": [
+       {
+        "t": 0,
+        "end": 1.48,
+        "text": "How do I lose her?"
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -410,7 +669,24 @@
     1732,
     1086
    ],
-   "name": "Into the city"
+   "name": "Into the city",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Off_Road.mp3",
+      "gap": 0.6,
+      "lines": [
+       {
+        "t": 0,
+        "end": 1.12,
+        "text": "Off-road?"
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -419,7 +695,46 @@
     1533,
     1086
    ],
-   "name": "Along the river"
+   "name": "Along the river",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_Ahead_Of_Me.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.01,
+        "end": 0.94,
+        "text": "She's ahead of me."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/But.mp3",
+      "gap": 0.7,
+      "lines": [
+       {
+        "t": 0,
+        "end": 0.6,
+        "text": "But…"
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Only_One_Way_Into_Town.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.01,
+        "end": 2.2,
+        "text": "Only one way into town."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -428,7 +743,35 @@
     1860,
     930
    ],
-   "name": "The corner"
+   "name": "The corner",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/This_Is_Only_Going_To_Stall_Her.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.25,
+        "end": 1.96,
+        "text": "This is only going to stall her."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_Have_To_Think_Of_Something_Better.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.15,
+        "end": 1.82,
+        "text": "I have to think of something better."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -437,38 +780,447 @@
     1843,
     900
    ],
-   "name": "The city view"
+   "name": "The city view",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/That_Distance_Wont_hold.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.15,
+        "end": 1.88,
+        "text": "That distance won't hold."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    11518,
+    12114,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 01: the car behind",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/How_The_Hell_Do_I_Shake_Her.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0,
+        "end": 2.32,
+        "text": "How the hell do I shake her?"
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    14807,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 01: into the tunnel",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_hope_I_Remeber_Correctly.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.11,
+        "end": 1.74,
+        "text": "I hope I remember correctly."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    16942,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 02",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/I_really_hope_I_Remeber_Correctly.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.09,
+        "end": 2,
+        "text": "I really hope I remember correctly."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    19163,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 03",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/A little distance_Between_Us_Wouldnt_Hurt.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.27,
+        "end": 2.7,
+        "text": "A little distance between us wouldn't hurt."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "cold": 0.2
+   }
+  },
+  {
+   "frame": [
+    21383,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 04",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_Fast.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.09,
+        "end": 1.14,
+        "text": "She's fast."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "cold": 0.2
+   }
+  },
+  {
+   "frame": [
+    23703,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 05: first scene",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Thank_Fuck.mp3",
+      "gap": 0.3,
+      "lines": [
+       {
+        "t": 0.09,
+        "end": 1.36,
+        "text": "Thank fuck."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "cold": 0.2
+   }
+  },
+  {
+   "frame": [
+    25940,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 05: second scene",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Itll_take_Her_A_While_To_Exit.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 1.82,
+        "text": "It'll take her a while to exit."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/But_I_Need_Distance.mp3",
+      "gap": 0.4,
+      "lines": [
+       {
+        "t": 0.15,
+        "end": 1.6,
+        "text": "But I need distance."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "cold": 0.2
+   }
+  },
+  {
+   "frame": [
+    28961,
+    0,
+    1930,
+    1086
+   ],
+   "name": "Chased 06A",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/And_Its_open.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.19,
+        "end": 1.32,
+        "text": "And it's open."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    31927,
     0,
     1919,
     1086
    ],
-   "name": "Waiting"
+   "name": "Waiting",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/grans_Key_1.mp3",
+      "gap": 0.8,
+      "lines": [
+       {
+        "t": 0.09,
+        "end": 1.28,
+        "text": "Gran's key."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/bank_Opens_In_Five.mp3",
+      "gap": 0.6,
+      "lines": [
+       {
+        "t": 0.17,
+        "end": 1.82,
+        "text": "Bank opens in five."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/A_new_Day.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0.05,
+        "end": 1.06,
+        "text": "A new day."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Just_Keep_Moveing_Forward_Ethel.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0.13,
+        "end": 2.04,
+        "text": "Just keep moving forward, Ethel."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   },
+   "look": {
+    "warm": 0.25
+   }
   },
   {
    "frame": [
-    13437,
+    33846,
     0,
     1781,
     1086
    ],
-   "name": "The bank"
+   "name": "The bank",
+   "loop": {
+    "file": "What_Ethel_Saw/Subtle_loop.mp3",
+    "lead": 0.0495,
+    "length": 3.932,
+    "gain": 1,
+    "fadeIn": 2.5,
+    "fadeOut": 1.5
+   },
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/one_Step_at_A_Time.mp3",
+      "gap": 1,
+      "lines": [
+       {
+        "t": 0.27,
+        "end": 1.64,
+        "text": "One step at a time."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
-    15328,
+    35737,
     0,
     1860,
     930
    ],
-   "name": "The box"
+   "name": "The box",
+   "rest": true,
+   "sequence": "2019-03-02_what-ethel-saw",
+   "loop": {
+    "file": "What_Ethel_Saw/Subtle_loop.mp3",
+    "lead": 0.0495,
+    "length": 3.932,
+    "gain": 1,
+    "fadeIn": 2.5,
+    "fadeOut": 1.5
+   }
   },
   {
    "frame": [
-    17234,
+    37708,
+    0,
+    2000.4,
+    1086
+   ],
+   "name": "The evidence remains",
+   "loop": {
+    "file": "What_Ethel_Saw/Subtle_loop.mp3",
+    "lead": 0.0495,
+    "length": 3.932,
+    "gain": 1,
+    "fadeIn": 2.5,
+    "fadeOut": 1.5,
+    "held": true
+   },
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/My_Father.mp3",
+      "gap": 2,
+      "lines": [
+       {
+        "t": 0.25,
+        "end": 1.2,
+        "text": "My father."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Pop_was_My_Father_not_This_Man.mp3",
+      "gap": 0.8,
+      "lines": [
+       {
+        "t": 0.23,
+        "end": 1.6,
+        "text": "Pop was my father."
+       },
+       {
+        "t": 1.55,
+        "end": 2.66,
+        "text": "Not this man."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/And_A_Number.mp3",
+      "gap": 1.2,
+      "lines": [
+       {
+        "t": 0.21,
+        "end": 1.12,
+        "text": "And a number."
+       }
+      ]
+     },
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/AFP.mp3",
+      "gap": 0.5,
+      "lines": [
+       {
+        "t": 0.31,
+        "end": 1.26,
+        "text": "AFP."
+       }
+      ]
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
+  },
+  {
+   "frame": [
+    39643.4,
     0,
     1860,
     930
@@ -477,7 +1229,7 @@
   },
   {
    "frame": [
-    19030,
+    41439.4,
     0,
     1700,
     1086
@@ -486,7 +1238,7 @@
   },
   {
    "frame": [
-    19130,
+    41539.4,
     0,
     2050,
     1086

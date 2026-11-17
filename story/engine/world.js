@@ -59,6 +59,8 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  // at a new size just moves everything after it along. A memory of another height is scaled to the strip's height
  // ("height", or the tallest of them). The first one's voice is the strip's; the others' play on their first stop.
  // The joined memory.json itself only holds what is its own (title, date, depth, look, cut, exits...): see W.joinSpec.
+ // a memory's opening voice: one file (audio, with timed lines) or its lines as separate clips (parts), played in turn
+ function hasVoice(v){return !!(v?.audio||v?.parts?.length);}
  const JOINED=['sections','layers','stops','voice'];
  async function joinUp(spec){
   const parts=await Promise.all(spec.join.map(async f=>({f,m:await json(memDir(f)+'/memory.json')})));
@@ -78,12 +80,18 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    if(Number.isFinite(p.extent))run=Math.max(run,p.extent);
    const at=v=>X+v*k;
    secs.forEach((s,j)=>m.sections.push({...s,name:s.name||p.title,x:at(geo[j].x0),width:geo[j].w*k}));
-   for(const l of p.layers||[]){const c={...l,section:base+(l.section||0),folder:l.folder||f};if(l.rect)c.rect=[at(l.rect[0]),l.rect[1]*k,l.rect[2]*k,l.rect[3]*k];m.layers.push(c);}
+   const s0=m.stops.length,sh=v=>Number.isFinite(v)?v+s0:v;   // a layer's own stop numbers count from this part's first stop in the joined strip
+   for(const l of p.layers||[]){const c={...l,section:base+(l.section||0),folder:l.folder||f};if(l.rect)c.rect=[at(l.rect[0]),l.rect[1]*k,l.rect[2]*k,l.rect[3]*k];
+    if(Array.isArray(l.stops))c.stops=l.stops.map(sh);if(l.follow)c.follow={...l.follow,at:sh(l.follow.at),from:sh(l.follow.from),to:sh(l.follow.to)};if(l.insert)c.insert={...l.insert,stop:sh(l.insert.stop)};
+    m.layers.push(c);}
    const own=stops(p).map(st=>{const c={...st,from:f};delete c.x;delete c.y;delete c.zoom;
     c.frame=st.frame?[at(st.frame[0]),st.frame[1]*k,st.frame[2]*k,st.frame[3]*k]:[X,0,run*k,H];return c;});
    if(f===startAt){m.startStop=m.stops.length;if(!spec.voice&&p.voice)m.voice=p.voice;if(!spec.sound&&p.sound)m.sound=p.sound;}   // it opens here, with this memory's voice (and its sound after it)
    else if(p.voice&&!own[0].voice)own[0].voice=p.voice;   // the others' voices play on their first stop
-   if(p.sound?.after)for(const c of own)c.sound=p.sound;   // its sound bed plays on its own stops (after its voice), as when it was its own memory
+   if(p.sound?.after)for(const [j,c] of own.entries())if(!Array.isArray(p.sound.stops)||p.sound.stops.includes(j))c.sound=p.sound;   // sound.stops: only on those of its own stops (the crash: its background is scene 1's; it fades as scene 2 begins)
+   // each memory's sounds (cues) on its own stops, its stop numbers moved to where they sit in the joined strip
+   if(p.cues?.list?.length){if(!m.cues||m.cues===spec.cues)m.cues={...(spec.cues||{}),library:spec.cues?.library||'audio/',list:[...(spec.cues?.list||[])]};if(!m.cues.duck&&p.cues.duck)m.cues.duck=p.cues.duck;
+    for(const q of p.cues.list)m.cues.list.push({...q,library:q.library||p.cues.library||'audio/',stops:Array.isArray(q.stops)?q.stops.map(sh):q.stops});}   // its sound bed plays on its own stops (after its voice), as when it was its own memory
    if(Number.isFinite(p.momentDrift)&&!Number.isFinite(m.momentDrift))m.momentDrift=p.momentDrift;
    m.stops.push(...own);X+=run*k;}
   m.extent=X;Object.defineProperty(m,'joinSpec',{value:spec,enumerable:false});
@@ -104,7 +112,8 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    scene.aim(camAt(T.s));scene.changed();await new Promise(r=>setTimeout(r,120));}}
  async function open(folder,how=null){
   if((how?.side||how?.push)&&joinOf.has(folder)){const jf=joinOf.get(folder),jm=await load(jf),own=jm.stops.map((p,i)=>p.from===folder?i:-1).filter(i=>i>=0);   // walked into a memory that is part of a joined strip: arrive at its stops there
-   if(own.length)return open(jf,{...how,stop:how.side==='left'?own.at(-1):own[0]});}
+   if(own.length){const named=how.stopName!=null?jm.stops.findIndex(p=>p.from===folder&&p.name===how.stopName):-1;   // a way in that names its stop (a sequence landing back in the strip)
+    return open(jf,{...how,stop:named>=0?named:how.side==='left'?own.at(-1):own[0]});}}
   if(prevVoiceFade)voice.fade(450);   // FLOW: leaving a scene, her voice fades out (finished or not)
   songOut();stopCuesOut();cueHold=true;   // a song over a stretch stops when its memory is left
   const memory=await load(folder);stopVoice=null;stopBed=null;frame.atStop=null;frame.told=null;memVoiceAt=null;
@@ -143,7 +152,7 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   main.classList.add('ready');
   if(memory.sound?.after){SITTSound.preload(memory.sound.after);if(bed&&bed.url!==memory.sound.after){bed=SITTSound.fadeTo(bed,memory.sound.after,{volume:memory.sound.volume??1,overlap:memory.sound.overlap??2.5});W.bed=bed;}else if(!bed&&how&&free)startBed();}
   else if(bed&&how){bed.fadeOut(3);bed=null;W.bed=null;}   // a memory with no sound of its own is quiet (its sound comes later)
-  if(how){await shown;if(how.sharp){if(!early(memory))await whole();cueHold=false;}applyCam();if(!(how.goto&&how.stop!=null)&&voice.load(memory.voice))voice.play();}   // ERA: an earlier sharp return is there at once (its sequences time their own cuts), not held for the whole picture; a jump to a named stop: no opening voice
+  if(how){await shown;if(how.sharp){if(!early(memory))await whole();cueHold=false;}applyCam();if(!(how.goto&&how.stop!=null)&&!how.back&&voice.load(memory.voice))voice.play();}   // ERA: an earlier sharp return is there at once (its sequences time their own cuts), not held for the whole picture; a jump to a named stop: no opening voice
   else{applyCam();if(voice.load(memory.voice)){voice.onEnd=()=>{handOver();startBed();};}else{handOver();startBed();}}
   ahead(memory);timeline.update();glimpse.set(memory,null);way.set(memory);
   W.nextAuto=false;W.nextBlend=false;if(memory.exits?.right?.to){const nf=memory.exits.right.to;load(nf).then(n=>{if(W.memory===memory){glimpse.set(memory,n);W.nextAuto=!!n.auto&&!seen.has(nf);W.nextBlend=W.nextAuto&&!!DREAM[n.cut?.style]&&!early(n);}}).catch(()=>{});}   // nextBlend: the sequence ahead has its own dream cut   // ERA: the arriving memory's: an earlier sequence ahead is always crossed by hand
@@ -153,9 +162,12 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  W.open=open;
  // warm up the memories either side (and behind doors), so going there starts at once
  const warmed=new Set();
- function ahead(memory){const fs=[memory.exits?.left?.to,memory.exits?.right?.to,...(memory.doors||[]).map(d=>d.to),memory.id==='the-glass-house'?ZONE:null].filter(Boolean);   // the glass house: also the wrong turn's zone
+ function ahead(memory){const fs=[memory.exits?.left?.to,memory.exits?.right?.to,...(memory.doors||[]).map(d=>d.to),memory.id==='the-glass-house'?ZONE:null,...stops(memory).map(p=>p.sequence)].filter(Boolean);   // the glass house: also the wrong turn's zone; a stop's sequence too
+  const named={};for(const sd of ['left','right']){const e=memory.exits?.[sd];if(e?.to&&e.stop)(named[e.to]=named[e.to]||[]).push(e.stop);}   // a way out that lands on a named stop: that stop's pictures too
   for(const f of fs){if(warmed.has(f))continue;warmed.add(f);
-   load(f).then(m=>{if(f===ZONE){zoneBlend=!!DREAM[m.cut?.style];zoneMem=m;}const n=stops(m).length;scene.warm(m,{folder:f,set:W.set,source:W.source},m.auto?[...Array(n).keys()]:[...new Set([m.startStop??0,0,n-1])]);}).catch(()=>warmed.delete(f));}}
+   load(f).then(m=>{if(f===ZONE){zoneBlend=!!DREAM[m.cut?.style];zoneMem=m;}const n=stops(m).length,at=(named[f]||[]).map(nm=>stops(m).findIndex(p=>p.name===nm)).filter(i=>i>=0);
+    const fa=m.auto?.film?.audio;if(fa&&window.SITTSound)SITTSound.preload((m.cues?.library||'audio/')+fa.split('/').map(encodeURIComponent).join('/'));   // a film's music decoded ahead, so its first cut lands on time
+    scene.warm(m,{folder:f,set:W.set,source:W.source},m.auto?[...Array(n).keys()]:[...new Set([m.startStop??0,0,n-1,...at])]);}).catch(()=>warmed.delete(f));}}
  async function go(folder,how){if(!folder||busy)return false;busy=true;prevVoiceFade=true;T.raw=0;scene.settings.motion.amt=0;
   try{await open(folder,how);}finally{prevVoiceFade=false;busy=false;X.fresh=true;scene.settings.pan=0;T.pan=0;idleSince=performance.now();if(X.on){X.on=false;X.flip=0;X.finishing=false;delete window.SITT_CUT_T;dark.style.transition='none';dark.style.opacity=autoOn||W.lock?dark.style.opacity:0;}}return true;}
  W.go=go;
@@ -190,18 +202,21 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  W.travel=travel;
 
  // ---- the sound bed: after her voice, the memory's loop plays for as long as the visitor stays ----
- function startBed(){const S=W.memory?.sound;if(!S?.after||bed)return;bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}
+ // sound.afterLine: n — the bed comes in once her line n (from 0) has ended, not after all of them (the crash: after her first line)
+ function afterLineDone(S){const n=S?.afterLine;return Number.isInteger(n)?voice.ends.length>n:null;}
+ // (a joined strip: the bed starts only on the stops that have it, not on another scene's)
+ function startBed(){const S=W.memory?.sound;if(!S?.after||bed)return;if(W.memory.joinSpec&&stops(W.memory)[Math.round(T.s)]?.sound?.after!==S.after)return;bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}
  // ---- the veil: the title on dark, until the visitor clicks ----
  function begin(e){
   if(started||e?.target?.closest?.('.studio,.skip'))return;
-  started=true;const rev=W.memory?.voice?.audio?(W.memory.voice.reveal??8.5):2.5;veil.style.transitionDuration=rev+'s';veil.classList.add('lifting');skip.classList.add('on');
+  started=true;const rev=hasVoice(W.memory?.voice)?(W.memory.voice.reveal??8.5):2.5;veil.style.transitionDuration=rev+'s';veil.classList.add('lifting');skip.classList.add('on');
   try{SITTSound.context().resume();}catch{}
-  voice.play().then(ok=>{if(!ok){if(!W.memory?.voice?.audio){handOver();startBed();setTimeout(()=>veil.remove(),(rev+.6)*1000);return;}   // a memory with no voice: the veil just lifts
+  voice.play().then(ok=>{if(!ok){if(!hasVoice(W.memory?.voice)){handOver();startBed();setTimeout(()=>veil.remove(),(rev+.6)*1000);return;}   // a memory with no voice: the veil just lifts
     started=false;veil.classList.remove('lifting');return;}
    const h=W.memory?.voice?.handover,lead=W.memory?.sound?.startBeforeEnd??1.5;
    clearInterval(handTimer);handTimer=setInterval(()=>{const A=voice.audio;if(!A)return;
     if(Number.isFinite(h)&&A.currentTime>=h)handOver();
-    if(A.duration&&A.currentTime>=A.duration-lead)startBed();
+    if(afterLineDone(W.memory?.sound)??(A.duration&&!voice.left&&A.currentTime>=A.duration-lead))startBed();
     if(free&&bed)clearInterval(handTimer);},100);});
   setTimeout(()=>veil.remove(),(rev+.6)*1000);}
  veil.addEventListener('click',begin);
@@ -236,7 +251,7 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   for(const q of C.list){const on=q.on;
    const hit=on===ev&&ev!=='beat'||ev==='beat'&&(on==='beat'?q.beat===info.beat:on===info.how&&(q.beat==null||q.beat===info.beat));
    if(!hit||!q.file)continue;
-   const go=()=>SITTSound.play(lib+q.file.split('/').map(encodeURIComponent).join('/'),q).then(h=>{if(on!=='exit')liveCues.add({h,q});}).catch(()=>{});   // every cue but the way out's own stops at the way out
+   const go=()=>SITTSound.play((q.library||lib)+q.file.split('/').map(encodeURIComponent).join('/'),q).then(h=>{if(on!=='exit')liveCues.add({h,q});}).catch(()=>{});   // every cue but the way out's own stops at the way out
    if(q.delay)setTimeout(go,q.delay*1000);else go();}}
  function cuesOut(){for(const {h,q} of liveCues)h.stop(q.fadeOut??.4);liveCues.clear();}
  W.cue=cue;
@@ -244,17 +259,36 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  // (fadeIn) and out (fadeOut, or 1.5 s) as the visitor moves through; a once plays as the view arrives on its first stop (delay: seconds
  // after), and fades too if the visitor leaves its stops while it still sounds. Either plays again on coming back.
  const soundOn=()=>{try{return SITTSound.context().state==='running';}catch{return true;}};   // the browser allows sound (after the first click or key): until then a stop's voice and sounds wait, and start then
- const stopCues=new Map();let cueHold=false;
+ const stopCues=new Map();let cueHold=false,restStop=null;
  function stopCueTick(){if(cueHold)return;if(!soundOn())return;const C=W.memory?.cues;if(!C?.list||!free||!window.SITTSound?.play)return;const lib=C.library||'audio/';
   const arrive=!T.holding&&T.landing!=null&&Math.abs(T.s-T.landing)<.25?T.landing:Math.abs(T.s-Math.round(T.s))<.02?Math.round(T.s):null;
-  for(const q of C.list){if(!q.stops||!q.file)continue;const a=q.stops[0],b=q.stops[1]??a,inside=T.s>a-.5&&T.s<b+.5,live=stopCues.get(q);
+  // leave: a cue that plays as the view moves off its stop (the swipe's movement), panned a little toward the way it goes; dir: 1 or -1 only that way
+  let leaving=null;const restK=Math.abs(T.s-Math.round(T.s))<.02?Math.round(T.s):null;
+  if(restK!=null)restStop=restK;else if(restStop!=null&&Math.abs(T.s-restStop)>.04){leaving={k:restStop,dir:Math.sign(T.s-restStop)};restStop=null;}
+  for(const q of C.list){if(!q.stops||!q.file)continue;
+   if(q.leave){if(leaving&&leaving.k===q.stops[0]&&(!q.dir||q.dir===leaving.dir))SITTSound.play((q.library||lib)+q.file.split('/').map(encodeURIComponent).join('/'),{...q,pan:(q.pan??.25)*leaving.dir}).catch(()=>{});continue;}
+   const a=q.stops[0],b=q.stops[1]??a,inside=T.s>a-.5&&T.s<b+.5,live=stopCues.get(q);
    if(!inside){if(live){live.stop=true;live.h?.stop(q.fadeOut??1.5);stopCues.delete(q);}continue;}
    if(live||q.once&&arrive!==a)continue;
    // after: n waits for the stop's own voice to finish its part n (counted from 0), and delay counts from there
    let wait=q.delay||0;if(q.after!=null){const sv=stops(W.memory)[a]?.voice,end=stopVoice===sv?voice.ends[q.after]:null;if(end==null)continue;wait=Math.max(0,wait-(performance.now()-end)/1000);}
    const L={h:null,stop:false};stopCues.set(q,L);
-   const go=()=>{if(L.stop)return;SITTSound.play(lib+q.file.split('/').map(encodeURIComponent).join('/'),q).then(h=>{L.h=h;if(L.stop)h.stop(q.fadeOut??1.5);}).catch(()=>{});};
+   // say: the subtitle of a sound that is a voice (the officer); sayAt: seconds in, when the words start; sayFor: how long; sayEcho: shown as an echo (as hers)
+   const go=()=>{if(L.stop)return;if(q.say)setTimeout(()=>{if(!L.stop&&!voice.playing())voice.say(q.say,(q.sayFor??3.5)*1000,q.sayEcho);},(q.sayAt||0)*1000);
+    SITTSound.play((q.library||lib)+q.file.split('/').map(encodeURIComponent).join('/'),q).then(h=>{L.h=h;if(q.lead)leadVoice(a,q,h);if(L.stop)h.stop(q.fadeOut??1.5);}).catch(()=>{});};
    if(wait)setTimeout(go,wait*1000);else go();}}
+ // the sounds and lines of the stops either side are fetched ahead, so a scene's sound and her first line start together on arrival (not a second late, loading)
+ const warmedLines=new Set();function warmStops(k){try{const st=stops(W.memory),C=W.memory?.cues,lib=C?.library||'audio/';
+  for(const q of C?.list||[])if(q.file&&Array.isArray(q.stops)&&Math.abs(q.stops[0]-k)<=1)SITTSound.preload?.((q.library||lib)+q.file.split('/').map(encodeURIComponent).join('/'));
+  for(const j of [k,k+1,k-1])for(const p of st[j]?.voice?.parts||[])if(!warmedLines.has(p.audio)){warmedLines.add(p.audio);voice.warm?.(p.audio);}}catch{}}
+ // lead: a scene's sound made with her lines on one timeline (Dynamic + Hits, from the same master as her voice). Her lines wait for it
+ // and start from the moment it really starts (its first gap after it), so a slow load never pulls the two apart.
+ let leadWait=null;
+ function leadCue(k){return W.memory?.cues?.list?.find(q=>q.lead&&Array.isArray(q.stops)&&q.stops[0]===k);}
+ function stopVoiceGo(k,sv){voice.load(sv);stopVoice=sv;const q=leadCue(k);if(!q){voice.play();return;}
+  const L=stopCues.get(q);if(L?.h?.at!=null){leadVoice(k,q,L.h);return;}leadWait={sv,t:performance.now()};}
+ function leadVoice(k,q,h){const sv=stops(W.memory)[k]?.voice;if(!sv||stopVoice!==sv||voice.playing())return;leadWait=null;
+  const c=SITTSound.context(),since=c.currentTime-h.at;voice.play(Math.max(0,(sv.parts?.[0]?.gap||0)-since));}
  function stopCuesOut(){for(const [q,L] of stopCues){L.stop=true;L.h?.stop(q.fadeOut??1.5);}stopCues.clear();}
  // ---- a song over the memory: {file, library, gain, fadeOut, leave, holds}. It plays from the top when the memory opens and
  //  follows the visitor at its hold points (see SITTSound.song), the visitor moving as they like. Leaving the memory fades it
@@ -265,6 +299,25 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    song=SITTSound.song((S.library||'audio/')+S.file.split('/').map(encodeURIComponent).join('/'),S);W.song=song;}
   song.tick(T.s);}
  function songOut(){if(!song)return;song.stop(W.memory?.song?.leave??3);song=null;W.song=null;}
+ // ---- a beat loop over a stretch of stops (a stop's "loop": {file, library, lead, length, gain, fadeIn, fadeOut, held}) ----
+ //  lead: the silence the mp3 adds before the music (s); length: the loop (s): it repeats lead to lead+length, sample-tight.
+ //  It fades in on arriving at its stops, keeps its beat, and fades out on leaving them. A film that shares it (auto.film.loop)
+ //  takes over from it on a bar line and hands back to it at its end, at the matching point of the loop (What Ethel saw: Subtle_loop).
+ //  held: on that stop it plays only when handed back from the film, until the visitor swipes on (then it fades out).
+ const BL={cur:null,held:false,busy:false};W.beatLoop=BL;
+ const audioUrl=L=>(L.library||'audio/')+L.file.split('/').map(encodeURIComponent).join('/');
+ function loopPlay(L,{at,phase=0,fadeIn}={}){const c=SITTSound.context(),len=L.length,ph=((phase%len)+len)%len,lead=L.lead||0;BL.busy=true;
+  return SITTSound.play(audioUrl(L),{loop:true,offset:lead+ph,loopStart:lead,loopEnd:lead+len,at:at??c.currentTime+.05,gain:L.gain??1,fadeIn:fadeIn??L.fadeIn??2.5,duck:false})
+   .then(h=>{BL.busy=false;BL.cur={L,h,t0:h.at-ph};return BL.cur;}).catch(()=>{BL.busy=false;return null;});}
+ function loopOff(sec,at){if(!BL.cur)return;BL.cur.h.stop(sec??BL.cur.L.fadeOut??1.5,at);BL.cur=null;}
+ const loopPhase=at=>{const len=BL.cur.L.length;return ((at-BL.cur.t0)%len+len)%len;};
+ function loopTick(){if(!window.SITTSound||W.memory?.auto||autoOn||BL.busy)return;
+  const k=Math.round(T.s),L=stops(W.memory)[k]?.loop;
+  if(BL.held&&(!L?.held||T.goal>k+.12))BL.held=false;   // handed back from the film: it holds until the visitor swipes on
+  const want=L&&soundOn()&&free&&(!L.held||BL.held)?L:null;
+  if(!want){if(BL.cur)loopOff();return;}
+  if(BL.cur&&BL.cur.L.file!==want.file)loopOff();
+  if(!BL.cur&&Math.abs(T.s-k)<.06)loopPlay(want);}   // it starts only once the view is there (inside the bank), not on the way in
  const dark=document.createElement('div');dark.className='dark';dark.setAttribute('aria-hidden','true');main.appendChild(dark);
  const glare=document.createElement('div');glare.className='dark';glare.style.background='#fff';glare.setAttribute('aria-hidden','true');main.appendChild(glare);   // the white flick of a beat
  let autoOn=false;
@@ -317,9 +370,35 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
      else{cur=fr.f;setCam(fr.f,fr.s,fr.fit);}
      await holdBeat(b,{...fr,f:how==='whip'||how==='smear'?cur:fr.f});}}
    finally{W.beatCam=false;scene.settings.motion.amt=0;scene.settings.moment=null;scene.settings.sway=null;}}
+  // film (What Ethel saw): the shots on the music's own clock. Each cuts in at its time exactly (the cuts sit on the beat),
+  // its camera moving in straight lines between its keys [t, x, y, w, h] (t from its own cut), blurred with its speed.
+  // Without sound allowed, the page's clock stands in. See make_what_ethel_saw.py (WorkingFiles/_tools).
+  async function runFilm(){const F=A.film,shots=F.shots||[],S=scene.settings,url=F.audio?(m.cues?.library||'audio/')+F.audio.split('/').map(encodeURIComponent).join('/'):null;
+   let c=null,t0=null,music=null,back=false;W.beatCam=true;const FL=F.loop;
+   try{
+    if(url&&window.SITTSound&&soundOn()){try{await SITTSound.preload(url);if(FL)await SITTSound.preload(audioUrl(FL));if(W.memory!==m)return;c=SITTSound.context();let at=c.currentTime+.06;
+      // the loop already playing (the bank, the box): the music comes in on its next bar line, the loop dropping out there
+      if(FL&&BL.cur&&BL.cur.L.file===FL.file){const step=(FL.beat||FL.length)*(FL.switchBeats||4),ph=loopPhase(at);at+=Math.ceil(ph/step-1e-6)*step-ph;loopOff(FL.switchFade??.03,at);}
+      const h=await SITTSound.play(url,{gain:F.gain??1,duck:false,offset:F.lead||0,at});t0=h.at;W.filmAt=t0;music={h,q:{fadeOut:F.fadeOut??.5}};liveCues.add(music);}catch{c=null;t0=null;}}   // lead: the mp3's silence before the music, skipped
+    const p0=performance.now(),clock=()=>(t0!=null?c.currentTime-t0:(performance.now()-p0)/1000)-(F.sync||0);
+    // the hand back: the loop comes in at the film's last frame at the matching point of its beat (FL.at: where in the music the loop
+    // begins again), sample-tight, the music dropping out there; it then holds on the stop it lands on (held) until the visitor swipes on
+    const handBack=()=>{if(back||!FL||t0==null||!soundOn())return;back=true;const Te=t0+(F.sync||0)+F.end;
+     loopPlay(FL,{at:Te,phase:F.end-(FL.at||0),fadeIn:FL.switchFade??.03}).then(r=>{if(r)BL.held=true;});
+     if(music){liveCues.delete(music);music.h.stop(FL.switchFade??.03,Te);}};
+    const camOf=(sh,t)=>{const k=sh.k;let j=0;while(j<k.length-1&&k[j+1][0]<=t)j++;const a=k[j],b=k[j+1];if(!b||t<=a[0])return a.slice(1);const u=(t-a[0])/(b[0]-a[0]);return [1,2,3,4].map(n=>a[n]+(b[n]-a[n])*u);};
+    let cur=-1,lx=null,lt=0;
+    await new Promise(r=>{(function tick(){if(W.memory!==m)return r();const t=clock();if(t>=(F.end??Infinity)-.6)handBack();if(t>=(F.end??Infinity))return r();
+      let i=Math.max(0,cur);while(i<shots.length-1&&t>=shots[i+1].t)i++;const sh=shots[i];
+      if(i!==cur){cur=i;lx=null;T.s=T.goal=T.landing=sh.stop;T.reached=Math.max(T.reached,sh.stop);T.lastDir=0;lookAt(sh.stop);const nx=shots[i+1];if(nx)scene.aim({frame:nx.k[0].slice(1),s:nx.stop});}   // a cut: the next shot's pictures first
+      const f=camOf(sh,Math.max(0,t-sh.t)),cx=f[0]+f[2]/2;
+      if(lx!=null&&t>lt){const dx=(cx-lx)/f[2];S.motion.amt=(F.blur??1)*Math.abs(dx)/(t-lt);S.motion.dir=-Math.sign(dx)||1;}else S.motion.amt=0;lx=cx;lt=t;
+      setCam(f,sh.stop,0);requestAnimationFrame(tick);})();});}
+   finally{W.beatCam=false;S.motion.amt=0;}}
   try{
    if(dark.style.opacity>.05){dark.style.transition='opacity 260ms ease-out';dark.style.opacity=0;}   // come up out of the drop
-   if(Array.isArray(A.beats))await runBeats();
+   if(A.film)await runFilm();
+   else if(Array.isArray(A.beats))await runBeats();
    else for(let i=0;i<n;i++){if(W.memory!==m)return;
     if(i>0){blink(1);await wait(A.flash??70);}
     T.s=T.goal=T.landing=i;T.reached=i;T.lastDir=0;applyCam();
@@ -330,7 +409,8 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    if(W.memory!==m)return;
    if(!A.sharp){dark.style.transition='opacity '+(A.dark??2200)+'ms cubic-bezier(.5,0,.9,.6)';dark.style.opacity=1;await wait((A.dark??2200)+250);}   // TESTING: "sharp": no erosion into the dark
    const to=m.exits?.right?.to;cuesOut();cue(m,'exit');
-   if(to)await go(to,{side:'right',sharp:!!A.sharp});
+   const at=m.exits?.right?.stop;   // a sequence set off from a stop lands back on the stop it names
+   if(to)await go(to,{side:'right',sharp:!!A.sharp,...(at?{stopName:at,back:true}:{})});
   }finally{
    if(A.sharp){dark.style.transition='none';dark.style.opacity=0;}   // TESTING: "sharp": straight back, no coming up out of the dark
    else{dark.style.transition='opacity '+(A.reveal??1600)+'ms ease-out';dark.style.opacity=0;
@@ -519,6 +599,11 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   if(free&&!T.holding&&atEnd&&n===1&&Math.abs(T.goal-T.s)<.002&&now-idleSince>4500){if(!lean)lean=now;const t=(now-lean)/2600;
    if(t<1)pg=.022*flip()*Math.sin(Math.PI*t)**2;else{lean=null;idleSince=now+12000;}}
   if(T.guard&&Math.abs(T.s-T.guard.stop)>=.9){T.guard=null;T.hint=0;}
+  // a stop with "sequence" (a memory that plays by itself, like the wrong turn): going on from it, the first time in a visit,
+  // plays that sequence, which lands back on the stop its exits.right names (The box: What Ethel saw, then the evidence remains)
+  loopTick();
+  if(free&&!W.lock&&!autoOn&&!W.studio){const k=Math.round(T.s),q=stops(W.memory)[k]?.sequence;
+   if(q&&!seen.has(q)&&Math.abs(T.s-k)<.35&&T.goal>k+.12){T.goal=T.landing=k;T.holding=false;go(q,{side:'right',push:true,zoomTo:null});return;}}
   glimpse.update(free&&atEnd&&!busy&&!autoOn&&!W.nextAuto,Math.max(0,overshoot(T.goal)));
   way.update(free&&!busy&&!autoOn&&!W.nextAuto&&((canGo&&!T.holding&&Math.abs(T.goal-T.s)<.004&&now-T.lastIn>2600)||(now<T.hint&&!T.holding)));
   const prevPan=T.pan;T.pan+=(pg-T.pan)*(1-Math.exp(-dt/(T.holding?60:300)));
@@ -530,26 +615,26 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   if(!W.beatCam){S.motion.amt=v>.02?v:0;S.motion.dir=-Math.sign(moveScreens)||1;}
   if(!W.beatCam&&Math.abs(T.s-prev)>1e-5||Math.abs(T.pan-prevPan)>1e-6||S.motion.amt){S.cam=cam;S.pan=T.pan;lookAt(T.s);scene.changed();}
   songTick();
-  stopCueTick();
+  stopCueTick();if(leadWait&&performance.now()-leadWait.t>2500){const p=leadWait;leadWait=null;if(stopVoice===p.sv&&!voice.playing())voice.play();}   // its scene sound never came: she speaks anyway
   const old=E();   // ERA: earlier: no ducking, and a stop's voice waits until the view has come to rest on it
   if(!old){const A=voice?.audio;try{SITTSound.duck?.(!!A&&!A.paused&&A.volume>.3,W.memory?.cues?.duck);}catch{}}   // her voice on top: the sounds dip while she speaks
   // FLOW: a stop's own voice starts as the view arrives (a quarter of a stop out, landing on it), not once the glide has fully settled
   if(!old){const k=!T.holding&&T.landing!=null&&Math.abs(T.s-T.landing)<.25?T.landing:Math.abs(T.s-Math.round(T.s))<.02?Math.round(T.s):null;   // arriving, or resting (and so once sound is allowed, if it was not yet)
-   if(free&&k!=null&&soundOn()){const sv=stops(W.memory)[k]?.voice;if((sv?.audio||sv?.parts)&&stopVoice!==sv){voice.load(sv);voice.play();stopVoice=sv;}}}
+   if(free&&k!=null&&soundOn()){const sv=stops(W.memory)[k]?.voice;if((sv?.audio||sv?.parts)&&stopVoice!==sv)stopVoiceGo(k,sv);}}
   // a stop can carry one of Ethel's lines
-  const at=Math.round(T.s);if(Math.abs(T.s-at)<.02){if(at>T.reached)T.reached=at;if(at!==frame.atStop){frame.atStop=at;const sv=stops(W.memory)[at]?.voice;
+  const at=Math.round(T.s);if(Math.abs(T.s-at)<.02){if(at>T.reached)T.reached=at;if(at!==frame.atStop){frame.atStop=at;warmStops(at);const sv=stops(W.memory)[at]?.voice;
    if(old){if(sv?.audio&&free&&!(stopVoice===sv.audio&&voice.playing())){voice.load(sv);voice.play();stopVoice=sv.audio;}}   // ERA: earlier: by its file, and again once it has ended
-   else if((sv?.audio||sv?.parts)&&free&&stopVoice!==sv&&soundOn()){voice.load(sv);voice.play();stopVoice=sv;}   // FLOW: a stop's own voice plays when the view comes to rest on it
+   else if((sv?.audio||sv?.parts)&&free&&stopVoice!==sv&&soundOn())stopVoiceGo(at,sv);   // FLOW: a stop's own voice plays when the view comes to rest on it
    const line=stops(W.memory)[at]?.line;if(line&&!voice.playing())voice.say(line);
    if(W.memory.joinSpec&&free){const ss=stops(W.memory)[at]?.sound;   // TESTING: a joined strip: each memory's sound on its own stops
     if(ss?.after){if(!bed||bed.url!==ss.after)stopBed={...ss,since:performance.now()};}else{stopBed=null;if(bed){bed.fadeOut(3);bed=null;W.bed=null;}}}}}
   else if(Math.abs(T.s-at)>.3){frame.atStop=null;if(stopVoice){voice.fade(stopVoice.fadeOut??450);stopVoice=null;}}
   // MASTER: a memory's own opening line (memory.voice) fades out once the visitor moves away from where it began
-  {const MV=W.memory?.voice?.audio,A=voice.audio;if(MV&&A&&!A.paused&&decodeURI(A.src).includes(MV.split('?')[0])){if(memVoiceAt==null)memVoiceAt=T.goal;else if(free&&Math.abs(T.s-memVoiceAt)>.3){voice.fade(900);memVoiceAt=NaN;}}}
+  {const MV=W.memory?.voice,A=voice.audio,u=A?decodeURI(A.src):'',mine=!!A&&!!MV&&(MV.audio?u.includes(MV.audio.split('?')[0]):!!MV.parts?.some(p=>u.includes(p.audio)));if(mine&&(!A.paused||voice.left)){if(memVoiceAt==null)memVoiceAt=T.goal;else if(free&&Math.abs(T.s-memVoiceAt)>.3){voice.fade(900);memVoiceAt=NaN;}}}
   // the view has settled on a stop (not just passing it): 'sitt:stop', once per stop, for the UI (its picture's files)
   if(Math.abs(T.s-at)<.02&&Math.abs(T.goal-at)<.02){if(frame.told!==at){frame.told=at;dispatchEvent(new CustomEvent('sitt:stop',{detail:{folder:W.folder,stop:at}}));}}
   else if(Math.abs(T.s-at)>.3)frame.told=null;
-  if(stopBed&&performance.now()-stopBed.since>800){const A=voice.audio,lead=stopBed.startBeforeEnd??1.5;if(!voice.playing()||(A&&A.duration&&A.currentTime>=A.duration-lead)){const S=stopBed;stopBed=null;if(bed)bed.fadeOut(3);bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}}}   // starts as her line ends   // FLOW: moving off it, the voice fades
+  if(stopBed&&performance.now()-stopBed.since>800){const A=voice.audio,lead=stopBed.startBeforeEnd??1.5;if(afterLineDone(stopBed)??(!voice.playing()&&!voice.left||(A&&A.duration&&!voice.left&&A.currentTime>=A.duration-lead))){const S=stopBed;stopBed=null;if(bed)bed.fadeOut(3);bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}}}   // starts as her line ends   // FLOW: moving off it, the voice fades
 
  // ---- the way on: a blurred glimpse of the next memory breathes at the forward edge, brighter as the visitor pushes toward it ----
  const glimpse=(()=>{const el=document.createElement('div');el.className='ahead';el.setAttribute('aria-hidden','true');el.innerHTML='<i></i>';main.appendChild(el);
@@ -627,9 +712,9 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    started=true;
    const quick=Q.has('stop')&&!E();   // ERA: an earlier memory opened on a stop still has its opening voice, and the hand waits for it. MASTER: only an explicit ?stop= skips her opening line; the story opening on the crash (the list's startStop) plays it, as the live story did
    handOver();   // MASTER: the visitor can always move, forward or back, from the very start; her opening line plays on regardless
-   if(W.memory?.voice?.audio&&!quick){const h=W.memory.voice.handover,lead=W.memory.sound?.startBeforeEnd??1.5;clearInterval(handTimer);handTimer=setInterval(()=>{const A=voice.audio;if(!A||A.paused&&!A.currentTime)return;   // as begin() did: control at her handover, the sound bed just before she ends
-    if(Number.isFinite(h)&&A.currentTime>=h)handOver();if(A.duration&&A.currentTime>=A.duration-lead)startBed();if(free&&bed)clearInterval(handTimer);},100);}
-   if(W.memory?.voice?.audio&&!quick){const go=()=>{try{SITTSound.context().resume();}catch{}voice.play().then(ok=>{if(ok){if(!free)skip.classList.add('on');removeEventListener('pointerdown',go,true);removeEventListener('keydown',go,true);}});};
+   if(hasVoice(W.memory?.voice)&&!quick){const h=W.memory.voice.handover,lead=W.memory.sound?.startBeforeEnd??1.5;clearInterval(handTimer);handTimer=setInterval(()=>{const A=voice.audio;if(!A||A.paused&&!A.currentTime)return;   // as begin() did: control at her handover, the sound bed just before she ends
+    if(Number.isFinite(h)&&A.currentTime>=h)handOver();if(afterLineDone(W.memory?.sound)??(A.duration&&!voice.left&&A.currentTime>=A.duration-lead))startBed();if(free&&bed)clearInterval(handTimer);},100);}
+   if(hasVoice(W.memory?.voice)&&!quick){const go=()=>{try{SITTSound.context().resume();}catch{}voice.play().then(ok=>{if(ok){if(!free)skip.classList.add('on');removeEventListener('pointerdown',go,true);removeEventListener('keydown',go,true);}});};
     addEventListener('pointerdown',go,true);addEventListener('keydown',go,true);go();}
    // the studio: only with ?tune=1 (MASTER: never on by itself; nothing may cover the picture)
    const local=/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname);

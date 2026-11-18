@@ -60,9 +60,9 @@
   const srcs=[];const src=(rate,detune,delay,gain)=>{const s=c.createBufferSource();s.buffer=buf;s.playbackRate.value=rate;s.detune.value=detune;const sg=c.createGain();sg.gain.value=gain;s.connect(sg);sg.connect(into);if(o.loop){s.loop=true;s.loopStart=o.loopStart??(o.offset||0);s.loopEnd=o.loopEnd??buf.duration;}s.start(t+delay,o.offset||0);srcs.push(s);return s;};
   // loop with x (seconds): the stretch offset to loopEnd repeats as overlapping copies crossfaded over x, so a take that swells
   // and fades (a drive-by) can loop just its steady part without a seam
-  if(o.loop&&o.x){const a=o.offset||0,b=o.loopEnd??buf.duration,len=b-a,x=Math.min(o.x,len/3);let next=t,alive=true;
+  if(o.loop&&o.x){const RISE=new Float32Array(64).map((_,i)=>Math.sin(i/63*Math.PI/2)),FALL=RISE.slice().reverse(),a=o.offset||0,b=o.loopEnd??buf.duration,len=b-a,x=Math.min(o.x,len/3);let next=t,alive=true;
    const one=at=>{const s=c.createBufferSource(),g=c.createGain();s.buffer=buf;s.connect(g);g.connect(into);
-    g.gain.setValueAtTime(0,at);g.gain.linearRampToValueAtTime(1,at+x);g.gain.setValueAtTime(1,at+len-x);g.gain.linearRampToValueAtTime(0,at+len);
+    g.gain.setValueCurveAtTime(RISE,at,x);g.gain.setValueAtTime(1,at+len-x);g.gain.setValueCurveAtTime(FALL,at+len-x,x);   // equal power (18 Nov): a straight crossfade sags ~3 dB in the middle on a hum
     s.start(at,a,len);srcs.push(s);s.onended=()=>{const i=srcs.indexOf(s);if(i>=0)srcs.splice(i,1);};next=at+len-x;};
    one(t);const pump=()=>{if(!alive)return;while(next-c.currentTime<3)one(Math.max(next,c.currentTime+.02));setTimeout(pump,1000);};pump();
    return {stop(sec=.3){alive=false;const n=c.currentTime;out.gain.cancelScheduledValues(n);out.gain.setValueAtTime(out.gain.value,n);out.gain.linearRampToValueAtTime(0,n+sec);for(const s of [...srcs]){try{s.stop(n+sec+.05);}catch{}}}};}

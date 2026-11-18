@@ -87,6 +87,36 @@
       ]
      },
      {
+      "audio": "audio/SoundFX/Scenes/S06/S06_Social_Worker_You_Cant_Stay_Here_Tonight.mp3",
+      "gap": 0.8,
+      "echo": true,
+      "lines": [
+       {
+        "t": 0.25,
+        "end": 2.1,
+        "text": "“You can’t stay here tonight, Ethel.”"
+       },
+       {
+        "t": 2.4,
+        "end": 3.8,
+        "text": "“You’ll have to come with me.”"
+       }
+      ],
+      "tone": {
+       "gain": 0.5,
+       "highpass": 200,
+       "lowpass": 2400,
+       "reverb": 0.5,
+       "room": 3.6,
+       "echo": {
+        "time": 0.42,
+        "feedback": 0.3,
+        "wet": 0.28
+       },
+       "pan": -0.25
+      }
+     },
+     {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/This_Is_Really_Happening.mp3",
       "gap": 1.3,
       "lines": [
@@ -191,5 +221,101 @@
   }
  },
  "together": null,
- "era": "later"
+ "era": "later",
+ "cues": {
+  "library": "audio/",
+  "list": [
+   {
+    "name": "swipe: low deep B (into the homestead)",
+    "stops": [
+     0
+    ],
+    "once": true,
+    "file": "SoundFX/Swipes/Swipe_Low_Deep_B.mp3",
+    "gain": 1,
+    "fadeOut": 0.6,
+    "duck": false
+   },
+   {
+    "name": "swipe: the movement A (on through the homestead)",
+    "stops": [
+     0
+    ],
+    "leave": true,
+    "file": "SoundFX/Swipes/Swipe_Move_A.mp3",
+    "gain": 2.2,
+    "duck": false
+   },
+   {
+    "name": "swipe: the movement B (on to the garage)",
+    "stops": [
+     1
+    ],
+    "leave": true,
+    "file": "SoundFX/Swipes/Swipe_Move_B.mp3",
+    "gain": 2.5,
+    "duck": false
+   },
+   {
+    "name": "6 the homestead: the house (first picture)",
+    "stops": [
+     0,
+     0
+    ],
+    "file": "SoundFX/Scenes/S06/S06_Homestead_Ambience.mp3",
+    "gain": 1.05,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 5,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "6 the homestead: the desert under it (first picture)",
+    "stops": [
+     0,
+     0
+    ],
+    "file": "SoundFX/Land/Land_Ground_B.mp3",
+    "gain": 0.17200000000000001,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 5,
+    "fadeOut": 3,
+    "duck": false,
+    "offset": 1.5,
+    "loopEnd": 26.5
+   },
+   {
+    "name": "6 the homestead: the house (closer)",
+    "stops": [
+     1,
+     1
+    ],
+    "file": "SoundFX/Scenes/S06/S06_Homestead_Ambience.mp3",
+    "gain": 0.875,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "6 the homestead: the desert under it (closer)",
+    "stops": [
+     1,
+     1
+    ],
+    "file": "SoundFX/Land/Land_Ground_B.mp3",
+    "gain": 0.43,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false,
+    "offset": 1.5,
+    "loopEnd": 26.5
+   }
+  ]
+ }
 }

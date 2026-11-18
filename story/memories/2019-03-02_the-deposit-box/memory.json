@@ -585,20 +585,43 @@
       ]
      },
      {
-      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/If_I_Die_You_Need_to_open_it_Gran_said.mp3",
-      "gap": 0.5,
+      "audio": "audio/SoundFX/Scenes/S07/S07_Gran_If_I_Die_You_Need_To_Open_It.mp3",
+      "gap": 0.7,
+      "echo": true,
       "lines": [
        {
-        "t": 0.13,
-        "end": 1.94,
-        "text": "“If I die, then you need to open it,”"
+        "t": 0.45,
+        "end": 2.2,
+        "text": "“If I die, you need to open it.”"
        },
        {
-        "t": 1.89,
-        "end": 2.72,
-        "text": "Gran said."
+        "t": 3.25,
+        "end": 5,
+        "text": "“You know I can’t tell you what’s in it.”"
+       },
+       {
+        "t": 5.7,
+        "end": 6.6,
+        "text": "“Not yet.”"
        }
-      ]
+      ],
+      "tone": {
+       "gain": 0.35,
+       "highpass": 250,
+       "lowpass": 2000,
+       "reverb": 0.6,
+       "room": 4.2,
+       "echo": {
+        "time": 0.45,
+        "feedback": 0.35,
+        "wet": 0.35
+       },
+       "drift": {
+        "from": -0.2,
+        "to": 0.2,
+        "sec": 7
+       }
+      }
      },
      {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_busy.mp3",
@@ -634,7 +657,37 @@
     1998,
     1086
    ],
-   "name": "Leaving on the bike"
+   "name": "Leaving on the bike",
+   "voice": {
+    "parts": [
+     {
+      "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Shes_No_Social_Worker.mp3",
+      "gap": 9,
+      "lines": [
+       {
+        "t": 0.07,
+        "end": 1.76,
+        "text": "She's no social worker."
+       }
+      ],
+      "echo": true,
+      "tone": {
+       "gain": 0.6,
+       "highpass": 300,
+       "lowpass": 3200,
+       "reverb": 0.25,
+       "room": 2.2,
+       "echo": {
+        "time": 0.3,
+        "feedback": 0.2,
+        "wet": 0.15
+       }
+      }
+     }
+    ],
+    "fadeIn": 150,
+    "fadeOut": 2500
+   }
   },
   {
    "frame": [
@@ -1269,5 +1322,117 @@
   }
  },
  "together": null,
- "era": "later"
+ "era": "later",
+ "cues": {
+  "library": "audio/",
+  "list": [
+   {
+    "name": "7 the garage: the house",
+    "stops": [
+     0,
+     0
+    ],
+    "file": "SoundFX/Scenes/S06/S06_Homestead_Ambience.mp3",
+    "gain": 0.875,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "7 the garage: the desert",
+    "stops": [
+     0,
+     0
+    ],
+    "file": "SoundFX/Land/Land_Ground_B.mp3",
+    "gain": 0.559,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false,
+    "offset": 1.5,
+    "loopEnd": 26.5
+   },
+   {
+    "name": "swipe: the movement A (leaving the garage)",
+    "stops": [
+     0
+    ],
+    "leave": true,
+    "file": "SoundFX/Swipes/Swipe_Move_A.mp3",
+    "gain": 2.2,
+    "duck": false
+   },
+   {
+    "name": "swipe: low deep C, strong (onto the bike)",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Swipes/Swipe_Low_Deep_C.mp3",
+    "gain": 1.5,
+    "fadeOut": 0.6,
+    "duck": false
+   },
+   {
+    "name": "8 the bike: the desert",
+    "stops": [
+     1,
+     1
+    ],
+    "file": "SoundFX/Land/Land_Ground_B.mp3",
+    "gain": 0.215,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false,
+    "offset": 1.5,
+    "loopEnd": 26.5
+   },
+   {
+    "name": "8 the bike: the evening",
+    "stops": [
+     1,
+     1
+    ],
+    "file": "SoundFX/Scenes/S08/S08_Australian_Evening.mp3",
+    "gain": 0.875,
+    "loop": true,
+    "x": 2,
+    "fadeIn": 3,
+    "fadeOut": 3,
+    "duck": false
+   },
+   {
+    "name": "8 the bike: her bike starts and rides past",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S08/S08_Dirt_Bike_Starts_Rides_Past.mp3",
+    "gain": 0.9,
+    "fadeOut": 2,
+    "duck": false,
+    "delay": 0.4,
+    "fadeIn": 0.3
+   },
+   {
+    "name": "8 the bike: the woman runs, starts her car, drives after her",
+    "stops": [
+     1
+    ],
+    "once": true,
+    "file": "SoundFX/Scenes/S08/S08_Woman_Runs_Starts_Car_Drives_Past.mp3",
+    "gain": 2.2,
+    "fadeOut": 3,
+    "duck": false,
+    "delay": 0.4,
+    "fadeIn": 5.5
+   }
+  ]
+ }
 }

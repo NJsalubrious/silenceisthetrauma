@@ -245,7 +245,13 @@
    return t;}
   // pictures reach the graphics card a few at a time (a frame's worth each), so moving never stutters while they arrive
   const uploads=[];
-  const upload=(image,grey)=>new Promise((res,rej)=>uploads.push(()=>{try{res(texture(image,grey));}catch(e){rej(e);}}));
+  const upload0=(image,grey)=>new Promise((res,rej)=>uploads.push(()=>{try{res(texture(image,grey));}catch(e){rej(e);}}));
+  // LIGHT (18 Nov, TESTING, only with ?light=1; nothing changes without it): the same pictures, the same depth search and edges ("new" exactly),
+  // only lighter work for a weaker device: (1) each picture is turned upright off the main thread (an ImageBitmap, flipY) before it goes up,
+  // so the upload is a plain copy (measured about 6x quicker), the same pixels; (2) drawn at fewer screen pixels; (3) a steady 30 a second
+  const LIGHT=(()=>{const q=new URLSearchParams(location.search).get('light');if(!q||q==='0')return null;const s=parseFloat(q);return {res:s>0&&s<1?s:.7};})();
+  const upload=(image,grey)=>{if(!LIGHT||!window.createImageBitmap)return upload0(image,grey);
+   return createImageBitmap(image,{imageOrientation:'flipY',premultiplyAlpha:'none'}).then(b=>upload0(b,grey).finally(()=>b.close?.()),()=>upload0(image,grey));};   // (an ImageBitmap ignores the upload's own flip, so it goes up as it is)
   function pump(){const t0=performance.now();while(uploads.length){uploads.shift()();if(performance.now()-t0>6)break;}}
   const wc=document.createElement('canvas');wc.width=wc.height=1;const c2=wc.getContext('2d');c2.fillStyle='white';c2.fillRect(0,0,1,1);const white=texture(wc);
   // STORYTELLING aged print: each picture's marks (red = pale specks and scratches, green = dark dust, blue = foxing), set by the aged test only
@@ -337,7 +343,7 @@
   function makeTarget(w,h){const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,w,h,0,gl.RGBA,gl.UNSIGNED_BYTE,null);params();
    const f=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,f);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,t,0);return {texture:t,framebuffer:f};}
   function resize(){dirty=true;const r=canvas.getBoundingClientRect();width=r.width||1;height=r.height||1;
-   const ratio=Math.min(devicePixelRatio||1,width<700?1.5:1.25,2000/Math.max(width,height));
+   const ratio=Math.min(devicePixelRatio||1,width<700?1.5:1.25,2000/Math.max(width,height))*(LIGHT?LIGHT.res:1);   // LIGHT: fewer pixels drawn, the canvas stretched to fill (softer, the same picture)
    canvas.width=Math.max(1,Math.round(width*ratio));canvas.height=Math.max(1,Math.round(height*ratio));
    for(const t of targets){gl.deleteTexture(t.texture);gl.deleteFramebuffer(t.framebuffer);}targets=Array.from({length:6},()=>makeTarget(canvas.width,canvas.height));}
   const profile=(st=S)=>DS.presets[st.profile]||DS.presets[DS.defaultProfile];
@@ -571,7 +577,7 @@
    requestAnimationFrame(draw);
    if(lost)return;pump();
    if(!current||document.hidden)return;
-   if(now-last<25)return;
+   if(now-last<(LIGHT?31:25))return;   // LIGHT: a steady 30 a second or near it (every 2nd frame at 60 Hz, 4th at 120, 5th at 144, 6th at 165)
    const moving=S.motion.amt>.0005||ghostLeft>0;
    if(current?.strip)ensure(current);
    if(!dirty&&!transition&&!moving&&now>fadeUntil&&Math.abs(tx-px)+Math.abs(ty-py)<.00015)return;      // nothing moved: draw nothing (saves the phone)

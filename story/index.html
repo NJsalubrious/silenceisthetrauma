@@ -32,6 +32,8 @@
 <script src="engine/soundscape.js?v=202611182100"></script>
 <script>
  // the earlier story's other tellings, only when asked: ?seq=dream | quiet | sequence (each replaces the pool for 014 to 016)
+ // a performance readout, only when asked: ?perf=1 (frames per second, freezes, the graphics chip, the drawn size)
+ if (new URLSearchParams(location.search).get('perf') === '1') { const e = document.createElement('script'); e.src = 'engine/perf.js?v=202611182100'; document.head.appendChild(e); }
  (() => { const s = new URLSearchParams(location.search).get('seq'); if (['dream', 'quiet', 'sequence'].includes(s)) { const e = document.createElement('script'); e.src = 'engine/' + s + '.js?v=202611182100'; document.head.appendChild(e); } })();
 </script>
 <script>

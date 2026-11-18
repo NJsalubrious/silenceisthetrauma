@@ -38,7 +38,12 @@
    const into=c.createGain();into.connect(head);src.connect(into);
    if(t.reverb){const cv=c.createConvolver(),w=c.createGain();cv.buffer=roomIR(c,t.room??3);w.gain.value=t.reverb;into.connect(cv);cv.connect(w);w.connect(head);}
    if(t.echo){const d=c.createDelay(3),fb=c.createGain(),w=c.createGain();d.delayTime.value=t.echo.time??.35;fb.gain.value=t.echo.feedback??.3;w.gain.value=t.echo.wet??.3;into.connect(d);d.connect(fb);fb.connect(d);d.connect(w);w.connect(head);}
-   if(t.rate){a.preservesPitch=false;a.playbackRate=t.rate;a.defaultPlaybackRate=t.rate;}}catch(e){console.warn('voice tone',e);}}
+   if(t.rate){a.preservesPitch=false;a.playbackRate=t.rate;a.defaultPlaybackRate=t.rate;}
+   // (18 Nov) once the line has stopped and its room and echo have rung out, the chain is taken off the sound card, so a story of many lines
+   // does not keep every one's reverb and echo working; it goes back on if the line plays again
+   const tail=((t.reverb?t.room??3:0)+(t.echo?(t.echo.time??.35)*10:0)+.5)*1000;let off=0,on=true;
+   const rest=()=>{clearTimeout(off);off=setTimeout(()=>{if(a.paused||a.ended){try{out.disconnect();}catch{}on=false;}},tail);};
+   a.addEventListener('pause',rest);a.addEventListener('ended',rest);a.addEventListener('play',()=>{clearTimeout(off);if(!on){out.connect(c.destination);on=true;}});}catch(e){console.warn('voice tone',e);}}
   // warm(url): a line's player made ahead (loading), so it starts at once when its stop comes (one() takes it)
   const warmPlayers=new Map();function warm(url){if(warmPlayers.has(url)||warmPlayers.size>40)return;const a=new Audio(url);a.preload='auto';a.load();warmPlayers.set(url,a);}
   function one(p){const pre=warmPlayers.get(root+p.audio);warmPlayers.delete(root+p.audio);audio=pre||new Audio(root+p.audio);audio.preload='auto';from=p.from||0;to=p.to??null;skip=p.skip||[];if(from)audio.currentTime=from;

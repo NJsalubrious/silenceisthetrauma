@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_7ae17756",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "A 'sea of flames' is just another name for the water I learned to drink.",
+    "timestamp": "2026-11-18T01:17:07.228671Z",
+    "reply_to": null,
+    "link": "https://blabbermouth.net/news/steve-hackett-announces-new-solo-album-through-a-sea-of-flames",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_3220ec78",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

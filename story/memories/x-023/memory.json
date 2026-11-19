@@ -56,12 +56,9 @@
   "vertical": 0.45,
   "framing": "cover"
  },
- "look": {
-  "grain": 0.012,
-  "vignette": 0.14
- },
+ "look": {},
  "cut": {
-  "duration": 1800,
+  "duration": 1500,
   "travel": 0.07
  },
  "exits": {

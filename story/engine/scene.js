@@ -240,7 +240,7 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const S={pan:0,cam:{x:0,y:0,zoom:1},motion:{amt:0,dir:1},look:{...LOOK},
    profile:DS.defaultProfile,strength:1,opening:1,vertical:DS.presets[DS.defaultProfile].verticalScale,framing:'cover',view:'scene',light:2,response:null,overscan:null,
-   edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges2')||'old';}catch{return 'old';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (ERA: an earlier memory always draws its own search)
+   edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges2')||'old';}catch{return 'old';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (19 Nov: earlier memories follow it too, like the crash)
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
   const early=d=>d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;
@@ -463,7 +463,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    gl.bindFramebuffer(gl.FRAMEBUFFER,target.framebuffer);gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(.025,.04,.043,1);gl.clear(gl.COLOR_BUFFER_BIT);
    use(layerProgram);gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
    const st=settingsFor(data),m=motion(data.scene,st),view=S.view,E=early(data);
-   gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),E||S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: an earlier memory always takes the fine search (it had no switch)
+   gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: an earlier memory always takes the fine search (it had no switch)
    if(!E)gl.uniform1f(uniform(layerProgram,'marksOn'),0);   // ERA: a later picture never carries aged marks (the earlier engine left them as the last strip set them)
    bind(layerProgram,'foregroundMask',data.layers.at(-1).colorTexture,2);
    const showDepth=depthPass||view.includes('depth');
@@ -505,7 +505,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    gl.bindFramebuffer(gl.FRAMEBUFFER,target.framebuffer);gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(.025,.04,.043,1);gl.clear(gl.COLOR_BUFFER_BIT);
    use(layerProgram);gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
    const st=settingsFor(data),m=motion(data.scene,st),E=early(data);
-   gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),E||S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: as in renderScene
+   gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: as in renderScene
    gl.uniform1f(uniform(layerProgram,'light'),st.light??2);gl.uniform1f(uniform(layerProgram,'backgroundFallback'),0);
    const mo=data===current&&!transition?S.moment:null;
    if(mo){drawWorld(data,st,m,mo.a,1,passage,depthPass);drawWorld(data,st,m,mo.b,mo.t,passage,depthPass);}

@@ -63,8 +63,7 @@
   "profile": "deeper",
   "strength": 1.5,
   "vertical": 0.45,
-  "framing": "cover",
-  "response": 320
+  "framing": "cover"
  },
  "look": {
   "grain": 0.012,

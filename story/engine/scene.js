@@ -231,6 +231,7 @@
  // the house look (Walk Left's motion, depth-map-test's finish); a memory's own "look" overrides these
  const LOOK={blur:1,trail:1,warm:0,cold:0,vignette:.13,deepVignette:0,grain:.011,glide:260,landWait:480,landEase:650};
  function create(canvas){
+  const ERA1=/[?&]era=1/.test(location.search);   // ONE WAY (19 Nov): every scene the visitor moves through is drawn like the crash; ?era=1 brings back the earlier story's own rules, to compare
   const CTX={alpha:false,antialias:false,powerPreference:'low-power',preserveDrawingBuffer:false},Q0=location.search;
   // GL2 (19 Nov): WebGL2 where the browser has it (?gl=1 forces the first WebGL): the same shaders, read the same way, but it can tell when the
   // graphics chip has finished a picture, so a new one is only sent once the last is done (no queue of pictures waiting = no lag behind the hand)
@@ -242,7 +243,7 @@
    profile:DS.defaultProfile,strength:1,opening:1,vertical:DS.presets[DS.defaultProfile].verticalScale,framing:'cover',view:'scene',light:2,response:null,overscan:null,
    edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges2')||'old';}catch{return 'old';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (19 Nov: earlier memories follow it too, like the crash)
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
-  const early=d=>d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
+  const early=d=>ERA1&&d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;
   let fence=null,fenceAt=0;const PACE=GL2&&!/[?&]queue=1/.test(Q0);window.SITTGLMode=(GL2?'webgl2':'webgl1')+(PACE?', no queue':'');   // ?queue=1: pictures may queue as before (to compare)
   let pid=0;const uniform=(p,n)=>{const u=p.__u||(p.__u=Object.create(null));let l=u[n];if(l===undefined)l=u[n]=gl.getUniformLocation(p,n);return l;};   // each program keeps its own (no new string every call, so no clean-up pauses)

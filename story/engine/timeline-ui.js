@@ -18,6 +18,7 @@
  */
 (() => {
   'use strict';
+ const ERA1 = /[?&]era=1/.test(location.search);   // ONE WAY (19 Nov): every scene like the crash; ?era=1: the earlier story's own framing and feel, to compare
   const Q = new URLSearchParams(location.search);
   const phone = matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 820;
   const ROOT = 'D:\\SITT_STORY_TESTING\\Full_Timeline\\', WEB = ROOT + 'silenceisthetrauma\\story\\pictures\\', MASTER = ROOT + 'WorkingFiles\\Master_PNGS_PSDS\\';
@@ -216,12 +217,12 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
   }
   function layout() {
     if (!win) return;
-    document.documentElement.classList.toggle('full', full); if (W?.memory) document.documentElement.classList.toggle('later', W.memory.era !== 'earlier');
+    document.documentElement.classList.toggle('full', full); if (W?.memory) document.documentElement.classList.toggle('later', !(ERA1 && W.memory.era === 'earlier'));
     const was = win.style.transform; win.style.transform = 'none';   // measure flat, so the engine sizes itself to the real box
     if (full) { bw = innerWidth; bh = innerHeight; Object.assign(win.style, { left: '0px', top: '0px', width: bw + 'px', height: bh + 'px' }); }
     else {
       const m = W?.memory, pw = m?.sections?.[0]?.width || 2000, ph = m?.height || 1024, aw = innerWidth * .9, ah = innerHeight - 64 - 70;
-      const ar = m?.era === 'earlier' ? pw / ph : innerWidth / innerHeight;   // the earlier rooms: the picture's own shape (as the window test); the later story: the screen's (as it plays full screen)
+      const ar = (ERA1 && m?.era === 'earlier') ? pw / ph : innerWidth / innerHeight;   // the earlier rooms: the picture's own shape (as the window test); the later story: the screen's (as it plays full screen)
       bw = Math.min(aw, ah * ar); bh = bw / ar;
       Object.assign(win.style, { left: (innerWidth - bw) / 2 + 'px', top: 64 + (ah - bh) / 2 + 'px', width: bw + 'px', height: bh + 'px' });
       // a hairline rule just outside the picture, running a little past each corner like crop marks
@@ -370,7 +371,7 @@ ${rest.length ? `<h4>The rest of this memory</h4>${rest.map(block).join('')}` : 
   /* ---------- the earlier Explore's "feel" (light, focus, air), only when asked: ?feel=1 ---------- */
   function feel() {
     if (Q.get('feel') !== '1') return;
-    const apply = () => { const S = W.scene.settings; S.feel = W.memory?.era === 'earlier' ? (W.memory?.feel || null) : null; W.scene.changed?.(); };
+    const apply = () => { const S = W.scene.settings; S.feel = (ERA1 && W.memory?.era === 'earlier') ? (W.memory?.feel || null) : null; W.scene.changed?.(); };
     apply(); addEventListener('sitt:memory', () => setTimeout(apply, 0));
   }
 

@@ -30,11 +30,18 @@
     let b = n - 1; while (b > a && r[b] < floor) b--;
     return { start: a * w / sr, end: (b + 1) * w / sr };
   }
+  // kept for reuse up to a budget (19 Nov): the textures used longest ago are let go past it, so nothing piles up over hundreds of scenes
+  const bytes = new Map(), BUDGET = (matchMedia('(pointer:coarse)').matches ? 32 : 96) * 1048576;
   function load(file) {
-    if (!cache.has(file)) cache.set(file, fetch('audio/soundscape/' + encodeURIComponent(file), { cache: 'no-store' })
+    let p = cache.get(file); if (p) { cache.delete(file); cache.set(file, p); return p; }
+    p = fetch('audio/soundscape/' + encodeURIComponent(file), { cache: 'no-store' })
       .then(r => { if (!r.ok) throw Error(file + ' ' + r.status); return r.arrayBuffer(); })
-      .then(b => audio().decodeAudioData(b)).then(buf => ({ buf, ...body(buf) })));
-    return cache.get(file);
+      .then(b => audio().decodeAudioData(b)).then(buf => ({ buf, ...body(buf) }));
+    p.then(i => { if (cache.get(file) !== p) return; bytes.set(file, i.buf.length * i.buf.numberOfChannels * 4);
+      let tot = 0; for (const v of bytes.values()) tot += v;
+      for (const k of [...cache.keys()]) { if (tot <= BUDGET) break; if (!bytes.has(k) || k === file) continue; tot -= bytes.get(k); bytes.delete(k); cache.delete(k); } },
+      () => { if (cache.get(file) === p) cache.delete(file); });
+    cache.set(file, p); return p;
   }
   // equal-power curves: two unrelated textures crossing keep the same loudness through the cross
   const curve = up => { const n = 64, c = new Float32Array(n); for (let i = 0; i < n; i++) { const t = i / (n - 1); c[i] = up ? Math.sin(t * Math.PI / 2) : Math.cos(t * Math.PI / 2); } return c; };

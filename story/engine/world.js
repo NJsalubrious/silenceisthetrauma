@@ -40,7 +40,7 @@
  const stops=m=>m?.stops?.length?m.stops:[{x:0,y:0,zoom:1}];
  W.stops=stops;
  // ERA: a memory of the earlier story ("era": "earlier" in its memory.json) moves, crosses and speaks as the earlier engine did; any other is the later story's
- const early=m=>m?.era==='earlier',E=()=>early(W.memory);
+ const early=m=>/[?&]era=1/.test(location.search)&&m?.era==='earlier',E=()=>early(W.memory);
  W.early=early;
  // TESTING: the layers a shot really draws: in view at its frame (the part the screen shows), and not left out of it ("stops")
  W.shotLayers=(s=Math.round(T.s))=>{const m=W.memory;if(!m)return [];const p=stops(m)[s],cur=scene?.current?.(),off=l=>Array.isArray(l.stops)&&!l.stops.includes(s),all=m.layers.map((l,i)=>[l,i]);

@@ -11,8 +11,14 @@
  'use strict';
  let ctx=null;
  const audio=()=>ctx||(ctx=new (window.AudioContext||window.webkitAudioContext)());
- const cache=new Map();
- function decode(url){if(!cache.has(url))cache.set(url,fetch(url).then(r=>{if(!r.ok)throw Error(url+' '+r.status);return r.arrayBuffer();}).then(b=>audio().decodeAudioData(b)));return cache.get(url);}
+ // decoded sounds are kept for reuse, up to a budget (19 Nov): past it the ones used longest ago are let go (a sound still playing keeps
+ // its own copy until it ends), so hundreds of scenes never pile up in memory; a sound that failed to load is tried again next time
+ const cache=new Map(),bytes=new Map(),BUDGET=(matchMedia('(pointer:coarse)').matches?48:128)*1048576;
+ function trim(keep){let tot=0;for(const v of bytes.values())tot+=v;for(const k of [...cache.keys()]){if(tot<=BUDGET)break;if(!bytes.has(k)||k===keep)continue;tot-=bytes.get(k);bytes.delete(k);cache.delete(k);}}
+ function decode(url){let p=cache.get(url);if(p){cache.delete(url);cache.set(url,p);return p;}   // used again: now the most recent
+  p=fetch(url).then(r=>{if(!r.ok)throw Error(url+' '+r.status);return r.arrayBuffer();}).then(b=>audio().decodeAudioData(b));
+  p.then(buf=>{if(cache.get(url)===p){bytes.set(url,buf.length*buf.numberOfChannels*4);trim(url);}},()=>{if(cache.get(url)===p)cache.delete(url);});
+  cache.set(url,p);return p;}
  // find where the sound really starts and ends (MP3 files carry a little silence at each end)
  function edges(buf){const d=buf.getChannelData(0),sr=buf.sampleRate;let a=0,b=d.length-1;
   while(a<d.length&&Math.abs(d[a])<1e-4)a++;while(b>a&&Math.abs(d[b])<1e-4)b--;return [a/sr,(b+1)/sr];}

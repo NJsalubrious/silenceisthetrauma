@@ -75,8 +75,8 @@
   function text(label,get,set){const i=C.push({get,set,text:true})-1;return `<label>${label}<input type="text" data-c="${i}" value="${esc(get())}"></label>`;}
   function check(label,get,set){const i=C.push({get,set,check:true})-1;return `<label class="check"><input type="checkbox" data-c="${i}" ${get()?'checked':''}> ${label}</label>`;}
   function select(label,opts,get,set){const i=C.push({get,set,select:true})-1;return `<label>${label}<select data-c="${i}">${opts.map(([v,n])=>`<option value="${esc(v)}" ${String(get())===String(v)?'selected':''}>${esc(n)}</option>`).join('')}</select></label>`;}
-  // edges of Mid and Top layers: new (the working version) or old, kept permanently to compare on the same shot; not saved into the memory (this browser remembers it)
-  const edges=v=>{S.edges=v;try{localStorage.setItem('sitt-edges2',v);}catch{}W.scene.changed();render();say('Edges: '+(v==='new'?'new (finer)':'old'));};
+  // edges of Mid and Top layers: new (the working version) or old, kept permanently to compare on the same shot; not saved into the memory, and always opens on old (new lasts only this visit)
+  const edges=v=>{S.edges=v;W.scene.changed();render();say('Edges: '+(v==='new'?'new (finer)':'old'));};
   const btn=(b,t,cls='')=>`<button data-b="${b}" class="${cls}">${t}</button>`;
   const group=(id,title,body)=>`<details data-g="${id}" ${st.open.has(id)?'open':''}><summary>${title}</summary>${body}</details>`;
   const memOpts=(none='None')=>[['',none],...W.list.memories.map(x=>[x.folder,x.date+' · '+x.folder.replace(/^\d{4}-\d\d-\d\d_/,'')])];

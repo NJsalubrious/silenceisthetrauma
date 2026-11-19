@@ -241,7 +241,7 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const S={pan:0,cam:{x:0,y:0,zoom:1},motion:{amt:0,dir:1},look:{...LOOK},
    profile:DS.defaultProfile,strength:1,opening:1,vertical:DS.presets[DS.defaultProfile].verticalScale,framing:'cover',view:'scene',light:2,response:null,overscan:null,
-   edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges2')||'old';}catch{return 'old';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (19 Nov: earlier memories follow it too, like the crash)
+   edges:new URLSearchParams(location.search).get('edges')==='new'?'new':'old',   // 19 Nov: always opens on old; new only when chosen (?edges=new, the edges button, E or the studio), never remembered for the next visit   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (19 Nov: earlier memories follow it too, like the crash)
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
   const early=d=>ERA1&&d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;

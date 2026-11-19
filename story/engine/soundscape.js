@@ -81,10 +81,12 @@
   }
 
   const passageOf = folder => cfg.passages.find(p => p.rooms.includes(folder)) || null;
+  // the room on screen: in a joined strip (19 Nov) the room of the shot the view is at, not the strip's own name
+  const roomOf = W => { const st = W?.memory?.stops, k = Math.round(W?.track?.s ?? 0); return (W?.memory?.joinSpec && st?.[k]?.from) || W?.folder; };
   function show() { if (label) label.textContent = (muted ? '♪ off' : '♪ ') + (muted ? '' : (cur ? cur.p.name : live ? 'silence' : 'click to start sound')); }
   function update() {
     if (!live) { show(); return; }
-    const W = window.SITTWorldState, p = passageOf(W?.folder), fade = cfg.fade ?? 6;
+    const W = window.SITTWorldState, p = passageOf(roomOf(W)), fade = cfg.fade ?? 6;
     if (cur && p && cur.p === p) return;   // same passage: the sound keeps running
     const from = !!cur;
     if (cur) { cur.stop(fade); fading.set(cur.p, cur); cur = null; }
@@ -123,6 +125,7 @@
     for (const p of cfg.passages) load(p.file).catch(e => console.error('soundscape', e));   // decode them all ahead, so a change never waits
     bar();
     addEventListener('sitt:memory', () => setTimeout(update, 0));
+    setInterval(() => { if (live) update(); }, 400);   // sliding along a strip crosses rooms without a new memory: looked at a few times a second (only compares names)
     addEventListener('pointerdown', go, true); addEventListener('keydown', go, true);
     go();
   }

@@ -292,8 +292,8 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
     const br = document.createElement('button'); br.type = 'button'; br.textContent = '↻'; br.title = 'Reload the pictures on screen (R)';
     const bf = document.createElement('button'); bf.type = 'button'; bf.className = 'xfull'; bf.title = 'Full view (F)';   // top right, opposite the brand
     const be = document.createElement('button'); be.type = 'button';   // the depth-edge search: new (the working version) or old, to compare (also on phones, for performance)
-    const edgesNow = () => W.scene.settings.edges || 'new', showEdges = () => { be.textContent = 'edges: ' + edgesNow(); be.title = 'Depth edges of cut-outs: new (the working version) or old, to compare. E flips. This browser remembers it. (The earlier rooms always play with the new, as their story did.)'; };
-    const flipEdges = () => { const v = edgesNow() === 'new' ? 'old' : 'new'; W.scene.settings.edges = v; try { localStorage.setItem('sitt-edges', v); } catch {} W.scene.changed?.(); showEdges(); };
+    const edgesNow = () => W.scene.settings.edges || 'old', showEdges = () => { be.textContent = 'edges: ' + edgesNow(); be.title = 'Depth edges of cut-outs: new (the working version) or old, to compare. E flips. This browser remembers it. (The earlier rooms always play with the new, as their story did.)'; };
+    const flipEdges = () => { const v = edgesNow() === 'new' ? 'old' : 'new'; W.scene.settings.edges = v; try { localStorage.setItem('sitt-edges2', v); } catch {} W.scene.changed?.(); showEdges(); };
     showEdges(); be.addEventListener('click', flipEdges);
     addEventListener('keydown', e => { if ((e.key === 'e' || e.key === 'E') && !e.ctrlKey && !e.metaKey && !document.documentElement.classList.contains('tuning') && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); flipEdges(); } });   // (the studio, when open, flips it itself)
     okEl = document.createElement('span'); okEl.className = 'ok';

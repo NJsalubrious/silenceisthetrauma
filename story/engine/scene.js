@@ -18,7 +18,7 @@
  uniform float enhanced,depthTravel,layerParallax,backgroundFallback,seamLock,perspX,plim,edges;
  uniform float early;   // ERA: 1 for a memory of the earlier story (memory.json "era":"earlier"): its own pointer, search jitter and margin
  uniform float blurR,focusD;uniform vec4 haze;uniform vec2 focusAt;uniform sampler2D marksMap;uniform float marksOn;   // STORYTELLING multiplane: out-of-focus radius for this layer, and the haze between the planes (rgb, amount)
- // edges: the WORKING VERSION (the default). The storytelling engine's finer depth search, so the edges of Mid and Top layers don't smear.
+ // edges (19 Nov: 'old' is the default now; ?edges=new, the studio or E for the finer search): the finer search. The storytelling engine's finer depth search, so the edges of Mid and Top layers don't smear.
  // The old search stays beside it on purpose, to compare (studio "Edges of cut-outs", the E key, or ?edges=old). Later this is stripped down to optimised basics; the author decides then.
  #ifdef GL_FRAGMENT_PRECISION_HIGH
  #define HP highp
@@ -223,7 +223,7 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const S={pan:0,cam:{x:0,y:0,zoom:1},motion:{amt:0,dir:1},look:{...LOOK},
    profile:DS.defaultProfile,strength:1,opening:1,vertical:DS.presets[DS.defaultProfile].verticalScale,framing:'cover',view:'scene',light:2,response:null,overscan:null,
-   edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges')||'new';}catch{return 'new';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (ERA: an earlier memory always draws its own search)
+   edges:(()=>{const q=new URLSearchParams(location.search).get('edges');if(q)return q;try{return localStorage.getItem('sitt-edges2')||'old';}catch{return 'old';}})(),   // 'new' (the working version) or 'old' (to compare); this browser remembers the choice, it is not saved into any memory (ERA: an earlier memory always draws its own search)
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
   const early=d=>d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;
@@ -683,7 +683,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    for(const k of ['warm','cold','vignette','deepVignette','grain'])gl.uniform1f(uniform(finishProgram,k),mixL(k));
    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
    gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.viewport(0,0,canvas.width,canvas.height);use(blitProgram);bind(blitProgram,'map',out.texture,0);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-   pp=1-pp;frames++;dirty=false;
+   pp=1-pp;frames++;dirty=false;if(window.SITTPerf)window.SITTPerf.draw(now,gl);
    if(cut&&t===1){destroy(cut.from);delete cut.to.pan;delete cut.to.cam;current=cut.to;transition=null;cut.done?.();}}
   function destroy(data){if(!data)return;for(const t of data.textures)gl.deleteTexture(t);
    if(data.strip)for(const l of data.layers){drop(l);if(l.low)gl.deleteTexture(l.low.texture);l.low=null;l.state='gone';}}

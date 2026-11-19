@@ -10,8 +10,8 @@
  // the engine's own pictures (not the browser's refreshes): how many a second, the script time of each, and once a second
  // how long the graphics chip takes to finish one (a 1-pixel read waits for it); plus the phone's tilt readings a second
  let draws = 0, js = [], tilts = 0, gpuMs = 0, ask = false; const px = new Uint8Array(4);
- window.SITTPerf = { draw(n, g) { draws++; const t = performance.now(); js.push(t - n);
-  if (ask) { ask = false; g.readPixels(0, 0, 1, 1, g.RGBA, g.UNSIGNED_BYTE, px); gpuMs = performance.now() - t; } } };
+ window.SITTPerf = { gpu(ms) { gpuMs = ms; }, draw(n, g) { draws++; const t = performance.now(); js.push(t - n);
+  if (ask && g) { ask = false; g.readPixels(0, 0, 1, 1, g.RGBA, g.UNSIGNED_BYTE, px); gpuMs = performance.now() - t; } } };
  addEventListener('deviceorientation', () => tilts++);
  const frame = n => { const d = n - last; last = n; times.push(d); if (d > 50) longs++; if (d > worst) worst = d; requestAnimationFrame(frame); };
  requestAnimationFrame(frame);
@@ -20,7 +20,7 @@
   const s = times.slice().sort((a, b) => a - b), n = s.length || 1, fps = 1000 / (s[Math.floor(n / 2)] || 16.7);
   const c = [...document.querySelectorAll('canvas')].sort((a, b) => b.width * b.height - a.width * a.height)[0];
   el.textContent = `fps ${fps.toFixed(0)}   slowest 10% ${(s[Math.floor(n * .9)] || 0).toFixed(0)} ms   worst ${worst.toFixed(0)} ms\n` +
-   `pictures drawn ${draws}/s   script ${(js.reduce((x, y) => x + y, 0) / (js.length || 1)).toFixed(1)} ms   graphics chip ${gpuMs.toFixed(0)} ms   tilt ${tilts}/s
+   `pictures drawn ${draws}/s   script ${(js.reduce((x, y) => x + y, 0) / (js.length || 1)).toFixed(1)} ms   graphics chip ${gpuMs.toFixed(0)} ms (${window.SITTGLMode || ''})   tilt ${tilts}/s
 ` +
    `freezes (>50 ms) ${longs} in ${((performance.now() - t0) / 1000).toFixed(0)} s\n` +
    `drawn ${c ? c.width + 'x' + c.height : '?'}  screen ${innerWidth}x${innerHeight} x${devicePixelRatio}\n` +

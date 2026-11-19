@@ -217,7 +217,10 @@
  // the house look (Walk Left's motion, depth-map-test's finish); a memory's own "look" overrides these
  const LOOK={blur:1,trail:1,warm:0,cold:0,vignette:.13,deepVignette:0,grain:.011,glide:260,landWait:480,landEase:650};
  function create(canvas){
-  const gl=canvas.getContext('webgl',{alpha:false,antialias:false,powerPreference:'low-power',preserveDrawingBuffer:false});
+  const CTX={alpha:false,antialias:false,powerPreference:'low-power',preserveDrawingBuffer:false},Q0=location.search;
+  // GL2 (19 Nov): WebGL2 where the browser has it (?gl=1 forces the first WebGL): the same shaders, read the same way, but it can tell when the
+  // graphics chip has finished a picture, so a new one is only sent once the last is done (no queue of pictures waiting = no lag behind the hand)
+  const gl=(!/[?&]gl=1/.test(Q0)&&canvas.getContext('webgl2',CTX))||canvas.getContext('webgl',CTX),GL2=typeof WebGL2RenderingContext!=='undefined'&&gl instanceof WebGL2RenderingContext;
   if(!gl)throw Error('WebGL unavailable');
   const DS=window.SITT_DEPTH_SETTINGS;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -227,13 +230,15 @@
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
   const early=d=>d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;
+  let fence=null,fenceAt=0;const PACE=GL2&&!/[?&]queue=1/.test(Q0);window.SITTGLMode=(GL2?'webgl2':'webgl1')+(PACE?', no queue':'');   // ?queue=1: pictures may queue as before (to compare)
   let pid=0;const uniform=(p,n)=>{const u=p.__u||(p.__u=Object.create(null));let l=u[n];if(l===undefined)l=u[n]=gl.getUniformLocation(p,n);return l;};   // each program keeps its own (no new string every call, so no clean-up pauses)
-  function program(fragment){
+  function program(fragment){const v3=fragment.startsWith('#version');
    const sh=(t,src)=>{const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;};
-   const p=gl.createProgram();gl.attachShader(p,sh(gl.VERTEX_SHADER,vertex));gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(p);
+   const p=gl.createProgram();gl.attachShader(p,sh(gl.VERTEX_SHADER,v3?'#version 300 es\n#define attribute in\n#define varying out\n'+vertex:vertex));gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(p);
    if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));p.__id=(pid++)+':';return p;}
   // every picture is read at its one full size (no smaller copies exist), stated outright, so a search loop that stops early really stops (same pixels)
-  const LOD=gl.getExtension('EXT_shader_texture_lod'),lod=f=>'#extension GL_EXT_shader_texture_lod : enable\n#define texture2D(s,c) texture2DLodEXT(s,c,0.)\n'+f,
+  const es3=f=>'#version 300 es\n#define varying in\n#define texture2D(s,c) textureLod(s,c,0.)\nout mediump vec4 fragOut;\n#define gl_FragColor fragOut\n'+f;   // GL2: the same shader in WebGL2's words (textureLod at full size = texture2DLodEXT)
+  const LOD=GL2||gl.getExtension('EXT_shader_texture_lod'),lod=f=>GL2?es3(f):'#extension GL_EXT_shader_texture_lod : enable\n#define texture2D(s,c) texture2DLodEXT(s,c,0.)\n'+f,
    fast=f=>{if(LOD&&!/[?&]lod=0/.test(location.search))try{return program(lod(f));}catch(e){console.warn('plain shader',e);}return program(f);};
   const layerProgram=fast(layerFragment),finishProgram=fast(finishFragment),blitProgram=program(blitFragment);
   const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
@@ -638,7 +643,8 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    requestAnimationFrame(draw);
    if(lost)return;pump();
    if(!current||document.hidden)return;
-   if(now-last<(LIGHT?31:25))return;   // LIGHT: a steady 30 a second or near it (every 2nd frame at 60 Hz, 4th at 120, 5th at 144, 6th at 165)
+   if(now-last<(LIGHT?31:25))return;
+   if(fence){if(gl.getSyncParameter(fence,gl.SYNC_STATUS)!==gl.SIGNALED&&now-fenceAt<400)return;gl.deleteSync(fence);fence=null;window.SITTPerf?.gpu?.(now-fenceAt);}   // GL2: the last picture isn't finished yet: wait (try again next refresh) rather than queue another   // LIGHT: a steady 30 a second or near it (every 2nd frame at 60 Hz, 4th at 120, 5th at 144, 6th at 165)
    const moving=S.motion.amt>.0005||ghostLeft>0;
    if(current?.strip)ensure(current);
    if(!transition&&!moving&&Math.abs(tx-px)+Math.abs(ty-py)<.002)checkUploads();   // a still moment: the uploads are checked now
@@ -683,7 +689,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    for(const k of ['warm','cold','vignette','deepVignette','grain'])gl.uniform1f(uniform(finishProgram,k),mixL(k));
    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
    gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.viewport(0,0,canvas.width,canvas.height);use(blitProgram);bind(blitProgram,'map',out.texture,0);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-   pp=1-pp;frames++;dirty=false;if(window.SITTPerf)window.SITTPerf.draw(now,gl);
+   pp=1-pp;frames++;dirty=false;if(PACE){fence=gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE,0);fenceAt=now;gl.flush();}if(window.SITTPerf)window.SITTPerf.draw(now,PACE?null:gl);
    if(cut&&t===1){destroy(cut.from);delete cut.to.pan;delete cut.to.cam;current=cut.to;transition=null;cut.done?.();}}
   function destroy(data){if(!data)return;for(const t of data.textures)gl.deleteTexture(t);
    if(data.strip)for(const l of data.layers){drop(l);if(l.low)gl.deleteTexture(l.low.texture);l.low=null;l.state='gone';}}

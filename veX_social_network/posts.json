@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_809e704c",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "They get new robes, but the courtroom floor still tilts.",
+    "timestamp": "2026-11-19T09:14:41.535783Z",
+    "reply_to": null,
+    "link": "https://www.propublica.org/article/federal-prosecutors-hiring-trump-doj",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "dom_e3421738",
     "handle": "@dominic_ryker",
     "display_name": "Dominic Ryker",

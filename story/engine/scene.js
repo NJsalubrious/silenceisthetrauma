@@ -604,7 +604,8 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     l.pri=Math.min(da,racing?dn+2:dn,db+1);   // the neighbouring shots come after the shot on screen
     if(want){wanted.push(l);if(l.state==='none'){l.state='queued';l.ready=new Promise(r=>l.done=r);}}
     else if(!keep)drop(l);
-    if(!l.low&&!l.lowLoading&&d<FAR*2)lowLoad(data,l);}
+    if(!l.low&&!l.lowLoading&&d<FAR*2)lowLoad(data,l);
+    else if(l.low&&d>FAR*4&&l.state!=='ready'&&l.state!=='loading'){gl.deleteTexture(l.low.texture);l.low=null;l.lowLoading=false;}}   // 19 Nov: a preview far behind (or ahead) is let go too and made again on the way back, so a strip of hundreds of scenes never piles up
    for(const l of data.layers)if(l.state==='queued'&&!wanted.includes(l)&&l.pri>FAR)drop(l);
    let active=data.layers.filter(l=>l.state==='loading').length;
    const q=data.layers.filter(l=>l.state==='queued').sort((x,y)=>x.pri-y.pri);

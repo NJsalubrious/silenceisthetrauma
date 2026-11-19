@@ -1,0 +1,31 @@
+{
+ "id": "earlier-strip-1",
+ "title": "The earlier story, to the pool",
+ "date": "1955-01-01",
+ "order": 84,
+ "placeholderDate": true,
+ "note": "A joined strip (19 Nov): x-001 to x-013 side by side, so the view slides from one to the next like the crash and the towel, instead of cutting. Pictures, shots and voices are read from the memories in \"join\" each time it opens; change those in the memories themselves. Reorder, add or take out a scene by editing \"join\".",
+ "join": [
+  "x-001",
+  "x-002",
+  "x-003",
+  "x-004",
+  "x-005",
+  "x-006",
+  "x-007",
+  "x-008",
+  "x-009",
+  "x-010",
+  "x-011",
+  "x-012",
+  "x-013"
+ ],
+ "exits": {
+  "right": {
+   "to": "x-014",
+   "style": "push"
+  }
+ },
+ "startAt": "x-001",
+ "era": "earlier"
+}

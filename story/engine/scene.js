@@ -39,6 +39,18 @@
  float cutDepth(vec2 q,float a){float d=mappedDepth(q);if(rigid>.5&&a<.98){float m=-1.;for(int k=0;k<16;k++){float an=float(k)*.785398;vec2 o=vec2(cos(an),sin(an))*(k<8?.0012:.0026);if(col(q+o).a>.5)m=max(m,mappedDepth(q+o));}if(m>=0.)d=max(d,m);}return d;}
  // edges: each spot of the picture starts its search at a slightly different step, so no bands line up; tied to the picture (not the screen), so it slides with it
  float jitAt(vec2 q){HP vec2 p=floor(q*2048.);return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}
+ // NEAR (19 Nov): the nearest depth anywhere a search can reach (from the depth map's own texels, a pyramid of maxima). A step deeper in front than that
+ // can't hit anything, so it is skipped without reading: exactly the same answer, far fewer reads (margins on every side, so it never skips a real hit)
+ #ifdef ES3
+ uniform sampler2D nearMap;uniform float nearOn,nearLevels;
+ float reach(vec2 a,vec2 b){if(nearOn<.5)return 2.;HP vec2 ds=vec2(textureSize(depthMap,0));HP vec2 lo=clamp((min(a,b)-.004)*ds-2.,vec2(0.),ds-1.),hi=clamp((max(a,b)+.004)*ds+2.,vec2(0.),ds-1.);
+  HP vec2 b0=floor(lo/8.),b1=floor(hi/8.);HP float ext=max(b1.x-b0.x,b1.y-b0.y);int L=ext<=1.?0:int(ceil(log2(ext)));L=min(L,int(nearLevels)-1);HP float sc=exp2(float(L));
+  ivec2 n=textureSize(nearMap,L)-1,i0=min(ivec2(floor(b0/sc)),n),i1=min(ivec2(floor(b1/sc)),n);
+  float m=max(max(texelFetch(nearMap,i0,L).r,texelFetch(nearMap,ivec2(i1.x,i0.y),L).r),max(texelFetch(nearMap,ivec2(i0.x,i1.y),L).r,texelFetch(nearMap,i1,L).r));
+  if(backgroundFallback>.5)m=max(m,plane);if(seamLock>0.)m=max(m,.3);return m+.008;}
+ #else
+ float reach(vec2 a,vec2 b){return 2.;}
+ #endif
  void main(){
   vec2 P=early>.5?pointer:vec2(clamp(pointer.x-perspX*(uv.x*2.-1.),-plim,plim),pointer.y);   // the hand's tilt and the camera's perspective add up, never past the tilt's reach (ERA: earlier: the hand's tilt alone)
   vec2 q=(uv-.5)*crop.xy+.5+crop.zw;
@@ -56,8 +68,9 @@
    vec2 origin=q+P*(.002+layerParallax),travel=P*depthTravel;
    float lower=0.,upper=1.;hit=false;
    if(edges>.5){float jit=early>.5?fract(sin(dot(uv,vec2(12.9898,78.233)))*43758.5453):jitAt(q);   // ERA: earlier: the jitter is tied to the screen. edges:32 steps (not 16), each spot offset, then 6 halvings (not 4); a faded pixel counts, with its object's depth
+    float M=reach(origin,origin+travel);
     for(int i=0;i<33;i++){
-     float z=max(0.,1.-(float(i)+jit)/32.);vec2 sampleUV=tileIn(origin+travel*z);float a=inside(sampleUV)?col(sampleUV).a:0.;
+     float z=max(0.,1.-(float(i)+jit)/32.);vec2 sampleUV=tileIn(origin+travel*z);float a=z<=M&&inside(sampleUV)?col(sampleUV).a:0.;
      if(a>.01&&cutDepth(sampleUV,a)>=z){lower=z;upper=min(1.,z+1./32.);hit=true;break;}
     }
     if(hit){
@@ -70,9 +83,10 @@
     if(!hit){gl_FragColor=vec4(0.);return;}
    }
    else{
+   float M=reach(origin,origin+travel);
    for(int i=0;i<17;i++){
     float z=1.-float(i)/16.;vec2 sampleUV=tileIn(origin+travel*z);
-    if(occupied(sampleUV)&&mappedDepth(sampleUV)>=z){lower=z;upper=min(1.,z+1./16.);hit=true;break;}
+    if(z<=M&&occupied(sampleUV)&&mappedDepth(sampleUV)>=z){lower=z;upper=min(1.,z+1./16.);hit=true;break;}
    }
    if(hit){
     for(int i=0;i<4;i++){
@@ -237,10 +251,27 @@
    const p=gl.createProgram();gl.attachShader(p,sh(gl.VERTEX_SHADER,v3?'#version 300 es\n#define attribute in\n#define varying out\n'+vertex:vertex));gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(p);
    if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));p.__id=(pid++)+':';return p;}
   // every picture is read at its one full size (no smaller copies exist), stated outright, so a search loop that stops early really stops (same pixels)
-  const es3=f=>'#version 300 es\n#define varying in\n#define texture2D(s,c) textureLod(s,c,0.)\nout mediump vec4 fragOut;\n#define gl_FragColor fragOut\n'+f;   // GL2: the same shader in WebGL2's words (textureLod at full size = texture2DLodEXT)
+  const es3=f=>'#version 300 es\n#define ES3 1\n#define varying in\n#define texture2D(s,c) textureLod(s,c,0.)\nout mediump vec4 fragOut;\n#define gl_FragColor fragOut\n'+f;   // GL2: the same shader in WebGL2's words (textureLod at full size = texture2DLodEXT)
   const LOD=GL2||gl.getExtension('EXT_shader_texture_lod'),lod=f=>GL2?es3(f):'#extension GL_EXT_shader_texture_lod : enable\n#define texture2D(s,c) texture2DLodEXT(s,c,0.)\n'+f,
-   fast=f=>{if(LOD&&!/[?&]lod=0/.test(location.search))try{return program(lod(f));}catch(e){console.warn('plain shader',e);}return program(f);};
+   fast=f=>{if(LOD&&!/[?&]lod=0/.test(location.search))try{const p=program(lod(f));if(GL2)p.__es3=true;return p;}catch(e){console.warn('plain shader',e);}return program(f);};
   const layerProgram=fast(layerFragment),finishProgram=fast(finishFragment),blitProgram=program(blitFragment);
+  const NEARP=GL2&&layerProgram.__es3&&!/[?&]near=0/.test(Q0)?program('#version 300 es\nprecision highp float;precision highp int;uniform highp sampler2D src;uniform int n;uniform ivec2 srcSize;out vec4 o;'+
+   'void main(){ivec2 p=ivec2(gl_FragCoord.xy);float m=0.;int k=n==8?8:3,st=n==8?8:2;for(int j=0;j<8;j++){if(j>=k)break;for(int i=0;i<8;i++){if(i>=k)break;m=max(m,texelFetch(src,min(p*st+ivec2(i,j),srcSize-1),0).r);}}o=vec4(m);}'):null;   // NEAR: level 0 = the largest of each 8x8 block of the depth map; each level above = the largest of 3x3 below (overlapping, so odd sizes are covered)
+  const del0=gl.deleteTexture.bind(gl);gl.deleteTexture=t=>{if(t?.__near)del0(t.__near);del0(t);};
+  function buildNear(t,image){const w=image.naturalWidth||image.width,h=image.naturalHeight||image.height;if(!(w>1&&h>1))return;
+   const W=Math.ceil(w/8),H=Math.ceil(h/8),levels=1+Math.floor(Math.log2(Math.max(W,H)));
+   const fb0=gl.getParameter(gl.FRAMEBUFFER_BINDING),vp=gl.getParameter(gl.VIEWPORT),pr=gl.getParameter(gl.CURRENT_PROGRAM),bl=gl.isEnabled(gl.BLEND),sc=gl.isEnabled(gl.SCISSOR_TEST),au=gl.getParameter(gl.ACTIVE_TEXTURE);
+   const nt=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,nt);gl.texStorage2D(gl.TEXTURE_2D,levels,gl.RGBA8,W,H);
+   for(const [k,v] of [[gl.TEXTURE_MIN_FILTER,gl.NEAREST_MIPMAP_NEAREST],[gl.TEXTURE_MAG_FILTER,gl.NEAREST],[gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE],[gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE]])gl.texParameteri(gl.TEXTURE_2D,k,v);
+   const fb=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,fb);use(NEARP);gl.disable(gl.BLEND);gl.disable(gl.SCISSOR_TEST);gl.uniform1i(uniform(NEARP,'src'),0);
+   for(let L=0;L<levels;L++){const lw=Math.max(1,W>>L),lh=Math.max(1,H>>L);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,nt,L);gl.viewport(0,0,lw,lh);
+    if(L===0){gl.bindTexture(gl.TEXTURE_2D,t);gl.uniform1i(uniform(NEARP,'n'),8);gl.uniform2i(uniform(NEARP,'srcSize'),w,h);}
+    else{gl.bindTexture(gl.TEXTURE_2D,nt);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_BASE_LEVEL,L-1);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAX_LEVEL,L-1);gl.uniform1i(uniform(NEARP,'n'),2);gl.uniform2i(uniform(NEARP,'srcSize'),Math.max(1,W>>(L-1)),Math.max(1,H>>(L-1)));}
+    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);}
+   gl.bindTexture(gl.TEXTURE_2D,nt);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_BASE_LEVEL,0);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAX_LEVEL,levels-1);
+   gl.bindFramebuffer(gl.FRAMEBUFFER,fb0);gl.deleteFramebuffer(fb);gl.viewport(...vp);gl.useProgram(pr);if(bl)gl.enable(gl.BLEND);if(sc)gl.enable(gl.SCISSOR_TEST);gl.bindTexture(gl.TEXTURE_2D,t);gl.activeTexture(au);
+   t.__near=nt;t.__levels=levels;}
+  function bindNear(dt){bind(layerProgram,'nearMap',dt?.__near||white,5);gl.uniform1f(uniform(layerProgram,'nearOn'),dt?.__near?1:0);gl.uniform1f(uniform(layerProgram,'nearLevels'),dt?.__levels||1);}
   const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
   function use(p){gl.useProgram(p);gl.bindBuffer(gl.ARRAY_BUFFER,buffer);const a=gl.getAttribLocation(p,'position');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);}
   function bind(p,name,t,unit){gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);gl.uniform1i(uniform(p,name),unit);}
@@ -248,6 +279,7 @@
   // grey: a depth map, kept as one grey channel (a quarter of the memory of a colour picture)
   function texture(image,grey=false){const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,!(window.ImageBitmap&&image instanceof ImageBitmap));gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,false);params();
    const f=grey?gl.LUMINANCE:gl.RGBA;gl.texImage2D(gl.TEXTURE_2D,0,f,f,gl.UNSIGNED_BYTE,image);
+   if(grey&&NEARP)try{buildNear(t,image);}catch(e){console.warn('near map',e);}
    unchecked.add(t);return t;}
   /* FLOW: did the uploads take? Asking makes the page wait for the graphics card to finish them (that wait was a freeze in every swipe),
      so it is asked in a still moment instead. A picture that did not take (never expected: the card out of memory) is let go and loaded again */
@@ -444,7 +476,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     // "Image / map to inspect": the whole scene, the combined depth, or one layer's picture or map
     if(view!=='scene'&&view!=='depth'&&view!=='layer:'+i&&view!=='layer-depth:'+i)return;
     const fallback=!l.depthTexture&&!l.rigid&&!!data.fullDepth;
-    bind(layerProgram,'colorMap',l.colorTexture,0);bind(layerProgram,'depthMap',l.depthTexture||(fallback?data.fullDepth:white),1);gl.uniform4f(uniform(layerProgram,'trim'),0,0,1,1);
+    bind(layerProgram,'colorMap',l.colorTexture,0);bind(layerProgram,'depthMap',l.depthTexture||(fallback?data.fullDepth:white),1);bindNear(l.depthTexture||(fallback?data.fullDepth:null));gl.uniform4f(uniform(layerProgram,'trim'),0,0,1,1);
     gl.uniform1f(uniform(layerProgram,'backgroundFallback'),m.enhanced&&fallback?1:0);
     gl.uniform3f(uniform(layerProgram,'xform'),l.x||0,l.y||0,l.scale||1);gl.uniform2f(uniform(layerProgram,'lsize'),l.size?.[0]||1,l.size?.[1]||1);gl.uniform1f(uniform(layerProgram,'alpha'),l.opacity??1);
     gl.uniform1f(uniform(layerProgram,'blurR'),0);gl.uniform4f(uniform(layerProgram,'haze'),0,0,0,0);gl.uniform2f(uniform(layerProgram,'focusAt'),-1,-1);
@@ -542,7 +574,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     const full=l.state==='ready',f=full&&l.low?clamp((now-(l.readyAt||0))/FADE,0,1):1;
     const looks=!full?[[l.low,1]]:(f<1&&pass===1?[[l.low,1],[null,ease(f)]]:[[null,1]]);
     for(const [lo,am] of looks){const tex=lo?lo.texture:l.colorTexture,dt=lo?null:l.depthTexture;
-     bind(layerProgram,'colorMap',tex,0);bind(layerProgram,'depthMap',dt||white,1);bind(layerProgram,'foregroundMask',tex,2);
+     bind(layerProgram,'colorMap',tex,0);bind(layerProgram,'depthMap',dt||white,1);bindNear(pass===0?null:dt);bind(layerProgram,'foregroundMask',tex,2);
      gl.uniform4f(uniform(layerProgram,'trim'),...((lo?lo.trim:l.trim)||[0,0,1,1]));
      gl.uniform1f(uniform(layerProgram,'alpha'),(l.opacity??1)*alphaMul*g.a*am);gl.uniform1f(uniform(layerProgram,'hasDepth'),pass===0?0:(dt?1:0));
      if(pass===0){if(!noEdge[k][0]&&clip(g.X0-250,g.X0+EG))gl.drawArrays(gl.TRIANGLE_STRIP,0,4);if(!noEdge[k][1]&&clip(g.X0+g.W-EG,g.X0+g.W+250))gl.drawArrays(gl.TRIANGLE_STRIP,0,4);}

@@ -44,9 +44,9 @@
   vec2 q=(uv-.5)*crop.xy+.5+crop.zw;
   q=(q-vec2(.5+xform.x,.5-xform.y))/(xform.z*lsize)+.5;   // lsize: this picture's size against the background's
   if(edgeM<=0.){vec2 o=P*(.002+layerParallax),tr=P*depthTravel;
-   if(edges>.5){bool seen=col(q).a>=.004;for(int k=0;k<12;k++){if(col(q+o+tr*(float(k)/11.)).a>=.004)seen=true;}if(!seen){gl_FragColor=vec4(0.);return;}}   // edges: 12 looks along the whole shift, so a thin shape (a finger, a key) can't fall between them
+   if(edges>.5){bool seen=col(q).a>=.004;if(!seen){for(int k=0;k<12;k++){if(col(q+o+tr*(float(k)/11.)).a>=.004){seen=true;break;}}}if(!seen){gl_FragColor=vec4(0.);return;}}   // edges: 12 looks along the whole shift, so a thin shape (a finger, a key) can't fall between them
    else if(col(q+o).a<.004&&col(q+o+tr).a<.004&&col(q+o+tr*.5).a<.004&&col(q).a<.004){gl_FragColor=vec4(0.);return;}}
-  float d=mix(plane,depthAt(q),hasDepth);
+  float d=plane;if(hasDepth>.5&&(enhanced<.5||haze.a>0.))d=depthAt(q);
   float legacy=mix(.004+d*.013,.003+plane*.012,rigid);
   bool hit=true;
   if(enhanced<.5){q+=P*legacy;}
@@ -67,6 +67,7 @@
      }
      q=origin+travel*lower;
     }
+    if(!hit){gl_FragColor=vec4(0.);return;}
    }
    else{
    for(int i=0;i<17;i++){
@@ -90,11 +91,10 @@
    color=(col(m)*2.+col(m+vec2(r,0.))+col(m-vec2(r,0.))+col(clamp(m+ry,0.,1.))+col(clamp(m-ry,0.,1.))+col(clamp(m+vec2(r,0.)*.7+ry*.7,0.,1.))+col(clamp(m-vec2(r,0.)*.7-ry*.7,0.,1.))+col(clamp(m+vec2(r,0.)*.7-ry*.7,0.,1.))+col(clamp(m-vec2(r,0.)*.7+ry*.7,0.,1.)))/10.;
   }else{if(inMargin)q.x=clamp(q.x,.0005,.9995);color=col(q);}
   float fd=focusD;if(focusAt.x>-.5){vec2 qc=(focusAt-.5)*crop.xy+.5+crop.zw;qc=(qc-vec2(.5+xform.x,.5-xform.y))/(xform.z*lsize)+.5;fd=mix(plane,(depthAt(qc)+depthAt(qc+vec2(.02,0.))+depthAt(qc-vec2(.02,0.))+depthAt(qc+vec2(0.,.02)))/4.,hasDepth);}   // EXPLORE: the lens focuses on what is under the viewer's hand
-  float rr=blurR*smoothstep(.06,.4,abs(mix(plane,depthAt(q),hasDepth)-fd));   // how far this point is from where the lens is focused, by the depth map
+  float rr=blurR>0.?blurR*smoothstep(.06,.4,abs(mix(plane,depthAt(q),hasDepth)-fd)):0.;   // how far this point is from where the lens is focused, by the depth map
   if(rr>.0002){vec4 acc=color;float n=1.;for(int i=0;i<12;i++){float a=float(i)*2.39996,r=rr*sqrt((float(i)+.5)/12.);acc+=col(q+vec2(cos(a),sin(a))*r*vec2(1.,lsize.x/lsize.y));n+=1.;}color=acc/n;}   // STORYTELLING: the lens is focused on another plane (off: blurR 0)
   if(!hit||q.x<0.||q.x>1.||q.y<0.||q.y>1.)color.a=0.;
-  vec2 grad=vec2(depthAt(q+vec2(.002,0.))-depthAt(q-vec2(.002,0.)),depthAt(q+vec2(0.,.002))-depthAt(q-vec2(0.,.002)));
-  float relief=clamp(dot(grad,P)*light,-.025,.025)*(1.-rigid)*hasDepth;
+  float relief=0.;if(rigid<.5&&hasDepth>.5&&light!=0.){vec2 grad=vec2(depthAt(q+vec2(.002,0.))-depthAt(q-vec2(.002,0.)),depthAt(q+vec2(0.,.002))-depthAt(q-vec2(0.,.002)));relief=clamp(dot(grad,P)*light,-.025,.025)*(1.-rigid)*hasDepth;}
   color.rgb*=1.+relief;color.rgb*=vec3(.98,1.,.99);if(haze.a>0.)color.rgb=mix(color.rgb,haze.rgb,haze.a*clamp(1.-mix(plane,d,hasDepth),0.,1.));color.a*=alpha;
   if(marksOn>0.&&depthPass<.5){vec4 mk=texture2D(marksMap,q);color.rgb+=(1.-color.rgb)*mk.r*marksOn;color.rgb*=1.-mk.g*marksOn*vec3(.84,.87,.91);color.rgb*=1.-mk.b*marksOn*vec3(.41,.59,.76);}   // STORYTELLING aged print: this picture's own scratches and specks, at their place in the picture, so they move with what they are on (off unless the aged test sets them)
   if(feather.x>0.)color.a*=smoothstep(0.,feather.x,q.x);if(feather.y>0.)color.a*=smoothstep(1.,1.-feather.y,q.x);if(feather.z>0.)color.a*=smoothstep(1.,1.-feather.z,q.y);if(feather.w>0.)color.a*=smoothstep(0.,feather.w,q.y);   // soft sides, so pictures melt into each other
@@ -227,22 +227,29 @@
    maxSide:null};   // phones: a picture whose longest side is over this many pixels is decoded smaller (null: every picture at its own size)
   const early=d=>d?.scene?.era==='earlier';   // ERA: a memory of the earlier story (memory.json "era":"earlier") is drawn by the earlier engine's rules; any other by the later's
   let width=1,height=1,targets=[],current=null,transition=null,dirty=true,last=0,px=0,py=0,tx=0,ty=0,revision=0,frames=0,pp=0,ghostLeft=0;
-  const U=new Map();let pid=0;const uniform=(p,n)=>{const k=p.__id+n;if(!U.has(k))U.set(k,gl.getUniformLocation(p,n));return U.get(k);};
+  let pid=0;const uniform=(p,n)=>{const u=p.__u||(p.__u=Object.create(null));let l=u[n];if(l===undefined)l=u[n]=gl.getUniformLocation(p,n);return l;};   // each program keeps its own (no new string every call, so no clean-up pauses)
   function program(fragment){
    const sh=(t,src)=>{const s=gl.createShader(t);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;};
    const p=gl.createProgram();gl.attachShader(p,sh(gl.VERTEX_SHADER,vertex));gl.attachShader(p,sh(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(p);
    if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));p.__id=(pid++)+':';return p;}
-  const layerProgram=program(layerFragment),finishProgram=program(finishFragment),blitProgram=program(blitFragment);
+  // every picture is read at its one full size (no smaller copies exist), stated outright, so a search loop that stops early really stops (same pixels)
+  const LOD=gl.getExtension('EXT_shader_texture_lod'),lod=f=>'#extension GL_EXT_shader_texture_lod : enable\n#define texture2D(s,c) texture2DLodEXT(s,c,0.)\n'+f,
+   fast=f=>{if(LOD&&!/[?&]lod=0/.test(location.search))try{return program(lod(f));}catch(e){console.warn('plain shader',e);}return program(f);};
+  const layerProgram=fast(layerFragment),finishProgram=fast(finishFragment),blitProgram=program(blitFragment);
   const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
   function use(p){gl.useProgram(p);gl.bindBuffer(gl.ARRAY_BUFFER,buffer);const a=gl.getAttribLocation(p,'position');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);}
   function bind(p,name,t,unit){gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);gl.uniform1i(uniform(p,name),unit);}
   function params(){for(const [k,v] of [[gl.TEXTURE_MIN_FILTER,gl.LINEAR],[gl.TEXTURE_MAG_FILTER,gl.LINEAR],[gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE],[gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE]])gl.texParameteri(gl.TEXTURE_2D,k,v);}
   // grey: a depth map, kept as one grey channel (a quarter of the memory of a colour picture)
-  function texture(image,grey=false){const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,false);params();
-   for(let i=0;i<8&&gl.getError();i++);   // FLOW: clear old errors, then check this upload took
+  function texture(image,grey=false){const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,!(window.ImageBitmap&&image instanceof ImageBitmap));gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,false);params();
    const f=grey?gl.LUMINANCE:gl.RGBA;gl.texImage2D(gl.TEXTURE_2D,0,f,f,gl.UNSIGNED_BYTE,image);
-   const err=gl.getError();if(err&&err!==gl.CONTEXT_LOST_WEBGL){gl.deleteTexture(t);throw Error('the graphics card refused the picture (error '+err+')');}   // a texture that failed draws as a black box
-   return t;}
+   unchecked.add(t);return t;}
+  /* FLOW: did the uploads take? Asking makes the page wait for the graphics card to finish them (that wait was a freeze in every swipe),
+     so it is asked in a still moment instead. A picture that did not take (never expected: the card out of memory) is let go and loaded again */
+  const unchecked=new Set();
+  function checkUploads(){if(!unchecked.size)return;const err=gl.getError(),were=new Set(unchecked);unchecked.clear();if(!err||err===gl.CONTEXT_LOST_WEBGL)return;
+   console.warn('a picture did not reach the graphics card (error '+err+'): loading it again');
+   for(const d of [current,transition?.to])if(d?.strip)for(const l of d.layers)if(were.has(l.colorTexture)||were.has(l.depthTexture)){drop(l);if(l.low&&were.has(l.low.texture)){gl.deleteTexture(l.low.texture);l.low=null;}}dirty=true;}
   // pictures reach the graphics card a few at a time (a frame's worth each), so moving never stutters while they arrive
   const uploads=[];
   const upload0=(image,grey)=>new Promise((res,rej)=>uploads.push(()=>{try{res(texture(image,grey));}catch(e){rej(e);}}));
@@ -250,7 +257,8 @@
   // only lighter work for a weaker device: (1) each picture is turned upright off the main thread (an ImageBitmap, flipY) before it goes up,
   // so the upload is a plain copy (measured about 6x quicker), the same pixels; (2) drawn at fewer screen pixels; (3) a steady 30 a second
   const LIGHT=(()=>{const q=new URLSearchParams(location.search).get('light');if(!q||q==='0')return null;const s=parseFloat(q);return {res:s>0&&s<1?s:.7};})();
-  const upload=(image,grey)=>{if(!LIGHT||!window.createImageBitmap)return upload0(image,grey);
+  // a picture prepared in the background (PREP) is already upright: copied as it is. TEST only, ?up=1: every picture turned upright this way (a colour picture's soft edge 1/255 apart)
+  const upload=(image,grey)=>{if(image.upright)return upload0(image,grey);if(!(LIGHT||/[?&]up=1/.test(location.search))||!window.createImageBitmap)return upload0(image,grey);
    return createImageBitmap(image,{imageOrientation:'flipY',premultiplyAlpha:'none'}).then(b=>upload0(b,grey).finally(()=>b.close?.()),()=>upload0(image,grey));};   // (an ImageBitmap ignores the upload's own flip, so it goes up as it is)
   function pump(){const t0=performance.now();while(uploads.length){uploads.shift()();if(performance.now()-t0>6)break;}}
   const wc=document.createElement('canvas');wc.width=wc.height=1;const c2=wc.getContext('2d');c2.fillStyle='white';c2.fillRect(0,0,1,1);const white=texture(wc);
@@ -282,10 +290,18 @@
    const dir=setDir(memory,folder,'desktop');return {url:dir+stem(name)+'.webp',alt:dir+name,info:null};}   // not listed (added since the last publish): try the file itself
   const tuning=/[?&]tune=(1|true)/.test(location.search)||/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname);
   // a picture's file, fetched (so it can be stopped half way and its size checked) and decoded off the main thread
+  const BITMAP=!!window.createImageBitmap&&!/[?&]bm=0/.test(location.search);
+  function clearOrLossless(buf){try{const b=new DataView(buf),tag=p=>String.fromCharCode(b.getUint8(p),b.getUint8(p+1),b.getUint8(p+2),b.getUint8(p+3));
+   if(tag(0)!=='RIFF'||tag(8)!=='WEBP')return false;const t=tag(12);return t==='VP8L'||(t==='VP8X'&&(b.getUint8(20)&0x10)!==0);}catch{return false;}}
   async function decode(url,job,tries=3){const u=url+(revision?(url.includes('?')?'&':'?')+'mapRevision='+revision:'')+(tries<3?(url.includes('?')||revision?'&':'?')+'retry='+tries:'');
    const ac=window.AbortController?new AbortController():null;if(job)job.abort=()=>ac?.abort();
    try{const r=await fetch(u,{signal:ac?.signal,cache:revision?'no-store':'default'});if(!r.ok)throw Error(url.split('/').pop()+' '+r.status);const buf=await r.arrayBuffer(),blob=new Blob([buf],{type:r.headers.get('content-type')||''});
     if(S.maxSide>0){const sm=await shrink(blob,buf,S.maxSide);if(sm){sm.px=pixelBytes(buf);return sm;}}   // phones: a large picture decoded smaller (off unless settings.maxSide is set)
+    // (19 Nov) a WebP with transparency or a lossless one (every cut-out, every depth map) is decoded off the main thread, then cropped and
+    // sized as before: the frames come out the same to the value, with 5-10x less main-thread time on a slow phone (the stalls in a swipe).
+    // A picture with nothing to crop or size goes up as an image element as before (that way is exact). An opaque lossy one (VP8 only) is
+    // drawn by the browser through another decoder (colours a little apart), so it stays an image element throughout. ?bm=0: all as before
+    if(BITMAP&&clearOrLossless(buf)){try{const bm=await createImageBitmap(blob);bm.naturalWidth=bm.width;bm.naturalHeight=bm.height;bm.blob=blob;bm.decoded=true;bm.px=pixelBytes(buf);return bm;}catch{}}
     const img=new Image();img.decoding='async';const ou=URL.createObjectURL(blob);img.src=ou;try{await img.decode();}finally{URL.revokeObjectURL(ou);}img.px=pixelBytes(buf);return img;}
    catch(e){if(job?.cancelled||/404/.test(e.message))throw e;if(tries>1){await new Promise(r=>setTimeout(r,400));return decode(url,job,tries-1);}throw e;}}   // a dropped download is tried again
   // how many bytes of a file make the picture itself (metadata left out): matched against files.json to know the file is the one publish measured
@@ -318,9 +334,49 @@
    if(x1<0)return [0,0,Math.min(nw,8),Math.min(nh,8)];
    const pad=3+Math.round(Math.max(w,h)*.01);x0=Math.max(0,x0-pad);y0=Math.max(0,y0-pad);x1=Math.min(w-1,x1+pad);y1=Math.min(h-1,y1+pad);
    const X0=Math.floor(x0/k),Y0=Math.floor(y0/k);return [X0,Y0,Math.min(nw,Math.ceil((x1+1)/k))-X0,Math.min(nh,Math.ceil((y1+1)/k))-Y0];}
+  /* (19 Nov) PREP: the same preparation as picture() below (fetch, the box from files.json, the same size rule, the same crop and
+     smooth resize, a depth map flattened onto black), done in a background worker and handed back upright, so the main thread only
+     copies it to the graphics card (measured: 45-70 ms of main thread per picture before, 2-7 ms now; depth maps the same to the value,
+     a colour picture's soft edge at most 1/255 apart). Anything it can't do the same way (no box measured, a phone's maxSide) is done here
+     as before. Depth maps only (they come out the same to the value); ?prep=all also colour (TEST). ?prep=0: the old way, to compare */
+  const PREP_ALL=/[?&]prep=all/.test(location.search);   // TEST only: colour pictures too (their soft edges come out up to 2/255 apart, enough to move a few edge pixels of the depth search)
+  const PREP=(()=>{if(/[?&]prep=0/.test(location.search)||!window.Worker||!window.createImageBitmap||typeof OffscreenCanvas==='undefined')return null;
+   const src=`const pixelBytes=${pixelBytes.toString()};const headSize=${headSize.toString()};
+onmessage=async e=>{const m=e.data;try{
+ if(typeof OffscreenCanvas==='undefined'||!new OffscreenCanvas(1,1).getContext('2d')){postMessage({id:m.id,main:true});return;}
+ const get=async(url,tries=3)=>{const u=url+(m.rev?(url.includes('?')?'&':'?')+'mapRevision='+m.rev:'')+(tries<3?(url.includes('?')||m.rev?'&':'?')+'retry='+tries:'');
+  try{const r=await fetch(u,{cache:m.rev?'no-store':'default'});if(!r.ok)throw Error(url.split('/').pop()+' '+r.status);return [await r.arrayBuffer(),r.headers.get('content-type')||''];}
+  catch(x){if(/404/.test(x.message)||tries<=1)throw x;await new Promise(r=>setTimeout(r,400));return get(url,tries-1);}};
+ let got;try{got=await get(m.url);}catch(x){if(m.alt)got=await get(m.alt);else throw x;}
+ const [buf,type]=got,blob=new Blob([buf],{type});let size=null;try{size=headSize(new DataView(buf));}catch{}
+ if(!size){postMessage({id:m.id,main:true});return;}
+ const [nw,nh]=size,px=pixelBytes(buf);let box=null;
+ if(m.trim&&!m.grey){const f=m.info;if(!(f&&f.box&&f.w===nw&&f.h===nh&&f.px===px)){postMessage({id:m.id,main:true});return;}box=f.box;if(box[2]*box[3]>nw*nh*.86)box=null;}
+ const [bx,by,bw,bh]=box||[0,0,nw,nh];let k=Math.min(1,m.scale,m.limit/bw,m.limit/bh);if(m.needH>0)k=Math.min(k,Math.max(.12,m.needH/nh));
+ let out;
+ if(box||m.grey||k<.999){const img=await createImageBitmap(blob);if(img.width!==nw||img.height!==nh){img.close();postMessage({id:m.id,main:true});return;}
+  const c=new OffscreenCanvas(Math.max(1,Math.round(bw*k)),Math.max(1,Math.round(bh*k))),g=c.getContext('2d');
+  if(m.grey){g.fillStyle='#000';g.fillRect(0,0,c.width,c.height);}g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(img,bx,by,bw,bh,0,0,c.width,c.height);img.close();
+  out=await createImageBitmap(c,{imageOrientation:'flipY',premultiplyAlpha:'none'});}
+ else out=await createImageBitmap(blob,{imageOrientation:'flipY',premultiplyAlpha:'none'});
+ postMessage({id:m.id,out,nw,nh,trim:box?[bx/nw,1-(by+bh)/nh,bw/nw,bh/nh]:null},[out]);}
+catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
+   let w;try{w=new Worker(URL.createObjectURL(new Blob([src],{type:'text/javascript'})));}catch{return null;}
+   const wait=new Map();let n=0,broken=false;
+   w.onmessage=e=>{const f=wait.get(e.data.id);if(f){wait.delete(e.data.id);f(e.data);}};
+   w.onerror=()=>{broken=true;for(const f of wait.values())f({main:true});wait.clear();};
+   return (ref,o)=>{if(broken)return Promise.resolve(null);const id=++n,job=o.job;
+    return new Promise((res,rej)=>{wait.set(id,r=>{
+      if(job?.cancelled){r.out?.close();return rej(Error('stopped'));}
+      if(r.main)return res(null);if(r.err)return rej(Error(r.err));
+      const b=r.out;b.nw=r.nw;b.nh=r.nh;b.trim=r.trim;b.upright=true;res(b);});
+     if(job)job.abort=()=>{};
+     const abs=u=>u?new URL(u,location.href).href:null;
+     w.postMessage({id,url:abs(ref.url),alt:abs(ref.alt),info:ref.info?{w:ref.info.w,h:ref.info.h,px:ref.info.px,box:ref.info.box}:null,rev:revision||0,limit:o.limit,scale:o.scale,grey:o.grey,trim:o.trim,needH:o.needH});});};})();
   /* one picture, ready for the graphics card: trimmed to what it holds, no larger than this screen can show
      (opt.needH: the most pixels of height it will ever cover), and a depth map flattened to grey */
-  async function picture(ref,{maxW=null,scale=1,grey=false,trim=false,needH=0,job=null}={}){
+  async function picture(ref,{maxW=null,scale=1,grey=false,trim=false,needH=0,job=null,prep=false}={}){
+   if(prep&&(grey||PREP_ALL)&&PREP&&!(S.maxSide>0)){const cap0=gl.getParameter(gl.MAX_TEXTURE_SIZE)||2000,r=await PREP(ref,{limit:Math.min(maxW??(width<700?1400:2000),cap0),scale,grey,trim,needH:tuning?0:needH,job});if(r)return r;}   // null: this one is prepared here instead
    let img;try{img=await decode(ref.url,job);}catch(e){if(ref.alt&&!job?.cancelled)img=await decode(ref.alt,job);else throw e;}
    const sm=!!img.fullW,nw=sm?img.fullW:img.naturalWidth,nh=sm?img.fullH:img.naturalHeight,sx=sm?img.width/nw:1,sy=sm?img.height/nh:1,cap=gl.getParameter(gl.MAX_TEXTURE_SIZE)||2000;   // sm: decoded smaller (settings.maxSide); nw, nh stay the file's own size
    // the box from files.json is used only while the file is the one it was measured on (same size, same picture bytes)
@@ -332,14 +388,15 @@
    if(needH>0&&!tuning)k=Math.min(k,Math.max(.12,needH/nh));
    if(sm)k=Math.min(k,sx,sy);   // never more pixels than were decoded; and such a picture is always redrawn below (an ImageBitmap would go up unflipped)
    let out=img;
-   if(box||grey||k<.999||sm){const cv=document.createElement('canvas');cv.width=Math.max(1,Math.round(bw*k));cv.height=Math.max(1,Math.round(bh*k));const g=cv.getContext('2d');
+   if(img.decoded&&!(box||grey||k<.999||sm)){const im=new Image();im.decoding='async';const ou=URL.createObjectURL(img.blob);im.src=ou;try{await im.decode();}finally{URL.revokeObjectURL(ou);}im.px=img.px;img.close();out=im;}   // nothing to crop or size (a big screen): goes up as an image element, exactly as before
+   else if(box||grey||k<.999||sm){const cv=document.createElement('canvas');cv.width=Math.max(1,Math.round(bw*k));cv.height=Math.max(1,Math.round(bh*k));const g=cv.getContext('2d');
     if(grey){g.fillStyle='#000';g.fillRect(0,0,cv.width,cv.height);}   // a depth map with a stray alpha channel: flattened onto black (far)
-    g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(img,bx*sx,by*sy,bw*sx,bh*sy,0,0,cv.width,cv.height);if(g.isContextLost?.())throw Error('the browser dropped a drawing surface');out=cv;if(sm)img.close?.();}
+    g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(img,bx*sx,by*sy,bw*sx,bh*sy,0,0,cv.width,cv.height);if(g.isContextLost?.())throw Error('the browser dropped a drawing surface');out=cv;if(sm||img.decoded)img.close?.();}
    out.nw=nw;out.nh=nh;out.trim=box?[bx/nw,1-(by+bh)/nh,bw/nw,bh/nh]:null;   // in texture space (the picture is flipped on upload: y runs up)
    return out;}
   // a tiny copy kept after the full picture is let go, so a fast pass through the story never shows black
   function lowCopy(src){const k=Math.min(1,320/Math.max(src.width,src.height)),cv=document.createElement('canvas');cv.width=Math.max(1,Math.round(src.width*k));cv.height=Math.max(1,Math.round(src.height*k));
-   const g=cv.getContext('2d');g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';g.drawImage(src,0,0,cv.width,cv.height);return cv;}
+   const g=cv.getContext('2d');g.imageSmoothingEnabled=true;g.imageSmoothingQuality='high';if(src.upright){g.translate(0,cv.height);g.scale(1,-1);}g.drawImage(src,0,0,cv.width,cv.height);return cv;}
   function makeTarget(w,h){const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,w,h,0,gl.RGBA,gl.UNSIGNED_BYTE,null);params();
    const f=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,f);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,t,0);return {texture:t,framebuffer:f};}
   function resize(){dirty=true;const r=canvas.getBoundingClientRect();width=r.width||1;height=r.height||1;
@@ -537,13 +594,15 @@
     const vmin=Math.min(...((m.stops||[]).length?m.stops:[{}]).map(p=>stripView(data,{frame:showMore(p.frame||[0,0,data.H*1.4,data.H],p.show)}).vh));
     const shown=l.layer.insert?vmin*1.3:(l.layer.rect?l.layer.rect[3]:data.H),needH=canvas.height*shown/vmin*1.2;
     const [cr,dr]=await Promise.all([resolve(mm,fo,l.layer.image,o.set,o.source),l.layer.depth?resolve(mm,fo,l.layer.depth,o.set,o.source).catch(()=>null):null]);
-    const [c,d]=await Promise.all([picture(cr,{maxW,trim:true,needH,job}),dr?picture(dr,{maxW,scale:.5,grey:true,needH:needH*.6}).catch(()=>null):null]);
+    let [c,d]=await Promise.all([picture(cr,{maxW,trim:true,needH,job,prep:true}),dr?picture(dr,{maxW,scale:.5,grey:true,needH:needH*.6,prep:true}).catch(()=>null):null]);
     if(!live())return;
     l.nw=c.nw;l.nh=c.nh;l.trim=c.trim;const pin=place(data,l),R=l.layer.rect;
     let depthSrc=null;
     if(d){const dw=d.nw,dh=d.nh,same=Math.abs((dw/dh)/(l.nw/l.nh)-1)<.01;
      if(same)depthSrc=d;
      else if(pin&&!R&&Math.abs(dh/l.nh-1)<.02){
+      if(d.upright){d.close();d=await picture(dr,{maxW,scale:.5,grey:true,needH:needH*.6}).catch(()=>null);if(!d)throw Error('depth map');}   // drawn on below: prepared here, the right way up
+      if(c.upright&&!l.layer.depthAnchor){const c0=c;c=await picture(cr,{maxW,trim:true,needH,job});c0.close();}
       // same height, different width: line the map up with whichever edge of the picture it matches
       // (checked against the picture's outline), or the edge set by hand ("depthAnchor": left / right)
       const edge=l.layer.depthAnchor||matchEdge(c,d);
@@ -556,12 +615,14 @@
     if(!live()){gl.deleteTexture(ct);if(dt)gl.deleteTexture(dt);return;}
     l.colorTexture=ct;l.depthTexture=dt;
     if(!l.low){try{l.low={texture:await upload(lowCopy(c)),trim:c.trim};}catch{}}   // FLOW: a preview that fails does not undo the picture
+    if(c.upright)c.close();if(depthSrc?.upright)depthSrc.close();   // copied to the graphics card: let the memory go
     l.state='ready';l.readyAt=performance.now();fadeUntil=l.readyAt+FADE;dirty=true;}
    catch(e){if(live()){l.state='failed';l.note='could not load: '+e.message;l.tries=(l.tries||0)+1;if(l.tries<4)setTimeout(()=>{if(l.state==='failed'){l.state='none';dirty=true;}},1500*l.tries);}}   // FLOW: a failed picture is tried again (three times)
    finally{l.job=null;l.done?.();if(l.state!=='gone'&&(data===current||data.cam))ensure(data);}}
   const FADE=380;let fadeUntil=0;
   // which edge a narrower (or wider) depth map belongs to: compare where things are, column by column
   function matchEdge(c,d){try{const prof=(img,w,h,isDepth,tr)=>{const cv=document.createElement('canvas');cv.width=w;cv.height=h;const g=cv.getContext('2d',{willReadFrequently:true});
+     if(img.upright){g.translate(0,h);g.scale(1,-1);}   // a picture decoded upright for the graphics card: turned back for measuring
      if(tr){g.drawImage(img,tr[0]*w,(1-tr[1]-tr[3])*h,tr[2]*w,tr[3]*h);}else g.drawImage(img,0,0,w,h);
      const px=g.getImageData(0,0,w,h).data;const out=new Float32Array(w);let bg=0;if(isDepth){const hist=new Uint32Array(256);for(let i=0;i<px.length;i+=4)hist[px[i]]++;for(let v=1;v<256;v++)if(hist[v]>hist[bg])bg=v;}   // the map's background: its most common grey
      for(let x=0;x<w;x++){let v=0;for(let y=0;y<h;y++){const i=(y*w+x)*4;v+=isDepth?(Math.abs(px[i]-bg)>8?1:0):(px[i+3]>40?1:0);}out[x]=v/h;}return out;};
@@ -580,6 +641,7 @@
    if(now-last<(LIGHT?31:25))return;   // LIGHT: a steady 30 a second or near it (every 2nd frame at 60 Hz, 4th at 120, 5th at 144, 6th at 165)
    const moving=S.motion.amt>.0005||ghostLeft>0;
    if(current?.strip)ensure(current);
+   if(!transition&&!moving&&Math.abs(tx-px)+Math.abs(ty-py)<.002)checkUploads();   // a still moment: the uploads are checked now
    if(!dirty&&!transition&&!moving&&now>fadeUntil&&Math.abs(tx-px)+Math.abs(ty-py)<.00015)return;      // nothing moved: draw nothing (saves the phone)
    const dt=Math.min(60,now-(last||now));last=now;
    const resp=S.response??profile().responseMs;const k=resp>0?1-Math.exp(-dt/resp):1;px+=(tx-px)*k;py+=(ty-py)*k;

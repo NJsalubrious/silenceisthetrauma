@@ -20,7 +20,7 @@
   const s = times.slice().sort((a, b) => a - b), n = s.length || 1, fps = 1000 / (s[Math.floor(n / 2)] || 16.7);
   const c = [...document.querySelectorAll('canvas')].sort((a, b) => b.width * b.height - a.width * a.height)[0];
   el.textContent = `fps ${fps.toFixed(0)}   slowest 10% ${(s[Math.floor(n * .9)] || 0).toFixed(0)} ms   worst ${worst.toFixed(0)} ms\n` +
-   `pictures drawn ${draws}/s   script ${(js.reduce((x, y) => x + y, 0) / (js.length || 1)).toFixed(1)} ms   graphics chip ${gpuMs.toFixed(0)} ms (${window.SITTGLMode || ''})   tilt ${tilts}/s
+   `pictures drawn ${draws}/s   script ${(js.reduce((x, y) => x + y, 0) / (js.length || 1)).toFixed(1)} ms   graphics chip ${gpuMs.toFixed(0)} ms (${window.SITTGLMode || ''})   tilt ${tilts}/s   pictures ${window.SITTPics || "full"}
 ` +
    `freezes (>50 ms) ${longs} in ${((performance.now() - t0) / 1000).toFixed(0)} s\n` +
    `drawn ${c ? c.width + 'x' + c.height : '?'}  screen ${innerWidth}x${innerHeight} x${devicePixelRatio}\n` +

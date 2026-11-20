@@ -5046,5 +5046,405 @@
   "sha256": "b7e4de6858b45239b71161d14da2ed2dd6600bb1bf6f6bfe805bb648470ce185",
   "w": 1672,
   "h": 936
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_01_Background.png": {
+  "bytes": 2688613,
+  "mtime": 1795153272657344000,
+  "sha256": "b1d45ce55323595cd40d766bf1d46b53bfd26ab9d11df81236fdc7b459892336",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_01_Background_Depth.png": {
+  "bytes": 165406,
+  "mtime": 1795153272756418500,
+  "sha256": "1b9cc1a0f6a646692b289658b1adf013daf0b8ecbc4d02600162bd1a19144349",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_01_Mid.png": {
+  "bytes": 1721215,
+  "mtime": 1795153273096508700,
+  "sha256": "ad7f69b69f3246a02281b493d76397699db3fef1b00375a923bb953afc29f4a2",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_01_Mid_Depth.png": {
+  "bytes": 206506,
+  "mtime": 1795153273196536200,
+  "sha256": "a4b82b7e194849cc84d42c41c805b1a0532943af4f579bbc9354f1b7724af5b0",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Background.png": {
+  "bytes": 2370297,
+  "mtime": 1795153273860238600,
+  "sha256": "9ed3b1cf3fd6f7fdc11ff8b363fb6389259166d203726a09bca31ff4deb432de",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Background_Depth.png": {
+  "bytes": 190039,
+  "mtime": 1795153273976274600,
+  "sha256": "81c8b9fc8fd80bb0ee0c4e7d912f78a83685a6cc6b820e163199579debd07d88",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Mid.png": {
+  "bytes": 443535,
+  "mtime": 1795153274159662100,
+  "sha256": "3181b6e060704ff4164e0113f6085c71d4bbf3cb5c41b776e69be3527524e160",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Mid_Depth.png": {
+  "bytes": 47643,
+  "mtime": 1795153274216582500,
+  "sha256": "707a282a6eefb05cf3ec63dbc25f9da5f3537e21d8c7c1721f6369c8930bc770",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Top.png": {
+  "bytes": 1735131,
+  "mtime": 1795153274640345600,
+  "sha256": "097415e0e1c860d20a8d21920472ace573f07cdbdcfac466b05c1129c0f0f157",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_02_Top_Depth.png": {
+  "bytes": 232080,
+  "mtime": 1795153274760815100,
+  "sha256": "21dcd2a9410e8a70f6394105add0887da675cc11440a9ba48c1173f8392a1b25",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Background.png": {
+  "bytes": 2203618,
+  "mtime": 1795153275398799200,
+  "sha256": "b9fb5495715bd178cfdae06bdf3c30a991ff2ad91cabce85b80403fb608ab763",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Background_Depth.png": {
+  "bytes": 183037,
+  "mtime": 1795153275506947500,
+  "sha256": "e33c94757bd033255ed0071de5a629fa0f520a3133daaabcc10bfef47d1a6353",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Mid.png": {
+  "bytes": 1468405,
+  "mtime": 1795153275949578600,
+  "sha256": "2755ec984eec165ec3be4b451cb1b4d1c4bf1e4973cb63586e6889f46555a3ca",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Mid_Depth.png": {
+  "bytes": 246789,
+  "mtime": 1795153276059766300,
+  "sha256": "2e6adcfff274fc8211aee334b37b2b366140f3c814efda9f329314b76c8bbea1",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Top.png": {
+  "bytes": 19016,
+  "mtime": 1795153276142591400,
+  "sha256": "cb133f7a7d2526c7b6eebb55743bddc2734f5d9f044b01ddb4aa8d79af0821d4",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_03_Top_Depth.png": {
+  "bytes": 4566,
+  "mtime": 1795153276164129100,
+  "sha256": "33e4e00b4dd98bb6508b89f19c043aafeae25f7d9aadf3fb863f808f13978167",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_04_Background.png": {
+  "bytes": 2208114,
+  "mtime": 1795153276810788000,
+  "sha256": "a09d606f3639c151fba90b07a5aee23e685c268672651ffe6f81afff870dd060",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_04_Background_Depth.png": {
+  "bytes": 240151,
+  "mtime": 1795153276949507500,
+  "sha256": "e1bc09af8cf702b74de46f458020f14016c6623eee07280e8d99ee0bb7710729",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_04_Mid.png": {
+  "bytes": 1829274,
+  "mtime": 1795153277416575100,
+  "sha256": "fe782fe15ee792ab772e271868a8dd2aabb1f0e4f3d4ae4b5eca2ca967f06efe",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_04_Mid_Depth.png": {
+  "bytes": 313592,
+  "mtime": 1795153277560448100,
+  "sha256": "28f61b8b6b96b592f521f90058f7e5e0d9b23c4da505edf7dfe611fa9ee47f08",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_05_Background.png": {
+  "bytes": 2661736,
+  "mtime": 1795153278176348600,
+  "sha256": "d14308f32a2aa15acc3d29ecf2b91ea5edc28e0e0fbf690938410c2eff9805ce",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_05_Background_Depth.png": {
+  "bytes": 264222,
+  "mtime": 1795153278313639800,
+  "sha256": "4b6520c3b9801d57f75a4d217c25193289a88440d8b8aa6cd3307b139061fda4",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_05_Mid.png": {
+  "bytes": 1816011,
+  "mtime": 1795153278716640700,
+  "sha256": "742c4ccef896a610890f9cbdaa3667513e4538131773275f11c8ba7afa63fbcc",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_05_Mid_Depth.png": {
+  "bytes": 234832,
+  "mtime": 1795153278842827900,
+  "sha256": "4aff51eb8b13448e09c65624f1a3523de010786be06e2971d13e1e5e7410ef5e",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Background.png": {
+  "bytes": 2326557,
+  "mtime": 1795153279506689100,
+  "sha256": "c7b3a03eba72925d316a1f55ceabf2a74f88dd8668058fd62291ff27d03ccb57",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Background_Depth.png": {
+  "bytes": 235030,
+  "mtime": 1795153279642535900,
+  "sha256": "71a39149742682260495195dbcb43bb725478190dbe2171d0555c3589d803cee",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Mid.png": {
+  "bytes": 1940249,
+  "mtime": 1795153280116902300,
+  "sha256": "b996c1661817fa214d77ca5fb1267a94f971ae24b33411e1855fb41da9982dd1",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Mid_Depth.png": {
+  "bytes": 293576,
+  "mtime": 1795153280266462300,
+  "sha256": "bea441f5041aa8a721056c62f7669c8ca35e6c47fedcf0b3cf8ea5068ae39e2b",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Top.png": {
+  "bytes": 19122,
+  "mtime": 1795153280412290300,
+  "sha256": "81ef42ec7930bbbef273e849ee519910645a28838a388631d53824d309a82b8c",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_06_Top_Depth.png": {
+  "bytes": 4566,
+  "mtime": 1795153280431387700,
+  "sha256": "c54e2618d70ad59cf25dc292dd5add889d3bcfffb2057ac600808ec21bdd254f",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Background.png": {
+  "bytes": 2417261,
+  "mtime": 1795153281046646200,
+  "sha256": "15b94d3edd4271a3e1440b884423d7f4153445fda91b2c111cc6e0eac1045ae0",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Background_Depth.png": {
+  "bytes": 298048,
+  "mtime": 1795153281207317800,
+  "sha256": "c2bb14bb713ee4a179fee1ccb27cd605a938a3fe99ee33529fbefacaff4594fb",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Mid.png": {
+  "bytes": 1808554,
+  "mtime": 1795153281664604900,
+  "sha256": "7f6ab592512e8240547500b449bb978381667b71a3167669bbff7671c5dc4f3f",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Mid_Depth.png": {
+  "bytes": 243874,
+  "mtime": 1795153281783326800,
+  "sha256": "cd01e759d0be49046aadecef861c63784e1e52eb1ddc4f2419ab5f917c635c3b",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Top.png": {
+  "bytes": 410466,
+  "mtime": 1795153282032477100,
+  "sha256": "d5fb81e338b10ea431d850b2ec5909b9d3c633678ede187c5041da09bf93a5c0",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_07_Top_Depth.png": {
+  "bytes": 41225,
+  "mtime": 1795153282086623300,
+  "sha256": "ce16c1aae9284612251d76e23d063e284f021f0bfc6115d58d0aa29c8ff25d0e",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_08_Background.png": {
+  "bytes": 2470116,
+  "mtime": 1795153282689577600,
+  "sha256": "08f91967a6ea81f05b9075d0055a6b4e3f2a7298d8965b5b6eb1f32c5c25f9d3",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_08_Background_Depth.png": {
+  "bytes": 332509,
+  "mtime": 1795153282876561200,
+  "sha256": "7348e8008b9a6c300ed702451568f40287361a861facc9bdeda853605af5e128",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_08_Mid.png": {
+  "bytes": 1550005,
+  "mtime": 1795153283246542200,
+  "sha256": "74d9f30592d538442d54a35f62d37958a7e9ffc0bd10712c31841f0fd1b6bbbf",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
+ },
+ "MASTERS/01_Family_Arrives_To_Father_Needs_Her_Support/01_Family_Arrives_To_Father_Needs_Her_Support_08_Mid_Depth.png": {
+  "bytes": 234188,
+  "mtime": 1795153283360010500,
+  "sha256": "f5d29ee59b64f345423615a54694dcf0cde47fe3b6c844485ad3e2a516c9a965",
+  "phone": "phone x0.75 lanczos, depth bilinear",
+  "w": 2300,
+  "h": 1024,
+  "phone_w": 1725,
+  "phone_h": 768
  }
 }

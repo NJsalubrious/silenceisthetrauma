@@ -17,7 +17,7 @@
  uniform vec4 crop,feather,trim;uniform vec2 pointer,lsize;uniform vec3 xform;uniform float plane,hasDepth,rigid,passage,light,depthPass,alpha,edgeM;
  uniform float enhanced,depthTravel,layerParallax,backgroundFallback,seamLock,perspX,plim,edges;
  uniform float early;   // ERA: 1 for a memory of the earlier story (memory.json "era":"earlier"): its own pointer, search jitter and margin
- uniform float blurR,focusD;uniform vec4 haze;uniform vec2 focusAt;uniform sampler2D marksMap;uniform float marksOn;   // STORYTELLING multiplane: out-of-focus radius for this layer, and the haze between the planes (rgb, amount)
+ uniform float blurR,focusD;uniform vec4 haze;uniform vec2 focusAt;   // STORYTELLING multiplane: out-of-focus radius for this layer, and the haze between the planes (rgb, amount)
  // edges (19 Nov: 'old' is the default now; ?edges=new, the studio or E for the finer search): the finer search. The storytelling engine's finer depth search, so the edges of Mid and Top layers don't smear.
  // The old search stays beside it on purpose, to compare (studio "Edges of cut-outs", the E key, or ?edges=old). Later this is stripped down to optimised basics; the author decides then.
  #ifdef GL_FRAGMENT_PRECISION_HIGH
@@ -110,7 +110,6 @@
   if(!hit||q.x<0.||q.x>1.||q.y<0.||q.y>1.)color.a=0.;
   float relief=0.;if(rigid<.5&&hasDepth>.5&&light!=0.){vec2 grad=vec2(depthAt(q+vec2(.002,0.))-depthAt(q-vec2(.002,0.)),depthAt(q+vec2(0.,.002))-depthAt(q-vec2(0.,.002)));relief=clamp(dot(grad,P)*light,-.025,.025)*(1.-rigid)*hasDepth;}
   color.rgb*=1.+relief;color.rgb*=vec3(.98,1.,.99);if(haze.a>0.)color.rgb=mix(color.rgb,haze.rgb,haze.a*clamp(1.-mix(plane,d,hasDepth),0.,1.));color.a*=alpha;
-  if(marksOn>0.&&depthPass<.5){vec4 mk=texture2D(marksMap,q);color.rgb+=(1.-color.rgb)*mk.r*marksOn;color.rgb*=1.-mk.g*marksOn*vec3(.84,.87,.91);color.rgb*=1.-mk.b*marksOn*vec3(.41,.59,.76);}   // STORYTELLING aged print: this picture's own scratches and specks, at their place in the picture, so they move with what they are on (off unless the aged test sets them)
   if(feather.x>0.)color.a*=smoothstep(0.,feather.x,q.x);if(feather.y>0.)color.a*=smoothstep(1.,1.-feather.y,q.x);if(feather.z>0.)color.a*=smoothstep(1.,1.-feather.z,q.y);if(feather.w>0.)color.a*=smoothstep(0.,feather.w,q.y);   // soft sides, so pictures melt into each other
   gl_FragColor=depthPass>.5?vec4(vec3(mix(plane,depthAt(q),hasDepth)),color.a):color;
  }`;
@@ -300,8 +299,6 @@
    return createImageBitmap(image,{imageOrientation:'flipY',premultiplyAlpha:'none'}).then(b=>upload0(b,grey).finally(()=>b.close?.()),()=>upload0(image,grey));};   // (an ImageBitmap ignores the upload's own flip, so it goes up as it is)
   function pump(){const t0=performance.now();while(uploads.length){uploads.shift()();if(performance.now()-t0>6)break;}}
   const wc=document.createElement('canvas');wc.width=wc.height=1;const c2=wc.getContext('2d');c2.fillStyle='white';c2.fillRect(0,0,1,1);const white=texture(wc);
-  // STORYTELLING aged print: each picture's marks (red = pale specks and scratches, green = dark dust, blue = foxing), set by the aged test only
-  const marksTex=new Map();function setMarks(id,image){const o=marksTex.get(id);if(o){gl.deleteTexture(o);marksTex.delete(id);}if(image){marksTex.set(id,texture(image));while(marksTex.size>3){const [k,t]=marksTex.entries().next().value;gl.deleteTexture(t);marksTex.delete(k);}}dirty=true;}
   /* ---- where pictures come from ----
      Each picture folder (desktop, mobile) can carry a files.json: every picture's size, a fingerprint
      (the version, so a browser never shows an old copy), the box that holds anything, and a small
@@ -315,9 +312,13 @@
      "2_Later_Story/24_Delivery_To_Dominics_House/24_..._06_Background.webp", always the .webp. Its size and version come
      from pictures/index.json (fetched once; the version keeps a changed file from being served stale). No preview, no box. */
   let pindex=null;
+  // PHONE (20 Nov): touch screens (phones, tablets) load the smaller copies in pictures/phone; ?pics=full or ?pics=phone to test either
+  const PQ=new URLSearchParams(location.search).get('pics'),PHONE_PICS=PQ==='phone'||(PQ!=='full'&&matchMedia('(pointer:coarse)').matches);window.SITTPics=PHONE_PICS?'phone':'full';
   const pictureIndex=()=>pindex||(pindex=fetch('pictures/index.json'+(revision?'?r='+revision:''),{cache:revision?'no-store':'no-cache'}).then(r=>r.ok?r.json():null).then(j=>j?(j.files||j):null).catch(()=>{pindex=null;return null;}));   // a failed fetch is tried again next time
   async function resolve(memory,folder,name,set,source){
-   if(typeof name==='string'&&name.includes('/')){const k=stem(name)+'.webp',f=(await pictureIndex())?.[k]||null;
+   if(typeof name==='string'&&name.includes('/')){const k=stem(name)+'.webp',ix=await pictureIndex(),p=PHONE_PICS&&ix?.['phone/'+k];
+    if(p)return {url:'pictures/phone/'+k+'?v='+p.v,info:p,low:null};   // PHONE (20 Nov): a phone or tablet gets the smaller copy where the build made one; it is placed exactly as the full one
+    const f=ix?.[k]||null;
     return {url:'pictures/'+k+(f?.v?'?v='+f.v:''),info:f,low:null};}   // not in the index (added since): the file itself, its size read from its header
    if(source==='originals'&&memory.source)return {url:memory.source+name,info:null};
    const order=set==='mobile'?['mobile','desktop']:['desktop'];
@@ -465,7 +466,6 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    use(layerProgram);gl.enable(gl.BLEND);gl.blendFuncSeparate(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA,gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
    const st=settingsFor(data),m=motion(data.scene,st),view=S.view,E=early(data);
    gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: an earlier memory always takes the fine search (it had no switch)
-   if(!E)gl.uniform1f(uniform(layerProgram,'marksOn'),0);   // ERA: a later picture never carries aged marks (the earlier engine left them as the last strip set them)
    bind(layerProgram,'foregroundMask',data.layers.at(-1).colorTexture,2);
    const showDepth=depthPass||view.includes('depth');
    gl.uniform4fv(uniform(layerProgram,'crop'),cover(data.scene,st,data.pan,data.cam));
@@ -550,7 +550,6 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     for(let j=k+1;j<order.length;j++){const [n,,h]=order[j];if(n.rigid||n.plane>=.3)continue;const nf=feathers[j];
      if(nf[0]>0&&Math.abs(h.X0-(g.X0+g.W))<tol){feathers[k][1]=0;noEdge[j][0]=true;}if(nf[1]>0&&Math.abs(h.X0+h.W-g.X0)<tol){feathers[k][0]=0;noEdge[j][1]=true;}}});
    const clip=(a,b)=>{const x0=clamp(sx(a),0,W2),x1=clamp(sx(b),0,W2);if(x1<=x0)return false;gl.scissor(x0,0,x1-x0,H2);return true;};
-   const MK=marksTex.get(data.scene?.id);bind(layerProgram,'marksMap',MK||white,3);gl.uniform1f(uniform(layerProgram,'marksOn'),MK?(S.marksOn||0):0);   // STORYTELLING aged print
    const EG=E?2:12;   // ERA: how far a stretched edge (pass 0) reaches back inside its own tile: earlier 2, later 12
    for(const pass of [0,1])for(const [k,[l,i,g]] of order.entries()){
     if(one&&view!=='layer:'+i&&view!=='layer-depth:'+i)continue;
@@ -570,7 +569,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     gl.uniform3f(uniform(layerProgram,'xform'),l.x||0,l.y||0,l.scale||1);gl.uniform2f(uniform(layerProgram,'lsize'),1,1);
     gl.uniform1f(uniform(layerProgram,'plane'),l.plane);gl.uniform1f(uniform(layerProgram,'rigid'),l.rigid?1:0);
     gl.uniform1f(uniform(layerProgram,'passage'),l.rigid?passage:0);gl.uniform1f(uniform(layerProgram,'edgeM'),pass===0?250/g.W:0);
-    gl.uniform1f(uniform(layerProgram,'seamLock'),(!l.rigid&&l.plane<.3)?(data.scene.seamLock??.06):0);
+    gl.uniform1f(uniform(layerProgram,'seamLock'),(!l.rigid&&l.plane<.3)?(l.layer.seamLock??data.scene.seamLock??.06):0);   // a layer's own "seamLock" (20 Nov): 0 on a painted seamless strip, whose edges already meet
     // the full picture once it is in; until then its small preview (flat); when it arrives it melts in over the preview
     const full=l.state==='ready',f=full&&l.low?clamp((now-(l.readyAt||0))/FADE,0,1):1;
     const looks=!full?[[l.low,1]]:(f<1&&pass===1?[[l.low,1],[null,ease(f)]]:[[null,1]]);
@@ -819,7 +818,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
   if(window.ResizeObserver)new ResizeObserver(()=>resize()).observe(canvas);else addEventListener('resize',resize);
   document.addEventListener('visibilitychange',()=>{last=0;dirty=true;});
   resize();requestAnimationFrame(draw);
-  return {settings:S,LOOK,show,reload,reloadPictures,tilt,setMarks,preload,dropPreloaded,getCam:()=>JSON.parse(JSON.stringify(current?.cam||S.cam||{})),setCam:c=>{if(current){current.cam=c;dirty=true;}},   // STORYTELLING pool test: a zoom inside the picture being shown
+  return {settings:S,LOOK,show,reload,reloadPictures,tilt,preload,dropPreloaded,getCam:()=>JSON.parse(JSON.stringify(current?.cam||S.cam||{})),setCam:c=>{if(current){current.cam=c;dirty=true;}},   // STORYTELLING pool test: a zoom inside the picture being shown
   warm,resolve,forget:()=>{manifests.clear();pindex=null;},view:c=>current?.strip?stripView(current,c):null,aim:c=>{aim=c;},memoryUse:()=>{let n=0,b=0;const each=d=>{if(d?.strip)for(const l of d.layers){if(l.state==='ready')n++;}};each(current);return {loaded:n,queued:uploads.length,speed};},toImage,fromImage,changed:()=>{dirty=true;},
    crop:()=>current?(current.strip?(v=>[v.vw,v.vh,0,0])(stripView(current,S.cam)):cover(current.scene)):[1,1,0,0],
    layerCrop:i=>{if(!current)return [1,1];if(!current.strip)return cover(current.scene);const v=stripView(current,S.cam),l=current.layers[i];return [v.vw/l.W,v.vh/current.H];},

@@ -564,91 +564,93 @@
  "voice": {
   "parts": [
    {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/ThisIs_Where_My_Red_Dirt_Ends_Right_Here.mp3",
-    "gap": 2.4,
+    "audio": "audio/Scenes/02_The_Crash_Sequence/01_Crash_Opening/01_Crash_Opening_main.mp3",
+    "gap": 0,
     "lines": [
      {
-      "t": 0.49,
-      "end": 2.66,
+      "t": 2.78,
+      "end": 6.3,
       "text": "This is where my red dirt ends."
      },
      {
-      "t": 4.47,
-      "end": 5.38,
+      "t": 6.57,
+      "end": 8.4,
       "text": "Right here."
-     }
-    ]
-   },
-   {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/You_Cant_Do_andGoBackToWhereITAllBAgin_or__Forward.mp3",
-    "gap": 1.6,
-    "lines": [
+     },
      {
-      "t": 0.25,
-      "end": 2.62,
+      "t": 9.16,
+      "end": 11.35,
+      "text": "There's no going back."
+     },
+     {
+      "t": 11.6,
+      "end": 14.1,
+      "text": "Not for me."
+     },
+     {
+      "t": 14.36,
+      "end": 19.2,
+      "text": "But I want you to know about what I lost…"
+     },
+     {
+      "t": 19.46,
+      "end": 23,
+      "text": "…and what he took."
+     },
+     {
+      "t": 31.86,
+      "end": 34.2,
+      "text": "Gran and Pop."
+     },
+     {
+      "t": 38.7,
+      "end": 41.07,
       "text": "You can do what I can't do,"
      },
      {
-      "t": 2.57,
-      "end": 5.12,
+      "t": 41.02,
+      "end": 43.57,
       "text": "and go back to where it all began…"
      },
      {
-      "t": 5.07,
-      "end": 6.84,
+      "t": 43.52,
+      "end": 45.3,
       "text": "or you can do what I always do,"
      },
      {
-      "t": 6.79,
-      "end": 8.48,
+      "t": 45.24,
+      "end": 46.94,
       "text": "and keep moving forward."
-     }
-    ]
-   },
-   {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Do_You_Think_This_Scene_Looks_Wrong-.mp3",
-    "gap": 3.5,
-    "lines": [
-     {
-      "t": 0.63,
-      "end": 2.64,
-      "text": "Do you think this scene looks wrong?"
      },
      {
-      "t": 4.19,
-      "end": 6.48,
-      "text": "It is wrong."
+      "t": 50.54,
+      "end": 52.55,
+      "text": "Do you think this scene looks wrong?",
+      "echo": true
+     },
+     {
+      "t": 54.68,
+      "end": 56.39,
+      "text": "It is wrong.",
+      "echo": true
      }
-    ],
-    "echo": true,
-    "tone": {
-     "gain": 0.55,
-     "highpass": 200,
-     "lowpass": 3800,
-     "reverb": 0.18,
-     "room": 2.2,
-     "drift": {
-      "from": -0.55,
-      "to": 0.45,
-      "sec": 7
-     }
-    }
+    ]
    }
   ],
-  "fadeIn": 150,
+  "fadeIn": 0,
   "fadeOut": 2500,
-  "note": "The opening: her lines as clips, in turn (no captions). voiceBefore: the earlier opening; put it back as voice to undo."
+  "note": "BAKED (21 Nov 2026): one file, made in After Effects (Master_Audio/AdobeAfterEffects/01_Crash_Opening/Crash_Sequence.aep, comp 01_Crash_Opening_main): her lines, the memory tone, the ground and the bed, all mixed. Captions from the comp markers. The unbaked voice is kept as voiceUnbaked."
  },
  "sound": {
-  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
-  "startBeforeEnd": 1.5,
-  "fadeIn": 2.5,
-  "overlap": 2.5,
+  "after": "audio/Scenes/02_The_Crash_Sequence/01_Crash_Opening/01_Crash_Opening_loop.mp3",
+  "startBeforeEnd": 0.3,
+  "fadeIn": 0.3,
+  "overlap": 0.1,
   "volume": 1,
-  "afterLine": 0,
   "stops": [
    0
-  ]
+  ],
+  "note": "BAKED (21 Nov 2026): 01_Crash_Opening_loop, the bed and ground carrying straight on from the end of main; loops until the swipe. The unbaked sound is kept as soundUnbaked."
  },
  "exits": {
   "left": {
@@ -738,9 +740,11 @@
      0
     ],
     "leave": true,
-    "file": "SoundFX/Swipes/Swipe_Move_A.mp3",
-    "gain": 2.2,
-    "duck": false
+    "file": "Scenes/02_The_Crash_Sequence/01_Crash_Opening/01_Crash_Opening_swipe.mp3",
+    "gain": 1,
+    "duck": false,
+    "fileUnbaked": "SoundFX/Swipes/Swipe_Move_A.mp3",
+    "gainUnbaked": 2.2
    },
    {
     "name": "swipe: the movement B (leaving the gate)",
@@ -808,7 +812,6 @@
    {
     "name": "land: ground (still)",
     "stops": [
-     0,
      2
     ],
     "file": "SoundFX/Land/Land_Ground_A.mp3",
@@ -817,7 +820,11 @@
     "x": 2,
     "fadeIn": 3,
     "fadeOut": 3,
-    "duck": false
+    "duck": false,
+    "stopsUnbaked": [
+     0,
+     2
+    ]
    },
    {
     "name": "2 the gate: background",
@@ -1086,5 +1093,94 @@
    }
   ]
  },
- "note": "Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21."
+ "note": "Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21.",
+ "voiceUnbaked": {
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/ThisIs_Where_My_Red_Dirt_Ends_Right_Here.mp3",
+    "gap": 2.4,
+    "lines": [
+     {
+      "t": 0.49,
+      "end": 2.66,
+      "text": "This is where my red dirt ends."
+     },
+     {
+      "t": 4.47,
+      "end": 5.38,
+      "text": "Right here."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/You_Cant_Do_andGoBackToWhereITAllBAgin_or__Forward.mp3",
+    "gap": 1.6,
+    "lines": [
+     {
+      "t": 0.25,
+      "end": 2.62,
+      "text": "You can do what I can't do,"
+     },
+     {
+      "t": 2.57,
+      "end": 5.12,
+      "text": "and go back to where it all began…"
+     },
+     {
+      "t": 5.07,
+      "end": 6.84,
+      "text": "or you can do what I always do,"
+     },
+     {
+      "t": 6.79,
+      "end": 8.48,
+      "text": "and keep moving forward."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Do_You_Think_This_Scene_Looks_Wrong-.mp3",
+    "gap": 3.5,
+    "lines": [
+     {
+      "t": 0.63,
+      "end": 2.64,
+      "text": "Do you think this scene looks wrong?"
+     },
+     {
+      "t": 4.19,
+      "end": 6.48,
+      "text": "It is wrong."
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 200,
+     "lowpass": 3800,
+     "reverb": 0.18,
+     "room": 2.2,
+     "drift": {
+      "from": -0.55,
+      "to": 0.45,
+      "sec": 7
+     }
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "The opening: her lines as clips, in turn (no captions). voiceBefore: the earlier opening; put it back as voice to undo."
+ },
+ "soundUnbaked": {
+  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
+  "startBeforeEnd": 1.5,
+  "fadeIn": 2.5,
+  "overlap": 2.5,
+  "volume": 1,
+  "afterLine": 0,
+  "stops": [
+   0
+  ]
+ }
 }

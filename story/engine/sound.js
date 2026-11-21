@@ -10,7 +10,8 @@
 (() => {
  'use strict';
  let ctx=null;
- const audio=()=>ctx||(ctx=new (window.AudioContext||window.webkitAudioContext)());
+ // latencyHint 'playback' (21 Nov 2026): a larger buffer ahead of the sound card, so a phone busy drawing never runs it dry (no crackle or jumps); the same sound, starting a fraction of a second later
+ const audio=()=>ctx||(ctx=(()=>{const A=window.AudioContext||window.webkitAudioContext;try{return new A({latencyHint:'playback'});}catch{return new A();}})());
  // decoded sounds are kept for reuse, up to a budget (19 Nov): past it the ones used longest ago are let go (a sound still playing keeps
  // its own copy until it ends), so hundreds of scenes never pile up in memory; a sound that failed to load is tried again next time
  const cache=new Map(),bytes=new Map(),BUDGET=(matchMedia('(pointer:coarse)').matches?48:128)*1048576;

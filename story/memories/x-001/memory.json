@@ -70,5 +70,224 @@
  },
  "together": null,
  "feel": {},
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/Good. BackToTheVeryBeggining.mp3",
+    "gap": 3,
+    "lines": [
+     {
+      "t": 0.28,
+      "end": 0.9,
+      "text": "Good."
+     },
+     {
+      "t": 2.52,
+      "end": 3.7,
+      "text": "Back to the very beginning."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/ThereTheyAre.mp3",
+    "gap": 1.2,
+    "lines": [
+     {
+      "t": 0.34,
+      "end": 1.1,
+      "text": "There they are…"
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/CaughtInTimeBeforeIWasBorn.mp3",
+    "gap": 0.8,
+    "lines": [
+     {
+      "t": 0.2,
+      "end": 2.12,
+      "text": "Caught in time. Before I was born."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/granWalkingNextToHer_Father_myGreatGrandfather.mp3",
+    "gap": 1.2,
+    "lines": [
+     {
+      "t": 0.26,
+      "end": 1.02,
+      "text": "Gran walking…"
+     },
+     {
+      "t": 2.04,
+      "end": 4.16,
+      "text": "next to her father. My great-grandfather."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/AndHerMotherAndLittleBrotherOnTheRight.mp3",
+    "gap": 1,
+    "lines": [
+     {
+      "t": 0.12,
+      "end": 2.06,
+      "text": "…and her mother and little brother, on the right."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/Da_TheyPaidForAllOfUsToCom_JustforWhatsInYourHead.mp3",
+    "gap": 2,
+    "lines": [
+     {
+      "t": 0.26,
+      "end": 2.68,
+      "text": "Da, they paid for all of us to come."
+     },
+     {
+      "t": 3.2,
+      "end": 4.4,
+      "text": "Just for what's in your head?"
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 320,
+     "lowpass": 2200,
+     "reverb": 0.55,
+     "room": 3.6,
+     "rate": 0.96,
+     "echo": {
+      "time": 0.32,
+      "feedback": 0.25,
+      "wet": 0.2
+     }
+    }
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/JustforWhatsInYourHead.mp3",
+    "gap": 0.5,
+    "lines": [
+     {
+      "t": 0.14,
+      "end": 3.42,
+      "text": "Just for what's in my head."
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 320,
+     "lowpass": 2200,
+     "reverb": 0.55,
+     "room": 3.6,
+     "rate": 0.96,
+     "echo": {
+      "time": 0.32,
+      "feedback": 0.25,
+      "wet": 0.2
+     }
+    }
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/What IfItStops.mp3",
+    "gap": 1.6,
+    "lines": [
+     {
+      "t": 0.34,
+      "end": 1.76,
+      "text": "…what if it stops?"
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 320,
+     "lowpass": 2200,
+     "reverb": 0.55,
+     "room": 3.6,
+     "rate": 0.96,
+     "echo": {
+      "time": 0.32,
+      "feedback": 0.25,
+      "wet": 0.2
+     }
+    }
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/laughs_itWontStop.mp3",
+    "gap": 0.4,
+    "lines": [
+     {
+      "t": 0.3,
+      "end": 2.5,
+      "text": "It won't stop."
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.38,
+     "highpass": 320,
+     "lowpass": 2200,
+     "reverb": 0.62,
+     "room": 4,
+     "rate": 0.96,
+     "echo": {
+      "time": 0.32,
+      "feedback": 0.25,
+      "wet": 0.2
+     },
+     "fadeTo": 0.15
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ },
+ "cues": {
+  "strip01": true,
+  "library": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/",
+  "list": [
+   {
+    "name": "the wharf (loop)",
+    "stops": [
+     0
+    ],
+    "file": "First_2_Scenes/loop_A_busy_1950s_ha_#1-1795178346707.mp3",
+    "loop": true,
+    "x": 3,
+    "gain": 0.35,
+    "fadeIn": 2.5,
+    "fadeOut": 2
+   },
+   {
+    "name": "the ship's horn",
+    "stops": [
+     0
+    ],
+    "once": true,
+    "delay": 0.3,
+    "file": "First_2_Scenes/One_long_deep_ocean__#3-1795178395344.mp3",
+    "gain": 0.55,
+    "fadeOut": 2
+   },
+   {
+    "name": "steps down the gangway",
+    "stops": [
+     0
+    ],
+    "once": true,
+    "delay": 2.5,
+    "file": "First_2_Scenes/eavy_leather_shoes_w_#3-1795178422917.mp3",
+    "gain": 0.35,
+    "fadeOut": 1.5
+   }
+  ]
+ }
 }

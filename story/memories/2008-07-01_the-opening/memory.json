@@ -4,8 +4,27 @@
  "date": "2008-07-01",
  "order": -3,
  "placeholderDate": true,
- "note": "TESTING: a joined strip. The opening scenes (Gran built the lab to Old man's photos) side by side in one strip, so the view slides from one to the next like Ethel at school, instead of cutting. Its pictures, shots and voices are read from the memories in \"join\" each time it opens (their real picture sizes place them, so a PNG saved at a new size just works); change those in the memories themselves. Reorder, add or take out a scene by editing \"join\". Its height is the tallest scene's unless \"height\" is set here. The crash sequence is joined on at the end, so old man's photos slides straight into the crash. Before the crash (and the silica, lab and riding scenes in it) is hidden until it is replaced. Homestead sorrow, the deposit box, Delivery to Dominic's house and the journey are joined on after the crash; the strip then goes on to the glass house (the towel), as the journey did. It opens in the crash (\"startAt\"), with Ethel's crash voice; the visitor can go forward, or back to where it all began.",
+ "note": "Strip 02 (21 Nov 2026): it opens on the crash. Left of the crash is the bridge to the past and the arrival (x-001, strip 01 slot 01). Landing on the arrival hands over, unseen, to the earlier story (earlier-strip-1, \"handover\"): from there right goes on as before (Father Daughter Understood...), and left is the end (it springs back). The arrival's voice (\"Good. Back to the very beginning.\") plays there. The scenes that were joined before the crash (2008-07-01_gran-built-the-lab, 2008-07-01_everyone-said-it-couldnt, 2008-07-01_pop-was-the-same, 2008-07-01_inquiry-johan, 2008-07-01_Dinner_Pop_Gran, 2008-07-01_my-grandmothers-man, 2008-07-01_that-was-my-home, 2008-07-01_ethel-at-school, 2008-07-01_old-mans-photos) are left out (\"joinBefore\" keeps the old list). depth, look and cut are set here as they were (from its old first scene), so the crash looks the same. Before: WorkingFiles/_backups/strip02_engine_2026-11-21. Earlier note: TESTING: a joined strip. The opening scenes (Gran built the lab to Old man's photos) side by side in one strip, so the view slides from one to the next like Ethel at school, instead of cutting. Its pictures, shots and voices are read from the memories in \"join\" each time it opens (their real picture sizes place them, so a PNG saved at a new size just works); change those in the memories themselves. Reorder, add or take out a scene by editing \"join\". Its height is the tallest scene's unless \"height\" is set here. The crash sequence is joined on at the end, so old man's photos slides straight into the crash. Before the crash (and the silica, lab and riding scenes in it) is hidden until it is replaced. Homestead sorrow, the deposit box, Delivery to Dominic's house and the journey are joined on after the crash; the strip then goes on to the glass house (the towel), as the journey did. It opens in the crash (\"startAt\"), with Ethel's crash voice; the visitor can go forward, or back to where it all began.",
  "join": [
+  "x-001",
+  "01-the-crash-sequence",
+  "2019-03-01_homestead-sorrow",
+  "2019-03-02_the-deposit-box",
+  "2019-03-05_delivery-to-dominics-house",
+  "2019-03-05_the-journey"
+ ],
+ "exits": {
+  "left": {
+   "to": null
+  },
+  "right": {
+   "to": "2019-03-05_dominics-world",
+   "style": "push"
+  }
+ },
+ "startAt": "01-the-crash-sequence",
+ "era": "later",
+ "joinBefore": [
   "2008-07-01_gran-built-the-lab",
   "2008-07-01_everyone-said-it-couldnt",
   "2008-07-01_pop-was-the-same",
@@ -21,16 +40,18 @@
   "2019-03-05_delivery-to-dominics-house",
   "2019-03-05_the-journey"
  ],
- "exits": {
-  "left": {
-   "to": "x-062",
-   "style": "push"
-  },
-  "right": {
-   "to": "2019-03-05_dominics-world",
-   "style": "push"
-  }
+ "depth": {
+  "profile": "deeper",
+  "strength": 1.5,
+  "vertical": 0.8,
+  "framing": "cover"
  },
- "startAt": "01-the-crash-sequence",
- "era": "later"
+ "look": {},
+ "cut": {
+  "duration": 1500,
+  "travel": 0.07
+ },
+ "handover": {
+  "x-001": "earlier-strip-1"
+ }
 }

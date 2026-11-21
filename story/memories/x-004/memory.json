@@ -74,5 +74,62 @@
  },
  "together": null,
  "feel": {},
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/heWasAnEngineerAviation.mp3",
+    "gap": 0.8,
+    "lines": [
+     {
+      "t": 0.42,
+      "end": 2.1,
+      "text": "He was an engineer. Aviation."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/GrnWasAsCloseToHimAsIWasToHer.mp3",
+    "gap": 1.2,
+    "lines": [
+     {
+      "t": 0.58,
+      "end": 2.95,
+      "text": "Gran was as close to him as I was to her."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/TheWaySheTalkedAboutHimTheSameWayINowTalkAboutHer.mp3",
+    "gap": 1,
+    "lines": [
+     {
+      "t": 0.34,
+      "end": 1.6,
+      "text": "The way she talked about him…"
+     },
+     {
+      "t": 2.62,
+      "end": 4.34,
+      "text": "the same way I now talk about her."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/ICantBringHerBack.mp3",
+    "gap": 1.5,
+    "lines": [
+     {
+      "t": 0.42,
+      "end": 1.6,
+      "text": "I can't bring her back."
+     }
+    ]
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ }
 }

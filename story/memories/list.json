@@ -1,6 +1,6 @@
 {
- "note": "The one timeline: the earlier story (x-001 to x-062), then the later. It opens on the crash (the opening, stop 12: 10_Gran_Pop_Car_Crushed_Full_Sequence_01). Order and dates live in story/timeline.json.",
- "start": "earlier-strip-1",
+ "note": "The one timeline: the earlier story (x-001 to x-062), then the later. It opens on the crash (21 Nov 2026): the opening's \"startAt\".",
+ "start": "2008-07-01_the-opening",
  "memories": [
   {
    "folder": "earlier-strip-1",
@@ -498,9 +498,8 @@
    "era": "later"
   }
  ],
- "openingBefore": {
-  "start": "2008-07-01_the-opening",
-  "startStop": 12,
-  "note": "TESTING (20 Nov 2026): the story opens on the arrival (strip 01) while the strips are made one at a time; put these two back to open on the crash again"
+ "openingTest": {
+  "start": "earlier-strip-1",
+  "note": "TESTING (20 Nov 2026) start, while strip 01 was made; replaced 21 Nov by the opening (the crash)"
  }
 }

@@ -38,6 +38,8 @@
    const into=c.createGain();into.connect(head);src.connect(into);
    if(t.reverb){const cv=c.createConvolver(),w=c.createGain();cv.buffer=roomIR(c,t.room??3);w.gain.value=t.reverb;into.connect(cv);cv.connect(w);w.connect(head);}
    if(t.echo){const d=c.createDelay(3),fb=c.createGain(),w=c.createGain();d.delayTime.value=t.echo.time??.35;fb.gain.value=t.echo.feedback??.3;w.gain.value=t.echo.wet??.3;into.connect(d);d.connect(fb);fb.connect(d);d.connect(w);w.connect(head);}
+   // fadeTo (21 Nov): the line fades as it plays, from its gain down to gain × fadeTo by its end (a memory slipping away)
+   if(t.fadeTo!=null)a.addEventListener('play',()=>{const n=c.currentTime,g=t.gain??1,len=Math.max(.3,((a.duration||3)-a.currentTime)/(t.rate||1));out.gain.cancelScheduledValues(n);out.gain.setValueAtTime(g,n);out.gain.linearRampToValueAtTime(g*t.fadeTo,n+len);},{once:true});
    if(t.rate){a.preservesPitch=false;a.playbackRate=t.rate;a.defaultPlaybackRate=t.rate;}
    // (18 Nov) once the line has stopped and its room and echo have rung out, the chain is taken off the sound card, so a story of many lines
    // does not keep every one's reverb and echo working; it goes back on if the line plays again
@@ -55,7 +57,7 @@
   function load(voice,base=''){if(!classic&&dying&&dying===audio){fading=0;audio=null;}stop();root=base;ends=[];   // ERA: classic (earlier): stop() cuts the one still fading
    const parts=voice?.parts||(voice?.audio?[voice]:null);if(!parts?.length)return null;queue=parts.slice(1);lines=voice.lines||[];one(parts[0]);wait=parts===voice.parts?parts[0].gap||0:0;
    fadeIn=voice.fadeIn||0;soft=voice.fadeOut||0;return audio;}
-  function play(w){if(!audio)return Promise.resolve(false);if(w!=null)wait=w;   // w: seconds before the first part, instead of its own gap (a scene sound it is locked to has just started)
+  function play(w){if(!audio)return Promise.resolve(false);if(!audio.paused)return Promise.resolve(true);if(w!=null)wait=w;   // already playing (or starting): a second call (the first click after a reload) must not restart her fade-in   // w: seconds before the first part, instead of its own gap (a scene sound it is locked to has just started)
   cancelAnimationFrame(raf);tick();
    if(fadeIn){const a=audio,t0=performance.now()+wait*1000;a.volume=0;clearInterval(fading);fading=setInterval(()=>{const k=Math.max(0,Math.min(1,(performance.now()-t0)/fadeIn));a.volume=k;if(k>=1){clearInterval(fading);fading=0;}},16);}
    if(wait){const a=audio;clearTimeout(gapT);return new Promise(r=>{gapT=setTimeout(()=>{gapT=0;if(a===audio)a.play().then(()=>r(true)).catch(()=>r(false));else r(false);},wait*1000);});}

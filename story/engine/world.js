@@ -87,10 +87,11 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    const own=stops(p).map(st=>{const c={...st,from:f};delete c.x;delete c.y;delete c.zoom;
     c.frame=st.frame?[at(st.frame[0]),st.frame[1]*k,st.frame[2]*k,st.frame[3]*k]:[X,0,run*k,H];return c;});
    if(f===startAt){m.startStop=m.stops.length;if(!spec.voice&&p.voice)m.voice=p.voice;if(!spec.sound&&p.sound)m.sound=p.sound;}   // it opens here, with this memory's voice (and its sound after it)
+   else if(spec.handover?.[f]){}   // STRIP 02: a part that hands over (the arrival) keeps its voice and sounds for the memory it hands over to
    else if(p.voice&&!own[0].voice)own[0].voice=p.voice;   // the others' voices play on their first stop
    if(p.sound?.after)for(const [j,c] of own.entries())if(!Array.isArray(p.sound.stops)||p.sound.stops.includes(j))c.sound=p.sound;   // sound.stops: only on those of its own stops (the crash: its background is scene 1's; it fades as scene 2 begins)
    // each memory's sounds (cues) on its own stops, its stop numbers moved to where they sit in the joined strip
-   if(p.cues?.list?.length){if(!m.cues||m.cues===spec.cues)m.cues={...(spec.cues||{}),library:spec.cues?.library||'audio/',list:[...(spec.cues?.list||[])]};if(!m.cues.duck&&p.cues.duck)m.cues.duck=p.cues.duck;
+   if(p.cues?.list?.length&&!spec.handover?.[f]){if(!m.cues||m.cues===spec.cues)m.cues={...(spec.cues||{}),library:spec.cues?.library||'audio/',list:[...(spec.cues?.list||[])]};if(!m.cues.duck&&p.cues.duck)m.cues.duck=p.cues.duck;
     for(const q of p.cues.list)m.cues.list.push({...q,library:q.library||p.cues.library||'audio/',stops:Array.isArray(q.stops)?q.stops.map(sh):q.stops});}   // its sound bed plays on its own stops (after its voice), as when it was its own memory
    if(Number.isFinite(p.momentDrift)&&!Number.isFinite(m.momentDrift))m.momentDrift=p.momentDrift;
    m.stops.push(...own);X+=run*k;}
@@ -104,7 +105,7 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   await scene.reload(m,{folder:W.folder,set:W.set,source:W.source});T.s=T.goal=Math.min(s,stops(m).length-1);applyCam();return true;};
  // TESTING: which joined strip each memory lives in (from the story's visible joined strips)
  const joinOf=new Map();
- async function indexJoins(){for(const e of W.list?.memories||[]){if(e.hidden)continue;try{const j=await json(memDir(e.folder)+'/memory.json');if(Array.isArray(j.join))for(const f of j.join)joinOf.set(f,e.folder);}catch{}}}
+ async function indexJoins(){for(const e of W.list?.memories||[]){if(e.hidden)continue;try{const j=await json(memDir(e.folder)+'/memory.json');if(Array.isArray(j.join))for(const f of j.join)if(!joinOf.has(f))joinOf.set(f,e.folder);}catch{}}}   // STRIP 02: a memory in two strips (the arrival) belongs to the first (the earlier story)
  W.joinOf=joinOf;
  // TESTING: the first picture is shown whole: every layer of the opening shot fully loaded (given up after 45 s)
  async function whole(){const t0=performance.now();for(;;){const cur=scene.current?.(),want=new Set((W.shotLayers?.(Math.round(T.s))||[]).map(([l])=>l));
@@ -162,7 +163,8 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  W.open=open;
  // warm up the memories either side (and behind doors), so going there starts at once
  const warmed=new Set();
- function ahead(memory){const fs=[memory.exits?.left?.to,memory.exits?.right?.to,...(memory.doors||[]).map(d=>d.to),memory.id==='the-glass-house'?ZONE:null,...stops(memory).map(p=>p.sequence)].filter(Boolean);   // the glass house: also the wrong turn's zone; a stop's sequence too
+ function ahead(memory){const fs=[memory.exits?.left?.to,memory.exits?.right?.to,...Object.values(memory.joinSpec?.handover||{}),   // STRIP 02: the memory a part hands over to, warmed so the handover is unseen
+...(memory.doors||[]).map(d=>d.to),memory.id==='the-glass-house'?ZONE:null,...stops(memory).map(p=>p.sequence)].filter(Boolean);   // the glass house: also the wrong turn's zone; a stop's sequence too
   const named={};for(const sd of ['left','right']){const e=memory.exits?.[sd];if(e?.to&&e.stop)(named[e.to]=named[e.to]||[]).push(e.stop);}   // a way out that lands on a named stop: that stop's pictures too
   for(const f of fs){if(warmed.has(f))continue;warmed.add(f);
    load(f).then(m=>{if(f===ZONE){zoneBlend=!!DREAM[m.cut?.style];zoneMem=m;}const n=stops(m).length,at=(named[f]||[]).map(nm=>stops(m).findIndex(p=>p.name===nm)).filter(i=>i>=0);
@@ -200,6 +202,18 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    if(m.kind==='strip'){const f=c.frame||[0,0,1,m.height||1500];zoomTo={x:f[0]+f[2]/2,y:f[1]+f[3]/2,zoom:z};}else zoomTo={x:c.x||0,y:c.y||0,zoom:(c.zoom||1)*z};}
   return go(ex.to,{side,push:true,zoomTo});}
  W.travel=travel;
+ // STRIP 02 (21 Nov): the unseen handover (see "handover" in the update): the same stop of the memory the part belongs to, with no
+ // crossing (sharp), its voice then playing as on arriving there; the depth's settings ease over (no jump), the glint shows the way on
+ let handing=false;
+ async function handOverTo(f,p){if(handing)return;handing=true;const from=W.folder,S0={...scene.settings};
+  try{const m=await load(f),k=stops(m).findIndex(q=>q.from===p.from&&q.name===p.name),i=k>=0?k:stops(m).findIndex(q=>q.from===p.from);
+   if(i<0||W.folder!==from)return;
+   await go(f,{sharp:true,stop:i,handover:true});
+   const S=scene.settings,keys=['strength','vertical'].filter(n=>Number.isFinite(S0[n])&&Number.isFinite(S[n])&&S0[n]!==S[n]),to=Object.fromEntries(keys.map(n=>[n,S[n]])),t0=performance.now();
+   for(const n of keys)S[n]=S0[n];
+   if(keys.length){const ease=()=>{const t=Math.min(1,(performance.now()-t0)/1200),e=t*t*(3-2*t);for(const n of keys)S[n]=S0[n]+(to[n]-S0[n])*e;scene.changed?.();if(t<1)requestAnimationFrame(ease);};requestAnimationFrame(ease);}
+   T.hint=performance.now()+5000;
+  }finally{handing=false;}}
 
  // ---- the sound bed: after her voice, the memory's loop plays for as long as the visitor stays ----
  // sound.afterLine: n — the bed comes in once her line n (from 0) has ended, not after all of them (the crash: after her first line)
@@ -599,6 +613,10 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   if(free&&!T.holding&&atEnd&&n===1&&Math.abs(T.goal-T.s)<.002&&now-idleSince>4500){if(!lean)lean=now;const t=(now-lean)/2600;
    if(t<1)pg=.022*flip()*Math.sin(Math.PI*t)**2;else{lean=null;idleSince=now+12000;}}
   if(T.guard&&Math.abs(T.s-T.guard.stop)>=.9){T.guard=null;T.hint=0;}
+  // STRIP 02 (21 Nov): "handover" {part: memory}: landing on that part of a joined strip (the arrival, left of the crash) hands over,
+  // unseen, to the memory it belongs to (the earlier story), on the same stop: same pictures, same view. From there its own ways go on.
+  {const H=W.memory?.joinSpec?.handover,k=Math.round(T.s),p=stops(W.memory)[k];
+   if(H&&p&&H[p.from]&&free&&!busy&&!T.holding&&!X.on&&Math.abs(T.s-k)<.004&&Math.abs(T.goal-k)<.004){handOverTo(H[p.from],p);return;}}
   // a stop with "sequence" (a memory that plays by itself, like the wrong turn): going on from it, the first time in a visit,
   // plays that sequence, which lands back on the stop its exits.right names (The box: What Ethel saw, then the evidence remains)
   loopTick();
@@ -630,7 +648,7 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
     if(ss?.after){if(!bed||bed.url!==ss.after)stopBed={...ss,since:performance.now()};}else{stopBed=null;if(bed){bed.fadeOut(3);bed=null;W.bed=null;}}}}}
   else if(Math.abs(T.s-at)>.3){frame.atStop=null;if(stopVoice){voice.fade(stopVoice.fadeOut??450);stopVoice=null;}}
   // MASTER: a memory's own opening line (memory.voice) fades out once the visitor moves away from where it began
-  {const MV=W.memory?.voice,A=voice.audio,u=A?decodeURI(A.src):'',mine=!!A&&!!MV&&(MV.audio?u.includes(MV.audio.split('?')[0]):!!MV.parts?.some(p=>u.includes(p.audio)));if(mine&&(!A.paused||voice.left)){if(memVoiceAt==null)memVoiceAt=T.goal;else if(free&&Math.abs(T.s-memVoiceAt)>.3){voice.fade(900);memVoiceAt=NaN;}}}
+  {const MV=W.memory?.voice,A=voice.audio,u=A?decodeURI(A.src):'',mine=!!A&&!!MV&&(MV.audio?u.includes(MV.audio.split('?')[0]):!!MV.parts?.some(p=>u.includes(p.audio)));if(mine&&(!A.paused||voice.left)){if(memVoiceAt==null){if(!A.paused)memVoiceAt=T.goal;}else if(free&&Math.abs(T.s-memVoiceAt)>.3){voice.fade(900);memVoiceAt=NaN;}}}
   // the view has settled on a stop (not just passing it): 'sitt:stop', once per stop, for the UI (its picture's files)
   if(Math.abs(T.s-at)<.02&&Math.abs(T.goal-at)<.02){if(frame.told!==at){frame.told=at;dispatchEvent(new CustomEvent('sitt:stop',{detail:{folder:W.folder,stop:at}}));}}
   else if(Math.abs(T.s-at)>.3)frame.told=null;

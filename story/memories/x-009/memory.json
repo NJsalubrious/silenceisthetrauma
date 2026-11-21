@@ -73,5 +73,38 @@
  },
  "together": null,
  "feel": {},
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/ThereNothingYouCanDoAbsolutelyNothing.mp3",
+    "gap": 1.2,
+    "lines": [
+     {
+      "t": 1.98,
+      "end": 3.3,
+      "text": "Absolutely nothing."
+     }
+    ],
+    "from": 1.62,
+    "echo": true,
+    "tone": {
+     "gain": 0.65,
+     "highpass": 250,
+     "lowpass": 2600,
+     "reverb": 0.45,
+     "room": 3.4,
+     "echo": {
+      "time": 0.38,
+      "feedback": 0.3,
+      "wet": 0.25
+     }
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ }
 }

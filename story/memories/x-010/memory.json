@@ -73,5 +73,50 @@
  },
  "together": null,
  "feel": {},
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/ThoseMomentsAreAlmostEasier_NotEasy_Easier.mp3",
+    "gap": 0.8,
+    "lines": [
+     {
+      "t": 0.14,
+      "end": 1.75,
+      "text": "Those moments are almost easier."
+     },
+     {
+      "t": 1.94,
+      "end": 2.9,
+      "text": "Not easy."
+     },
+     {
+      "t": 3.26,
+      "end": 3.97,
+      "text": "Easier."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/WeGrieveWeAccept.mp3",
+    "gap": 1.5,
+    "lines": [
+     {
+      "t": 0.2,
+      "end": 1.1,
+      "text": "We grieve."
+     },
+     {
+      "t": 1.62,
+      "end": 2.3,
+      "text": "We accept."
+     }
+    ]
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ }
 }

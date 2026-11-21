@@ -4,30 +4,31 @@
  "date": "2019-03-01",
  "order": 1,
  "kind": "strip",
- "height": 1086,
+ "height": 1024,
  "source": "../assets/entry-experiment/FinalsForTest_01/22_Homestead_sorrow/",
- "note": "The night after the crash, at the homestead. One picture; it comes straight after the crash sequence and leads into the deposit box sequence.",
+ "note": "Strip 02 slot 07 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (1024 tall, one whole piece: the gap from At The Wreck on its left, its picture 1365 wide, then the end on its right). Stops moved with the picture (x 0.942680, y 0.942910). Before: WorkingFiles/_backups/strip02_engine_2026-11-21. Earlier note: The night after the crash, at the homestead. One picture; it comes straight after the crash sequence and leads into the deposit box sequence.",
  "sections": [
   {
    "name": "The homestead",
-   "width": 1448
+   "width": 1965
   }
  ],
  "layers": [
   {
    "section": 0,
    "role": "background",
-   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background.webp",
-   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Background_Depth.webp",
+   "image": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background.webp",
+   "depth": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background_Depth.webp",
    "plane": 0.16,
    "rigid": false,
-   "travel": null
+   "travel": null,
+   "seamLock": 0
   },
   {
    "section": 0,
    "role": "mid",
-   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop.webp",
-   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_MidTop_Depth.webp",
+   "image": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.webp",
+   "depth": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid_Depth.webp",
    "plane": 0.64,
    "rigid": true,
    "travel": null
@@ -35,8 +36,8 @@
   {
    "section": 0,
    "role": "top",
-   "image": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top.webp",
-   "depth": "2_Later_Story/22_Homestead_sorrow/22_Homestead_sorrow_Top_Depth.webp",
+   "image": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.webp",
+   "depth": "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top_Depth.webp",
    "plane": 0.88,
    "rigid": true,
    "travel": null
@@ -45,10 +46,10 @@
  "stops": [
   {
    "frame": [
+    300,
     0,
-    0,
-    1448,
-    1086
+    1365,
+    1024
    ],
    "name": "Homestead: sorrow",
    "voice": {
@@ -137,10 +138,10 @@
   },
   {
    "frame": [
-    160,
-    60,
-    1288,
-    966
+    450.8,
+    56.6,
+    1214.2,
+    910.9
    ],
    "name": "Homestead: closer",
    "voice": {

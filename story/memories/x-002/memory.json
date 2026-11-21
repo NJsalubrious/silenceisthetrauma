@@ -88,5 +88,64 @@
    "soft": 0.42
   }
  },
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/Thats_gran_talking_To_her_Father.mp3",
+    "gap": 0.8,
+    "lines": [
+     {
+      "t": 1,
+      "end": 2.9,
+      "text": "That's Gran talking to her father."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/First_2_Scenes/How Does It Stay Up_Dialogue.mp3",
+    "gap": 1.4,
+    "lines": [
+     {
+      "t": 1,
+      "end": 3.95,
+      "text": "Da, how does it stay up? It's made of metal."
+     },
+     {
+      "t": 4.45,
+      "end": 5.6,
+      "text": "What did the teacher say?"
+     },
+     {
+      "t": 6.4,
+      "end": 9.7,
+      "text": "The air goes faster over the top, so it has to… catch up."
+     },
+     {
+      "t": 10.2,
+      "end": 13.4,
+      "text": "Catch up… Catch up with what?"
+     },
+     {
+      "t": 13.7,
+      "end": 14.6,
+      "text": "…the other air?"
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.6,
+     "highpass": 300,
+     "lowpass": 2300,
+     "reverb": 0.5,
+     "room": 3.2,
+     "rate": 0.96
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ }
 }

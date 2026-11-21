@@ -73,5 +73,24 @@
  },
  "together": null,
  "feel": {},
- "era": "earlier"
+ "era": "earlier",
+ "voice": {
+  "strip01": true,
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/01_Family_Arrives_To_Father_Needs_Her_Support/ThenLifeGoesOn.mp3",
+    "gap": 0.8,
+    "lines": [
+     {
+      "t": 0.06,
+      "end": 1.1,
+      "text": "Then life goes on."
+     }
+    ]
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "Ethel (20 Nov 2026), written by WorkingFiles/_tools/add_strip01_voices.cjs: change it there and run it again."
+ }
 }

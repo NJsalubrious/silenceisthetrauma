@@ -225,6 +225,61 @@
    "voice": {
     "parts": [
      {
+      "audio": "audio/Scenes/02_The_Crash_Sequence/02_Police_At_The_Gate/02_Police_At_The_Gate_main.mp3",
+      "gap": 0,
+      "lines": [
+       {
+        "t": 1.91,
+        "end": 2.88,
+        "text": "Gravel."
+       },
+       {
+        "t": 3.05,
+        "end": 3.9,
+        "text": "Boots."
+       },
+       {
+        "t": 4.21,
+        "end": 6.92,
+        "text": "A police officer saying my name wrong."
+       },
+       {
+        "t": 7,
+        "end": 9.18,
+        "text": "“There’s been an accident.”",
+        "echo": true
+       },
+       {
+        "t": 9.23,
+        "end": 11.43,
+        "text": "“Your grandparents…”",
+        "echo": true
+       },
+       {
+        "t": 12.27,
+        "end": 13.87,
+        "text": "“Ethel.”",
+        "echo": true
+       },
+       {
+        "t": 15.1,
+        "end": 17.11,
+        "text": "“They’ve been killed.”",
+        "echo": true
+       }
+      ],
+      "tone": {
+       "gain": 1
+      }
+     }
+    ],
+    "fadeIn": 0,
+    "fadeOut": 2500,
+    "note": "BAKED (22 Nov 2026): 02_Police_At_The_Gate_main from After Effects; the old parts are in voiceUnbaked."
+   },
+   "voiceUnbaked": {
+    "parts": [
+     {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Gravel_Boots_A_Police_Officer_Saying_My_Name_Wrong.mp3",
       "gap": 1.5,
       "lines": [
@@ -248,6 +303,22 @@
     ],
     "fadeIn": 150,
     "fadeOut": 2500
+   },
+   "sound": {
+    "after": "audio/Scenes/02_The_Crash_Sequence/02_Police_At_The_Gate/02_Police_At_The_Gate_loop.mp3",
+    "startBeforeEnd": 0,
+    "fadeIn": 0.05,
+    "overlap": 0.1,
+    "volume": 1,
+    "dropOld": 1.5,
+    "lines": [],
+    "note": "BAKED (22 Nov 2026): 02_Police_At_The_Gate_loop, its sound carrying straight on from the end of main, with its own captions each time round; loops until the swipe.",
+    "join": {
+     "main": "02_Police_At_The_Gate/02_Police_At_The_Gate_main.mp3",
+     "at": 17.492812,
+     "from": 0.025812,
+     "to": 23.025813
+    }
    }
   },
   {
@@ -259,6 +330,50 @@
     1024
    ],
    "voice": {
+    "parts": [
+     {
+      "audio": "audio/Scenes/02_The_Crash_Sequence/03_Through_The_Gate/03_Through_The_Gate_main.mp3",
+      "gap": 0,
+      "lines": [
+       {
+        "t": 1.1,
+        "end": 2.15,
+        "text": "“Ethel?”",
+        "echo": true
+       },
+       {
+        "t": 2.2,
+        "end": 3.03,
+        "text": "“Where is the crash?”"
+       },
+       {
+        "t": 3.17,
+        "end": 4.1,
+        "text": "“I can’t let you leave…”",
+        "echo": true
+       },
+       {
+        "t": 4.2,
+        "end": 5.4,
+        "text": "Wrong!"
+       },
+       {
+        "t": 19.37,
+        "end": 21.06,
+        "text": "I keep moving forward.",
+        "echo": true
+       }
+      ],
+      "tone": {
+       "gain": 1
+      }
+     }
+    ],
+    "fadeIn": 0,
+    "fadeOut": 2500,
+    "note": "BAKED (22 Nov 2026): 03_Through_The_Gate_main from After Effects; the old parts are in voiceUnbaked."
+   },
+   "voiceUnbaked": {
     "parts": [
      {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Where_Is_The_Crash.mp3",
@@ -350,6 +465,83 @@
     ],
     "fadeIn": 150,
     "fadeOut": 2500
+   },
+   "sound": {
+    "after": "audio/Scenes/02_The_Crash_Sequence/03_Through_The_Gate/03_Through_The_Gate_loop.mp3",
+    "startBeforeEnd": 0,
+    "fadeIn": 0.05,
+    "overlap": 0.1,
+    "volume": 1,
+    "dropOld": 1.5,
+    "lines": [
+     {
+      "t": 2.67,
+      "end": 4.76,
+      "text": "“Do we want to get involved?”",
+      "echo": true
+     },
+     {
+      "t": 5.33,
+      "end": 7.06,
+      "text": "“We should be careful.”",
+      "echo": true
+     },
+     {
+      "t": 9,
+      "end": 10.72,
+      "text": "“Did you see the way that cop chased her?”",
+      "echo": true
+     },
+     {
+      "t": 10.77,
+      "end": 11.85,
+      "text": "“Come on, we’re scientists.”",
+      "echo": true
+     },
+     {
+      "t": 11.9,
+      "end": 15.25,
+      "text": "“We all know this is bigger than it looks, right?”",
+      "echo": true
+     },
+     {
+      "t": 16.73,
+      "end": 17.58,
+      "text": "“It’s her son, right?”",
+      "echo": true
+     },
+     {
+      "t": 17.63,
+      "end": 18.35,
+      "text": "“Yeah!”",
+      "echo": true
+     },
+     {
+      "t": 18.4,
+      "end": 21.39,
+      "text": "“It’s too big for us to be saying anything.”",
+      "echo": true
+     },
+     {
+      "t": 22.77,
+      "end": 24.78,
+      "text": "“What’s going to happen to the institute?”",
+      "echo": true
+     },
+     {
+      "t": 24.83,
+      "end": 27.4,
+      "text": "“What’s going to happen to our jobs?”",
+      "echo": true
+     }
+    ],
+    "note": "BAKED (22 Nov 2026): 03_Through_The_Gate_loop, its sound carrying straight on from the end of main, with its own captions each time round; loops until the swipe.",
+    "join": {
+     "main": "03_Through_The_Gate/03_Through_The_Gate_main.mp3",
+     "at": 23.692813,
+     "from": 0.025812,
+     "to": 56.025813
+    }
    }
   },
   {
@@ -360,6 +552,40 @@
     1024
    ],
    "voice": {
+    "parts": [
+     {
+      "audio": "audio/Scenes/02_The_Crash_Sequence/04_The_Road/04_The_Road_main.mp3",
+      "gap": 0,
+      "lines": [
+       {
+        "t": 0.59,
+        "end": 3.96,
+        "text": "There's only one stretch of red it could have happened on."
+       },
+       {
+        "t": 5.36,
+        "end": 6.6,
+        "text": "I have to see.",
+        "echo": true
+       },
+       {
+        "t": 7.06,
+        "end": 8.25,
+        "text": "I have to know.",
+        "echo": true
+       }
+      ],
+      "tone": {
+       "gain": 1
+      }
+     }
+    ],
+    "fadeIn": 0,
+    "fadeOut": 2500,
+    "note": "BAKED (22 Nov 2026): 04_The_Road_main from After Effects; the old parts are in voiceUnbaked."
+   },
+   "frameNote": "21 Nov 2026 (author): moved right so the seam with Through the gate is out of view (it was 287 px inside the frame); starts 60 px into The Road, same size",
+   "voiceUnbaked": {
     "parts": [
      {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/There_is_only_One_Stretch_Of_Red_That_It_Could_Have_Happened_On.mp3",
@@ -404,7 +630,22 @@
     "fadeIn": 150,
     "fadeOut": 2500
    },
-   "frameNote": "21 Nov 2026 (author): moved right so the seam with Through the gate is out of view (it was 287 px inside the frame); starts 60 px into The Road, same size"
+   "sound": {
+    "after": "audio/Scenes/02_The_Crash_Sequence/04_The_Road/04_The_Road_loop.mp3",
+    "startBeforeEnd": 0,
+    "fadeIn": 0.05,
+    "overlap": 0.1,
+    "volume": 1,
+    "dropOld": 1.5,
+    "lines": [],
+    "note": "BAKED (22 Nov 2026): 04_The_Road_loop, its sound carrying straight on from the end of main, with its own captions each time round; loops until the swipe.",
+    "join": {
+     "main": "04_The_Road/04_The_Road_main.mp3",
+     "at": 23.992812,
+     "from": 0.025812,
+     "to": 23.025813
+    }
+   }
   },
   {
    "frame": [
@@ -414,6 +655,74 @@
     1024
    ],
    "voice": {
+    "parts": [
+     {
+      "audio": "audio/Scenes/02_The_Crash_Sequence/05_At_The_Wreck/05_At_The_Wreck_main.mp3",
+      "gap": 0,
+      "lines": [
+       {
+        "t": 1.05,
+        "end": 2.34,
+        "text": "Just rubble."
+       },
+       {
+        "t": 2.95,
+        "end": 3.57,
+        "text": "No tape."
+       },
+       {
+        "t": 4,
+        "end": 5.07,
+        "text": "No investigation."
+       },
+       {
+        "t": 5.6,
+        "end": 6.27,
+        "text": "And a cop…"
+       },
+       {
+        "t": 6.5,
+        "end": 7.53,
+        "text": "“You can’t be here.”",
+        "echo": true
+       },
+       {
+        "t": 7.67,
+        "end": 8.87,
+        "text": "Not a normal cop."
+       },
+       {
+        "t": 9.03,
+        "end": 9.82,
+        "text": "How do I know that?"
+       },
+       {
+        "t": 9.87,
+        "end": 11.03,
+        "text": "“I can’t let you look anymore.”",
+        "echo": true
+       },
+       {
+        "t": 11.4,
+        "end": 12.61,
+        "text": "Wrong intent."
+       },
+       {
+        "t": 18,
+        "end": 20.15,
+        "text": "Who the fuck are these people?"
+       }
+      ],
+      "tone": {
+       "gain": 1
+      }
+     }
+    ],
+    "fadeIn": 0,
+    "fadeOut": 2500,
+    "note": "BAKED (22 Nov 2026): 05_At_The_Wreck_main from After Effects; the old parts are in voiceUnbaked."
+   },
+   "voiceUnbaked": {
     "parts": [
      {
       "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Just_Rubble.mp3",
@@ -548,6 +857,41 @@
     ],
     "fadeIn": 150,
     "fadeOut": 2500
+   },
+   "sound": {
+    "after": "audio/Scenes/02_The_Crash_Sequence/05_At_The_Wreck/05_At_The_Wreck_loop.mp3",
+    "startBeforeEnd": 0,
+    "fadeIn": 0.05,
+    "overlap": 0.1,
+    "volume": 1,
+    "dropOld": 1.5,
+    "lines": [
+     {
+      "t": 3.7,
+      "end": 5.25,
+      "text": "How did this happen?",
+      "echo": true
+     },
+     {
+      "t": 8.97,
+      "end": 10.17,
+      "text": "His people.",
+      "echo": true
+     },
+     {
+      "t": 15.8,
+      "end": 17,
+      "text": "My father.",
+      "echo": true
+     }
+    ],
+    "note": "BAKED (22 Nov 2026): 05_At_The_Wreck_loop, its sound carrying straight on from the end of main, with its own captions each time round; loops until the swipe.",
+    "join": {
+     "main": "05_At_The_Wreck/05_At_The_Wreck_main.mp3",
+     "at": 21.692813,
+     "from": 0.025812,
+     "to": 23.025813
+    }
    }
   }
  ],
@@ -568,73 +912,86 @@
     "gap": 0,
     "lines": [
      {
-      "t": 2.78,
-      "end": 6.3,
+      "t": 2.57,
+      "end": 4.78,
       "text": "This is where my red dirt ends."
      },
      {
       "t": 6.57,
-      "end": 8.4,
+      "end": 7.77,
       "text": "Right here."
      },
      {
       "t": 9.16,
-      "end": 11.35,
+      "end": 10.83,
       "text": "There's no going back."
      },
      {
       "t": 11.6,
-      "end": 14.1,
+      "end": 12.8,
       "text": "Not for me."
      },
      {
       "t": 14.36,
-      "end": 19.2,
+      "end": 17.17,
       "text": "But I want you to know about what I lost…"
      },
      {
       "t": 19.46,
-      "end": 23,
+      "end": 20.89,
       "text": "…and what he took."
      },
      {
       "t": 31.86,
-      "end": 34.2,
+      "end": 33.06,
       "text": "Gran and Pop."
      },
      {
-      "t": 38.7,
-      "end": 41.07,
+      "t": 33.19,
+      "end": 34.86,
+      "text": "Can't change the past."
+     },
+     {
+      "t": 35.32,
+      "end": 36.99,
+      "text": "Can't bring them back."
+     },
+     {
+      "t": 38.45,
+      "end": 40.42,
       "text": "You can do what I can't do,"
      },
      {
-      "t": 41.02,
-      "end": 43.57,
+      "t": 40.72,
+      "end": 42.97,
       "text": "and go back to where it all began…"
      },
      {
-      "t": 43.52,
-      "end": 45.3,
-      "text": "or you can do what I always do,"
+      "t": 43.02,
+      "end": 46.73,
+      "text": "or you can do what I always do, and keep moving forward."
      },
      {
-      "t": 45.24,
-      "end": 46.94,
-      "text": "and keep moving forward."
+      "t": 46.89,
+      "end": 49.16,
+      "text": "Acceptance. Keep moving forward."
      },
      {
-      "t": 50.54,
-      "end": 52.55,
+      "t": 50.12,
+      "end": 52.63,
       "text": "Do you think this scene looks wrong?",
       "echo": true
      },
      {
-      "t": 54.68,
-      "end": 56.39,
+      "t": 54.78,
+      "end": 55.98,
       "text": "It is wrong.",
       "echo": true
      }
-    ]
+    ],
+    "tone": {
+     "gain": 1
+    }
    }
   ],
   "fadeIn": 0,
@@ -643,14 +1000,71 @@
  },
  "sound": {
   "after": "audio/Scenes/02_The_Crash_Sequence/01_Crash_Opening/01_Crash_Opening_loop.mp3",
-  "startBeforeEnd": 0.3,
-  "fadeIn": 0.3,
+  "startBeforeEnd": 0,
+  "fadeIn": 0.05,
   "overlap": 0.1,
   "volume": 1,
   "stops": [
    0
   ],
-  "note": "BAKED (21 Nov 2026): 01_Crash_Opening_loop, the bed and ground carrying straight on from the end of main; loops until the swipe. The unbaked sound is kept as soundUnbaked."
+  "note": "BAKED (22 Nov 2026): 01_Crash_Opening_loop, its sound carrying straight on from the end of main, with its own captions each time round; loops until the swipe.",
+  "dropOld": 1.5,
+  "lines": [
+   {
+    "t": 4.57,
+    "end": 6.65,
+    "text": "“Should we be calling Major Crimes?”",
+    "echo": true
+   },
+   {
+    "t": 6.7,
+    "end": 7.9,
+    "text": "“No.”",
+    "echo": true
+   },
+   {
+    "t": 10.27,
+    "end": 11.52,
+    "text": "“Single-vehicle rollover.”",
+    "echo": true
+   },
+   {
+    "t": 11.57,
+    "end": 12.42,
+    "text": "“Elderly driver.”",
+    "echo": true
+   },
+   {
+    "t": 12.47,
+    "end": 14.14,
+    "text": "“No suspicious circs.”",
+    "echo": true
+   },
+   {
+    "t": 17.87,
+    "end": 18.95,
+    "text": "“But…”",
+    "echo": true
+   },
+   {
+    "t": 19,
+    "end": 19.65,
+    "text": "“The coroner’s going to…”",
+    "echo": true
+   },
+   {
+    "t": 19.7,
+    "end": 22.15,
+    "text": "“The coroner gets my report. Mine.”",
+    "echo": true
+   }
+  ],
+  "join": {
+   "main": "01_Crash_Opening/01_Crash_Opening_main.mp3",
+   "at": 57.908813,
+   "from": 0.025812,
+   "to": 42.225813
+  }
  },
  "exits": {
   "left": {
@@ -752,10 +1166,143 @@
      1
     ],
     "leave": true,
-    "file": "SoundFX/Swipes/Swipe_Move_B.mp3",
-    "gain": 2.5,
-    "duck": false
+    "file": "Scenes/02_The_Crash_Sequence/02_Police_At_The_Gate/02_Police_At_The_Gate_swipe.mp3",
+    "gain": 1,
+    "duck": false,
+    "fileUnbaked": "SoundFX/Swipes/Swipe_Move_B.mp3",
+    "gainUnbaked": 2.5
    },
+   {
+    "name": "swipe: the movement A (leaving the road)",
+    "stops": [
+     3
+    ],
+    "leave": true,
+    "file": "Scenes/02_The_Crash_Sequence/04_The_Road/04_The_Road_swipe.mp3",
+    "gain": 1,
+    "duck": false,
+    "fileUnbaked": "SoundFX/Swipes/Swipe_Move_A.mp3",
+    "gainUnbaked": 2.2
+   },
+   {
+    "name": "swipe: the movement B (on to the homestead)",
+    "stops": [
+     4
+    ],
+    "leave": true,
+    "file": "Scenes/02_The_Crash_Sequence/05_At_The_Wreck/05_At_The_Wreck_swipe.mp3",
+    "gain": 1,
+    "duck": false,
+    "fileUnbaked": "SoundFX/Swipes/Swipe_Move_B.mp3",
+    "gainUnbaked": 2.5
+   },
+   {
+    "name": "swipe: Through The Gate (baked)",
+    "stops": [
+     2
+    ],
+    "leave": true,
+    "file": "Scenes/02_The_Crash_Sequence/03_Through_The_Gate/03_Through_The_Gate_swipe.mp3",
+    "gain": 1,
+    "duck": false,
+    "fileUnbaked": "Scenes/02_The_Crash_Sequence/03_Through_The_Gate/03_Through_The_Gate_swipe.mp3",
+    "gainUnbaked": 1
+   }
+  ]
+ },
+ "note": "Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21.",
+ "voiceUnbaked": {
+  "parts": [
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/ThisIs_Where_My_Red_Dirt_Ends_Right_Here.mp3",
+    "gap": 2.4,
+    "lines": [
+     {
+      "t": 0.49,
+      "end": 2.66,
+      "text": "This is where my red dirt ends."
+     },
+     {
+      "t": 4.47,
+      "end": 5.38,
+      "text": "Right here."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/You_Cant_Do_andGoBackToWhereITAllBAgin_or__Forward.mp3",
+    "gap": 1.6,
+    "lines": [
+     {
+      "t": 0.25,
+      "end": 2.62,
+      "text": "You can do what I can't do,"
+     },
+     {
+      "t": 2.57,
+      "end": 5.12,
+      "text": "and go back to where it all began…"
+     },
+     {
+      "t": 5.07,
+      "end": 6.84,
+      "text": "or you can do what I always do,"
+     },
+     {
+      "t": 6.79,
+      "end": 8.48,
+      "text": "and keep moving forward."
+     }
+    ]
+   },
+   {
+    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Do_You_Think_This_Scene_Looks_Wrong-.mp3",
+    "gap": 3.5,
+    "lines": [
+     {
+      "t": 0.63,
+      "end": 2.64,
+      "text": "Do you think this scene looks wrong?"
+     },
+     {
+      "t": 4.19,
+      "end": 6.48,
+      "text": "It is wrong."
+     }
+    ],
+    "echo": true,
+    "tone": {
+     "gain": 0.55,
+     "highpass": 200,
+     "lowpass": 3800,
+     "reverb": 0.18,
+     "room": 2.2,
+     "drift": {
+      "from": -0.55,
+      "to": 0.45,
+      "sec": 7
+     }
+    }
+   }
+  ],
+  "fadeIn": 150,
+  "fadeOut": 2500,
+  "note": "The opening: her lines as clips, in turn (no captions). voiceBefore: the earlier opening; put it back as voice to undo."
+ },
+ "soundUnbaked": {
+  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
+  "startBeforeEnd": 1.5,
+  "fadeIn": 2.5,
+  "overlap": 2.5,
+  "volume": 1,
+  "afterLine": 0,
+  "stops": [
+   0
+  ]
+ },
+ "cuesUnbaked": {
+  "note": "BAKED (22 Nov 2026): the sounds the engine mixed live on the crash shots, now inside each shot's After Effects main and loop. Kept to go back to.",
+  "list": [
    {
     "name": "swipe: low deep A (into the gate)",
     "stops": [
@@ -779,16 +1326,6 @@
     "duck": false
    },
    {
-    "name": "swipe: the movement A (leaving the road)",
-    "stops": [
-     3
-    ],
-    "leave": true,
-    "file": "SoundFX/Swipes/Swipe_Move_A.mp3",
-    "gain": 2.2,
-    "duck": false
-   },
-   {
     "name": "swipe: low deep A (onto the wreck)",
     "stops": [
      4
@@ -797,16 +1334,6 @@
     "file": "SoundFX/Swipes/Swipe_Low_Deep_A.mp3",
     "gain": 0.9,
     "fadeOut": 0.6,
-    "duck": false
-   },
-   {
-    "name": "swipe: the movement B (on to the homestead)",
-    "stops": [
-     4
-    ],
-    "leave": true,
-    "file": "SoundFX/Swipes/Swipe_Move_B.mp3",
-    "gain": 2.5,
     "duck": false
    },
    {
@@ -1091,96 +1618,6 @@
     "after": 1,
     "delay": 0.3
    }
-  ]
- },
- "note": "Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21.",
- "voiceUnbaked": {
-  "parts": [
-   {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/ThisIs_Where_My_Red_Dirt_Ends_Right_Here.mp3",
-    "gap": 2.4,
-    "lines": [
-     {
-      "t": 0.49,
-      "end": 2.66,
-      "text": "This is where my red dirt ends."
-     },
-     {
-      "t": 4.47,
-      "end": 5.38,
-      "text": "Right here."
-     }
-    ]
-   },
-   {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/You_Cant_Do_andGoBackToWhereITAllBAgin_or__Forward.mp3",
-    "gap": 1.6,
-    "lines": [
-     {
-      "t": 0.25,
-      "end": 2.62,
-      "text": "You can do what I can't do,"
-     },
-     {
-      "t": 2.57,
-      "end": 5.12,
-      "text": "and go back to where it all began…"
-     },
-     {
-      "t": 5.07,
-      "end": 6.84,
-      "text": "or you can do what I always do,"
-     },
-     {
-      "t": 6.79,
-      "end": 8.48,
-      "text": "and keep moving forward."
-     }
-    ]
-   },
-   {
-    "audio": "audio/SoundFX/Narration/Ethel/Crash_To_Bank/Do_You_Think_This_Scene_Looks_Wrong-.mp3",
-    "gap": 3.5,
-    "lines": [
-     {
-      "t": 0.63,
-      "end": 2.64,
-      "text": "Do you think this scene looks wrong?"
-     },
-     {
-      "t": 4.19,
-      "end": 6.48,
-      "text": "It is wrong."
-     }
-    ],
-    "echo": true,
-    "tone": {
-     "gain": 0.55,
-     "highpass": 200,
-     "lowpass": 3800,
-     "reverb": 0.18,
-     "room": 2.2,
-     "drift": {
-      "from": -0.55,
-      "to": 0.45,
-      "sec": 7
-     }
-    }
-   }
-  ],
-  "fadeIn": 150,
-  "fadeOut": 2500,
-  "note": "The opening: her lines as clips, in turn (no captions). voiceBefore: the earlier opening; put it back as voice to undo."
- },
- "soundUnbaked": {
-  "after": "assets/Audio/loop_intor_Sound_FX.mp3",
-  "startBeforeEnd": 1.5,
-  "fadeIn": 2.5,
-  "overlap": 2.5,
-  "volume": 1,
-  "afterLine": 0,
-  "stops": [
-   0
   ]
  }
 }

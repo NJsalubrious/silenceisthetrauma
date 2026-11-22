@@ -151,7 +151,7 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
   const shown=scene.show(memory,{folder,set:W.set,source:W.source,cam:startCam},cut);
   if(!how||how.goto){await shown;await whole();}   // the first picture, or a jump from the UI: shown whole
   main.classList.add('ready');
-  if(memory.sound?.after){SITTSound.preload(memory.sound.after);if(bed&&bed.url!==memory.sound.after){bed=SITTSound.fadeTo(bed,memory.sound.after,{volume:memory.sound.volume??1,overlap:memory.sound.overlap??2.5});W.bed=bed;}else if(!bed&&how&&free)startBed();}
+  if(memory.sound?.after){SITTSound.preload(memory.sound.after);if(bed&&bed.url!==memory.sound.after){bed=SITTSound.fadeTo(bed,memory.sound.after,(({fadeIn,...o})=>o)(bedOpts(memory.sound)));W.bed=bed;}else if(!bed&&how&&free)startBed();}
   else if(bed&&how){bed.fadeOut(3);bed=null;W.bed=null;}   // a memory with no sound of its own is quiet (its sound comes later)
   if(how){await shown;if(how.sharp){if(!early(memory))await whole();cueHold=false;}applyCam();if(!(how.goto&&how.stop!=null)&&!how.back&&voice.load(memory.voice))voice.play();}   // ERA: an earlier sharp return is there at once (its sequences time their own cuts), not held for the whole picture; a jump to a named stop: no opening voice
   else{applyCam();if(voice.load(memory.voice)){voice.onEnd=()=>{handOver();startBed();};}else{handOver();startBed();}}
@@ -218,8 +218,10 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
  // ---- the sound bed: after her voice, the memory's loop plays for as long as the visitor stays ----
  // sound.afterLine: n — the bed comes in once her line n (from 0) has ended, not after all of them (the crash: after her first line)
  function afterLineDone(S){const n=S?.afterLine;return Number.isInteger(n)?voice.ends.length>n:null;}
- // (a joined strip: the bed starts only on the stops that have it, not on another scene's)
- function startBed(){const S=W.memory?.sound;if(!S?.after||bed)return;if(W.memory.joinSpec&&stops(W.memory)[Math.round(T.s)]?.sound?.after!==S.after)return;bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}
+ // (a joined strip: the bed starts only on the stops that have it, not on another scene's; a seamless one (sound.join) is started by its stop, on the frame its main ends)
+ function startBed(){const S=W.memory?.sound;if(!S?.after||bed)return;if(S.join&&W.memory.joinSpec)return;if(W.memory.joinSpec&&stops(W.memory)[Math.round(T.s)]?.sound?.after!==S.after)return;bed=SITTSound.bed(S.after,bedOpts(S));bed.start();W.bed=bed;}
+ // sound.lines (22 Nov 2026): the words heard in a baked loop, captioned each time round (never over her voice, and only while the view rests on its own shot)
+ function bedOpts(S){return {volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5,lines:S.lines||null,onLine:S.lines?l=>{if(voice.playing()||Math.abs(T.goal-T.s)>.05||W.memory?.joinSpec&&stops(W.memory)[Math.round(T.s)]?.sound?.after!==S.after)return;voice.say(l.text,Math.max(1200,((l.end??l.t+2.5)-l.t)*1000),!!l.echo);}:null};}
  // ---- the veil: the title on dark, until the visitor clicks ----
  function begin(e){
   if(started||e?.target?.closest?.('.studio,.skip'))return;
@@ -645,14 +647,18 @@ window.SITT_MEMDIR=memDir;let prevVoiceFade=false,stopVoice=null,stopBed=null;
    else if((sv?.audio||sv?.parts)&&free&&stopVoice!==sv&&soundOn())stopVoiceGo(at,sv);   // FLOW: a stop's own voice plays when the view comes to rest on it
    const line=stops(W.memory)[at]?.line;if(line&&!voice.playing())voice.say(line);
    if(W.memory.joinSpec&&free){const ss=stops(W.memory)[at]?.sound;   // TESTING: a joined strip: each memory's sound on its own stops
-    if(ss?.after){if(!bed||bed.url!==ss.after)stopBed={...ss,since:performance.now()};}else{stopBed=null;if(bed){bed.fadeOut(3);bed=null;W.bed=null;}}}}}
+    if(ss?.after){if(!bed||bed.url!==ss.after){stopBed={...ss,since:performance.now()};SITTSound.preload(ss.after);if(bed&&ss.dropOld!=null){bed.fadeOut(ss.dropOld);bed=null;W.bed=null;}}}else{stopBed=null;if(bed){bed.fadeOut(3);bed=null;W.bed=null;}}}}}   // dropOld (s): a baked shot carries its own sound, so the shot before's loop fades as it arrives
   else if(Math.abs(T.s-at)>.3){frame.atStop=null;if(stopVoice){voice.fade(stopVoice.fadeOut??450);stopVoice=null;}}
   // MASTER: a memory's own opening line (memory.voice) fades out once the visitor moves away from where it began
   {const MV=W.memory?.voice,A=voice.audio,u=A?decodeURI(A.src):'',mine=!!A&&!!MV&&(MV.audio?u.includes(MV.audio.split('?')[0]):!!MV.parts?.some(p=>u.includes(p.audio)));if(mine&&(!A.paused||voice.left)){if(memVoiceAt==null){if(!A.paused)memVoiceAt=T.goal;}else if(free&&Math.abs(T.s-memVoiceAt)>.3){voice.fade(900);memVoiceAt=NaN;}}}
   // the view has settled on a stop (not just passing it): 'sitt:stop', once per stop, for the UI (its picture's files)
   if(Math.abs(T.s-at)<.02&&Math.abs(T.goal-at)<.02){if(frame.told!==at){frame.told=at;dispatchEvent(new CustomEvent('sitt:stop',{detail:{folder:W.folder,stop:at}}));}}
   else if(Math.abs(T.s-at)>.3)frame.told=null;
-  if(stopBed&&performance.now()-stopBed.since>800){const A=voice.audio,lead=stopBed.startBeforeEnd??1.5;if(afterLineDone(stopBed)??(!voice.playing()&&!voice.left||(A&&A.duration&&!voice.left&&A.currentTime>=A.duration-lead))){const S=stopBed;stopBed=null;if(bed)bed.fadeOut(3);bed=SITTSound.bed(S.after,{volume:S.volume??1,fadeIn:S.fadeIn??2.5,overlap:S.overlap??2.5});bed.start();W.bed=bed;}}}   // starts as her line ends   // FLOW: moving off it, the voice fades
+  // sound.join (22 Nov 2026, the baked crash): {main, at, from, to} the loop begins on the exact frame its main ends (at: main's last frame, in its file's time),
+  // scheduled on the audio clock (main goes through the same sound card path); never both at once. from / to: the loop's exact bounds in its file
+  const J=stopBed?.join,JA=voice.audio,Jm=!!(J&&JA&&!JA.ended&&decodeURI(JA.src).includes(J.main));
+  if(Jm){if(!JA.paused&&JA.currentTime>0&&J.at-JA.currentTime<.8){const S=stopBed;stopBed=null;if(bed&&bed.url!==S.after)bed.fadeOut(1);if(!bed||bed.url!==S.after){const at=SITTSound.context().currentTime+Math.max(0,(J.at-JA.currentTime)/(JA.playbackRate||1));bed=SITTSound.bed(S.after,{...bedOpts(S),from:J.from,to:J.to,overlap:0,fadeIn:0});bed.start(at);W.bed=bed;}}}
+  else if(stopBed&&performance.now()-stopBed.since>800){const A=voice.audio,lead=stopBed.startBeforeEnd??1.5;if(afterLineDone(stopBed)??(!voice.playing()&&!voice.left||(A&&A.duration&&!voice.left&&A.currentTime>=A.duration-lead))){const S=stopBed;stopBed=null;if(!bed||bed.url!==S.after){if(bed)bed.fadeOut(3);bed=SITTSound.bed(S.after,S.join?{...bedOpts(S),from:S.join.from,to:S.join.to,overlap:0,fadeIn:0}:bedOpts(S));bed.start();W.bed=bed;}}}}   // starts as her line ends   // FLOW: moving off it, the voice fades
 
  // ---- the way on: a blurred glimpse of the next memory breathes at the forward edge, brighter as the visitor pushes toward it ----
  const glimpse=(()=>{const el=document.createElement('div');el.className='ahead';el.setAttribute('aria-hidden','true');el.innerHTML='<i></i>';main.appendChild(el);

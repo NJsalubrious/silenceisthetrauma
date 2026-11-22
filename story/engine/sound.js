@@ -23,21 +23,23 @@
  // find where the sound really starts and ends (MP3 files carry a little silence at each end)
  function edges(buf){const d=buf.getChannelData(0),sr=buf.sampleRate;let a=0,b=d.length-1;
   while(a<d.length&&Math.abs(d[a])<1e-4)a++;while(b>a&&Math.abs(d[b])<1e-4)b--;return [a/sr,(b+1)/sr];}
- function bed(url,{volume=1,fadeIn=2,overlap=2.5}={}){
+ // lines (22 Nov 2026): [{t, end, text, echo}] (with from: t is from the loop comp's first frame) words heard in the loop (t: seconds into its file); onLine(line) is called as each is heard, every time round
+ function bed(url,{volume=1,fadeIn=2,overlap=2.5,lines=null,onLine=null,from=null,to=null}={}){   // from / to (s): exact loop bounds in the file (a baked loop), instead of trimming its silent ends
   const c=audio(),out=c.createGain();out.gain.value=volume;out.connect(c.destination);
-  let buf=null,on=false,timer=0,next=0,first=true;const live=new Set();
+  let buf=null,on=false,timer=0,next=0,first=true;const live=new Set(),said=new Set();
   function cycle(at){
-   const [a,b]=edges(buf),len=b-a,ov=Math.min(overlap,len/3);
+   const [a,b]=from!=null?[from,Math.min(to??buf.duration,buf.duration)]:edges(buf),len=b-a,ov=Math.min(overlap,len/3);
    const src=c.createBufferSource(),g=c.createGain();src.buffer=buf;src.connect(g);g.connect(out);
    const fin=first?fadeIn:ov;first=false;
    g.gain.setValueAtTime(0,at);g.gain.linearRampToValueAtTime(1,at+fin);
    g.gain.setValueAtTime(1,at+len-ov);g.gain.linearRampToValueAtTime(0,at+len);
    src.start(at,a,len);live.add(src);src.onended=()=>live.delete(src);
+   if(lines&&onLine)for(const l of lines){const ft=from!=null?l.t+a:l.t;if(ft<a||ft>=b)continue;const k=setTimeout(()=>{said.delete(k);if(on)onLine(l);},Math.max(0,(at+ft-a-c.currentTime)*1000));said.add(k);}
    next=at+len-ov;}
   function pump(){if(!on)return;while(next-c.currentTime<4)cycle(Math.max(next,c.currentTime+.02));timer=setTimeout(pump,1000);}
   return {
-   async start(){if(on)return;on=true;if(c.state==='suspended')await c.resume();buf=buf||await decode(url);if(!on)return;next=c.currentTime+.05;pump();},
-   fadeOut(sec=3){on=false;clearTimeout(timer);const t=c.currentTime;out.gain.cancelScheduledValues(t);out.gain.setValueAtTime(out.gain.value,t);out.gain.linearRampToValueAtTime(0,t+sec);
+   async start(at){if(on)return;on=true;if(c.state==='suspended')await c.resume();buf=buf||await decode(url);if(!on)return;next=at!=null?Math.max(at,c.currentTime+.005):c.currentTime+.05;pump();},   // at: the audio clock time to begin (seamless after a line)
+   fadeOut(sec=3){on=false;clearTimeout(timer);for(const k of said)clearTimeout(k);said.clear();const t=c.currentTime;out.gain.cancelScheduledValues(t);out.gain.setValueAtTime(out.gain.value,t);out.gain.linearRampToValueAtTime(0,t+sec);
     setTimeout(()=>{for(const s of live){try{s.stop();}catch{}}out.disconnect();},sec*1000+100);},
    get playing(){return on;},url};
  }

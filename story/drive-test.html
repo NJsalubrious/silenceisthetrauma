@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<script src="drive-test/drive.js?v=202611222000"></script><!-- DRIVE TEST: the only difference from index.html -->
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>(drive test) Silence Is The Trauma · the story</title>
+<meta name="robots" content="noindex,nofollow">
+<script>
+ // BUILD (19 Nov 2026): this version's number (the same as every ?v= below; changed with each push). A test link that names a build,
+ // ?build=…, opens the story only when the site has that very build: otherwise a message and nothing else loads (no silent old copy)
+ (() => { const BUILD = '202611222000', want = new URLSearchParams(location.search).get('build'); window.SITT_BUILD = BUILD;
+  if (want && want !== BUILD) document.write('<div style="position:fixed;inset:0;background:#111;color:#eee;font:18px/1.5 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px">'
+   + '<div><b>Not the version this link asks for.</b><br>The link asks for build ' + want.replace(/[^\w.-]/g, '') + ';<br>the site has build ' + BUILD + '.<br><br>Wait a minute and reload.</div></div><plaintext style="display:none">'); })();
+</script>
+<link rel="stylesheet" href="engine/site.css?v=202611222000">
+</head><body>
+<main class="world" aria-label="Elizabeth's and Ethel's memories, one timeline. Drag, scroll or use the arrow keys to move through them.">
+ <img class="poster" alt="">
+ <canvas id="stage" aria-hidden="true"></canvas>
+ <div class="caption" aria-live="polite"><p></p></div>
+ <div class="veil" style="display:none" role="button" tabindex="0" aria-label="Silence Is The Trauma. Click to listen.">
+  <img src="assets/brand/Text_Silence_Is_The_trauma.png" alt="Silence Is The Trauma">
+  <p>click to listen</p>
+ </div>
+ <button class="skip" type="button">skip intro</button>
+ <button class="cc" type="button" aria-pressed="true" aria-label="Subtitles" title="Subtitles on">[ cc ]</button>
+ <div class="timeline" aria-label="Timeline"><div class="track"><div class="marks"></div></div><span class="knob" role="slider" aria-label="Date"></span><span class="date"></span></div>
+ <p class="note" aria-live="polite"></p>
+</main>
+<!-- ?v= on every engine file: the site keeps scripts 4 hours, so a new version must have a new address. Change the number whenever an engine file changes.
+     THE MASTER ENGINE: one engine, one timeline. The earlier story (x-001 to x-062) plays as START_EARLIER_STORY.cmd's
+     "The pool, E: Carried through"; the later one as START-TESTING.cmd. Each memory.json says which ("era"). -->
+<script src="engine/depth-settings.js?v=202611222000"></script>
+<script src="engine/scene.js?v=202611222000"></script>
+<script src="engine/sound.js?v=202611222000"></script>
+<script src="engine/voice.js?v=202611222000"></script>
+<script src="engine/world.js?v=202611222000"></script>
+<script src="engine/timeline-ui.js?v=202611222000"></script>
+<script src="engine/pool.js?v=202611222000"></script>
+<script src="engine/age.js?v=202611222000"></script>
+<script src="engine/soundscape.js?v=202611222000"></script>
+<script>
+ // the earlier story's other tellings, only when asked: ?seq=dream | quiet | sequence (each replaces the pool for 014 to 016)
+ // a performance readout, only when asked: ?perf=1 (frames per second, freezes, the graphics chip, the drawn size)
+ if (new URLSearchParams(location.search).get('perf') === '1') { const e = document.createElement('script'); e.src = 'engine/perf.js?v=202611222000'; document.head.appendChild(e); }
+ (() => { const s = new URLSearchParams(location.search).get('seq'); if (['dream', 'quiet', 'sequence'].includes(s)) { const e = document.createElement('script'); e.src = 'engine/' + s + '.js?v=202611222000'; document.head.appendChild(e); } })();
+</script>
+<script>
+ // subtitles: on unless the visitor has turned them off (the faint "cc", bottom left); remembered in this browser
+ (() => { const K = 'sitt-captions', b = document.querySelector('.cc'); if (!b) return; let on = true; try { on = localStorage.getItem(K) !== 'off'; } catch {}
+  const set = v => { on = v; document.documentElement.classList.toggle('no-captions', !on); b.setAttribute('aria-pressed', String(on)); b.title = on ? 'Subtitles on' : 'Subtitles off'; try { localStorage.setItem(K, on ? 'on' : 'off'); } catch {} };
+  set(on); for (const t of ['pointerdown', 'mousedown', 'touchstart', 'wheel']) b.addEventListener(t, e => e.stopPropagation(), { passive: true });
+  b.addEventListener('click', e => { e.stopPropagation(); set(!on); b.blur(); }); })();
+</script>
+</body></html>

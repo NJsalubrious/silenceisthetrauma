@@ -10,8 +10,8 @@
  */
 (() => {
   'use strict';
-  const LS = 'sittDriveTest1';
-  const DEF = { on: true, measure: 'glitch', thr: .20, amount: .57, vert: .55, attack: 55, release: 190, open: true, hud: true };   // (22 Nov 2026) the author's settings
+  const LS = 'sittDriveTest2';
+  const DEF = { on: true, measure: 'glitch', thr: .20, amount: .57, vert: .55, attack: 55, release: 190, open: true, hud: false };   // the speed readout starts hidden (a clear picture); "readout" brings it back   // (22 Nov 2026) the author's settings
   const D = Object.assign({}, DEF, (() => { try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch { return {}; } })());
   const save = () => { try { localStorage.setItem(LS, JSON.stringify(D)); } catch {} };
   let off = [0, 0], cropX = 1, tilting = false;   // off: the sound's viewpoint, in the hand's units (1 = the hand's full reach)
@@ -93,7 +93,15 @@
     const was = off[0] + off[1]; off = env ? [env * dir * D.amount, -env * dir * D.amount * D.vert] : [0, 0];
     if (w && off[0] + off[1] !== was) { const S = window.SITTWorldState?.scene; S?.changed?.(); }   // the engine draws only when something moved: tell it (its own signal; the camera is never touched). Only while resting on the opening
     hist.push([now, a.loud, a.glitch, env, w]); while (hist.length && now - hist[0][0] > 15000) hist.shift();
+    hud();
     draw(w);
+  }
+  // the speed readout (perf.js, ?perf=1) and the picture tools: hidden unless "readout" is on (found each picture, so a readout made later is caught too)
+  let perfEl = null;
+  function hud() {
+    if (!perfEl || !perfEl.isConnected) perfEl = [...document.body.children].find(e => e.tagName === 'DIV' && /^fps/.test(e.textContent || '')) || null;
+    const v = D.hud ? '' : 'none'; if (perfEl && perfEl.style.display !== v) perfEl.style.display = v;
+    for (const b of document.querySelectorAll('.xbar,.test-bar')) if (b.style.display !== v) b.style.display = v;
   }
 
   // 6. the panel

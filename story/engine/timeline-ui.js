@@ -140,7 +140,10 @@ html.full .xfull{color:rgba(255,255,255,.22)}html.full .xfull:hover{color:rgba(2
     // phones report their tilt in steps (often 20 to 30 a second): the depth glides towards the latest reading on every frame instead of jumping at each one
     const glide = now => { requestAnimationFrame(glide); if (!seen) return; const dt = Math.min(100, now - (last || now)); last = now;
       const k = SMOOTH > 0 ? 1 - Math.exp(-dt / SMOOTH) : 1; sx += (rx - sx) * k; sy += (ry - sy) * k;
-      W.scene.tilt(clamp(sx / RANGE, -1, 1), clamp(-sy / RANGE, -1, 1)); };
+      W.scene.tilt(curve(clamp(sx / RANGE, -1, 1)), curve(clamp(-sy / RANGE, -1, 1))); };
+    // (22 Nov 2026) a gentle middle: a small tilt gives half the depth it did, and the response steepens so a full tilt still reaches the full depth
+    // (c·u + (1-c)·u·|u|: half the slope at the middle, 1 at the edge, always moving the same way). ?tiltcurve= to try others (1 = as before)
+    const C = clamp(+(Q.get('tiltcurve') ?? .5), 0, 1), curve = u => C * u + (1 - C) * u * Math.abs(u);
     requestAnimationFrame(glide);
     addEventListener('orientationchange', () => { B = null; });
   }

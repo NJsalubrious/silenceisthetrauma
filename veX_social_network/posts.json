@@ -1,5 +1,19 @@
 [
   {
+    "id": "eth_b1309fe5",
+    "handle": "@ethel_ryker",
+    "display_name": "Ethel Ryker",
+    "avatar": "../assets/images/characters/avatars/ethel-ryker-avatar.jpg",
+    "content": "The new rules are written, but the tide still pulls where it wants.",
+    "timestamp": "2026-11-23T09:18:32.905800Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/politics/2026/nov/20/what-is-in-deal-between-uk-eu-explainer",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_8162eb8b",
     "handle": "@isla_band",
     "display_name": "Isla",

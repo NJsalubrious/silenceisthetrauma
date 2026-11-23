@@ -4140,24 +4140,24 @@
   "px": 90285
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top.webp": {
-  "v": "579b5e15d7",
+  "v": "85d590a67b",
   "box": [
    99,
    54,
    1430,
    970
   ],
-  "px": 167041
+  "px": 167215
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top.webp": {
-  "v": "9c9465699d",
+  "v": "0531771cd8",
   "box": [
    73,
    40,
    1074,
    728
   ],
-  "px": 101463
+  "px": 101469
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background.webp": {
   "v": "81891ef7fc",
@@ -4180,24 +4180,24 @@
   "px": 198532
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid.webp": {
-  "v": "4b5387dbfd",
+  "v": "77417b9017",
   "box": [
    0,
    171,
    1655,
    853
   ],
-  "px": 245398
+  "px": 247253
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid.webp": {
-  "v": "356a2fe353",
+  "v": "e4f3c7555c",
   "box": [
    0,
    127,
    1241,
    641
   ],
-  "px": 160241
+  "px": 161411
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Top.webp": {
   "v": "e6a8c6953d",
@@ -4220,64 +4220,64 @@
   "px": 124491
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background.webp": {
-  "v": "616f95d3e2",
+  "v": "38586268a2",
   "box": [
    0,
    0,
-   2619,
+   4059,
    1024
   ],
-  "px": 232644
+  "px": 315356
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background.webp": {
-  "v": "c3349e3dc4",
+  "v": "879cad7134",
   "box": [
    0,
    0,
-   1964,
+   3044,
    768
   ],
-  "px": 160160
+  "px": 223064
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid.webp": {
-  "v": "aaa82af215",
+  "v": "aa6c32f8d3",
   "box": [
    0,
-   19,
-   2619,
-   1005
+   2,
+   4059,
+   1022
   ],
-  "px": 359536
+  "px": 511676
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid.webp": {
-  "v": "b121be18d8",
+  "v": "f18814462f",
   "box": [
    0,
-   14,
-   1964,
-   754
+   1,
+   3044,
+   767
   ],
-  "px": 221786
+  "px": 302762
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top.webp": {
-  "v": "fd11e3b8fa",
+  "v": "1d0c0aaea8",
   "box": [
-   323,
+   306,
    0,
-   2296,
+   3753,
    1024
   ],
-  "px": 250012
+  "px": 252942
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top.webp": {
-  "v": "1d9fd14ba1",
+  "v": "72950c8a80",
   "box": [
-   242,
+   229,
    0,
-   1722,
+   2815,
    768
   ],
-  "px": 158005
+  "px": 158861
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background.webp": {
   "v": "26f1d3e8fb",
@@ -4300,14 +4300,14 @@
   "px": 312366
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid.webp": {
-  "v": "71876370c3",
+  "v": "90804b59a2",
   "box": [
    0,
    152,
    2746,
    872
   ],
-  "px": 515196
+  "px": 519678
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid.webp": {
   "v": "f86acec31a",
@@ -4320,14 +4320,14 @@
   "px": 327300
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top.webp": {
-  "v": "30d5f605fe",
+  "v": "7ce1d23d64",
   "box": [
    0,
    0,
    1564,
    1024
   ],
-  "px": 304162
+  "px": 314022
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top.webp": {
   "v": "f937e40be8",
@@ -4360,14 +4360,14 @@
   "px": 154066
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.webp": {
-  "v": "cdfeeac375",
+  "v": "75ffb4e973",
   "box": [
    0,
    120,
    1965,
    904
   ],
-  "px": 197438
+  "px": 199526
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.webp": {
   "v": "05937a2c45",
@@ -4380,14 +4380,14 @@
   "px": 126315
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.webp": {
-  "v": "510741bff3",
+  "v": "3eb899455a",
   "box": [
    0,
    0,
    1965,
    1024
   ],
-  "px": 50492
+  "px": 51922
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.webp": {
   "v": "ea275a1f6e",
@@ -4420,24 +4420,24 @@
   "px": 68244
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB.webp": {
-  "v": "9ea1635838",
+  "v": "84877ccc07",
   "box": [
    1220,
-   845,
-   435,
-   179
+   874,
+   122,
+   150
   ],
-  "px": 36097
+  "px": 7806
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB.webp": {
-  "v": "419eed05bf",
+  "v": "a50fff3dac",
   "box": [
-   915,
-   634,
-   326,
-   134
+   914,
+   655,
+   93,
+   113
   ],
-  "px": 7120
+  "px": 5017
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_MidB.webp": {
   "v": "355732a91b",
@@ -4460,23 +4460,23 @@
   "px": 92413
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB.webp": {
-  "v": "7cc223f942",
+  "v": "e88d5aa4ca",
   "box": [
    0,
-   286,
-   2256,
-   738
+   165,
+   2647,
+   859
   ],
-  "px": 177952
+  "px": 280454
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB.webp": {
-  "v": "360525e2fa",
+  "v": "56c4543356",
   "box": [
    0,
-   212,
-   1692,
-   556
+   123,
+   1985,
+   645
   ],
-  "px": 116996
+  "px": 185339
  }
 }

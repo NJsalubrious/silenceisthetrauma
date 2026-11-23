@@ -468,8 +468,8 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
    gl.uniform1f(uniform(layerProgram,'enhanced'),m.enhanced?1:0);gl.uniform1f(uniform(layerProgram,'depthTravel'),m.travel);gl.uniform1f(uniform(layerProgram,'edges'),S.edges==='new'?1:0);gl.uniform1f(uniform(layerProgram,'early'),E?1:0);   // ERA: an earlier memory always takes the fine search (it had no switch)
    bind(layerProgram,'foregroundMask',data.layers.at(-1).colorTexture,2);
    const showDepth=depthPass||view.includes('depth');
-   gl.uniform4fv(uniform(layerProgram,'crop'),cover(data.scene,st,data.pan,data.cam));
-   const TG=tilting?(S.tiltGain||1):1;gl.uniform2f(uniform(layerProgram,'pointer'),px*st.strength*TG,py*st.strength*st.vertical*TG);   // TG: a phone's tilt can reach further than the mouse (settings.tiltGain)gl.uniform1f(uniform(layerProgram,'light'),st.light??2);gl.uniform1f(uniform(layerProgram,'depthPass'),showDepth?1:0);
+   const CR=cover(data.scene,st,data.pan,data.cam);gl.uniform4fv(uniform(layerProgram,'crop'),CR);
+   const TG=tilting?(S.tiltGain||1):1,DV=S.drive,DK=DV?(S.strength??1)*TG*CR[0]:0;gl.uniform2f(uniform(layerProgram,'pointer'),px*st.strength*TG+(DV?DV[0]*DK:0),py*st.strength*st.vertical*TG+(DV?DV[1]*DK*(S.vertical??1):0));   // DRIVE (23 Nov 2026): the opening's sound adds its viewpoint to the hand's (settings.drive, from drive.js; null elsewhere)   // TG: a phone's tilt can reach further than the mouse (settings.tiltGain)gl.uniform1f(uniform(layerProgram,'light'),st.light??2);gl.uniform1f(uniform(layerProgram,'depthPass'),showDepth?1:0);
    data.layers.forEach((l,i)=>{
     if(l.hidden)return;
     const travel=(Number.isFinite(l.travel)?l.travel:l.plane*(profile(st).layerParallax||0))*m.o;
@@ -564,7 +564,7 @@ catch(x){postMessage({id:m.id,err:String(x&&x.message||x)});}};`;
     gl.uniform1f(uniform(layerProgram,'blurR'),FE?Math.min(.02,(FE.blur??.005)*vw/g.W):MP.focus==null?0:Math.min(.02,(MP.blur??.006)*vw/g.W/LK));gl.uniform1f(uniform(layerProgram,'focusD'),MP.focus??.5);
     const HZ=MP.haze;gl.uniform4f(uniform(layerProgram,'haze'),HZ?HZ[0]:0,HZ?HZ[1]:0,HZ?HZ[2]:0,HZ?HZ[3]:0);
     const hx=E&&!sw.x?px:clamp(px+sw.x,-1,1),hy=E&&!sw.y?py:clamp(py+sw.y,-1,1);   // ERA: earlier: the hand alone, unclamped (as it was) unless a sway is on
-    const TG=tilting?(S.tiltGain||1):1;gl.uniform2f(uniform(layerProgram,'pointer'),hx*st.strength*vw/g.W*TG,hy*st.strength*st.vertical*vh/g.Hh*TG);   // sway (a beat's slow tilt) adds to the hand's
+    const TG=tilting?(S.tiltGain||1):1,DV=S.drive,DK=DV?(S.strength??1)*TG*vw/g.W/LK:0;gl.uniform2f(uniform(layerProgram,'pointer'),hx*st.strength*vw/g.W*TG+(DV?DV[0]*DK:0),hy*st.strength*st.vertical*vh/g.Hh*TG+(DV?DV[1]*DK*(S.vertical??1):0));   // DRIVE (23 Nov 2026): plus the opening's sound viewpoint, in the hand's units (as the drive test)   // sway (a beat's slow tilt) adds to the hand's
     gl.uniform1f(uniform(layerProgram,'perspX'),(PV?.depth||0)*st.strength*vw/g.W);gl.uniform1f(uniform(layerProgram,'plim'),st.strength*vw/g.W*TG);
     gl.uniform3f(uniform(layerProgram,'xform'),l.x||0,l.y||0,l.scale||1);gl.uniform2f(uniform(layerProgram,'lsize'),1,1);
     gl.uniform1f(uniform(layerProgram,'plane'),l.plane);gl.uniform1f(uniform(layerProgram,'rigid'),l.rigid?1:0);

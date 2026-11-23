@@ -20,7 +20,7 @@
   },
   {
    "name": "The road",
-   "width": 2619
+   "width": 4059
   },
   {
    "name": "At the wreck",
@@ -212,7 +212,8 @@
     0,
     1365.3,
     1024
-   ]
+   ],
+   "rest": true
   },
   {
    "moment": "gate",
@@ -319,7 +320,8 @@
      "from": 0.025812,
      "to": 23.025813
     }
-   }
+   },
+   "rest": true
   },
   {
    "moment": "gate",
@@ -542,14 +544,15 @@
      "from": 0.025812,
      "to": 56.025813
     }
-   }
+   },
+   "rest": true
   },
   {
    "frame": [
-    5846,
-    0,
-    2252.7,
-    1024
+    5815,
+    70,
+    1824,
+    882
    ],
    "voice": {
     "parts": [
@@ -584,7 +587,7 @@
     "fadeOut": 2500,
     "note": "BAKED (22 Nov 2026): 04_The_Road_main from After Effects; the old parts are in voiceUnbaked."
    },
-   "frameNote": "21 Nov 2026 (author): moved right so the seam with Through the gate is out of view (it was 287 px inside the frame); starts 60 px into The Road, same size",
+   "frameNote": "23 Nov 2026 (author): a little left and a little closer, matched to the author's picture; its left edge 29 px right of the seam with Through the gate (the gate never in view). 21 Nov 2026 (author): moved right so the seam with Through the gate is out of view (it was 287 px inside the frame); starts 60 px into The Road, same size",
    "voiceUnbaked": {
     "parts": [
      {
@@ -645,11 +648,18 @@
      "from": 0.025812,
      "to": 23.025813
     }
-   }
+   },
+   "rest": true,
+   "frameBefore": [
+    5846,
+    0,
+    2252.7,
+    1024
+   ]
   },
   {
    "frame": [
-    8404.7,
+    9844.7,
     0,
     2746.3,
     1024
@@ -892,7 +902,9 @@
      "from": 0.025812,
      "to": 23.025813
     }
-   }
+   },
+   "frameNote": "23 Nov 2026: moved 1440 px right with the picture (the gap for the road)",
+   "rest": true
   }
  ],
  "startStop": 0,
@@ -1210,7 +1222,7 @@
    }
   ]
  },
- "note": "Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21.",
+ "note": "23 Nov 2026 (the author): a clean cut at strip x 9800 in The Road, everything right of it moved 1440 px right and the gap painted (the road on into the smoke); The road 2619 -> 4059 wide, the At the wreck stop moved with it. Before: WorkingFiles/_backups/strip02_gap_2026-11-23. Strip 02 (21 Nov 2026): pictures from Master_PNGS_PSDS/MASTERS/02_The_Crash_Sequence (painted seamless, 1024 tall): the five crash scenes (02-06), each one whole piece; 02 has the bridge to the past on its left. Layers: Background, BackgroundB (05, and its edge in 04), Mid, MidB (03, 04), Top, each with its own _Depth, with the crash's own settings. Stops moved to the new pixels exactly as the pictures were (x 0.682643, y 0.682667, after the 768 px bridge). seamLock 0: the painted edges already meet. Before: WorkingFiles/_backups/strip02_engine_2026-11-21.",
  "voiceUnbaked": {
   "parts": [
    {
@@ -1619,5 +1631,6 @@
     "delay": 0.3
    }
   ]
- }
+ },
+ "restNote": "23 Nov 2026 (the author): every crash stop is a rest stop, so one drag, scroll or flick never passes more than one scene; a new gesture moves on to the next"
 }

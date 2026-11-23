@@ -7662,14 +7662,14 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Background_Depth.webp": {
   "w": 2602,
   "h": 1024,
-  "bytes": 405516,
-  "v": "e6e3da8d83"
+  "bytes": 398700,
+  "v": "c9870c4389"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Background_Depth.webp": {
   "w": 1952,
   "h": 768,
-  "bytes": 242688,
-  "v": "0b2ae0405a"
+  "bytes": 236806,
+  "v": "729a270735"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Mid.webp": {
   "w": 2602,
@@ -7776,14 +7776,14 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Background_Depth.webp": {
   "w": 1529,
   "h": 1024,
-  "bytes": 213276,
-  "v": "c2fdf3d3e5"
+  "bytes": 200682,
+  "v": "95bb884d96"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Background_Depth.webp": {
   "w": 1147,
   "h": 768,
-  "bytes": 126880,
-  "v": "c868bcd41e"
+  "bytes": 117656,
+  "v": "fc688ee0fe"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Mid.webp": {
   "w": 1529,
@@ -7852,52 +7852,52 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Mid_Depth.webp": {
   "w": 1529,
   "h": 1024,
-  "bytes": 118634,
-  "v": "3423d4605b"
+  "bytes": 124012,
+  "v": "269a42ce38"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Mid_Depth.webp": {
   "w": 1147,
   "h": 768,
-  "bytes": 72854,
-  "v": "29aa53c645"
+  "bytes": 75188,
+  "v": "c511fb3222"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top.webp": {
   "w": 1529,
   "h": 1024,
-  "bytes": 167078,
-  "v": "579b5e15d7",
+  "bytes": 167252,
+  "v": "85d590a67b",
   "box": [
    99,
    54,
    1430,
    970
   ],
-  "px": 167041
+  "px": 167215
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top.webp": {
   "w": 1147,
   "h": 768,
-  "bytes": 101500,
-  "v": "9c9465699d",
+  "bytes": 101506,
+  "v": "0531771cd8",
   "box": [
    73,
    40,
    1074,
    728
   ],
-  "px": 101463
+  "px": 101469
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top_Depth.webp": {
   "w": 1529,
   "h": 1024,
-  "bytes": 168032,
-  "v": "a32917a40d"
+  "bytes": 175046,
+  "v": "c948f3c44e"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top_Depth.webp": {
   "w": 1147,
   "h": 768,
-  "bytes": 97294,
-  "v": "8d6a1f5907"
+  "bytes": 101280,
+  "v": "6b54dbdaf1"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background.webp": {
   "w": 1655,
@@ -7928,78 +7928,78 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB.webp": {
   "w": 1655,
   "h": 1024,
-  "bytes": 36134,
-  "v": "9ea1635838",
+  "bytes": 7842,
+  "v": "84877ccc07",
   "box": [
    1220,
-   845,
-   435,
-   179
+   874,
+   122,
+   150
   ],
-  "px": 36097
+  "px": 7806
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB.webp": {
   "w": 1241,
   "h": 768,
-  "bytes": 7156,
-  "v": "419eed05bf",
+  "bytes": 5054,
+  "v": "a50fff3dac",
   "box": [
-   915,
-   634,
-   326,
-   134
+   914,
+   655,
+   93,
+   113
   ],
-  "px": 7120
+  "px": 5017
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB_Depth.webp": {
   "w": 1655,
   "h": 1024,
-  "bytes": 3216,
-  "v": "a79633d1ca"
+  "bytes": 43732,
+  "v": "b4536f8f26"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB_Depth.webp": {
   "w": 1241,
   "h": 768,
-  "bytes": 2148,
-  "v": "16f40fbdd7"
+  "bytes": 25410,
+  "v": "bc9790a095"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background_Depth.webp": {
   "w": 1655,
   "h": 1024,
-  "bytes": 234386,
-  "v": "ed2d9a904f"
+  "bytes": 249950,
+  "v": "005a3e84f0"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background_Depth.webp": {
   "w": 1241,
   "h": 768,
-  "bytes": 140770,
-  "v": "baedc9dd40"
+  "bytes": 148538,
+  "v": "21afb28aa7"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid.webp": {
   "w": 1655,
   "h": 1024,
-  "bytes": 245434,
-  "v": "4b5387dbfd",
+  "bytes": 247290,
+  "v": "77417b9017",
   "box": [
    0,
    171,
    1655,
    853
   ],
-  "px": 245398
+  "px": 247253
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid.webp": {
   "w": 1241,
   "h": 768,
-  "bytes": 160278,
-  "v": "356a2fe353",
+  "bytes": 161448,
+  "v": "e4f3c7555c",
   "box": [
    0,
    127,
    1241,
    641
   ],
-  "px": 160241
+  "px": 161411
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_MidB.webp": {
   "w": 1655,
@@ -8042,14 +8042,14 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid_Depth.webp": {
   "w": 1655,
   "h": 1024,
-  "bytes": 184462,
-  "v": "eb1cbfbd33"
+  "bytes": 207082,
+  "v": "1ddf9a4560"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid_Depth.webp": {
   "w": 1241,
   "h": 768,
-  "bytes": 110238,
-  "v": "880d31c404"
+  "bytes": 116092,
+  "v": "d1fe5dd9da"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Top.webp": {
   "w": 1655,
@@ -8090,156 +8090,156 @@
   "v": "2f4425ff30"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 232664,
-  "v": "616f95d3e2",
+  "bytes": 315376,
+  "v": "38586268a2",
   "box": [
    0,
    0,
-   2619,
+   4059,
    1024
   ],
-  "px": 232644
+  "px": 315356
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 160180,
-  "v": "c3349e3dc4",
+  "bytes": 223084,
+  "v": "879cad7134",
   "box": [
    0,
    0,
-   1964,
+   3044,
    768
   ],
-  "px": 160160
+  "px": 223064
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 177988,
-  "v": "7cc223f942",
+  "bytes": 280490,
+  "v": "e88d5aa4ca",
   "box": [
    0,
-   286,
-   2256,
-   738
+   165,
+   2647,
+   859
   ],
-  "px": 177952
+  "px": 280454
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 117032,
-  "v": "360525e2fa",
+  "bytes": 185376,
+  "v": "56c4543356",
   "box": [
    0,
-   212,
-   1692,
-   556
+   123,
+   1985,
+   645
   ],
-  "px": 116996
+  "px": 185339
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB_Depth.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 137210,
-  "v": "916259b5a2"
+  "bytes": 452112,
+  "v": "4e7973a01f"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB_Depth.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 81588,
-  "v": "a7eb101e70"
+  "bytes": 265034,
+  "v": "48913b7e6c"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background_Depth.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 375768,
-  "v": "854db106c5"
+  "bytes": 521520,
+  "v": "8f0d89f77d"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background_Depth.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 217912,
-  "v": "432e30fce0"
+  "bytes": 303278,
+  "v": "11b5fff7a2"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 359572,
-  "v": "aaa82af215",
+  "bytes": 511712,
+  "v": "aa6c32f8d3",
   "box": [
    0,
-   19,
-   2619,
-   1005
+   2,
+   4059,
+   1022
   ],
-  "px": 359536
+  "px": 511676
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 221822,
-  "v": "b121be18d8",
+  "bytes": 302798,
+  "v": "f18814462f",
   "box": [
    0,
-   14,
-   1964,
-   754
+   1,
+   3044,
+   767
   ],
-  "px": 221786
+  "px": 302762
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid_Depth.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 211770,
-  "v": "18d4383e20"
+  "bytes": 461506,
+  "v": "0371d9cb69"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid_Depth.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 114938,
-  "v": "9167a44b30"
+  "bytes": 258964,
+  "v": "fd6ee2f68e"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 250048,
-  "v": "fd11e3b8fa",
+  "bytes": 252978,
+  "v": "1d0c0aaea8",
   "box": [
-   323,
+   306,
    0,
-   2296,
+   3753,
    1024
   ],
-  "px": 250012
+  "px": 252942
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 158042,
-  "v": "1d9fd14ba1",
+  "bytes": 158898,
+  "v": "72950c8a80",
   "box": [
-   242,
+   229,
    0,
-   1722,
+   2815,
    768
   ],
-  "px": 158005
+  "px": 158861
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top_Depth.webp": {
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "bytes": 191660,
-  "v": "19ef76f4ab"
+  "bytes": 198358,
+  "v": "8275aa3733"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top_Depth.webp": {
-  "w": 1964,
+  "w": 3044,
   "h": 768,
-  "bytes": 115624,
-  "v": "5b1bacf3fc"
+  "bytes": 119150,
+  "v": "89d38fc792"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background.webp": {
   "w": 2746,
@@ -8270,27 +8270,27 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background_Depth.webp": {
   "w": 2746,
   "h": 1024,
-  "bytes": 289362,
-  "v": "025ff11a2d"
+  "bytes": 323804,
+  "v": "7ff781e9f0"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background_Depth.webp": {
   "w": 2060,
   "h": 768,
-  "bytes": 179452,
-  "v": "1f3db89ced"
+  "bytes": 194454,
+  "v": "b6ffe06971"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid.webp": {
   "w": 2746,
   "h": 1024,
-  "bytes": 515232,
-  "v": "71876370c3",
+  "bytes": 519714,
+  "v": "90804b59a2",
   "box": [
    0,
    152,
    2746,
    872
   ],
-  "px": 515196
+  "px": 519678
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid.webp": {
   "w": 2060,
@@ -8308,27 +8308,27 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid_Depth.webp": {
   "w": 2746,
   "h": 1024,
-  "bytes": 202190,
-  "v": "33b280d127"
+  "bytes": 274138,
+  "v": "a9cedee6b8"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid_Depth.webp": {
   "w": 2060,
   "h": 768,
-  "bytes": 126578,
-  "v": "25b12f94ef"
+  "bytes": 167204,
+  "v": "d9c478af4f"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top.webp": {
   "w": 2746,
   "h": 1024,
-  "bytes": 304198,
-  "v": "30d5f605fe",
+  "bytes": 314058,
+  "v": "7ce1d23d64",
   "box": [
    0,
    0,
    1564,
    1024
   ],
-  "px": 304162
+  "px": 314022
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top.webp": {
   "w": 2060,
@@ -8346,14 +8346,14 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top_Depth.webp": {
   "w": 2746,
   "h": 1024,
-  "bytes": 218618,
-  "v": "6b19d61a9c"
+  "bytes": 243056,
+  "v": "f5d9ee968e"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top_Depth.webp": {
   "w": 2060,
   "h": 768,
-  "bytes": 132318,
-  "v": "ba04aca387"
+  "bytes": 145068,
+  "v": "22a57c55ed"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background.webp": {
   "w": 1965,
@@ -8384,27 +8384,27 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background_Depth.webp": {
   "w": 1965,
   "h": 1024,
-  "bytes": 209498,
-  "v": "88c28e7ae1"
+  "bytes": 230826,
+  "v": "af41e59228"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background_Depth.webp": {
   "w": 1474,
   "h": 768,
-  "bytes": 132756,
-  "v": "43ae9d6027"
+  "bytes": 142702,
+  "v": "e25f37d9c4"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.webp": {
   "w": 1965,
   "h": 1024,
-  "bytes": 197474,
-  "v": "cdfeeac375",
+  "bytes": 199562,
+  "v": "75ffb4e973",
   "box": [
    0,
    120,
    1965,
    904
   ],
-  "px": 197438
+  "px": 199526
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.webp": {
   "w": 1474,
@@ -8422,27 +8422,27 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid_Depth.webp": {
   "w": 1965,
   "h": 1024,
-  "bytes": 191042,
-  "v": "7c23dafddd"
+  "bytes": 265088,
+  "v": "504d5d61a0"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid_Depth.webp": {
   "w": 1474,
   "h": 768,
-  "bytes": 115878,
-  "v": "9b8591ddce"
+  "bytes": 148096,
+  "v": "4cc0566c59"
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.webp": {
   "w": 1965,
   "h": 1024,
-  "bytes": 50528,
-  "v": "510741bff3",
+  "bytes": 51958,
+  "v": "3eb899455a",
   "box": [
    0,
    0,
    1965,
    1024
   ],
-  "px": 50492
+  "px": 51922
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.webp": {
   "w": 1474,
@@ -8460,13 +8460,13 @@
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top_Depth.webp": {
   "w": 1965,
   "h": 1024,
-  "bytes": 61600,
-  "v": "cf190077c4"
+  "bytes": 66168,
+  "v": "9d97aad64f"
  },
  "phone/MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top_Depth.webp": {
   "w": 1474,
   "h": 768,
-  "bytes": 39912,
-  "v": "c53d78b85c"
+  "bytes": 42620,
+  "v": "f422c88231"
  }
 }

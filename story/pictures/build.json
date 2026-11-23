@@ -5449,7 +5449,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Background.png": {
   "bytes": 3999574,
-  "mtime": 1795258315826876900,
+  "mtime": 1795400275756937000,
   "sha256": "d5edf29352b3dd8986f85b2cd617a0d58fac844b37cad9490d0060b46941e273",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
@@ -5458,9 +5458,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Background_Depth.png": {
-  "bytes": 496621,
-  "mtime": 1795258316030450300,
-  "sha256": "f2e31c4a0cd97081cd751e25bed40eb35c87c327bfd02acb2e65aea8cc822d4a",
+  "bytes": 490955,
+  "mtime": 1795400275973637500,
+  "sha256": "06cffba4b8febba1f07f441da31f45af29781443e5eefdf73c628fe553d3d561",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
   "h": 1024,
@@ -5469,7 +5469,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Mid.png": {
   "bytes": 2713484,
-  "mtime": 1795258316388988400,
+  "mtime": 1795400276337180300,
   "sha256": "2c22a149252e2e410206cbf4e94281574cec5819e7bd4b7c58d07b4570c5be59",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
@@ -5479,7 +5479,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Mid_Depth.png": {
   "bytes": 431191,
-  "mtime": 1795258316523624800,
+  "mtime": 1795400276475099600,
   "sha256": "665f0afc0e5ae3d207365a68e2d02a9393887735551f0fd8efde3027adb40be1",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
@@ -5489,7 +5489,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Top.png": {
   "bytes": 381770,
-  "mtime": 1795258316685059900,
+  "mtime": 1795400276638654200,
   "sha256": "f31a0e92b8ed0b8a4bb7b7ddf03ec884a9f78cc3081fd7378551f6b735503624",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
@@ -5499,7 +5499,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_02_Top_Depth.png": {
   "bytes": 34444,
-  "mtime": 1795258316868933900,
+  "mtime": 1795400276679751600,
   "sha256": "99854c6a4c2a148f5db953b1616b87a027b49c889291ceedea56d8fadaf9eac3",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2602,
@@ -5509,7 +5509,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Background.png": {
   "bytes": 1986061,
-  "mtime": 1795258317334571700,
+  "mtime": 1795400277156990000,
   "sha256": "fc7e400dbfac99c0c8ebf757472975eeee4c53a4e3a6f5dae9906340383f1ed9",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
@@ -5518,9 +5518,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Background_Depth.png": {
-  "bytes": 246980,
-  "mtime": 1795258317424070400,
-  "sha256": "80507366fc1beb1f9d8b4d67af868185c33b5784433569a20fad07ec953d1cd8",
+  "bytes": 249625,
+  "mtime": 1795400277255445600,
+  "sha256": "0111a67d7e628a2cfa96ecf4fc83c7fc90897528bd1cf52fe68556a4c9ae223f",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
   "h": 1024,
@@ -5529,7 +5529,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Mid.png": {
   "bytes": 1319463,
-  "mtime": 1795258317801679700,
+  "mtime": 1795400277653018100,
   "sha256": "4df0596e527ce08b17d28109591b060f9fe52a003e78701000168403a1535e6b",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
@@ -5538,9 +5538,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Mid_Depth.png": {
-  "bytes": 148239,
-  "mtime": 1795258317870227600,
-  "sha256": "850f93229cddafbb6f97c63f560820eb40c5ac5f4978e612888e2a6ee863764d",
+  "bytes": 153436,
+  "mtime": 1795400277724199900,
+  "sha256": "913cb562e417edf6b2ca34e1e8f055b88a8b8eaaf4d42c9d0656e76f8ed62302",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
   "h": 1024,
@@ -5548,9 +5548,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top.png": {
-  "bytes": 1230644,
-  "mtime": 1795258318599900100,
-  "sha256": "bbdb4612c1fee3bdc82b5392d04a16cada61b02c6e0c84bdcd168994fd4e0477",
+  "bytes": 1229271,
+  "mtime": 1795400278496858600,
+  "sha256": "1ba8a7c0fa871a169dfb6741eb234bee9ea556668319d733ca334600c36af42f",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
   "h": 1024,
@@ -5558,9 +5558,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_Top_Depth.png": {
-  "bytes": 220151,
-  "mtime": 1795258318659142500,
-  "sha256": "7efbc30d5e3741a0aeacb9544a0c22ecad6c90e256efb75466ac203879fbe73f",
+  "bytes": 228224,
+  "mtime": 1795400278566952600,
+  "sha256": "4b01559ba9a36f2ab42a0bd0c2bc7b5b683256709c5d140d7987c4ce1e994e17",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
   "h": 1024,
@@ -5569,7 +5569,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background.png": {
   "bytes": 2326196,
-  "mtime": 1795258319126995100,
+  "mtime": 1795400279052867500,
   "sha256": "895b2d169664197db80b754e0f679d93aee16d4858e91b6d4641de3510acf8e3",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
@@ -5578,9 +5578,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Background_Depth.png": {
-  "bytes": 270278,
-  "mtime": 1795258319244799000,
-  "sha256": "da8adcfaba3bd0a81cd5384c33f7f06d8650ad6253eae09e3d7f3efd922f6683",
+  "bytes": 284961,
+  "mtime": 1795400279190047000,
+  "sha256": "fd2d2e84a56ec8125adb3395ddd51b403cbeff4715b1af64c66e8ef14fc7ca35",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
   "h": 1024,
@@ -5588,9 +5588,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid.png": {
-  "bytes": 1778002,
-  "mtime": 1795258319776386200,
-  "sha256": "726863009fc6a6c1c7ec1eb024112c16cf40084bb3a84ddc6a2fcc1cef3ac020",
+  "bytes": 1779116,
+  "mtime": 1795400279709041700,
+  "sha256": "585ab3361af0c8e9842634c9ebbdd2d0ba4f9c964a2cc65b575eea328ce08075",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
   "h": 1024,
@@ -5598,9 +5598,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Mid_Depth.png": {
-  "bytes": 218498,
-  "mtime": 1795258319869195600,
-  "sha256": "9d0cc76c479f6c0d75c1c9c051c53c7c53a06cab1975b4022f7d1933ba461aa9",
+  "bytes": 255276,
+  "mtime": 1795400279815764100,
+  "sha256": "260f80e950af1524dd31aea6791949bdb02681e27701b0d0a3fdc8d4491ddbc9",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
   "h": 1024,
@@ -5609,7 +5609,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Top.png": {
   "bytes": 1223567,
-  "mtime": 1795258320523745600,
+  "mtime": 1795400280479622600,
   "sha256": "d02c29c3f388f6ab4fba25ae1d7bccf451e7e2d03696300f4eaa7975ae33e5f6",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
@@ -5619,7 +5619,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_Top_Depth.png": {
   "bytes": 211165,
-  "mtime": 1795258320592849100,
+  "mtime": 1795400280552194700,
   "sha256": "67ba607b95723ceb063a68721c3fc74db049356362ffe21fe89b808d2515512e",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
@@ -5628,68 +5628,68 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background.png": {
-  "bytes": 3100341,
-  "mtime": 1795258321289282000,
-  "sha256": "551dbd868026dc7d587c5576fbb9c007eb5e58f05da052c97134e892212027bb",
+  "bytes": 4357945,
+  "mtime": 1795400281593712500,
+  "sha256": "c0d0e8d795503b7d1e7fc6998e220dd8e8a7487a0d7694f7b1830eef3ad88114",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Background_Depth.png": {
-  "bytes": 409168,
-  "mtime": 1795258321504204500,
-  "sha256": "03b14c99bd4a803fc3c51b1cfab33c58759fc32f65dff919668a910701d33174",
+  "bytes": 588282,
+  "mtime": 1795400281972247400,
+  "sha256": "7bcebb4b46a20c951e0374b6eb4b405ba36e17db36f556608230b3072380c8ee",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid.png": {
-  "bytes": 2253021,
-  "mtime": 1795258322625618400,
-  "sha256": "dbcda5ba07b5bae502d92b9c6c4dc24d4c891acf54cd66bdf3bca29953ccd623",
+  "bytes": 3809185,
+  "mtime": 1795400283964535800,
+  "sha256": "a315cbf3a666f06d69d286d4b7f82beda7fe7593703b7a2ab8c769fdfc4d495f",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Mid_Depth.png": {
-  "bytes": 255880,
-  "mtime": 1795258322758153700,
-  "sha256": "18ad31c390ec1cbb5c7b60d3e37c91a455f9a03679bcfaa39ef1b4a200e2ac68",
+  "bytes": 583966,
+  "mtime": 1795400284259581800,
+  "sha256": "fe3e8e1f769cdf01d7d56b2f7af23004ecdf2c903f4111fc43b1eaf49fb95f11",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top.png": {
-  "bytes": 1990718,
-  "mtime": 1795258323228695800,
-  "sha256": "85487411e75b58af058c26ff2ed35f08eddbdec522e25d274507c56c9aabf740",
+  "bytes": 2052358,
+  "mtime": 1795400284786059100,
+  "sha256": "a57fddeb96856978c050c35e8f34edd094b271b0921a90b99e63198836a4e48f",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_Top_Depth.png": {
-  "bytes": 261671,
-  "mtime": 1795258323347477000,
-  "sha256": "a32139b901d476c8e1c40cf6736746d563d5fe86e7af57907d438c5842cc85f6",
+  "bytes": 280578,
+  "mtime": 1795400284939378600,
+  "sha256": "3f0924b2ce8cd15c999f89e67feb9bf4419033a22a0d0b6c442c0cbb5ade123d",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background.png": {
   "bytes": 3807415,
-  "mtime": 1795258324005427900,
+  "mtime": 1795400285630161400,
   "sha256": "936c508985a8771c561276e570f61512bb90a90cfb8b22e9384474fa4dacdae2",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
@@ -5698,9 +5698,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Background_Depth.png": {
-  "bytes": 341344,
-  "mtime": 1795258324200255700,
-  "sha256": "4bdb3cf35c7dc63f90dab5419b25704c16b504e62f9c7d8d6cc163c16fe7f9a4",
+  "bytes": 373981,
+  "mtime": 1795400285842009600,
+  "sha256": "c12e7e16b492f9a5ffc9f81c71408838e41d6db23f822e3e9d3441a578e526d5",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
   "h": 1024,
@@ -5708,9 +5708,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid.png": {
-  "bytes": 2777534,
-  "mtime": 1795258324642230500,
-  "sha256": "f3b3ca90bca032dbd37b13bc6eecb7b95ef9b5ff0f13f1595327eb672e6094e0",
+  "bytes": 2791719,
+  "mtime": 1795400286308748000,
+  "sha256": "3b3b13484a1911fdce2d8928c706de2462af11faa093e90a7ef0f841e7fb188a",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
   "h": 1024,
@@ -5718,9 +5718,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Mid_Depth.png": {
-  "bytes": 253917,
-  "mtime": 1795258324783382300,
-  "sha256": "b896d1541f36e23e338d78b061dbbf580870a15b6571f27bbb0ad45563d1f673",
+  "bytes": 327200,
+  "mtime": 1795400286478157600,
+  "sha256": "ff620201058b246992b8d9761cf4a69a998af8ca6481042ff07391436135474b",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
   "h": 1024,
@@ -5728,9 +5728,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top.png": {
-  "bytes": 2462586,
-  "mtime": 1795258325275138700,
-  "sha256": "d6709a3bddf9db255094b3ba3cc650c7ee17976d4ad2c342033a3335738125a9",
+  "bytes": 2464476,
+  "mtime": 1795400286983302600,
+  "sha256": "9dcec636c30bb10e8fceb8dad05965e02589e58922deb42ad530a689bc42e1c8",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
   "h": 1024,
@@ -5738,9 +5738,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_06_Top_Depth.png": {
-  "bytes": 291737,
-  "mtime": 1795258325402951100,
-  "sha256": "a3231254344888845f185ff9590355deea160d986db035709fba6304252435fa",
+  "bytes": 325421,
+  "mtime": 1795400287124700500,
+  "sha256": "0fcadbc9c1aff7e6e4cacdf9ec8ecfbefd965fe9c378880421b6a4aaff242fdd",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 2746,
   "h": 1024,
@@ -5749,7 +5749,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background.png": {
   "bytes": 2373858,
-  "mtime": 1795258326003300700,
+  "mtime": 1795400287730935400,
   "sha256": "add7f68b1241cea4aa048e4bcbdc4cb3ce491578692a21a396081892b96ee5bb",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
@@ -5758,9 +5758,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Background_Depth.png": {
-  "bytes": 243831,
-  "mtime": 1795258326137638900,
-  "sha256": "f6bf0936ac4104113e29f42b01c2c99e249b02a72181456cf8fb9612c9fa487a",
+  "bytes": 269780,
+  "mtime": 1795400287871534600,
+  "sha256": "ae975489af0b59a54585ca1d71c881fb246002d98519d96fd387d0ff45cae0cc",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
   "h": 1024,
@@ -5768,9 +5768,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid.png": {
-  "bytes": 1583412,
-  "mtime": 1795258326523644600,
-  "sha256": "a2e1fb07d56212ae4b8add0b662e3337b7109a7a07ccb117b92171364a6ea65e",
+  "bytes": 1586948,
+  "mtime": 1795400288280475500,
+  "sha256": "87a7d5d9e2201bfe3afe4310442731feef2ad98cd8d81475b532126fb19fd5ad",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
   "h": 1024,
@@ -5778,9 +5778,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Mid_Depth.png": {
-  "bytes": 247227,
-  "mtime": 1795258326634002700,
-  "sha256": "398eff3d8ae2e972e14183e6ab16448f0bb07cb4afe83e1eabe0d64ae720ce5a",
+  "bytes": 345402,
+  "mtime": 1795400288415974200,
+  "sha256": "82ef6ff79f53c3aac1b6b912fbff1d6d801571d676ba834b9d0036f14620171c",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
   "h": 1024,
@@ -5788,9 +5788,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top.png": {
-  "bytes": 936614,
-  "mtime": 1795258327050322800,
-  "sha256": "db7744c7eb5c81eaa2cbfb1898ab6dc2eb21d44181ca5949a1d98d32e792c62d",
+  "bytes": 936080,
+  "mtime": 1795400288841335300,
+  "sha256": "49fbf602fe55e4a55c1633332f5df992c22b46a7c6113e2c589c1a65763bada1",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
   "h": 1024,
@@ -5798,9 +5798,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_07_Top_Depth.png": {
-  "bytes": 83830,
-  "mtime": 1795258327114166700,
-  "sha256": "94b2e0d8e029a90381fbd7423e0ebab08b438f7b5a23611fd01cbbce3b5f37f7",
+  "bytes": 89338,
+  "mtime": 1795400288903637100,
+  "sha256": "9fa99f06b231fadf36b20e89c03028ebcfaa25fcdd732a0318354b8c3172c630",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1965,
   "h": 1024,
@@ -5809,7 +5809,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_MidB.png": {
   "bytes": 1371481,
-  "mtime": 1795258318276162300,
+  "mtime": 1795400278144375700,
   "sha256": "b3e62959c7fbebec30190aba440bf1b9899381f8cce2b439e8633c3d83a76346",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
@@ -5819,7 +5819,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_03_MidB_Depth.png": {
   "bytes": 66328,
-  "mtime": 1795258318309433600,
+  "mtime": 1795400278180055600,
   "sha256": "2cc24bcceb4033a42ed09df245dff47323004e9caa972d0daceb15b6cacc33e1",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1529,
@@ -5828,9 +5828,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB.png": {
-  "bytes": 277773,
-  "mtime": 1795258319380434300,
-  "sha256": "d1797db2e1907284823fff46a73c2acf2562c055df090ef6034a6e7994e1160b",
+  "bytes": 39156,
+  "mtime": 1795400279275618000,
+  "sha256": "af5ed5474f3ab41a7351b5877299e606f2d121addf4b00a38b1d91ba23fd17ed",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
   "h": 1024,
@@ -5838,9 +5838,9 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_BackgroundB_Depth.png": {
-  "bytes": 6798,
-  "mtime": 1795258319400549500,
-  "sha256": "785db4aa0ad0438b022b9b02aabfc483567d69b8811a9381136bff8c47707594",
+  "bytes": 64030,
+  "mtime": 1795400279322021800,
+  "sha256": "a3dcbe6ffb10c70ddb1eb548d76e199f474e99b0e68096f8113925680d6c3b49",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
   "h": 1024,
@@ -5849,7 +5849,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_MidB.png": {
   "bytes": 1510446,
-  "mtime": 1795258320220480600,
+  "mtime": 1795400280173947300,
   "sha256": "7f898d51ffacd66afa9d686974df5133152694a53e66a31b553d26859150f89d",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
@@ -5859,7 +5859,7 @@
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_04_MidB_Depth.png": {
   "bytes": 83771,
-  "mtime": 1795258320264193600,
+  "mtime": 1795400280218303800,
   "sha256": "1677478d2fcb630f84dd098ca945fbc660accc8849c371d80c86048ed2bf7261",
   "phone": "phone x0.75 lanczos, depth bilinear",
   "w": 1655,
@@ -5868,23 +5868,23 @@
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB.png": {
-  "bytes": 1669576,
-  "mtime": 1795258321975662400,
-  "sha256": "7ba5417032e86180ebae77c63cdee1a15964921032334bd04a0324e63656e12f",
+  "bytes": 2798537,
+  "mtime": 1795400282718835600,
+  "sha256": "a7650b1a0b66b0719525747abbc3b75dccc4461ecacb599770d9b9eb76581e4c",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  },
  "MASTERS/02_The_Crash_Sequence/02_The_Crash_Sequence_05_BackgroundB_Depth.png": {
-  "bytes": 176169,
-  "mtime": 1795258322081996500,
-  "sha256": "052a175b939e41cc682475a32945d8d0e2ca041184e7ace7232c7a4304ca4d46",
+  "bytes": 516966,
+  "mtime": 1795400282992751500,
+  "sha256": "2639da1bef05c2d7b47678ccb6c51f6bf49d1c3e23c00b636537b19a820c8c56",
   "phone": "phone x0.75 lanczos, depth bilinear",
-  "w": 2619,
+  "w": 4059,
   "h": 1024,
-  "phone_w": 1964,
+  "phone_w": 3044,
   "phone_h": 768
  }
 }

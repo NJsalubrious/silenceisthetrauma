@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_a737cfc6",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The architecture of their power was always built on the bones they buried beneath the concrete.",
+    "timestamp": "2026-11-24T01:19:58.803907Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_b1309fe5",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

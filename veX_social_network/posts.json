@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_4166b690",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "They built their gleaming tower on a foundation of acid, and the acid still eats.",
+    "timestamp": "2026-11-26T01:30:18.651934Z",
+    "reply_to": null,
+    "link": null,
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_58c408e9",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",

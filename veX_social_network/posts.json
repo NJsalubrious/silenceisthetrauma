@@ -1,5 +1,19 @@
 [
   {
+    "id": "dom_f4da010f",
+    "handle": "@dominic_ryker",
+    "display_name": "Dominic Ryker",
+    "avatar": "../assets/images/characters/avatars/dominic-ryker-avatar.jpg",
+    "content": "Uncontrolled variables yield predictable outcomes.",
+    "timestamp": "2026-11-28T05:22:27.093662Z",
+    "reply_to": null,
+    "link": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "isla_763d0728",
     "handle": "@isla_band",
     "display_name": "Isla",

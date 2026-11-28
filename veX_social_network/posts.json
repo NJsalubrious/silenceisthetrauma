@@ -1,5 +1,19 @@
 [
   {
+    "id": "isla_763d0728",
+    "handle": "@isla_band",
+    "display_name": "Isla",
+    "avatar": "../assets/images/characters/avatars/isla-band-avatar.jpg",
+    "content": "The feedback loop eventually burns itself out.",
+    "timestamp": "2026-11-28T01:28:01.511447Z",
+    "reply_to": null,
+    "link": "https://loudwire.com/ixp/295/p/andy-taylor-duran-duran-dead/",
+    "image": null,
+    "image_alt": null,
+    "type": "engine",
+    "pinned": false
+  },
+  {
     "id": "eth_ebb6c492",
     "handle": "@ethel_ryker",
     "display_name": "Ethel Ryker",
